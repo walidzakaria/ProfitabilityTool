@@ -141,24 +141,11 @@ Partial Public Class frmEdit
     End Sub
 
     Private Sub frmEdit_Load(sender As Object, e As EventArgs) Handles Me.Load
+        frmMain.Wait(True)
         currentBooking = GetDataSource(bookingId)
         ShowBooking()
         GetComments()
-        'Dim dt As New DataTable()
-        'dt.Columns.Add("ID")
-        'dt.Columns.Add("Date")
-        'dt.Columns.Add("LoginID")
-        'dt.Columns.Add("Comment")
-        'dt.Columns.Add("Calculation")
-        'dt.Columns.Add("Status")
-
-        'dt.Rows.Add({1, #1/1/2019#, "walid", "this sdfsdfsdsdfksjdkfjsjskdjfskldf sdfkjsdl;fksdj;sflkdjfs", 10.5, "OK"})
-        'dt.Rows.Add({1, #1/1/2019#, "walid", "this sdfsdfsdsdfksjdkfjsjskdjfskldf sdfkjsdl;fksdj;sflkdjfs", 10.5, "Pending with TO"})
-        'dt.Rows.Add({1, #1/1/2019#, "walid", "this sdfsdfsdsdfksjdkfjsjskdjfskldf sdfkjsdl;fksdj;sflkdjfs", 10.5, "Yes"})
-        'dt.Rows.Add({1, #1/1/2019#, "walid", "this sdfsdfsdsdfksjdkfjsjskdjfskldf sdfkjsdl;fksdj;sflkdjfs", 10.5, "TO"})
-        'dt.Rows.Add({1, #1/1/2019#, "walid", "this sdfsdfsdsdfksjdkfjsjskdjfskldf sdfkjsdl;fksdj;sflkdjfs", 10.5, "OK"})
-        'dt.Rows.Add({1, #1/1/2019#, "walid", "this sdfsdfsdsdfksjdkfjsjskdjfskldf sdfkjsdl;fksdj;sflkdjfs", 10.5, "NA"})
-        'GridControl1.DataSource = dt
+        frmMain.Wait(False)
     End Sub
 
     Private Sub GetComments()
@@ -173,25 +160,25 @@ Partial Public Class frmEdit
         dt.Columns.Add("Calculation")
         dt.Columns.Add("Status")
 
-        MsgBox(dt.Columns(2).DataType.ToString)
-
         dt = ExClass.QueryGet(query)
 
-        MsgBox(dt.Columns(2).DataType.ToString)
         GridControl1.DataSource = dt
 
     End Sub
     Private Sub windowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
+            frmMain.Wait(True)
             UpdateBooking()
             If currentBooking.Save() Then
                 UpdateChangedRow()
                 ShowBooking()
             End If
-
+            frmMain.Wait(False)
         ElseIf e.Button.Properties.Caption = "Reset Changes" Then
+            frmMain.Wait(True)
             currentBooking = GetDataSource(bookingId)
             ShowBooking()
+            frmMain.Wait(False)
         ElseIf e.Button.Properties.Caption = "Close" Then
             Me.Close()
         End If
@@ -229,6 +216,7 @@ Partial Public Class frmEdit
             MsgBox("Please enter calculation!")
             txtCalculation.Focus()
         Else
+            frmMain.Wait(True)
             Dim comment = New Comment()
             comment.Status = txtStatus.EditValue
             comment.Comment = txtComment.EditValue
@@ -239,7 +227,7 @@ Partial Public Class frmEdit
                 grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
                 ClearComment()
             End If
-
+            frmMain.Wait(False)
         End If
     End Sub
 End Class

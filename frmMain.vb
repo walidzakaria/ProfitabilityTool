@@ -1,10 +1,25 @@
 ﻿Imports System.ComponentModel
 Imports System.Text
+Imports DevExpress.LookAndFeel
 
 
 Partial Public Class frmMain
 
+    Public Sub Wait(ByVal wait As Boolean)
+        If wait = True Then
+            Try
+                Me.SplashScreenManager1.ShowWaitForm()
+            Catch ex As Exception
 
+            End Try
+        Else
+            Try
+                Me.SplashScreenManager1.CloseWaitForm()
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
     Shared Sub New()
         DevExpress.UserSkins.BonusSkins.Register()
         DevExpress.Skins.SkinManager.EnableFormSkins()
@@ -14,11 +29,12 @@ Partial Public Class frmMain
     End Sub
 
     Private Sub btnRate_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnRate.ItemClick
+        Wait(True)
         Dim dt As New DataTable()
         dt = ParseText()
         GridControl1.DataSource = dt
         GridView1.BestFitColumns()
-
+        Wait(False)
     End Sub
 
     Private Function ParseText() As DataTable
@@ -89,7 +105,7 @@ Partial Public Class frmMain
     End Function
 
     Private Sub btnSave_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSave.ItemClick
-
+        Wait(True)
         Dim query As String = ""
         Dim noNewRecords As Boolean = True
         'query = "INSERT INTO Bookings (Reference, Hotelcode, Hotelname, HotelCountry, GWG_Status, PurchaseCurrency, PurchasePrice, SalesCurrency, SalesPrice, GWGHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC, CheckHotel, Company_Group, Bookingdate, Traveldate, Roomtype, Board, Duration, TransferTo, TransferFrom, Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck, DifferenceTOPrice, ActionBy, Status, Comments, DifferenceReason, PriceBreakdown) VALUES"
@@ -141,7 +157,7 @@ Partial Public Class frmMain
 
                 With GridView1
                     reference = .GetRowCellValue(x, "Reference").ToString
-                    hotelcode = .GetRowCellValue(x, "HotelCode").ToString
+                    hotelCode = .GetRowCellValue(x, "HotelCode").ToString
                     hotelName = Replace(.GetRowCellValue(x, "HotelName").ToString, "'", "''")
                     hotelCountry = .GetRowCellValue(x, "HotelCountry").ToString
                     gwgStatus = .GetRowCellValue(x, "GwgStatus").ToString
@@ -199,10 +215,11 @@ Partial Public Class frmMain
             Dim result As String = ExClass.QuerySet(query)
 
             If Not result = "True" Then
+                Wait(False)
                 MsgBox(result)
             End If
         End If
-
+        Wait(False)
     End Sub
 
     Public Sub UpdateCertainRow(ByVal rowHandle As Integer, ByVal booking As Booking)
@@ -268,11 +285,12 @@ Partial Public Class frmMain
     End Function
 
     Private Sub btnLoad_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnLoad.ItemClick
+        Wait(True)
         Dim query As String = "SELECT * FROM Booking;"
         Dim dt As New DataTable()
         dt = ExClass.QueryGet(query)
         GridControl1.DataSource = dt
-
+        Wait(False)
     End Sub
 
     Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
@@ -284,8 +302,16 @@ Partial Public Class frmMain
         End If
     End Sub
 
+    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        My.Settings.Theme = UserLookAndFeel.Default.SkinName.ToString
+        My.Settings.Save()
+    End Sub
+
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmLogin.Close()
+        If Not My.Settings.Theme = "" Then
+            UserLookAndFeel.Default.SkinName = My.Settings.Theme.ToString()
+        End If
     End Sub
 
     Private Sub btnSwitchUser_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSwitchUser.ItemClick
@@ -313,5 +339,9 @@ Partial Public Class frmMain
     Private Sub btnExit_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnExit.ItemClick
         Me.Close()
         Application.Exit()
+    End Sub
+
+    Private Sub btnManageUsers_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageUsers.ItemClick
+        frmManageUsers.ShowDialog()
     End Sub
 End Class

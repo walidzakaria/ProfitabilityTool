@@ -41,6 +41,9 @@
   <PropertyGroup>
     <StartupObject>MarginProfitability.My.MyApplication</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v17.1" />
     <Reference Include="DevExpress.Data.v17.1" />
@@ -97,6 +100,12 @@
     <Compile Include="frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
+    <Compile Include="frmManageUsers.Designer.vb">
+      <DependentUpon>frmManageUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSignup.Designer.vb">
       <DependentUpon>frmSignup.vb</DependentUpon>
     </Compile>
@@ -122,6 +131,12 @@
     <Compile Include="frmEdit.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="WaitForm1.Designer.vb">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.vb</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageUsers.resx">
+      <DependentUpon>frmManageUsers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSignup.resx">
       <DependentUpon>frmSignup.vb</DependentUpon>
@@ -152,6 +170,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
@@ -173,6 +195,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sign up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

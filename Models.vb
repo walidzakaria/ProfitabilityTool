@@ -88,6 +88,12 @@ Public Class Login
         Return result
     End Function
 
+    Public Function ResetPassword() As Boolean
+        Password = "123456"
+        Dim result As Boolean = ChangePassowrd(Password)
+        Return result
+    End Function
+
     Public Function GetById() As Boolean
         Dim result As Boolean = False
         Dim query As String = "SELECT * FROM Login WHERE LoginID = " & LoginId & ";"
@@ -313,4 +319,5 @@ Public Class Comment
 
         Return result
     End Function
+
 End Class

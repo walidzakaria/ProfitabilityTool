@@ -34,6 +34,7 @@
         Me.btnManageUsers = New DevExpress.XtraBars.BarButtonItem()
         Me.btnAddNewUser = New DevExpress.XtraBars.BarButtonItem()
         Me.btnChangePassword = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnExit = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -82,7 +83,7 @@
         Me.GridColumn39 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn40 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RibbonPageGroup6 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.btnExit = New DevExpress.XtraBars.BarButtonItem()
+        Me.SplashScreenManager1 = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.MarginProfitability.WaitForm1), True, True)
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -174,6 +175,15 @@
         Me.btnChangePassword.Name = "btnChangePassword"
         Me.btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
+        'btnExit
+        '
+        Me.btnExit.Caption = "Exit"
+        Me.btnExit.Id = 9
+        Me.btnExit.ImageOptions.Image = CType(resources.GetObject("btnExit.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnExit.ImageOptions.LargeImage = CType(resources.GetObject("btnExit.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2, Me.RibbonPageGroup3, Me.RibbonPageGroup4})
@@ -185,12 +195,14 @@
         Me.RibbonPageGroup1.ItemLinks.Add(Me.btnRate)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.btnSave)
         Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
+        Me.RibbonPageGroup1.ShowCaptionButton = False
         Me.RibbonPageGroup1.Text = "Data"
         '
         'RibbonPageGroup2
         '
         Me.RibbonPageGroup2.ItemLinks.Add(Me.btnLoad)
         Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
+        Me.RibbonPageGroup2.ShowCaptionButton = False
         Me.RibbonPageGroup2.Text = "Show"
         '
         'RibbonPageGroup3
@@ -200,6 +212,7 @@
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnAddNewUser)
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnChangePassword)
         Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
+        Me.RibbonPageGroup3.ShowCaptionButton = False
         Me.RibbonPageGroup3.Text = "Administration"
         '
         'RibbonPageGroup4
@@ -207,6 +220,7 @@
         Me.RibbonPageGroup4.ItemLinks.Add(Me.SkinRibbonGalleryBarItem1)
         Me.RibbonPageGroup4.ItemLinks.Add(Me.btnExit)
         Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
+        Me.RibbonPageGroup4.ShowCaptionButton = False
         Me.RibbonPageGroup4.Text = "Settings"
         '
         'GridControl1
@@ -594,14 +608,9 @@
         Me.RibbonPageGroup6.ShowCaptionButton = False
         Me.RibbonPageGroup6.Text = "Settings"
         '
-        'btnExit
+        'SplashScreenManager1
         '
-        Me.btnExit.Caption = "Exit"
-        Me.btnExit.Id = 9
-        Me.btnExit.ImageOptions.Image = CType(resources.GetObject("BarButtonItem1.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnExit.ImageOptions.LargeImage = CType(resources.GetObject("BarButtonItem1.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.SplashScreenManager1.ClosingDelay = 500
         '
         'frmMain
         '
@@ -611,6 +620,7 @@
         Me.ClientSize = New System.Drawing.Size(941, 491)
         Me.Controls.Add(Me.GridControl1)
         Me.Controls.Add(Me.RibbonControl1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMain"
         Me.Ribbon = Me.RibbonControl1
         Me.Text = "Margin Profitability"
@@ -683,5 +693,6 @@
     Friend WithEvents btnChangePassword As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup4 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents btnExit As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents SplashScreenManager1 As DevExpress.XtraSplashScreen.SplashScreenManager
 
 End Class
