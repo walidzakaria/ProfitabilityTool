@@ -972,7 +972,7 @@ Partial Public Class frmEdit
         Me.windowsUIButtonPanelMain.MaximumSize = New System.Drawing.Size(0, 60)
         Me.windowsUIButtonPanelMain.MinimumSize = New System.Drawing.Size(60, 60)
         Me.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain"
-        Me.windowsUIButtonPanelMain.Size = New System.Drawing.Size(60, 60)
+        Me.windowsUIButtonPanelMain.Size = New System.Drawing.Size(736, 60)
         Me.windowsUIButtonPanelMain.TabIndex = 3
         Me.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain"
         Me.windowsUIButtonPanelMain.UseButtonBackgroundImages = False

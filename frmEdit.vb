@@ -230,4 +230,11 @@ Partial Public Class frmEdit
             frmMain.Wait(False)
         End If
     End Sub
+
+    Private Sub txtComment_EditValueChanged(sender As Object, e As EventArgs) Handles txtComment.EditValueChanged
+        Dim textCalc As Single = ExClass.CalculateText(txtComment.EditValue)
+        If textCalc <> 0 Then
+            txtCalculation.Text = textCalc.ToString
+        End If
+    End Sub
 End Class
