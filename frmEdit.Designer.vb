@@ -60,8 +60,6 @@ Partial Public Class frmEdit
         Me.dataLayoutControl1 = New DevExpress.XtraDataLayout.DataLayoutControl()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.LayoutView1 = New DevExpress.XtraGrid.Views.Layout.LayoutView()
-        Me.BandedGridColumn1 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
-        Me.layoutViewField_BandedGridColumn1 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
         Me.BandedGridColumn2 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
         Me.layoutViewField_BandedGridColumn2 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
         Me.BandedGridColumn3 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
@@ -72,8 +70,10 @@ Partial Public Class frmEdit
         Me.BandedGridColumn5 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
         Me.layoutViewField_BandedGridColumn5 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
         Me.BandedGridColumn6 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
+        Me.RepositoryItemLookUpEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.layoutViewField_BandedGridColumn6 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
         Me.LayoutViewCard1 = New DevExpress.XtraGrid.Views.Layout.LayoutViewCard()
+        Me.RepositoryItemComboBox1 = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.TileView1 = New DevExpress.XtraGrid.Views.Tile.TileView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.txtHotelCode = New DevExpress.XtraEditors.TextEdit()
@@ -105,15 +105,15 @@ Partial Public Class frmEdit
         Me.txtIncomingAgency = New DevExpress.XtraEditors.TextEdit()
         Me.txtBookingStateDesc = New DevExpress.XtraEditors.TextEdit()
         Me.txtPriceBreakdown = New DevExpress.XtraEditors.TextEdit()
-        Me.txtGWGStatus = New DevExpress.XtraEditors.TextEdit()
         Me.txtUser = New DevExpress.XtraEditors.TextEdit()
         Me.windowsUIButtonPanelMain = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
         Me.btnToggleComment = New DevExpress.XtraEditors.SimpleButton()
-        Me.txtStatus = New DevExpress.XtraEditors.TextEdit()
         Me.txtComment = New DevExpress.XtraEditors.MemoEdit()
         Me.txtCalculation = New DevExpress.XtraEditors.TextEdit()
         Me.btnSaveComment = New DevExpress.XtraEditors.SimpleButton()
         Me.btnCancelComment = New DevExpress.XtraEditors.SimpleButton()
+        Me.cbGWGStatus = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.cbStatus = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.layoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.TabbedControlGroup2 = New DevExpress.XtraLayout.TabbedControlGroup()
         Me.LayoutControlGroup7 = New DevExpress.XtraLayout.LayoutControlGroup()
@@ -170,14 +170,15 @@ Partial Public Class frmEdit
         Me.dataLayoutControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.layoutViewField_BandedGridColumn1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutViewField_BandedGridColumn2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemMemoEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutViewField_BandedGridColumn3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutViewField_BandedGridColumn4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutViewField_BandedGridColumn5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutViewField_BandedGridColumn6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutViewCard1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TileView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtHotelCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtHotelName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -211,11 +212,11 @@ Partial Public Class frmEdit
         CType(Me.txtIncomingAgency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtBookingStateDesc.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtPriceBreakdown.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtGWGStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtUser.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtComment.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCalculation.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cbGWGStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cbStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TabbedControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -352,15 +353,15 @@ Partial Public Class frmEdit
         Me.dataLayoutControl1.Controls.Add(Me.txtIncomingAgency)
         Me.dataLayoutControl1.Controls.Add(Me.txtBookingStateDesc)
         Me.dataLayoutControl1.Controls.Add(Me.txtPriceBreakdown)
-        Me.dataLayoutControl1.Controls.Add(Me.txtGWGStatus)
         Me.dataLayoutControl1.Controls.Add(Me.txtUser)
         Me.dataLayoutControl1.Controls.Add(Me.windowsUIButtonPanelMain)
         Me.dataLayoutControl1.Controls.Add(Me.btnToggleComment)
-        Me.dataLayoutControl1.Controls.Add(Me.txtStatus)
         Me.dataLayoutControl1.Controls.Add(Me.txtComment)
         Me.dataLayoutControl1.Controls.Add(Me.txtCalculation)
         Me.dataLayoutControl1.Controls.Add(Me.btnSaveComment)
         Me.dataLayoutControl1.Controls.Add(Me.btnCancelComment)
+        Me.dataLayoutControl1.Controls.Add(Me.cbGWGStatus)
+        Me.dataLayoutControl1.Controls.Add(Me.cbStatus)
         Me.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataLayoutControl1.Location = New System.Drawing.Point(0, 30)
         Me.dataLayoutControl1.Name = "dataLayoutControl1"
@@ -374,9 +375,9 @@ Partial Public Class frmEdit
         Me.GridControl1.Location = New System.Drawing.Point(24, 264)
         Me.GridControl1.MainView = Me.LayoutView1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemMemoEdit1})
+        Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemMemoEdit1, Me.RepositoryItemComboBox1, Me.RepositoryItemLookUpEdit1})
         Me.GridControl1.Size = New System.Drawing.Size(736, 239)
-        Me.GridControl1.TabIndex = 35
+        Me.GridControl1.TabIndex = 8
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.LayoutView1, Me.TileView1})
         '
         'LayoutView1
@@ -396,28 +397,13 @@ Partial Public Class frmEdit
         Me.LayoutView1.Appearance.HeaderPanel.Font = New System.Drawing.Font("Tahoma", 10.0!)
         Me.LayoutView1.Appearance.HeaderPanel.Options.UseFont = True
         Me.LayoutView1.CardMinSize = New System.Drawing.Size(105, 179)
-        Me.LayoutView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.LayoutViewColumn() {Me.BandedGridColumn1, Me.BandedGridColumn2, Me.BandedGridColumn3, Me.BandedGridColumn4, Me.BandedGridColumn5, Me.BandedGridColumn6})
+        Me.LayoutView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.LayoutViewColumn() {Me.BandedGridColumn2, Me.BandedGridColumn3, Me.BandedGridColumn4, Me.BandedGridColumn5, Me.BandedGridColumn6})
         Me.LayoutView1.GridControl = Me.GridControl1
         Me.LayoutView1.Name = "LayoutView1"
+        Me.LayoutView1.OptionsBehavior.ReadOnly = True
         Me.LayoutView1.OptionsSingleRecordMode.StretchCardToViewWidth = True
         Me.LayoutView1.OptionsView.ViewMode = DevExpress.XtraGrid.Views.Layout.LayoutViewMode.Column
         Me.LayoutView1.TemplateCard = Me.LayoutViewCard1
-        '
-        'BandedGridColumn1
-        '
-        Me.BandedGridColumn1.Caption = "ID"
-        Me.BandedGridColumn1.FieldName = "CommentID"
-        Me.BandedGridColumn1.LayoutViewField = Me.layoutViewField_BandedGridColumn1
-        Me.BandedGridColumn1.Name = "BandedGridColumn1"
-        Me.BandedGridColumn1.OptionsColumn.AllowShowHide = False
-        '
-        'layoutViewField_BandedGridColumn1
-        '
-        Me.layoutViewField_BandedGridColumn1.EditorPreferredWidth = 515
-        Me.layoutViewField_BandedGridColumn1.Location = New System.Drawing.Point(0, 0)
-        Me.layoutViewField_BandedGridColumn1.Name = "layoutViewField_BandedGridColumn1"
-        Me.layoutViewField_BandedGridColumn1.Size = New System.Drawing.Size(580, 24)
-        Me.layoutViewField_BandedGridColumn1.TextSize = New System.Drawing.Size(56, 13)
         '
         'BandedGridColumn2
         '
@@ -427,6 +413,7 @@ Partial Public Class frmEdit
         Me.BandedGridColumn2.FieldName = "Date"
         Me.BandedGridColumn2.LayoutViewField = Me.layoutViewField_BandedGridColumn2
         Me.BandedGridColumn2.Name = "BandedGridColumn2"
+        Me.BandedGridColumn2.OptionsColumn.AllowEdit = False
         Me.BandedGridColumn2.OptionsColumn.FixedWidth = True
         Me.BandedGridColumn2.Width = 140
         '
@@ -435,7 +422,7 @@ Partial Public Class frmEdit
         Me.layoutViewField_BandedGridColumn2.EditorPreferredWidth = 515
         Me.layoutViewField_BandedGridColumn2.Location = New System.Drawing.Point(0, 24)
         Me.layoutViewField_BandedGridColumn2.Name = "layoutViewField_BandedGridColumn2"
-        Me.layoutViewField_BandedGridColumn2.Size = New System.Drawing.Size(580, 24)
+        Me.layoutViewField_BandedGridColumn2.Size = New System.Drawing.Size(580, 20)
         Me.layoutViewField_BandedGridColumn2.TextSize = New System.Drawing.Size(56, 13)
         '
         'BandedGridColumn3
@@ -445,6 +432,7 @@ Partial Public Class frmEdit
         Me.BandedGridColumn3.FieldName = "Comment"
         Me.BandedGridColumn3.LayoutViewField = Me.layoutViewField_BandedGridColumn3
         Me.BandedGridColumn3.Name = "BandedGridColumn3"
+        Me.BandedGridColumn3.OptionsColumn.AllowEdit = False
         Me.BandedGridColumn3.Width = 428
         '
         'RepositoryItemMemoEdit1
@@ -454,7 +442,7 @@ Partial Public Class frmEdit
         'layoutViewField_BandedGridColumn3
         '
         Me.layoutViewField_BandedGridColumn3.EditorPreferredWidth = 515
-        Me.layoutViewField_BandedGridColumn3.Location = New System.Drawing.Point(0, 48)
+        Me.layoutViewField_BandedGridColumn3.Location = New System.Drawing.Point(0, 44)
         Me.layoutViewField_BandedGridColumn3.Name = "layoutViewField_BandedGridColumn3"
         Me.layoutViewField_BandedGridColumn3.Size = New System.Drawing.Size(580, 21)
         Me.layoutViewField_BandedGridColumn3.TextSize = New System.Drawing.Size(56, 13)
@@ -465,13 +453,14 @@ Partial Public Class frmEdit
         Me.BandedGridColumn4.FieldName = "Calculation"
         Me.BandedGridColumn4.LayoutViewField = Me.layoutViewField_BandedGridColumn4
         Me.BandedGridColumn4.Name = "BandedGridColumn4"
+        Me.BandedGridColumn4.OptionsColumn.AllowEdit = False
         Me.BandedGridColumn4.OptionsColumn.FixedWidth = True
         Me.BandedGridColumn4.Width = 100
         '
         'layoutViewField_BandedGridColumn4
         '
         Me.layoutViewField_BandedGridColumn4.EditorPreferredWidth = 515
-        Me.layoutViewField_BandedGridColumn4.Location = New System.Drawing.Point(0, 69)
+        Me.layoutViewField_BandedGridColumn4.Location = New System.Drawing.Point(0, 65)
         Me.layoutViewField_BandedGridColumn4.Name = "layoutViewField_BandedGridColumn4"
         Me.layoutViewField_BandedGridColumn4.Size = New System.Drawing.Size(580, 24)
         Me.layoutViewField_BandedGridColumn4.TextSize = New System.Drawing.Size(56, 13)
@@ -482,6 +471,7 @@ Partial Public Class frmEdit
         Me.BandedGridColumn5.FieldName = "Username"
         Me.BandedGridColumn5.LayoutViewField = Me.layoutViewField_BandedGridColumn5
         Me.BandedGridColumn5.Name = "BandedGridColumn5"
+        Me.BandedGridColumn5.OptionsColumn.AllowEdit = False
         Me.BandedGridColumn5.OptionsColumn.FixedWidth = True
         Me.BandedGridColumn5.OptionsColumn.ImmediateUpdateRowPosition = DevExpress.Utils.DefaultBoolean.[False]
         Me.BandedGridColumn5.Width = 50
@@ -489,7 +479,7 @@ Partial Public Class frmEdit
         'layoutViewField_BandedGridColumn5
         '
         Me.layoutViewField_BandedGridColumn5.EditorPreferredWidth = 515
-        Me.layoutViewField_BandedGridColumn5.Location = New System.Drawing.Point(0, 93)
+        Me.layoutViewField_BandedGridColumn5.Location = New System.Drawing.Point(0, 89)
         Me.layoutViewField_BandedGridColumn5.Name = "layoutViewField_BandedGridColumn5"
         Me.layoutViewField_BandedGridColumn5.Size = New System.Drawing.Size(580, 24)
         Me.layoutViewField_BandedGridColumn5.TextSize = New System.Drawing.Size(56, 13)
@@ -497,14 +487,22 @@ Partial Public Class frmEdit
         'BandedGridColumn6
         '
         Me.BandedGridColumn6.Caption = "Status"
+        Me.BandedGridColumn6.ColumnEdit = Me.RepositoryItemLookUpEdit1
         Me.BandedGridColumn6.FieldName = "Status"
         Me.BandedGridColumn6.LayoutViewField = Me.layoutViewField_BandedGridColumn6
         Me.BandedGridColumn6.Name = "BandedGridColumn6"
+        Me.BandedGridColumn6.OptionsColumn.AllowEdit = False
+        '
+        'RepositoryItemLookUpEdit1
+        '
+        Me.RepositoryItemLookUpEdit1.AutoHeight = False
+        Me.RepositoryItemLookUpEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemLookUpEdit1.Name = "RepositoryItemLookUpEdit1"
         '
         'layoutViewField_BandedGridColumn6
         '
         Me.layoutViewField_BandedGridColumn6.EditorPreferredWidth = 515
-        Me.layoutViewField_BandedGridColumn6.Location = New System.Drawing.Point(0, 117)
+        Me.layoutViewField_BandedGridColumn6.Location = New System.Drawing.Point(0, 0)
         Me.layoutViewField_BandedGridColumn6.Name = "layoutViewField_BandedGridColumn6"
         Me.layoutViewField_BandedGridColumn6.Size = New System.Drawing.Size(580, 24)
         Me.layoutViewField_BandedGridColumn6.TextSize = New System.Drawing.Size(56, 13)
@@ -513,10 +511,18 @@ Partial Public Class frmEdit
         '
         Me.LayoutViewCard1.CustomizationFormText = "TemplateCard"
         Me.LayoutViewCard1.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText
-        Me.LayoutViewCard1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.layoutViewField_BandedGridColumn1, Me.layoutViewField_BandedGridColumn2, Me.layoutViewField_BandedGridColumn3, Me.layoutViewField_BandedGridColumn4, Me.layoutViewField_BandedGridColumn5, Me.layoutViewField_BandedGridColumn6})
-        Me.LayoutViewCard1.Name = "LayoutViewCard1"
+        Me.LayoutViewCard1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.layoutViewField_BandedGridColumn2, Me.layoutViewField_BandedGridColumn3, Me.layoutViewField_BandedGridColumn4, Me.layoutViewField_BandedGridColumn5, Me.layoutViewField_BandedGridColumn6})
+        Me.LayoutViewCard1.Name = "layoutViewTemplateCard"
         Me.LayoutViewCard1.OptionsItemText.TextToControlDistance = 5
         Me.LayoutViewCard1.Text = "TemplateCard"
+        '
+        'RepositoryItemComboBox1
+        '
+        Me.RepositoryItemComboBox1.AutoHeight = False
+        Me.RepositoryItemComboBox1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemComboBox1.Items.AddRange(New Object() {"Pending DMC", "Fixed DMC", "Pending TO", "Fixed TO"})
+        Me.RepositoryItemComboBox1.Name = "RepositoryItemComboBox1"
+        Me.RepositoryItemComboBox1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
         '
         'TileView1
         '
@@ -692,7 +698,7 @@ Partial Public Class frmEdit
         Me.txtHotelCode.Name = "txtHotelCode"
         Me.txtHotelCode.Size = New System.Drawing.Size(611, 20)
         Me.txtHotelCode.StyleController = Me.dataLayoutControl1
-        Me.txtHotelCode.TabIndex = 5
+        Me.txtHotelCode.TabIndex = 1
         '
         'txtHotelName
         '
@@ -700,7 +706,7 @@ Partial Public Class frmEdit
         Me.txtHotelName.Name = "txtHotelName"
         Me.txtHotelName.Size = New System.Drawing.Size(611, 20)
         Me.txtHotelName.StyleController = Me.dataLayoutControl1
-        Me.txtHotelName.TabIndex = 6
+        Me.txtHotelName.TabIndex = 1
         '
         'txtCountry
         '
@@ -708,7 +714,7 @@ Partial Public Class frmEdit
         Me.txtCountry.Name = "txtCountry"
         Me.txtCountry.Size = New System.Drawing.Size(237, 20)
         Me.txtCountry.StyleController = Me.dataLayoutControl1
-        Me.txtCountry.TabIndex = 7
+        Me.txtCountry.TabIndex = 1
         '
         'txtPurchaseCurrency
         '
@@ -716,7 +722,7 @@ Partial Public Class frmEdit
         Me.txtPurchaseCurrency.Name = "txtPurchaseCurrency"
         Me.txtPurchaseCurrency.Size = New System.Drawing.Size(225, 20)
         Me.txtPurchaseCurrency.StyleController = Me.dataLayoutControl1
-        Me.txtPurchaseCurrency.TabIndex = 9
+        Me.txtPurchaseCurrency.TabIndex = 1
         '
         'txtPurchasePrice
         '
@@ -724,7 +730,7 @@ Partial Public Class frmEdit
         Me.txtPurchasePrice.Name = "txtPurchasePrice"
         Me.txtPurchasePrice.Size = New System.Drawing.Size(233, 20)
         Me.txtPurchasePrice.StyleController = Me.dataLayoutControl1
-        Me.txtPurchasePrice.TabIndex = 10
+        Me.txtPurchasePrice.TabIndex = 1
         '
         'txtSalesCurrency
         '
@@ -732,7 +738,7 @@ Partial Public Class frmEdit
         Me.txtSalesCurrency.Name = "txtSalesCurrency"
         Me.txtSalesCurrency.Size = New System.Drawing.Size(225, 20)
         Me.txtSalesCurrency.StyleController = Me.dataLayoutControl1
-        Me.txtSalesCurrency.TabIndex = 11
+        Me.txtSalesCurrency.TabIndex = 1
         '
         'txtSalesPrice
         '
@@ -740,7 +746,7 @@ Partial Public Class frmEdit
         Me.txtSalesPrice.Name = "txtSalesPrice"
         Me.txtSalesPrice.Size = New System.Drawing.Size(233, 20)
         Me.txtSalesPrice.StyleController = Me.dataLayoutControl1
-        Me.txtSalesPrice.TabIndex = 12
+        Me.txtSalesPrice.TabIndex = 1
         '
         'txtHandlingFee
         '
@@ -748,7 +754,7 @@ Partial Public Class frmEdit
         Me.txtHandlingFee.Name = "txtHandlingFee"
         Me.txtHandlingFee.Size = New System.Drawing.Size(587, 20)
         Me.txtHandlingFee.StyleController = Me.dataLayoutControl1
-        Me.txtHandlingFee.TabIndex = 13
+        Me.txtHandlingFee.TabIndex = 1
         '
         'txtMargin
         '
@@ -756,7 +762,7 @@ Partial Public Class frmEdit
         Me.txtMargin.Name = "txtMargin"
         Me.txtMargin.Size = New System.Drawing.Size(587, 20)
         Me.txtMargin.StyleController = Me.dataLayoutControl1
-        Me.txtMargin.TabIndex = 14
+        Me.txtMargin.TabIndex = 1
         '
         'txtDifference
         '
@@ -764,7 +770,7 @@ Partial Public Class frmEdit
         Me.txtDifference.Name = "txtDifference"
         Me.txtDifference.Size = New System.Drawing.Size(587, 20)
         Me.txtDifference.StyleController = Me.dataLayoutControl1
-        Me.txtDifference.TabIndex = 15
+        Me.txtDifference.TabIndex = 1
         '
         'txtCurrencyHotelTc
         '
@@ -772,7 +778,7 @@ Partial Public Class frmEdit
         Me.txtCurrencyHotelTc.Name = "txtCurrencyHotelTc"
         Me.txtCurrencyHotelTc.Size = New System.Drawing.Size(225, 20)
         Me.txtCurrencyHotelTc.StyleController = Me.dataLayoutControl1
-        Me.txtCurrencyHotelTc.TabIndex = 16
+        Me.txtCurrencyHotelTc.TabIndex = 1
         '
         'txtNetRateHotelTc
         '
@@ -780,7 +786,7 @@ Partial Public Class frmEdit
         Me.txtNetRateHotelTc.Name = "txtNetRateHotelTc"
         Me.txtNetRateHotelTc.Size = New System.Drawing.Size(233, 20)
         Me.txtNetRateHotelTc.StyleController = Me.dataLayoutControl1
-        Me.txtNetRateHotelTc.TabIndex = 17
+        Me.txtNetRateHotelTc.TabIndex = 1
         '
         'txtNetRateHandlingTc
         '
@@ -788,7 +794,7 @@ Partial Public Class frmEdit
         Me.txtNetRateHandlingTc.Name = "txtNetRateHandlingTc"
         Me.txtNetRateHandlingTc.Size = New System.Drawing.Size(587, 20)
         Me.txtNetRateHandlingTc.StyleController = Me.dataLayoutControl1
-        Me.txtNetRateHandlingTc.TabIndex = 18
+        Me.txtNetRateHandlingTc.TabIndex = 1
         '
         'txtHotelCheck
         '
@@ -796,7 +802,7 @@ Partial Public Class frmEdit
         Me.txtHotelCheck.Name = "txtHotelCheck"
         Me.txtHotelCheck.Size = New System.Drawing.Size(611, 20)
         Me.txtHotelCheck.StyleController = Me.dataLayoutControl1
-        Me.txtHotelCheck.TabIndex = 19
+        Me.txtHotelCheck.TabIndex = 1
         '
         'txtCompanyGroup
         '
@@ -804,7 +810,7 @@ Partial Public Class frmEdit
         Me.txtCompanyGroup.Name = "txtCompanyGroup"
         Me.txtCompanyGroup.Size = New System.Drawing.Size(587, 20)
         Me.txtCompanyGroup.StyleController = Me.dataLayoutControl1
-        Me.txtCompanyGroup.TabIndex = 20
+        Me.txtCompanyGroup.TabIndex = 1
         '
         'deBookingDate
         '
@@ -815,7 +821,7 @@ Partial Public Class frmEdit
         Me.deBookingDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.deBookingDate.Size = New System.Drawing.Size(194, 20)
         Me.deBookingDate.StyleController = Me.dataLayoutControl1
-        Me.deBookingDate.TabIndex = 21
+        Me.deBookingDate.TabIndex = 1
         '
         'deTravelDate
         '
@@ -826,7 +832,7 @@ Partial Public Class frmEdit
         Me.deTravelDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.deTravelDate.Size = New System.Drawing.Size(264, 20)
         Me.deTravelDate.StyleController = Me.dataLayoutControl1
-        Me.deTravelDate.TabIndex = 22
+        Me.deTravelDate.TabIndex = 1
         '
         'txtRoomType
         '
@@ -834,7 +840,7 @@ Partial Public Class frmEdit
         Me.txtRoomType.Name = "txtRoomType"
         Me.txtRoomType.Size = New System.Drawing.Size(194, 20)
         Me.txtRoomType.StyleController = Me.dataLayoutControl1
-        Me.txtRoomType.TabIndex = 23
+        Me.txtRoomType.TabIndex = 1
         '
         'txtBaord
         '
@@ -842,7 +848,7 @@ Partial Public Class frmEdit
         Me.txtBaord.Name = "txtBaord"
         Me.txtBaord.Size = New System.Drawing.Size(75, 20)
         Me.txtBaord.StyleController = Me.dataLayoutControl1
-        Me.txtBaord.TabIndex = 24
+        Me.txtBaord.TabIndex = 1
         '
         'txtDuration
         '
@@ -850,7 +856,7 @@ Partial Public Class frmEdit
         Me.txtDuration.Name = "txtDuration"
         Me.txtDuration.Size = New System.Drawing.Size(60, 20)
         Me.txtDuration.StyleController = Me.dataLayoutControl1
-        Me.txtDuration.TabIndex = 25
+        Me.txtDuration.TabIndex = 1
         '
         'txtTransferTo
         '
@@ -858,7 +864,7 @@ Partial Public Class frmEdit
         Me.txtTransferTo.Name = "txtTransferTo"
         Me.txtTransferTo.Size = New System.Drawing.Size(213, 20)
         Me.txtTransferTo.StyleController = Me.dataLayoutControl1
-        Me.txtTransferTo.TabIndex = 26
+        Me.txtTransferTo.TabIndex = 1
         '
         'txtTransferFrom
         '
@@ -866,7 +872,7 @@ Partial Public Class frmEdit
         Me.txtTransferFrom.Name = "txtTransferFrom"
         Me.txtTransferFrom.Size = New System.Drawing.Size(221, 20)
         Me.txtTransferFrom.StyleController = Me.dataLayoutControl1
-        Me.txtTransferFrom.TabIndex = 27
+        Me.txtTransferFrom.TabIndex = 1
         '
         'txtPax
         '
@@ -874,7 +880,7 @@ Partial Public Class frmEdit
         Me.txtPax.Name = "txtPax"
         Me.txtPax.Size = New System.Drawing.Size(82, 20)
         Me.txtPax.StyleController = Me.dataLayoutControl1
-        Me.txtPax.TabIndex = 28
+        Me.txtPax.TabIndex = 1
         '
         'txtAdult
         '
@@ -882,7 +888,7 @@ Partial Public Class frmEdit
         Me.txtAdult.Name = "txtAdult"
         Me.txtAdult.Size = New System.Drawing.Size(97, 20)
         Me.txtAdult.StyleController = Me.dataLayoutControl1
-        Me.txtAdult.TabIndex = 29
+        Me.txtAdult.TabIndex = 1
         '
         'txtChild
         '
@@ -890,7 +896,7 @@ Partial Public Class frmEdit
         Me.txtChild.Name = "txtChild"
         Me.txtChild.Size = New System.Drawing.Size(126, 20)
         Me.txtChild.StyleController = Me.dataLayoutControl1
-        Me.txtChild.TabIndex = 30
+        Me.txtChild.TabIndex = 1
         '
         'deImportDate
         '
@@ -901,7 +907,7 @@ Partial Public Class frmEdit
         Me.deImportDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.deImportDate.Size = New System.Drawing.Size(82, 20)
         Me.deImportDate.StyleController = Me.dataLayoutControl1
-        Me.deImportDate.TabIndex = 31
+        Me.deImportDate.TabIndex = 1
         '
         'txtIncomingAgency
         '
@@ -909,7 +915,7 @@ Partial Public Class frmEdit
         Me.txtIncomingAgency.Name = "txtIncomingAgency"
         Me.txtIncomingAgency.Size = New System.Drawing.Size(352, 20)
         Me.txtIncomingAgency.StyleController = Me.dataLayoutControl1
-        Me.txtIncomingAgency.TabIndex = 32
+        Me.txtIncomingAgency.TabIndex = 1
         '
         'txtBookingStateDesc
         '
@@ -917,7 +923,7 @@ Partial Public Class frmEdit
         Me.txtBookingStateDesc.Name = "txtBookingStateDesc"
         Me.txtBookingStateDesc.Size = New System.Drawing.Size(563, 20)
         Me.txtBookingStateDesc.StyleController = Me.dataLayoutControl1
-        Me.txtBookingStateDesc.TabIndex = 33
+        Me.txtBookingStateDesc.TabIndex = 1
         '
         'txtPriceBreakdown
         '
@@ -925,15 +931,7 @@ Partial Public Class frmEdit
         Me.txtPriceBreakdown.Name = "txtPriceBreakdown"
         Me.txtPriceBreakdown.Size = New System.Drawing.Size(563, 20)
         Me.txtPriceBreakdown.StyleController = Me.dataLayoutControl1
-        Me.txtPriceBreakdown.TabIndex = 34
-        '
-        'txtGWGStatus
-        '
-        Me.txtGWGStatus.Location = New System.Drawing.Point(515, 94)
-        Me.txtGWGStatus.Name = "txtGWGStatus"
-        Me.txtGWGStatus.Size = New System.Drawing.Size(245, 20)
-        Me.txtGWGStatus.StyleController = Me.dataLayoutControl1
-        Me.txtGWGStatus.TabIndex = 8
+        Me.txtPriceBreakdown.TabIndex = 1
         '
         'txtUser
         '
@@ -942,7 +940,7 @@ Partial Public Class frmEdit
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(587, 20)
         Me.txtUser.StyleController = Me.dataLayoutControl1
-        Me.txtUser.TabIndex = 36
+        Me.txtUser.TabIndex = 1
         '
         'windowsUIButtonPanelMain
         '
@@ -973,7 +971,7 @@ Partial Public Class frmEdit
         Me.windowsUIButtonPanelMain.MinimumSize = New System.Drawing.Size(60, 60)
         Me.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain"
         Me.windowsUIButtonPanelMain.Size = New System.Drawing.Size(736, 60)
-        Me.windowsUIButtonPanelMain.TabIndex = 3
+        Me.windowsUIButtonPanelMain.TabIndex = 1
         Me.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain"
         Me.windowsUIButtonPanelMain.UseButtonBackgroundImages = False
         '
@@ -983,16 +981,8 @@ Partial Public Class frmEdit
         Me.btnToggleComment.Name = "btnToggleComment"
         Me.btnToggleComment.Size = New System.Drawing.Size(736, 22)
         Me.btnToggleComment.StyleController = Me.dataLayoutControl1
-        Me.btnToggleComment.TabIndex = 37
+        Me.btnToggleComment.TabIndex = 2
         Me.btnToggleComment.Text = "New Comment"
-        '
-        'txtStatus
-        '
-        Me.txtStatus.Location = New System.Drawing.Point(161, 115)
-        Me.txtStatus.Name = "txtStatus"
-        Me.txtStatus.Size = New System.Drawing.Size(587, 20)
-        Me.txtStatus.StyleController = Me.dataLayoutControl1
-        Me.txtStatus.TabIndex = 38
         '
         'txtComment
         '
@@ -1000,15 +990,17 @@ Partial Public Class frmEdit
         Me.txtComment.Name = "txtComment"
         Me.txtComment.Size = New System.Drawing.Size(587, 49)
         Me.txtComment.StyleController = Me.dataLayoutControl1
-        Me.txtComment.TabIndex = 39
+        Me.txtComment.TabIndex = 4
         '
         'txtCalculation
         '
         Me.txtCalculation.Location = New System.Drawing.Point(161, 192)
         Me.txtCalculation.Name = "txtCalculation"
+        Me.txtCalculation.Properties.Mask.EditMask = "\d+(\R.\d{0,2})?"
+        Me.txtCalculation.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
         Me.txtCalculation.Size = New System.Drawing.Size(587, 20)
         Me.txtCalculation.StyleController = Me.dataLayoutControl1
-        Me.txtCalculation.TabIndex = 40
+        Me.txtCalculation.TabIndex = 5
         '
         'btnSaveComment
         '
@@ -1016,7 +1008,7 @@ Partial Public Class frmEdit
         Me.btnSaveComment.Name = "btnSaveComment"
         Me.btnSaveComment.Size = New System.Drawing.Size(354, 22)
         Me.btnSaveComment.StyleController = Me.dataLayoutControl1
-        Me.btnSaveComment.TabIndex = 41
+        Me.btnSaveComment.TabIndex = 6
         Me.btnSaveComment.Text = "SAVE"
         '
         'btnCancelComment
@@ -1025,8 +1017,30 @@ Partial Public Class frmEdit
         Me.btnCancelComment.Name = "btnCancelComment"
         Me.btnCancelComment.Size = New System.Drawing.Size(354, 22)
         Me.btnCancelComment.StyleController = Me.dataLayoutControl1
-        Me.btnCancelComment.TabIndex = 42
+        Me.btnCancelComment.TabIndex = 7
         Me.btnCancelComment.Text = "CANCEL"
+        '
+        'cbGWGStatus
+        '
+        Me.cbGWGStatus.Location = New System.Drawing.Point(515, 94)
+        Me.cbGWGStatus.Name = "cbGWGStatus"
+        Me.cbGWGStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.cbGWGStatus.Properties.Items.AddRange(New Object() {"OK", "CAN", "OnR", "BNA"})
+        Me.cbGWGStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
+        Me.cbGWGStatus.Size = New System.Drawing.Size(245, 20)
+        Me.cbGWGStatus.StyleController = Me.dataLayoutControl1
+        Me.cbGWGStatus.TabIndex = 1
+        '
+        'cbStatus
+        '
+        Me.cbStatus.Location = New System.Drawing.Point(161, 115)
+        Me.cbStatus.Name = "cbStatus"
+        Me.cbStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.cbStatus.Properties.Items.AddRange(New Object() {"Pending DMC", "Fixed DMC", "Pending TO", "Fixed TO"})
+        Me.cbStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
+        Me.cbStatus.Size = New System.Drawing.Size(587, 20)
+        Me.cbStatus.StyleController = Me.dataLayoutControl1
+        Me.cbStatus.TabIndex = 3
         '
         'layoutControlGroup1
         '
@@ -1075,7 +1089,7 @@ Partial Public Class frmEdit
         '
         'LayoutControlItem34
         '
-        Me.LayoutControlItem34.Control = Me.txtStatus
+        Me.LayoutControlItem34.Control = Me.cbStatus
         Me.LayoutControlItem34.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem34.Name = "LayoutControlItem34"
         Me.LayoutControlItem34.Size = New System.Drawing.Size(716, 24)
@@ -1171,7 +1185,7 @@ Partial Public Class frmEdit
         '
         'LayoutControlItem5
         '
-        Me.LayoutControlItem5.Control = Me.txtGWGStatus
+        Me.LayoutControlItem5.Control = Me.cbGWGStatus
         Me.LayoutControlItem5.Location = New System.Drawing.Point(366, 48)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
         Me.LayoutControlItem5.Size = New System.Drawing.Size(374, 24)
@@ -1515,14 +1529,15 @@ Partial Public Class frmEdit
         Me.dataLayoutControl1.ResumeLayout(False)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.layoutViewField_BandedGridColumn1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutViewField_BandedGridColumn2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemMemoEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutViewField_BandedGridColumn3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutViewField_BandedGridColumn4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutViewField_BandedGridColumn5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutViewField_BandedGridColumn6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutViewCard1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TileView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtHotelCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtHotelName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1556,11 +1571,11 @@ Partial Public Class frmEdit
         CType(Me.txtIncomingAgency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtBookingStateDesc.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtPriceBreakdown.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtGWGStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtUser.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtComment.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCalculation.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cbGWGStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cbStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TabbedControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1690,7 +1705,6 @@ Partial Public Class frmEdit
     Friend WithEvents LayoutControlItem8 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlGroup7 As DevExpress.XtraLayout.LayoutControlGroup
     Friend WithEvents LayoutControlGroup6 As DevExpress.XtraLayout.LayoutControlGroup
-    Friend WithEvents txtGWGStatus As DevExpress.XtraEditors.TextEdit
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents LayoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents TileView1 As DevExpress.XtraGrid.Views.Tile.TileView
@@ -1704,7 +1718,6 @@ Partial Public Class frmEdit
     Friend WithEvents TileViewColumn1 As DevExpress.XtraGrid.Columns.TileViewColumn
     Friend WithEvents grpAddNewComment As DevExpress.XtraLayout.LayoutControlGroup
     Friend WithEvents btnToggleComment As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents txtStatus As DevExpress.XtraEditors.TextEdit
     Friend WithEvents txtComment As DevExpress.XtraEditors.MemoEdit
     Friend WithEvents txtCalculation As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem34 As DevExpress.XtraLayout.LayoutControlItem
@@ -1718,18 +1731,20 @@ Partial Public Class frmEdit
     Friend WithEvents EmptySpaceItem1 As DevExpress.XtraLayout.EmptySpaceItem
     Friend WithEvents EmptySpaceItem2 As DevExpress.XtraLayout.EmptySpaceItem
     Friend WithEvents LayoutView1 As DevExpress.XtraGrid.Views.Layout.LayoutView
-    Friend WithEvents BandedGridColumn1 As DevExpress.XtraGrid.Columns.LayoutViewColumn
     Friend WithEvents BandedGridColumn2 As DevExpress.XtraGrid.Columns.LayoutViewColumn
     Friend WithEvents BandedGridColumn3 As DevExpress.XtraGrid.Columns.LayoutViewColumn
     Friend WithEvents RepositoryItemMemoEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit
     Friend WithEvents BandedGridColumn4 As DevExpress.XtraGrid.Columns.LayoutViewColumn
     Friend WithEvents BandedGridColumn5 As DevExpress.XtraGrid.Columns.LayoutViewColumn
     Friend WithEvents BandedGridColumn6 As DevExpress.XtraGrid.Columns.LayoutViewColumn
-    Friend WithEvents layoutViewField_BandedGridColumn1 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
+    Friend WithEvents cbGWGStatus As DevExpress.XtraEditors.ComboBoxEdit
+    Friend WithEvents cbStatus As DevExpress.XtraEditors.ComboBoxEdit
+    Friend WithEvents RepositoryItemComboBox1 As DevExpress.XtraEditors.Repository.RepositoryItemComboBox
     Friend WithEvents layoutViewField_BandedGridColumn2 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents layoutViewField_BandedGridColumn3 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents layoutViewField_BandedGridColumn4 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents layoutViewField_BandedGridColumn5 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents layoutViewField_BandedGridColumn6 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents LayoutViewCard1 As DevExpress.XtraGrid.Views.Layout.LayoutViewCard
+    Friend WithEvents RepositoryItemLookUpEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
 End Class

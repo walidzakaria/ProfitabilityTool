@@ -115,6 +115,7 @@ End Class
 
 
 Public Class Booking
+
     Public Property BookingID() As Long
     Public Property Reference() As String
     Public Property HotelCode() As String
@@ -165,12 +166,12 @@ Public Class Booking
         sb.Append(HotelCode)
         sb.Append(HotelName)
         sb.Append(CountryCode)
-        sb.Append(GwgStatus)
+        sb.Append(GwgStatus.ToUpper)
         sb.Append(PurchaseCurrency)
         sb.Append(PurchasePrice.ToString)
         sb.Append(SalesCurrency)
         sb.Append(SalesPrice.ToString)
-        sb.Append(GWGHandlingFee.ToString)
+        sb.Append(GwgHandlingFee.ToString)
         sb.Append(Margin.ToString)
         sb.Append(Difference.ToString)
         sb.Append(CurrencyHotelTC)
@@ -178,9 +179,9 @@ Public Class Booking
         sb.Append(NetRateHandlingTC.ToString)
         sb.Append(CheckHotel)
         sb.Append(CompanyGroup)
-        sb.Append(Bookingdate.ToString)
+        sb.Append(BookingDate.ToString)
         sb.Append(TravelDate.ToString)
-        sb.Append(Roomtype)
+        sb.Append(RoomType)
         sb.Append(Board)
         sb.Append(Duration.ToString)
         sb.Append(TransferTo)
@@ -214,6 +215,22 @@ Public Class Booking
 
     End Function
 
+    Public Function GwgStatusNumber() As Integer
+        Dim result As Integer
+        Select Case GwgStatus.ToUpper
+            Case "OK"
+                result = 0
+            Case "CAN"
+                result = 1
+            Case "ONR"
+                result = 2
+            Case "BNA"
+                result = 3
+            Case Else
+                result = -1
+        End Select
+        Return result
+    End Function
     Public Function Save() As Boolean
         Dim query As String
         Dim result As Boolean = True
@@ -291,7 +308,7 @@ Public Class Comment
     Public Property CommentDate() As DateTime
     Public Property Comment() As String
     Public Property Calculation() As Single
-    Public Property Status() As String
+    Public Property Status() As Short
     Public Property LoginID() As Integer
 
     Public Function Username() As Login
@@ -320,4 +337,112 @@ Public Class Comment
         Return result
     End Function
 
+End Class
+
+Public Class Destination
+    Public Property DestinationId() As Integer
+    Public Property DestinationCode() As String
+    Public Property Destination() As String
+
+    Public Function UniqueCode() As Boolean
+        Dim result As Boolean = False
+        Dim query As String
+        query = "SELECT COUNT(*) FROM Destination WHERE DestinationCode = '" & DestinationCode & "' AND DestinationID != " & DestinationId & ";"
+
+        Dim queryResult As New DataTable()
+        queryResult = ExClass.QueryGet(query)
+        If queryResult.Rows(0)(0) = 0 Then
+            result = True
+        End If
+        Return result
+    End Function
+    Public Function SaveDestination() As Boolean
+        Dim result As Boolean = False
+        Dim queryResult As String
+        Dim query As String
+        If DestinationId = 0 Then
+            query = "INSERT INTO Destination (DestinationCode, Destination) VALUES ('" & DestinationCode.ToUpper & "', '" & Destination & "');"
+        Else
+            query = "UPDATE Destination SET DestinationCode = '" & DestinationCode.ToUpper _
+                & "', Destination = '" & Destination & "' WHERE DestinationID = " & DestinationId & ";"
+        End If
+
+        queryResult = ExClass.QuerySet(query)
+        If queryResult = "True" Then
+            result = True
+            frmMain.FillRibbonDestinations()
+        Else
+            MsgBox(queryResult)
+        End If
+
+        Return result
+    End Function
+
+    Public Function GetById() As Boolean
+        Dim result As Boolean = False
+        Dim query As String = "SELECT * FROM Destination WHERE DestinationID = " & DestinationId.ToString & ";"
+        Dim dt As New DataTable()
+        dt = ExClass.QueryGet(query)
+
+        If dt.Rows.Count <> 0 Then
+            DestinationCode = dt.Rows(0)(1)
+            Destination = dt.Rows(0)(2)
+
+            result = True
+        End If
+
+        Return result
+
+    End Function
+End Class
+
+Public Class Margin
+    Public Property MarginId() As Integer
+    Public Property DestinationId As Integer
+    Public Property MarginFrom As Single
+    Public Property MarginTo As Single
+    Public Property EffectiveDate As Date
+
+    Public Function SaveMargin() As Boolean
+        Dim result As Boolean = False
+        Dim queryResult As String
+        Dim query As String
+        If MarginId = 0 Then
+            query = String.Format("INSERT INTO Margin (DestinationID, MarginFrom, MarginTo, EffectiveDate) VALUES ({0}, {1}, {2}, '{3}');", _
+                                  DestinationId.ToString, MarginFrom.ToString, MarginTo.ToString, EffectiveDate.ToString("MM/dd/yyyy"))
+        Else
+            query = String.Format("UPDATE Margin SET DestinationID = {0}, MarginFrom = {1}, MarginTo = {2}, EffectiveDate = '{3}'" _
+                                  & "WHERE MarginID = {4};", DestinationId.ToString, MarginFrom.ToString, MarginTo.ToString, _
+                                  EffectiveDate.ToString("MM/dd/yyyy"), MarginId.ToString)
+        End If
+
+        queryResult = ExClass.QuerySet(query)
+        If queryResult = "True" Then
+            result = True
+        Else
+            MsgBox(queryResult)
+        End If
+
+        Return result
+    End Function
+
+    Public Function GetById() As Boolean
+        Dim result As Boolean = False
+        Dim query As String = "SELECT * FROM Margin WHERE MarginID = " & MarginId.ToString & ";"
+        Dim dt As New DataTable()
+        dt = ExClass.QueryGet(query)
+
+        If dt.Rows.Count <> 0 Then
+            MarginId = dt.Rows(0)(0)
+            DestinationId = dt.Rows(0)(1)
+            MarginFrom = dt.Rows(0)(2)
+            MarginTo = dt.Rows(0)(3)
+            EffectiveDate = dt.Rows(0)(4)
+
+            result = True
+        End If
+
+        Return result
+
+    End Function
 End Class

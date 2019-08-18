@@ -35,11 +35,20 @@
         Me.btnAddNewUser = New DevExpress.XtraBars.BarButtonItem()
         Me.btnChangePassword = New DevExpress.XtraBars.BarButtonItem()
         Me.btnExit = New DevExpress.XtraBars.BarButtonItem()
+        Me.beDateFrom = New DevExpress.XtraBars.BarEditItem()
+        Me.RepositoryItemDateEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
+        Me.beDateTo = New DevExpress.XtraBars.BarEditItem()
+        Me.RepositoryItemDateEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
+        Me.beCountry = New DevExpress.XtraBars.BarEditItem()
+        Me.RepositoryItemLookUpEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+        Me.btnManageDestination = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnManageMargin = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup4 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RepositoryItemLookUpEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -85,6 +94,12 @@
         Me.RibbonPageGroup6 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.SplashScreenManager1 = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.MarginProfitability.WaitForm1), True, True)
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemDateEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemDateEdit2.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemLookUpEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -96,11 +111,12 @@
         Me.RibbonControl1.AllowMinimizeRibbon = False
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
         Me.RibbonControl1.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.btnRate, Me.btnSave, Me.btnLoad, Me.btnSwitchUser, Me.btnManageUsers, Me.btnAddNewUser, Me.btnChangePassword, Me.btnExit})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.btnRate, Me.btnSave, Me.btnLoad, Me.btnSwitchUser, Me.btnManageUsers, Me.btnAddNewUser, Me.btnChangePassword, Me.btnExit, Me.beDateFrom, Me.beDateTo, Me.beCountry, Me.btnManageDestination, Me.btnManageMargin})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl1.MaxItemId = 10
+        Me.RibbonControl1.MaxItemId = 16
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
+        Me.RibbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2, Me.RepositoryItemLookUpEdit2})
         Me.RibbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
         Me.RibbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonControl1.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.[False]
@@ -184,6 +200,69 @@
         Me.btnExit.Name = "btnExit"
         Me.btnExit.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
+        'beDateFrom
+        '
+        Me.beDateFrom.Caption = "Date From"
+        Me.beDateFrom.Edit = Me.RepositoryItemDateEdit1
+        Me.beDateFrom.EditWidth = 80
+        Me.beDateFrom.Id = 11
+        Me.beDateFrom.Name = "beDateFrom"
+        '
+        'RepositoryItemDateEdit1
+        '
+        Me.RepositoryItemDateEdit1.AutoHeight = False
+        Me.RepositoryItemDateEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemDateEdit1.Name = "RepositoryItemDateEdit1"
+        '
+        'beDateTo
+        '
+        Me.beDateTo.Caption = "Date To    "
+        Me.beDateTo.Edit = Me.RepositoryItemDateEdit2
+        Me.beDateTo.EditWidth = 80
+        Me.beDateTo.Id = 12
+        Me.beDateTo.Name = "beDateTo"
+        '
+        'RepositoryItemDateEdit2
+        '
+        Me.RepositoryItemDateEdit2.AutoHeight = False
+        Me.RepositoryItemDateEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemDateEdit2.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemDateEdit2.Name = "RepositoryItemDateEdit2"
+        '
+        'beCountry
+        '
+        Me.beCountry.Caption = "Country    "
+        Me.beCountry.Edit = Me.RepositoryItemLookUpEdit1
+        Me.beCountry.EditWidth = 79
+        Me.beCountry.Id = 13
+        Me.beCountry.Name = "beCountry"
+        '
+        'RepositoryItemLookUpEdit1
+        '
+        Me.RepositoryItemLookUpEdit1.AutoHeight = False
+        Me.RepositoryItemLookUpEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemLookUpEdit1.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("DestinationCode", "Code"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Destination", "Country")})
+        Me.RepositoryItemLookUpEdit1.Name = "RepositoryItemLookUpEdit1"
+        Me.RepositoryItemLookUpEdit1.NullText = "Select Country"
+        '
+        'btnManageDestination
+        '
+        Me.btnManageDestination.Caption = "Manage" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Destination"
+        Me.btnManageDestination.Id = 14
+        Me.btnManageDestination.ImageOptions.Image = CType(resources.GetObject("btnManageDestination.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnManageDestination.ImageOptions.LargeImage = CType(resources.GetObject("btnManageDestination.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnManageDestination.Name = "btnManageDestination"
+        Me.btnManageDestination.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
+        'btnManageMargin
+        '
+        Me.btnManageMargin.Caption = "Manage" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Margin"
+        Me.btnManageMargin.Id = 15
+        Me.btnManageMargin.ImageOptions.Image = CType(resources.GetObject("btnManageMargin.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnManageMargin.Name = "btnManageMargin"
+        Me.btnManageMargin.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2, Me.RibbonPageGroup3, Me.RibbonPageGroup4})
@@ -200,6 +279,9 @@
         '
         'RibbonPageGroup2
         '
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.beCountry)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.beDateFrom)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.beDateTo)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.btnLoad)
         Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
         Me.RibbonPageGroup2.ShowCaptionButton = False
@@ -211,6 +293,8 @@
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageUsers)
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnAddNewUser)
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnChangePassword)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageDestination)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageMargin)
         Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
         Me.RibbonPageGroup3.ShowCaptionButton = False
         Me.RibbonPageGroup3.Text = "Administration"
@@ -222,6 +306,13 @@
         Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
         Me.RibbonPageGroup4.ShowCaptionButton = False
         Me.RibbonPageGroup4.Text = "Settings"
+        '
+        'RepositoryItemLookUpEdit2
+        '
+        Me.RepositoryItemLookUpEdit2.AutoHeight = False
+        Me.RepositoryItemLookUpEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemLookUpEdit2.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("DestinationCode", "Code"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Destination", "Country")})
+        Me.RepositoryItemLookUpEdit2.Name = "RepositoryItemLookUpEdit2"
         '
         'GridControl1
         '
@@ -626,6 +717,12 @@
         Me.Text = "Margin Profitability"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemDateEdit2.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemDateEdit2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemLookUpEdit2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -694,5 +791,14 @@
     Friend WithEvents RibbonPageGroup4 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents btnExit As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents SplashScreenManager1 As DevExpress.XtraSplashScreen.SplashScreenManager
+    Friend WithEvents RepositoryItemLookUpEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+    Friend WithEvents beDateFrom As DevExpress.XtraBars.BarEditItem
+    Friend WithEvents RepositoryItemDateEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemDateEdit
+    Friend WithEvents beDateTo As DevExpress.XtraBars.BarEditItem
+    Friend WithEvents RepositoryItemDateEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemDateEdit
+    Friend WithEvents beCountry As DevExpress.XtraBars.BarEditItem
+    Friend WithEvents RepositoryItemLookUpEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
+    Friend WithEvents btnManageDestination As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnManageMargin As DevExpress.XtraBars.BarButtonItem
 
 End Class

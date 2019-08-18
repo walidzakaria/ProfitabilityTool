@@ -28,6 +28,16 @@ Partial Public Class frmMain
         InitializeComponent()
     End Sub
 
+    Public Sub FillRibbonDestinations()
+        Dim query As String = "SELECT * FROM Destination ORDER BY Destination;"
+        Dim dt As New DataTable()
+        dt = ExClass.QueryGet(query)
+        RepositoryItemLookUpEdit1.DataSource = Nothing
+        RepositoryItemLookUpEdit1.DataSource = dt
+        RepositoryItemLookUpEdit1.ValueMember = "DestinationID"
+        RepositoryItemLookUpEdit1.DisplayMember = "Destination"
+
+    End Sub
     Private Sub btnRate_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnRate.ItemClick
         Wait(True)
         Dim dt As New DataTable()
@@ -298,7 +308,7 @@ Partial Public Class frmMain
         bookingId = CInt(GridView1.GetFocusedRowCellValue("BookingID"))
         If bookingId > 0 Then
             frmEdit.bookingId = bookingId
-            frmEdit.Show()
+            frmEdit.ShowDialog()
         End If
     End Sub
 
@@ -308,6 +318,9 @@ Partial Public Class frmMain
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FillRibbonDestinations()
+        beDateFrom.EditValue = My.Settings.RibbonDateFrom
+        beDateTo.EditValue = Today()
         frmLogin.Close()
         If Not My.Settings.Theme = "" Then
             UserLookAndFeel.Default.SkinName = My.Settings.Theme.ToString()
@@ -343,5 +356,18 @@ Partial Public Class frmMain
 
     Private Sub btnManageUsers_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageUsers.ItemClick
         frmManageUsers.ShowDialog()
+    End Sub
+
+    Private Sub beDateFrom_EditValueChanged(sender As Object, e As EventArgs) Handles beDateFrom.EditValueChanged
+        My.Settings.RibbonDateFrom = beDateFrom.EditValue
+        My.Settings.Save()
+    End Sub
+
+    Private Sub btnManageDestination_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageDestination.ItemClick
+        frmManageDestinations.ShowDialog()
+    End Sub
+
+    Private Sub btnManageMargin_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageMargin.ItemClick
+        frmManageMargin.ShowDialog()
     End Sub
 End Class
