@@ -22,6 +22,7 @@ Partial Class frmSignup
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSignup))
         Me.btnCancel = New DevExpress.XtraEditors.SimpleButton()
         Me.btnOK = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
@@ -30,11 +31,11 @@ Partial Class frmSignup
         Me.txtPassword = New DevExpress.XtraEditors.TextEdit()
         Me.txtUserName = New DevExpress.XtraEditors.TextEdit()
         Me.txtRetype = New DevExpress.XtraEditors.TextEdit()
-        Me.ceAdmin = New DevExpress.XtraEditors.CheckEdit()
+        Me.rgAuthority = New DevExpress.XtraEditors.RadioGroup()
         CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtUserName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtRetype.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ceAdmin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rgAuthority.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnCancel
@@ -129,16 +130,14 @@ Partial Class frmSignup
         Me.txtRetype.Size = New System.Drawing.Size(323, 24)
         Me.txtRetype.TabIndex = 2
         '
-        'ceAdmin
+        'rgAuthority
         '
-        Me.ceAdmin.EnterMoveNextControl = True
-        Me.ceAdmin.Location = New System.Drawing.Point(37, 178)
-        Me.ceAdmin.Name = "ceAdmin"
-        Me.ceAdmin.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.ceAdmin.Properties.Appearance.Options.UseFont = True
-        Me.ceAdmin.Properties.Caption = "Admin"
-        Me.ceAdmin.Size = New System.Drawing.Size(75, 23)
-        Me.ceAdmin.TabIndex = 3
+        Me.rgAuthority.EditValue = "Admin"
+        Me.rgAuthority.Location = New System.Drawing.Point(37, 173)
+        Me.rgAuthority.Name = "rgAuthority"
+        Me.rgAuthority.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem("Admin", "Admin", True, "Admin"), New DevExpress.XtraEditors.Controls.RadioGroupItem("DMC", "DMC", True, "DMC"), New DevExpress.XtraEditors.Controls.RadioGroupItem("TO", "TO", True, "TO")})
+        Me.rgAuthority.Size = New System.Drawing.Size(179, 25)
+        Me.rgAuthority.TabIndex = 19
         '
         'frmSignup
         '
@@ -149,7 +148,7 @@ Partial Class frmSignup
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(536, 217)
-        Me.Controls.Add(Me.ceAdmin)
+        Me.Controls.Add(Me.rgAuthority)
         Me.Controls.Add(Me.txtRetype)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtUserName)
@@ -158,6 +157,7 @@ Partial Class frmSignup
         Me.Controls.Add(Me.LabelControl1)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOK)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmSignup"
         Me.ShowMode = DevExpress.XtraSplashScreen.ShowMode.Image
         Me.SplashImage = Global.MarginProfitability.My.Resources.Resources.Sign_up
@@ -165,7 +165,7 @@ Partial Class frmSignup
         CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtUserName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtRetype.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ceAdmin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rgAuthority.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -178,5 +178,5 @@ Partial Class frmSignup
     Friend WithEvents txtPassword As DevExpress.XtraEditors.TextEdit
     Friend WithEvents txtUserName As DevExpress.XtraEditors.TextEdit
     Friend WithEvents txtRetype As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents ceAdmin As DevExpress.XtraEditors.CheckEdit
+    Friend WithEvents rgAuthority As DevExpress.XtraEditors.RadioGroup
 End Class

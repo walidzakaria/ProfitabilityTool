@@ -2,6 +2,7 @@
 
 Public Class ExClass
     Public Shared myConn As New SqlConnection("Data Source=Walid-PC\Master;Initial Catalog=YT_DB;User ID=UserConnect;Password=wwzzaa")
+    'Public Shared myConn As New SqlConnection("workstation id=profitability.mssql.somee.com;packet size=4096;user id=walidpiano_SQLLogin_1;pwd=dwvw5bcqc3;data source=profitability.mssql.somee.com;persist security info=False;initial catalog=profitability")
 
     Public Shared Function QuerySet(ByVal query As String) As String
         Dim result As String
@@ -95,4 +96,52 @@ Public Class ExClass
 
         Return result
     End Function
+
+    Public Shared Sub Authorize(ByVal userType As String)
+        Select Case userType
+            Case "Admin"
+                With frmMain
+                    .RibbonPageGroup1.Visible = True
+                    .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .RibbonPageGroup5.Visible = True
+                    .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .btnAddNewUser.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                End With
+                With frmEdit
+                    .windowsUIButtonPanelMain.Visible = True
+                End With
+            Case "DMC"
+                With frmMain
+                    .RibbonPageGroup1.Visible = True
+                    .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .RibbonPageGroup5.Visible = True
+                    .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnAddNewUser.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                End With
+                With frmEdit
+                    .windowsUIButtonPanelMain.Visible = True
+                End With
+            Case "TO"
+                With frmMain
+                    .RibbonPageGroup1.Visible = False
+                    .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .RibbonPageGroup5.Visible = False
+                    .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnAddNewUser.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                End With
+                With frmEdit
+                    .windowsUIButtonPanelMain.Visible = False
+                End With
+        End Select
+    End Sub
+
 End Class

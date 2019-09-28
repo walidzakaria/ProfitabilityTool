@@ -34,7 +34,7 @@ Partial Public Class frmMain
         dt = ExClass.QueryGet(query)
         RepositoryItemLookUpEdit1.DataSource = Nothing
         RepositoryItemLookUpEdit1.DataSource = dt
-        RepositoryItemLookUpEdit1.ValueMember = "DestinationID"
+        RepositoryItemLookUpEdit1.ValueMember = "DestinationCode"
         RepositoryItemLookUpEdit1.DisplayMember = "Destination"
 
     End Sub
@@ -161,6 +161,7 @@ Partial Public Class frmMain
         Dim differenceReason As String
         Dim priceBreakdown As String
         Dim loginId As Integer = GV.CurrentUser.LoginId
+        Dim junk As Boolean
 
         For x = 0 To GridView1.RowCount - 1
             If GridView1.GetRowCellValue(x, "BookingID").ToString = "0" Then
@@ -207,11 +208,12 @@ Partial Public Class frmMain
                     priceBreakdown = .GetRowCellValue(x, "PriceBreakdown").ToString
 
                 End With
-
-
-                lineText = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}', '{36}', '{37}', '{38}', {39}; ", _
-                                         reference, hotelCode, hotelName, hotelCountry, gwgStatus, purchaseCurrency, purchasePrice, salesCurrency, salesPrice, gwgHandlingFee, margin, difference, currencyHotelTC, netRateHotelTC, netRateHandlingTC, checkHotel, companyGroup, bookingDate, traveldate, roomType, board, duration, transferTo, transferFrom, pax, adult, child, importDate, incomingAgency, bookingStateDesc, hotelFlag, missingBookings, marginCheck, differenceTOPrice, actionBy, status, comments, differenceReason, priceBreakdown, loginId)
                 If hotelCode <> "" Then
+
+                    junk = Booking.CheckJunk(gwgStatus, marginCheck, netRateHotelTC, hotelName)
+                    lineText = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}', '{36}', '{37}', '{38}', {39}, {40}; ", _
+                                             reference, hotelCode, hotelName, hotelCountry, gwgStatus, purchaseCurrency, purchasePrice, salesCurrency, salesPrice, gwgHandlingFee, margin, difference, currencyHotelTC, netRateHotelTC, netRateHandlingTC, checkHotel, companyGroup, bookingDate, traveldate, roomType, board, duration, transferTo, transferFrom, pax, adult, child, importDate, incomingAgency, bookingStateDesc, hotelFlag, missingBookings, marginCheck, differenceTOPrice, actionBy, status, comments, differenceReason, priceBreakdown, loginId, CShort(junk).ToString)
+
                     query &= lineText
                 End If
 
@@ -294,22 +296,63 @@ Partial Public Class frmMain
         Return result
     End Function
 
-    Private Sub btnLoad_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnLoad.ItemClick
+    Private Sub LoadData(ByVal status As String)
+
         Wait(True)
-        Dim query As String = "SELECT * FROM Booking;"
+
+
+
+
+        Dim startDate, endDate As Date
+        Dim destination As String
+        startDate = beDateFrom.EditValue
+        endDate = beDateTo.EditValue
+        destination = beCountry.EditValue
+
+
+        Dim query As String = String.Format("SELECT * FROM Booking" _
+                              & " WHERE HotelCountry = '{0}' AND TravelDate BETWEEN '{1}' AND '{2}' {3};", destination, _
+                              startDate.ToString("MM/dd/yyyy"), endDate.ToString("MM/dd/yyyy"), status)
+
         Dim dt As New DataTable()
         dt = ExClass.QueryGet(query)
         GridControl1.DataSource = dt
         Wait(False)
+
+    End Sub
+
+    Private Sub btnLoad_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnLoad.ItemClick
+        LoadData(" OR 1=1")
+    End Sub
+
+    Private Sub RemoveRows()
+        GridView1.DeleteSelectedRows()
+    End Sub
+
+    Private Sub ViewBookingDetails()
+
+        If GridView1.SelectedRowsCount = 1 Then
+            frmEdit.bookingsList.Clear()
+            Dim bookingId As Long
+            bookingId = CInt(GridView1.GetFocusedRowCellValue("BookingID"))
+            If bookingId > 0 Then
+                frmEdit.bookingId = bookingId
+                frmEdit.ShowDialog()
+            End If
+        ElseIf GridView1.SelectedRowsCount > 1 Then
+            Dim bookingsList As New List(Of Integer)
+
+            For Each i As Integer In GridView1.GetSelectedRows
+                bookingsList.Add(GridView1.GetRowCellValue(i, "BookingID"))
+            Next
+            frmEdit.bookingsList = bookingsList
+            frmEdit.ShowDialog()
+        End If
+
     End Sub
 
     Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
-        Dim bookingId As Long
-        bookingId = CInt(GridView1.GetFocusedRowCellValue("BookingID"))
-        If bookingId > 0 Then
-            frmEdit.bookingId = bookingId
-            frmEdit.ShowDialog()
-        End If
+        ViewBookingDetails()
     End Sub
 
     Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -320,7 +363,12 @@ Partial Public Class frmMain
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillRibbonDestinations()
         beDateFrom.EditValue = My.Settings.RibbonDateFrom
-        beDateTo.EditValue = Today()
+        beDateTo.EditValue = Today().AddYears(3)
+
+        If My.Settings.Destination <> "" Then
+            beCountry.EditValue = My.Settings.Destination
+        End If
+
         frmLogin.Close()
         If Not My.Settings.Theme = "" Then
             UserLookAndFeel.Default.SkinName = My.Settings.Theme.ToString()
@@ -333,16 +381,6 @@ Partial Public Class frmMain
 
     Private Sub btnAddNewUser_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAddNewUser.ItemClick
         frmSignup.ShowDialog()
-    End Sub
-
-    Public Sub Authorize()
-        If GV.CurrentUser.Authority = "ADMIN" Or GV.CurrentUser.Authority = "DEVELOPER" Then
-            btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-            btnAddNewUser.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-        Else
-            btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-            btnAddNewUser.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-        End If
     End Sub
 
     Private Sub btnChangePassword_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnChangePassword.ItemClick
@@ -363,11 +401,113 @@ Partial Public Class frmMain
         My.Settings.Save()
     End Sub
 
-    Private Sub btnManageDestination_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageDestination.ItemClick
+    Private Sub btnManageDestination_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnDestination.ItemClick
         frmManageDestinations.ShowDialog()
     End Sub
 
     Private Sub btnManageMargin_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageMargin.ItemClick
         frmManageMargin.ShowDialog()
+    End Sub
+
+    Private Sub GridControl1_KeyDown(sender As Object, e As KeyEventArgs) Handles GridControl1.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            ViewBookingDetails()
+        ElseIf e.KeyCode = Keys.Delete Then
+            RemoveRows()
+        End If
+    End Sub
+
+    Private Sub beCountry_EditValueChanged(sender As Object, e As EventArgs) Handles beCountry.EditValueChanged
+        My.Settings.Destination = beCountry.EditValue
+        My.Settings.Save()
+    End Sub
+
+    Private Sub btnJunk_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnJunk.ItemClick
+        LoadData("AND Junk = 1")
+    End Sub
+
+    Private Sub brnCanceled_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles brnCanceled.ItemClick
+        LoadData("AND GwgStatus = 'Can' AND Junk = 0")
+    End Sub
+
+    Private Sub btnMatching_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMatching.ItemClick
+        Dim status As String
+        status = " AND Junk = 0 AND dbo.NegativeMargin(BookingID) = 1 AND dbo.ExcessiveMargin(BookingID) = 1 AND dbo.Mismatch(BookingID) = 1"
+        LoadData(status)
+    End Sub
+
+    Private Sub btnShowDefict_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnShowDefict.ItemClick
+        Dim status As String = " AND Junk = 0 AND ("
+
+        If Not bcExcessive.Checked And Not bcNegative.Checked And Not bcMismatch.Checked Then
+            MsgBox("Please select at least one option!")
+            Exit Sub
+        End If
+
+        If bcNegative.Checked Then
+            status &= "dbo.NegativeMargin(BookingID) = 0"
+        End If
+        If bcExcessive.Checked Then
+            If bcNegative.Checked Then
+                status &= " OR "
+            End If
+            status &= "dbo.ExcessiveMargin(BookingID) = 0"
+        End If
+        If bcMismatch.Checked Then
+            If bcNegative.Checked Or bcExcessive.Checked Then
+                status &= " OR "
+            End If
+            status &= "dbo.Mismatch(BookingID) = 0"
+        End If
+        status &= ");"
+        LoadData(status)
+
+    End Sub
+
+    Private Sub btnShow_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnShow.ItemClick
+        Dim status As String = " AND Junk = 0 AND ("
+        If Not bcPendingDmc.Checked And Not bcPendingTo.Checked And Not bcFixedDmc.Checked And Not bcFixedTo.Checked And Not bcNewRecord.Checked Then
+            MsgBox("Please select at least one option!")
+            Exit Sub
+        End If
+
+        If bcPendingDmc.Checked Then
+            status &= "dbo.Dispute(BookingID) = 0"
+        End If
+
+        If bcFixedDmc.Checked Then
+            If bcPendingDmc.Checked Then
+                status &= " OR "
+            End If
+            status &= "dbo.Dispute(BookingID) = 1"
+        End If
+        If bcPendingTo.Checked Then
+            If bcPendingDmc.Checked Or bcFixedDmc.Checked Then
+                status &= " OR "
+            End If
+            status &= "dbo.Dispute(BookingID) = 2"
+        End If
+        If bcFixedTo.Checked Then
+            If bcPendingDmc.Checked Or bcFixedDmc.Checked Or bcPendingTo.Checked Then
+                status &= " OR "
+            End If
+            status &= "dbo.Dispute(BookingID) = 3"
+        End If
+        If bcNewRecord.Checked Then
+            If bcPendingDmc.Checked Or bcFixedDmc.Checked Or bcPendingTo.Checked Or bcFixedTo.Checked Then
+                status &= " OR "
+            End If
+            status &= "dbo.Dispute(BookingID) IS NULL"
+        End If
+        status &= ");"
+        LoadData(status)
+    End Sub
+
+    Private Sub btnAddDispute_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAddDispute.ItemClick
+        ViewBookingDetails()
+    End Sub
+
+    Private Sub btnTO_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnTO.ItemClick
+
     End Sub
 End Class

@@ -20,7 +20,7 @@
         txtUserName.Text = ""
         txtPassword.Text = ""
         txtRetype.Text = ""
-        ceAdmin.Checked = False
+        rgAuthority.SelectedIndex = 0
         txtUserName.Focus()
 
     End Sub
@@ -48,11 +48,8 @@
             Dim user As New Login()
             user.Username = txtUserName.Text
             user.Password = txtPassword.Text
-            If ceAdmin.Checked Then
-                user.Authority = "ADMIN"
-            Else
-                user.Authority = "USER"
-            End If
+            user.Authority = rgAuthority.EditValue
+            
             user.Active = True
             If Not user.UniqueUsername Then
                 MsgBox("The entered username already exists, please select a unique username!")

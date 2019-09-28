@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Public Class frmManageMargin
+Partial Public Class frmManageUsers
     Inherits DevExpress.XtraEditors.XtraForm
     ''' <summary>
     ''' Required designer variable.
@@ -26,11 +26,11 @@ Partial Public Class frmManageMargin
     '''
     Private Sub InitializeComponent()
         Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmManageMargin))
         Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim WindowsUIButtonImageOptions3 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim WindowsUIButtonImageOptions4 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim WindowsUIButtonImageOptions5 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmManageUsers))
         Me.layoutControl = New DevExpress.XtraLayout.LayoutControl()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.gridControl = New DevExpress.XtraGrid.GridControl()
@@ -39,11 +39,11 @@ Partial Public Class frmManageMargin
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.layoutControlGroup = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.itemLabel = New DevExpress.XtraLayout.LayoutControlItem()
         Me.itemGrid = New DevExpress.XtraLayout.LayoutControlItem()
         Me.windowsUIButtonPanel = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
+        Me.RepositoryItemLookUpEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         CType(Me.layoutControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.layoutControl.SuspendLayout()
         CType(Me.gridControl, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,6 +51,7 @@ Partial Public Class frmManageMargin
         CType(Me.layoutControlGroup, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.itemLabel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.itemGrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'layoutControl
@@ -81,23 +82,23 @@ Partial Public Class frmManageMargin
         Me.labelControl.Size = New System.Drawing.Size(446, 34)
         Me.labelControl.StyleController = Me.layoutControl
         Me.labelControl.TabIndex = 4
-        Me.labelControl.Text = "Manage Margin"
+        Me.labelControl.Text = "Manage Users"
         '
         'gridControl
         '
         Me.gridControl.Location = New System.Drawing.Point(40, 34)
         Me.gridControl.MainView = Me.gridView
         Me.gridControl.Name = "gridControl"
+        Me.gridControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1})
         Me.gridControl.Size = New System.Drawing.Size(446, 467)
         Me.gridControl.TabIndex = 2
         Me.gridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gridView})
         '
         'gridView
         '
-        Me.gridView.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5})
+        Me.gridView.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4})
         Me.gridView.GridControl = Me.gridControl
         Me.gridView.Name = "gridView"
-        Me.gridView.OptionsBehavior.ReadOnly = True
         Me.gridView.OptionsCustomization.AllowColumnMoving = False
         Me.gridView.OptionsCustomization.AllowGroup = False
         Me.gridView.OptionsCustomization.AllowQuickHideColumns = False
@@ -110,51 +111,39 @@ Partial Public Class frmManageMargin
         'GridColumn1
         '
         Me.GridColumn1.Caption = "ID"
-        Me.GridColumn1.FieldName = "MarginID"
+        Me.GridColumn1.FieldName = "LoginID"
         Me.GridColumn1.Name = "GridColumn1"
-        Me.GridColumn1.OptionsColumn.AllowEdit = False
         Me.GridColumn1.OptionsColumn.AllowShowHide = False
         Me.GridColumn1.Width = 20
         '
         'GridColumn2
         '
-        Me.GridColumn2.Caption = "Destination"
-        Me.GridColumn2.FieldName = "Destination"
+        Me.GridColumn2.Caption = "Username"
+        Me.GridColumn2.FieldName = "Username"
         Me.GridColumn2.Name = "GridColumn2"
-        Me.GridColumn2.OptionsColumn.AllowEdit = False
         Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 0
-        Me.GridColumn2.Width = 100
+        Me.GridColumn2.Width = 188
         '
         'GridColumn3
         '
-        Me.GridColumn3.Caption = "From"
-        Me.GridColumn3.FieldName = "MarginFrom"
+        Me.GridColumn3.Caption = "Authority"
+        Me.GridColumn3.ColumnEdit = Me.RepositoryItemLookUpEdit1
+        Me.GridColumn3.FieldName = "Authority"
         Me.GridColumn3.Name = "GridColumn3"
-        Me.GridColumn3.OptionsColumn.AllowEdit = False
         Me.GridColumn3.Visible = True
         Me.GridColumn3.VisibleIndex = 1
-        Me.GridColumn3.Width = 100
+        Me.GridColumn3.Width = 188
         '
         'GridColumn4
         '
-        Me.GridColumn4.Caption = "To"
-        Me.GridColumn4.FieldName = "MarginTo"
+        Me.GridColumn4.Caption = "Active"
+        Me.GridColumn4.FieldName = "Active"
         Me.GridColumn4.Name = "GridColumn4"
-        Me.GridColumn4.OptionsColumn.AllowEdit = False
+        Me.GridColumn4.OptionsColumn.FixedWidth = True
         Me.GridColumn4.Visible = True
         Me.GridColumn4.VisibleIndex = 2
-        Me.GridColumn4.Width = 100
-        '
-        'GridColumn5
-        '
-        Me.GridColumn5.Caption = "Date"
-        Me.GridColumn5.FieldName = "EffectiveDate"
-        Me.GridColumn5.Name = "GridColumn5"
-        Me.GridColumn5.OptionsColumn.AllowEdit = False
-        Me.GridColumn5.Visible = True
-        Me.GridColumn5.VisibleIndex = 3
-        Me.GridColumn5.Width = 100
+        Me.GridColumn4.Width = 70
         '
         'layoutControlGroup
         '
@@ -204,12 +193,12 @@ Partial Public Class frmManageMargin
         Me.windowsUIButtonPanel.AppearanceButton.Pressed.Options.UseFont = True
         Me.windowsUIButtonPanel.AppearanceButton.Pressed.Options.UseForeColor = True
         Me.windowsUIButtonPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        WindowsUIButtonImageOptions1.Image = CType(resources.GetObject("WindowsUIButtonImageOptions1.Image"), System.Drawing.Image)
+        WindowsUIButtonImageOptions1.ImageUri.Uri = "Save;Size32x32;GrayScaled"
         WindowsUIButtonImageOptions2.ImageUri.Uri = "New;Size32x32;GrayScaled"
         WindowsUIButtonImageOptions3.ImageUri.Uri = "Preview;Size32x32;GrayScaled"
         WindowsUIButtonImageOptions4.ImageUri.Uri = "Refresh;Size32x32;GrayScaled"
         WindowsUIButtonImageOptions5.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
-        Me.windowsUIButtonPanel.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Edit", True, WindowsUIButtonImageOptions1), New DevExpress.XtraBars.Docking2010.WindowsUIButton("New", True, WindowsUIButtonImageOptions2), New DevExpress.XtraBars.Docking2010.WindowsUISeparator(), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Print", True, WindowsUIButtonImageOptions3), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Refresh", True, WindowsUIButtonImageOptions4), New DevExpress.XtraBars.Docking2010.WindowsUISeparator(), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions5)})
+        Me.windowsUIButtonPanel.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions1), New DevExpress.XtraBars.Docking2010.WindowsUIButton("New", True, WindowsUIButtonImageOptions2), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Print", True, WindowsUIButtonImageOptions3), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset", True, WindowsUIButtonImageOptions4), New DevExpress.XtraBars.Docking2010.WindowsUISeparator(), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions5)})
         Me.windowsUIButtonPanel.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.windowsUIButtonPanel.EnableImageTransparency = True
         Me.windowsUIButtonPanel.ForeColor = System.Drawing.Color.White
@@ -219,11 +208,19 @@ Partial Public Class frmManageMargin
         Me.windowsUIButtonPanel.MinimumSize = New System.Drawing.Size(60, 60)
         Me.windowsUIButtonPanel.Name = "windowsUIButtonPanel"
         Me.windowsUIButtonPanel.Size = New System.Drawing.Size(526, 60)
-        Me.windowsUIButtonPanel.TabIndex = 6
+        Me.windowsUIButtonPanel.TabIndex = 5
         Me.windowsUIButtonPanel.Text = "windowsUIButtonPanel"
         Me.windowsUIButtonPanel.UseButtonBackgroundImages = False
         '
-        'frmManageMargin
+        'RepositoryItemLookUpEdit1
+        '
+        Me.RepositoryItemLookUpEdit1.AutoHeight = False
+        Me.RepositoryItemLookUpEdit1.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit
+        Me.RepositoryItemLookUpEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemLookUpEdit1.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.[Default]), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Authority", "Authority")})
+        Me.RepositoryItemLookUpEdit1.Name = "RepositoryItemLookUpEdit1"
+        '
+        'frmManageUsers
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
         Me.Appearance.Options.UseBackColor = True
@@ -232,7 +229,8 @@ Partial Public Class frmManageMargin
         Me.ClientSize = New System.Drawing.Size(526, 561)
         Me.Controls.Add(Me.layoutControl)
         Me.Controls.Add(Me.windowsUIButtonPanel)
-        Me.Name = "frmManageMargin"
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "frmManageUsers"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         CType(Me.layoutControl, System.ComponentModel.ISupportInitialize).EndInit()
@@ -242,6 +240,7 @@ Partial Public Class frmManageMargin
         CType(Me.layoutControlGroup, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.itemLabel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.itemGrid, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -255,10 +254,10 @@ Partial Public Class frmManageMargin
     Private WithEvents layoutControlGroup As DevExpress.XtraLayout.LayoutControlGroup
     Private WithEvents itemLabel As DevExpress.XtraLayout.LayoutControlItem
     Private WithEvents itemGrid As DevExpress.XtraLayout.LayoutControlItem
+    Private WithEvents windowsUIButtonPanel As DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel
     Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
-    Private WithEvents windowsUIButtonPanel As DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel
     Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents RepositoryItemLookUpEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
 End Class

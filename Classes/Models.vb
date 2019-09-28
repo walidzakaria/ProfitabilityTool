@@ -157,7 +157,34 @@ Public Class Booking
     Public Property DifferenceReason() As String
     Public Property PriceBreakdown() As String
     Public Property LoginID() As Integer
+    Public Property Junk() As Boolean
 
+    Public Function CheckJunk() As Boolean
+        Dim result As Boolean = False
+        Dim status As String = GwgStatus.ToLower
+        
+        If status = "bna" Or status = "onr" Or status = "stp" Or MarginCheck.ToLower = "request" _
+            Or MarginCheck.ToLower = "option" Or NetRateHotelTC < 1 Or HotelName.ToLower Like "*rundreise*" _
+            Or HotelName.ToLower Like "*circuit*" Or HotelName.ToLower Like "*roulette*" Then
+            result = True
+        End If
+
+        Return result
+    End Function
+
+    Public Shared Function CheckJunk(ByVal gwgStatus As String, ByVal marginCheck As String, ByVal netRateHotelTc As Double, ByVal hotelName As String) As Boolean
+        Dim result As Boolean = False
+
+        Dim status As String = gwgStatus.ToLower
+
+        If status = "bna" Or status = "onr" Or status = "stp" Or marginCheck.ToLower = "request" _
+            Or marginCheck.ToLower = "option" Or netRateHotelTc < 1 Or hotelName.ToLower Like "*rundreise*" _
+            Or hotelName.ToLower Like "*circuit*" Or hotelName.ToLower Like "*roulette*" Then
+            result = True
+        End If
+
+        Return result
+    End Function
 
     Public Overrides Function GetHashCode() As Integer
         Dim sb As New System.Text.StringBuilder
@@ -235,8 +262,8 @@ Public Class Booking
         Dim query As String
         Dim result As Boolean = True
 
-        query = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}', '{36}', '{37}', '{38}', {39}; ", _
-                                     Reference, HotelCode, HotelName, CountryCode, GwgStatus, PurchaseCurrency, PurchasePrice, SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC, CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom, Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck, DifferenceToPrice, ActionBy, Status, Comments, DifferenceReason, PriceBreakdown, GV.CurrentUser.LoginId)
+        query = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}', '{36}', '{37}', '{38}', {39}, {40}; ", _
+                                     Reference, HotelCode, HotelName, CountryCode, GwgStatus, PurchaseCurrency, PurchasePrice, SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC, CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom, Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck, DifferenceToPrice, ActionBy, Status, Comments, DifferenceReason, PriceBreakdown, GV.CurrentUser.LoginId, CShort(CheckJunk()).ToString)
 
 
         Dim queryResult As String = ExClass.QuerySet(query)
@@ -337,6 +364,26 @@ Public Class Comment
         Return result
     End Function
 
+    Public Function SaveMulti(ByVal bookingsList As List(Of Integer)) As Boolean
+        Dim result As Boolean = True
+        Comment = Comment.Replace("'", "''")
+        CommentDate = Now
+        LoginID = GV.CurrentUser.LoginId
+        Dim query As String = "INSERT INTO Comment (Date, BookingID, Comment, Calculation, LoginID, Status) VALUES "
+        For x As Integer = 0 To bookingsList.Count - 1
+            query &= String.Format("('{0}', {1},'{2}', {3}, {4}, '{5}'), ", _
+                                   CommentDate.ToString("MM/dd/yyyy HH:mm"), bookingsList(x).ToString, Comment, Calculation, LoginID, Status)
+        Next
+        query = query.Substring(0, Len(query) - 2)
+
+        Dim queryResult As String = ExClass.QuerySet(query)
+        If queryResult <> "True" Then
+            MsgBox(queryResult)
+            result = False
+        End If
+
+        Return result
+    End Function
 End Class
 
 Public Class Destination
@@ -357,6 +404,9 @@ Public Class Destination
         Return result
     End Function
     Public Function SaveDestination() As Boolean
+
+        Destination = StrConv(Destination, VbStrConv.ProperCase)
+
         Dim result As Boolean = False
         Dim queryResult As String
         Dim query As String
@@ -398,22 +448,26 @@ End Class
 
 Public Class Margin
     Public Property MarginId() As Integer
-    Public Property DestinationId As Integer
-    Public Property MarginFrom As Single
-    Public Property MarginTo As Single
-    Public Property EffectiveDate As Date
+    Public Property DestinationId() As Integer
+    Public Property MarginFrom() As Single
+    Public Property MarginTo() As Single
+    Public Property DifferenceFrom() As Single
+    Public Property DifferenceTo() As Single
+    Public Property EffectiveDate() As Date
 
     Public Function SaveMargin() As Boolean
         Dim result As Boolean = False
         Dim queryResult As String
         Dim query As String
         If MarginId = 0 Then
-            query = String.Format("INSERT INTO Margin (DestinationID, MarginFrom, MarginTo, EffectiveDate) VALUES ({0}, {1}, {2}, '{3}');", _
-                                  DestinationId.ToString, MarginFrom.ToString, MarginTo.ToString, EffectiveDate.ToString("MM/dd/yyyy"))
+            query = String.Format("INSERT INTO Margin (DestinationID, MarginFrom, MarginTo, DifferenceFrom, DifferenceTo, EffectiveDate) VALUES ({0}, {1}, {2}, {3}, {4}, '{5}');", _
+                                  DestinationId.ToString, MarginFrom.ToString, MarginTo.ToString, DifferenceFrom.ToString _
+                                  , DifferenceTo.ToString, EffectiveDate.ToString("MM/dd/yyyy"))
         Else
-            query = String.Format("UPDATE Margin SET DestinationID = {0}, MarginFrom = {1}, MarginTo = {2}, EffectiveDate = '{3}'" _
-                                  & "WHERE MarginID = {4};", DestinationId.ToString, MarginFrom.ToString, MarginTo.ToString, _
-                                  EffectiveDate.ToString("MM/dd/yyyy"), MarginId.ToString)
+            query = String.Format("UPDATE Margin SET DestinationID = {0}, MarginFrom = {1}, MarginTo = {2}," _
+                                  & " DifferenceFrom = {3}, DifferenceTo = {4}, EffectiveDate = '{5}'" _
+                                  & " WHERE MarginID = {6};", DestinationId.ToString, MarginFrom.ToString, MarginTo.ToString, _
+                                  DifferenceFrom.ToString, DifferenceTo.ToString, EffectiveDate.ToString("MM/dd/yyyy"), MarginId.ToString)
         End If
 
         queryResult = ExClass.QuerySet(query)
@@ -437,12 +491,27 @@ Public Class Margin
             DestinationId = dt.Rows(0)(1)
             MarginFrom = dt.Rows(0)(2)
             MarginTo = dt.Rows(0)(3)
-            EffectiveDate = dt.Rows(0)(4)
-
+            DifferenceFrom = dt.Rows(0)(4)
+            DifferenceTo = dt.Rows(0)(5)
+            EffectiveDate = dt.Rows(0)(6)
             result = True
         End If
 
         Return result
 
+    End Function
+
+    Public Function DeleteById() As Boolean
+        Dim result As Boolean = False
+        Dim query As String = "DELETE FROM Margin WHERE MarginID = " & MarginId.ToString & ";"
+        Dim messageResult As String
+        messageResult = ExClass.QuerySet(query)
+        If messageResult = "True" Then
+            result = True
+        Else
+            MsgBox(messageResult)
+        End If
+
+        Return result
     End Function
 End Class

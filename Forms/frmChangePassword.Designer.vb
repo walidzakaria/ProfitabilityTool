@@ -22,6 +22,7 @@ Partial Class frmChangePassword
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmChangePassword))
         Me.btnCancel = New DevExpress.XtraEditors.SimpleButton()
         Me.btnOK = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
@@ -145,6 +146,7 @@ Partial Class frmChangePassword
         Me.Controls.Add(Me.LabelControl1)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOK)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmChangePassword"
         Me.ShowMode = DevExpress.XtraSplashScreen.ShowMode.Image
         Me.SplashImage = Global.MarginProfitability.My.Resources.Resources.Sign_up

@@ -6,7 +6,21 @@ Imports DevExpress.XtraEditors
 Public Class frmManageUsers
     Dim usersCache As String
 
+    Private Sub LoadAuthorityOptions()
+        Dim dt As New DataTable()
+        dt.Columns.Add("ID")
+        dt.Columns.Add("Authority")
+        dt.Rows.Add({"Admin", "Admin"})
+        dt.Rows.Add({"DMC", "DMC"})
+        dt.Rows.Add({"TO", "TO"})
+        RepositoryItemLookUpEdit1.DataSource = Nothing
+        RepositoryItemLookUpEdit1.DataSource = dt
+        RepositoryItemLookUpEdit1.ValueMember = "ID"
+        RepositoryItemLookUpEdit1.DisplayMember = "Authority"
+
+    End Sub
     Private Sub LoadAllUsers()
+
         Dim query As String = "SELECT * FROM Login ORDER BY Username;"
         Dim dt As New DataTable()
         dt = ExClass.QueryGet(query)
@@ -44,6 +58,7 @@ Public Class frmManageUsers
 
     Private Sub frmManageAllUsers_Load(sender As Object, e As EventArgs) Handles Me.Load
         frmMain.Wait(True)
+        LoadAuthorityOptions()
         LoadAllUsers()
         usersCache = ""
         frmMain.Wait(False)

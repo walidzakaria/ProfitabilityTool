@@ -8,16 +8,15 @@ Imports System.Data.SqlClient
 Partial Public Class frmEdit
     Public Shared bookingId As Long
     Dim currentBooking As New Booking()
+    Public Shared bookingsList As New List(Of Integer)
     Public Sub New()
         InitializeComponent()
 
     End Sub
     Private Function GetDataSource(ByVal bookingId As Long) As Booking
-        'Dim result As New List(Of Booking)()
         Dim result As New Booking()
         result.BookingID = bookingId
         result.GetByID()
-        
         Return result
     End Function
 
@@ -72,7 +71,10 @@ Partial Public Class frmEdit
     End Sub
 
     Private Sub frmEdit_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
-        SelectedCurrentRow()
+        If bookingsList.Count = 0 Then
+            SelectedCurrentRow()
+        End If
+
     End Sub
 
     Private Sub ShowBooking()
@@ -113,21 +115,25 @@ Partial Public Class frmEdit
 
     End Sub
     Private Sub frmEdit_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        UpdateBooking()
-        Dim tempBooking As New Booking()
-        tempBooking = GetDataSource(bookingId)
+        If bookingsList.Count = 0 Then
+            UpdateBooking()
 
-        If currentBooking.GetHashCode <> tempBooking.GetHashCode Then
-            Dim diaResult As DialogResult
-            diaResult = MessageBox.Show("Want to save changes to " & currentBooking.Reference & "?", "Save", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
-            If diaResult = Windows.Forms.DialogResult.Yes Then
-                If currentBooking.Save() Then
-                    UpdateChangedRow()
+            Dim tempBooking As New Booking()
+            tempBooking = GetDataSource(bookingId)
+
+            If currentBooking.GetHashCode <> tempBooking.GetHashCode Then
+                Dim diaResult As DialogResult
+                diaResult = MessageBox.Show("Want to save changes to " & currentBooking.Reference & "?", "Save", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+                If diaResult = Windows.Forms.DialogResult.Yes Then
+                    If currentBooking.Save() Then
+                        UpdateChangedRow()
+                    End If
+                ElseIf diaResult = Windows.Forms.DialogResult.Cancel Then
+                    e.Cancel = True
                 End If
-            ElseIf diaResult = Windows.Forms.DialogResult.Cancel Then
-                e.Cancel = True
             End If
         End If
+        grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
     End Sub
 
     Private Sub SelectedCurrentRow()
@@ -151,17 +157,25 @@ Partial Public Class frmEdit
             If currentBooking.Save() Then
                 UpdateChangedRow()
             End If
+        ElseIf e.KeyCode = Keys.Escape Then
+            Me.Close()
         End If
     End Sub
 
     Private Sub frmEdit_Load(sender As Object, e As EventArgs) Handles Me.Load
         frmMain.Wait(True)
-        currentBooking = GetDataSource(bookingId)
-        ShowBooking()
-        PopulateStatusLists()
-        GetComments()
-
-
+        If bookingsList.Count = 0 Then
+            currentBooking = GetDataSource(bookingId)
+            ShowBooking()
+            PopulateStatusLists()
+            GetComments()
+            LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Always
+            GridControl1.Visible = True
+        Else
+            LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Never
+            GridControl1.Visible = False
+            labelControl.Text = "Multiple Bookings"
+        End If
 
         frmMain.Wait(False)
     End Sub
@@ -240,11 +254,18 @@ Partial Public Class frmEdit
             comment.Comment = txtComment.EditValue
             comment.BookingID = currentBooking.BookingID
             comment.Calculation = Val(txtCalculation.Text)
-            If comment.Save() Then
-                GetComments()
-                grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
-                ClearComment()
+            If bookingsList.Count = 0 Then
+                If comment.Save() Then
+                    GetComments()
+                    grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
+                    ClearComment()
+                End If
+            Else
+                If comment.SaveMulti(bookingsList) Then
+                    Me.Close()
+                End If
             End If
+            
             frmMain.Wait(False)
         End If
     End Sub

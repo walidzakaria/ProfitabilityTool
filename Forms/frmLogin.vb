@@ -26,7 +26,7 @@
                     lblLoading.Visible = True
                     Application.DoEvents()
                     GV.CurrentUser = user
-                    frmMain.Authorize()
+                    ExClass.Authorize(GV.CurrentUser.Authority)
                     frmMain.Show()
                     Me.Close()
                 End If

@@ -23,12 +23,22 @@ Partial Public Class frmAddMargin
         luDestination.Properties.ValueMember = "DestinationID"
 
     End Sub
+
+    Private Sub frmAddMargin_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.Control And e.KeyCode = Keys.S Then
+            SaveMargin()
+        ElseIf e.KeyCode = Keys.Escape Then
+            CloseMargin()
+        End If
+    End Sub
     Private Sub frmAddDestination_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillDestinations()
         If marginId = 0 Then
             luDestination.EditValue = Nothing
             txtMarginFrom.EditValue = Nothing
             txtMarginTo.EditValue = Nothing
+            txtDifferenceFrom.EditValue = Nothing
+            txtDifferenceTo.EditValue = Nothing
             deEffectiveDate.EditValue = Today
 
             labelControl.Text = "Add Margin"
@@ -45,6 +55,8 @@ Partial Public Class frmAddMargin
             luDestination.EditValue = margin.DestinationId
             txtMarginFrom.EditValue = margin.MarginFrom.ToString
             txtMarginTo.EditValue = margin.MarginTo.ToString
+            txtDifferenceFrom.EditValue = margin.DifferenceFrom.ToString
+            txtDifferenceTo.EditValue = margin.DifferenceTo.ToString
             deEffectiveDate.EditValue = margin.EffectiveDate
 
         End If
@@ -52,25 +64,38 @@ Partial Public Class frmAddMargin
 
     Private Sub windowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
-            If DxValidationProvider1.Validate() Then
-                Dim margin As New Margin()
-                margin.MarginId = marginId
-                margin.DestinationId = luDestination.EditValue
-                margin.MarginFrom = Val(txtMarginFrom.EditValue)
-                margin.MarginTo = Val(txtMarginTo.EditValue)
-                deEffectiveDate.RefreshEditValue()
-                margin.EffectiveDate = deEffectiveDate.EditValue
-
-                If margin.SaveMargin() Then
-                    Me.DialogResult = Windows.Forms.DialogResult.OK
-                    Me.Close()
-                End If
-            End If
+            SaveMargin()
         ElseIf e.Button.Properties.Caption = "Cancel" Then
-            Me.DialogResult = Windows.Forms.DialogResult.Cancel
-            Me.Close()
+            CloseMargin()
         End If
 
     End Sub
 
+    Private Sub frmAddMargin_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        luDestination.Focus()
+        luDestination.SelectAll()
+    End Sub
+
+    Private Sub CloseMargin()
+        Me.DialogResult = Windows.Forms.DialogResult.Cancel
+        Me.Close()
+    End Sub
+    Private Sub SaveMargin()
+        If DxValidationProvider1.Validate() Then
+            Dim margin As New Margin()
+            margin.MarginId = marginId
+            margin.DestinationId = luDestination.EditValue
+            margin.MarginFrom = Val(txtMarginFrom.EditValue)
+            margin.MarginTo = Val(txtMarginTo.EditValue)
+            margin.DifferenceFrom = Val(txtDifferenceFrom.EditValue)
+            margin.DifferenceTo = Val(txtDifferenceTo.EditValue)
+            deEffectiveDate.RefreshEditValue()
+            margin.EffectiveDate = deEffectiveDate.EditValue
+
+            If margin.SaveMargin() Then
+                Me.DialogResult = Windows.Forms.DialogResult.OK
+                Me.Close()
+            End If
+        End If
+    End Sub
 End Class

@@ -7,7 +7,7 @@ Imports System.Data.SqlClient
 Public Class frmManageMargin
     Private Sub LoadAllMargins()
 
-        Dim query As String = "SELECT Ma.MarginID, De.Destination, Ma.MarginFrom, Ma.MarginTo, Ma.EffectiveDate" _
+        Dim query As String = "SELECT Ma.MarginID, De.Destination, Ma.MarginFrom, Ma.MarginTo, Ma.DifferenceFrom, Ma.DifferenceTo, Ma.EffectiveDate" _
                               & " FROM Margin Ma, Destination De" _
                               & " WHERE Ma.DestinationID = De.DestinationID;"
 
@@ -34,6 +34,8 @@ Public Class frmManageMargin
             End If
         ElseIf e.Button.Properties.Caption = "Edit" Then
             EditMargin()
+        ElseIf e.Button.Properties.Caption = "Delete" Then
+            DeleteMargin()
         End If
     End Sub
 
@@ -46,6 +48,21 @@ Public Class frmManageMargin
             frmAddMargin.ShowDialog()
             If frmAddMargin.DialogResult = Windows.Forms.DialogResult.OK Then
                 LoadAllMargins()
+            End If
+        End If
+    End Sub
+
+    Private Sub DeleteMargin()
+        Dim marginId As Integer
+        marginId = gridView.GetFocusedRowCellValue("MarginID")
+        If marginId <> 0 Then
+            Dim diaR As DialogResult = MessageBox.Show("Are you sure you want to delete this record?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If diaR = Windows.Forms.DialogResult.Yes Then
+                Dim margin As New Margin()
+                margin.MarginId = marginId
+                If margin.DeleteById() Then
+                    LoadAllMargins()
+                End If
             End If
         End If
     End Sub
