@@ -446,9 +446,69 @@ Public Class Destination
     End Function
 End Class
 
+Public Class TourOperator
+    Public Property TourOperatorID() As Integer
+    Public Property TourOperator() As String
+
+    Public Function UniqueCode() As Boolean
+        Dim result As Boolean = False
+        Dim query As String
+        query = "SELECT COUNT(*) FROM TourOperator WHERE TourOperator = '" & TourOperator & "' AND TourOperatorID != " & TourOperatorID & ";"
+
+        Dim queryResult As New DataTable()
+        queryResult = ExClass.QueryGet(query)
+        If queryResult.Rows(0)(0) = 0 Then
+            result = True
+        End If
+        Return result
+    End Function
+    Public Function SaveTourOperator() As Boolean
+
+        TourOperator = TourOperator.ToUpper
+
+        Dim result As Boolean = False
+        Dim queryResult As String
+        Dim query As String
+        If TourOperatorID = 0 Then
+            query = "INSERT INTO TourOperator (TourOperator) VALUES ('" & TourOperator & "');"
+        Else
+            query = "UPDATE TourOperator SET TourOperator = '" & TourOperator _
+                & "' WHERE TourOperatorID = " & TourOperatorID & ";"
+        End If
+
+        queryResult = ExClass.QuerySet(query)
+        If queryResult = "True" Then
+            result = True
+        Else
+            MsgBox(queryResult)
+        End If
+
+        Return result
+    End Function
+
+    Public Function GetById() As Boolean
+        Dim result As Boolean = False
+        Dim query As String = "SELECT * FROM TourOperator WHERE TourOperatorID = " & TourOperatorID.ToString & ";"
+        Dim dt As New DataTable()
+        dt = ExClass.QueryGet(query)
+
+        If dt.Rows.Count <> 0 Then
+            TourOperator = dt.Rows(0)(1)
+
+            result = True
+        End If
+
+        Return result
+
+    End Function
+End Class
+
+
+
 Public Class Margin
     Public Property MarginId() As Integer
     Public Property DestinationId() As Integer
+    Public Property TourOperatorId() As Integer
     Public Property MarginFrom() As Single
     Public Property MarginTo() As Single
     Public Property DifferenceFrom() As Single
@@ -460,13 +520,13 @@ Public Class Margin
         Dim queryResult As String
         Dim query As String
         If MarginId = 0 Then
-            query = String.Format("INSERT INTO Margin (DestinationID, MarginFrom, MarginTo, DifferenceFrom, DifferenceTo, EffectiveDate) VALUES ({0}, {1}, {2}, {3}, {4}, '{5}');", _
-                                  DestinationId.ToString, MarginFrom.ToString, MarginTo.ToString, DifferenceFrom.ToString _
+            query = String.Format("INSERT INTO Margin (DestinationID, TourOperatorID, MarginFrom, MarginTo, DifferenceFrom, DifferenceTo, EffectiveDate) VALUES ({0}, {1}, {2}, {3}, {4}, {5}, '{6}');", _
+                                  DestinationId.ToString, TourOperatorId, MarginFrom.ToString, MarginTo.ToString, DifferenceFrom.ToString _
                                   , DifferenceTo.ToString, EffectiveDate.ToString("MM/dd/yyyy"))
         Else
-            query = String.Format("UPDATE Margin SET DestinationID = {0}, MarginFrom = {1}, MarginTo = {2}," _
-                                  & " DifferenceFrom = {3}, DifferenceTo = {4}, EffectiveDate = '{5}'" _
-                                  & " WHERE MarginID = {6};", DestinationId.ToString, MarginFrom.ToString, MarginTo.ToString, _
+            query = String.Format("UPDATE Margin SET DestinationID = {0}, TourOperatorID = {1}, MarginFrom = {2}, MarginTo = {3}," _
+                                  & " DifferenceFrom = {4}, DifferenceTo = {5}, EffectiveDate = '{6}'" _
+                                  & " WHERE MarginID = {7};", DestinationId.ToString, TourOperatorId, MarginFrom.ToString, MarginTo.ToString, _
                                   DifferenceFrom.ToString, DifferenceTo.ToString, EffectiveDate.ToString("MM/dd/yyyy"), MarginId.ToString)
         End If
 
@@ -489,11 +549,12 @@ Public Class Margin
         If dt.Rows.Count <> 0 Then
             MarginId = dt.Rows(0)(0)
             DestinationId = dt.Rows(0)(1)
-            MarginFrom = dt.Rows(0)(2)
-            MarginTo = dt.Rows(0)(3)
-            DifferenceFrom = dt.Rows(0)(4)
-            DifferenceTo = dt.Rows(0)(5)
-            EffectiveDate = dt.Rows(0)(6)
+            TourOperatorId = dt.Rows(0)(2)
+            MarginFrom = dt.Rows(0)(3)
+            MarginTo = dt.Rows(0)(4)
+            DifferenceFrom = dt.Rows(0)(5)
+            DifferenceTo = dt.Rows(0)(6)
+            EffectiveDate = dt.Rows(0)(7)
             result = True
         End If
 

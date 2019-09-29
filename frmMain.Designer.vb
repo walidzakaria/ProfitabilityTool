@@ -57,6 +57,7 @@
         Me.btnShow = New DevExpress.XtraBars.BarButtonItem()
         Me.bcNewRecord = New DevExpress.XtraBars.BarCheckItem()
         Me.btnAddDispute = New DevExpress.XtraBars.BarButtonItem()
+        Me.btnTO = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -110,7 +111,6 @@
         Me.RibbonPageGroup6 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.SplashScreenManager1 = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.MarginProfitability.WaitForm1), True, True)
         Me.BarSubItem1 = New DevExpress.XtraBars.BarSubItem()
-        Me.btnTO = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -268,18 +268,18 @@
         '
         Me.btnDestination.Caption = "" & Global.Microsoft.VisualBasic.ChrW(10) & "Destination"
         Me.btnDestination.Id = 14
-        Me.btnDestination.ImageOptions.Image = CType(resources.GetObject("btnManageDestination.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnDestination.ImageOptions.LargeImage = CType(resources.GetObject("btnManageDestination.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnDestination.ImageOptions.Image = CType(resources.GetObject("btnDestination.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnDestination.ImageOptions.LargeImage = CType(resources.GetObject("btnDestination.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnDestination.Name = "btnDestination"
         Me.btnDestination.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
         'btnManageMargin
         '
-        Me.btnManageMargin.Caption = "Manage" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Margin"
+        Me.btnManageMargin.Caption = "" & Global.Microsoft.VisualBasic.ChrW(10) & "Margin"
         Me.btnManageMargin.Id = 15
         Me.btnManageMargin.ImageOptions.Image = CType(resources.GetObject("btnManageMargin.ImageOptions.Image"), System.Drawing.Image)
         Me.btnManageMargin.Name = "btnManageMargin"
-        Me.btnManageMargin.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.btnManageMargin.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
         'btnJunk
         '
@@ -406,6 +406,15 @@
         Me.btnAddDispute.ImageOptions.LargeImage = CType(resources.GetObject("btnAddDispute.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnAddDispute.Name = "btnAddDispute"
         Me.btnAddDispute.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
+        '
+        'btnTO
+        '
+        Me.btnTO.Caption = "T/O"
+        Me.btnTO.Id = 31
+        Me.btnTO.ImageOptions.Image = CType(resources.GetObject("btnTO.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnTO.ImageOptions.LargeImage = CType(resources.GetObject("btnTO.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnTO.Name = "btnTO"
+        Me.btnTO.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
         'RibbonPage1
         '
@@ -887,15 +896,6 @@
         Me.BarSubItem1.Caption = "BarSubItem1"
         Me.BarSubItem1.Id = 28
         Me.BarSubItem1.Name = "BarSubItem1"
-        '
-        'btnTO
-        '
-        Me.btnTO.Caption = "T/O"
-        Me.btnTO.Id = 31
-        Me.btnTO.ImageOptions.Image = CType(resources.GetObject("btnTO.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnTO.ImageOptions.LargeImage = CType(resources.GetObject("btnTO.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnTO.Name = "btnTO"
-        Me.btnTO.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
         'frmMain
         '

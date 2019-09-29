@@ -24,6 +24,17 @@ Partial Public Class frmAddMargin
 
     End Sub
 
+    Private Sub FillTourOperators()
+        Dim query As String = "SELECT * FROM TourOperator;"
+        Dim dt As New DataTable()
+        dt = ExClass.QueryGet(query)
+        luTourOperator.Properties.DataSource = Nothing
+        luTourOperator.Properties.DataSource = dt
+        luTourOperator.Properties.DisplayMember = "TourOperator"
+        luTourOperator.Properties.ValueMember = "TourOperatorID"
+
+    End Sub
+
     Private Sub frmAddMargin_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.Control And e.KeyCode = Keys.S Then
             SaveMargin()
@@ -33,8 +44,10 @@ Partial Public Class frmAddMargin
     End Sub
     Private Sub frmAddDestination_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillDestinations()
+        FillTourOperators()
         If marginId = 0 Then
             luDestination.EditValue = Nothing
+            luTourOperator.EditValue = Nothing
             txtMarginFrom.EditValue = Nothing
             txtMarginTo.EditValue = Nothing
             txtDifferenceFrom.EditValue = Nothing
@@ -53,6 +66,7 @@ Partial Public Class frmAddMargin
         margin.MarginId = marginId
         If margin.GetById() Then
             luDestination.EditValue = margin.DestinationId
+            luTourOperator.EditValue = margin.TourOperatorId
             txtMarginFrom.EditValue = margin.MarginFrom.ToString
             txtMarginTo.EditValue = margin.MarginTo.ToString
             txtDifferenceFrom.EditValue = margin.DifferenceFrom.ToString
@@ -85,6 +99,7 @@ Partial Public Class frmAddMargin
             Dim margin As New Margin()
             margin.MarginId = marginId
             margin.DestinationId = luDestination.EditValue
+            margin.TourOperatorId = luTourOperator.EditValue
             margin.MarginFrom = Val(txtMarginFrom.EditValue)
             margin.MarginTo = Val(txtMarginTo.EditValue)
             margin.DifferenceFrom = Val(txtDifferenceFrom.EditValue)

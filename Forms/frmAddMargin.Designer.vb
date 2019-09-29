@@ -28,6 +28,7 @@ Partial Public Class frmAddMargin
         Me.components = New System.ComponentModel.Container()
         Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAddMargin))
@@ -36,18 +37,21 @@ Partial Public Class frmAddMargin
         Me.txtMarginTo = New DevExpress.XtraEditors.TextEdit()
         Me.deEffectiveDate = New DevExpress.XtraEditors.DateEdit()
         Me.luDestination = New DevExpress.XtraEditors.LookUpEdit()
+        Me.txtDifferenceFrom = New DevExpress.XtraEditors.TextEdit()
+        Me.txtDifferenceTo = New DevExpress.XtraEditors.TextEdit()
+        Me.luTourOperator = New DevExpress.XtraEditors.LookUpEdit()
         Me.layoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.windowsUIButtonPanelMain = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
-        Me.txtDifferenceFrom = New DevExpress.XtraEditors.TextEdit()
-        Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.txtDifferenceTo = New DevExpress.XtraEditors.TextEdit()
-        Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.DxValidationProvider2 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dataLayoutControl1.SuspendLayout()
         CType(Me.txtMarginFrom.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,16 +59,19 @@ Partial Public Class frmAddMargin
         CType(Me.deEffectiveDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.deEffectiveDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.luDestination.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtDifferenceFrom.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtDifferenceTo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.luTourOperator.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtDifferenceFrom.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtDifferenceTo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DxValidationProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dataLayoutControl1
@@ -76,6 +83,7 @@ Partial Public Class frmAddMargin
         Me.dataLayoutControl1.Controls.Add(Me.luDestination)
         Me.dataLayoutControl1.Controls.Add(Me.txtDifferenceFrom)
         Me.dataLayoutControl1.Controls.Add(Me.txtDifferenceTo)
+        Me.dataLayoutControl1.Controls.Add(Me.luTourOperator)
         Me.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataLayoutControl1.Location = New System.Drawing.Point(0, 30)
         Me.dataLayoutControl1.Name = "dataLayoutControl1"
@@ -85,7 +93,7 @@ Partial Public Class frmAddMargin
         '
         'txtMarginFrom
         '
-        Me.txtMarginFrom.Location = New System.Drawing.Point(96, 36)
+        Me.txtMarginFrom.Location = New System.Drawing.Point(96, 60)
         Me.txtMarginFrom.Name = "txtMarginFrom"
         Me.txtMarginFrom.Properties.Mask.EditMask = "-?\d+(\R.\d{0,2})?"
         Me.txtMarginFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
@@ -95,7 +103,7 @@ Partial Public Class frmAddMargin
         '
         'txtMarginTo
         '
-        Me.txtMarginTo.Location = New System.Drawing.Point(96, 60)
+        Me.txtMarginTo.Location = New System.Drawing.Point(96, 84)
         Me.txtMarginTo.Name = "txtMarginTo"
         Me.txtMarginTo.Properties.Mask.EditMask = "-?\d+(\R.\d{0,2})?"
         Me.txtMarginTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
@@ -106,7 +114,7 @@ Partial Public Class frmAddMargin
         'deEffectiveDate
         '
         Me.deEffectiveDate.EditValue = Nothing
-        Me.deEffectiveDate.Location = New System.Drawing.Point(96, 132)
+        Me.deEffectiveDate.Location = New System.Drawing.Point(96, 156)
         Me.deEffectiveDate.Name = "deEffectiveDate"
         Me.deEffectiveDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.deEffectiveDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -131,11 +139,45 @@ Partial Public Class frmAddMargin
         ConditionValidationRule2.ErrorText = "This value is not valid"
         Me.DxValidationProvider1.SetValidationRule(Me.luDestination, ConditionValidationRule2)
         '
+        'txtDifferenceFrom
+        '
+        Me.txtDifferenceFrom.Location = New System.Drawing.Point(96, 108)
+        Me.txtDifferenceFrom.Name = "txtDifferenceFrom"
+        Me.txtDifferenceFrom.Properties.Mask.EditMask = "-?\d+(\R.\d{0,2})?"
+        Me.txtDifferenceFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
+        Me.txtDifferenceFrom.Size = New System.Drawing.Size(206, 20)
+        Me.txtDifferenceFrom.StyleController = Me.dataLayoutControl1
+        Me.txtDifferenceFrom.TabIndex = 5
+        '
+        'txtDifferenceTo
+        '
+        Me.txtDifferenceTo.Location = New System.Drawing.Point(96, 132)
+        Me.txtDifferenceTo.Name = "txtDifferenceTo"
+        Me.txtDifferenceTo.Properties.Mask.EditMask = "-?\d+(\R.\d{0,2})?"
+        Me.txtDifferenceTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
+        Me.txtDifferenceTo.Size = New System.Drawing.Size(206, 20)
+        Me.txtDifferenceTo.StyleController = Me.dataLayoutControl1
+        Me.txtDifferenceTo.TabIndex = 5
+        '
+        'luTourOperator
+        '
+        Me.luTourOperator.Location = New System.Drawing.Point(96, 36)
+        Me.luTourOperator.Name = "luTourOperator"
+        Me.luTourOperator.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.luTourOperator.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("TourOperatorID", "ID", 20, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.[Default]), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("TourOperator", "TourOperator")})
+        Me.luTourOperator.Properties.NullText = ""
+        Me.luTourOperator.Size = New System.Drawing.Size(206, 20)
+        Me.luTourOperator.StyleController = Me.dataLayoutControl1
+        Me.luTourOperator.TabIndex = 4
+        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule3.ErrorText = "This value is not valid"
+        Me.DxValidationProvider2.SetValidationRule(Me.luTourOperator, ConditionValidationRule3)
+        '
         'layoutControlGroup1
         '
         Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.layoutControlGroup1.GroupBordersVisible = False
-        Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem4})
+        Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem4, Me.LayoutControlItem7})
         Me.layoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.layoutControlGroup1.Name = "Root"
         Me.layoutControlGroup1.Size = New System.Drawing.Size(314, 189)
@@ -153,7 +195,7 @@ Partial Public Class frmAddMargin
         'LayoutControlItem2
         '
         Me.LayoutControlItem2.Control = Me.txtMarginFrom
-        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 24)
+        Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
         Me.LayoutControlItem2.Size = New System.Drawing.Size(294, 24)
         Me.LayoutControlItem2.Text = "Margin From:"
@@ -162,20 +204,50 @@ Partial Public Class frmAddMargin
         'LayoutControlItem3
         '
         Me.LayoutControlItem3.Control = Me.txtMarginTo
-        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 48)
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 72)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
         Me.LayoutControlItem3.Size = New System.Drawing.Size(294, 24)
         Me.LayoutControlItem3.Text = "Margin To:"
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(81, 13)
         '
+        'LayoutControlItem5
+        '
+        Me.LayoutControlItem5.Control = Me.txtDifferenceFrom
+        Me.LayoutControlItem5.CustomizationFormText = "Margin From:"
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 96)
+        Me.LayoutControlItem5.Name = "LayoutControlItem5"
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(294, 24)
+        Me.LayoutControlItem5.Text = "Difference From:"
+        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(81, 13)
+        '
+        'LayoutControlItem6
+        '
+        Me.LayoutControlItem6.Control = Me.txtDifferenceTo
+        Me.LayoutControlItem6.CustomizationFormText = "Margin From:"
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 120)
+        Me.LayoutControlItem6.Name = "LayoutControlItem6"
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(294, 24)
+        Me.LayoutControlItem6.Text = "Difference To:"
+        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(81, 13)
+        '
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.deEffectiveDate
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 120)
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 144)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(294, 49)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(294, 25)
         Me.LayoutControlItem4.Text = "Effective Date:"
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(81, 13)
+        '
+        'LayoutControlItem7
+        '
+        Me.LayoutControlItem7.Control = Me.luTourOperator
+        Me.LayoutControlItem7.CustomizationFormText = "Destination:"
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 24)
+        Me.LayoutControlItem7.Name = "LayoutControlItem7"
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(294, 24)
+        Me.LayoutControlItem7.Text = "Tour Operator:"
+        Me.LayoutControlItem7.TextSize = New System.Drawing.Size(81, 13)
         '
         'windowsUIButtonPanelMain
         '
@@ -228,46 +300,6 @@ Partial Public Class frmAddMargin
         Me.labelControl.TabIndex = 1
         Me.labelControl.Text = "New Margin"
         '
-        'txtDifferenceFrom
-        '
-        Me.txtDifferenceFrom.Location = New System.Drawing.Point(96, 84)
-        Me.txtDifferenceFrom.Name = "txtDifferenceFrom"
-        Me.txtDifferenceFrom.Properties.Mask.EditMask = "-?\d+(\R.\d{0,2})?"
-        Me.txtDifferenceFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
-        Me.txtDifferenceFrom.Size = New System.Drawing.Size(206, 20)
-        Me.txtDifferenceFrom.StyleController = Me.dataLayoutControl1
-        Me.txtDifferenceFrom.TabIndex = 5
-        '
-        'LayoutControlItem5
-        '
-        Me.LayoutControlItem5.Control = Me.txtDifferenceFrom
-        Me.LayoutControlItem5.CustomizationFormText = "Margin From:"
-        Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 72)
-        Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(294, 24)
-        Me.LayoutControlItem5.Text = "Difference From:"
-        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(81, 13)
-        '
-        'txtDifferenceTo
-        '
-        Me.txtDifferenceTo.Location = New System.Drawing.Point(96, 108)
-        Me.txtDifferenceTo.Name = "txtDifferenceTo"
-        Me.txtDifferenceTo.Properties.Mask.EditMask = "-?\d+(\R.\d{0,2})?"
-        Me.txtDifferenceTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
-        Me.txtDifferenceTo.Size = New System.Drawing.Size(206, 20)
-        Me.txtDifferenceTo.StyleController = Me.dataLayoutControl1
-        Me.txtDifferenceTo.TabIndex = 5
-        '
-        'LayoutControlItem6
-        '
-        Me.LayoutControlItem6.Control = Me.txtDifferenceTo
-        Me.LayoutControlItem6.CustomizationFormText = "Margin From:"
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 96)
-        Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(294, 24)
-        Me.LayoutControlItem6.Text = "Difference To:"
-        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(81, 13)
-        '
         'frmAddMargin
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
@@ -292,16 +324,19 @@ Partial Public Class frmAddMargin
         CType(Me.deEffectiveDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.deEffectiveDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.luDestination.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtDifferenceFrom.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtDifferenceTo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.luTourOperator.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtDifferenceFrom.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtDifferenceTo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DxValidationProvider2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -325,4 +360,7 @@ Partial Public Class frmAddMargin
     Friend WithEvents txtDifferenceTo As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem5 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem6 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents luTourOperator As DevExpress.XtraEditors.LookUpEdit
+    Friend WithEvents DxValidationProvider2 As DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider
+    Friend WithEvents LayoutControlItem7 As DevExpress.XtraLayout.LayoutControlItem
 End Class

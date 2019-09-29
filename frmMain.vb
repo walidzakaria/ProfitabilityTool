@@ -508,6 +508,6 @@ Partial Public Class frmMain
     End Sub
 
     Private Sub btnTO_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnTO.ItemClick
-
+        frmManageTourOperator.ShowDialog()
     End Sub
 End Class

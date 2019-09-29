@@ -25,13 +25,13 @@ Partial Public Class frmManageMargin
     ''' </summary>
     '''
     Private Sub InitializeComponent()
-        Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions13 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions14 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmManageMargin))
-        Dim WindowsUIButtonImageOptions3 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions4 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions5 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions6 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions15 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions16 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions17 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions18 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Me.layoutControl = New DevExpress.XtraLayout.LayoutControl()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.gridControl = New DevExpress.XtraGrid.GridControl()
@@ -40,13 +40,14 @@ Partial Public Class frmManageMargin
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.layoutControlGroup = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.itemLabel = New DevExpress.XtraLayout.LayoutControlItem()
         Me.itemGrid = New DevExpress.XtraLayout.LayoutControlItem()
         Me.windowsUIButtonPanel = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
-        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.layoutControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.layoutControl.SuspendLayout()
         CType(Me.gridControl, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,7 +66,7 @@ Partial Public Class frmManageMargin
         Me.layoutControl.Location = New System.Drawing.Point(0, 0)
         Me.layoutControl.Name = "layoutControl"
         Me.layoutControl.Root = Me.layoutControlGroup
-        Me.layoutControl.Size = New System.Drawing.Size(526, 501)
+        Me.layoutControl.Size = New System.Drawing.Size(584, 501)
         Me.layoutControl.TabIndex = 1
         '
         'labelControl
@@ -81,7 +82,7 @@ Partial Public Class frmManageMargin
         Me.labelControl.Location = New System.Drawing.Point(40, 0)
         Me.labelControl.Name = "labelControl"
         Me.labelControl.Padding = New System.Windows.Forms.Padding(0, 3, 13, 6)
-        Me.labelControl.Size = New System.Drawing.Size(446, 34)
+        Me.labelControl.Size = New System.Drawing.Size(504, 34)
         Me.labelControl.StyleController = Me.layoutControl
         Me.labelControl.TabIndex = 4
         Me.labelControl.Text = "Manage Margin"
@@ -91,13 +92,13 @@ Partial Public Class frmManageMargin
         Me.gridControl.Location = New System.Drawing.Point(40, 34)
         Me.gridControl.MainView = Me.gridView
         Me.gridControl.Name = "gridControl"
-        Me.gridControl.Size = New System.Drawing.Size(446, 467)
+        Me.gridControl.Size = New System.Drawing.Size(504, 467)
         Me.gridControl.TabIndex = 2
         Me.gridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gridView})
         '
         'gridView
         '
-        Me.gridView.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn7, Me.GridColumn6, Me.GridColumn5})
+        Me.gridView.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn8, Me.GridColumn3, Me.GridColumn4, Me.GridColumn7, Me.GridColumn6, Me.GridColumn5})
         Me.gridView.GridControl = Me.gridControl
         Me.gridView.Name = "gridView"
         Me.gridView.OptionsBehavior.ReadOnly = True
@@ -146,8 +147,35 @@ Partial Public Class frmManageMargin
         Me.GridColumn4.Name = "GridColumn4"
         Me.GridColumn4.OptionsColumn.AllowEdit = False
         Me.GridColumn4.Visible = True
-        Me.GridColumn4.VisibleIndex = 2
+        Me.GridColumn4.VisibleIndex = 3
         Me.GridColumn4.Width = 100
+        '
+        'GridColumn7
+        '
+        Me.GridColumn7.Caption = "Diff. From"
+        Me.GridColumn7.FieldName = "DifferenceFrom"
+        Me.GridColumn7.Name = "GridColumn7"
+        Me.GridColumn7.OptionsColumn.AllowEdit = False
+        Me.GridColumn7.Visible = True
+        Me.GridColumn7.VisibleIndex = 4
+        '
+        'GridColumn6
+        '
+        Me.GridColumn6.Caption = "Diff. To"
+        Me.GridColumn6.FieldName = "DifferenceTo"
+        Me.GridColumn6.Name = "GridColumn6"
+        Me.GridColumn6.OptionsColumn.AllowEdit = False
+        Me.GridColumn6.Visible = True
+        Me.GridColumn6.VisibleIndex = 5
+        '
+        'GridColumn5
+        '
+        Me.GridColumn5.Caption = "Date"
+        Me.GridColumn5.FieldName = "EffectiveDate"
+        Me.GridColumn5.Name = "GridColumn5"
+        Me.GridColumn5.OptionsColumn.AllowEdit = False
+        Me.GridColumn5.Visible = True
+        Me.GridColumn5.VisibleIndex = 6
         '
         'layoutControlGroup
         '
@@ -157,7 +185,7 @@ Partial Public Class frmManageMargin
         Me.layoutControlGroup.Location = New System.Drawing.Point(0, 0)
         Me.layoutControlGroup.Name = "layoutControlGroup"
         Me.layoutControlGroup.Padding = New DevExpress.XtraLayout.Utils.Padding(40, 40, 0, 0)
-        Me.layoutControlGroup.Size = New System.Drawing.Size(526, 501)
+        Me.layoutControlGroup.Size = New System.Drawing.Size(584, 501)
         Me.layoutControlGroup.TextVisible = False
         '
         'itemLabel
@@ -166,7 +194,7 @@ Partial Public Class frmManageMargin
         Me.itemLabel.Location = New System.Drawing.Point(0, 0)
         Me.itemLabel.Name = "itemLabel"
         Me.itemLabel.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.itemLabel.Size = New System.Drawing.Size(446, 34)
+        Me.itemLabel.Size = New System.Drawing.Size(504, 34)
         Me.itemLabel.TextSize = New System.Drawing.Size(0, 0)
         Me.itemLabel.TextVisible = False
         '
@@ -176,7 +204,7 @@ Partial Public Class frmManageMargin
         Me.itemGrid.Location = New System.Drawing.Point(0, 34)
         Me.itemGrid.Name = "itemGrid"
         Me.itemGrid.Padding = New DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0)
-        Me.itemGrid.Size = New System.Drawing.Size(446, 467)
+        Me.itemGrid.Size = New System.Drawing.Size(504, 467)
         Me.itemGrid.TextSize = New System.Drawing.Size(0, 0)
         Me.itemGrid.TextVisible = False
         '
@@ -197,13 +225,13 @@ Partial Public Class frmManageMargin
         Me.windowsUIButtonPanel.AppearanceButton.Pressed.Options.UseFont = True
         Me.windowsUIButtonPanel.AppearanceButton.Pressed.Options.UseForeColor = True
         Me.windowsUIButtonPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        WindowsUIButtonImageOptions1.ImageUri.Uri = "Delete;GrayScaled"
-        WindowsUIButtonImageOptions2.Image = CType(resources.GetObject("WindowsUIButtonImageOptions2.Image"), System.Drawing.Image)
-        WindowsUIButtonImageOptions3.ImageUri.Uri = "New;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions4.ImageUri.Uri = "Preview;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions5.ImageUri.Uri = "Refresh;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions6.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
-        Me.windowsUIButtonPanel.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", True, WindowsUIButtonImageOptions1), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Edit", True, WindowsUIButtonImageOptions2), New DevExpress.XtraBars.Docking2010.WindowsUIButton("New", True, WindowsUIButtonImageOptions3), New DevExpress.XtraBars.Docking2010.WindowsUISeparator(), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Print", True, WindowsUIButtonImageOptions4), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Refresh", True, WindowsUIButtonImageOptions5), New DevExpress.XtraBars.Docking2010.WindowsUISeparator(), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions6)})
+        WindowsUIButtonImageOptions13.ImageUri.Uri = "Delete;GrayScaled"
+        WindowsUIButtonImageOptions14.Image = CType(resources.GetObject("WindowsUIButtonImageOptions14.Image"), System.Drawing.Image)
+        WindowsUIButtonImageOptions15.ImageUri.Uri = "New;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions16.ImageUri.Uri = "Preview;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions17.ImageUri.Uri = "Refresh;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions18.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
+        Me.windowsUIButtonPanel.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", True, WindowsUIButtonImageOptions13), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Edit", True, WindowsUIButtonImageOptions14), New DevExpress.XtraBars.Docking2010.WindowsUIButton("New", True, WindowsUIButtonImageOptions15), New DevExpress.XtraBars.Docking2010.WindowsUISeparator(), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Print", True, WindowsUIButtonImageOptions16), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Refresh", True, WindowsUIButtonImageOptions17), New DevExpress.XtraBars.Docking2010.WindowsUISeparator(), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions18)})
         Me.windowsUIButtonPanel.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.windowsUIButtonPanel.EnableImageTransparency = True
         Me.windowsUIButtonPanel.ForeColor = System.Drawing.Color.White
@@ -212,37 +240,19 @@ Partial Public Class frmManageMargin
         Me.windowsUIButtonPanel.MaximumSize = New System.Drawing.Size(0, 60)
         Me.windowsUIButtonPanel.MinimumSize = New System.Drawing.Size(60, 60)
         Me.windowsUIButtonPanel.Name = "windowsUIButtonPanel"
-        Me.windowsUIButtonPanel.Size = New System.Drawing.Size(526, 60)
+        Me.windowsUIButtonPanel.Size = New System.Drawing.Size(584, 60)
         Me.windowsUIButtonPanel.TabIndex = 6
         Me.windowsUIButtonPanel.Text = "windowsUIButtonPanel"
         Me.windowsUIButtonPanel.UseButtonBackgroundImages = False
         '
-        'GridColumn6
+        'GridColumn8
         '
-        Me.GridColumn6.Caption = "Diff. To"
-        Me.GridColumn6.FieldName = "DifferenceTo"
-        Me.GridColumn6.Name = "GridColumn6"
-        Me.GridColumn6.OptionsColumn.AllowEdit = False
-        Me.GridColumn6.Visible = True
-        Me.GridColumn6.VisibleIndex = 4
-        '
-        'GridColumn7
-        '
-        Me.GridColumn7.Caption = "Diff. From"
-        Me.GridColumn7.FieldName = "DifferenceFrom"
-        Me.GridColumn7.Name = "GridColumn7"
-        Me.GridColumn7.OptionsColumn.AllowEdit = False
-        Me.GridColumn7.Visible = True
-        Me.GridColumn7.VisibleIndex = 3
-        '
-        'GridColumn5
-        '
-        Me.GridColumn5.Caption = "Date"
-        Me.GridColumn5.FieldName = "EffectiveDate"
-        Me.GridColumn5.Name = "GridColumn5"
-        Me.GridColumn5.OptionsColumn.AllowEdit = False
-        Me.GridColumn5.Visible = True
-        Me.GridColumn5.VisibleIndex = 5
+        Me.GridColumn8.Caption = "T/O"
+        Me.GridColumn8.FieldName = "TourOperator"
+        Me.GridColumn8.Name = "GridColumn8"
+        Me.GridColumn8.OptionsColumn.AllowEdit = False
+        Me.GridColumn8.Visible = True
+        Me.GridColumn8.VisibleIndex = 1
         '
         'frmManageMargin
         '
@@ -250,7 +260,7 @@ Partial Public Class frmManageMargin
         Me.Appearance.Options.UseBackColor = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(526, 561)
+        Me.ClientSize = New System.Drawing.Size(584, 561)
         Me.Controls.Add(Me.layoutControl)
         Me.Controls.Add(Me.windowsUIButtonPanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -285,4 +295,5 @@ Partial Public Class frmManageMargin
     Friend WithEvents GridColumn7 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn8 As DevExpress.XtraGrid.Columns.GridColumn
 End Class
