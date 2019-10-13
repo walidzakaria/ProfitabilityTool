@@ -202,12 +202,12 @@
         '
         'btnChangePassword
         '
-        Me.btnChangePassword.Caption = "Change Password"
+        Me.btnChangePassword.Caption = "Change" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Password"
         Me.btnChangePassword.Id = 8
         Me.btnChangePassword.ImageOptions.Image = CType(resources.GetObject("btnChangePassword.ImageOptions.Image"), System.Drawing.Image)
         Me.btnChangePassword.ImageOptions.LargeImage = CType(resources.GetObject("btnChangePassword.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnChangePassword.Name = "btnChangePassword"
-        Me.btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
+        Me.btnChangePassword.RibbonStyle = CType((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
         'btnExit
         '
@@ -468,9 +468,9 @@
         'RibbonPageGroup3
         '
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnSwitchUser)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnChangePassword)
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageUsers)
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnAddNewUser)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnChangePassword)
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnDestination)
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnTO)
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageMargin)
@@ -559,6 +559,7 @@
         Me.GridColumn5.OptionsColumn.AllowEdit = False
         Me.GridColumn5.Visible = True
         Me.GridColumn5.VisibleIndex = 3
+        Me.GridColumn5.Width = 60
         '
         'GridColumn6
         '
@@ -568,6 +569,7 @@
         Me.GridColumn6.OptionsColumn.AllowEdit = False
         Me.GridColumn6.Visible = True
         Me.GridColumn6.VisibleIndex = 4
+        Me.GridColumn6.Width = 50
         '
         'GridColumn7
         '
@@ -577,6 +579,7 @@
         Me.GridColumn7.OptionsColumn.AllowEdit = False
         Me.GridColumn7.Visible = True
         Me.GridColumn7.VisibleIndex = 5
+        Me.GridColumn7.Width = 60
         '
         'GridColumn8
         '
@@ -596,6 +599,7 @@
         Me.GridColumn9.OptionsColumn.AllowEdit = False
         Me.GridColumn9.Visible = True
         Me.GridColumn9.VisibleIndex = 7
+        Me.GridColumn9.Width = 60
         '
         'GridColumn10
         '
@@ -625,6 +629,7 @@
         Me.GridColumn12.OptionsColumn.AllowEdit = False
         Me.GridColumn12.Visible = True
         Me.GridColumn12.VisibleIndex = 10
+        Me.GridColumn12.Width = 60
         '
         'GridColumn13
         '
@@ -635,6 +640,7 @@
         Me.GridColumn13.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Difference", "{0:0.##}")})
         Me.GridColumn13.Visible = True
         Me.GridColumn13.VisibleIndex = 11
+        Me.GridColumn13.Width = 60
         '
         'GridColumn14
         '
@@ -644,6 +650,7 @@
         Me.GridColumn14.OptionsColumn.AllowEdit = False
         Me.GridColumn14.Visible = True
         Me.GridColumn14.VisibleIndex = 12
+        Me.GridColumn14.Width = 60
         '
         'GridColumn15
         '
@@ -654,6 +661,7 @@
         Me.GridColumn15.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetRateHotelTC", "{0:0.##}")})
         Me.GridColumn15.Visible = True
         Me.GridColumn15.VisibleIndex = 13
+        Me.GridColumn15.Width = 60
         '
         'GridColumn16
         '
@@ -664,6 +672,7 @@
         Me.GridColumn16.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetRateHandlingTC", "{0:0.##}")})
         Me.GridColumn16.Visible = True
         Me.GridColumn16.VisibleIndex = 14
+        Me.GridColumn16.Width = 60
         '
         'GridColumn17
         '
@@ -709,6 +718,7 @@
         Me.GridColumn21.OptionsColumn.AllowEdit = False
         Me.GridColumn21.Visible = True
         Me.GridColumn21.VisibleIndex = 19
+        Me.GridColumn21.Width = 60
         '
         'GridColumn22
         '
@@ -718,6 +728,7 @@
         Me.GridColumn22.OptionsColumn.AllowEdit = False
         Me.GridColumn22.Visible = True
         Me.GridColumn22.VisibleIndex = 20
+        Me.GridColumn22.Width = 50
         '
         'GridColumn23
         '
@@ -727,6 +738,7 @@
         Me.GridColumn23.OptionsColumn.AllowEdit = False
         Me.GridColumn23.Visible = True
         Me.GridColumn23.VisibleIndex = 21
+        Me.GridColumn23.Width = 50
         '
         'GridColumn24
         '
@@ -736,6 +748,7 @@
         Me.GridColumn24.OptionsColumn.AllowEdit = False
         Me.GridColumn24.Visible = True
         Me.GridColumn24.VisibleIndex = 22
+        Me.GridColumn24.Width = 50
         '
         'GridColumn25
         '
@@ -745,6 +758,7 @@
         Me.GridColumn25.OptionsColumn.AllowEdit = False
         Me.GridColumn25.Visible = True
         Me.GridColumn25.VisibleIndex = 23
+        Me.GridColumn25.Width = 50
         '
         'GridColumn26
         '
@@ -754,6 +768,7 @@
         Me.GridColumn26.OptionsColumn.AllowEdit = False
         Me.GridColumn26.Visible = True
         Me.GridColumn26.VisibleIndex = 24
+        Me.GridColumn26.Width = 45
         '
         'GridColumn27
         '
@@ -763,6 +778,7 @@
         Me.GridColumn27.OptionsColumn.AllowEdit = False
         Me.GridColumn27.Visible = True
         Me.GridColumn27.VisibleIndex = 25
+        Me.GridColumn27.Width = 45
         '
         'GridColumn28
         '
@@ -772,6 +788,7 @@
         Me.GridColumn28.OptionsColumn.AllowEdit = False
         Me.GridColumn28.Visible = True
         Me.GridColumn28.VisibleIndex = 26
+        Me.GridColumn28.Width = 45
         '
         'GridColumn29
         '

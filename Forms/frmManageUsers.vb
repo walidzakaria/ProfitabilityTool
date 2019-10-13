@@ -13,6 +13,7 @@ Public Class frmManageUsers
         dt.Rows.Add({"Admin", "Admin"})
         dt.Rows.Add({"DMC", "DMC"})
         dt.Rows.Add({"TO", "TO"})
+        dt.Rows.Add({"RS", "RS"})
         RepositoryItemLookUpEdit1.DataSource = Nothing
         RepositoryItemLookUpEdit1.DataSource = dt
         RepositoryItemLookUpEdit1.ValueMember = "ID"

@@ -20,18 +20,24 @@ Partial Public Class frmEdit
         Return result
     End Function
 
-    Private Sub PopulateStatusLists()
-        Dim statusList As New DataTable()
-        statusList.Columns.Add("ID", GetType(Integer))
-        statusList.Columns.Add("Status", GetType(String))
-        statusList.Rows.Add({0, "Pending DMC"})
-        statusList.Rows.Add({1, "Fixed DMC"})
-        statusList.Rows.Add({2, "Pending TO"})
-        statusList.Rows.Add({3, "Fixed TO"})
-        RepositoryItemLookUpEdit1.DataSource = Nothing
-        RepositoryItemLookUpEdit1.DataSource = statusList
-        RepositoryItemLookUpEdit1.ValueMember = "ID"
-        RepositoryItemLookUpEdit1.DisplayMember = "Status"
+    Private Sub PopulateStatusMain()
+        'load status rows
+        Dim dt As New DataTable()
+        dt.Columns.Add("ID")
+        dt.Columns.Add("Status")
+        dt.Rows.Add({"PENDING DMC", "PENDING DMC"})
+        If GV.CurrentUser.Authority <> "TO" Then
+            dt.Rows.Add({"FIXED DMC", "FIXED DMC"})
+        End If
+        dt.Rows.Add({"PENDING T/O", "PENDING T/O"})
+        If GV.CurrentUser.Authority <> "DMC" And GV.CurrentUser.Authority <> "RS" Then
+            dt.Rows.Add({"FIXED T/O", "FIXED T/O"})
+        End If
+        luStatus.Properties.DataSource = Nothing
+        luStatus.Properties.DataSource = dt
+        luStatus.Properties.ValueMember = "ID"
+        luStatus.Properties.DisplayMember = "Status"
+
     End Sub
 
     Private Sub UpdateBooking()
@@ -170,10 +176,12 @@ Partial Public Class frmEdit
 
     Private Sub frmEdit_Load(sender As Object, e As EventArgs) Handles Me.Load
         frmMain.Wait(True)
+
+        PopulateStatusMain()
+
         If bookingsList.Count = 0 Then
             currentBooking = GetDataSource(bookingId)
             ShowBooking()
-            PopulateStatusLists()
             GetComments()
             LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Always
             GridControl1.Visible = True
@@ -222,17 +230,14 @@ Partial Public Class frmEdit
             Me.Close()
         ElseIf e.Button.Properties.Caption = "Mail" Then
             Dim subject, body As String
-            Dim sendingUser As New Login()
-            sendingUser.LoginId = GV.CurrentUser.LoginId
-            sendingUser.GetById()
-
+            
 
             subject = String.Format("Profitability Tool; Ref# {0} **{1}**",
                                     currentBooking.Reference, Today.ToString("dd.MM.yy"))
             body = String.Format("Dear {0}," & vbNewLine & vbNewLine & "Ref# {1}." & vbNewLine & "Please check this booking" _
                                  & vbNewLine & vbNewLine & "BR" & vbNewLine & "{2}",
                                  currentBooking.Username.FullName,
-                                 currentBooking.Reference, sendingUser.FullName)
+                                 currentBooking.Reference, GV.CurrentUser.FullName)
 
             SendMail.SetEmailSend(subject, body, currentBooking.Username.Mail, "")
 
@@ -243,7 +248,7 @@ Partial Public Class frmEdit
     Private Sub btnToggleComment_Click(sender As Object, e As EventArgs) Handles btnToggleComment.Click
         If grpAddNewComment.Visibility = Utils.LayoutVisibility.Never Then
             grpAddNewComment.Visibility = Utils.LayoutVisibility.Always
-            cbStatus.Focus()
+            luStatus.Focus()
         Else
             grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
         End If
@@ -255,22 +260,22 @@ Partial Public Class frmEdit
     End Sub
 
     Private Sub ClearComment()
-        cbStatus.SelectedIndex = -1
+        luStatus.EditValue = Nothing
         txtComment.EditValue = ""
         txtCalculation.EditValue = ""
     End Sub
 
     Private Sub btnSaveComment_Click(sender As Object, e As EventArgs) Handles btnSaveComment.Click
-        If cbStatus.SelectedIndex = -1 Then
+        If luStatus.EditValue = Nothing Then
             MsgBox("Please enter status!")
-            cbStatus.Focus()
+            luStatus.Focus()
         ElseIf txtComment.EditValue = "" Then
             MsgBox("please enter comment!")
             txtComment.Focus()
         Else
             frmMain.Wait(True)
             Dim comment = New Comment()
-            comment.Status = cbStatus.SelectedIndex
+            comment.Status = luStatus.EditValue
             comment.Comment = txtComment.EditValue
             comment.BookingID = currentBooking.BookingID
             If txtCalculation.EditValue = "" Then
@@ -296,14 +301,14 @@ Partial Public Class frmEdit
                     Me.Close()
                 End If
             End If
-            
+
             frmMain.Wait(False)
         End If
     End Sub
 
-    Private Sub UpdateBookingStatus(ByVal multiple As Boolean, ByVal status As Short, ByVal actionBy As String, ByVal comment As String, ByVal adjustedPrice As Double)
+    Private Sub UpdateBookingStatus(ByVal multiple As Boolean, ByVal status As String, ByVal actionBy As String, ByVal comment As String, ByVal adjustedPrice As Double)
 
-        currentBooking.Status = cbStatus.Properties.GetDisplayText(cbStatus.SelectedIndex())
+        currentBooking.Status = luStatus.EditValue
         currentBooking.ActionBy = actionBy
         currentBooking.Comments = comment
         currentBooking.AdjustedPrice = adjustedPrice

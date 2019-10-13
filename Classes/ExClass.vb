@@ -99,48 +99,129 @@ Public Class ExClass
     End Function
 
     Public Shared Sub Authorize(ByVal userType As String)
+
         Select Case userType
             Case "Admin"
                 With frmMain
                     .RibbonPageGroup1.Visible = True
                     .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .brnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .btnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .RibbonPageGroup5.Visible = True
+
+                    .bcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcPendingDmc.Checked = True
+                    .bcFixedDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcFixedDmc.Checked = True
+                    .bcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcPendingTo.Checked = True
+                    .bcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcFixedTo.Checked = True
+                    .btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
                     .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnAddNewUser.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                 End With
                 With frmEdit
-                    .windowsUIButtonPanelMain.Visible = True
+                    .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = True
+                    .windowsUIButtonPanelMain.Buttons(3).Properties.Enabled = True
                 End With
-            Case "DMC"
+            Case "RS"
                 With frmMain
                     .RibbonPageGroup1.Visible = True
                     .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .brnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .btnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .RibbonPageGroup5.Visible = True
+                    .bcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcPendingDmc.Checked = True
+                    .bcFixedDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcFixedDmc.Checked = True
+                    .bcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcPendingTo.Checked = True
+                    .bcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcFixedTo.Checked = True
+                    .bcNewRecord.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcNewRecord.Checked = True
+
+                    .btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+                    .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnAddNewUser.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                End With
+                With frmEdit
+                    .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = True
+                    .windowsUIButtonPanelMain.Buttons(3).Properties.Enabled = True
+                End With
+            Case "DMC"
+                With frmMain
+                    .RibbonPageGroup1.Visible = False
+                    .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .brnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .RibbonPageGroup5.Visible = False
+                    .bcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcPendingDmc.Checked = True
+                    .bcFixedDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcFixedDmc.Checked = True
+                    .bcPendingTo.Checked = False
+                    .bcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .bcFixedTo.Checked = False
+                    .bcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .bcNewRecord.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcNewRecord.Checked = True
+
+                    .btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
                     .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnAddNewUser.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                 End With
                 With frmEdit
-                    .windowsUIButtonPanelMain.Visible = True
+                    .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = False
+                    .windowsUIButtonPanelMain.Buttons(3).Properties.Enabled = False
                 End With
             Case "TO"
                 With frmMain
                     .RibbonPageGroup1.Visible = False
                     .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .brnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .RibbonPageGroup5.Visible = False
+
+                    .bcPendingDmc.Checked = False
+                    .bcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .bcFixedDmc.Checked = False
+                    .bcFixedDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+
+                    .bcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcPendingTo.Checked = True
+                    .bcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .bcFixedTo.Checked = True
+                    .bcNewRecord.Checked = False
+                    .bcNewRecord.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+
+
+                    .btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
                     .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnAddNewUser.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                 End With
                 With frmEdit
-                    .windowsUIButtonPanelMain.Visible = False
+                    .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = False
+                    .windowsUIButtonPanelMain.Buttons(3).Properties.Enabled = False
+
                 End With
         End Select
     End Sub

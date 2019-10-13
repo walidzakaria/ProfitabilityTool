@@ -27,17 +27,17 @@ Partial Public Class frmAddUser
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
-        Dim ConditionValidationRule4 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim CompareAgainstControlValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.CompareAgainstControlValidationRule = New DevExpress.XtraEditors.DXErrorProvider.CompareAgainstControlValidationRule()
-        Dim WindowsUIButtonImageOptions5 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions6 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Me.txtPassword = New DevExpress.XtraEditors.TextEdit()
         Me.dataLayoutControl1 = New DevExpress.XtraDataLayout.DataLayoutControl()
         Me.rgAuthority = New DevExpress.XtraEditors.RadioGroup()
         Me.txtUsername = New DevExpress.XtraEditors.TextEdit()
         Me.txtFullName = New DevExpress.XtraEditors.TextEdit()
         Me.txtEmail = New DevExpress.XtraEditors.TextEdit()
-        Me.txtPassword = New DevExpress.XtraEditors.TextEdit()
         Me.txtRetype = New DevExpress.XtraEditors.TextEdit()
         Me.layoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -49,13 +49,13 @@ Partial Public Class frmAddUser
         Me.windowsUIButtonPanelMain = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
+        CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dataLayoutControl1.SuspendLayout()
         CType(Me.rgAuthority.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtUsername.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtFullName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtEmail.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtRetype.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,6 +66,18 @@ Partial Public Class frmAddUser
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'txtPassword
+        '
+        Me.txtPassword.Location = New System.Drawing.Point(67, 84)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(272, 20)
+        Me.txtPassword.StyleController = Me.dataLayoutControl1
+        Me.txtPassword.TabIndex = 7
+        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule3.ErrorText = "This value is not valid"
+        Me.DxValidationProvider1.SetValidationRule(Me.txtPassword, ConditionValidationRule3)
         '
         'dataLayoutControl1
         '
@@ -89,7 +101,7 @@ Partial Public Class frmAddUser
         Me.rgAuthority.Location = New System.Drawing.Point(67, 132)
         Me.rgAuthority.MaximumSize = New System.Drawing.Size(0, 28)
         Me.rgAuthority.Name = "rgAuthority"
-        Me.rgAuthority.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem("Admin", "Admin", True, "Admin"), New DevExpress.XtraEditors.Controls.RadioGroupItem("DMC", "DMC", True, "DMC"), New DevExpress.XtraEditors.Controls.RadioGroupItem("TO", "TO", True, "TO")})
+        Me.rgAuthority.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem("Admin", "Admin", True, "Admin"), New DevExpress.XtraEditors.Controls.RadioGroupItem("RS", "RS", True, "RS"), New DevExpress.XtraEditors.Controls.RadioGroupItem("DMC", "DMC", True, "DMC"), New DevExpress.XtraEditors.Controls.RadioGroupItem("TO", "TO", True, "TO")})
         Me.rgAuthority.Size = New System.Drawing.Size(272, 28)
         Me.rgAuthority.StyleController = Me.dataLayoutControl1
         Me.rgAuthority.TabIndex = 20
@@ -102,9 +114,9 @@ Partial Public Class frmAddUser
         Me.txtUsername.Size = New System.Drawing.Size(272, 20)
         Me.txtUsername.StyleController = Me.dataLayoutControl1
         Me.txtUsername.TabIndex = 4
-        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule3.ErrorText = "This value is not valid"
-        Me.DxValidationProvider1.SetValidationRule(Me.txtUsername, ConditionValidationRule3)
+        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule1.ErrorText = "This value is not valid"
+        Me.DxValidationProvider1.SetValidationRule(Me.txtUsername, ConditionValidationRule1)
         '
         'txtFullName
         '
@@ -113,9 +125,9 @@ Partial Public Class frmAddUser
         Me.txtFullName.Size = New System.Drawing.Size(272, 20)
         Me.txtFullName.StyleController = Me.dataLayoutControl1
         Me.txtFullName.TabIndex = 5
-        ConditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule4.ErrorText = "This value is not valid"
-        Me.DxValidationProvider1.SetValidationRule(Me.txtFullName, ConditionValidationRule4)
+        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule2.ErrorText = "This value is not valid"
+        Me.DxValidationProvider1.SetValidationRule(Me.txtFullName, ConditionValidationRule2)
         '
         'txtEmail
         '
@@ -126,18 +138,6 @@ Partial Public Class frmAddUser
         Me.txtEmail.Size = New System.Drawing.Size(272, 20)
         Me.txtEmail.StyleController = Me.dataLayoutControl1
         Me.txtEmail.TabIndex = 6
-        '
-        'txtPassword
-        '
-        Me.txtPassword.Location = New System.Drawing.Point(67, 84)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(272, 20)
-        Me.txtPassword.StyleController = Me.dataLayoutControl1
-        Me.txtPassword.TabIndex = 7
-        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule1.ErrorText = "This value is not valid"
-        Me.DxValidationProvider1.SetValidationRule(Me.txtPassword, ConditionValidationRule1)
         '
         'txtRetype
         '
@@ -233,9 +233,9 @@ Partial Public Class frmAddUser
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = True
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = True
         Me.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        WindowsUIButtonImageOptions5.ImageUri.Uri = "Save;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions6.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
-        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions5), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Cancel", True, WindowsUIButtonImageOptions6)})
+        WindowsUIButtonImageOptions1.ImageUri.Uri = "Save;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions2.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
+        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions1), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Cancel", True, WindowsUIButtonImageOptions2)})
         Me.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.windowsUIButtonPanelMain.EnableImageTransparency = True
         Me.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
@@ -283,13 +283,13 @@ Partial Public Class frmAddUser
         Me.Name = "frmAddUser"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.dataLayoutControl1.ResumeLayout(False)
         CType(Me.rgAuthority.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtUsername.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtFullName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtEmail.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtRetype.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()

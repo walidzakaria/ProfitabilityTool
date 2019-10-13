@@ -37,6 +37,9 @@ Partial Public Class frmManageUsers
         Me.gridView = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryItemLookUpEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -44,18 +47,15 @@ Partial Public Class frmManageUsers
         Me.itemLabel = New DevExpress.XtraLayout.LayoutControlItem()
         Me.itemGrid = New DevExpress.XtraLayout.LayoutControlItem()
         Me.windowsUIButtonPanel = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
-        Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
         CType(Me.layoutControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.layoutControl.SuspendLayout()
         CType(Me.gridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutControlGroup, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.itemLabel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.itemGrid, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'layoutControl
@@ -129,6 +129,32 @@ Partial Public Class frmManageUsers
         Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 0
         Me.GridColumn2.Width = 150
+        '
+        'GridColumn6
+        '
+        Me.GridColumn6.Caption = "Full Name"
+        Me.GridColumn6.FieldName = "FullName"
+        Me.GridColumn6.Name = "GridColumn6"
+        Me.GridColumn6.Visible = True
+        Me.GridColumn6.VisibleIndex = 1
+        Me.GridColumn6.Width = 148
+        '
+        'GridColumn5
+        '
+        Me.GridColumn5.Caption = "E-Mail"
+        Me.GridColumn5.ColumnEdit = Me.RepositoryItemTextEdit1
+        Me.GridColumn5.FieldName = "Mail"
+        Me.GridColumn5.Name = "GridColumn5"
+        Me.GridColumn5.Visible = True
+        Me.GridColumn5.VisibleIndex = 2
+        Me.GridColumn5.Width = 152
+        '
+        'RepositoryItemTextEdit1
+        '
+        Me.RepositoryItemTextEdit1.AutoHeight = False
+        Me.RepositoryItemTextEdit1.Mask.EditMask = "(\w|[\.\-])+@(\w|[\-]+\.)*(\w|[\-]){2,63}\.[a-zA-Z]{2,4}"
+        Me.RepositoryItemTextEdit1.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
+        Me.RepositoryItemTextEdit1.Name = "RepositoryItemTextEdit1"
         '
         'GridColumn3
         '
@@ -226,32 +252,6 @@ Partial Public Class frmManageUsers
         Me.windowsUIButtonPanel.Text = "windowsUIButtonPanel"
         Me.windowsUIButtonPanel.UseButtonBackgroundImages = False
         '
-        'GridColumn5
-        '
-        Me.GridColumn5.Caption = "E-Mail"
-        Me.GridColumn5.ColumnEdit = Me.RepositoryItemTextEdit1
-        Me.GridColumn5.FieldName = "Mail"
-        Me.GridColumn5.Name = "GridColumn5"
-        Me.GridColumn5.Visible = True
-        Me.GridColumn5.VisibleIndex = 2
-        Me.GridColumn5.Width = 152
-        '
-        'GridColumn6
-        '
-        Me.GridColumn6.Caption = "Full Name"
-        Me.GridColumn6.FieldName = "FullName"
-        Me.GridColumn6.Name = "GridColumn6"
-        Me.GridColumn6.Visible = True
-        Me.GridColumn6.VisibleIndex = 1
-        Me.GridColumn6.Width = 148
-        '
-        'RepositoryItemTextEdit1
-        '
-        Me.RepositoryItemTextEdit1.AutoHeight = False
-        Me.RepositoryItemTextEdit1.Mask.EditMask = "(\w|[\.\-])+@(\w|[\-]+\.)*(\w|[\-]){2,63}\.[a-zA-Z]{2,4}"
-        Me.RepositoryItemTextEdit1.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
-        Me.RepositoryItemTextEdit1.Name = "RepositoryItemTextEdit1"
-        '
         'frmManageUsers
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
@@ -269,11 +269,11 @@ Partial Public Class frmManageUsers
         Me.layoutControl.ResumeLayout(False)
         CType(Me.gridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutControlGroup, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.itemLabel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.itemGrid, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

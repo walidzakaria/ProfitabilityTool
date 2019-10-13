@@ -43,6 +43,8 @@ Public Class Login
             Using dr As SqlDataReader = cmd.ExecuteReader
                 If dr.Read() Then
                     LoginId = dr(0)
+                    FullName = dr(2)
+                    Mail = dr(3)
                     Authority = dr(5)
                     Active = dr(6)
                     result = True
@@ -374,7 +376,7 @@ Public Class Comment
     Public Property CommentDate() As DateTime
     Public Property Comment() As String
     Public Property Calculation() As Single
-    Public Property Status() As Short
+    Public Property Status() As String
     Public Property LoginID() As Integer
 
     Public Function Username() As Login

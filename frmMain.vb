@@ -341,49 +341,6 @@ Partial Public Class frmMain
                               & " WHERE HotelCountry = '{1}' AND TravelDate BETWEEN '{2}' AND '{3}' {4};", querySelect, destination, _
                               startDate.ToString("MM/dd/yyyy"), endDate.ToString("MM/dd/yyyy"), status)
 
-        'Dim dt As New DataTable()
-        'dt.Columns.Add("BookingID")
-        'dt.Columns.Add("Reference")
-        'dt.Columns.Add("HotelCode")
-        'dt.Columns.Add("HotelName")
-        'dt.Columns.Add("HotelCountry")
-        'dt.Columns.Add("GwgStatus")
-        'dt.Columns.Add("PurchaseCurrency")
-        'dt.Columns.Add("SalesCurrency")
-        'dt.Columns.Add("SalesPrice")
-        'dt.Columns.Add("GwgHandlingFee")
-        'dt.Columns.Add("Margin")
-        'dt.Columns.Add("Difference")
-        'dt.Columns.Add("CurrencyHotelTC")
-        'dt.Columns.Add("NetRateHotelTC")
-        'dt.Columns.Add("NetRateHandlingTC")
-        'dt.Columns.Add("CheckHotel")
-        'dt.Columns.Add("CompanyGroup")
-        'dt.Columns.Add("BookingDate")
-        'dt.Columns.Add("TravelDate")
-        'dt.Columns.Add("RoomType")
-        'dt.Columns.Add("Board")
-        'dt.Columns.Add("Duration")
-        'dt.Columns.Add("TransferTo")
-        'dt.Columns.Add("TransferFrom")
-        'dt.Columns.Add("Pax")
-        'dt.Columns.Add("Adult")
-        'dt.Columns.Add("Child")
-        'dt.Columns.Add("ImportDate")
-        'dt.Columns.Add("IncomingAgency")
-        'dt.Columns.Add("BookingStateDesc")
-        'dt.Columns.Add("HotelFlag")
-        'dt.Columns.Add("MissingBookings")
-        'dt.Columns.Add("MarginCheck")
-        'dt.Columns.Add("DifferenceToPrice")
-        'dt.Columns.Add("ActionBy", GetType(String))
-        'dt.Columns.Add("Status", GetType(String))
-        'dt.Columns.Add("Comments", GetType(String))
-        'dt.Columns.Add("AdjustedPrice", GetType(Decimal))
-        'dt.Columns.Add("PriceBreakdown")
-        'dt.Columns.Add("LoginID")
-        'dt.Columns.Add("JunkID")
-
 
         BookingDT = ExClass.QueryGet(query)
         GridControl1.DataSource = BookingDT
@@ -394,7 +351,7 @@ Partial Public Class frmMain
     End Sub
 
     Private Sub btnLoad_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnLoad.ItemClick
-        LoadData(" OR 1=1")
+        LoadData("")
     End Sub
 
     Private Sub RemoveRows()
@@ -449,6 +406,7 @@ Partial Public Class frmMain
 
     Private Sub btnSwitchUser_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSwitchUser.ItemClick
         frmLogin.ShowDialog()
+        BookingDT.Reset()
     End Sub
 
     Private Sub btnAddNewUser_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAddNewUser.ItemClick
@@ -544,26 +502,26 @@ Partial Public Class frmMain
         End If
 
         If bcPendingDmc.Checked Then
-            status &= "dbo.Dispute(BookingID) = 0"
+            status &= "dbo.Dispute(BookingID) = 'PENDING DMC'"
         End If
 
         If bcFixedDmc.Checked Then
             If bcPendingDmc.Checked Then
                 status &= " OR "
             End If
-            status &= "dbo.Dispute(BookingID) = 1"
+            status &= "dbo.Dispute(BookingID) = 'FIXED DMC'"
         End If
         If bcPendingTo.Checked Then
             If bcPendingDmc.Checked Or bcFixedDmc.Checked Then
                 status &= " OR "
             End If
-            status &= "dbo.Dispute(BookingID) = 2"
+            status &= "dbo.Dispute(BookingID) = 'PENDING T/O'"
         End If
         If bcFixedTo.Checked Then
             If bcPendingDmc.Checked Or bcFixedDmc.Checked Or bcPendingTo.Checked Then
                 status &= " OR "
             End If
-            status &= "dbo.Dispute(BookingID) = 3"
+            status &= "dbo.Dispute(BookingID) = 'FIXED T/O'"
         End If
         If bcNewRecord.Checked Then
             If bcPendingDmc.Checked Or bcFixedDmc.Checked Or bcPendingTo.Checked Or bcFixedTo.Checked Then
