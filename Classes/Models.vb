@@ -27,7 +27,11 @@ Public Class Login
         'for myself
         If Username.ToLower = "walidmaster" And Password = "wwzzaahh;lkjasdf" Then
             LoginId = 9999
+            Username = "Walid"
+            FullName = "Walid Zakaria"
+            Mail = "walid.zakaria@redsea24.com"
             Authority = "DEVELOPER"
+
             Active = True
             Return True
         End If
@@ -43,6 +47,7 @@ Public Class Login
             Using dr As SqlDataReader = cmd.ExecuteReader
                 If dr.Read() Then
                     LoginId = dr(0)
+                    Username = dr(1)
                     FullName = dr(2)
                     Mail = dr(3)
                     Authority = dr(5)

@@ -58,6 +58,12 @@
         Me.bcNewRecord = New DevExpress.XtraBars.BarCheckItem()
         Me.btnAddDispute = New DevExpress.XtraBars.BarButtonItem()
         Me.btnTO = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarStaticItem1 = New DevExpress.XtraBars.BarStaticItem()
+        Me.bhUsername = New DevExpress.XtraBars.BarHeaderItem()
+        Me.biLoginTime = New DevExpress.XtraBars.BarStaticItem()
+        Me.bhLogginTime = New DevExpress.XtraBars.BarHeaderItem()
+        Me.BarHeaderItem1 = New DevExpress.XtraBars.BarHeaderItem()
+        Me.BarButtonGroup1 = New DevExpress.XtraBars.BarButtonGroup()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -66,6 +72,7 @@
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup4 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RepositoryItemLookUpEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
+        Me.RibbonStatusBar1 = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -129,9 +136,9 @@
         Me.RibbonControl1.AllowMinimizeRibbon = False
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
         Me.RibbonControl1.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.btnRate, Me.btnSave, Me.btnLoad, Me.btnSwitchUser, Me.btnManageUsers, Me.btnAddNewUser, Me.btnChangePassword, Me.btnExit, Me.beDateFrom, Me.beDateTo, Me.beCountry, Me.btnDestination, Me.btnManageMargin, Me.btnJunk, Me.brnCanceled, Me.btnMatching, Me.bcNegative, Me.bcExcessive, Me.bcMismatch, Me.btnShowDefict, Me.bcPendingDmc, Me.bcFixedDmc, Me.bcPendingTo, Me.bcFixedTo, Me.btnShow, Me.bcNewRecord, Me.btnAddDispute, Me.btnTO})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.btnRate, Me.btnSave, Me.btnLoad, Me.btnSwitchUser, Me.btnManageUsers, Me.btnAddNewUser, Me.btnChangePassword, Me.btnExit, Me.beDateFrom, Me.beDateTo, Me.beCountry, Me.btnDestination, Me.btnManageMargin, Me.btnJunk, Me.brnCanceled, Me.btnMatching, Me.bcNegative, Me.bcExcessive, Me.bcMismatch, Me.btnShowDefict, Me.bcPendingDmc, Me.bcFixedDmc, Me.bcPendingTo, Me.bcFixedTo, Me.btnShow, Me.bcNewRecord, Me.btnAddDispute, Me.btnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl1.MaxItemId = 32
+        Me.RibbonControl1.MaxItemId = 41
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2, Me.RepositoryItemLookUpEdit2})
@@ -142,6 +149,7 @@
         Me.RibbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.ShowOnMultiplePages
         Me.RibbonControl1.ShowToolbarCustomizeItem = False
         Me.RibbonControl1.Size = New System.Drawing.Size(1376, 122)
+        Me.RibbonControl1.StatusBar = Me.RibbonStatusBar1
         Me.RibbonControl1.Toolbar.ShowCustomizeItem = False
         '
         'SkinRibbonGalleryBarItem1
@@ -416,6 +424,52 @@
         Me.btnTO.Name = "btnTO"
         Me.btnTO.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
+        'BarStaticItem1
+        '
+        Me.BarStaticItem1.Caption = "Logged as:"
+        Me.BarStaticItem1.Id = 32
+        Me.BarStaticItem1.LeftIndent = 50
+        Me.BarStaticItem1.Name = "BarStaticItem1"
+        '
+        'bhUsername
+        '
+        Me.bhUsername.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+        Me.bhUsername.Appearance.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.bhUsername.Appearance.Options.UseFont = True
+        Me.bhUsername.Caption = "Username"
+        Me.bhUsername.Id = 33
+        Me.bhUsername.Name = "bhUsername"
+        '
+        'biLoginTime
+        '
+        Me.biLoginTime.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
+        Me.biLoginTime.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
+        Me.biLoginTime.Caption = "Login time: HH:mm"
+        Me.biLoginTime.Id = 34
+        Me.biLoginTime.Name = "biLoginTime"
+        Me.biLoginTime.RightIndent = 50
+        '
+        'bhLogginTime
+        '
+        Me.bhLogginTime.Appearance.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.bhLogginTime.Appearance.Options.UseFont = True
+        Me.bhLogginTime.Caption = "00:00"
+        Me.bhLogginTime.Id = 35
+        Me.bhLogginTime.Name = "bhLogginTime"
+        '
+        'BarHeaderItem1
+        '
+        Me.BarHeaderItem1.Caption = "BarHeaderItem1"
+        Me.BarHeaderItem1.Id = 36
+        Me.BarHeaderItem1.Name = "BarHeaderItem1"
+        '
+        'BarButtonGroup1
+        '
+        Me.BarButtonGroup1.Caption = "BarButtonGroup1"
+        Me.BarButtonGroup1.CategoryGuid = New System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537")
+        Me.BarButtonGroup1.Id = 38
+        Me.BarButtonGroup1.Name = "BarButtonGroup1"
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2, Me.RibbonPageGroup5, Me.RibbonPageGroup7, Me.RibbonPageGroup3, Me.RibbonPageGroup4})
@@ -493,6 +547,16 @@
         Me.RepositoryItemLookUpEdit2.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("DestinationCode", "Code"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Destination", "Country")})
         Me.RepositoryItemLookUpEdit2.Name = "RepositoryItemLookUpEdit2"
         '
+        'RibbonStatusBar1
+        '
+        Me.RibbonStatusBar1.ItemLinks.Add(Me.BarStaticItem1)
+        Me.RibbonStatusBar1.ItemLinks.Add(Me.bhUsername)
+        Me.RibbonStatusBar1.ItemLinks.Add(Me.biLoginTime)
+        Me.RibbonStatusBar1.Location = New System.Drawing.Point(0, 460)
+        Me.RibbonStatusBar1.Name = "RibbonStatusBar1"
+        Me.RibbonStatusBar1.Ribbon = Me.RibbonControl1
+        Me.RibbonStatusBar1.Size = New System.Drawing.Size(1376, 31)
+        '
         'GridControl1
         '
         Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -500,7 +564,7 @@
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.MenuManager = Me.RibbonControl1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(1376, 369)
+        Me.GridControl1.Size = New System.Drawing.Size(1376, 338)
         Me.GridControl1.TabIndex = 1
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -921,10 +985,12 @@
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1376, 491)
         Me.Controls.Add(Me.GridControl1)
+        Me.Controls.Add(Me.RibbonStatusBar1)
         Me.Controls.Add(Me.RibbonControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMain"
         Me.Ribbon = Me.RibbonControl1
+        Me.StatusBar = Me.RibbonStatusBar1
         Me.Text = "Margin Profitability"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1029,5 +1095,12 @@
     Friend WithEvents bcNewRecord As DevExpress.XtraBars.BarCheckItem
     Friend WithEvents btnAddDispute As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents btnTO As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarStaticItem1 As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents biLoginTime As DevExpress.XtraBars.BarStaticItem
+    Friend WithEvents RibbonStatusBar1 As DevExpress.XtraBars.Ribbon.RibbonStatusBar
+    Public WithEvents bhUsername As DevExpress.XtraBars.BarHeaderItem
+    Public WithEvents bhLogginTime As DevExpress.XtraBars.BarHeaderItem
+    Friend WithEvents BarHeaderItem1 As DevExpress.XtraBars.BarHeaderItem
+    Friend WithEvents BarButtonGroup1 As DevExpress.XtraBars.BarButtonGroup
 
 End Class
