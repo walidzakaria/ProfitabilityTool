@@ -39,7 +39,8 @@ Partial Public Class frmEdit
             .HotelCode = txtHotelCode.EditValue
             .HotelName = txtHotelName.EditValue
             .CountryCode = txtCountry.EditValue
-            .GwgStatus = cbGWGStatus.SelectedItem.ToString
+            .GwgStatus = cbGWGStatus.Properties.GetDisplayText(cbGWGStatus.SelectedIndex)
+            '.GwgStatus = cbGWGStatus.SelectedItem.ToString
             .PurchaseCurrency = txtPurchaseCurrency.EditValue
             .PurchasePrice = txtPurchasePrice.EditValue
             .SalesCurrency = txtSalesCurrency.EditValue
@@ -121,6 +122,7 @@ Partial Public Class frmEdit
             Dim tempBooking As New Booking()
             tempBooking = GetDataSource(bookingId)
 
+
             If currentBooking.GetHashCode <> tempBooking.GetHashCode Then
                 Dim diaResult As DialogResult
                 diaResult = MessageBox.Show("Want to save changes to " & currentBooking.Reference & "?", "Save", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
@@ -133,6 +135,10 @@ Partial Public Class frmEdit
                 End If
             End If
         End If
+
+
+
+
         grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
     End Sub
 
@@ -175,6 +181,7 @@ Partial Public Class frmEdit
             LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Never
             GridControl1.Visible = False
             labelControl.Text = "Multiple Bookings"
+            GridControl1.DataSource = Nothing
         End If
 
         frmMain.Wait(False)
@@ -213,6 +220,22 @@ Partial Public Class frmEdit
             frmMain.Wait(False)
         ElseIf e.Button.Properties.Caption = "Close" Then
             Me.Close()
+        ElseIf e.Button.Properties.Caption = "Mail" Then
+            Dim subject, body As String
+            Dim sendingUser As New Login()
+            sendingUser.LoginId = GV.CurrentUser.LoginId
+            sendingUser.GetById()
+
+
+            subject = String.Format("Profitability Tool; Ref# {0} **{1}**",
+                                    currentBooking.Reference, Today.ToString("dd.MM.yy"))
+            body = String.Format("Dear {0}," & vbNewLine & vbNewLine & "Ref# {1}." & vbNewLine & "Please check this booking" _
+                                 & vbNewLine & vbNewLine & "BR" & vbNewLine & "{2}",
+                                 currentBooking.Username.FullName,
+                                 currentBooking.Reference, sendingUser.FullName)
+
+            SendMail.SetEmailSend(subject, body, currentBooking.Username.Mail, "")
+
         End If
 
     End Sub
@@ -244,24 +267,32 @@ Partial Public Class frmEdit
         ElseIf txtComment.EditValue = "" Then
             MsgBox("please enter comment!")
             txtComment.Focus()
-        ElseIf txtCalculation.EditValue = "" Then
-            MsgBox("Please enter calculation!")
-            txtCalculation.Focus()
         Else
             frmMain.Wait(True)
             Dim comment = New Comment()
             comment.Status = cbStatus.SelectedIndex
             comment.Comment = txtComment.EditValue
             comment.BookingID = currentBooking.BookingID
-            comment.Calculation = Val(txtCalculation.Text)
+            If txtCalculation.EditValue = "" Then
+                comment.Calculation = Nothing
+            Else
+                comment.Calculation = txtCalculation.EditValue
+            End If
+
             If bookingsList.Count = 0 Then
                 If comment.Save() Then
                     GetComments()
+                    UpdateBookingStatus(False, comment.Status, GV.CurrentUser.Username, comment.Comment, comment.Calculation)
                     grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
+
                     ClearComment()
                 End If
             Else
                 If comment.SaveMulti(bookingsList) Then
+                    UpdateBookingStatus(True, comment.Status, GV.CurrentUser.Username, comment.Comment, comment.Calculation)
+                    grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
+
+                    ClearComment()
                     Me.Close()
                 End If
             End If
@@ -270,10 +301,25 @@ Partial Public Class frmEdit
         End If
     End Sub
 
+    Private Sub UpdateBookingStatus(ByVal multiple As Boolean, ByVal status As Short, ByVal actionBy As String, ByVal comment As String, ByVal adjustedPrice As Double)
+
+        currentBooking.Status = cbStatus.Properties.GetDisplayText(cbStatus.SelectedIndex())
+        currentBooking.ActionBy = actionBy
+        currentBooking.Comments = comment
+        currentBooking.AdjustedPrice = adjustedPrice
+        If Not multiple Then
+            frmMain.UpdateCertainRow(frmMain.GridView1.FocusedRowHandle, currentBooking)
+        Else
+            Dim withPrice As Boolean = adjustedPrice <> Nothing
+            frmMain.UpdateCertainRow(withPrice, currentBooking)
+
+        End If
+    End Sub
     Private Sub txtComment_EditValueChanged(sender As Object, e As EventArgs) Handles txtComment.EditValueChanged
         Dim textCalc As Single = ExClass.CalculateText(txtComment.EditValue)
         If textCalc <> 0 Then
             txtCalculation.Text = textCalc.ToString
         End If
     End Sub
+
 End Class

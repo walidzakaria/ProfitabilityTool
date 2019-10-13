@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
+
 Public Class ExClass
     Public Shared myConn As New SqlConnection("Data Source=Walid-PC\Master;Initial Catalog=YT_DB;User ID=UserConnect;Password=wwzzaa")
     'Public Shared myConn As New SqlConnection("workstation id=profitability.mssql.somee.com;packet size=4096;user id=walidpiano_SQLLogin_1;pwd=dwvw5bcqc3;data source=profitability.mssql.somee.com;persist security info=False;initial catalog=profitability")

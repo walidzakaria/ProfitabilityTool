@@ -38,10 +38,13 @@ Public Class frmManageUsers
         ElseIf e.Button.Properties.Caption = "Reset" Then
             ResetUser()
         ElseIf e.Button.Properties.Caption = "New" Then
-            frmSignup.ShowDialog()
-            LoadAllUsers()
+            frmAddUser.ShowDialog()
+            If frmAddUser.DialogResult = Windows.Forms.DialogResult.OK Then
+                LoadAllUsers()
+            End If
         ElseIf e.Button.Properties.Caption = "Save" Then
             UpdateUsers()
+            LoadAllUsers()
         End If
     End Sub
     Private Sub frmManageAllUsers_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -70,16 +73,19 @@ Public Class frmManageUsers
 
     Private Sub UpdateCache()
         Dim loginID As Integer
-        Dim username, authority As String
+        Dim username, fullName, email, authority As String
         Dim active As Short
         gridView.ValidateEditor()
         'gridView.UpdateCurrentRow()
         loginID = gridView.GetFocusedRowCellValue("LoginID")
         username = gridView.GetFocusedRowCellValue("Username")
+        fullName = gridView.GetFocusedRowCellValue("FullName")
+        email = gridView.GetFocusedRowCellValue("Mail").ToString.ToLower
+        email = StrConv(email, VbStrConv.ProperCase)
         authority = gridView.GetFocusedRowCellValue("Authority")
         active = gridView.GetFocusedRowCellValue("Active")
-        usersCache &= String.Format("UPDATE Login SET Username = '{0}', Authority = '{1}', Active = {2} WHERE LoginID = {3}; ", _
-                                     username, authority, active, loginID)
+        usersCache &= String.Format("UPDATE Login SET Username = '{0}', FullName = '{1}', Mail = '{2}', Authority = '{3}', Active = {4} WHERE LoginID = {5}; ", _
+                                     username, fullName, email, authority, active, loginID)
 
     End Sub
 

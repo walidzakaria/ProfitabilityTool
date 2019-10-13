@@ -4,7 +4,7 @@ Imports DevExpress.LookAndFeel
 
 
 Partial Public Class frmMain
-
+    Dim BookingDT As New DataTable()
     Public Sub Wait(ByVal wait As Boolean)
         If wait = True Then
             Try
@@ -99,7 +99,7 @@ Partial Public Class frmMain
         result.Columns.Add("ActionBy")
         result.Columns.Add("Status")
         result.Columns.Add("Comments")
-        result.Columns.Add("DifferenceReason")
+        result.Columns.Add("AdjustedPrice")
         result.Columns.Add("PriceBreakdown")
         result.Columns.Add("LoginIID")
 
@@ -118,7 +118,6 @@ Partial Public Class frmMain
         Wait(True)
         Dim query As String = ""
         Dim noNewRecords As Boolean = True
-        'query = "INSERT INTO Bookings (Reference, Hotelcode, Hotelname, HotelCountry, GWG_Status, PurchaseCurrency, PurchasePrice, SalesCurrency, SalesPrice, GWGHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC, CheckHotel, Company_Group, Bookingdate, Traveldate, Roomtype, Board, Duration, TransferTo, TransferFrom, Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck, DifferenceTOPrice, ActionBy, Status, Comments, DifferenceReason, PriceBreakdown) VALUES"
         Dim lineText As String = ""
 
         Dim reference As String
@@ -156,9 +155,6 @@ Partial Public Class frmMain
         Dim marginCheck As String
         Dim differenceTOPrice As String
         Dim actionBy As String
-        Dim status As String
-        Dim comments As String
-        Dim differenceReason As String
         Dim priceBreakdown As String
         Dim loginId As Integer = GV.CurrentUser.LoginId
         Dim junk As Boolean
@@ -202,17 +198,14 @@ Partial Public Class frmMain
                     marginCheck = .GetRowCellValue(x, "MarginCheck").ToString
                     differenceTOPrice = .GetRowCellValue(x, "DifferenceTOPrice").ToString
                     actionBy = .GetRowCellValue(x, "ActionBy").ToString
-                    status = .GetRowCellValue(x, "Status").ToString
-                    comments = Replace(.GetRowCellValue(x, "Comments").ToString, "'", "''")
-                    differenceReason = Replace(.GetRowCellValue(x, "DifferenceReason").ToString, "'", "''")
                     priceBreakdown = .GetRowCellValue(x, "PriceBreakdown").ToString
 
                 End With
                 If hotelCode <> "" Then
 
-                    junk = Booking.CheckJunk(gwgStatus, marginCheck, netRateHotelTC, hotelName)
-                    lineText = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}', '{36}', '{37}', '{38}', {39}, {40}; ", _
-                                             reference, hotelCode, hotelName, hotelCountry, gwgStatus, purchaseCurrency, purchasePrice, salesCurrency, salesPrice, gwgHandlingFee, margin, difference, currencyHotelTC, netRateHotelTC, netRateHandlingTC, checkHotel, companyGroup, bookingDate, traveldate, roomType, board, duration, transferTo, transferFrom, pax, adult, child, importDate, incomingAgency, bookingStateDesc, hotelFlag, missingBookings, marginCheck, differenceTOPrice, actionBy, status, comments, differenceReason, priceBreakdown, loginId, CShort(junk).ToString)
+                    junk = Booking.CheckJunk(gwgStatus, marginCheck, Val(netRateHotelTC), hotelName)
+                    lineText = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}', {36}, {37}; ", _
+                                             reference, hotelCode, hotelName, hotelCountry, gwgStatus, purchaseCurrency, purchasePrice, salesCurrency, salesPrice, gwgHandlingFee, margin, difference, currencyHotelTC, netRateHotelTC, netRateHandlingTC, checkHotel, companyGroup, bookingDate, traveldate, roomType, board, duration, transferTo, transferFrom, pax, adult, child, importDate, incomingAgency, bookingStateDesc, hotelFlag, missingBookings, marginCheck, differenceTOPrice, actionBy, priceBreakdown, loginId, junk.ToString)
 
                     query &= lineText
                 End If
@@ -236,50 +229,76 @@ Partial Public Class frmMain
 
     Public Sub UpdateCertainRow(ByVal rowHandle As Integer, ByVal booking As Booking)
 
-        With GridView1
-            .SetRowCellValue(rowHandle, "Reference", booking.Reference)
-            .SetRowCellValue(rowHandle, "HotelCode", booking.HotelCode)
-            .SetRowCellValue(rowHandle, "HotelName", booking.HotelName)
-            .SetRowCellValue(rowHandle, "HotelCountry", booking.CountryCode)
-            .SetRowCellValue(rowHandle, "GwgStatus", booking.GwgStatus)
-            .SetRowCellValue(rowHandle, "PurchaseCurrency", booking.PurchaseCurrency)
-            .SetRowCellValue(rowHandle, "PurchasePrice", booking.PurchasePrice)
-            .SetRowCellValue(rowHandle, "SalesCurrency", booking.SalesCurrency)
-            .SetRowCellValue(rowHandle, "SalesPrice", booking.SalesPrice)
-            .SetRowCellValue(rowHandle, "GwgHandlingFee", booking.GwgHandlingFee)
-            .SetRowCellValue(rowHandle, "Margin", booking.Margin)
-            .SetRowCellValue(rowHandle, "Difference", booking.Difference)
-            .SetRowCellValue(rowHandle, "CurrencyHotelTC", booking.CurrencyHotelTC)
-            .SetRowCellValue(rowHandle, "NetRateHotelTC", booking.NetRateHotelTC)
-            .SetRowCellValue(rowHandle, "NetRateHandlingTC", booking.NetRateHandlingTC)
-            .SetRowCellValue(rowHandle, "CheckHotel", booking.CheckHotel)
-            .SetRowCellValue(rowHandle, "CompanyGroup", booking.CompanyGroup)
-            .SetRowCellValue(rowHandle, "BookingDate", booking.BookingDate)
-            .SetRowCellValue(rowHandle, "TravelDate", booking.TravelDate)
-            .SetRowCellValue(rowHandle, "RoomType", booking.RoomType)
-            .SetRowCellValue(rowHandle, "Board", booking.Board)
-            .SetRowCellValue(rowHandle, "Duration", booking.Duration)
-            .SetRowCellValue(rowHandle, "TransferTo", booking.TransferTo)
-            .SetRowCellValue(rowHandle, "TransferFrom", booking.TransferFrom)
-            .SetRowCellValue(rowHandle, "Pax", booking.Pax)
-            .SetRowCellValue(rowHandle, "Adult", booking.Adult)
-            .SetRowCellValue(rowHandle, "Child", booking.Child)
-            .SetRowCellValue(rowHandle, "ImportDate", booking.ImportDate)
-            .SetRowCellValue(rowHandle, "IncomingAgency", booking.IncomingAgency)
-            .SetRowCellValue(rowHandle, "BookingStateDesc", booking.BookingStateDesc)
-            .SetRowCellValue(rowHandle, "HotelFlag", booking.HotelFlag)
-            .SetRowCellValue(rowHandle, "MissingBookings", booking.MissingBookings)
-            .SetRowCellValue(rowHandle, "MarginCheck", booking.MarginCheck)
-            .SetRowCellValue(rowHandle, "DifferenceTOPrice", booking.DifferenceToPrice)
-            .SetRowCellValue(rowHandle, "ActionBy", booking.ActionBy)
-            .SetRowCellValue(rowHandle, "Status", booking.Status)
-            .SetRowCellValue(rowHandle, "Comments", booking.Comments)
-            .SetRowCellValue(rowHandle, "DifferenceReason", booking.DifferenceReason)
-            .SetRowCellValue(rowHandle, "PriceBreakdown", booking.PriceBreakdown)
+        For x = 0 To BookingDT.Columns.Count - 1
+            BookingDT.Columns(x).ReadOnly = False
+        Next
 
+
+        With BookingDT
+            .Rows(rowHandle).SetField("Reference", booking.Reference)
+            .Rows(rowHandle).SetField("HotelCode", booking.HotelCode)
+            .Rows(rowHandle).SetField("HotelName", booking.HotelName)
+            .Rows(rowHandle).SetField("HotelCountry", booking.CountryCode)
+            .Rows(rowHandle).SetField("GwgStatus", booking.GwgStatus)
+            .Rows(rowHandle).SetField("PurchaseCurrency", booking.PurchaseCurrency)
+            .Rows(rowHandle).SetField("PurchasePrice", booking.PurchasePrice)
+            .Rows(rowHandle).SetField("SalesCurrency", booking.SalesCurrency)
+            .Rows(rowHandle).SetField("SalesPrice", booking.SalesPrice)
+            .Rows(rowHandle).SetField("GwgHandlingFee", booking.GwgHandlingFee)
+            .Rows(rowHandle).SetField("Margin", booking.Margin)
+            .Rows(rowHandle).SetField("Difference", booking.Difference)
+            .Rows(rowHandle).SetField("CurrencyHotelTC", booking.CurrencyHotelTC)
+            .Rows(rowHandle).SetField("NetRateHotelTC", booking.NetRateHotelTC)
+            .Rows(rowHandle).SetField("NetRateHandlingTC", booking.NetRateHandlingTC)
+            .Rows(rowHandle).SetField("CheckHotel", booking.CheckHotel)
+            .Rows(rowHandle).SetField("CompanyGroup", booking.CompanyGroup)
+            .Rows(rowHandle).SetField("BookingDate", booking.BookingDate)
+            .Rows(rowHandle).SetField("TravelDate", booking.TravelDate)
+            .Rows(rowHandle).SetField("RoomType", booking.RoomType)
+            .Rows(rowHandle).SetField("Board", booking.Board)
+            .Rows(rowHandle).SetField("Duration", booking.Duration)
+            .Rows(rowHandle).SetField("TransferTo", booking.TransferTo)
+            .Rows(rowHandle).SetField("TransferFrom", booking.TransferFrom)
+            .Rows(rowHandle).SetField("Pax", booking.Pax)
+            .Rows(rowHandle).SetField("Adult", booking.Adult)
+            .Rows(rowHandle).SetField("Child", booking.Child)
+            .Rows(rowHandle).SetField("ImportDate", booking.ImportDate)
+            .Rows(rowHandle).SetField("IncomingAgency", booking.IncomingAgency)
+            .Rows(rowHandle).SetField("BookingStateDesc", booking.BookingStateDesc)
+            .Rows(rowHandle).SetField("HotelFlag", booking.HotelFlag)
+            .Rows(rowHandle).SetField("MissingBookings", booking.MissingBookings)
+            .Rows(rowHandle).SetField("MarginCheck", booking.MarginCheck)
+            .Rows(rowHandle).SetField("DifferenceTOPrice", booking.DifferenceToPrice)
+            .Rows(rowHandle).SetField("ActionBy", booking.ActionBy)
+            .Rows(rowHandle).SetField("Status", booking.Status)
+            .Rows(rowHandle).SetField("Comments", booking.Comments)
+            .Rows(rowHandle).SetField("AdjustedPrice", booking.AdjustedPrice)
+            .Rows(rowHandle).SetField("PriceBreakdown", booking.PriceBreakdown)
         End With
+
+
     End Sub
 
+    Public Sub UpdateCertainRow(ByVal adjustPrice As Boolean, ByVal booking As Booking)
+
+        For x = 0 To BookingDT.Columns.Count - 1
+            BookingDT.Columns(x).ReadOnly = False
+        Next
+
+        For x = 0 To GridView1.RowCount - 1
+            If GridView1.IsRowSelected(x) Then
+                With BookingDT
+                    .Rows(x).SetField("ActionBy", booking.ActionBy)
+                    .Rows(x).SetField("Status", booking.Status)
+                    .Rows(x).SetField("Comments", booking.Comments)
+                    If adjustPrice Then
+                        .Rows(x).SetField("AdjustedPrice", booking.AdjustedPrice)
+                    End If
+                End With
+            End If
+        Next
+
+    End Sub
     Private Function TextToDate(ByVal dateText As String) As Date
         Dim result As Date = New Date(1900, 1, 1)
         Dim tempDate() As String
@@ -309,14 +328,67 @@ Partial Public Class frmMain
         endDate = beDateTo.EditValue
         destination = beCountry.EditValue
 
+        Dim querySelect As String = "SELECT BookingID, Reference, HotelCode, HotelName, HotelCountry, GwgStatus, PurchaseCurrency, PurchasePrice," _
+                                    & " SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC," _
+                                    & " CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom," _
+                                    & " Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck," _
+                                    & " DifferenceTOPrice, dbo.ActionBy(BookingID) AS ActionBy, dbo.LastStatus(BookingID) AS Status, dbo.LastComment(BookingID) AS Comments," _
+                                    & " dbo.AdjustedPrice(BookingID) AS AdjustedPrice, PriceBreakdown, LoginID, Junk" _
+                                    & " FROM Booking "
 
-        Dim query As String = String.Format("SELECT * FROM Booking" _
-                              & " WHERE HotelCountry = '{0}' AND TravelDate BETWEEN '{1}' AND '{2}' {3};", destination, _
+
+        Dim query As String = String.Format("{0}" _
+                              & " WHERE HotelCountry = '{1}' AND TravelDate BETWEEN '{2}' AND '{3}' {4};", querySelect, destination, _
                               startDate.ToString("MM/dd/yyyy"), endDate.ToString("MM/dd/yyyy"), status)
 
-        Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
-        GridControl1.DataSource = dt
+        'Dim dt As New DataTable()
+        'dt.Columns.Add("BookingID")
+        'dt.Columns.Add("Reference")
+        'dt.Columns.Add("HotelCode")
+        'dt.Columns.Add("HotelName")
+        'dt.Columns.Add("HotelCountry")
+        'dt.Columns.Add("GwgStatus")
+        'dt.Columns.Add("PurchaseCurrency")
+        'dt.Columns.Add("SalesCurrency")
+        'dt.Columns.Add("SalesPrice")
+        'dt.Columns.Add("GwgHandlingFee")
+        'dt.Columns.Add("Margin")
+        'dt.Columns.Add("Difference")
+        'dt.Columns.Add("CurrencyHotelTC")
+        'dt.Columns.Add("NetRateHotelTC")
+        'dt.Columns.Add("NetRateHandlingTC")
+        'dt.Columns.Add("CheckHotel")
+        'dt.Columns.Add("CompanyGroup")
+        'dt.Columns.Add("BookingDate")
+        'dt.Columns.Add("TravelDate")
+        'dt.Columns.Add("RoomType")
+        'dt.Columns.Add("Board")
+        'dt.Columns.Add("Duration")
+        'dt.Columns.Add("TransferTo")
+        'dt.Columns.Add("TransferFrom")
+        'dt.Columns.Add("Pax")
+        'dt.Columns.Add("Adult")
+        'dt.Columns.Add("Child")
+        'dt.Columns.Add("ImportDate")
+        'dt.Columns.Add("IncomingAgency")
+        'dt.Columns.Add("BookingStateDesc")
+        'dt.Columns.Add("HotelFlag")
+        'dt.Columns.Add("MissingBookings")
+        'dt.Columns.Add("MarginCheck")
+        'dt.Columns.Add("DifferenceToPrice")
+        'dt.Columns.Add("ActionBy", GetType(String))
+        'dt.Columns.Add("Status", GetType(String))
+        'dt.Columns.Add("Comments", GetType(String))
+        'dt.Columns.Add("AdjustedPrice", GetType(Decimal))
+        'dt.Columns.Add("PriceBreakdown")
+        'dt.Columns.Add("LoginID")
+        'dt.Columns.Add("JunkID")
+
+
+        BookingDT = ExClass.QueryGet(query)
+        GridControl1.DataSource = BookingDT
+
+
         Wait(False)
 
     End Sub
@@ -380,7 +452,7 @@ Partial Public Class frmMain
     End Sub
 
     Private Sub btnAddNewUser_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAddNewUser.ItemClick
-        frmSignup.ShowDialog()
+        frmAddUser.ShowDialog()
     End Sub
 
     Private Sub btnChangePassword_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnChangePassword.ItemClick

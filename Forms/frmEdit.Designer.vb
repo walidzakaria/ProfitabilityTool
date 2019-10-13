@@ -49,9 +49,10 @@ Partial Public Class frmEdit
         Dim TileViewItemElement9 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
         Dim TileViewItemElement10 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
         Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEdit))
         Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim WindowsUIButtonImageOptions3 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEdit))
+        Dim WindowsUIButtonImageOptions4 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.TileViewColumn()
@@ -105,7 +106,6 @@ Partial Public Class frmEdit
         Me.txtIncomingAgency = New DevExpress.XtraEditors.TextEdit()
         Me.txtBookingStateDesc = New DevExpress.XtraEditors.TextEdit()
         Me.txtPriceBreakdown = New DevExpress.XtraEditors.TextEdit()
-        Me.txtUser = New DevExpress.XtraEditors.TextEdit()
         Me.windowsUIButtonPanelMain = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
         Me.btnToggleComment = New DevExpress.XtraEditors.SimpleButton()
         Me.txtComment = New DevExpress.XtraEditors.MemoEdit()
@@ -166,6 +166,7 @@ Partial Public Class frmEdit
         Me.EmptySpaceItem2 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.LayoutControlGroup6 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.txtUser = New DevExpress.XtraEditors.TextEdit()
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dataLayoutControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -212,7 +213,6 @@ Partial Public Class frmEdit
         CType(Me.txtIncomingAgency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtBookingStateDesc.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtPriceBreakdown.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtUser.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtComment.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCalculation.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cbGWGStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -268,6 +268,7 @@ Partial Public Class frmEdit
         CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtUser.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GridColumn2
@@ -353,7 +354,6 @@ Partial Public Class frmEdit
         Me.dataLayoutControl1.Controls.Add(Me.txtIncomingAgency)
         Me.dataLayoutControl1.Controls.Add(Me.txtBookingStateDesc)
         Me.dataLayoutControl1.Controls.Add(Me.txtPriceBreakdown)
-        Me.dataLayoutControl1.Controls.Add(Me.txtUser)
         Me.dataLayoutControl1.Controls.Add(Me.windowsUIButtonPanelMain)
         Me.dataLayoutControl1.Controls.Add(Me.btnToggleComment)
         Me.dataLayoutControl1.Controls.Add(Me.txtComment)
@@ -362,6 +362,7 @@ Partial Public Class frmEdit
         Me.dataLayoutControl1.Controls.Add(Me.btnCancelComment)
         Me.dataLayoutControl1.Controls.Add(Me.cbGWGStatus)
         Me.dataLayoutControl1.Controls.Add(Me.cbStatus)
+        Me.dataLayoutControl1.Controls.Add(Me.txtUser)
         Me.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataLayoutControl1.Location = New System.Drawing.Point(0, 30)
         Me.dataLayoutControl1.Name = "dataLayoutControl1"
@@ -933,15 +934,6 @@ Partial Public Class frmEdit
         Me.txtPriceBreakdown.StyleController = Me.dataLayoutControl1
         Me.txtPriceBreakdown.TabIndex = 1
         '
-        'txtUser
-        '
-        Me.txtUser.Enabled = False
-        Me.txtUser.Location = New System.Drawing.Point(161, 344)
-        Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(587, 20)
-        Me.txtUser.StyleController = Me.dataLayoutControl1
-        Me.txtUser.TabIndex = 1
-        '
         'windowsUIButtonPanelMain
         '
         Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
@@ -959,10 +951,11 @@ Partial Public Class frmEdit
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = True
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = True
         Me.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        WindowsUIButtonImageOptions1.ImageUri.Uri = "Save;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions2.ImageUri.Uri = "Reset;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions3.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
-        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions1), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", True, WindowsUIButtonImageOptions2), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions3)})
+        WindowsUIButtonImageOptions1.Image = CType(resources.GetObject("WindowsUIButtonImageOptions1.Image"), System.Drawing.Image)
+        WindowsUIButtonImageOptions2.ImageUri.Uri = "Save;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions3.ImageUri.Uri = "Reset;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions4.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
+        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Mail", True, WindowsUIButtonImageOptions1), New DevExpress.XtraBars.Docking2010.WindowsUISeparator(), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions2), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", True, WindowsUIButtonImageOptions3), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions4)})
         Me.windowsUIButtonPanelMain.EnableImageTransparency = True
         Me.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
         Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(24, 422)
@@ -1025,7 +1018,7 @@ Partial Public Class frmEdit
         Me.cbGWGStatus.Location = New System.Drawing.Point(515, 94)
         Me.cbGWGStatus.Name = "cbGWGStatus"
         Me.cbGWGStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.cbGWGStatus.Properties.Items.AddRange(New Object() {"OK", "CAN", "OnR", "BNA"})
+        Me.cbGWGStatus.Properties.Items.AddRange(New Object() {"OK", "CAN", "OnR", "BNA", "Stp"})
         Me.cbGWGStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
         Me.cbGWGStatus.Size = New System.Drawing.Size(245, 20)
         Me.cbGWGStatus.StyleController = Me.dataLayoutControl1
@@ -1056,8 +1049,8 @@ Partial Public Class frmEdit
         '
         Me.TabbedControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.TabbedControlGroup2.Name = "TabbedControlGroup2"
-        Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup7
-        Me.TabbedControlGroup2.SelectedTabPageIndex = 1
+        Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup5
+        Me.TabbedControlGroup2.SelectedTabPageIndex = 0
         Me.TabbedControlGroup2.Size = New System.Drawing.Size(764, 507)
         Me.TabbedControlGroup2.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup5, Me.LayoutControlGroup7})
         '
@@ -1511,6 +1504,15 @@ Partial Public Class frmEdit
         Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
         Me.LayoutControlGroup6.Size = New System.Drawing.Size(740, 477)
         '
+        'txtUser
+        '
+        Me.txtUser.Location = New System.Drawing.Point(161, 344)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Properties.ReadOnly = True
+        Me.txtUser.Size = New System.Drawing.Size(587, 20)
+        Me.txtUser.StyleController = Me.dataLayoutControl1
+        Me.txtUser.TabIndex = 1
+        '
         'frmEdit
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
@@ -1571,7 +1573,6 @@ Partial Public Class frmEdit
         CType(Me.txtIncomingAgency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtBookingStateDesc.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtPriceBreakdown.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtUser.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtComment.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCalculation.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cbGWGStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1627,6 +1628,7 @@ Partial Public Class frmEdit
         CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtUser.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1712,7 +1714,6 @@ Partial Public Class frmEdit
     Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.TileViewColumn
     Friend WithEvents GridColumn4 As DevExpress.XtraGrid.Columns.TileViewColumn
     Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.TileViewColumn
-    Friend WithEvents txtUser As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem32 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents TileViewColumn1 As DevExpress.XtraGrid.Columns.TileViewColumn
     Friend WithEvents grpAddNewComment As DevExpress.XtraLayout.LayoutControlGroup
@@ -1747,4 +1748,5 @@ Partial Public Class frmEdit
     Friend WithEvents LayoutViewCard1 As DevExpress.XtraGrid.Views.Layout.LayoutViewCard
     Friend WithEvents RepositoryItemLookUpEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
     Public WithEvents windowsUIButtonPanelMain As DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel
+    Friend WithEvents txtUser As DevExpress.XtraEditors.TextEdit
 End Class

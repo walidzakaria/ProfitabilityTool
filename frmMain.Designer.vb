@@ -216,13 +216,13 @@
         Me.btnExit.ImageOptions.Image = CType(resources.GetObject("btnExit.ImageOptions.Image"), System.Drawing.Image)
         Me.btnExit.ImageOptions.LargeImage = CType(resources.GetObject("btnExit.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
+        Me.btnExit.RibbonStyle = CType((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
         'beDateFrom
         '
         Me.beDateFrom.Caption = "Date From"
         Me.beDateFrom.Edit = Me.RepositoryItemDateEdit1
-        Me.beDateFrom.EditWidth = 80
+        Me.beDateFrom.EditWidth = 85
         Me.beDateFrom.Id = 11
         Me.beDateFrom.Name = "beDateFrom"
         '
@@ -237,7 +237,7 @@
         '
         Me.beDateTo.Caption = "Date To    "
         Me.beDateTo.Edit = Me.RepositoryItemDateEdit2
-        Me.beDateTo.EditWidth = 80
+        Me.beDateTo.EditWidth = 85
         Me.beDateTo.Id = 12
         Me.beDateTo.Name = "beDateTo"
         '
@@ -252,7 +252,7 @@
         '
         Me.beCountry.Caption = "Country    "
         Me.beCountry.Edit = Me.RepositoryItemLookUpEdit1
-        Me.beCountry.EditWidth = 79
+        Me.beCountry.EditWidth = 85
         Me.beCountry.Id = 13
         Me.beCountry.Name = "beCountry"
         '
@@ -865,8 +865,8 @@
         '
         'GridColumn39
         '
-        Me.GridColumn39.Caption = "DifferenceReason"
-        Me.GridColumn39.FieldName = "DifferenceReason"
+        Me.GridColumn39.Caption = "AdjustedPrice"
+        Me.GridColumn39.FieldName = "AdjustedPrice"
         Me.GridColumn39.Name = "GridColumn39"
         Me.GridColumn39.OptionsColumn.AllowEdit = False
         Me.GridColumn39.Visible = True

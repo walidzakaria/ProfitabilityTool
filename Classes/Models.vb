@@ -8,6 +8,8 @@ End Class
 Public Class Login
     Public Property LoginId() As Integer
     Public Property Username() As String
+    Public Property FullName() As String
+    Public Property Mail() As String
     Public Property Password() As String
     Public Property Authority() As String
     Public Property Active() As Boolean
@@ -41,8 +43,8 @@ Public Class Login
             Using dr As SqlDataReader = cmd.ExecuteReader
                 If dr.Read() Then
                     LoginId = dr(0)
-                    Authority = dr(3)
-                    Active = dr(4)
+                    Authority = dr(5)
+                    Active = dr(6)
                     result = True
                 End If
             End Using
@@ -69,9 +71,11 @@ Public Class Login
 
     Public Function Signup() As Boolean
         Dim result As Boolean = False
+        FullName = StrConv(FullName, VbStrConv.ProperCase)
+        Mail = Mail.ToLower
 
-        Dim query As String = String.Format("INSERT INTO Login (Username, Password, Authority, Active) VALUES ('{0}', '{1}', '{2}', {3});", _
-                                            Username, HashPassword(), Authority, CShort(Active))
+        Dim query As String = String.Format("INSERT INTO Login (Username, FullName, Mail, Password, Authority, Active) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', {5});", _
+                                            Username, FullName, Mail, HashPassword(), Authority, CShort(Active))
         result = ExClass.QuerySet(query) = "True"
 
         Return result
@@ -102,9 +106,32 @@ Public Class Login
 
         If dt.Rows.Count <> 0 Then
             Username = dt.Rows(0)(1)
-            Password = dt.Rows(0)(2)
-            Authority = dt.Rows(0)(3)
-            Active = dt.Rows(0)(4)
+            FullName = dt.Rows(0)(2)
+            Mail = dt.Rows(0)(3)
+            Password = dt.Rows(0)(4)
+            Authority = dt.Rows(0)(5)
+            Active = dt.Rows(0)(6)
+            result = True
+        End If
+
+        Return result
+
+    End Function
+
+    Public Function GetByUsername() As Boolean
+        Dim result As Boolean = False
+        Dim query As String = "SELECT * FROM Login WHERE Username = '" & Username & "';"
+        Dim dt As New DataTable()
+        dt = ExClass.QueryGet(query)
+
+        If dt.Rows.Count <> 0 Then
+            LoginId = dt.Rows(0)(0)
+            Username = dt.Rows(0)(1)
+            FullName = dt.Rows(0)(2)
+            Mail = dt.Rows(0)(3)
+            Password = dt.Rows(0)(4)
+            Authority = dt.Rows(0)(5)
+            Active = dt.Rows(0)(6)
             result = True
         End If
 
@@ -154,33 +181,33 @@ Public Class Booking
     Public Property ActionBy() As String
     Public Property Status() As String
     Public Property Comments() As String
-    Public Property DifferenceReason() As String
+    Public Property AdjustedPrice() As String
     Public Property PriceBreakdown() As String
     Public Property LoginID() As Integer
     Public Property Junk() As Boolean
 
-    Public Function CheckJunk() As Boolean
-        Dim result As Boolean = False
+    Public Function CheckJunk() As Short
+        Dim result As Short = 0
         Dim status As String = GwgStatus.ToLower
-        
+
         If status = "bna" Or status = "onr" Or status = "stp" Or MarginCheck.ToLower = "request" _
             Or MarginCheck.ToLower = "option" Or NetRateHotelTC < 1 Or HotelName.ToLower Like "*rundreise*" _
             Or HotelName.ToLower Like "*circuit*" Or HotelName.ToLower Like "*roulette*" Then
-            result = True
+            result = 1
         End If
 
         Return result
     End Function
 
-    Public Shared Function CheckJunk(ByVal gwgStatus As String, ByVal marginCheck As String, ByVal netRateHotelTc As Double, ByVal hotelName As String) As Boolean
-        Dim result As Boolean = False
+    Public Shared Function CheckJunk(ByVal gwgStatus As String, ByVal marginCheck As String, ByVal netRateHotelTc As Double, ByVal hotelName As String) As Short
+        Dim result As Short = 0
 
         Dim status As String = gwgStatus.ToLower
 
         If status = "bna" Or status = "onr" Or status = "stp" Or marginCheck.ToLower = "request" _
             Or marginCheck.ToLower = "option" Or netRateHotelTc < 1 Or hotelName.ToLower Like "*rundreise*" _
             Or hotelName.ToLower Like "*circuit*" Or hotelName.ToLower Like "*roulette*" Then
-            result = True
+            result = 1
         End If
 
         Return result
@@ -223,10 +250,6 @@ Public Class Booking
         sb.Append(MissingBookings)
         sb.Append(MarginCheck)
         sb.Append(DifferenceToPrice)
-        sb.Append(ActionBy)
-        sb.Append(Status)
-        sb.Append(Comments)
-        sb.Append(DifferenceReason)
         sb.Append(PriceBreakdown)
 
         Return sb.ToString.GetHashCode()
@@ -253,6 +276,8 @@ Public Class Booking
                 result = 2
             Case "BNA"
                 result = 3
+            Case "STP"
+                result = 4
             Case Else
                 result = -1
         End Select
@@ -262,8 +287,8 @@ Public Class Booking
         Dim query As String
         Dim result As Boolean = True
 
-        query = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}', '{36}', '{37}', '{38}', {39}, {40}; ", _
-                                     Reference, HotelCode, HotelName, CountryCode, GwgStatus, PurchaseCurrency, PurchasePrice, SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC, CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom, Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck, DifferenceToPrice, ActionBy, Status, Comments, DifferenceReason, PriceBreakdown, GV.CurrentUser.LoginId, CShort(CheckJunk()).ToString)
+        query = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}', '{36}', '{37}'; ", _
+                                     Reference, HotelCode, HotelName, CountryCode, GwgStatus, PurchaseCurrency, PurchasePrice, SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC, CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom, Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck, DifferenceToPrice, ActionBy, PriceBreakdown, GV.CurrentUser.LoginId, CheckJunk().ToString)
 
 
         Dim queryResult As String = ExClass.QuerySet(query)
@@ -277,7 +302,14 @@ Public Class Booking
 
     Public Function GetByID() As Boolean
         Dim result As Boolean = False
-        Dim query As String = "SELECT * FROM Booking WHERE BookingID = " & BookingID.ToString & ";"
+        Dim query As String = "SELECT BookingID, Reference, HotelCode, HotelName, HotelCountry, GwgStatus, PurchaseCurrency, PurchasePrice," _
+                              & " SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC," _
+                              & " CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom," _
+                              & " Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck," _
+                              & " DifferenceTOPrice, dbo.ActionBy(BookingID) AS ActionBy, dbo.LastStatus(BookingID) AS Status, dbo.LastComment(BookingID) AS Comments," _
+                              & " dbo.AdjustedPrice(BookingID) AS AdjustedPrice, PriceBreakdown, LoginID, Junk" _
+                              & " FROM Booking WHERE BookingID = " & BookingID.ToString & ";"
+
         Dim dt As New DataTable()
         dt = ExClass.QueryGet(query)
 
@@ -318,9 +350,16 @@ Public Class Booking
             MarginCheck = dt.Rows(0)(33)
             DifferenceToPrice = dt.Rows(0)(34)
             ActionBy = dt.Rows(0)(35)
-            Status = dt.Rows(0)(36)
-            Comments = dt.Rows(0)(37)
-            DifferenceReason = dt.Rows(0)(38)
+            If Not IsDBNull(dt.Rows(0)(36)) Then
+                Status = dt.Rows(0)(36)
+            End If
+            If Not IsDBNull(dt.Rows(0)(37)) Then
+                Comments = dt.Rows(0)(37)
+            End If
+            If Not IsDBNull(dt.Rows(0)(38)) Then
+                AdjustedPrice = dt.Rows(0)(38)
+            End If
+
             PriceBreakdown = dt.Rows(0)(39)
             LoginID = dt.Rows(0)(40)
             result = True
@@ -351,8 +390,12 @@ Public Class Comment
         Comment = Comment.Replace("'", "''")
         CommentDate = Now
         LoginID = GV.CurrentUser.LoginId
+        Dim calcText As String = Calculation.ToString
+        If Calculation = Nothing Then
+            calcText = "NULL"
+        End If
         query = String.Format("INSERT INTO Comment (Date, BookingID, Comment, Calculation, LoginID, Status) VALUES ('{0}', {1},'{2}', {3}, {4}, '{5}');", _
-                              CommentDate.ToString("MM/dd/yyyy HH:mm"), BookingID, Comment, Calculation, LoginID, Status)
+                              CommentDate.ToString("MM/dd/yyyy HH:mm"), BookingID, Comment, calcText, LoginID, Status)
 
 
         Dim queryResult As String = ExClass.QuerySet(query)
@@ -369,10 +412,14 @@ Public Class Comment
         Comment = Comment.Replace("'", "''")
         CommentDate = Now
         LoginID = GV.CurrentUser.LoginId
+        Dim calcText As String = Calculation
+        If Calculation = Nothing Then
+            calcText = "NULL"
+        End If
         Dim query As String = "INSERT INTO Comment (Date, BookingID, Comment, Calculation, LoginID, Status) VALUES "
         For x As Integer = 0 To bookingsList.Count - 1
             query &= String.Format("('{0}', {1},'{2}', {3}, {4}, '{5}'), ", _
-                                   CommentDate.ToString("MM/dd/yyyy HH:mm"), bookingsList(x).ToString, Comment, Calculation, LoginID, Status)
+                                   CommentDate.ToString("MM/dd/yyyy HH:mm"), bookingsList(x).ToString, Comment, calcText, LoginID, Status)
         Next
         query = query.Substring(0, Len(query) - 2)
 
