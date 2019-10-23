@@ -116,7 +116,7 @@
         Me.GridColumn39 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn40 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RibbonPageGroup6 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.SplashScreenManager1 = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.MarginProfitability.WaitForm1), True, True)
+        Me.SplashScreenManager1 = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.ProfitabilityTool.WaitForm1), True, True)
         Me.BarSubItem1 = New DevExpress.XtraBars.BarSubItem()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).BeginInit()

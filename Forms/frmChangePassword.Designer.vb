@@ -149,7 +149,7 @@ Partial Class frmChangePassword
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmChangePassword"
         Me.ShowMode = DevExpress.XtraSplashScreen.ShowMode.Image
-        Me.SplashImage = Global.MarginProfitability.My.Resources.Resources.Sign_up
+        Me.SplashImage = Global.ProfitabilityTool.My.Resources.Resources.Sign_up
         Me.Text = "Login"
         CType(Me.txtNewPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtOldPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()

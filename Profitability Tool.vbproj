@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C89EC0CC-F13E-448F-AE2A-11CE34A40718}</ProjectGuid>
+    <ProjectGuid>{9EA76985-7AA0-4804-BAE4-FE037D03B837}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MarginProfitability</RootNamespace>
-    <AssemblyName>MarginProfitability</AssemblyName>
+    <RootNamespace>ProfitabilityTool</RootNamespace>
+    <AssemblyName>Profitability Tool</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <OptionExplicit>On</OptionExplicit>
@@ -39,7 +39,7 @@
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>MarginProfitability.My.MyApplication</StartupObject>
+    <StartupObject>ProfitabilityTool.My.MyApplication</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>logo.ico</ApplicationIcon>
