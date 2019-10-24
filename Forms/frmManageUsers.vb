@@ -4,7 +4,6 @@ Imports DevExpress.XtraBars
 Imports DevExpress.XtraEditors
 
 Public Class frmManageUsers
-    Dim usersCache As String
 
     Private Sub LoadAuthorityOptions()
         Dim dt As New DataTable()
@@ -39,72 +38,35 @@ Public Class frmManageUsers
         ElseIf e.Button.Properties.Caption = "Reset" Then
             ResetUser()
         ElseIf e.Button.Properties.Caption = "New" Then
+            frmAddUser.userId = 0
             frmAddUser.ShowDialog()
             If frmAddUser.DialogResult = Windows.Forms.DialogResult.OK Then
                 LoadAllUsers()
             End If
-        ElseIf e.Button.Properties.Caption = "Save" Then
-            UpdateUsers()
-            LoadAllUsers()
-        End If
-    End Sub
-    Private Sub frmManageAllUsers_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        If usersCache <> "" Then
-            Dim diaResult As DialogResult
-            diaResult = MessageBox.Show("Want to save changes?", "Save", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
-            If diaResult = Windows.Forms.DialogResult.Yes Then
-                UpdateUsers()
-            ElseIf diaResult = Windows.Forms.DialogResult.Cancel Then
-                e.Cancel = True
-            End If
+        ElseIf e.Button.Properties.Caption = "Edit" Then
+            EditUser()
+        ElseIf e.Button.Properties.Caption = "Options" Then
+
         End If
     End Sub
 
+    Private Sub EditUser()
+        If IsDBNull(gridView.GetFocusedRowCellValue("LoginID")) Then
+            Exit Sub
+        End If
+        Dim loginId As Integer = gridView.GetFocusedRowCellValue("LoginID")
+        frmAddUser.userId = loginId
+        frmAddUser.ShowDialog()
+        If frmAddUser.DialogResult = Windows.Forms.DialogResult.OK Then
+            LoadAllUsers()
+        End If
+    End Sub
     Private Sub frmManageAllUsers_Load(sender As Object, e As EventArgs) Handles Me.Load
         frmMain.Wait(True)
         LoadAuthorityOptions()
         LoadAllUsers()
-        usersCache = ""
+
         frmMain.Wait(False)
-    End Sub
-
-    Private Sub gridView_RowUpdated(sender As Object, e As DevExpress.XtraGrid.Views.Base.RowObjectEventArgs) Handles gridView.RowUpdated
-        UpdateCache()
-    End Sub
-
-    Private Sub UpdateCache()
-        Dim loginID As Integer
-        Dim username, fullName, email, authority As String
-        Dim active As Short
-        gridView.ValidateEditor()
-        'gridView.UpdateCurrentRow()
-        loginID = gridView.GetFocusedRowCellValue("LoginID")
-        username = gridView.GetFocusedRowCellValue("Username")
-        fullName = gridView.GetFocusedRowCellValue("FullName")
-        email = gridView.GetFocusedRowCellValue("Mail").ToString.ToLower
-        email = StrConv(email, VbStrConv.ProperCase)
-        authority = gridView.GetFocusedRowCellValue("Authority")
-        active = gridView.GetFocusedRowCellValue("Active")
-        usersCache &= String.Format("UPDATE Login SET Username = '{0}', FullName = '{1}', Mail = '{2}', Authority = '{3}', Active = {4} WHERE LoginID = {5}; ", _
-                                     username, fullName, email, authority, active, loginID)
-
-    End Sub
-
-    Private Sub UpdateUsers()
-        gridView.PostEditor()
-        UpdateCache()
-        If usersCache <> "" Then
-            frmMain.Wait(True)
-            Dim result As String
-            result = ExClass.QuerySet(usersCache)
-            If result <> "True" Then
-                frmMain.Wait(False)
-                MsgBox(result)
-            End If
-            usersCache = ""
-            frmMain.Wait(False)
-        End If
-
     End Sub
 
     Private Sub ResetUser()
@@ -126,5 +88,15 @@ Public Class frmManageUsers
             End If
         End If
 
+    End Sub
+
+    Private Sub gridView_DoubleClick(sender As Object, e As EventArgs) Handles gridView.DoubleClick
+        EditUser()
+    End Sub
+
+    Private Sub gridView_KeyDown(sender As Object, e As KeyEventArgs) Handles gridView.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            EditUser()
+        End If
     End Sub
 End Class

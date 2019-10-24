@@ -26,9 +26,11 @@ Partial Public Class frmAddUser
     '''
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule5 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
+        Dim ConditionValidationRule4 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim CompareAgainstControlValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.CompareAgainstControlValidationRule = New DevExpress.XtraEditors.DXErrorProvider.CompareAgainstControlValidationRule()
         Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
@@ -49,6 +51,9 @@ Partial Public Class frmAddUser
         Me.windowsUIButtonPanelMain = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
+        Me.rgActive = New DevExpress.XtraEditors.RadioGroup()
+        Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.DxValidationProvider2 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dataLayoutControl1.SuspendLayout()
@@ -65,6 +70,9 @@ Partial Public Class frmAddUser
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rgActive.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DxValidationProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtPassword
@@ -75,9 +83,9 @@ Partial Public Class frmAddUser
         Me.txtPassword.Size = New System.Drawing.Size(272, 20)
         Me.txtPassword.StyleController = Me.dataLayoutControl1
         Me.txtPassword.TabIndex = 7
-        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule3.ErrorText = "This value is not valid"
-        Me.DxValidationProvider1.SetValidationRule(Me.txtPassword, ConditionValidationRule3)
+        ConditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule5.ErrorText = "This value is not valid"
+        Me.DxValidationProvider1.SetValidationRule(Me.txtPassword, ConditionValidationRule5)
         '
         'dataLayoutControl1
         '
@@ -88,11 +96,12 @@ Partial Public Class frmAddUser
         Me.dataLayoutControl1.Controls.Add(Me.txtEmail)
         Me.dataLayoutControl1.Controls.Add(Me.txtPassword)
         Me.dataLayoutControl1.Controls.Add(Me.txtRetype)
+        Me.dataLayoutControl1.Controls.Add(Me.rgActive)
         Me.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataLayoutControl1.Location = New System.Drawing.Point(0, 30)
         Me.dataLayoutControl1.Name = "dataLayoutControl1"
         Me.dataLayoutControl1.Root = Me.layoutControlGroup1
-        Me.dataLayoutControl1.Size = New System.Drawing.Size(351, 184)
+        Me.dataLayoutControl1.Size = New System.Drawing.Size(351, 207)
         Me.dataLayoutControl1.TabIndex = 0
         '
         'rgAuthority
@@ -117,6 +126,9 @@ Partial Public Class frmAddUser
         ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
         ConditionValidationRule1.ErrorText = "This value is not valid"
         Me.DxValidationProvider1.SetValidationRule(Me.txtUsername, ConditionValidationRule1)
+        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule2.ErrorText = "This value is not valid"
+        Me.DxValidationProvider2.SetValidationRule(Me.txtUsername, ConditionValidationRule2)
         '
         'txtFullName
         '
@@ -125,9 +137,12 @@ Partial Public Class frmAddUser
         Me.txtFullName.Size = New System.Drawing.Size(272, 20)
         Me.txtFullName.StyleController = Me.dataLayoutControl1
         Me.txtFullName.TabIndex = 5
-        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule2.ErrorText = "This value is not valid"
-        Me.DxValidationProvider1.SetValidationRule(Me.txtFullName, ConditionValidationRule2)
+        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule3.ErrorText = "This value is not valid"
+        Me.DxValidationProvider1.SetValidationRule(Me.txtFullName, ConditionValidationRule3)
+        ConditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule4.ErrorText = "This value is not valid"
+        Me.DxValidationProvider2.SetValidationRule(Me.txtFullName, ConditionValidationRule4)
         '
         'txtEmail
         '
@@ -156,10 +171,10 @@ Partial Public Class frmAddUser
         '
         Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.layoutControlGroup1.GroupBordersVisible = False
-        Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem6})
+        Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7})
         Me.layoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.layoutControlGroup1.Name = "Root"
-        Me.layoutControlGroup1.Size = New System.Drawing.Size(351, 184)
+        Me.layoutControlGroup1.Size = New System.Drawing.Size(351, 207)
         Me.layoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem1
@@ -212,8 +227,8 @@ Partial Public Class frmAddUser
         Me.LayoutControlItem6.Control = Me.rgAuthority
         Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 120)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(331, 44)
-        Me.LayoutControlItem6.Text = "Authority:"
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(331, 32)
+        Me.LayoutControlItem6.Text = "Status:"
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(52, 13)
         '
         'windowsUIButtonPanelMain
@@ -239,7 +254,7 @@ Partial Public Class frmAddUser
         Me.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.windowsUIButtonPanelMain.EnableImageTransparency = True
         Me.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
-        Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(0, 214)
+        Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(0, 237)
         Me.windowsUIButtonPanelMain.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.windowsUIButtonPanelMain.MaximumSize = New System.Drawing.Size(0, 60)
         Me.windowsUIButtonPanelMain.MinimumSize = New System.Drawing.Size(60, 60)
@@ -267,6 +282,27 @@ Partial Public Class frmAddUser
         Me.labelControl.TabIndex = 1
         Me.labelControl.Text = "New User"
         '
+        'rgActive
+        '
+        Me.rgActive.EditValue = True
+        Me.rgActive.Location = New System.Drawing.Point(67, 164)
+        Me.rgActive.MaximumSize = New System.Drawing.Size(0, 28)
+        Me.rgActive.Name = "rgActive"
+        Me.rgActive.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem(True, "Yes", True, True), New DevExpress.XtraEditors.Controls.RadioGroupItem(False, "No", True, False)})
+        Me.rgActive.Size = New System.Drawing.Size(272, 28)
+        Me.rgActive.StyleController = Me.dataLayoutControl1
+        Me.rgActive.TabIndex = 20
+        '
+        'LayoutControlItem7
+        '
+        Me.LayoutControlItem7.Control = Me.rgActive
+        Me.LayoutControlItem7.CustomizationFormText = "Authority:"
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 152)
+        Me.LayoutControlItem7.Name = "LayoutControlItem7"
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(331, 35)
+        Me.LayoutControlItem7.Text = "Active:"
+        Me.LayoutControlItem7.TextSize = New System.Drawing.Size(52, 13)
+        '
         'frmAddUser
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
@@ -274,7 +310,7 @@ Partial Public Class frmAddUser
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(351, 274)
+        Me.ClientSize = New System.Drawing.Size(351, 297)
         Me.Controls.Add(Me.dataLayoutControl1)
         Me.Controls.Add(Me.labelControl)
         Me.Controls.Add(Me.windowsUIButtonPanelMain)
@@ -299,6 +335,9 @@ Partial Public Class frmAddUser
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rgActive.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DxValidationProvider2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -322,4 +361,7 @@ Partial Public Class frmAddUser
     Friend WithEvents LayoutControlItem5 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents rgAuthority As DevExpress.XtraEditors.RadioGroup
     Friend WithEvents LayoutControlItem6 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents rgActive As DevExpress.XtraEditors.RadioGroup
+    Friend WithEvents LayoutControlItem7 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents DxValidationProvider2 As DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider
 End Class

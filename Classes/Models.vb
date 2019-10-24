@@ -64,7 +64,7 @@ Public Class Login
 
     Public Function UniqueUsername() As Boolean
         Dim result As Boolean = True
-        Dim query As String = "SELECT COUNT(*) FROM Login WHERE Username = '" & Username & "';"
+        Dim query As String = "SELECT COUNT(*) FROM Login WHERE Username = '" & Username & "' AND LoginID != " & LoginId.ToString & ";"
         Dim dt As New DataTable()
         dt = ExClass.QueryGet(query)
 
@@ -83,6 +83,19 @@ Public Class Login
 
         Dim query As String = String.Format("INSERT INTO Login (Username, FullName, Mail, Password, Authority, Active) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', {5});", _
                                             Username, FullName, Mail, HashPassword(), Authority, CShort(Active))
+        result = ExClass.QuerySet(query) = "True"
+
+        Return result
+    End Function
+
+    Public Function Update() As Boolean
+        Dim result As Boolean = False
+        FullName = StrConv(FullName, VbStrConv.ProperCase)
+        Mail = Mail.ToLower
+
+        Dim query As String = String.Format("UPDATE Login SET Username = '{0}', FullName = '{1}', Mail = '{2}', Authority = '{3}', Active = {4} WHERE LoginID = {5}", _
+                                            Username, FullName, Mail, Authority, CShort(Active), LoginId.ToString)
+
         result = ExClass.QuerySet(query) = "True"
 
         Return result
