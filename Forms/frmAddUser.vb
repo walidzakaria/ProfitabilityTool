@@ -27,6 +27,18 @@
         LayoutControlItem5.Enabled = False
 
     End Sub
+
+    Private Sub frmAddUser_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.DialogResult = Windows.Forms.DialogResult.Cancel
+        ElseIf e.Control And e.KeyCode = Keys.S Then
+            If userId = 0 Then
+                AddUser()
+            Else
+                UpdateUser()
+            End If
+        End If
+    End Sub
     Private Sub frmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Clear()
 

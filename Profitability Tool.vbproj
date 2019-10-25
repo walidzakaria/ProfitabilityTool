@@ -189,6 +189,12 @@
     <Compile Include="Forms\frmManageTourOperator.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frmUserSettings.Designer.vb">
+      <DependentUpon>frmUserSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmManageTourOperator.resx">
       <DependentUpon>frmManageTourOperator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserSettings.resx">
+      <DependentUpon>frmUserSettings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>

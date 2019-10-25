@@ -46,7 +46,12 @@ Public Class frmManageUsers
         ElseIf e.Button.Properties.Caption = "Edit" Then
             EditUser()
         ElseIf e.Button.Properties.Caption = "Options" Then
-
+            If IsDBNull(gridView.GetFocusedRowCellValue("LoginID")) Then
+                Exit Sub
+            End If
+            Dim loginId As Integer = gridView.GetFocusedRowCellValue("LoginID")
+            frmUserSettings.userId = loginId
+            frmUserSettings.ShowDialog()
         End If
     End Sub
 
