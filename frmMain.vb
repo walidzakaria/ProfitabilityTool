@@ -540,4 +540,8 @@ Partial Public Class frmMain
     Private Sub btnTO_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnTO.ItemClick
         frmManageTourOperator.ShowDialog()
     End Sub
+
+    Private Sub btnManageCurrency_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageCurrency.ItemClick
+        frmCurrency.ShowDialog()
+    End Sub
 End Class

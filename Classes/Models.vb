@@ -643,3 +643,70 @@ Public Class Margin
         Return result
     End Function
 End Class
+
+Public Class Currency
+    Public Property CurrencyId() As Integer
+    Public Property Currency() As String
+    Public Property Rate() As Decimal
+    Public Property EffectiveDate() As Date
+    Public Property LoginID() As Integer
+    Public Property TimeAdded() As DateTime
+
+
+    Public Function SaveCurrency() As Boolean
+        Dim result As Boolean = False
+        Dim queryResult As String
+        Dim query As String
+        If CurrencyId = 0 Then
+            query = String.Format("INSERT INTO Exchange (Currency, Rate, EffectiveDate, LoginID) " _
+                                  & "VALUES ('{0}', {1}, '{2}', {3});", _
+                                  Currency.ToUpper, Rate.ToString, EffectiveDate.ToString("MM/dd/yyyy"), LoginID.ToString)
+        Else
+            query = String.Format("UPDATE Exchange SET Currency = '{0}', Rate = {1}, EffectiveDate = '{2}', LoginID = {3}" _
+                                  & " WHERE ExchangeID = {4};", _
+                                  Currency.ToUpper, Rate.ToString, EffectiveDate.ToString("MM/dd/yyyy"), LoginID.ToString, CurrencyId.ToString)
+        End If
+
+        queryResult = ExClass.QuerySet(query)
+        If queryResult = "True" Then
+            result = True
+        Else
+            MsgBox(queryResult)
+        End If
+
+        Return result
+    End Function
+
+    Public Function GetById() As Boolean
+        Dim result As Boolean = False
+        Dim query As String = "SELECT * FROM Exchange WHERE ExchangeID = " & CurrencyId.ToString & ";"
+        Dim dt As New DataTable()
+        dt = ExClass.QueryGet(query)
+
+        If dt.Rows.Count <> 0 Then
+            CurrencyId = dt.Rows(0)(0)
+            Currency = dt.Rows(0)(1)
+            Rate = dt.Rows(0)(2)
+            EffectiveDate = dt.Rows(0)(3)
+            LoginID = dt.Rows(0)(4)
+            result = True
+        End If
+
+        Return result
+
+    End Function
+
+    Public Function DeleteById() As Boolean
+        Dim result As Boolean = False
+        Dim query As String = "DELETE FROM Exchange WHERE ExchangeID = " & CurrencyId.ToString & ";"
+        Dim messageResult As String
+        messageResult = ExClass.QuerySet(query)
+        If messageResult = "True" Then
+            result = True
+        Else
+            MsgBox(messageResult)
+        End If
+
+        Return result
+    End Function
+End Class

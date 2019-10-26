@@ -64,6 +64,7 @@
         Me.bhLogginTime = New DevExpress.XtraBars.BarHeaderItem()
         Me.BarHeaderItem1 = New DevExpress.XtraBars.BarHeaderItem()
         Me.BarButtonGroup1 = New DevExpress.XtraBars.BarButtonGroup()
+        Me.btnManageCurrency = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -136,9 +137,9 @@
         Me.RibbonControl1.AllowMinimizeRibbon = False
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
         Me.RibbonControl1.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.btnRate, Me.btnSave, Me.btnLoad, Me.btnSwitchUser, Me.btnManageUsers, Me.btnAddNewUser, Me.btnChangePassword, Me.btnExit, Me.beDateFrom, Me.beDateTo, Me.beCountry, Me.btnDestination, Me.btnManageMargin, Me.btnJunk, Me.brnCanceled, Me.btnMatching, Me.bcNegative, Me.bcExcessive, Me.bcMismatch, Me.btnShowDefict, Me.bcPendingDmc, Me.bcFixedDmc, Me.bcPendingTo, Me.bcFixedTo, Me.btnShow, Me.bcNewRecord, Me.btnAddDispute, Me.btnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.btnRate, Me.btnSave, Me.btnLoad, Me.btnSwitchUser, Me.btnManageUsers, Me.btnAddNewUser, Me.btnChangePassword, Me.btnExit, Me.beDateFrom, Me.beDateTo, Me.beCountry, Me.btnDestination, Me.btnManageMargin, Me.btnJunk, Me.brnCanceled, Me.btnMatching, Me.bcNegative, Me.bcExcessive, Me.bcMismatch, Me.btnShowDefict, Me.bcPendingDmc, Me.bcFixedDmc, Me.bcPendingTo, Me.bcFixedTo, Me.btnShow, Me.bcNewRecord, Me.btnAddDispute, Me.btnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.btnManageCurrency})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl1.MaxItemId = 41
+        Me.RibbonControl1.MaxItemId = 42
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2, Me.RepositoryItemLookUpEdit2})
@@ -470,6 +471,14 @@
         Me.BarButtonGroup1.Id = 38
         Me.BarButtonGroup1.Name = "BarButtonGroup1"
         '
+        'btnManageCurrency
+        '
+        Me.btnManageCurrency.Caption = "Currency"
+        Me.btnManageCurrency.Id = 41
+        Me.btnManageCurrency.ImageOptions.Image = CType(resources.GetObject("btnManageCurrency.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnManageCurrency.Name = "btnManageCurrency"
+        Me.btnManageCurrency.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2, Me.RibbonPageGroup5, Me.RibbonPageGroup7, Me.RibbonPageGroup3, Me.RibbonPageGroup4})
@@ -521,6 +530,7 @@
         '
         'RibbonPageGroup3
         '
+        Me.RibbonPageGroup3.Glyph = CType(resources.GetObject("RibbonPageGroup3.Glyph"), System.Drawing.Image)
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnSwitchUser)
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnChangePassword)
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageUsers)
@@ -528,6 +538,7 @@
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnDestination)
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnTO)
         Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageMargin)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageCurrency)
         Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
         Me.RibbonPageGroup3.ShowCaptionButton = False
         Me.RibbonPageGroup3.Text = "Administration"
@@ -1102,5 +1113,6 @@
     Public WithEvents bhLogginTime As DevExpress.XtraBars.BarHeaderItem
     Friend WithEvents BarHeaderItem1 As DevExpress.XtraBars.BarHeaderItem
     Friend WithEvents BarButtonGroup1 As DevExpress.XtraBars.BarButtonGroup
+    Friend WithEvents btnManageCurrency As DevExpress.XtraBars.BarButtonItem
 
 End Class

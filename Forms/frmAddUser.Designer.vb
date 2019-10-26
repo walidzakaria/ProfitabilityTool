@@ -41,6 +41,7 @@ Partial Public Class frmAddUser
         Me.txtFullName = New DevExpress.XtraEditors.TextEdit()
         Me.txtEmail = New DevExpress.XtraEditors.TextEdit()
         Me.txtRetype = New DevExpress.XtraEditors.TextEdit()
+        Me.rgActive = New DevExpress.XtraEditors.RadioGroup()
         Me.layoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -48,11 +49,10 @@ Partial Public Class frmAddUser
         Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem5 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.windowsUIButtonPanelMain = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
-        Me.rgActive = New DevExpress.XtraEditors.RadioGroup()
-        Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.DxValidationProvider2 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,6 +62,7 @@ Partial Public Class frmAddUser
         CType(Me.txtFullName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtEmail.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtRetype.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rgActive.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,9 +70,8 @@ Partial Public Class frmAddUser
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.rgActive.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DxValidationProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -167,6 +167,17 @@ Partial Public Class frmAddUser
         CompareAgainstControlValidationRule1.ErrorText = "Password doesn't match"
         Me.DxValidationProvider1.SetValidationRule(Me.txtRetype, CompareAgainstControlValidationRule1)
         '
+        'rgActive
+        '
+        Me.rgActive.EditValue = True
+        Me.rgActive.Location = New System.Drawing.Point(67, 164)
+        Me.rgActive.MaximumSize = New System.Drawing.Size(0, 28)
+        Me.rgActive.Name = "rgActive"
+        Me.rgActive.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem(True, "Yes", True, True), New DevExpress.XtraEditors.Controls.RadioGroupItem(False, "No", True, False)})
+        Me.rgActive.Size = New System.Drawing.Size(272, 28)
+        Me.rgActive.StyleController = Me.dataLayoutControl1
+        Me.rgActive.TabIndex = 20
+        '
         'layoutControlGroup1
         '
         Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
@@ -231,6 +242,16 @@ Partial Public Class frmAddUser
         Me.LayoutControlItem6.Text = "Status:"
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(52, 13)
         '
+        'LayoutControlItem7
+        '
+        Me.LayoutControlItem7.Control = Me.rgActive
+        Me.LayoutControlItem7.CustomizationFormText = "Authority:"
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 152)
+        Me.LayoutControlItem7.Name = "LayoutControlItem7"
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(331, 35)
+        Me.LayoutControlItem7.Text = "Active:"
+        Me.LayoutControlItem7.TextSize = New System.Drawing.Size(52, 13)
+        '
         'windowsUIButtonPanelMain
         '
         Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
@@ -282,27 +303,6 @@ Partial Public Class frmAddUser
         Me.labelControl.TabIndex = 1
         Me.labelControl.Text = "New User"
         '
-        'rgActive
-        '
-        Me.rgActive.EditValue = True
-        Me.rgActive.Location = New System.Drawing.Point(67, 164)
-        Me.rgActive.MaximumSize = New System.Drawing.Size(0, 28)
-        Me.rgActive.Name = "rgActive"
-        Me.rgActive.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem(True, "Yes", True, True), New DevExpress.XtraEditors.Controls.RadioGroupItem(False, "No", True, False)})
-        Me.rgActive.Size = New System.Drawing.Size(272, 28)
-        Me.rgActive.StyleController = Me.dataLayoutControl1
-        Me.rgActive.TabIndex = 20
-        '
-        'LayoutControlItem7
-        '
-        Me.LayoutControlItem7.Control = Me.rgActive
-        Me.LayoutControlItem7.CustomizationFormText = "Authority:"
-        Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 152)
-        Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(331, 35)
-        Me.LayoutControlItem7.Text = "Active:"
-        Me.LayoutControlItem7.TextSize = New System.Drawing.Size(52, 13)
-        '
         'frmAddUser
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
@@ -327,6 +327,7 @@ Partial Public Class frmAddUser
         CType(Me.txtFullName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtEmail.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtRetype.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rgActive.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -334,9 +335,8 @@ Partial Public Class frmAddUser
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.rgActive.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DxValidationProvider2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
