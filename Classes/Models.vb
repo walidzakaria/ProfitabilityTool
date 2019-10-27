@@ -13,6 +13,8 @@ Public Class Login
     Public Property Password() As String
     Public Property Authority() As String
     Public Property Active() As Boolean
+    Public Property UserDestinations() As List(Of Destination)
+    Public Property UserOperators() As String
 
     Public Function HashPassword() As Integer
         Return Password.GetHashCode()
@@ -57,7 +59,8 @@ Public Class Login
             End Using
             ExClass.myConn.Close()
         End Using
-
+        GetUserDestinations()
+        GetUserOperators()
 
         Return result
     End Function
@@ -158,6 +161,54 @@ Public Class Login
         Return result
 
     End Function
+
+    Public Sub GetUserDestinations()
+        Dim result As New List(Of Destination)
+
+        Dim query As String = "SELECT Destination.*" _
+                              & " FROM UserDestination, Destination" _
+                              & " WHERE UserDestination.DestinationID = Destination.DestinationId" _
+                              & " AND UserID = " & LoginId.ToString & ";"
+        Dim dt As New DataTable()
+        dt = ExClass.QueryGet(query)
+        Dim tempDestination As New Destination()
+        For x = 0 To dt.Rows.Count - 1
+            tempDestination = New Destination()
+            tempDestination.DestinationId = dt.Rows(x)(0)
+            tempDestination.DestinationCode = dt.Rows(x)(1)
+            tempDestination.Destination = dt.Rows(x)(2)
+            result.Add(tempDestination)
+        Next
+
+        UserDestinations = result
+    End Sub
+
+    Public Sub GetUserOperators()
+        Dim operators As New List(Of String)
+
+        Dim query As String = "SELECT TourOperator.*" _
+                              & " FROM UserOperator, TourOperator" _
+                              & " WHERE UserOperator.TourOperatorID = TourOperator.TourOperatorID" _
+                              & " AND UserID = " & LoginId.ToString & ";"
+        Dim dt As New DataTable()
+        dt = ExClass.QueryGet(query)
+        Dim tempOperator As String
+        For x = 0 To dt.Rows.Count - 1
+            tempOperator = dt.Rows(x)(1)
+            operators.Add(tempOperator)
+        Next
+
+        Dim result As String = ""
+        For x As Integer = 0 To operators.Count - 1
+            result &= String.Format("'{0}', ", operators(x))
+        Next
+        If operators.Count <> 0 Then
+            result = result.Substring(0, Len(result) - 2)
+            result = String.Format("({0})", result)
+        End If
+        UserOperators = result
+    End Sub
+
 End Class
 
 

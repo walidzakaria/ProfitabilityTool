@@ -26,6 +26,7 @@
                     lblLoading.Visible = True
                     Application.DoEvents()
                     GV.CurrentUser = user
+                    frmMain.FillRibbonDestinations()
                     frmMain.bhUsername.Caption = String.Format("<b><color=0, 0, 255>{0}</color></b>", GV.CurrentUser.Username)
                     frmMain.biLoginTime.Caption = String.Format("Login time: <b><color=0, 0, 255>{0}</color></b>", Now.ToString("HH:mm"))
 

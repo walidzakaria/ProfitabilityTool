@@ -29,9 +29,24 @@ Partial Public Class frmMain
     End Sub
 
     Public Sub FillRibbonDestinations()
-        Dim query As String = "SELECT * FROM Destination ORDER BY Destination;"
         Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
+        If GV.CurrentUser.Authority = "DEVELOPER" Then
+            Dim query As String = "SELECT * FROM Destination ORDER BY Destination;"
+            dt = ExClass.QueryGet(query)
+        Else
+            dt.Columns.Add("DestinationID")
+            dt.Columns.Add("DestinationCode")
+            dt.Columns.Add("Destination")
+            Dim destination As New Destination()
+            With GV.CurrentUser
+                For x = 0 To .UserDestinations.Count - 1
+                    destination = New Destination()
+                    destination = .UserDestinations(x)
+                    dt.Rows.Add({destination.DestinationId, destination.DestinationCode, destination.Destination})
+                Next
+            End With
+        End If
+        
         RepositoryItemLookUpEdit1.DataSource = Nothing
         RepositoryItemLookUpEdit1.DataSource = dt
         RepositoryItemLookUpEdit1.ValueMember = "DestinationCode"
@@ -104,13 +119,25 @@ Partial Public Class frmMain
         result.Columns.Add("LoginIID")
 
         Dim lineText As String
-
+        Dim formatError As Boolean = False
+        Dim errorMessage As String = ""
         For x = 0 To txtBox.Lines.Count - 1
-            lineText = "0$;&" & txtBox.Lines(x)
-            lineArray = Split(lineText, "$;&")
-            result.Rows.Add(lineArray)
-        Next
+            Try
+                lineText = "0$;&" & txtBox.Lines(x)
+                lineArray = Split(lineText, "$;&")
+                result.Rows.Add(lineArray)
+            Catch ex As Exception
+                errorMessage = ex.ToString
+                formatError = True
+                Exit For
+            End Try
 
+        Next
+        If formatError Then
+            result = Nothing
+            Wait(False)
+            MsgBox(errorMessage)
+        End If
         Return result
     End Function
 
@@ -338,8 +365,8 @@ Partial Public Class frmMain
 
 
         Dim query As String = String.Format("{0}" _
-                              & " WHERE HotelCountry = '{1}' AND TravelDate BETWEEN '{2}' AND '{3}' {4};", querySelect, destination, _
-                              startDate.ToString("MM/dd/yyyy"), endDate.ToString("MM/dd/yyyy"), status)
+                              & " WHERE HotelCountry = '{1}' AND (TravelDate BETWEEN '{2}' AND '{3}') AND CompanyGroup IN {4} {5};", querySelect, destination, _
+                              startDate.ToString("MM/dd/yyyy"), endDate.ToString("MM/dd/yyyy"), GV.CurrentUser.UserOperators, status)
 
 
         BookingDT = ExClass.QueryGet(query)
@@ -390,12 +417,16 @@ Partial Public Class frmMain
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        FillRibbonDestinations()
+
         beDateFrom.EditValue = My.Settings.RibbonDateFrom
         beDateTo.EditValue = Today().AddYears(3)
 
         If My.Settings.Destination <> "" Then
-            beCountry.EditValue = My.Settings.Destination
+            Try
+                beCountry.EditValue = My.Settings.Destination
+            Catch ex As Exception
+
+            End Try
         End If
 
         frmLogin.Close()
