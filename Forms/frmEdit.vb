@@ -118,6 +118,20 @@ Partial Public Class frmEdit
             txtIncomingAgency.EditValue = .IncomingAgency
             txtBookingStateDesc.EditValue = .BookingStateDesc
             txtUser.EditValue = .Username().Username
+
+            'show log data
+            txtPurchaseEUR.EditValue = .PurchaseEUR
+            txtSalesEUR.EditValue = .SalesEUR
+            txtMarginEUR.EditValue = .MarginEUR
+            txtNetRateEUR.EditValue = .NetRateEUR
+            txtDifferenceEUR.EditValue = .DifferenceEUR
+            If .Junk Then txtJunk.EditValue = "YES" Else txtJunk.EditValue = "NO"
+            If .Cancelled Then txtCancelled.EditValue = "YES" Else txtCancelled.EditValue = "NO"
+            If .Excessive Then txtExcessive.EditValue = "YES" Else txtExcessive.EditValue = "NO"
+            If .Mismatch Then txtMismatching.EditValue = "YES" Else txtMismatching.EditValue = "NO"
+            If .WithError Then txtError.EditValue = "YES" Else txtError.EditValue = "NO"
+            If .Negative Then txtNegative.EditValue = "YES" Else txtNegative.EditValue = "NO"
+
         End With
 
     End Sub
@@ -166,9 +180,7 @@ Partial Public Class frmEdit
 
     Private Sub frmEdit_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.Control And e.KeyCode = Keys.S Then
-            If currentBooking.Save() Then
-                UpdateChangedRow()
-            End If
+            SaveCurrent()
         ElseIf e.KeyCode = Keys.Escape Then
             Me.Close()
         End If
@@ -212,15 +224,20 @@ Partial Public Class frmEdit
         GridControl1.DataSource = dt
 
     End Sub
+
+    Private Sub SaveCurrent()
+        frmMain.Wait(True)
+        UpdateBooking()
+        If currentBooking.Save() Then
+            currentBooking = GetDataSource(bookingId)
+            ShowBooking()
+            UpdateChangedRow()
+        End If
+        frmMain.Wait(False)
+    End Sub
     Private Sub windowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
-            frmMain.Wait(True)
-            UpdateBooking()
-            If currentBooking.Save() Then
-                UpdateChangedRow()
-                ShowBooking()
-            End If
-            frmMain.Wait(False)
+            SaveCurrent()
         ElseIf e.Button.Properties.Caption = "Reset Changes" Then
             frmMain.Wait(True)
             currentBooking = GetDataSource(bookingId)

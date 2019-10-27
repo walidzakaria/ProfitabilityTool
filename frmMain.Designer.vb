@@ -119,6 +119,7 @@
         Me.RibbonPageGroup6 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.SplashScreenManager1 = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.ProfitabilityTool.WaitForm1), True, True)
         Me.BarSubItem1 = New DevExpress.XtraBars.BarSubItem()
+        Me.btnErrors = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -137,9 +138,9 @@
         Me.RibbonControl1.AllowMinimizeRibbon = False
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
         Me.RibbonControl1.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.btnRate, Me.btnSave, Me.btnLoad, Me.btnSwitchUser, Me.btnManageUsers, Me.btnAddNewUser, Me.btnChangePassword, Me.btnExit, Me.beDateFrom, Me.beDateTo, Me.beCountry, Me.btnDestination, Me.btnManageMargin, Me.btnJunk, Me.brnCanceled, Me.btnMatching, Me.bcNegative, Me.bcExcessive, Me.bcMismatch, Me.btnShowDefict, Me.bcPendingDmc, Me.bcFixedDmc, Me.bcPendingTo, Me.bcFixedTo, Me.btnShow, Me.bcNewRecord, Me.btnAddDispute, Me.btnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.btnManageCurrency})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.btnRate, Me.btnSave, Me.btnLoad, Me.btnSwitchUser, Me.btnManageUsers, Me.btnAddNewUser, Me.btnChangePassword, Me.btnExit, Me.beDateFrom, Me.beDateTo, Me.beCountry, Me.btnDestination, Me.btnManageMargin, Me.btnJunk, Me.brnCanceled, Me.btnMatching, Me.bcNegative, Me.bcExcessive, Me.bcMismatch, Me.btnShowDefict, Me.bcPendingDmc, Me.bcFixedDmc, Me.bcPendingTo, Me.bcFixedTo, Me.btnShow, Me.bcNewRecord, Me.btnAddDispute, Me.btnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.btnManageCurrency, Me.btnErrors})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl1.MaxItemId = 42
+        Me.RibbonControl1.MaxItemId = 43
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2, Me.RepositoryItemLookUpEdit2})
@@ -502,6 +503,7 @@
         Me.RibbonPageGroup2.ItemLinks.Add(Me.btnJunk)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.brnCanceled)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.btnMatching)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.btnErrors)
         Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
         Me.RibbonPageGroup2.ShowCaptionButton = False
         Me.RibbonPageGroup2.Text = "Show"
@@ -989,6 +991,14 @@
         Me.BarSubItem1.Id = 28
         Me.BarSubItem1.Name = "BarSubItem1"
         '
+        'btnErrors
+        '
+        Me.btnErrors.Caption = "Errors"
+        Me.btnErrors.Id = 42
+        Me.btnErrors.ImageOptions.Image = CType(resources.GetObject("BarButtonItem1.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnErrors.Name = "btnErrors"
+        Me.btnErrors.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
         'frmMain
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[False]
@@ -1114,5 +1124,6 @@
     Friend WithEvents BarHeaderItem1 As DevExpress.XtraBars.BarHeaderItem
     Friend WithEvents BarButtonGroup1 As DevExpress.XtraBars.BarButtonGroup
     Friend WithEvents btnManageCurrency As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnErrors As DevExpress.XtraBars.BarButtonItem
 
 End Class

@@ -256,6 +256,17 @@ Public Class Booking
     Public Property PriceBreakdown() As String
     Public Property LoginID() As Integer
     Public Property Junk() As Boolean
+    Public Property PurchaseEUR() As Double
+    Public Property SalesEUR() As Double
+    Public Property MarginEUR() As Double
+    Public Property NetRateEUR() As Double
+    Public Property DifferenceEUR() As Double
+    Public Property Cancelled() As Boolean
+    Public Property Excessive() As Boolean
+    Public Property Mismatch() As Boolean
+    Public Property Negative() As Boolean
+    Public Property WithError() As Boolean
+
 
     Public Function CheckJunk() As Short
         Dim result As Short = 0
@@ -378,7 +389,9 @@ Public Class Booking
                               & " CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom," _
                               & " Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck," _
                               & " DifferenceTOPrice, dbo.ActionBy(BookingID) AS ActionBy, dbo.LastStatus(BookingID) AS Status, dbo.LastComment(BookingID) AS Comments," _
-                              & " dbo.AdjustedPrice(BookingID) AS AdjustedPrice, PriceBreakdown, LoginID, Junk" _
+                              & " dbo.AdjustedPrice(BookingID) AS AdjustedPrice, PriceBreakdown, LoginID, Junk, PurchasePriceEUR, SalesPriceEUR, MarginEUR, NetRateEUR," _
+                              & " DifferenceEUR, (CASE WHEN GWGStatus = 'Can' THEN 1 ELSE 0 END) AS Cancelled, dbo.ExcessiveMargin(BookingID) AS Excessive," _
+                              & " dbo.Mismatch(BookingID) AS Mismatch, dbo.NegativeMargin(BookingID) AS NegativeMargin" _
                               & " FROM Booking WHERE BookingID = " & BookingID.ToString & ";"
 
         Dim dt As New DataTable()
@@ -433,6 +446,29 @@ Public Class Booking
 
             PriceBreakdown = dt.Rows(0)(39)
             LoginID = dt.Rows(0)(40)
+            Junk = dt.Rows(0)(41)
+
+            If Not IsDBNull(dt.Rows(0)(42)) Then
+                PurchaseEUR = dt.Rows(0)(42)
+            End If
+            If Not IsDBNull(dt.Rows(0)(43)) Then
+                SalesEUR = dt.Rows(0)(43)
+            End If
+            If Not IsDBNull(dt.Rows(0)(44)) Then
+                MarginEUR = dt.Rows(0)(44)
+            End If
+            If Not IsDBNull(dt.Rows(0)(45)) Then
+                NetRateEUR = dt.Rows(0)(45)
+            End If
+            If Not IsDBNull(dt.Rows(0)(46)) Then
+                DifferenceEUR = dt.Rows(0)(46)
+            End If
+            Cancelled = dt.Rows(0)(47) = 1
+            Excessive = dt.Rows(0)(48) = 0
+            Mismatch = dt.Rows(0)(49) = 0
+            Negative = dt.Rows(0)(50) = 0
+            WithError = dt.Rows(0)(48) = 2 Or dt.Rows(0)(49) = 2
+
             result = True
         End If
         Return result

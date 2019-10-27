@@ -166,6 +166,31 @@ Partial Public Class frmEdit
         Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.LayoutControlGroup6 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlGroup8 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.txtPurchaseEUR = New DevExpress.XtraEditors.TextEdit()
+        Me.LayoutControlItem39 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.txtSalesEUR = New DevExpress.XtraEditors.TextEdit()
+        Me.LayoutControlItem40 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.txtMarginEUR = New DevExpress.XtraEditors.TextEdit()
+        Me.LayoutControlItem41 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.txtNetRateEUR = New DevExpress.XtraEditors.TextEdit()
+        Me.LayoutControlItem42 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.txtDifferenceEUR = New DevExpress.XtraEditors.TextEdit()
+        Me.LayoutControlItem43 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.txtJunk = New DevExpress.XtraEditors.TextEdit()
+        Me.LayoutControlItem44 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.txtCancelled = New DevExpress.XtraEditors.TextEdit()
+        Me.LayoutControlItem45 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.txtExcessive = New DevExpress.XtraEditors.TextEdit()
+        Me.LayoutControlItem46 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.txtNegative = New DevExpress.XtraEditors.TextEdit()
+        Me.LayoutControlItem47 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.SimpleLabelItem2 = New DevExpress.XtraLayout.SimpleLabelItem()
+        Me.SimpleSeparator1 = New DevExpress.XtraLayout.SimpleSeparator()
+        Me.txtError = New DevExpress.XtraEditors.TextEdit()
+        Me.LayoutControlItem48 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.txtMismatching = New DevExpress.XtraEditors.TextEdit()
+        Me.LayoutControlItem49 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dataLayoutControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -267,6 +292,31 @@ Partial Public Class frmEdit
         CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtPurchaseEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem39, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtSalesEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem40, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtMarginEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem41, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtNetRateEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem42, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtDifferenceEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem43, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtJunk.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem44, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtCancelled.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem45, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtExcessive.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem46, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtNegative.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem47, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SimpleLabelItem2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SimpleSeparator1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtError.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem48, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtMismatching.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem49, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GridColumn2
@@ -361,6 +411,17 @@ Partial Public Class frmEdit
         Me.dataLayoutControl1.Controls.Add(Me.cbGWGStatus)
         Me.dataLayoutControl1.Controls.Add(Me.txtUser)
         Me.dataLayoutControl1.Controls.Add(Me.luStatus)
+        Me.dataLayoutControl1.Controls.Add(Me.txtPurchaseEUR)
+        Me.dataLayoutControl1.Controls.Add(Me.txtSalesEUR)
+        Me.dataLayoutControl1.Controls.Add(Me.txtMarginEUR)
+        Me.dataLayoutControl1.Controls.Add(Me.txtNetRateEUR)
+        Me.dataLayoutControl1.Controls.Add(Me.txtDifferenceEUR)
+        Me.dataLayoutControl1.Controls.Add(Me.txtJunk)
+        Me.dataLayoutControl1.Controls.Add(Me.txtCancelled)
+        Me.dataLayoutControl1.Controls.Add(Me.txtExcessive)
+        Me.dataLayoutControl1.Controls.Add(Me.txtNegative)
+        Me.dataLayoutControl1.Controls.Add(Me.txtError)
+        Me.dataLayoutControl1.Controls.Add(Me.txtMismatching)
         Me.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataLayoutControl1.Location = New System.Drawing.Point(0, 30)
         Me.dataLayoutControl1.Name = "dataLayoutControl1"
@@ -371,11 +432,11 @@ Partial Public Class frmEdit
         '
         'GridControl1
         '
-        Me.GridControl1.Location = New System.Drawing.Point(24, 264)
+        Me.GridControl1.Location = New System.Drawing.Point(24, 255)
         Me.GridControl1.MainView = Me.LayoutView1
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemMemoEdit1, Me.RepositoryItemComboBox1})
-        Me.GridControl1.Size = New System.Drawing.Size(736, 239)
+        Me.GridControl1.Size = New System.Drawing.Size(736, 227)
         Me.GridControl1.TabIndex = 8
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.LayoutView1, Me.TileView1})
         '
@@ -970,15 +1031,15 @@ Partial Public Class frmEdit
         '
         'txtComment
         '
-        Me.txtComment.Location = New System.Drawing.Point(161, 139)
+        Me.txtComment.Location = New System.Drawing.Point(161, 138)
         Me.txtComment.Name = "txtComment"
-        Me.txtComment.Size = New System.Drawing.Size(587, 49)
+        Me.txtComment.Size = New System.Drawing.Size(587, 41)
         Me.txtComment.StyleController = Me.dataLayoutControl1
         Me.txtComment.TabIndex = 4
         '
         'txtCalculation
         '
-        Me.txtCalculation.Location = New System.Drawing.Point(161, 192)
+        Me.txtCalculation.Location = New System.Drawing.Point(161, 183)
         Me.txtCalculation.Name = "txtCalculation"
         Me.txtCalculation.Properties.Mask.EditMask = "\d+(\R.\d{0,2})?"
         Me.txtCalculation.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
@@ -988,7 +1049,7 @@ Partial Public Class frmEdit
         '
         'btnSaveComment
         '
-        Me.btnSaveComment.Location = New System.Drawing.Point(36, 216)
+        Me.btnSaveComment.Location = New System.Drawing.Point(36, 207)
         Me.btnSaveComment.Name = "btnSaveComment"
         Me.btnSaveComment.Size = New System.Drawing.Size(354, 22)
         Me.btnSaveComment.StyleController = Me.dataLayoutControl1
@@ -997,7 +1058,7 @@ Partial Public Class frmEdit
         '
         'btnCancelComment
         '
-        Me.btnCancelComment.Location = New System.Drawing.Point(394, 216)
+        Me.btnCancelComment.Location = New System.Drawing.Point(394, 207)
         Me.btnCancelComment.Name = "btnCancelComment"
         Me.btnCancelComment.Size = New System.Drawing.Size(354, 22)
         Me.btnCancelComment.StyleController = Me.dataLayoutControl1
@@ -1026,7 +1087,7 @@ Partial Public Class frmEdit
         '
         'luStatus
         '
-        Me.luStatus.Location = New System.Drawing.Point(161, 115)
+        Me.luStatus.Location = New System.Drawing.Point(161, 114)
         Me.luStatus.Name = "luStatus"
         Me.luStatus.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit
         Me.luStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -1042,7 +1103,7 @@ Partial Public Class frmEdit
         '
         Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.layoutControlGroup1.GroupBordersVisible = False
-        Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.TabbedControlGroup2})
+        Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.TabbedControlGroup2, Me.SimpleLabelItem2})
         Me.layoutControlGroup1.Location = New System.Drawing.Point(0, 0)
         Me.layoutControlGroup1.Name = "Root"
         Me.layoutControlGroup1.Size = New System.Drawing.Size(784, 527)
@@ -1054,7 +1115,7 @@ Partial Public Class frmEdit
         Me.TabbedControlGroup2.Name = "TabbedControlGroup2"
         Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup7
         Me.TabbedControlGroup2.SelectedTabPageIndex = 1
-        Me.TabbedControlGroup2.Size = New System.Drawing.Size(764, 507)
+        Me.TabbedControlGroup2.Size = New System.Drawing.Size(764, 486)
         Me.TabbedControlGroup2.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup5, Me.LayoutControlGroup7})
         '
         'LayoutControlGroup7
@@ -1062,24 +1123,24 @@ Partial Public Class frmEdit
         Me.LayoutControlGroup7.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.grpAddNewComment, Me.LayoutControlItem33, Me.EmptySpaceItem1, Me.EmptySpaceItem2})
         Me.LayoutControlGroup7.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup7.Name = "LayoutControlGroup7"
-        Me.LayoutControlGroup7.Size = New System.Drawing.Size(740, 461)
+        Me.LayoutControlGroup7.Size = New System.Drawing.Size(740, 440)
         Me.LayoutControlGroup7.Text = "DISPUTES"
         '
         'LayoutControlItem1
         '
         Me.LayoutControlItem1.Control = Me.GridControl1
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 218)
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 209)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(740, 243)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(740, 231)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
         'grpAddNewComment
         '
         Me.grpAddNewComment.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem34, Me.LayoutControlItem35, Me.LayoutControlItem36, Me.LayoutControlItem37, Me.LayoutControlItem38})
-        Me.grpAddNewComment.Location = New System.Drawing.Point(0, 39)
+        Me.grpAddNewComment.Location = New System.Drawing.Point(0, 38)
         Me.grpAddNewComment.Name = "grpAddNewComment"
-        Me.grpAddNewComment.Size = New System.Drawing.Size(740, 169)
+        Me.grpAddNewComment.Size = New System.Drawing.Size(740, 161)
         Me.grpAddNewComment.Text = "Add New Comment"
         Me.grpAddNewComment.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
         '
@@ -1097,14 +1158,14 @@ Partial Public Class frmEdit
         Me.LayoutControlItem35.Control = Me.txtComment
         Me.LayoutControlItem35.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem35.Name = "LayoutControlItem35"
-        Me.LayoutControlItem35.Size = New System.Drawing.Size(716, 53)
+        Me.LayoutControlItem35.Size = New System.Drawing.Size(716, 45)
         Me.LayoutControlItem35.Text = "Comment:"
         Me.LayoutControlItem35.TextSize = New System.Drawing.Size(122, 13)
         '
         'LayoutControlItem36
         '
         Me.LayoutControlItem36.Control = Me.txtCalculation
-        Me.LayoutControlItem36.Location = New System.Drawing.Point(0, 77)
+        Me.LayoutControlItem36.Location = New System.Drawing.Point(0, 69)
         Me.LayoutControlItem36.Name = "LayoutControlItem36"
         Me.LayoutControlItem36.Size = New System.Drawing.Size(716, 24)
         Me.LayoutControlItem36.Text = "Calculation:"
@@ -1113,7 +1174,7 @@ Partial Public Class frmEdit
         'LayoutControlItem37
         '
         Me.LayoutControlItem37.Control = Me.btnSaveComment
-        Me.LayoutControlItem37.Location = New System.Drawing.Point(0, 101)
+        Me.LayoutControlItem37.Location = New System.Drawing.Point(0, 93)
         Me.LayoutControlItem37.Name = "LayoutControlItem37"
         Me.LayoutControlItem37.Size = New System.Drawing.Size(358, 26)
         Me.LayoutControlItem37.TextSize = New System.Drawing.Size(0, 0)
@@ -1122,7 +1183,7 @@ Partial Public Class frmEdit
         'LayoutControlItem38
         '
         Me.LayoutControlItem38.Control = Me.btnCancelComment
-        Me.LayoutControlItem38.Location = New System.Drawing.Point(358, 101)
+        Me.LayoutControlItem38.Location = New System.Drawing.Point(358, 93)
         Me.LayoutControlItem38.Name = "LayoutControlItem38"
         Me.LayoutControlItem38.Size = New System.Drawing.Size(358, 26)
         Me.LayoutControlItem38.TextSize = New System.Drawing.Size(0, 0)
@@ -1142,13 +1203,13 @@ Partial Public Class frmEdit
         Me.EmptySpaceItem1.AllowHotTrack = False
         Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 26)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(740, 13)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(740, 12)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'EmptySpaceItem2
         '
         Me.EmptySpaceItem2.AllowHotTrack = False
-        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 208)
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 199)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
         Me.EmptySpaceItem2.Size = New System.Drawing.Size(740, 10)
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
@@ -1158,7 +1219,7 @@ Partial Public Class frmEdit
         Me.LayoutControlGroup5.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem2, Me.LayoutControlItem16, Me.TabbedControlGroup1, Me.LayoutControlItem8})
         Me.LayoutControlGroup5.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup5.Name = "LayoutControlGroup5"
-        Me.LayoutControlGroup5.Size = New System.Drawing.Size(740, 461)
+        Me.LayoutControlGroup5.Size = New System.Drawing.Size(740, 440)
         Me.LayoutControlGroup5.Text = "INFORMATION"
         '
         'LayoutControlItem3
@@ -1210,10 +1271,10 @@ Partial Public Class frmEdit
         '
         Me.TabbedControlGroup1.Location = New System.Drawing.Point(0, 96)
         Me.TabbedControlGroup1.Name = "TabbedControlGroup1"
-        Me.TabbedControlGroup1.SelectedTabPage = Me.LayoutControlGroup3
-        Me.TabbedControlGroup1.SelectedTabPageIndex = 0
+        Me.TabbedControlGroup1.SelectedTabPage = Me.LayoutControlGroup8
+        Me.TabbedControlGroup1.SelectedTabPageIndex = 2
         Me.TabbedControlGroup1.Size = New System.Drawing.Size(740, 280)
-        Me.TabbedControlGroup1.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup3, Me.LayoutControlGroup2})
+        Me.TabbedControlGroup1.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup3, Me.LayoutControlGroup2, Me.LayoutControlGroup8})
         Me.TabbedControlGroup1.Text = "Other Details"
         '
         'LayoutControlGroup3
@@ -1479,7 +1540,7 @@ Partial Public Class frmEdit
         Me.LayoutControlItem8.Control = Me.windowsUIButtonPanelMain
         Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 376)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(740, 85)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(740, 64)
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem8.TextVisible = False
         '
@@ -1506,6 +1567,231 @@ Partial Public Class frmEdit
         Me.LayoutControlGroup6.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
         Me.LayoutControlGroup6.Size = New System.Drawing.Size(740, 477)
+        '
+        'LayoutControlGroup8
+        '
+        Me.LayoutControlGroup8.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem39, Me.LayoutControlItem41, Me.LayoutControlItem44, Me.LayoutControlItem45, Me.LayoutControlItem46, Me.LayoutControlItem47, Me.LayoutControlItem40, Me.LayoutControlItem42, Me.LayoutControlItem43, Me.SimpleSeparator1, Me.LayoutControlItem48, Me.LayoutControlItem49})
+        Me.LayoutControlGroup8.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup8.Name = "LayoutControlGroup8"
+        Me.LayoutControlGroup8.Size = New System.Drawing.Size(716, 234)
+        Me.LayoutControlGroup8.Text = "Log"
+        '
+        'txtPurchaseEUR
+        '
+        Me.txtPurchaseEUR.Location = New System.Drawing.Point(161, 176)
+        Me.txtPurchaseEUR.Name = "txtPurchaseEUR"
+        Me.txtPurchaseEUR.Properties.ReadOnly = True
+        Me.txtPurchaseEUR.Size = New System.Drawing.Size(229, 20)
+        Me.txtPurchaseEUR.StyleController = Me.dataLayoutControl1
+        Me.txtPurchaseEUR.TabIndex = 9
+        '
+        'LayoutControlItem39
+        '
+        Me.LayoutControlItem39.Control = Me.txtPurchaseEUR
+        Me.LayoutControlItem39.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem39.Name = "LayoutControlItem39"
+        Me.LayoutControlItem39.Size = New System.Drawing.Size(358, 24)
+        Me.LayoutControlItem39.Text = "Purchase Price:"
+        Me.LayoutControlItem39.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'txtSalesEUR
+        '
+        Me.txtSalesEUR.Location = New System.Drawing.Point(519, 176)
+        Me.txtSalesEUR.Name = "txtSalesEUR"
+        Me.txtSalesEUR.Properties.ReadOnly = True
+        Me.txtSalesEUR.Size = New System.Drawing.Size(229, 20)
+        Me.txtSalesEUR.StyleController = Me.dataLayoutControl1
+        Me.txtSalesEUR.TabIndex = 10
+        '
+        'LayoutControlItem40
+        '
+        Me.LayoutControlItem40.Control = Me.txtSalesEUR
+        Me.LayoutControlItem40.Location = New System.Drawing.Point(358, 0)
+        Me.LayoutControlItem40.Name = "LayoutControlItem40"
+        Me.LayoutControlItem40.Size = New System.Drawing.Size(358, 24)
+        Me.LayoutControlItem40.Text = "Sales Price:"
+        Me.LayoutControlItem40.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'txtMarginEUR
+        '
+        Me.txtMarginEUR.Location = New System.Drawing.Point(161, 200)
+        Me.txtMarginEUR.Name = "txtMarginEUR"
+        Me.txtMarginEUR.Properties.ReadOnly = True
+        Me.txtMarginEUR.Size = New System.Drawing.Size(229, 20)
+        Me.txtMarginEUR.StyleController = Me.dataLayoutControl1
+        Me.txtMarginEUR.TabIndex = 11
+        '
+        'LayoutControlItem41
+        '
+        Me.LayoutControlItem41.Control = Me.txtMarginEUR
+        Me.LayoutControlItem41.Location = New System.Drawing.Point(0, 24)
+        Me.LayoutControlItem41.Name = "LayoutControlItem41"
+        Me.LayoutControlItem41.Size = New System.Drawing.Size(358, 24)
+        Me.LayoutControlItem41.Text = "Margin:"
+        Me.LayoutControlItem41.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'txtNetRateEUR
+        '
+        Me.txtNetRateEUR.Location = New System.Drawing.Point(519, 200)
+        Me.txtNetRateEUR.Name = "txtNetRateEUR"
+        Me.txtNetRateEUR.Properties.ReadOnly = True
+        Me.txtNetRateEUR.Size = New System.Drawing.Size(229, 20)
+        Me.txtNetRateEUR.StyleController = Me.dataLayoutControl1
+        Me.txtNetRateEUR.TabIndex = 12
+        '
+        'LayoutControlItem42
+        '
+        Me.LayoutControlItem42.Control = Me.txtNetRateEUR
+        Me.LayoutControlItem42.Location = New System.Drawing.Point(358, 24)
+        Me.LayoutControlItem42.Name = "LayoutControlItem42"
+        Me.LayoutControlItem42.Size = New System.Drawing.Size(358, 48)
+        Me.LayoutControlItem42.Text = "Net Rate:"
+        Me.LayoutControlItem42.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'txtDifferenceEUR
+        '
+        Me.txtDifferenceEUR.Location = New System.Drawing.Point(161, 224)
+        Me.txtDifferenceEUR.Name = "txtDifferenceEUR"
+        Me.txtDifferenceEUR.Properties.ReadOnly = True
+        Me.txtDifferenceEUR.Size = New System.Drawing.Size(229, 20)
+        Me.txtDifferenceEUR.StyleController = Me.dataLayoutControl1
+        Me.txtDifferenceEUR.TabIndex = 13
+        '
+        'LayoutControlItem43
+        '
+        Me.LayoutControlItem43.Control = Me.txtDifferenceEUR
+        Me.LayoutControlItem43.Location = New System.Drawing.Point(0, 48)
+        Me.LayoutControlItem43.Name = "LayoutControlItem43"
+        Me.LayoutControlItem43.Size = New System.Drawing.Size(358, 24)
+        Me.LayoutControlItem43.Text = "Difference:"
+        Me.LayoutControlItem43.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'txtJunk
+        '
+        Me.txtJunk.Location = New System.Drawing.Point(161, 250)
+        Me.txtJunk.Name = "txtJunk"
+        Me.txtJunk.Properties.ReadOnly = True
+        Me.txtJunk.Size = New System.Drawing.Size(587, 20)
+        Me.txtJunk.StyleController = Me.dataLayoutControl1
+        Me.txtJunk.TabIndex = 14
+        '
+        'LayoutControlItem44
+        '
+        Me.LayoutControlItem44.Control = Me.txtJunk
+        Me.LayoutControlItem44.Location = New System.Drawing.Point(0, 74)
+        Me.LayoutControlItem44.Name = "LayoutControlItem44"
+        Me.LayoutControlItem44.Size = New System.Drawing.Size(716, 24)
+        Me.LayoutControlItem44.Text = "Junk:"
+        Me.LayoutControlItem44.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'txtCancelled
+        '
+        Me.txtCancelled.Location = New System.Drawing.Point(161, 274)
+        Me.txtCancelled.Name = "txtCancelled"
+        Me.txtCancelled.Properties.ReadOnly = True
+        Me.txtCancelled.Size = New System.Drawing.Size(587, 20)
+        Me.txtCancelled.StyleController = Me.dataLayoutControl1
+        Me.txtCancelled.TabIndex = 15
+        '
+        'LayoutControlItem45
+        '
+        Me.LayoutControlItem45.Control = Me.txtCancelled
+        Me.LayoutControlItem45.Location = New System.Drawing.Point(0, 98)
+        Me.LayoutControlItem45.Name = "LayoutControlItem45"
+        Me.LayoutControlItem45.Size = New System.Drawing.Size(716, 24)
+        Me.LayoutControlItem45.Text = "Cancelled:"
+        Me.LayoutControlItem45.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'txtExcessive
+        '
+        Me.txtExcessive.Location = New System.Drawing.Point(161, 298)
+        Me.txtExcessive.Name = "txtExcessive"
+        Me.txtExcessive.Properties.ReadOnly = True
+        Me.txtExcessive.Size = New System.Drawing.Size(587, 20)
+        Me.txtExcessive.StyleController = Me.dataLayoutControl1
+        Me.txtExcessive.TabIndex = 16
+        '
+        'LayoutControlItem46
+        '
+        Me.LayoutControlItem46.Control = Me.txtExcessive
+        Me.LayoutControlItem46.Location = New System.Drawing.Point(0, 122)
+        Me.LayoutControlItem46.Name = "LayoutControlItem46"
+        Me.LayoutControlItem46.Size = New System.Drawing.Size(716, 24)
+        Me.LayoutControlItem46.Text = "Excessive:"
+        Me.LayoutControlItem46.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'txtNegative
+        '
+        Me.txtNegative.Location = New System.Drawing.Point(161, 322)
+        Me.txtNegative.Name = "txtNegative"
+        Me.txtNegative.Properties.ReadOnly = True
+        Me.txtNegative.Size = New System.Drawing.Size(587, 20)
+        Me.txtNegative.StyleController = Me.dataLayoutControl1
+        Me.txtNegative.TabIndex = 17
+        '
+        'LayoutControlItem47
+        '
+        Me.LayoutControlItem47.Control = Me.txtNegative
+        Me.LayoutControlItem47.Location = New System.Drawing.Point(0, 146)
+        Me.LayoutControlItem47.Name = "LayoutControlItem47"
+        Me.LayoutControlItem47.Size = New System.Drawing.Size(716, 24)
+        Me.LayoutControlItem47.Text = "Negative:"
+        Me.LayoutControlItem47.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'SimpleLabelItem2
+        '
+        Me.SimpleLabelItem2.AllowHotTrack = False
+        Me.SimpleLabelItem2.CustomizationFormText = "Rates in EUR:"
+        Me.SimpleLabelItem2.Location = New System.Drawing.Point(0, 486)
+        Me.SimpleLabelItem2.Name = "SimpleLabelItem2"
+        Me.SimpleLabelItem2.OptionsPrint.AppearanceItemCaption.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.SimpleLabelItem2.OptionsPrint.AppearanceItemCaption.Options.UseForeColor = True
+        Me.SimpleLabelItem2.Size = New System.Drawing.Size(764, 21)
+        Me.SimpleLabelItem2.Text = "Rates in EUR:"
+        Me.SimpleLabelItem2.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'SimpleSeparator1
+        '
+        Me.SimpleSeparator1.AllowHotTrack = False
+        Me.SimpleSeparator1.Location = New System.Drawing.Point(0, 72)
+        Me.SimpleSeparator1.Name = "SimpleSeparator1"
+        Me.SimpleSeparator1.Size = New System.Drawing.Size(716, 2)
+        '
+        'txtError
+        '
+        Me.txtError.Location = New System.Drawing.Point(161, 370)
+        Me.txtError.Name = "txtError"
+        Me.txtError.Properties.ReadOnly = True
+        Me.txtError.Size = New System.Drawing.Size(587, 20)
+        Me.txtError.StyleController = Me.dataLayoutControl1
+        Me.txtError.TabIndex = 18
+        '
+        'LayoutControlItem48
+        '
+        Me.LayoutControlItem48.Control = Me.txtError
+        Me.LayoutControlItem48.Location = New System.Drawing.Point(0, 194)
+        Me.LayoutControlItem48.Name = "LayoutControlItem48"
+        Me.LayoutControlItem48.Size = New System.Drawing.Size(716, 40)
+        Me.LayoutControlItem48.Text = "Error:"
+        Me.LayoutControlItem48.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'txtMismatching
+        '
+        Me.txtMismatching.Location = New System.Drawing.Point(161, 346)
+        Me.txtMismatching.Name = "txtMismatching"
+        Me.txtMismatching.Properties.ReadOnly = True
+        Me.txtMismatching.Size = New System.Drawing.Size(587, 20)
+        Me.txtMismatching.StyleController = Me.dataLayoutControl1
+        Me.txtMismatching.TabIndex = 19
+        '
+        'LayoutControlItem49
+        '
+        Me.LayoutControlItem49.Control = Me.txtMismatching
+        Me.LayoutControlItem49.Location = New System.Drawing.Point(0, 170)
+        Me.LayoutControlItem49.Name = "LayoutControlItem49"
+        Me.LayoutControlItem49.Size = New System.Drawing.Size(716, 24)
+        Me.LayoutControlItem49.Text = "Mismatching:"
+        Me.LayoutControlItem49.TextSize = New System.Drawing.Size(122, 13)
         '
         'frmEdit
         '
@@ -1622,6 +1908,31 @@ Partial Public Class frmEdit
         CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtPurchaseEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem39, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtSalesEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem40, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtMarginEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem41, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtNetRateEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem42, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtDifferenceEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem43, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtJunk.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem44, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtCancelled.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem45, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtExcessive.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem46, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtNegative.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem47, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SimpleLabelItem2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SimpleSeparator1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtError.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem48, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtMismatching.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem49, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1741,4 +2052,29 @@ Partial Public Class frmEdit
     Public WithEvents windowsUIButtonPanelMain As DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel
     Friend WithEvents txtUser As DevExpress.XtraEditors.TextEdit
     Friend WithEvents luStatus As DevExpress.XtraEditors.LookUpEdit
+    Friend WithEvents LayoutControlGroup8 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents txtPurchaseEUR As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents txtSalesEUR As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents txtMarginEUR As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents txtNetRateEUR As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents txtDifferenceEUR As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents txtJunk As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents txtCancelled As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents txtExcessive As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents txtNegative As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LayoutControlItem39 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem41 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem44 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem45 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem46 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem47 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem40 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem42 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LayoutControlItem43 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents txtError As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents SimpleSeparator1 As DevExpress.XtraLayout.SimpleSeparator
+    Friend WithEvents LayoutControlItem48 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents SimpleLabelItem2 As DevExpress.XtraLayout.SimpleLabelItem
+    Friend WithEvents txtMismatching As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LayoutControlItem49 As DevExpress.XtraLayout.LayoutControlItem
 End Class

@@ -493,12 +493,12 @@ Partial Public Class frmMain
 
     Private Sub btnMatching_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMatching.ItemClick
         Dim status As String
-        status = " AND Junk = 0 AND dbo.NegativeMargin(BookingID) = 1 AND dbo.ExcessiveMargin(BookingID) = 1 AND dbo.Mismatch(BookingID) = 1"
+        status = " AND Junk = 0 AND GwgStatus != 'Can' AND dbo.NegativeMargin(BookingID) = 1 AND dbo.ExcessiveMargin(BookingID) = 1 AND dbo.Mismatch(BookingID) = 1"
         LoadData(status)
     End Sub
 
     Private Sub btnShowDefict_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnShowDefict.ItemClick
-        Dim status As String = " AND Junk = 0 AND ("
+        Dim status As String = " AND Junk = 0 AND GwgStatus != 'Can' AND ("
 
         If Not bcExcessive.Checked And Not bcNegative.Checked And Not bcMismatch.Checked Then
             MsgBox("Please select at least one option!")
@@ -526,7 +526,7 @@ Partial Public Class frmMain
     End Sub
 
     Private Sub btnShow_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnShow.ItemClick
-        Dim status As String = " AND Junk = 0 AND ("
+        Dim status As String = " AND Junk = 0 AND GwgStatus != 'Can' AND ("
         If Not bcPendingDmc.Checked And Not bcPendingTo.Checked And Not bcFixedDmc.Checked And Not bcFixedTo.Checked And Not bcNewRecord.Checked Then
             MsgBox("Please select at least one option!")
             Exit Sub
@@ -574,5 +574,11 @@ Partial Public Class frmMain
 
     Private Sub btnManageCurrency_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageCurrency.ItemClick
         frmCurrency.ShowDialog()
+    End Sub
+
+    Private Sub btnErrors_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnErrors.ItemClick
+        Dim status As String
+        status = " AND (dbo.ExcessiveMargin(BookingID) = 2 OR dbo.Mismatch(BookingID) = 2)"
+        LoadData(status)
     End Sub
 End Class
