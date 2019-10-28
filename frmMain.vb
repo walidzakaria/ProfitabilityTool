@@ -581,4 +581,8 @@ Partial Public Class frmMain
         status = " AND (dbo.ExcessiveMargin(BookingID) = 2 OR dbo.Mismatch(BookingID) = 2)"
         LoadData(status)
     End Sub
+
+    Private Sub btnAbout_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAbout.ItemClick
+        frmAbout.ShowDialog()
+    End Sub
 End Class

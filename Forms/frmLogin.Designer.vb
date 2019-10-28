@@ -87,7 +87,7 @@ Partial Class frmLogin
         Me.lblLoading.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.lblLoading.Appearance.Options.UseFont = True
         Me.lblLoading.Appearance.Options.UseForeColor = True
-        Me.lblLoading.Location = New System.Drawing.Point(45, 177)
+        Me.lblLoading.Location = New System.Drawing.Point(45, 183)
         Me.lblLoading.Name = "lblLoading"
         Me.lblLoading.Size = New System.Drawing.Size(71, 19)
         Me.lblLoading.TabIndex = 16
