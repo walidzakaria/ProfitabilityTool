@@ -139,24 +139,25 @@ Partial Public Class frmEdit
         If bookingsList.Count = 0 Then
             UpdateBooking()
 
-            Dim tempBooking As New Booking()
-            tempBooking = GetDataSource(bookingId)
+            ' only check if user has the persmission to write the booking
+            If GV.CurrentUser.Authority = "Amin" Or GV.CurrentUser.Authority = "MPI" Then
+                Dim tempBooking As New Booking()
+                tempBooking = GetDataSource(bookingId)
 
-
-            If currentBooking.GetHashCode <> tempBooking.GetHashCode Then
-                Dim diaResult As DialogResult
-                diaResult = MessageBox.Show("Want to save changes to " & currentBooking.Reference & "?", "Save", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
-                If diaResult = Windows.Forms.DialogResult.Yes Then
-                    If currentBooking.Save() Then
-                        UpdateChangedRow()
+                If currentBooking.GetHashCode <> tempBooking.GetHashCode Then
+                    Dim diaResult As DialogResult
+                    diaResult = MessageBox.Show("Want to save changes to " & currentBooking.Reference & "?", "Save", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+                    If diaResult = Windows.Forms.DialogResult.Yes Then
+                        If currentBooking.Save() Then
+                            UpdateChangedRow()
+                        End If
+                    ElseIf diaResult = Windows.Forms.DialogResult.Cancel Then
+                        e.Cancel = True
                     End If
-                ElseIf diaResult = Windows.Forms.DialogResult.Cancel Then
-                    e.Cancel = True
                 End If
             End If
+
         End If
-
-
 
 
         grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
@@ -226,14 +227,16 @@ Partial Public Class frmEdit
     End Sub
 
     Private Sub SaveCurrent()
-        frmMain.Wait(True)
-        UpdateBooking()
-        If currentBooking.Save() Then
-            currentBooking = GetDataSource(bookingId)
-            ShowBooking()
-            UpdateChangedRow()
+        If GV.CurrentUser.Authority = "Admin" Or GV.CurrentUser.Authority = "MPI" Then
+            frmMain.Wait(True)
+            UpdateBooking()
+            If currentBooking.Save() Then
+                currentBooking = GetDataSource(bookingId)
+                ShowBooking()
+                UpdateChangedRow()
+            End If
+            frmMain.Wait(False)
         End If
-        frmMain.Wait(False)
     End Sub
     Private Sub windowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then

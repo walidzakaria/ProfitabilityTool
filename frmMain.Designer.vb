@@ -32,7 +32,6 @@
         Me.btnLoad = New DevExpress.XtraBars.BarButtonItem()
         Me.btnSwitchUser = New DevExpress.XtraBars.BarButtonItem()
         Me.btnManageUsers = New DevExpress.XtraBars.BarButtonItem()
-        Me.btnAddNewUser = New DevExpress.XtraBars.BarButtonItem()
         Me.btnChangePassword = New DevExpress.XtraBars.BarButtonItem()
         Me.btnExit = New DevExpress.XtraBars.BarButtonItem()
         Me.beDateFrom = New DevExpress.XtraBars.BarEditItem()
@@ -72,8 +71,8 @@
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup5 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup7 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.RibbonPageGroup4 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPageGroup4 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RepositoryItemLookUpEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.RibbonStatusBar1 = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
@@ -139,7 +138,7 @@
         Me.RibbonControl1.AllowMinimizeRibbon = False
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
         Me.RibbonControl1.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.btnRate, Me.btnSave, Me.btnLoad, Me.btnSwitchUser, Me.btnManageUsers, Me.btnAddNewUser, Me.btnChangePassword, Me.btnExit, Me.beDateFrom, Me.beDateTo, Me.beCountry, Me.btnDestination, Me.btnManageMargin, Me.btnJunk, Me.brnCanceled, Me.btnMatching, Me.bcNegative, Me.bcExcessive, Me.bcMismatch, Me.btnShowDefict, Me.bcPendingDmc, Me.bcFixedDmc, Me.bcPendingTo, Me.bcFixedTo, Me.btnShow, Me.bcNewRecord, Me.btnAddDispute, Me.btnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.btnManageCurrency, Me.btnErrors, Me.btnAbout})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.SkinRibbonGalleryBarItem1, Me.btnRate, Me.btnSave, Me.btnLoad, Me.btnSwitchUser, Me.btnManageUsers, Me.btnChangePassword, Me.btnExit, Me.beDateFrom, Me.beDateTo, Me.beCountry, Me.btnDestination, Me.btnManageMargin, Me.btnJunk, Me.brnCanceled, Me.btnMatching, Me.bcNegative, Me.bcExcessive, Me.bcMismatch, Me.btnShowDefict, Me.bcPendingDmc, Me.bcFixedDmc, Me.bcPendingTo, Me.bcFixedTo, Me.btnShow, Me.bcNewRecord, Me.btnAddDispute, Me.btnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.btnManageCurrency, Me.btnErrors, Me.btnAbout})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl1.MaxItemId = 44
         Me.RibbonControl1.Name = "RibbonControl1"
@@ -203,14 +202,6 @@
         Me.btnManageUsers.Name = "btnManageUsers"
         Me.btnManageUsers.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
-        'btnAddNewUser
-        '
-        Me.btnAddNewUser.Caption = "Add New User"
-        Me.btnAddNewUser.Id = 7
-        Me.btnAddNewUser.ImageOptions.Image = CType(resources.GetObject("btnAddNewUser.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnAddNewUser.Name = "btnAddNewUser"
-        Me.btnAddNewUser.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
-        '
         'btnChangePassword
         '
         Me.btnChangePassword.Caption = "Change" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Password"
@@ -218,7 +209,7 @@
         Me.btnChangePassword.ImageOptions.Image = CType(resources.GetObject("btnChangePassword.ImageOptions.Image"), System.Drawing.Image)
         Me.btnChangePassword.ImageOptions.LargeImage = CType(resources.GetObject("btnChangePassword.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.btnChangePassword.Name = "btnChangePassword"
-        Me.btnChangePassword.RibbonStyle = CType((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        Me.btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
         'btnExit
         '
@@ -508,6 +499,7 @@
         Me.RibbonPageGroup1.Glyph = CType(resources.GetObject("RibbonPageGroup1.Glyph"), System.Drawing.Image)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.btnRate)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.btnSave)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnErrors)
         Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
         Me.RibbonPageGroup1.ShowCaptionButton = False
         Me.RibbonPageGroup1.Text = "Data"
@@ -522,7 +514,6 @@
         Me.RibbonPageGroup2.ItemLinks.Add(Me.btnJunk)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.brnCanceled)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.btnMatching)
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.btnErrors)
         Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
         Me.RibbonPageGroup2.ShowCaptionButton = False
         Me.RibbonPageGroup2.Text = "Show"
@@ -540,6 +531,7 @@
         '
         'RibbonPageGroup7
         '
+        Me.RibbonPageGroup7.AllowTextClipping = False
         Me.RibbonPageGroup7.Glyph = CType(resources.GetObject("RibbonPageGroup7.Glyph"), System.Drawing.Image)
         Me.RibbonPageGroup7.ItemLinks.Add(Me.bcPendingDmc)
         Me.RibbonPageGroup7.ItemLinks.Add(Me.bcFixedDmc)
@@ -549,7 +541,22 @@
         Me.RibbonPageGroup7.ItemLinks.Add(Me.btnAddDispute)
         Me.RibbonPageGroup7.ItemLinks.Add(Me.btnShow)
         Me.RibbonPageGroup7.Name = "RibbonPageGroup7"
+        Me.RibbonPageGroup7.ShowCaptionButton = False
         Me.RibbonPageGroup7.Text = "Disputes"
+        '
+        'RibbonPageGroup3
+        '
+        Me.RibbonPageGroup3.Glyph = CType(resources.GetObject("RibbonPageGroup3.Glyph"), System.Drawing.Image)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnSwitchUser)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnChangePassword)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageUsers)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageCurrency)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnDestination, True)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnTO)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageMargin)
+        Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
+        Me.RibbonPageGroup3.ShowCaptionButton = False
+        Me.RibbonPageGroup3.Text = "Administration"
         '
         'RibbonPageGroup4
         '
@@ -560,21 +567,6 @@
         Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
         Me.RibbonPageGroup4.ShowCaptionButton = False
         Me.RibbonPageGroup4.Text = "Settings"
-        '
-        'RibbonPageGroup3
-        '
-        Me.RibbonPageGroup3.Glyph = CType(resources.GetObject("RibbonPageGroup3.Glyph"), System.Drawing.Image)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnSwitchUser)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnChangePassword)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageUsers)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnAddNewUser)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnDestination)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnTO)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageMargin)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageCurrency)
-        Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
-        Me.RibbonPageGroup3.ShowCaptionButton = False
-        Me.RibbonPageGroup3.Text = "Administration"
         '
         'RepositoryItemLookUpEdit2
         '
@@ -1027,7 +1019,7 @@
         Me.Name = "frmMain"
         Me.Ribbon = Me.RibbonControl1
         Me.StatusBar = Me.RibbonStatusBar1
-        Me.Text = "Margin Profitability"
+        Me.Text = "Profitability Tool"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1099,7 +1091,6 @@
     Friend WithEvents RibbonPageGroup3 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents RibbonPageGroup6 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents btnManageUsers As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents btnAddNewUser As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents btnChangePassword As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup4 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents btnExit As DevExpress.XtraBars.BarButtonItem

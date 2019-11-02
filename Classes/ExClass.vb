@@ -3,7 +3,7 @@
 
 Public Class ExClass
     Public Shared myConn As New SqlConnection("Data Source=Walid-PC\Master;Initial Catalog=YT_DB;User ID=UserConnect;Password=wwzzaa")
-    'Public Shared myConn As New SqlConnection("workstation id=profitability.mssql.somee.com;packet size=4096;user id=walidpiano_SQLLogin_1;pwd=dwvw5bcqc3;data source=profitability.mssql.somee.com;persist security info=False;initial catalog=profitability")
+    'Public Shared myConn As New SqlConnection("workstation id=profitabilitytool.mssql.somee.com;packet size=4096;user id=waliiid_SQLLogin_1;pwd=nhyb4lqews;data source=profitabilitytool.mssql.somee.com;persist security info=False;initial catalog=profitabilitytool")
 
     Public Shared Function QuerySet(ByVal query As String) As String
         Dim result As String
@@ -43,15 +43,30 @@ Public Class ExClass
     Public Shared Function CalculateText(ByVal formula As String) As Single
         Dim result As Single = 0
         Dim newFormula As String = ""
-        For Each i In formula
+        Dim i As String = ""
+        For x = 0 To Len(formula) - 1
+            i = formula(x)
             If i = "x" Then
-                newFormula &= "*"
+                If x <> 0 Then
+                    If IsNumeric(formula(x - 1)) Then
+                        newFormula &= "*"
+                    End If
+                End If
             ElseIf i = "-" Or i = "+" Or i = "/" Or i = "*" Or i = "%" Or i = "." Or i = "(" Or i = ")" Then
                 newFormula &= i
             ElseIf IsNumeric(i) Then
                 newFormula &= i
             End If
         Next
+        'For Each i In formula
+        '    If i = "x" Then
+        '        newFormula &= "*"
+        '    ElseIf i = "-" Or i = "+" Or i = "/" Or i = "*" Or i = "%" Or i = "." Or i = "(" Or i = ")" Then
+        '        newFormula &= i
+        '    ElseIf IsNumeric(i) Then
+        '        newFormula &= i
+        '    End If
+        'Next
         Dim SC As New MSScriptControl.ScriptControl
         newFormula = ReformPercentage(newFormula)
         SC.Language = "VBSCRIPT"
@@ -120,8 +135,8 @@ Public Class ExClass
                     .bcFixedTo.Checked = True
                     .btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
                     .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .btnAddNewUser.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .btnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                 End With
@@ -150,8 +165,8 @@ Public Class ExClass
 
                     .btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
                     .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnAddNewUser.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .btnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                 End With
@@ -180,8 +195,8 @@ Public Class ExClass
 
                     .btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
                     .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnAddNewUser.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                 End With
@@ -213,8 +228,8 @@ Public Class ExClass
 
                     .btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
                     .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnAddNewUser.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .btnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                 End With

@@ -196,15 +196,15 @@ Partial Public Class frmMain
                     hotelCountry = .GetRowCellValue(x, "HotelCountry").ToString
                     gwgStatus = .GetRowCellValue(x, "GwgStatus").ToString
                     purchaseCurrency = .GetRowCellValue(x, "PurchaseCurrency").ToString
-                    purchasePrice = Val(.GetRowCellValue(x, "PurchasePrice").ToString).ToString
+                    purchasePrice = Val(.GetRowCellValue(x, "PurchasePrice").ToString.Replace(",", "")).ToString
                     salesCurrency = .GetRowCellValue(x, "SalesCurrency").ToString
-                    salesPrice = Val(.GetRowCellValue(x, "SalesPrice").ToString).ToString
-                    gwgHandlingFee = Val(.GetRowCellValue(x, "GwgHandlingFee").ToString).ToString
-                    margin = Val(.GetRowCellValue(x, "Margin").ToString).ToString
-                    difference = Val(.GetRowCellValue(x, "Difference").ToString).ToString
+                    salesPrice = Val(.GetRowCellValue(x, "SalesPrice").ToString.Replace(",", "")).ToString
+                    gwgHandlingFee = Val(.GetRowCellValue(x, "GwgHandlingFee").ToString.Replace(",", "")).ToString
+                    margin = Val(.GetRowCellValue(x, "Margin").ToString.Replace(",", "")).ToString
+                    difference = Val(.GetRowCellValue(x, "Difference").ToString.Replace(",", "")).ToString
                     currencyHotelTC = .GetRowCellValue(x, "CurrencyHotelTC").ToString
-                    netRateHotelTC = Val(.GetRowCellValue(x, "NetRateHotelTC").ToString).ToString
-                    netRateHandlingTC = Val(.GetRowCellValue(x, "NetRateHandlingTC").ToString).ToString
+                    netRateHotelTC = Val(.GetRowCellValue(x, "NetRateHotelTC").ToString.Replace(",", "")).ToString
+                    netRateHandlingTC = Val(.GetRowCellValue(x, "NetRateHandlingTC").ToString.Replace(",", "")).ToString
                     checkHotel = .GetRowCellValue(x, "CheckHotel").ToString
                     companyGroup = .GetRowCellValue(x, "CompanyGroup").ToString
                     bookingDate = TextToDate(.GetRowCellValue(x, "BookingDate").ToString).ToString("MM/dd/yyyy")
@@ -231,7 +231,7 @@ Partial Public Class frmMain
                 If hotelCode <> "" Then
 
                     junk = Booking.CheckJunk(gwgStatus, marginCheck, Val(netRateHotelTC), hotelName)
-                    lineText = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}', {36}, {37}; ", _
+                    lineText = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', N'{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}', {36}, {37}; ", _
                                              reference, hotelCode, hotelName, hotelCountry, gwgStatus, purchaseCurrency, purchasePrice, salesCurrency, salesPrice, gwgHandlingFee, margin, difference, currencyHotelTC, netRateHotelTC, netRateHandlingTC, checkHotel, companyGroup, bookingDate, traveldate, roomType, board, duration, transferTo, transferFrom, pax, adult, child, importDate, incomingAgency, bookingStateDesc, hotelFlag, missingBookings, marginCheck, differenceTOPrice, actionBy, priceBreakdown, loginId, junk.ToString)
 
                     query &= lineText
@@ -344,6 +344,14 @@ Partial Public Class frmMain
 
     Private Sub LoadData(ByVal status As String)
 
+        If beCountry.EditValue Is Nothing Then
+            MsgBox("Please select destination!")
+            Exit Sub
+        ElseIf GV.CurrentUser.UserOperators = "" Then
+            MsgBox("You don't have permission to view data!")
+            Exit Sub
+        End If
+
         Wait(True)
 
 
@@ -423,7 +431,13 @@ Partial Public Class frmMain
 
         If My.Settings.Destination <> "" Then
             Try
-                beCountry.EditValue = My.Settings.Destination
+                For x = 0 To GV.CurrentUser.UserDestinations.Count - 1
+                    If GV.CurrentUser.UserDestinations(x).DestinationCode = My.Settings.Destination Then
+                        beCountry.EditValue = My.Settings.Destination
+                        Exit For
+                    End If
+                Next
+
             Catch ex As Exception
 
             End Try
@@ -438,10 +452,6 @@ Partial Public Class frmMain
     Private Sub btnSwitchUser_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSwitchUser.ItemClick
         frmLogin.ShowDialog()
         BookingDT.Reset()
-    End Sub
-
-    Private Sub btnAddNewUser_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAddNewUser.ItemClick
-        frmAddUser.ShowDialog()
     End Sub
 
     Private Sub btnChangePassword_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnChangePassword.ItemClick
@@ -584,5 +594,15 @@ Partial Public Class frmMain
 
     Private Sub btnAbout_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAbout.ItemClick
         frmAbout.ShowDialog()
+    End Sub
+
+    Private Sub GridView1_Click(sender As Object, e As EventArgs) Handles GridView1.Click
+        If GridView1.FocusedColumn.Caption = "PriceBreakdown" Then
+            Dim link As String
+            link = GridView1.GetFocusedRowCellValue("PriceBreakdown")
+            If link <> "" Then
+                Process.Start(link)
+            End If
+        End If
     End Sub
 End Class

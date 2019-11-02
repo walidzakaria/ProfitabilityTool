@@ -26,8 +26,8 @@ Partial Public Class frmUserSettings
     '''
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions5 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions6 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Me.dataLayoutControl1 = New DevExpress.XtraDataLayout.DataLayoutControl()
         Me.clbOperator = New DevExpress.XtraEditors.CheckedListBoxControl()
         Me.clbDestination = New DevExpress.XtraEditors.CheckedListBoxControl()
@@ -35,7 +35,7 @@ Partial Public Class frmUserSettings
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.windowsUIButtonPanelMain = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
-        Me.labelControl = New DevExpress.XtraEditors.LabelControl()
+        Me.lblUsername = New DevExpress.XtraEditors.LabelControl()
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dataLayoutControl1.SuspendLayout()
@@ -124,9 +124,9 @@ Partial Public Class frmUserSettings
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = True
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = True
         Me.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        WindowsUIButtonImageOptions1.ImageUri.Uri = "Save;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions2.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
-        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions1), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Cancel", True, WindowsUIButtonImageOptions2)})
+        WindowsUIButtonImageOptions5.ImageUri.Uri = "Save;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions6.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
+        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions5), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Cancel", True, WindowsUIButtonImageOptions6)})
         Me.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.windowsUIButtonPanelMain.EnableImageTransparency = True
         Me.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
@@ -140,23 +140,23 @@ Partial Public Class frmUserSettings
         Me.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain"
         Me.windowsUIButtonPanelMain.UseButtonBackgroundImages = False
         '
-        'labelControl
+        'lblUsername
         '
-        Me.labelControl.AllowHtmlString = True
-        Me.labelControl.Appearance.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.labelControl.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer))
-        Me.labelControl.Appearance.Options.UseFont = True
-        Me.labelControl.Appearance.Options.UseForeColor = True
-        Me.labelControl.Appearance.Options.UseTextOptions = True
-        Me.labelControl.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
-        Me.labelControl.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical
-        Me.labelControl.Dock = System.Windows.Forms.DockStyle.Top
-        Me.labelControl.Location = New System.Drawing.Point(0, 0)
-        Me.labelControl.Name = "labelControl"
-        Me.labelControl.Padding = New System.Windows.Forms.Padding(10, 5, 0, 0)
-        Me.labelControl.Size = New System.Drawing.Size(411, 30)
-        Me.labelControl.TabIndex = 1
-        Me.labelControl.Text = "Username"
+        Me.lblUsername.AllowHtmlString = True
+        Me.lblUsername.Appearance.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.lblUsername.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer), CType(CType(140, Byte), Integer))
+        Me.lblUsername.Appearance.Options.UseFont = True
+        Me.lblUsername.Appearance.Options.UseForeColor = True
+        Me.lblUsername.Appearance.Options.UseTextOptions = True
+        Me.lblUsername.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+        Me.lblUsername.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical
+        Me.lblUsername.Dock = System.Windows.Forms.DockStyle.Top
+        Me.lblUsername.Location = New System.Drawing.Point(0, 0)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Padding = New System.Windows.Forms.Padding(10, 5, 0, 0)
+        Me.lblUsername.Size = New System.Drawing.Size(411, 30)
+        Me.lblUsername.TabIndex = 1
+        Me.lblUsername.Text = "User Options"
         '
         'frmUserSettings
         '
@@ -167,7 +167,7 @@ Partial Public Class frmUserSettings
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.ClientSize = New System.Drawing.Size(411, 309)
         Me.Controls.Add(Me.dataLayoutControl1)
-        Me.Controls.Add(Me.labelControl)
+        Me.Controls.Add(Me.lblUsername)
         Me.Controls.Add(Me.windowsUIButtonPanelMain)
         Me.KeyPreview = True
         Me.MaximizeBox = False
@@ -191,7 +191,7 @@ Partial Public Class frmUserSettings
     Private WithEvents dataLayoutControl1 As DevExpress.XtraDataLayout.DataLayoutControl
     Private WithEvents layoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
     Private WithEvents windowsUIButtonPanelMain As DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel
-    Private WithEvents labelControl As DevExpress.XtraEditors.LabelControl
+    Private WithEvents lblUsername As DevExpress.XtraEditors.LabelControl
     Friend WithEvents DxValidationProvider1 As DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider
     Friend WithEvents clbOperator As DevExpress.XtraEditors.CheckedListBoxControl
     Friend WithEvents clbDestination As DevExpress.XtraEditors.CheckedListBoxControl

@@ -65,6 +65,15 @@
             End If
         Next
     End Sub
+
+    Private Sub frmUserSettings_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.Control And e.KeyCode = Keys.S Then
+            SaveSettings()
+        ElseIf e.KeyCode = Keys.Escape Then
+            Me.DialogResult = Windows.Forms.DialogResult.Cancel
+            Me.Close()
+        End If
+    End Sub
     Private Sub frmUserSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadDestinations()
         LoadOperators()
@@ -135,7 +144,7 @@
             result = ExClass.QuerySet(operatorString) = "True"
         Else
             operatorString = String.Format("DELETE FROM UserOperator WHERE UserID = {0}; ", userId.ToString)
-            result = ExClass.QueryGet(operatorString) = "True"
+            result = ExClass.QuerySet(operatorString) = "True"
         End If
 
         Return result

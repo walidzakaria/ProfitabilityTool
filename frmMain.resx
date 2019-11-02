@@ -275,16 +275,6 @@
         MVZCZ/p3L6I/oRBHr9mxs0vyBvJnjZV7FZeRg5rQj5EEY31tvwDXIzKeLFW7IwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnAddNewUser.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAl0RVh0VGl0
-        bGUATXM7+6Q8vwAAANVJREFUOE+l0j0KwkAQBeAgttoIHsJKLK09gAjqBXIkD6CFhXgU0QsIioUptLHz
-        p1nfCyO8HVJssPhgZ3bmkYRkIYS/VDbriIo8z3/asIAr3O3cgvJed6LiNwBrCM4SkgM+4AOekBzwAB/A
-        V0kO2IIP2EBywAD0NXhmLzmAZlCYufVKuhMVNsDFAzStpob1xqx1Jypw2Yc38LEnHDZT6/Gupzs+QD/e
-        CTrQhYv1aKU7PuAmg8Q/kd9Ae4Xu+ICzG65y1B0fMII9vGxYsbeDoe5EAfWF7Au2Hlrm+eNN7gAAAABJ
-        RU5ErkJggg==
-</value>
-  </data>
   <data name="btnChangePassword.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAiNJREFUOE99
