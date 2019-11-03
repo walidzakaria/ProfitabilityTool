@@ -27,12 +27,7 @@ Public Class frmCurrency
         ElseIf e.Button.Properties.Caption = "Refresh" Then
             LoadAllCurrencies()
         ElseIf e.Button.Properties.Caption = "New" Then
-            frmAddCurrency.currencyId = 0
-            frmAddCurrency.ShowDialog()
-
-            If frmAddCurrency.DialogResult = Windows.Forms.DialogResult.OK Then
-                LoadAllCurrencies()
-            End If
+            AddNewCurrency()
         ElseIf e.Button.Properties.Caption = "Edit" Then
             EditCurrency()
         ElseIf e.Button.Properties.Caption = "Delete" Then
@@ -65,6 +60,23 @@ Public Class frmCurrency
                     LoadAllCurrencies()
                 End If
             End If
+        End If
+    End Sub
+
+    Private Sub AddNewCurrency()
+        frmAddCurrency.currencyId = 0
+        frmAddCurrency.ShowDialog()
+
+        If frmAddCurrency.DialogResult = Windows.Forms.DialogResult.OK Then
+            LoadAllCurrencies()
+        End If
+    End Sub
+
+    Private Sub frmCurrency_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.Close()
+        ElseIf e.Control And e.KeyCode = Keys.N Then
+            AddNewCurrency()
         End If
     End Sub
     Private Sub frmManageAllUsers_Load(sender As Object, e As EventArgs) Handles Me.Load

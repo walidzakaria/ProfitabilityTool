@@ -35,13 +35,17 @@ Public Class frmManageDestinations
         ElseIf e.Button.Properties.Caption = "Refresh" Then
             LoadAllDestinations()
         ElseIf e.Button.Properties.Caption = "New" Then
-            frmAddDestination.destinationId = 0
-            frmAddDestination.ShowDialog()
-            If frmAddDestination.DialogResult = Windows.Forms.DialogResult.OK Then
-                LoadAllDestinations()
-            End If
+            AddNewDestination()
         ElseIf e.Button.Properties.Caption = "Edit" Then
             EditDestination()
+        End If
+    End Sub
+
+    Private Sub AddNewDestination()
+        frmAddDestination.destinationId = 0
+        frmAddDestination.ShowDialog()
+        If frmAddDestination.DialogResult = Windows.Forms.DialogResult.OK Then
+            LoadAllDestinations()
         End If
     End Sub
 
@@ -54,6 +58,14 @@ Public Class frmManageDestinations
             If frmAddDestination.DialogResult = Windows.Forms.DialogResult.OK Then
                 LoadAllDestinations()
             End If
+        End If
+    End Sub
+
+    Private Sub frmManageDestinations_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.Close()
+        ElseIf e.Control And e.KeyCode = Keys.N Then
+            AddNewDestination()
         End If
     End Sub
     Private Sub frmManageAllUsers_Load(sender As Object, e As EventArgs) Handles Me.Load

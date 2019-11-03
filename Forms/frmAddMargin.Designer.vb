@@ -26,11 +26,11 @@ Partial Public Class frmAddMargin
     '''
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim ConditionValidationRule4 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule1 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
         Dim ConditionValidationRule2 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
-        Dim ConditionValidationRule3 As DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule = New DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule()
-        Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions3 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions4 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Me.dataLayoutControl1 = New DevExpress.XtraDataLayout.DataLayoutControl()
         Me.txtMarginFrom = New DevExpress.XtraEditors.TextEdit()
         Me.txtMarginTo = New DevExpress.XtraEditors.TextEdit()
@@ -120,9 +120,9 @@ Partial Public Class frmAddMargin
         Me.deEffectiveDate.Size = New System.Drawing.Size(206, 20)
         Me.deEffectiveDate.StyleController = Me.dataLayoutControl1
         Me.deEffectiveDate.TabIndex = 7
-        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule1.ErrorText = "This value is not valid"
-        Me.DxValidationProvider1.SetValidationRule(Me.deEffectiveDate, ConditionValidationRule1)
+        ConditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule4.ErrorText = "This value is not valid"
+        Me.DxValidationProvider1.SetValidationRule(Me.deEffectiveDate, ConditionValidationRule4)
         '
         'luDestination
         '
@@ -134,9 +134,9 @@ Partial Public Class frmAddMargin
         Me.luDestination.Size = New System.Drawing.Size(206, 20)
         Me.luDestination.StyleController = Me.dataLayoutControl1
         Me.luDestination.TabIndex = 4
-        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule2.ErrorText = "This value is not valid"
-        Me.DxValidationProvider1.SetValidationRule(Me.luDestination, ConditionValidationRule2)
+        ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule1.ErrorText = "This value is not valid"
+        Me.DxValidationProvider1.SetValidationRule(Me.luDestination, ConditionValidationRule1)
         '
         'txtDifferenceFrom
         '
@@ -168,9 +168,9 @@ Partial Public Class frmAddMargin
         Me.luTourOperator.Size = New System.Drawing.Size(206, 20)
         Me.luTourOperator.StyleController = Me.dataLayoutControl1
         Me.luTourOperator.TabIndex = 4
-        ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
-        ConditionValidationRule3.ErrorText = "This value is not valid"
-        Me.DxValidationProvider2.SetValidationRule(Me.luTourOperator, ConditionValidationRule3)
+        ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
+        ConditionValidationRule2.ErrorText = "This value is not valid"
+        Me.DxValidationProvider2.SetValidationRule(Me.luTourOperator, ConditionValidationRule2)
         '
         'layoutControlGroup1
         '
@@ -265,9 +265,9 @@ Partial Public Class frmAddMargin
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = True
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = True
         Me.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        WindowsUIButtonImageOptions1.ImageUri.Uri = "Save;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions2.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
-        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions1), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Cancel", True, WindowsUIButtonImageOptions2)})
+        WindowsUIButtonImageOptions3.ImageUri.Uri = "Save;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions4.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
+        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions3), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Cancel", True, WindowsUIButtonImageOptions4)})
         Me.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.windowsUIButtonPanelMain.EnableImageTransparency = True
         Me.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
@@ -297,7 +297,7 @@ Partial Public Class frmAddMargin
         Me.labelControl.Padding = New System.Windows.Forms.Padding(10, 5, 0, 0)
         Me.labelControl.Size = New System.Drawing.Size(314, 30)
         Me.labelControl.TabIndex = 1
-        Me.labelControl.Text = "New Currency"
+        Me.labelControl.Text = "New Margin"
         '
         'frmAddMargin
         '

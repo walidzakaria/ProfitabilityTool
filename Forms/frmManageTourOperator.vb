@@ -25,14 +25,18 @@ Public Class frmManageTourOperator
         ElseIf e.Button.Properties.Caption = "Refresh" Then
             LoadAllTourOperators()
         ElseIf e.Button.Properties.Caption = "New" Then
-            frmAddTourOperator.tourOperatorID = 0
-            frmAddTourOperator.ShowDialog()
-
-            If frmAddTourOperator.DialogResult = Windows.Forms.DialogResult.OK Then
-                LoadAllTourOperators()
-            End If
+            AddNewOperator()
         ElseIf e.Button.Properties.Caption = "Edit" Then
             EditTourOperator()
+        End If
+    End Sub
+
+    Private Sub AddNewOperator()
+        frmAddTourOperator.tourOperatorID = 0
+        frmAddTourOperator.ShowDialog()
+
+        If frmAddTourOperator.DialogResult = Windows.Forms.DialogResult.OK Then
+            LoadAllTourOperators()
         End If
     End Sub
 
@@ -45,6 +49,14 @@ Public Class frmManageTourOperator
             If frmAddTourOperator.DialogResult = Windows.Forms.DialogResult.OK Then
                 LoadAllTourOperators()
             End If
+        End If
+    End Sub
+
+    Private Sub frmManageTourOperator_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.Close()
+        ElseIf e.Control And e.KeyCode = Keys.N Then
+            AddNewOperator()
         End If
     End Sub
     Private Sub frmManageAllUsers_Load(sender As Object, e As EventArgs) Handles Me.Load

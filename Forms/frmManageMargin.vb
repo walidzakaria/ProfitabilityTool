@@ -27,11 +27,7 @@ Public Class frmManageMargin
         ElseIf e.Button.Properties.Caption = "Refresh" Then
             LoadAllMargins()
         ElseIf e.Button.Properties.Caption = "New" Then
-            frmAddMargin.marginId = 0
-            frmAddMargin.ShowDialog()
-            If frmAddMargin.DialogResult = Windows.Forms.DialogResult.OK Then
-                LoadAllMargins()
-            End If
+            AddNewMargin()
         ElseIf e.Button.Properties.Caption = "Edit" Then
             EditMargin()
         ElseIf e.Button.Properties.Caption = "Delete" Then
@@ -39,6 +35,13 @@ Public Class frmManageMargin
         End If
     End Sub
 
+    Private Sub AddNewMargin()
+        frmAddMargin.marginId = 0
+        frmAddMargin.ShowDialog()
+        If frmAddMargin.DialogResult = Windows.Forms.DialogResult.OK Then
+            LoadAllMargins()
+        End If
+    End Sub
     Private Sub EditMargin()
         Dim marginId As Integer
         marginId = gridView.GetFocusedRowCellValue("MarginID")
@@ -64,6 +67,14 @@ Public Class frmManageMargin
                     LoadAllMargins()
                 End If
             End If
+        End If
+    End Sub
+
+    Private Sub frmManageMargin_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.Close()
+        ElseIf e.Control And e.KeyCode = Keys.N Then
+            AddNewMargin()
         End If
     End Sub
     Private Sub frmManageAllUsers_Load(sender As Object, e As EventArgs) Handles Me.Load

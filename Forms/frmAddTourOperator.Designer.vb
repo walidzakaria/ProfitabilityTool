@@ -59,7 +59,6 @@ Partial Public Class frmAddTourOperator
         '
         Me.txtTourOperator.Location = New System.Drawing.Point(84, 12)
         Me.txtTourOperator.Name = "txtTourOperator"
-        Me.txtTourOperator.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtTourOperator.Size = New System.Drawing.Size(217, 20)
         Me.txtTourOperator.StyleController = Me.dataLayoutControl1
         Me.txtTourOperator.TabIndex = 5

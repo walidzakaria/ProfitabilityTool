@@ -494,11 +494,11 @@ Partial Public Class frmMain
     End Sub
 
     Private Sub btnJunk_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnJunk.ItemClick
-        LoadData("AND Junk = 1")
+        LoadData("AND Junk = 1 AND GwgStatus != 'Can'")
     End Sub
 
     Private Sub brnCanceled_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles brnCanceled.ItemClick
-        LoadData("AND GwgStatus = 'Can' AND Junk = 0")
+        LoadData("AND GwgStatus = 'Can'")
     End Sub
 
     Private Sub btnMatching_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMatching.ItemClick

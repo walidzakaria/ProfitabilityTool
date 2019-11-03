@@ -8,6 +8,7 @@ Imports DevExpress.XtraEditors.DXErrorProvider
 Partial Public Class frmAddMargin
 
     Public Shared marginId As Integer = 0
+    Public Shared marginCloned As Boolean = False
     Public Sub New()
         InitializeComponent()
 

@@ -38,11 +38,7 @@ Public Class frmManageUsers
         ElseIf e.Button.Properties.Caption = "Reset" Then
             ResetUser()
         ElseIf e.Button.Properties.Caption = "New" Then
-            frmAddUser.userId = 0
-            frmAddUser.ShowDialog()
-            If frmAddUser.DialogResult = Windows.Forms.DialogResult.OK Then
-                LoadAllUsers()
-            End If
+            AddNewUser()
         ElseIf e.Button.Properties.Caption = "Edit" Then
             EditUser()
         ElseIf e.Button.Properties.Caption = "Options" Then
@@ -55,6 +51,14 @@ Public Class frmManageUsers
         End If
     End Sub
 
+    Private Sub AddNewUser()
+        frmAddUser.userId = 0
+        frmAddUser.ShowDialog()
+        If frmAddUser.DialogResult = Windows.Forms.DialogResult.OK Then
+            LoadAllUsers()
+        End If
+    End Sub
+
     Private Sub EditUser()
         If IsDBNull(gridView.GetFocusedRowCellValue("LoginID")) Then
             Exit Sub
@@ -64,6 +68,15 @@ Public Class frmManageUsers
         frmAddUser.ShowDialog()
         If frmAddUser.DialogResult = Windows.Forms.DialogResult.OK Then
             LoadAllUsers()
+        End If
+    End Sub
+
+    Private Sub frmManageUsers_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.Close()
+        ElseIf e.Control And e.KeyCode = Keys.N Then
+            AddNewUser()
+
         End If
     End Sub
     Private Sub frmManageAllUsers_Load(sender As Object, e As EventArgs) Handles Me.Load

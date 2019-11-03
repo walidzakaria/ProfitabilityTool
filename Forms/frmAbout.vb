@@ -11,6 +11,12 @@
         SomeCommandId
     End Enum
 
+    Private Sub frmAbout_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.Close()
+        End If
+    End Sub
+
     Private Sub frmAbout_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.Opacity = 100%
         txtVersion.EditValue = String.Format("Version No. {0}", Application.ProductVersion)
