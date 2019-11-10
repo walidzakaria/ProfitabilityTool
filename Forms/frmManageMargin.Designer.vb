@@ -264,6 +264,7 @@ Partial Public Class frmManageMargin
         Me.Controls.Add(Me.layoutControl)
         Me.Controls.Add(Me.windowsUIButtonPanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.Name = "frmManageMargin"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent

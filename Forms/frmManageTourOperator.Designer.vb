@@ -199,6 +199,7 @@ Partial Public Class frmManageTourOperator
         Me.ClientSize = New System.Drawing.Size(296, 561)
         Me.Controls.Add(Me.layoutControl)
         Me.Controls.Add(Me.windowsUIButtonPanel)
+        Me.KeyPreview = True
         Me.Name = "frmManageTourOperator"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent

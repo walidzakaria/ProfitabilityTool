@@ -32,7 +32,6 @@ Public Class ExClass
             End If
             Using dr As SqlDataReader = cmd.ExecuteReader()
                 result.Load(dr)
-
             End Using
             myConn.Close()
         End Using

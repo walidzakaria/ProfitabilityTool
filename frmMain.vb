@@ -5,6 +5,7 @@ Imports DevExpress.LookAndFeel
 
 Partial Public Class frmMain
     Dim BookingDT As New DataTable()
+    Dim defaultGridLayout As System.IO.Stream = New System.IO.MemoryStream()
     Public Sub Wait(ByVal wait As Boolean)
         If wait = True Then
             Try
@@ -55,6 +56,9 @@ Partial Public Class frmMain
     End Sub
     Private Sub btnRate_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnRate.ItemClick
         Wait(True)
+
+        ResetGridLayout()
+
         Dim dt As New DataTable()
         dt = ParseText()
         GridControl1.DataSource = dt
@@ -229,6 +233,15 @@ Partial Public Class frmMain
 
                 End With
                 If hotelCode <> "" Then
+
+                    If purchaseCurrency = "" Then
+                        purchaseCurrency = currencyHotelTC
+                    End If
+
+                    If salesCurrency = "" Then
+                        salesCurrency = purchaseCurrency
+                    End If
+
 
                     junk = Booking.CheckJunk(gwgStatus, marginCheck, Val(netRateHotelTC), hotelName)
                     lineText = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', N'{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}', {36}, {37}; ", _
@@ -604,5 +617,21 @@ Partial Public Class frmMain
                 Process.Start(link)
             End If
         End If
+    End Sub
+
+    Private Sub bhUsername_ItemDoubleClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bhUsername.ItemDoubleClick
+        If GV.CurrentUser.Authority = "Admin" Or GV.CurrentUser.Authority = "Developer" Then
+            frmSQL.Show()
+        End If
+    End Sub
+
+    Private Sub frmMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        GridView1.SaveLayoutToStream(defaultGridLayout)
+        defaultGridLayout.Seek(0, System.IO.SeekOrigin.Begin)
+    End Sub
+
+    Private Sub ResetGridLayout()
+        GridView1.RestoreLayoutFromStream(defaultGridLayout)
+        defaultGridLayout.Seek(0, System.IO.SeekOrigin.Begin)
     End Sub
 End Class

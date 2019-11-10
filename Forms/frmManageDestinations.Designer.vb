@@ -25,12 +25,12 @@ Partial Public Class frmManageDestinations
     ''' </summary>
     '''
     Private Sub InitializeComponent()
-        Dim WindowsUIButtonImageOptions6 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmManageDestinations))
-        Dim WindowsUIButtonImageOptions7 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions8 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions9 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions10 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions3 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions4 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions5 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Me.layoutControl = New DevExpress.XtraLayout.LayoutControl()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.gridControl = New DevExpress.XtraGrid.GridControl()
@@ -182,12 +182,12 @@ Partial Public Class frmManageDestinations
         Me.windowsUIButtonPanel.AppearanceButton.Pressed.Options.UseFont = True
         Me.windowsUIButtonPanel.AppearanceButton.Pressed.Options.UseForeColor = True
         Me.windowsUIButtonPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        WindowsUIButtonImageOptions6.Image = CType(resources.GetObject("WindowsUIButtonImageOptions6.Image"), System.Drawing.Image)
-        WindowsUIButtonImageOptions7.ImageUri.Uri = "New;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions8.ImageUri.Uri = "Preview;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions9.ImageUri.Uri = "Refresh;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions10.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
-        Me.windowsUIButtonPanel.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Edit", True, WindowsUIButtonImageOptions6), New DevExpress.XtraBars.Docking2010.WindowsUIButton("New", True, WindowsUIButtonImageOptions7), New DevExpress.XtraBars.Docking2010.WindowsUISeparator(), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Print", True, WindowsUIButtonImageOptions8), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Refresh", True, WindowsUIButtonImageOptions9), New DevExpress.XtraBars.Docking2010.WindowsUISeparator(), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions10)})
+        WindowsUIButtonImageOptions1.Image = CType(resources.GetObject("WindowsUIButtonImageOptions1.Image"), System.Drawing.Image)
+        WindowsUIButtonImageOptions2.ImageUri.Uri = "New;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions3.ImageUri.Uri = "Preview;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions4.ImageUri.Uri = "Refresh;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions5.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
+        Me.windowsUIButtonPanel.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Edit", True, WindowsUIButtonImageOptions1), New DevExpress.XtraBars.Docking2010.WindowsUIButton("New", True, WindowsUIButtonImageOptions2), New DevExpress.XtraBars.Docking2010.WindowsUISeparator(), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Print", True, WindowsUIButtonImageOptions3), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Refresh", True, WindowsUIButtonImageOptions4), New DevExpress.XtraBars.Docking2010.WindowsUISeparator(), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions5)})
         Me.windowsUIButtonPanel.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.windowsUIButtonPanel.EnableImageTransparency = True
         Me.windowsUIButtonPanel.ForeColor = System.Drawing.Color.White
@@ -211,6 +211,7 @@ Partial Public Class frmManageDestinations
         Me.Controls.Add(Me.layoutControl)
         Me.Controls.Add(Me.windowsUIButtonPanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.Name = "frmManageDestinations"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent

@@ -232,6 +232,7 @@ Partial Public Class frmCurrency
         Me.ClientSize = New System.Drawing.Size(584, 561)
         Me.Controls.Add(Me.layoutControl)
         Me.Controls.Add(Me.windowsUIButtonPanel)
+        Me.KeyPreview = True
         Me.Name = "frmCurrency"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
