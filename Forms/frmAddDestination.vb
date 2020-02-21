@@ -55,7 +55,7 @@ Partial Public Class frmAddDestination
     End Sub
 
     Private Sub CloseDestination()
-        Me.DialogResult = Windows.Forms.DialogResult.Cancel
+        Me.DialogResult = DialogResult.Cancel
         Me.Close()
     End Sub
     Private Sub SaveDestination()
@@ -66,7 +66,7 @@ Partial Public Class frmAddDestination
             destination.DestinationId = destinationId
             If destination.UniqueCode() Then
                 If destination.SaveDestination() Then
-                    Me.DialogResult = Windows.Forms.DialogResult.OK
+                    Me.DialogResult = DialogResult.OK
                     Me.Close()
                 End If
             Else

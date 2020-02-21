@@ -1,9 +1,9 @@
 ﻿Public Class frmUserSettings 
     Public Shared userId As Integer
     Private Sub LoadDestinations()
-        Dim dt As New DataTable()
+
         Dim query As String = "SELECT * FROM Destination ORDER BY Destination;"
-        dt = ExClass.QueryGet(query)
+        Dim dt As DataTable = CType(ExClass.QueryGet(query), DataTable)
 
         clbDestination.DataSource = dt
         clbDestination.DisplayMember = "DestinationCode"
@@ -14,7 +14,7 @@
     Private Sub LoadOperators()
         Dim dt As New DataTable()
         Dim query As String = "SELECT * FROM TourOperator ORDER BY TourOperator;"
-        dt = ExClass.QueryGet(query)
+        dt = CType(ExClass.QueryGet(query), DataTable)
 
         clbOperator.DataSource = dt
         clbOperator.DisplayMember = "TourOperator"
@@ -27,16 +27,17 @@
                                             & " WHERE UserDestination.DestinationID = Destination.DestinationId" _
                                             & " AND UserDestination.UserID = {0};", userId.ToString)
         Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
+        dt = CType(ExClass.QueryGet(query), DataTable)
         clbDestination.UnCheckAll()
 
         Dim destination As String = ""
         For x = 0 To dt.Rows.Count - 1
             destination &= dt.Rows(x)(0).ToString & ";"
         Next
+
         Dim destinations() As String = destination.Split(";")
         For x = 0 To clbDestination.ItemCount - 1
-            If destinations.Contains(clbDestination.GetDisplayItemValue(x)) Then
+            If destinations.Contains(CType(clbDestination.GetDisplayItemValue(x), String)) Then
                 clbDestination.SetItemChecked(x, True)
             End If
         Next
@@ -51,7 +52,7 @@
 
 
         Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
+        dt = CType(ExClass.QueryGet(query), DataTable)
         clbOperator.UnCheckAll()
 
         Dim tourOperator As String = ""
@@ -60,7 +61,7 @@
         Next
         Dim tourOperators() As String = tourOperator.Split(";")
         For x = 0 To clbOperator.ItemCount - 1
-            If tourOperators.Contains(clbOperator.GetDisplayItemValue(x)) Then
+            If tourOperators.Contains(CType(clbOperator.GetDisplayItemValue(x), String)) Then
                 clbOperator.SetItemChecked(x, True)
             End If
         Next
@@ -70,7 +71,7 @@
         If e.Control And e.KeyCode = Keys.S Then
             SaveSettings()
         ElseIf e.KeyCode = Keys.Escape Then
-            Me.DialogResult = Windows.Forms.DialogResult.Cancel
+            Me.DialogResult = DialogResult.Cancel
             Me.Close()
         End If
     End Sub
@@ -83,7 +84,7 @@
         If e.Button.Properties.Caption = "Save" Then
             SaveSettings()
         ElseIf e.Button.Properties.Caption = "Cancel" Then
-            Me.DialogResult = Windows.Forms.DialogResult.Cancel
+            Me.DialogResult = DialogResult.Cancel
             Me.Close()
         End If
 
@@ -94,7 +95,7 @@
         Dim saveOperators As Boolean = SaveUserOperators()
         If saveDestinations = saveOperators = True Then
             MsgBox("Settings saved successfully!")
-            Me.DialogResult = Windows.Forms.DialogResult.OK
+            Me.DialogResult = DialogResult.OK
             Me.Close()
         Else
             MsgBox("Failed to save!")

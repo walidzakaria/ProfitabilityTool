@@ -3,7 +3,7 @@
 
 Public Class ExClass
     Public Shared myConn As New SqlConnection("Data Source=Walid-PC\Master;Initial Catalog=YT_DB;User ID=UserConnect;Password=wwzzaa")
-    'Public Shared myConn As New SqlConnection("workstation id=profitabilitytool.mssql.somee.com;packet size=4096;user id=waliiid_SQLLogin_1;pwd=nhyb4lqews;data source=profitabilitytool.mssql.somee.com;persist security info=False;initial catalog=profitabilitytool")
+    'Public Shared myConn As New SqlConnection("workstation id=rs24profitabilitytool.mssql.somee.com;packet size=4096;user id=waliiid_SQLLogin_1;pwd=nhyb4lqews;data source=rs24profitabilitytool.mssql.somee.com;persist security info=False;initial catalog=rs24profitabilitytool")
 
     Public Shared Function QuerySet(ByVal query As String) As String
         Dim result As String
@@ -23,7 +23,7 @@ Public Class ExClass
         Return result
     End Function
 
-    Public Shared Function QueryGet(ByVal query As String)
+    Public Shared Function QueryGet(ByVal query As String) As DataTable
         Dim result As New DataTable()
 
         Using cmd = New SqlCommand(query, myConn)
@@ -42,30 +42,16 @@ Public Class ExClass
     Public Shared Function CalculateText(ByVal formula As String) As Single
         Dim result As Single = 0
         Dim newFormula As String = ""
-        Dim i As String = ""
+        Dim i As String
         For x = 0 To Len(formula) - 1
             i = formula(x)
-            If i = "x" Then
-                If x <> 0 Then
-                    If IsNumeric(formula(x - 1)) Then
-                        newFormula &= "*"
-                    End If
-                End If
-            ElseIf i = "-" Or i = "+" Or i = "/" Or i = "*" Or i = "%" Or i = "." Or i = "(" Or i = ")" Then
+            If i = "-" Or i = "+" Or i = "/" Or i = "*" Or i = "%" Or i = "." Or i = "(" Or i = ")" Then
                 newFormula &= i
             ElseIf IsNumeric(i) Then
                 newFormula &= i
             End If
         Next
-        'For Each i In formula
-        '    If i = "x" Then
-        '        newFormula &= "*"
-        '    ElseIf i = "-" Or i = "+" Or i = "/" Or i = "*" Or i = "%" Or i = "." Or i = "(" Or i = ")" Then
-        '        newFormula &= i
-        '    ElseIf IsNumeric(i) Then
-        '        newFormula &= i
-        '    End If
-        'Next
+
         Dim SC As New MSScriptControl.ScriptControl
         newFormula = ReformPercentage(newFormula)
         SC.Language = "VBSCRIPT"

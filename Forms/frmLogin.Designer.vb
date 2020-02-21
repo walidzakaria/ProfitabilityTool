@@ -137,7 +137,7 @@ Partial Class frmLogin
         Me.Name = "frmLogin"
         Me.ShowInTaskbar = True
         Me.ShowMode = DevExpress.XtraSplashScreen.ShowMode.Image
-        Me.SplashImage = Global.ProfitabilityTool.My.Resources.Resources.Login
+        Me.SplashImageOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.Login
         Me.Text = "Login"
         CType(Me.txtUserName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()

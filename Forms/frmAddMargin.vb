@@ -92,24 +92,24 @@ Partial Public Class frmAddMargin
     End Sub
 
     Private Sub CloseMargin()
-        Me.DialogResult = Windows.Forms.DialogResult.Cancel
+        Me.DialogResult = DialogResult.Cancel
         Me.Close()
     End Sub
     Private Sub SaveMargin()
         If DxValidationProvider1.Validate() Then
             Dim margin As New Margin()
             margin.MarginId = marginId
-            margin.DestinationId = luDestination.EditValue
-            margin.TourOperatorId = luTourOperator.EditValue
-            margin.MarginFrom = Val(txtMarginFrom.EditValue)
-            margin.MarginTo = Val(txtMarginTo.EditValue)
-            margin.DifferenceFrom = Val(txtDifferenceFrom.EditValue)
-            margin.DifferenceTo = Val(txtDifferenceTo.EditValue)
+            margin.DestinationId = CInt(luDestination.EditValue)
+            margin.TourOperatorId = CInt(luTourOperator.EditValue)
+            margin.MarginFrom = CSng(Val(txtMarginFrom.EditValue))
+            margin.MarginTo = CSng(Val(txtMarginTo.EditValue))
+            margin.DifferenceFrom = CSng(Val(txtDifferenceFrom.EditValue))
+            margin.DifferenceTo = CSng(Val(txtDifferenceTo.EditValue))
             deEffectiveDate.RefreshEditValue()
-            margin.EffectiveDate = deEffectiveDate.EditValue
+            margin.EffectiveDate = CDate(deEffectiveDate.EditValue)
 
             If margin.SaveMargin() Then
-                Me.DialogResult = Windows.Forms.DialogResult.OK
+                Me.DialogResult = DialogResult.OK
                 Me.Close()
             End If
         End If

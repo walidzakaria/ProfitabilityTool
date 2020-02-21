@@ -37,12 +37,12 @@ Public Class frmCurrency
 
     Private Sub EditCurrency()
         Dim currencyID As Integer
-        currencyID = gridView.GetFocusedRowCellValue("ExchangeID")
+        currencyID = CInt(gridView.GetFocusedRowCellValue("ExchangeID"))
         If currencyID <> 0 Then
             frmAddCurrency.currencyId = currencyID
 
             frmAddCurrency.ShowDialog()
-            If frmAddCurrency.DialogResult = Windows.Forms.DialogResult.OK Then
+            If frmAddCurrency.DialogResult = DialogResult.OK Then
                 LoadAllCurrencies()
             End If
         End If
@@ -50,10 +50,10 @@ Public Class frmCurrency
 
     Private Sub DeleteCurrency()
         Dim currencyId As Integer
-        currencyId = gridView.GetFocusedRowCellValue("ExchangeID")
+        currencyId = CInt(gridView.GetFocusedRowCellValue("ExchangeID"))
         If currencyId <> 0 Then
             Dim diaR As DialogResult = MessageBox.Show("Are you sure you want to delete this record?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If diaR = Windows.Forms.DialogResult.Yes Then
+            If diaR = DialogResult.Yes Then
                 Dim currency As New Currency()
                 currency.CurrencyId = currencyId
                 If currency.DeleteById() Then
@@ -67,7 +67,7 @@ Public Class frmCurrency
         frmAddCurrency.currencyId = 0
         frmAddCurrency.ShowDialog()
 
-        If frmAddCurrency.DialogResult = Windows.Forms.DialogResult.OK Then
+        If frmAddCurrency.DialogResult = DialogResult.OK Then
             LoadAllCurrencies()
         End If
     End Sub

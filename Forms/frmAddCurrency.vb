@@ -60,7 +60,7 @@ Partial Public Class frmAddCurrency
     End Sub
 
     Private Sub CloseCurrency()
-        Me.DialogResult = Windows.Forms.DialogResult.Cancel
+        Me.DialogResult = DialogResult.Cancel
         Me.Close()
     End Sub
     Private Sub SaveCurrency()
@@ -68,13 +68,13 @@ Partial Public Class frmAddCurrency
             Dim currency As New Currency()
             currency.CurrencyId = currencyId
             currency.Currency = txtCurrency.EditValue.ToString.ToUpper
-            currency.Rate = Val(txtRate.EditValue)
+            currency.Rate = CDec(Val(txtRate.EditValue))
             deEffectiveDate.RefreshEditValue()
-            currency.EffectiveDate = deEffectiveDate.EditValue
+            currency.EffectiveDate = CDate(deEffectiveDate.EditValue)
             currency.LoginID = GV.CurrentUser.LoginId
             
             If currency.SaveCurrency() Then
-                Me.DialogResult = Windows.Forms.DialogResult.OK
+                Me.DialogResult = DialogResult.OK
                 Me.Close()
             End If
         End If

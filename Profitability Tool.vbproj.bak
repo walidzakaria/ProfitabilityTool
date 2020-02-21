@@ -58,7 +58,7 @@
     <StartupObject>ProfitabilityTool.My.MyApplication</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>hnet.com-image.ico</ApplicationIcon>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility">
@@ -70,7 +70,7 @@
     <Reference Include="DevExpress.Data.v19.2">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Images.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Images.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.Utils.v19.2">
@@ -106,7 +106,7 @@
     <Reference Include="DevExpress.Printing.v19.2.Core">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraVerticalGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
@@ -176,7 +176,6 @@
     <Import Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Classes\ExClass.vb" />
     <Compile Include="Classes\SendMail.vb" />
     <Compile Include="Forms\frmAbout.Designer.vb">
@@ -239,10 +238,10 @@
     <Compile Include="Forms\frmUserSettings.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMain.vb">
+    <Compile Include="frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMain.Designer.vb">
+    <Compile Include="frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmManageMargin.Designer.vb">
@@ -251,20 +250,14 @@
     <Compile Include="Forms\frmManageMargin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmSQL.Designer.vb">
+    <Compile Include="frmSQL.Designer.vb">
       <DependentUpon>frmSQL.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmSQL.vb">
+    <Compile Include="frmSQL.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Classes\GV.vb" />
+    <Compile Include="GV.vb" />
     <Compile Include="Classes\Models.vb" />
-    <Compile Include="Forms\SplashScreen1.Designer.vb">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\SplashScreen1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
@@ -302,23 +295,18 @@
     </Compile>
     <EmbeddedResource Include="Forms\frmAbout.resx">
       <DependentUpon>frmAbout.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddCurrency.resx">
       <DependentUpon>frmAddCurrency.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddDestination.resx">
       <DependentUpon>frmAddDestination.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddMargin.resx">
       <DependentUpon>frmAddMargin.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddTourOperator.resx">
       <DependentUpon>frmAddTourOperator.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddUser.resx">
       <DependentUpon>frmAddUser.vb</DependentUpon>
@@ -341,7 +329,7 @@
     <EmbeddedResource Include="Forms\frmUserSettings.resx">
       <DependentUpon>frmUserSettings.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMain.resx">
+    <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmManageMargin.resx">
@@ -353,19 +341,21 @@
     <EmbeddedResource Include="Forms\frmManageDestinations.resx">
       <DependentUpon>frmManageDestinations.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmSQL.resx">
+    <EmbeddedResource Include="frmSQL.resx">
       <DependentUpon>frmSQL.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SplashScreen1.resx">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <EmbeddedResource Include="Forms\WaitForm1.resx">
       <DependentUpon>WaitForm1.vb</DependentUpon>
     </EmbeddedResource>
@@ -374,11 +364,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -398,8 +383,12 @@
     <None Include="Resources\Sign up.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\profitability_logo.png" />
-    <None Include="Resources\profitability_splash.jpg" />
+    <Content Include="logo.ico" />
+    <Content Include="New Project %281%29.ico" />
+    <Content Include="New Project %282%29.ico" />
+    <Content Include="New Project.ico" />
+    <Content Include="new_project_v2j_icon.ico" />
+    <None Include="Resources\logo.ico" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="MSScriptControl">
@@ -428,9 +417,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="hnet.com-image.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

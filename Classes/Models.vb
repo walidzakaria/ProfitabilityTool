@@ -48,12 +48,12 @@ Public Class Login
             End If
             Using dr As SqlDataReader = cmd.ExecuteReader
                 If dr.Read() Then
-                    LoginId = dr(0)
-                    Username = dr(1)
-                    FullName = dr(2)
-                    Mail = dr(3)
-                    Authority = dr(5)
-                    Active = dr(6)
+                    LoginId = CInt(dr(0))
+                    Username = CStr(dr(1))
+                    FullName = CStr(dr(2))
+                    Mail = CStr(dr(3))
+                    Authority = CStr(dr(5))
+                    Active = CBool(dr(6))
                     result = True
                 End If
             End Using
@@ -68,10 +68,10 @@ Public Class Login
     Public Function UniqueUsername() As Boolean
         Dim result As Boolean = True
         Dim query As String = "SELECT COUNT(*) FROM Login WHERE Username = '" & Username & "' AND LoginID != " & LoginId.ToString & ";"
-        Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
 
-        If dt.Rows(0)(0) <> 0 Then
+        Dim dt As DataTable = CType(ExClass.QueryGet(query), DataTable)
+
+        If CType(dt.Rows(0)(0), Integer) <> 0 Then
             result = False
         End If
 
@@ -128,12 +128,12 @@ Public Class Login
         dt = ExClass.QueryGet(query)
 
         If dt.Rows.Count <> 0 Then
-            Username = dt.Rows(0)(1)
-            FullName = dt.Rows(0)(2)
-            Mail = dt.Rows(0)(3)
-            Password = dt.Rows(0)(4)
-            Authority = dt.Rows(0)(5)
-            Active = dt.Rows(0)(6)
+            Username = CType(dt.Rows(0)(1), String)
+            FullName = CType(dt.Rows(0)(2), String)
+            Mail = CType(dt.Rows(0)(3), String)
+            Password = CType(dt.Rows(0)(4), String)
+            Authority = CType(dt.Rows(0)(5), String)
+            Active = CType(dt.Rows(0)(6), Boolean)
             result = True
         End If
 
@@ -148,13 +148,13 @@ Public Class Login
         dt = ExClass.QueryGet(query)
 
         If dt.Rows.Count <> 0 Then
-            LoginId = dt.Rows(0)(0)
-            Username = dt.Rows(0)(1)
-            FullName = dt.Rows(0)(2)
-            Mail = dt.Rows(0)(3)
-            Password = dt.Rows(0)(4)
-            Authority = dt.Rows(0)(5)
-            Active = dt.Rows(0)(6)
+            LoginId = CType(dt.Rows(0)(0), Integer)
+            Username = CType(dt.Rows(0)(1), String)
+            FullName = CType(dt.Rows(0)(2), String)
+            Mail = CType(dt.Rows(0)(3), String)
+            Password = CType(dt.Rows(0)(4), String)
+            Authority = CType(dt.Rows(0)(5), String)
+            Active = CType(dt.Rows(0)(6), Boolean)
             result = True
         End If
 
@@ -174,9 +174,9 @@ Public Class Login
         Dim tempDestination As New Destination()
         For x = 0 To dt.Rows.Count - 1
             tempDestination = New Destination()
-            tempDestination.DestinationId = dt.Rows(x)(0)
-            tempDestination.DestinationCode = dt.Rows(x)(1)
-            tempDestination.Destination = dt.Rows(x)(2)
+            tempDestination.DestinationId = CInt(dt.Rows(x)(0))
+            tempDestination.DestinationCode = CStr(dt.Rows(x)(1))
+            tempDestination.Destination = CStr(dt.Rows(x)(2))
             result.Add(tempDestination)
         Next
 
@@ -194,7 +194,7 @@ Public Class Login
         dt = ExClass.QueryGet(query)
         Dim tempOperator As String
         For x = 0 To dt.Rows.Count - 1
-            tempOperator = dt.Rows(x)(1)
+            tempOperator = CStr(dt.Rows(x)(1))
             operators.Add(tempOperator)
         Next
 
@@ -220,6 +220,7 @@ Public Class Booking
     Public Property HotelName() As String
     Public Property CountryCode() As String
     Public Property GwgStatus() As String
+    Public Property BookingStatus() As String
     Public Property PurchaseCurrency() As String
     Public Property PurchasePrice() As Double
     Public Property SalesCurrency() As String
@@ -243,6 +244,7 @@ Public Class Booking
     Public Property Adult() As Short
     Public Property Child() As Short
     Public Property ImportDate() As Date
+    Public Property MPImportDate() As Date
     Public Property IncomingAgency() As String
     Public Property BookingStateDesc() As String
     Public Property HotelFlag() As String
@@ -266,6 +268,7 @@ Public Class Booking
     Public Property Mismatch() As Boolean
     Public Property Negative() As Boolean
     Public Property WithError() As Boolean
+    Public Property SysImportDate() As Date
 
 
     Public Function CheckJunk() As Short
@@ -303,6 +306,7 @@ Public Class Booking
         sb.Append(HotelName)
         sb.Append(CountryCode)
         sb.Append(GwgStatus.ToUpper)
+        sb.Append(BookingStatus)
         sb.Append(PurchaseCurrency)
         sb.Append(PurchasePrice.ToString)
         sb.Append(SalesCurrency)
@@ -326,6 +330,7 @@ Public Class Booking
         sb.Append(Adult.ToString)
         sb.Append(Child.ToString)
         sb.Append(ImportDate.ToString)
+        sb.Append(MPImportDate.tostring)
         sb.Append(IncomingAgency)
         sb.Append(BookingStateDesc)
         sb.Append(HotelFlag)
@@ -369,8 +374,18 @@ Public Class Booking
         Dim query As String
         Dim result As Boolean = True
 
-        query = String.Format("EXEC dbo.SaveBooking 0, '{0}', N'{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}', '{36}', '{37}'; ", _
-                                     Reference, HotelCode, HotelName, CountryCode, GwgStatus, PurchaseCurrency, PurchasePrice, SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC, CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom, Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck, DifferenceToPrice, ActionBy, PriceBreakdown, GV.CurrentUser.LoginId, CheckJunk().ToString)
+        query = String.Format("EXEC dbo.SaveBooking 0, '{0}', N'{1}', '{2}', '{3}', '{4}', '{5}', 
+                                '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', 
+                                '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}',
+                                '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}',
+                                '{36}', '{37}'; ",
+                                     Reference, HotelCode, HotelName, CountryCode, GwgStatus, PurchaseCurrency,
+                                     PurchasePrice, SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference,
+                                     CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC, CheckHotel, CompanyGroup,
+                                     BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom,
+                                     Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag,
+                                     MissingBookings, MarginCheck, DifferenceToPrice, ActionBy, PriceBreakdown,
+                                     GV.CurrentUser.LoginId, CheckJunk().ToString)
 
 
         Dim queryResult As String = ExClass.QuerySet(query)
@@ -398,77 +413,76 @@ Public Class Booking
         dt = ExClass.QueryGet(query)
 
         If dt.Rows.Count <> 0 Then
-            BookingID = dt.Rows(0)(0)
-            Reference = dt.Rows(0)(1)
-            HotelCode = dt.Rows(0)(2)
-            HotelName = dt.Rows(0)(3)
-            CountryCode = dt.Rows(0)(4)
-            GwgStatus = dt.Rows(0)(5)
-            PurchaseCurrency = dt.Rows(0)(6)
-            PurchasePrice = dt.Rows(0)(7)
-            SalesCurrency = dt.Rows(0)(8)
-            SalesPrice = dt.Rows(0)(9)
-            GwgHandlingFee = dt.Rows(0)(10)
-            Margin = dt.Rows(0)(11)
-            Difference = dt.Rows(0)(12)
-            CurrencyHotelTC = dt.Rows(0)(13)
-            NetRateHotelTC = dt.Rows(0)(14)
-            NetRateHandlingTC = dt.Rows(0)(15)
-            CheckHotel = dt.Rows(0)(16)
-            CompanyGroup = dt.Rows(0)(17)
-            BookingDate = dt.Rows(0)(18)
-            TravelDate = dt.Rows(0)(19)
-            RoomType = dt.Rows(0)(20)
-            Board = dt.Rows(0)(21)
-            Duration = dt.Rows(0)(22)
-            TransferTo = dt.Rows(0)(23)
-            TransferFrom = dt.Rows(0)(24)
-            Pax = dt.Rows(0)(25)
-            Adult = dt.Rows(0)(26)
-            Child = dt.Rows(0)(27)
-            ImportDate = dt.Rows(0)(28)
-            IncomingAgency = dt.Rows(0)(29)
-            BookingStateDesc = dt.Rows(0)(30)
-            HotelFlag = dt.Rows(0)(31)
-            MissingBookings = dt.Rows(0)(32)
-            MarginCheck = dt.Rows(0)(33)
-            DifferenceToPrice = dt.Rows(0)(34)
-            ActionBy = dt.Rows(0)(35)
+            BookingID = CLng(dt.Rows(0)(0))
+            Reference = CStr(dt.Rows(0)(1))
+            HotelCode = CStr(dt.Rows(0)(2))
+            HotelName = CStr(dt.Rows(0)(3))
+            CountryCode = CStr(dt.Rows(0)(4))
+            GwgStatus = CStr(dt.Rows(0)(5))
+            PurchaseCurrency = CStr(dt.Rows(0)(6))
+            PurchasePrice = CDbl(dt.Rows(0)(7))
+            SalesCurrency = CStr(dt.Rows(0)(8))
+            SalesPrice = CDbl(dt.Rows(0)(9))
+            GwgHandlingFee = CDbl(dt.Rows(0)(10))
+            Margin = CDbl(dt.Rows(0)(11))
+            Difference = CDbl(dt.Rows(0)(12))
+            CurrencyHotelTC = CStr(dt.Rows(0)(13))
+            NetRateHotelTC = CDbl(dt.Rows(0)(14))
+            NetRateHandlingTC = CDbl(dt.Rows(0)(15))
+            CheckHotel = CStr(dt.Rows(0)(16))
+            CompanyGroup = CStr(dt.Rows(0)(17))
+            BookingDate = CDate(dt.Rows(0)(18))
+            TravelDate = CDate(dt.Rows(0)(19))
+            RoomType = CStr(dt.Rows(0)(20))
+            Board = CStr(dt.Rows(0)(21))
+            Duration = CInt(dt.Rows(0)(22))
+            TransferTo = CStr(dt.Rows(0)(23))
+            TransferFrom = CStr(dt.Rows(0)(24))
+            Pax = CShort(dt.Rows(0)(25))
+            Adult = CShort(dt.Rows(0)(26))
+            Child = CShort(dt.Rows(0)(27))
+            ImportDate = CDate(dt.Rows(0)(28))
+            IncomingAgency = CStr(dt.Rows(0)(29))
+            BookingStateDesc = CStr(dt.Rows(0)(30))
+            HotelFlag = CStr(dt.Rows(0)(31))
+            MissingBookings = CStr(dt.Rows(0)(32))
+            MarginCheck = CStr(dt.Rows(0)(33))
+            DifferenceToPrice = CStr(dt.Rows(0)(34))
+            ActionBy = CStr(dt.Rows(0)(35))
             If Not IsDBNull(dt.Rows(0)(36)) Then
-                Status = dt.Rows(0)(36)
+                Status = CStr(dt.Rows(0)(36))
             End If
             If Not IsDBNull(dt.Rows(0)(37)) Then
-                Comments = dt.Rows(0)(37)
+                Comments = CStr(dt.Rows(0)(37))
             End If
             If Not IsDBNull(dt.Rows(0)(38)) Then
-                AdjustedPrice = dt.Rows(0)(38)
+                AdjustedPrice = CStr(dt.Rows(0)(38))
             End If
 
-            PriceBreakdown = dt.Rows(0)(39)
-            LoginID = dt.Rows(0)(40)
-            Junk = dt.Rows(0)(41)
+            PriceBreakdown = CStr(dt.Rows(0)(39))
+            LoginID = CInt(dt.Rows(0)(40))
+            Junk = CBool(dt.Rows(0)(41))
 
             If Not IsDBNull(dt.Rows(0)(42)) Then
-                PurchaseEUR = dt.Rows(0)(42)
+                PurchaseEUR = CDbl(dt.Rows(0)(42))
             End If
             If Not IsDBNull(dt.Rows(0)(43)) Then
-                SalesEUR = dt.Rows(0)(43)
+                SalesEUR = CDbl(dt.Rows(0)(43))
             End If
             If Not IsDBNull(dt.Rows(0)(44)) Then
-                MarginEUR = dt.Rows(0)(44)
+                MarginEUR = CDbl(dt.Rows(0)(44))
             End If
             If Not IsDBNull(dt.Rows(0)(45)) Then
-                NetRateEUR = dt.Rows(0)(45)
+                NetRateEUR = CDbl(dt.Rows(0)(45))
             End If
             If Not IsDBNull(dt.Rows(0)(46)) Then
-                DifferenceEUR = dt.Rows(0)(46)
+                DifferenceEUR = CDbl(dt.Rows(0)(46))
             End If
-            Cancelled = dt.Rows(0)(47) = 1
-            Excessive = dt.Rows(0)(48) = 0
-            Mismatch = dt.Rows(0)(49) = 0
-            Negative = dt.Rows(0)(50) = 0
-            WithError = dt.Rows(0)(48) = 2 Or dt.Rows(0)(49) = 2
-
+            Cancelled = CShort(dt.Rows(0)(47)) = 1
+            Excessive = CShort(dt.Rows(0)(48)) = 0
+            Mismatch = CShort(dt.Rows(0)(49)) = 0
+            Negative = CShort(dt.Rows(0)(50)) = 0
+            WithError = CShort(dt.Rows(0)(48)) = 2 Or CShort(dt.Rows(0)(49)) = 2
             result = True
         End If
         Return result
@@ -519,7 +533,7 @@ Public Class Comment
         Comment = Comment.Replace("'", "''")
         CommentDate = Now
         LoginID = GV.CurrentUser.LoginId
-        Dim calcText As String = Calculation
+        Dim calcText As String = Calculation.ToString
         If Calculation = Nothing Then
             calcText = "NULL"
         End If
@@ -552,7 +566,7 @@ Public Class Destination
 
         Dim queryResult As New DataTable()
         queryResult = ExClass.QueryGet(query)
-        If queryResult.Rows(0)(0) = 0 Then
+        If CInt(queryResult.Rows(0)(0)) = 0 Then
             result = True
         End If
         Return result
@@ -589,8 +603,8 @@ Public Class Destination
         dt = ExClass.QueryGet(query)
 
         If dt.Rows.Count <> 0 Then
-            DestinationCode = dt.Rows(0)(1)
-            Destination = dt.Rows(0)(2)
+            DestinationCode = CStr(dt.Rows(0)(1))
+            Destination = CStr(dt.Rows(0)(2))
 
             result = True
         End If
@@ -611,7 +625,7 @@ Public Class TourOperator
 
         Dim queryResult As New DataTable()
         queryResult = ExClass.QueryGet(query)
-        If queryResult.Rows(0)(0) = 0 Then
+        If CInt(queryResult.Rows(0)(0)) = 0 Then
             result = True
         End If
         Return result
@@ -647,7 +661,7 @@ Public Class TourOperator
         dt = ExClass.QueryGet(query)
 
         If dt.Rows.Count <> 0 Then
-            TourOperator = dt.Rows(0)(1)
+            TourOperator = CStr(dt.Rows(0)(1))
 
             result = True
         End If
@@ -701,14 +715,14 @@ Public Class Margin
         dt = ExClass.QueryGet(query)
 
         If dt.Rows.Count <> 0 Then
-            MarginId = dt.Rows(0)(0)
-            DestinationId = dt.Rows(0)(1)
-            TourOperatorId = dt.Rows(0)(2)
-            MarginFrom = dt.Rows(0)(3)
-            MarginTo = dt.Rows(0)(4)
-            DifferenceFrom = dt.Rows(0)(5)
-            DifferenceTo = dt.Rows(0)(6)
-            EffectiveDate = dt.Rows(0)(7)
+            MarginId = CInt(dt.Rows(0)(0))
+            DestinationId = CInt(dt.Rows(0)(1))
+            TourOperatorId = CInt(dt.Rows(0)(2))
+            MarginFrom = CSng(dt.Rows(0)(3))
+            MarginTo = CSng(dt.Rows(0)(4))
+            DifferenceFrom = CSng(dt.Rows(0)(5))
+            DifferenceTo = CSng(dt.Rows(0)(6))
+            EffectiveDate = CDate(dt.Rows(0)(7))
             result = True
         End If
 
@@ -771,11 +785,11 @@ Public Class Currency
         dt = ExClass.QueryGet(query)
 
         If dt.Rows.Count <> 0 Then
-            CurrencyId = dt.Rows(0)(0)
-            Currency = dt.Rows(0)(1)
-            Rate = dt.Rows(0)(2)
-            EffectiveDate = dt.Rows(0)(3)
-            LoginID = dt.Rows(0)(4)
+            CurrencyId = CInt(dt.Rows(0)(0))
+            Currency = CStr(dt.Rows(0)(1))
+            Rate = CDec(dt.Rows(0)(2))
+            EffectiveDate = CDate(dt.Rows(0)(3))
+            LoginID = CInt(dt.Rows(0)(4))
             result = True
         End If
 

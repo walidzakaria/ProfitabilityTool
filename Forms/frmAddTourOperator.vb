@@ -54,7 +54,7 @@ Partial Public Class frmAddTourOperator
     End Sub
 
     Private Sub CloseTourOperator()
-        Me.DialogResult = Windows.Forms.DialogResult.Cancel
+        Me.DialogResult = DialogResult.Cancel
         Me.Close()
     End Sub
     Private Sub SaveTourOperator()
@@ -64,7 +64,7 @@ Partial Public Class frmAddTourOperator
             tourOperator.TourOperatorID = tourOperatorID
             If tourOperator.UniqueCode() Then
                 If tourOperator.SaveTourOperator() Then
-                    Me.DialogResult = Windows.Forms.DialogResult.OK
+                    Me.DialogResult = DialogResult.OK
                     Me.Close()
                 End If
             Else

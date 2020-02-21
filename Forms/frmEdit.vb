@@ -42,36 +42,36 @@ Partial Public Class frmEdit
 
     Private Sub UpdateBooking()
         With currentBooking
-            .HotelCode = txtHotelCode.EditValue
-            .HotelName = txtHotelName.EditValue
-            .CountryCode = txtCountry.EditValue
+            .HotelCode = CStr(txtHotelCode.EditValue)
+            .HotelName = CStr(txtHotelName.EditValue)
+            .CountryCode = CStr(txtCountry.EditValue)
             .GwgStatus = cbGWGStatus.Properties.GetDisplayText(cbGWGStatus.SelectedIndex)
-            '.GwgStatus = cbGWGStatus.SelectedItem.ToString
-            .PurchaseCurrency = txtPurchaseCurrency.EditValue
-            .PurchasePrice = txtPurchasePrice.EditValue
-            .SalesCurrency = txtSalesCurrency.EditValue
-            .SalesPrice = txtSalesPrice.EditValue
-            .GwgHandlingFee = txtHandlingFee.EditValue
-            .Margin = txtMargin.EditValue
-            .Difference = txtDifference.EditValue
-            .CurrencyHotelTC = txtCurrencyHotelTc.EditValue
-            .NetRateHotelTC = txtNetRateHotelTc.EditValue
-            .NetRateHandlingTC = txtNetRateHandlingTc.EditValue
-            .CheckHotel = txtHotelCheck.EditValue
-            .CompanyGroup = txtCompanyGroup.EditValue
-            .BookingDate = deBookingDate.EditValue
-            .TravelDate = deTravelDate.EditValue
-            .RoomType = txtRoomType.EditValue
-            .Board = txtBaord.EditValue
-            .Duration = txtDuration.EditValue
-            .TransferTo = txtTransferTo.EditValue
-            .TransferFrom = txtTransferFrom.EditValue
-            .Pax = txtPax.EditValue
-            .Adult = txtAdult.EditValue
-            .Child = txtChild.EditValue
-            .ImportDate = deImportDate.EditValue
-            .IncomingAgency = txtIncomingAgency.EditValue
-            .BookingStateDesc = txtBookingStateDesc.EditValue
+
+            .PurchaseCurrency = CStr(txtPurchaseCurrency.EditValue)
+            .PurchasePrice = CDbl(txtPurchasePrice.EditValue)
+            .SalesCurrency = CStr(txtSalesCurrency.EditValue)
+            .SalesPrice = CDbl(txtSalesPrice.EditValue)
+            .GwgHandlingFee = CDbl(txtHandlingFee.EditValue)
+            .Margin = CDbl(txtMargin.EditValue)
+            .Difference = CDbl(txtDifference.EditValue)
+            .CurrencyHotelTC = CStr(txtCurrencyHotelTc.EditValue)
+            .NetRateHotelTC = CDbl(txtNetRateHotelTc.EditValue)
+            .NetRateHandlingTC = CDbl(txtNetRateHandlingTc.EditValue)
+            .CheckHotel = CStr(txtHotelCheck.EditValue)
+            .CompanyGroup = CStr(txtCompanyGroup.EditValue)
+            .BookingDate = CDate(deBookingDate.EditValue)
+            .TravelDate = CDate(deTravelDate.EditValue)
+            .RoomType = CStr(txtRoomType.EditValue)
+            .Board = CStr(txtBaord.EditValue)
+            .Duration = CInt(txtDuration.EditValue)
+            .TransferTo = CStr(txtTransferTo.EditValue)
+            .TransferFrom = CStr(txtTransferFrom.EditValue)
+            .Pax = CShort(txtPax.EditValue)
+            .Adult = CShort(txtAdult.EditValue)
+            .Child = CShort(txtChild.EditValue)
+            .ImportDate = CDate(deImportDate.EditValue)
+            .IncomingAgency = CStr(txtIncomingAgency.EditValue)
+            .BookingStateDesc = CStr(txtBookingStateDesc.EditValue)
 
         End With
 
@@ -147,11 +147,11 @@ Partial Public Class frmEdit
                 If currentBooking.GetHashCode <> tempBooking.GetHashCode Then
                     Dim diaResult As DialogResult
                     diaResult = MessageBox.Show("Want to save changes to " & currentBooking.Reference & "?", "Save", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
-                    If diaResult = Windows.Forms.DialogResult.Yes Then
+                    If diaResult = DialogResult.Yes Then
                         If currentBooking.Save() Then
                             UpdateChangedRow()
                         End If
-                    ElseIf diaResult = Windows.Forms.DialogResult.Cancel Then
+                    ElseIf diaResult = DialogResult.Cancel Then
                         e.Cancel = True
                     End If
                 End If
@@ -220,7 +220,7 @@ Partial Public Class frmEdit
         dt.Columns.Add("Calculation")
         dt.Columns.Add("Status", GetType(Integer))
 
-        dt = ExClass.QueryGet(query)
+        dt = CType(ExClass.QueryGet(query), DataTable)
 
         GridControl1.DataSource = dt
 
@@ -286,22 +286,22 @@ Partial Public Class frmEdit
     End Sub
 
     Private Sub btnSaveComment_Click(sender As Object, e As EventArgs) Handles btnSaveComment.Click
-        If luStatus.EditValue = Nothing Then
+        If luStatus.EditValue Is Nothing Then
             MsgBox("Please enter status!")
             luStatus.Focus()
-        ElseIf txtComment.EditValue = "" Then
+        ElseIf CStr(txtComment.EditValue) = "" Then
             MsgBox("please enter comment!")
             txtComment.Focus()
         Else
             frmMain.Wait(True)
             Dim comment = New Comment()
-            comment.Status = luStatus.EditValue
-            comment.Comment = txtComment.EditValue
+            comment.Status = CStr(luStatus.EditValue)
+            comment.Comment = CStr(txtComment.EditValue)
             comment.BookingID = currentBooking.BookingID
-            If txtCalculation.EditValue = "" Then
+            If CStr(txtCalculation.EditValue) = "" Then
                 comment.Calculation = Nothing
             Else
-                comment.Calculation = txtCalculation.EditValue
+                comment.Calculation = CSng(txtCalculation.EditValue)
             End If
 
             If bookingsList.Count = 0 Then
@@ -328,10 +328,10 @@ Partial Public Class frmEdit
 
     Private Sub UpdateBookingStatus(ByVal multiple As Boolean, ByVal status As String, ByVal actionBy As String, ByVal comment As String, ByVal adjustedPrice As Double)
 
-        currentBooking.Status = luStatus.EditValue
+        currentBooking.Status = CStr(luStatus.EditValue)
         currentBooking.ActionBy = actionBy
         currentBooking.Comments = comment
-        currentBooking.AdjustedPrice = adjustedPrice
+        currentBooking.AdjustedPrice = CStr(adjustedPrice)
         If Not multiple Then
             frmMain.UpdateCertainRow(frmMain.GridView1.FocusedRowHandle, currentBooking)
         Else
@@ -341,7 +341,7 @@ Partial Public Class frmEdit
         End If
     End Sub
     Private Sub txtComment_EditValueChanged(sender As Object, e As EventArgs) Handles txtComment.EditValueChanged
-        Dim textCalc As Single = ExClass.CalculateText(txtComment.EditValue)
+        Dim textCalc As Single = ExClass.CalculateText(CStr(txtComment.EditValue))
         If textCalc <> 0 Then
             txtCalculation.Text = textCalc.ToString
         End If

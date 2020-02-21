@@ -6,10 +6,10 @@
     End Sub
 
     Private Sub btnRun_Click(sender As Object, e As EventArgs) Handles btnRun.Click
-        If meQuery.EditValue = "" Then
+        If CStr(meQuery.EditValue) = "" Then
             Exit Sub
         End If
-        Dim query As String = meQuery.EditValue
+        Dim query As String = CStr(meQuery.EditValue)
 
         If query.ToLower Like "*select*" Then
             Dim dt As New DataTable()

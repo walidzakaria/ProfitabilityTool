@@ -45,7 +45,7 @@ Public Class frmManageUsers
             If IsDBNull(gridView.GetFocusedRowCellValue("LoginID")) Then
                 Exit Sub
             End If
-            Dim loginId As Integer = gridView.GetFocusedRowCellValue("LoginID")
+            Dim loginId As Integer = CInt(gridView.GetFocusedRowCellValue("LoginID"))
             frmUserSettings.userId = loginId
             frmUserSettings.ShowDialog()
         End If
@@ -54,7 +54,7 @@ Public Class frmManageUsers
     Private Sub AddNewUser()
         frmAddUser.userId = 0
         frmAddUser.ShowDialog()
-        If frmAddUser.DialogResult = Windows.Forms.DialogResult.OK Then
+        If frmAddUser.DialogResult = DialogResult.OK Then
             LoadAllUsers()
         End If
     End Sub
@@ -63,10 +63,10 @@ Public Class frmManageUsers
         If IsDBNull(gridView.GetFocusedRowCellValue("LoginID")) Then
             Exit Sub
         End If
-        Dim loginId As Integer = gridView.GetFocusedRowCellValue("LoginID")
+        Dim loginId As Integer = CInt(gridView.GetFocusedRowCellValue("LoginID"))
         frmAddUser.userId = loginId
         frmAddUser.ShowDialog()
-        If frmAddUser.DialogResult = Windows.Forms.DialogResult.OK Then
+        If frmAddUser.DialogResult = DialogResult.OK Then
             LoadAllUsers()
         End If
     End Sub
@@ -94,9 +94,9 @@ Public Class frmManageUsers
             Exit Sub
         End If
 
-        ID = gridView.GetFocusedRowCellValue("LoginID")
+        ID = CInt(gridView.GetFocusedRowCellValue("LoginID"))
         Dim DiaR As DialogResult = MessageBox.Show("Are you sure you want to reset user password to be '123456'?", "Password Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-        If DiaR = Windows.Forms.DialogResult.Yes Then
+        If DiaR = DialogResult.Yes Then
             Dim user As New Login()
             user.LoginId = ID
             If user.ResetPassword() Then

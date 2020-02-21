@@ -10,7 +10,7 @@ Public Class SendMail
         oApp = New Interop.Outlook.Application
 
         Dim oMsg As Interop.Outlook._MailItem
-        oMsg = oApp.CreateItem(Interop.Outlook.OlItemType.olMailItem)
+        oMsg = CType(oApp.CreateItem(OlItemType.olMailItem), _MailItem)
 
         oMsg.Subject = sSubject
         oMsg.Body = sBody

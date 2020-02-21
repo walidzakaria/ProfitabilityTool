@@ -38,18 +38,18 @@ Public Class frmManageMargin
     Private Sub AddNewMargin()
         frmAddMargin.marginId = 0
         frmAddMargin.ShowDialog()
-        If frmAddMargin.DialogResult = Windows.Forms.DialogResult.OK Then
+        If frmAddMargin.DialogResult = DialogResult.OK Then
             LoadAllMargins()
         End If
     End Sub
     Private Sub EditMargin()
         Dim marginId As Integer
-        marginId = gridView.GetFocusedRowCellValue("MarginID")
+        marginId = CInt(gridView.GetFocusedRowCellValue("MarginID"))
         If marginId <> 0 Then
             frmAddMargin.marginId = marginId
 
             frmAddMargin.ShowDialog()
-            If frmAddMargin.DialogResult = Windows.Forms.DialogResult.OK Then
+            If frmAddMargin.DialogResult = DialogResult.OK Then
                 LoadAllMargins()
             End If
         End If
@@ -57,10 +57,10 @@ Public Class frmManageMargin
 
     Private Sub DeleteMargin()
         Dim marginId As Integer
-        marginId = gridView.GetFocusedRowCellValue("MarginID")
+        marginId = CInt(gridView.GetFocusedRowCellValue("MarginID"))
         If marginId <> 0 Then
             Dim diaR As DialogResult = MessageBox.Show("Are you sure you want to delete this record?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If diaR = Windows.Forms.DialogResult.Yes Then
+            If diaR = DialogResult.Yes Then
                 Dim margin As New Margin()
                 margin.MarginId = marginId
                 If margin.DeleteById() Then

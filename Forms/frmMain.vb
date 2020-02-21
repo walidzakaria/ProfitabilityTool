@@ -372,9 +372,9 @@ Partial Public Class frmMain
 
         Dim startDate, endDate As Date
         Dim destination As String
-        startDate = beDateFrom.EditValue
-        endDate = beDateTo.EditValue
-        destination = beCountry.EditValue
+        startDate = CDate(beDateFrom.EditValue)
+        endDate = CDate(beDateTo.EditValue)
+        destination = CStr(beCountry.EditValue)
 
         Dim querySelect As String = "SELECT BookingID, Reference, HotelCode, HotelName, HotelCountry, GwgStatus, PurchaseCurrency, PurchasePrice," _
                                     & " SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC," _
@@ -420,7 +420,7 @@ Partial Public Class frmMain
             Dim bookingsList As New List(Of Integer)
 
             For Each i As Integer In GridView1.GetSelectedRows
-                bookingsList.Add(GridView1.GetRowCellValue(i, "BookingID"))
+                bookingsList.Add(CInt(GridView1.GetRowCellValue(i, "BookingID")))
             Next
             frmEdit.bookingsList = bookingsList
             frmEdit.ShowDialog()
@@ -481,7 +481,7 @@ Partial Public Class frmMain
     End Sub
 
     Private Sub beDateFrom_EditValueChanged(sender As Object, e As EventArgs) Handles beDateFrom.EditValueChanged
-        My.Settings.RibbonDateFrom = beDateFrom.EditValue
+        My.Settings.RibbonDateFrom = CDate(beDateFrom.EditValue)
         My.Settings.Save()
     End Sub
 
@@ -502,7 +502,7 @@ Partial Public Class frmMain
     End Sub
 
     Private Sub beCountry_EditValueChanged(sender As Object, e As EventArgs) Handles beCountry.EditValueChanged
-        My.Settings.Destination = beCountry.EditValue
+        My.Settings.Destination = cstr(beCountry.EditValue)
         My.Settings.Save()
     End Sub
 
@@ -612,7 +612,7 @@ Partial Public Class frmMain
     Private Sub GridView1_Click(sender As Object, e As EventArgs) Handles GridView1.Click
         If GridView1.FocusedColumn.Caption = "PriceBreakdown" Then
             Dim link As String
-            link = GridView1.GetFocusedRowCellValue("PriceBreakdown")
+            link = CStr(GridView1.GetFocusedRowCellValue("PriceBreakdown"))
             If link <> "" Then
                 Process.Start(link)
             End If

@@ -44,18 +44,18 @@ Public Class frmManageDestinations
     Private Sub AddNewDestination()
         frmAddDestination.destinationId = 0
         frmAddDestination.ShowDialog()
-        If frmAddDestination.DialogResult = Windows.Forms.DialogResult.OK Then
+        If frmAddDestination.DialogResult = DialogResult.OK Then
             LoadAllDestinations()
         End If
     End Sub
 
     Private Sub EditDestination()
         Dim destinationId As Integer
-        destinationId = gridView.GetFocusedRowCellValue("DestinationID")
+        destinationId = CInt(gridView.GetFocusedRowCellValue("DestinationID"))
         If destinationId <> 0 Then
             frmAddDestination.destinationId = destinationId
             frmAddDestination.ShowDialog()
-            If frmAddDestination.DialogResult = Windows.Forms.DialogResult.OK Then
+            If frmAddDestination.DialogResult = DialogResult.OK Then
                 LoadAllDestinations()
             End If
         End If

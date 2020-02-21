@@ -35,18 +35,18 @@ Public Class frmManageTourOperator
         frmAddTourOperator.tourOperatorID = 0
         frmAddTourOperator.ShowDialog()
 
-        If frmAddTourOperator.DialogResult = Windows.Forms.DialogResult.OK Then
+        If frmAddTourOperator.DialogResult = DialogResult.OK Then
             LoadAllTourOperators()
         End If
     End Sub
 
     Private Sub EditTourOperator()
         Dim tourOperatorID As Integer
-        tourOperatorID = gridView.GetFocusedRowCellValue("TourOperatorID")
+        tourOperatorID = CInt(gridView.GetFocusedRowCellValue("TourOperatorID"))
         If tourOperatorID <> 0 Then
             frmAddTourOperator.tourOperatorID = tourOperatorID
             frmAddTourOperator.ShowDialog()
-            If frmAddTourOperator.DialogResult = Windows.Forms.DialogResult.OK Then
+            If frmAddTourOperator.DialogResult = DialogResult.OK Then
                 LoadAllTourOperators()
             End If
         End If
