@@ -267,7 +267,7 @@ Public Class Booking
     Public Property Excessive() As Boolean
     Public Property Mismatch() As Boolean
     Public Property Negative() As Boolean
-    Public Property WithError() As Boolean
+    Public Property ErrorLog() As String
     Public Property SysImportDate() As Date
 
 
@@ -344,8 +344,9 @@ Public Class Booking
     End Function
 
     Public Function Username() As Login
-        Dim result As New Login()
-        result.LoginId = LoginID
+        Dim result As New Login With {
+            .LoginId = LoginID
+        }
         result.GetById()
 
         Return result
@@ -370,6 +371,23 @@ Public Class Booking
         End Select
         Return result
     End Function
+
+    Public Function BookingStatusNumber() As Integer
+        Dim result As Integer
+        Select Case BookingStatus.ToUpper
+            Case "NEW"
+                result = 0
+            Case "AME"
+                result = 1
+            Case "CAN"
+                result = 2
+            Case "BNA"
+                result = 3
+            Case Else
+                result = -1
+        End Select
+        Return result
+    End Function
     Public Function Save() As Boolean
         Dim query As String
         Dim result As Boolean = True
@@ -378,14 +396,14 @@ Public Class Booking
                                 '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', 
                                 '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}',
                                 '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}',
-                                '{36}', '{37}'; ",
+                                '{36}', '{37}', '{38}', '{39}'; ",
                                      Reference, HotelCode, HotelName, CountryCode, GwgStatus, PurchaseCurrency,
                                      PurchasePrice, SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference,
                                      CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC, CheckHotel, CompanyGroup,
                                      BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom,
                                      Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag,
                                      MissingBookings, MarginCheck, DifferenceToPrice, ActionBy, PriceBreakdown,
-                                     GV.CurrentUser.LoginId, CheckJunk().ToString)
+                                     GV.CurrentUser.LoginId, CheckJunk().ToString, BookingStatus, MPImportDate)
 
 
         Dim queryResult As String = ExClass.QuerySet(query)
@@ -399,15 +417,18 @@ Public Class Booking
 
     Public Function GetByID() As Boolean
         Dim result As Boolean = False
-        Dim query As String = "SELECT BookingID, Reference, HotelCode, HotelName, HotelCountry, GwgStatus, PurchaseCurrency, PurchasePrice," _
-                              & " SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC," _
-                              & " CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom," _
-                              & " Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck," _
-                              & " DifferenceTOPrice, dbo.ActionBy(BookingID) AS ActionBy, dbo.LastStatus(BookingID) AS Status, dbo.LastComment(BookingID) AS Comments," _
-                              & " dbo.AdjustedPrice(BookingID) AS AdjustedPrice, PriceBreakdown, LoginID, Junk, PurchasePriceEUR, SalesPriceEUR, MarginEUR, NetRateEUR," _
-                              & " DifferenceEUR, (CASE WHEN GWGStatus = 'Can' THEN 1 ELSE 0 END) AS Cancelled, dbo.ExcessiveMargin(BookingID) AS Excessive," _
-                              & " dbo.Mismatch(BookingID) AS Mismatch, dbo.NegativeMargin(BookingID) AS NegativeMargin" _
-                              & " FROM Booking WHERE BookingID = " & BookingID.ToString & ";"
+        Dim query As String = "SELECT BookingID, Reference, HotelCode, HotelName, HotelCountry, GwgStatus, PurchaseCurrency, PurchasePrice,
+                                SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC,
+                                CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom,
+                                Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck,
+                                DifferenceTOPrice, [Login].Username AS ActionBy, [Status], Comments,
+                                AdjustedPrice, PriceBreakdown, Booking.LoginID, Junk, PurchasePriceEUR, SalesPriceEUR, MarginEUR, NetRateEUR,
+                                DifferenceEUR, (CASE WHEN GWGStatus = 'Can' THEN 1 ELSE 0 END) AS Cancelled, ExcessiveMargin AS Excessive,
+                                MismatchCalc As Mismatch, NegativeMargin,
+                                BookingStatus, MPImportDate, [Log]
+                                From Booking
+                                JOIN [Login] ON [Login].LoginID = Booking.ActionBy
+                                WHERE BookingID = " & BookingID.ToString & ";"
 
         Dim dt As New DataTable()
         dt = ExClass.QueryGet(query)
@@ -479,10 +500,14 @@ Public Class Booking
                 DifferenceEUR = CDbl(dt.Rows(0)(46))
             End If
             Cancelled = CShort(dt.Rows(0)(47)) = 1
-            Excessive = CShort(dt.Rows(0)(48)) = 0
-            Mismatch = CShort(dt.Rows(0)(49)) = 0
-            Negative = CShort(dt.Rows(0)(50)) = 0
-            WithError = CShort(dt.Rows(0)(48)) = 2 Or CShort(dt.Rows(0)(49)) = 2
+            Excessive = CShort(dt.Rows(0)(48)) = 1
+            Mismatch = CShort(dt.Rows(0)(49)) = 1
+            Negative = CShort(dt.Rows(0)(50)) = 1
+            ErrorLog = CStr(dt.Rows(0)(53))
+            BookingStatus = CStr(dt.Rows(0)(51))
+            If Not IsDBNull(dt.Rows(0)(52)) Then
+                MPImportDate = CDate(dt.Rows(0)(52))
+            End If
             result = True
         End If
         Return result
@@ -499,8 +524,9 @@ Public Class Comment
     Public Property LoginID() As Integer
 
     Public Function Username() As Login
-        Dim result As New Login()
-        result.LoginId = LoginID
+        Dim result As New Login With {
+            .LoginId = LoginID
+        }
         result.GetById()
         Return result
     End Function

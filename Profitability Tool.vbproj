@@ -8,7 +8,7 @@
     <ProjectGuid>{9EA76985-7AA0-4804-BAE4-FE037D03B837}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ProfitabilityTool</RootNamespace>
-    <AssemblyName>Profitability Tool</AssemblyName>
+    <AssemblyName>Profitability_Tool</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <OptionExplicit>On</OptionExplicit>

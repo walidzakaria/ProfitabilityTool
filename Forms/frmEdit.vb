@@ -46,7 +46,7 @@ Partial Public Class frmEdit
             .HotelName = CStr(txtHotelName.EditValue)
             .CountryCode = CStr(txtCountry.EditValue)
             .GwgStatus = cbGWGStatus.Properties.GetDisplayText(cbGWGStatus.SelectedIndex)
-
+            .BookingStatus = cbBookingStatus.Properties.GetDisplayText(cbBookingStatus.SelectedIndex)
             .PurchaseCurrency = CStr(txtPurchaseCurrency.EditValue)
             .PurchasePrice = CDbl(txtPurchasePrice.EditValue)
             .SalesCurrency = CStr(txtSalesCurrency.EditValue)
@@ -70,8 +70,10 @@ Partial Public Class frmEdit
             .Adult = CShort(txtAdult.EditValue)
             .Child = CShort(txtChild.EditValue)
             .ImportDate = CDate(deImportDate.EditValue)
+            .MPImportDate = CDate(deMPImportDate.EditValue)
             .IncomingAgency = CStr(txtIncomingAgency.EditValue)
             .BookingStateDesc = CStr(txtBookingStateDesc.EditValue)
+            .PriceBreakdown = CStr(txtPriceBreakdown.EditValue)
 
         End With
 
@@ -92,6 +94,7 @@ Partial Public Class frmEdit
             txtHotelName.EditValue = .HotelName
             txtCountry.EditValue = .CountryCode
             cbGWGStatus.SelectedIndex = .GwgStatusNumber()
+            cbBookingStatus.SelectedIndex = .BookingStatusNumber()
             txtPurchaseCurrency.EditValue = .PurchaseCurrency
             txtPurchasePrice.EditValue = .PurchasePrice
             txtSalesCurrency.EditValue = .SalesCurrency
@@ -118,6 +121,8 @@ Partial Public Class frmEdit
             txtIncomingAgency.EditValue = .IncomingAgency
             txtBookingStateDesc.EditValue = .BookingStateDesc
             txtUser.EditValue = .Username().Username
+            deMPImportDate.EditValue = .MPImportDate
+            txtPriceBreakdown.EditValue = .PriceBreakdown
 
             'show log data
             txtPurchaseEUR.EditValue = .PurchaseEUR
@@ -129,7 +134,7 @@ Partial Public Class frmEdit
             If .Cancelled Then txtCancelled.EditValue = "YES" Else txtCancelled.EditValue = "NO"
             If .Excessive Then txtExcessive.EditValue = "YES" Else txtExcessive.EditValue = "NO"
             If .Mismatch Then txtMismatching.EditValue = "YES" Else txtMismatching.EditValue = "NO"
-            If .WithError Then txtError.EditValue = "YES" Else txtError.EditValue = "NO"
+            txtError.EditValue = .ErrorLog
             If .Negative Then txtNegative.EditValue = "YES" Else txtNegative.EditValue = "NO"
 
         End With

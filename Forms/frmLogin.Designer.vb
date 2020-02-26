@@ -102,6 +102,7 @@ Partial Class frmLogin
         Me.txtUserName.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
         Me.txtUserName.Properties.Appearance.Options.UseFont = True
         Me.txtUserName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.txtUserName.Properties.Padding = New System.Windows.Forms.Padding(3, 0, 3, 0)
         Me.txtUserName.Size = New System.Drawing.Size(323, 24)
         Me.txtUserName.TabIndex = 0
         '
@@ -113,6 +114,7 @@ Partial Class frmLogin
         Me.txtPassword.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
         Me.txtPassword.Properties.Appearance.Options.UseFont = True
         Me.txtPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.txtPassword.Properties.Padding = New System.Windows.Forms.Padding(3, 0, 3, 0)
         Me.txtPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(323, 24)
         Me.txtPassword.TabIndex = 1

@@ -59,8 +59,7 @@ Partial Public Class frmMain
 
         ResetGridLayout()
 
-        Dim dt As New DataTable()
-        dt = ParseText()
+        Dim dt As DataTable = ParseText()
         GridControl1.DataSource = dt
         GridView1.BestFitColumns()
         Wait(False)
@@ -86,6 +85,7 @@ Partial Public Class frmMain
         result.Columns.Add("HotelName")
         result.Columns.Add("HotelCountry")
         result.Columns.Add("GwgStatus")
+        result.Columns.Add("BookingStatus")
         result.Columns.Add("PurchaseCurrency")
         result.Columns.Add("PurchasePrice")
         result.Columns.Add("SalesCurrency")
@@ -109,6 +109,7 @@ Partial Public Class frmMain
         result.Columns.Add("Adult")
         result.Columns.Add("Child")
         result.Columns.Add("ImportDate")
+        result.Columns.Add("MPImportDate")
         result.Columns.Add("IncomingAgency")
         result.Columns.Add("BookingStateDesc")
         result.Columns.Add("HotelFlag")
@@ -156,6 +157,7 @@ Partial Public Class frmMain
         Dim hotelName As String
         Dim hotelCountry As String
         Dim gwgStatus As String
+        Dim bookingStatus As String
         Dim purchaseCurrency As String
         Dim purchasePrice As String
         Dim salesCurrency As String
@@ -179,6 +181,7 @@ Partial Public Class frmMain
         Dim adult As String
         Dim child As String
         Dim importDate As String
+        Dim mpImportDate As String
         Dim incomingAgency As String
         Dim bookingStateDesc As String
         Dim hotelFlag As String
@@ -191,6 +194,7 @@ Partial Public Class frmMain
         Dim junk As Boolean
 
         For x = 0 To GridView1.RowCount - 1
+
             If GridView1.GetRowCellValue(x, "BookingID").ToString = "0" Then
 
                 With GridView1
@@ -199,6 +203,7 @@ Partial Public Class frmMain
                     hotelName = Replace(.GetRowCellValue(x, "HotelName").ToString, "'", "''")
                     hotelCountry = .GetRowCellValue(x, "HotelCountry").ToString
                     gwgStatus = .GetRowCellValue(x, "GwgStatus").ToString
+                    bookingStatus = .GetRowCellValue(x, "BookingStatus").ToString
                     purchaseCurrency = .GetRowCellValue(x, "PurchaseCurrency").ToString
                     purchasePrice = Val(.GetRowCellValue(x, "PurchasePrice").ToString.Replace(",", "")).ToString
                     salesCurrency = .GetRowCellValue(x, "SalesCurrency").ToString
@@ -222,13 +227,14 @@ Partial Public Class frmMain
                     adult = .GetRowCellValue(x, "Adult").ToString
                     child = .GetRowCellValue(x, "Child").ToString
                     importDate = TextToDate(.GetRowCellValue(x, "ImportDate").ToString).ToString("MM/dd/yyyy")
+                    mpImportDate = TextToDate(.GetRowCellValue(x, "MPImportDate").ToString).ToString("MM/dd/yyyy")
                     incomingAgency = .GetRowCellValue(x, "IncomingAgency").ToString
                     bookingStateDesc = .GetRowCellValue(x, "BookingStateDesc").ToString
                     hotelFlag = .GetRowCellValue(x, "HotelFlag").ToString
                     missingBookings = .GetRowCellValue(x, "MissingBookings").ToString
                     marginCheck = .GetRowCellValue(x, "MarginCheck").ToString
                     differenceTOPrice = .GetRowCellValue(x, "DifferenceTOPrice").ToString
-                    actionBy = .GetRowCellValue(x, "ActionBy").ToString
+                    ' actionBy = .GetRowCellValue(x, "ActionBy").ToString
                     priceBreakdown = .GetRowCellValue(x, "PriceBreakdown").ToString
 
                 End With
@@ -243,14 +249,26 @@ Partial Public Class frmMain
                     End If
 
 
-                    junk = Booking.CheckJunk(gwgStatus, marginCheck, Val(netRateHotelTC), hotelName)
-                    lineText = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', N'{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}', '{34}', '{35}', {36}, {37}; ", _
-                                             reference, hotelCode, hotelName, hotelCountry, gwgStatus, purchaseCurrency, purchasePrice, salesCurrency, salesPrice, gwgHandlingFee, margin, difference, currencyHotelTC, netRateHotelTC, netRateHandlingTC, checkHotel, companyGroup, bookingDate, traveldate, roomType, board, duration, transferTo, transferFrom, pax, adult, child, importDate, incomingAgency, bookingStateDesc, hotelFlag, missingBookings, marginCheck, differenceTOPrice, actionBy, priceBreakdown, loginId, junk.ToString)
+                    junk = CBool(Booking.CheckJunk(gwgStatus, marginCheck, Val(netRateHotelTC), hotelName))
+                    lineText = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', N'{2}', '{3}', '{4}', '{5}', '{6}',
+                                            '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', 
+                                            '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}',
+                                            '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}',
+                                            '{34}', '{35}', {36}, {37}, '{38}', '{39}'; ",
+                                                reference, hotelCode, hotelName, hotelCountry, gwgStatus,
+                                                purchaseCurrency, purchasePrice, salesCurrency, salesPrice,
+                                                gwgHandlingFee, margin, difference, currencyHotelTC, netRateHotelTC,
+                                                netRateHandlingTC, checkHotel, companyGroup, bookingDate, traveldate,
+                                                roomType, board, duration, transferTo, transferFrom, pax, adult, child,
+                                                importDate, incomingAgency, bookingStateDesc, hotelFlag, missingBookings,
+                                                marginCheck, differenceTOPrice, actionBy, priceBreakdown, loginId,
+                                                junk.ToString, bookingStatus, mpImportDate)
 
                     query &= lineText
                 End If
 
                 noNewRecords = False
+
             End If
 
         Next
@@ -280,6 +298,7 @@ Partial Public Class frmMain
             .Rows(rowHandle).SetField("HotelName", booking.HotelName)
             .Rows(rowHandle).SetField("HotelCountry", booking.CountryCode)
             .Rows(rowHandle).SetField("GwgStatus", booking.GwgStatus)
+            .Rows(rowHandle).SetField("BookingStatus", booking.BookingStatus)
             .Rows(rowHandle).SetField("PurchaseCurrency", booking.PurchaseCurrency)
             .Rows(rowHandle).SetField("PurchasePrice", booking.PurchasePrice)
             .Rows(rowHandle).SetField("SalesCurrency", booking.SalesCurrency)
@@ -303,6 +322,7 @@ Partial Public Class frmMain
             .Rows(rowHandle).SetField("Adult", booking.Adult)
             .Rows(rowHandle).SetField("Child", booking.Child)
             .Rows(rowHandle).SetField("ImportDate", booking.ImportDate)
+            .Rows(rowHandle).SetField("MPImportDate", booking.MPImportDate)
             .Rows(rowHandle).SetField("IncomingAgency", booking.IncomingAgency)
             .Rows(rowHandle).SetField("BookingStateDesc", booking.BookingStateDesc)
             .Rows(rowHandle).SetField("HotelFlag", booking.HotelFlag)
@@ -355,19 +375,17 @@ Partial Public Class frmMain
         Return result
     End Function
 
-    Private Sub LoadData(ByVal status As String)
+    Private Sub LoadData(ByVal status As String, ByVal allCountries As Boolean)
 
-        If beCountry.EditValue Is Nothing Then
+        If beCountry.EditValue Is Nothing And Not allCountries Then
             MsgBox("Please select destination!")
             Exit Sub
-        ElseIf GV.CurrentUser.UserOperators = "" Then
+        ElseIf GV.CurrentUser.UserOperators = "" And Not allCountries Then
             MsgBox("You don't have permission to view data!")
             Exit Sub
         End If
 
         Wait(True)
-
-
 
 
         Dim startDate, endDate As Date
@@ -376,30 +394,41 @@ Partial Public Class frmMain
         endDate = CDate(beDateTo.EditValue)
         destination = CStr(beCountry.EditValue)
 
-        Dim querySelect As String = "SELECT BookingID, Reference, HotelCode, HotelName, HotelCountry, GwgStatus, PurchaseCurrency, PurchasePrice," _
-                                    & " SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC," _
-                                    & " CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom," _
-                                    & " Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck," _
-                                    & " DifferenceTOPrice, dbo.ActionBy(BookingID) AS ActionBy, dbo.LastStatus(BookingID) AS Status, dbo.LastComment(BookingID) AS Comments," _
-                                    & " dbo.AdjustedPrice(BookingID) AS AdjustedPrice, PriceBreakdown, LoginID, Junk" _
-                                    & " FROM Booking "
+
+        Dim querySelect As String = "SELECT BookingID, Reference, HotelCode, HotelName, HotelCountry, GwgStatus, PurchaseCurrency, PurchasePrice,
+                                    SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC,
+                                    CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom,
+                                    Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck,
+                                    DifferenceTOPrice, [Login].Username AS ActionBy, [Status], Comments,
+                                    AdjustedPrice, PriceBreakdown, Booking.LoginID, Junk, BookingStatus, MPImportDate
+                                    FROM Booking 
+                                    JOIN [Login] ON [Login].LoginID = Booking.ActionBy"
 
 
-        Dim query As String = String.Format("{0}" _
-                              & " WHERE HotelCountry = '{1}' AND (TravelDate BETWEEN '{2}' AND '{3}') AND CompanyGroup IN {4} {5};", querySelect, destination, _
-                              startDate.ToString("MM/dd/yyyy"), endDate.ToString("MM/dd/yyyy"), GV.CurrentUser.UserOperators, status)
+        Dim query As String
+        If Not allCountries Then
+            query = String.Format("{0}
+                              WHERE HotelCountry = '{1}' AND (TravelDate BETWEEN '{2}' AND '{3}') AND CompanyGroup IN {4} {5};" _
+                              , querySelect, destination,
+                              startDate.ToString("MM/dd/yyyy"), endDate.ToString("MM/dd/yyyy"),
+                              GV.CurrentUser.UserOperators, status)
+        Else
+            query = String.Format("{0}
+                              WHERE (TravelDate BETWEEN '{1}' AND '{2}' {3});" _
+                              , querySelect,
+                              startDate.ToString("MM/dd/yyyy"), endDate.ToString("MM/dd/yyyy"), status)
 
+        End If
 
         BookingDT = ExClass.QueryGet(query)
         GridControl1.DataSource = BookingDT
-
 
         Wait(False)
 
     End Sub
 
     Private Sub btnLoad_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnLoad.ItemClick
-        LoadData("")
+        LoadData("", False)
     End Sub
 
     Private Sub RemoveRows()
@@ -507,17 +536,18 @@ Partial Public Class frmMain
     End Sub
 
     Private Sub btnJunk_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnJunk.ItemClick
-        LoadData("AND Junk = 1 AND GwgStatus != 'Can'")
+        LoadData("AND Junk = 1 AND GwgStatus != 'Can'", False)
     End Sub
 
     Private Sub brnCanceled_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles brnCanceled.ItemClick
-        LoadData("AND GwgStatus = 'Can'")
+        LoadData("AND GwgStatus = 'Can'", False)
     End Sub
 
     Private Sub btnMatching_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMatching.ItemClick
         Dim status As String
-        status = " AND Junk = 0 AND GwgStatus != 'Can' AND dbo.NegativeMargin(BookingID) = 1 AND dbo.ExcessiveMargin(BookingID) = 1 AND dbo.Mismatch(BookingID) = 1"
-        LoadData(status)
+        status = " AND Junk = 0 AND GwgStatus != 'Can' AND NegativeMargin = 0 
+                    AND ExcessiveMargin = 0 AND MismatchCalc = 0"
+        LoadData(status, False)
     End Sub
 
     Private Sub btnShowDefict_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnShowDefict.ItemClick
@@ -529,22 +559,22 @@ Partial Public Class frmMain
         End If
 
         If bcNegative.Checked Then
-            status &= "dbo.NegativeMargin(BookingID) = 0"
+            status &= "NegativeMargin = 1"
         End If
         If bcExcessive.Checked Then
             If bcNegative.Checked Then
                 status &= " OR "
             End If
-            status &= "dbo.ExcessiveMargin(BookingID) = 0"
+            status &= "ExcessiveMargin = 1"
         End If
         If bcMismatch.Checked Then
             If bcNegative.Checked Or bcExcessive.Checked Then
                 status &= " OR "
             End If
-            status &= "dbo.Mismatch(BookingID) = 0"
+            status &= "MismatchCalc = 1"
         End If
         status &= ");"
-        LoadData(status)
+        LoadData(status, False)
 
     End Sub
 
@@ -556,35 +586,35 @@ Partial Public Class frmMain
         End If
 
         If bcPendingDmc.Checked Then
-            status &= "dbo.Dispute(BookingID) = 'PENDING DMC'"
+            status &= "Dispute = 'PENDING DMC'"
         End If
 
         If bcFixedDmc.Checked Then
             If bcPendingDmc.Checked Then
                 status &= " OR "
             End If
-            status &= "dbo.Dispute(BookingID) = 'FIXED DMC'"
+            status &= "Dispute = 'FIXED DMC'"
         End If
         If bcPendingTo.Checked Then
             If bcPendingDmc.Checked Or bcFixedDmc.Checked Then
                 status &= " OR "
             End If
-            status &= "dbo.Dispute(BookingID) = 'PENDING T/O'"
+            status &= "Dispute = 'PENDING T/O'"
         End If
         If bcFixedTo.Checked Then
             If bcPendingDmc.Checked Or bcFixedDmc.Checked Or bcPendingTo.Checked Then
                 status &= " OR "
             End If
-            status &= "dbo.Dispute(BookingID) = 'FIXED T/O'"
+            status &= "Dispute = 'FIXED T/O'"
         End If
         If bcNewRecord.Checked Then
             If bcPendingDmc.Checked Or bcFixedDmc.Checked Or bcPendingTo.Checked Or bcFixedTo.Checked Then
                 status &= " OR "
             End If
-            status &= "dbo.Dispute(BookingID) IS NULL"
+            status &= "Dispute = ''"
         End If
         status &= ");"
-        LoadData(status)
+        LoadData(status, False)
     End Sub
 
     Private Sub btnAddDispute_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAddDispute.ItemClick
@@ -601,8 +631,8 @@ Partial Public Class frmMain
 
     Private Sub btnErrors_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnErrors.ItemClick
         Dim status As String
-        status = " AND (dbo.ExcessiveMargin(BookingID) = 2 OR dbo.Mismatch(BookingID) = 2)"
-        LoadData(status)
+        status = " AND (MissingCurrency = 1 OR MissingDestination = 1 OR MissingTO = 1 OR MissingMargin = 1)"
+        LoadData(status, True)
     End Sub
 
     Private Sub btnAbout_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAbout.ItemClick
