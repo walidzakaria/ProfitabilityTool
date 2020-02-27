@@ -43,7 +43,7 @@ Partial Public Class frmAddCurrency
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.dataLayoutControl1.SuspendLayout()
+        Me.dataLayoutControl1.SuspendLayout
         CType(Me.txtCurrency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtRate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.deEffectiveDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,7 +53,7 @@ Partial Public Class frmAddCurrency
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.SuspendLayout
         '
         'dataLayoutControl1
         '

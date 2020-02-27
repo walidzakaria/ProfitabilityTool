@@ -52,7 +52,7 @@ Partial Public Class frmAddMargin
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         Me.DxValidationProvider2 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.dataLayoutControl1.SuspendLayout()
+        Me.dataLayoutControl1.SuspendLayout
         CType(Me.txtMarginFrom.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtMarginTo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.deEffectiveDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,7 +71,7 @@ Partial Public Class frmAddMargin
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DxValidationProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.SuspendLayout
         '
         'dataLayoutControl1
         '

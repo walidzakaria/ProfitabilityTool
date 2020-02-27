@@ -329,7 +329,7 @@ Partial Public Class frmMain
             .Rows(rowHandle).SetField("MissingBookings", booking.MissingBookings)
             .Rows(rowHandle).SetField("MarginCheck", booking.MarginCheck)
             .Rows(rowHandle).SetField("DifferenceTOPrice", booking.DifferenceToPrice)
-            .Rows(rowHandle).SetField("ActionBy", booking.ActionBy)
+            .Rows(rowHandle).SetField("ActionBy", booking.LastUser.Username)
             .Rows(rowHandle).SetField("Status", booking.Status)
             .Rows(rowHandle).SetField("Comments", booking.Comments)
             .Rows(rowHandle).SetField("AdjustedPrice", booking.AdjustedPrice)
@@ -348,7 +348,7 @@ Partial Public Class frmMain
         For x = 0 To GridView1.RowCount - 1
             If GridView1.IsRowSelected(x) Then
                 With BookingDT
-                    .Rows(x).SetField("ActionBy", booking.ActionBy)
+                    .Rows(x).SetField("ActionBy", booking.LastUser.Username)
                     .Rows(x).SetField("Status", booking.Status)
                     .Rows(x).SetField("Comments", booking.Comments)
                     If adjustPrice Then
@@ -551,7 +551,7 @@ Partial Public Class frmMain
     End Sub
 
     Private Sub btnShowDefict_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnShowDefict.ItemClick
-        Dim status As String = " AND Junk = 0 AND GwgStatus != 'Can' AND ("
+        Dim status As String = " AND Junk = 0 AND GwgStatus != 'Can' AND [Status] IS NULL AND ("
 
         If Not bcExcessive.Checked And Not bcNegative.Checked And Not bcMismatch.Checked Then
             MsgBox("Please select at least one option!")
@@ -586,32 +586,32 @@ Partial Public Class frmMain
         End If
 
         If bcPendingDmc.Checked Then
-            status &= "Dispute = 'PENDING DMC'"
+            status &= "[Status] = 'PENDING DMC'"
         End If
 
         If bcFixedDmc.Checked Then
             If bcPendingDmc.Checked Then
                 status &= " OR "
             End If
-            status &= "Dispute = 'FIXED DMC'"
+            status &= "[Status] = 'FIXED DMC'"
         End If
         If bcPendingTo.Checked Then
             If bcPendingDmc.Checked Or bcFixedDmc.Checked Then
                 status &= " OR "
             End If
-            status &= "Dispute = 'PENDING T/O'"
+            status &= "[Status] = 'PENDING T/O'"
         End If
         If bcFixedTo.Checked Then
             If bcPendingDmc.Checked Or bcFixedDmc.Checked Or bcPendingTo.Checked Then
                 status &= " OR "
             End If
-            status &= "Dispute = 'FIXED T/O'"
+            status &= "[Status] = 'FIXED T/O'"
         End If
         If bcNewRecord.Checked Then
             If bcPendingDmc.Checked Or bcFixedDmc.Checked Or bcPendingTo.Checked Or bcFixedTo.Checked Then
                 status &= " OR "
             End If
-            status &= "Dispute = ''"
+            status &= "[Status] IS NULL"
         End If
         status &= ");"
         LoadData(status, False)

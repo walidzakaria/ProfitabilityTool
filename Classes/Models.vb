@@ -251,7 +251,7 @@ Public Class Booking
     Public Property MissingBookings() As String
     Public Property MarginCheck() As String
     Public Property DifferenceToPrice() As String
-    Public Property ActionBy() As String
+    Public Property ActionBy() As Integer
     Public Property Status() As String
     Public Property Comments() As String
     Public Property AdjustedPrice() As String
@@ -353,6 +353,14 @@ Public Class Booking
 
     End Function
 
+    Public Function LastUser() As Login
+        Dim result As New Login With {
+            .LoginId = ActionBy
+        }
+        result.GetById()
+        Return result
+    End Function
+
     Public Function GwgStatusNumber() As Integer
         Dim result As Integer
         Select Case GwgStatus.ToUpper
@@ -421,7 +429,7 @@ Public Class Booking
                                 SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC,
                                 CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom,
                                 Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck,
-                                DifferenceTOPrice, [Login].Username AS ActionBy, [Status], Comments,
+                                DifferenceTOPrice, ActionBy, [Status], Comments,
                                 AdjustedPrice, PriceBreakdown, Booking.LoginID, Junk, PurchasePriceEUR, SalesPriceEUR, MarginEUR, NetRateEUR,
                                 DifferenceEUR, (CASE WHEN GWGStatus = 'Can' THEN 1 ELSE 0 END) AS Cancelled, ExcessiveMargin AS Excessive,
                                 MismatchCalc As Mismatch, NegativeMargin,
@@ -469,7 +477,8 @@ Public Class Booking
             MissingBookings = CStr(dt.Rows(0)(32))
             MarginCheck = CStr(dt.Rows(0)(33))
             DifferenceToPrice = CStr(dt.Rows(0)(34))
-            ActionBy = CStr(dt.Rows(0)(35))
+
+            ActionBy = CInt(dt.Rows(0)(35))
             If Not IsDBNull(dt.Rows(0)(36)) Then
                 Status = CStr(dt.Rows(0)(36))
             End If
@@ -543,7 +552,9 @@ Public Class Comment
         End If
         query = String.Format("INSERT INTO Comment (Date, BookingID, Comment, Calculation, LoginID, Status) VALUES ('{0}', {1},'{2}', {3}, {4}, '{5}');", _
                               CommentDate.ToString("MM/dd/yyyy HH:mm"), BookingID, Comment, calcText, LoginID, Status)
-
+        query &= String.Format(" UPDATE Booking SET ActionBy = dbo.ActionBy(BookingID), Comments = dbo.LastComment(BookingID),
+                                AdjustedPrice = dbo.AdjustedPrice(BookingID), [Status] = dbo.LastStatus(BookingID)
+                                WHERE BookingID = {0};", BookingID.ToString)
 
         Dim queryResult As String = ExClass.QuerySet(query)
         If queryResult <> "True" Then
@@ -569,6 +580,9 @@ Public Class Comment
                                    CommentDate.ToString("MM/dd/yyyy HH:mm"), bookingsList(x).ToString, Comment, calcText, LoginID, Status)
         Next
         query = query.Substring(0, Len(query) - 2)
+        query &= String.Format("; UPDATE Booking SET ActionBy = dbo.ActionBy(BookingID), Comments = dbo.LastComment(BookingID),
+                                AdjustedPrice = dbo.AdjustedPrice(BookingID), [Status] = dbo.LastStatus(BookingID)
+                                WHERE BookingID IN ({0});", String.Join(", ", bookingsList.ToArray))
 
         Dim queryResult As String = ExClass.QuerySet(query)
         If queryResult <> "True" Then

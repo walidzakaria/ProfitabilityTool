@@ -123,7 +123,7 @@ Partial Public Class frmEdit
             txtUser.EditValue = .Username().Username
             deMPImportDate.EditValue = .MPImportDate
             txtPriceBreakdown.EditValue = .PriceBreakdown
-
+            txtActionBy.EditValue = .LastUser.Username
             'show log data
             txtPurchaseEUR.EditValue = .PurchaseEUR
             txtSalesEUR.EditValue = .SalesEUR
@@ -185,8 +185,11 @@ Partial Public Class frmEdit
     End Sub
 
     Private Sub frmEdit_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
-        If e.Control And e.KeyCode = Keys.S Then
+        If e.Control And e.KeyCode = Keys.S And TabbedControlGroup2.SelectedTabPageIndex = 0 Then
             SaveCurrent()
+        ElseIf e.Control And e.KeyCode = Keys.S And TabbedControlGroup2.SelectedTabPageIndex = 2 _
+            And grpAddNewComment.Visibility = Utils.LayoutVisibility.Always Then
+            btnSaveComment.PerformClick()
         ElseIf e.KeyCode = Keys.Escape Then
             Me.Close()
         End If
@@ -261,10 +264,10 @@ Partial Public Class frmEdit
                                     currentBooking.Reference, Today.ToString("dd.MM.yy"))
             body = String.Format("Dear {0}," & vbNewLine & vbNewLine & "Ref# {1}." & vbNewLine & "Please check this booking" _
                                  & vbNewLine & vbNewLine & "BR" & vbNewLine & "{2}",
-                                 currentBooking.Username.FullName,
+                                 currentBooking.LastUser.FullName,
                                  currentBooking.Reference, GV.CurrentUser.FullName)
 
-            SendMail.SetEmailSend(subject, body, currentBooking.Username.Mail, "")
+            SendMail.SetEmailSend(subject, body, currentBooking.LastUser.Mail, "")
 
         End If
 
@@ -312,14 +315,14 @@ Partial Public Class frmEdit
             If bookingsList.Count = 0 Then
                 If comment.Save() Then
                     GetComments()
-                    UpdateBookingStatus(False, comment.Status, GV.CurrentUser.Username, comment.Comment, comment.Calculation)
+                    UpdateBookingStatus(False, comment.Status, GV.CurrentUser.LoginId, comment.Comment, comment.Calculation)
                     grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
 
                     ClearComment()
                 End If
             Else
                 If comment.SaveMulti(bookingsList) Then
-                    UpdateBookingStatus(True, comment.Status, GV.CurrentUser.Username, comment.Comment, comment.Calculation)
+                    UpdateBookingStatus(True, comment.Status, GV.CurrentUser.LoginId, comment.Comment, comment.Calculation)
                     grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
 
                     ClearComment()
@@ -331,7 +334,7 @@ Partial Public Class frmEdit
         End If
     End Sub
 
-    Private Sub UpdateBookingStatus(ByVal multiple As Boolean, ByVal status As String, ByVal actionBy As String, ByVal comment As String, ByVal adjustedPrice As Double)
+    Private Sub UpdateBookingStatus(ByVal multiple As Boolean, ByVal status As String, ByVal actionBy As Integer, ByVal comment As String, ByVal adjustedPrice As Double)
 
         currentBooking.Status = CStr(luStatus.EditValue)
         currentBooking.ActionBy = actionBy
