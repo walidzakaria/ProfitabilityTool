@@ -1,6 +1,4 @@
-﻿Imports System.ComponentModel
-Imports System.Text
-Imports DevExpress.LookAndFeel
+﻿Imports DevExpress.LookAndFeel
 
 
 Partial Public Class frmMain
@@ -150,7 +148,7 @@ Partial Public Class frmMain
         Wait(True)
         Dim query As String = ""
         Dim noNewRecords As Boolean = True
-        Dim lineText As String = ""
+        Dim lineText As String
 
         Dim reference As String
         Dim hotelCode As String
@@ -234,7 +232,7 @@ Partial Public Class frmMain
                     missingBookings = .GetRowCellValue(x, "MissingBookings").ToString
                     marginCheck = .GetRowCellValue(x, "MarginCheck").ToString
                     differenceTOPrice = .GetRowCellValue(x, "DifferenceTOPrice").ToString
-                    ' actionBy = .GetRowCellValue(x, "ActionBy").ToString
+                    actionBy = .GetRowCellValue(x, "ActionBy").ToString
                     priceBreakdown = .GetRowCellValue(x, "PriceBreakdown").ToString
 
                 End With

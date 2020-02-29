@@ -12,9 +12,9 @@
     End Sub
 
     Private Sub LoadOperators()
-        Dim dt As New DataTable()
+
         Dim query As String = "SELECT * FROM TourOperator ORDER BY TourOperator;"
-        dt = CType(ExClass.QueryGet(query), DataTable)
+        Dim dt As DataTable = ExClass.QueryGet(query)
 
         clbOperator.DataSource = dt
         clbOperator.DisplayMember = "TourOperator"
@@ -26,8 +26,8 @@
                                             & " FROM UserDestination, Destination" _
                                             & " WHERE UserDestination.DestinationID = Destination.DestinationId" _
                                             & " AND UserDestination.UserID = {0};", userId.ToString)
-        Dim dt As New DataTable()
-        dt = CType(ExClass.QueryGet(query), DataTable)
+
+        Dim dt As DataTable = ExClass.QueryGet(query)
         clbDestination.UnCheckAll()
 
         Dim destination As String = ""
@@ -51,8 +51,7 @@
                                             & " AND UserOperator.UserID = {0};", userId.ToString)
 
 
-        Dim dt As New DataTable()
-        dt = CType(ExClass.QueryGet(query), DataTable)
+        Dim dt As DataTable = ExClass.QueryGet(query)
         clbOperator.UnCheckAll()
 
         Dim tourOperator As String = ""

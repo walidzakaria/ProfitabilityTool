@@ -1,6 +1,5 @@
-﻿Public Class frmSQL 
+﻿Public Class frmSQL
 
-    
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         meQuery.EditValue = Nothing
     End Sub
@@ -23,7 +22,6 @@
                 MsgBox(ex.ToString)
             End Try
 
-            
         Else
             ExClass.QuerySet(query)
         End If
@@ -37,7 +35,4 @@
         End If
     End Sub
 
-    Private Sub frmSQL_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

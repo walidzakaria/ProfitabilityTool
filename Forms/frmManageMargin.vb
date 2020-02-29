@@ -1,18 +1,11 @@
-﻿Imports System.ComponentModel
-Imports System.ComponentModel.DataAnnotations
-Imports DevExpress.XtraBars
-Imports DevExpress.XtraEditors
-Imports System.Data.SqlClient
-
-Public Class frmManageMargin
+﻿Public Class frmManageMargin
     Private Sub LoadAllMargins()
 
         Dim query As String = "SELECT Ma.MarginID, De.Destination, TourOperator.TourOperator, Ma.MarginFrom, Ma.MarginTo, Ma.DifferenceFrom, Ma.DifferenceTo, Ma.EffectiveDate" _
                               & " FROM Margin Ma, Destination De, TourOperator" _
                               & " WHERE Ma.DestinationID = De.DestinationID AND Ma.TourOperatorID = TourOperator.TourOperatorID;"
 
-        Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
+        Dim dt As DataTable = ExClass.QueryGet(query)
         gridControl.DataSource = dt
     End Sub
 

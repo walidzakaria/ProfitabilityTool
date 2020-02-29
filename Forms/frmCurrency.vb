@@ -1,9 +1,4 @@
-﻿Imports System.ComponentModel
-Imports System.ComponentModel.DataAnnotations
-Imports DevExpress.XtraBars
-Imports DevExpress.XtraEditors
-Imports System.Data.SqlClient
-
+﻿
 Public Class frmCurrency
     Private Sub LoadAllCurrencies()
 

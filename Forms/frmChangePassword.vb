@@ -66,9 +66,6 @@
                     MsgBox("Failed to change your password!")
                 End If
             End If
-
-
-
         End If
     End Sub
 End Class

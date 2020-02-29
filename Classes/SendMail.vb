@@ -21,7 +21,5 @@ Public Class SendMail
         frmMain.Wait(False)
         oMsg.Display(True)
 
-
-
     End Sub
 End Class

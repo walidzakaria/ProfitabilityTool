@@ -1,26 +1,9 @@
-﻿Imports System.ComponentModel
-Imports System.ComponentModel.DataAnnotations
-Imports DevExpress.XtraBars
-Imports DevExpress.XtraEditors
-Imports System.Data.SqlClient
-
-Public Class frmManageDestinations
+﻿Public Class frmManageDestinations
     Private Sub LoadAllDestinations()
 
         Dim query As String = "SELECT * FROM Destination ORDER BY Destination;"
-        'Dim adapter As New SqlDataAdapter(query, ExClass.myConn)
-        'Dim ds As New DataSet()
-        'ds.Reset()
 
-
-
-        'gridControl.DataSource = Nothing
-        'adapter.Fill(ds)
-        'gridControl.DataSource = ds.Tables(0)
-
-
-        Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
+        Dim dt As DataTable = ExClass.QueryGet(query)
         gridControl.DataSource = dt
     End Sub
 

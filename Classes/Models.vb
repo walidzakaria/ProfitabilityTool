@@ -8,7 +8,7 @@ End Class
 Public Class Login
     Public Property LoginId() As Integer
     Public Property Username() As String
-    Public Property FullName() As String
+    Public Property Fullname() As String
     Public Property Mail() As String
     Public Property Password() As String
     Public Property Authority() As String
@@ -69,7 +69,7 @@ Public Class Login
         Dim result As Boolean = True
         Dim query As String = "SELECT COUNT(*) FROM Login WHERE Username = '" & Username & "' AND LoginID != " & LoginId.ToString & ";"
 
-        Dim dt As DataTable = CType(ExClass.QueryGet(query), DataTable)
+        Dim dt As DataTable = ExClass.QueryGet(query)
 
         If CType(dt.Rows(0)(0), Integer) <> 0 Then
             result = False
@@ -80,8 +80,8 @@ Public Class Login
     End Function
 
     Public Function Signup() As Boolean
-        Dim result As Boolean = False
-        FullName = StrConv(FullName, VbStrConv.ProperCase)
+        Dim result As Boolean
+        Fullname = StrConv(FullName, VbStrConv.ProperCase)
         Mail = Mail.ToLower
 
         Dim query As String = String.Format("INSERT INTO Login (Username, FullName, Mail, Password, Authority, Active) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', {5});", _
@@ -92,8 +92,8 @@ Public Class Login
     End Function
 
     Public Function Update() As Boolean
-        Dim result As Boolean = False
-        FullName = StrConv(FullName, VbStrConv.ProperCase)
+        Dim result As Boolean
+        Fullname = StrConv(FullName, VbStrConv.ProperCase)
         Mail = Mail.ToLower
 
         Dim query As String = String.Format("UPDATE Login SET Username = '{0}', FullName = '{1}', Mail = '{2}', Authority = '{3}', Active = {4} WHERE LoginID = {5}", _
@@ -124,8 +124,8 @@ Public Class Login
     Public Function GetById() As Boolean
         Dim result As Boolean = False
         Dim query As String = "SELECT * FROM Login WHERE LoginID = " & LoginId & ";"
-        Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
+
+        Dim dt As DataTable = ExClass.QueryGet(query)
 
         If dt.Rows.Count <> 0 Then
             Username = CType(dt.Rows(0)(1), String)
@@ -144,8 +144,8 @@ Public Class Login
     Public Function GetByUsername() As Boolean
         Dim result As Boolean = False
         Dim query As String = "SELECT * FROM Login WHERE Username = '" & Username & "';"
-        Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
+
+        Dim dt As DataTable = ExClass.QueryGet(query)
 
         If dt.Rows.Count <> 0 Then
             LoginId = CType(dt.Rows(0)(0), Integer)
@@ -169,14 +169,15 @@ Public Class Login
                               & " FROM UserDestination, Destination" _
                               & " WHERE UserDestination.DestinationID = Destination.DestinationId" _
                               & " AND UserID = " & LoginId.ToString & ";"
-        Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
-        Dim tempDestination As New Destination()
+
+        Dim dt As DataTable = ExClass.QueryGet(query)
+
         For x = 0 To dt.Rows.Count - 1
-            tempDestination = New Destination()
-            tempDestination.DestinationId = CInt(dt.Rows(x)(0))
-            tempDestination.DestinationCode = CStr(dt.Rows(x)(1))
-            tempDestination.Destination = CStr(dt.Rows(x)(2))
+            Dim tempDestination As Destination = New Destination With {
+                .DestinationId = CInt(dt.Rows(x)(0)),
+                .DestinationCode = CStr(dt.Rows(x)(1)),
+                .Destination = CStr(dt.Rows(x)(2))
+            }
             result.Add(tempDestination)
         Next
 
@@ -190,8 +191,8 @@ Public Class Login
                               & " FROM UserOperator, TourOperator" _
                               & " WHERE UserOperator.TourOperatorID = TourOperator.TourOperatorID" _
                               & " AND UserID = " & LoginId.ToString & ";"
-        Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
+
+        Dim dt As DataTable = ExClass.QueryGet(query)
         Dim tempOperator As String
         For x = 0 To dt.Rows.Count - 1
             tempOperator = CStr(dt.Rows(x)(1))
@@ -604,8 +605,7 @@ Public Class Destination
         Dim query As String
         query = "SELECT COUNT(*) FROM Destination WHERE DestinationCode = '" & DestinationCode & "' AND DestinationID != " & DestinationId & ";"
 
-        Dim queryResult As New DataTable()
-        queryResult = ExClass.QueryGet(query)
+        Dim queryResult As DataTable = ExClass.QueryGet(query)
         If CInt(queryResult.Rows(0)(0)) = 0 Then
             result = True
         End If
@@ -639,8 +639,8 @@ Public Class Destination
     Public Function GetById() As Boolean
         Dim result As Boolean = False
         Dim query As String = "SELECT * FROM Destination WHERE DestinationID = " & DestinationId.ToString & ";"
-        Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
+
+        Dim dt As DataTable = ExClass.QueryGet(query)
 
         If dt.Rows.Count <> 0 Then
             DestinationCode = CStr(dt.Rows(0)(1))
@@ -663,8 +663,7 @@ Public Class TourOperator
         Dim query As String
         query = "SELECT COUNT(*) FROM TourOperator WHERE TourOperator = '" & TourOperator & "' AND TourOperatorID != " & TourOperatorID & ";"
 
-        Dim queryResult As New DataTable()
-        queryResult = ExClass.QueryGet(query)
+        Dim queryResult As DataTable = ExClass.QueryGet(query)
         If CInt(queryResult.Rows(0)(0)) = 0 Then
             result = True
         End If
@@ -697,12 +696,11 @@ Public Class TourOperator
     Public Function GetById() As Boolean
         Dim result As Boolean = False
         Dim query As String = "SELECT * FROM TourOperator WHERE TourOperatorID = " & TourOperatorID.ToString & ";"
-        Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
+
+        Dim dt As DataTable = ExClass.QueryGet(query)
 
         If dt.Rows.Count <> 0 Then
             TourOperator = CStr(dt.Rows(0)(1))
-
             result = True
         End If
 
@@ -751,8 +749,8 @@ Public Class Margin
     Public Function GetById() As Boolean
         Dim result As Boolean = False
         Dim query As String = "SELECT * FROM Margin WHERE MarginID = " & MarginId.ToString & ";"
-        Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
+
+        Dim dt As DataTable = ExClass.QueryGet(query)
 
         If dt.Rows.Count <> 0 Then
             MarginId = CInt(dt.Rows(0)(0))
@@ -821,8 +819,8 @@ Public Class Currency
     Public Function GetById() As Boolean
         Dim result As Boolean = False
         Dim query As String = "SELECT * FROM Exchange WHERE ExchangeID = " & CurrencyId.ToString & ";"
-        Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
+
+        Dim dt As DataTable = ExClass.QueryGet(query)
 
         If dt.Rows.Count <> 0 Then
             CurrencyId = CInt(dt.Rows(0)(0))

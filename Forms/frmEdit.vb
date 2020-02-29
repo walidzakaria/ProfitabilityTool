@@ -1,9 +1,5 @@
-﻿Imports System.ComponentModel.DataAnnotations
-Imports System.IO
-Imports DevExpress.XtraLayout.Helpers
-Imports DevExpress.XtraLayout
+﻿Imports DevExpress.XtraLayout
 Imports DevExpress.XtraEditors
-Imports System.Data.SqlClient
 
 Partial Public Class frmEdit
     Public Shared bookingId As Long
@@ -11,17 +7,17 @@ Partial Public Class frmEdit
     Public Shared bookingsList As New List(Of Integer)
     Public Sub New()
         InitializeComponent()
-
     End Sub
     Private Function GetDataSource(ByVal bookingId As Long) As Booking
-        Dim result As New Booking()
-        result.BookingID = bookingId
+        Dim result As New Booking With {
+            .BookingID = bookingId
+        }
         result.GetByID()
         Return result
     End Function
 
     Private Sub PopulateStatusMain()
-        'load status rows
+        ' Load status rows
         Dim dt As New DataTable()
         dt.Columns.Add("ID")
         dt.Columns.Add("Status")
@@ -41,6 +37,7 @@ Partial Public Class frmEdit
     End Sub
 
     Private Sub UpdateBooking()
+
         With currentBooking
             .HotelCode = CStr(txtHotelCode.EditValue)
             .HotelName = CStr(txtHotelName.EditValue)
@@ -74,7 +71,6 @@ Partial Public Class frmEdit
             .IncomingAgency = CStr(txtIncomingAgency.EditValue)
             .BookingStateDesc = CStr(txtBookingStateDesc.EditValue)
             .PriceBreakdown = CStr(txtPriceBreakdown.EditValue)
-
         End With
 
     End Sub
@@ -172,7 +168,6 @@ Partial Public Class frmEdit
         Dim rowHandle As Integer = frmMain.GridView1.LocateByValue("BookingID", currentBooking.BookingID)
         If rowHandle <> DevExpress.XtraGrid.GridControl.InvalidRowHandle Then
             frmMain.GridView1.FocusedRowHandle = rowHandle
-            'frmMain.UpdateCertainRow(rowHandle, currentBooking)
             frmMain.GridView1.SelectRow(rowHandle)
         End If
     End Sub
@@ -235,7 +230,7 @@ Partial Public Class frmEdit
     End Sub
 
     Private Sub SaveCurrent()
-        If GV.CurrentUser.Authority = "Admin" Or GV.CurrentUser.Authority = "MPI" Then
+        If GV.CurrentUser.Authority = "Admin" Or GV.CurrentUser.Authority = "RS" Then
             frmMain.Wait(True)
             UpdateBooking()
             If currentBooking.Save() Then

@@ -1,16 +1,10 @@
-﻿Imports System.ComponentModel
-Imports System.ComponentModel.DataAnnotations
-Imports DevExpress.XtraBars
-Imports DevExpress.XtraEditors
-Imports System.Data.SqlClient
-
+﻿
 Public Class frmManageTourOperator
     Private Sub LoadAllTourOperators()
 
         Dim query As String = "SELECT * FROM TourOperator ORDER BY TourOperator;"
 
-        Dim dt As New DataTable()
-        dt = ExClass.QueryGet(query)
+        Dim dt As DataTable = ExClass.QueryGet(query)
         gridControl.DataSource = dt
     End Sub
 

@@ -1,9 +1,4 @@
-﻿Imports System.ComponentModel.DataAnnotations
-Imports System.IO
-Imports DevExpress.XtraLayout.Helpers
-Imports DevExpress.XtraLayout
-Imports DevExpress.XtraEditors
-Imports DevExpress.XtraEditors.DXErrorProvider
+﻿Imports DevExpress.XtraEditors
 
 Partial Public Class frmAddTourOperator
 

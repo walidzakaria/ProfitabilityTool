@@ -1,9 +1,4 @@
-﻿Imports System.ComponentModel
-Imports System.ComponentModel.DataAnnotations
-Imports DevExpress.XtraBars
-Imports DevExpress.XtraEditors
-
-Public Class frmManageUsers
+﻿Public Class frmManageUsers
 
     Private Sub LoadAuthorityOptions()
         Dim dt As New DataTable()
