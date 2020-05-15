@@ -6,6 +6,7 @@ Public Class SendMail
     Public Shared Sub SetEmailSend(sSubject As String, sBody As String, _
                          sTo As String, sCC As String)
         frmMain.Wait(True)
+
         Dim oApp As Interop.Outlook._Application
         oApp = New Interop.Outlook.Application
 

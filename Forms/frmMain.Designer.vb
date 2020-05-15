@@ -83,6 +83,7 @@
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn41 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn9 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -106,6 +107,7 @@
         Me.GridColumn27 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn28 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn29 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn42 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn30 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn31 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn32 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -120,8 +122,6 @@
         Me.RibbonPageGroup6 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.SplashScreenManager1 = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.ProfitabilityTool.WaitForm1), True, True)
         Me.BarSubItem1 = New DevExpress.XtraBars.BarSubItem()
-        Me.GridColumn41 = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.GridColumn42 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -314,7 +314,7 @@
         'bcNegative
         '
         Me.bcNegative.BindableChecked = True
-        Me.bcNegative.Caption = "Nagative "
+        Me.bcNegative.Caption = "Negative "
         Me.bcNegative.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.bcNegative.Checked = True
         Me.bcNegative.Id = 19
@@ -665,6 +665,15 @@
         Me.GridColumn6.VisibleIndex = 4
         Me.GridColumn6.Width = 50
         '
+        'GridColumn41
+        '
+        Me.GridColumn41.Caption = "BookingStatus"
+        Me.GridColumn41.FieldName = "BookingStatus"
+        Me.GridColumn41.Name = "GridColumn41"
+        Me.GridColumn41.OptionsColumn.AllowEdit = False
+        Me.GridColumn41.Visible = True
+        Me.GridColumn41.VisibleIndex = 5
+        '
         'GridColumn7
         '
         Me.GridColumn7.Caption = "Purchase Currency"
@@ -893,6 +902,15 @@
         Me.GridColumn29.Visible = True
         Me.GridColumn29.VisibleIndex = 28
         '
+        'GridColumn42
+        '
+        Me.GridColumn42.Caption = "MPImportData"
+        Me.GridColumn42.FieldName = "MPImportDate"
+        Me.GridColumn42.Name = "GridColumn42"
+        Me.GridColumn42.OptionsColumn.AllowEdit = False
+        Me.GridColumn42.Visible = True
+        Me.GridColumn42.VisibleIndex = 30
+        '
         'GridColumn30
         '
         Me.GridColumn30.Caption = "IncomingAgency"
@@ -1007,24 +1025,6 @@
         Me.BarSubItem1.Caption = "BarSubItem1"
         Me.BarSubItem1.Id = 28
         Me.BarSubItem1.Name = "BarSubItem1"
-        '
-        'GridColumn41
-        '
-        Me.GridColumn41.Caption = "BookingStatus"
-        Me.GridColumn41.FieldName = "BookingStatus"
-        Me.GridColumn41.Name = "GridColumn41"
-        Me.GridColumn41.OptionsColumn.AllowEdit = False
-        Me.GridColumn41.Visible = True
-        Me.GridColumn41.VisibleIndex = 5
-        '
-        'GridColumn42
-        '
-        Me.GridColumn42.Caption = "MPImportData"
-        Me.GridColumn42.FieldName = "MPImportDate"
-        Me.GridColumn42.Name = "GridColumn42"
-        Me.GridColumn42.OptionsColumn.AllowEdit = False
-        Me.GridColumn42.Visible = True
-        Me.GridColumn42.VisibleIndex = 30
         '
         'frmMain
         '

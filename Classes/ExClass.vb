@@ -2,7 +2,7 @@
 
 
 Public Class ExClass
-    Public Shared myConn As New SqlConnection("Data Source=Walid-PC\Master;Initial Catalog=YT_DB;User ID=UserConnect;Password=wwzzaa")
+    Public Shared myConn As New SqlConnection("Data Source=DESKTOP-5V3S1R4\MASTER;Initial Catalog=YT_DB;User ID=walid;Password=wwzzaa")
     'Public Shared myConn As New SqlConnection("workstation id=rs24profitabilitytool.mssql.somee.com;packet size=4096;user id=waliiid_SQLLogin_1;pwd=nhyb4lqews;data source=rs24profitabilitytool.mssql.somee.com;persist security info=False;initial catalog=rs24profitabilitytool")
 
     Public Shared Function QuerySet(ByVal query As String) As String
