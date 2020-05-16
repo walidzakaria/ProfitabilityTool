@@ -48,3 +48,6 @@ There are four different user profiles with different authority levels:
 - 4.5 GB of available hard disk space (x86)
 - 4.5 GB of available hard disk space (x64)
 - For maintanance a [DevExpress WinForms](https://www.devexpress.com/products/net/controls/winforms/) is needed & [VS.NET](https://visualstudio.microsoft.com/vs/).
+
+## Software License
+Commercial Software.
