@@ -13,7 +13,12 @@ This is a VB.NET windows application that imports daily bookings information, an
 Once you open the Profitability Tool.exe file the following happens:
 
 - A login screen shows up.
-- When loggin, the application main screen shows:
+
+![Login](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Login.png "Login Screen")
+
+- When logged-in, the application main screen shows:
+
+![Main Screen](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Main.png "Main Screen")
 
 There are four different user profiles with different authority levels:
 1. **Admin:** A user profile with the highest permission levels, and aimed to manage user accounts.
