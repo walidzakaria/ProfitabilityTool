@@ -43,7 +43,7 @@ There are four different user profiles with different authority levels:
 ![Administration](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Administration.png "Administration")
 
 In order to have ```Profitability Tool``` running properly, you need to configure the below:
-- **Destinations:** You can find it in the ```Destination``` button in ```Administration``` ribbon group. Every destination should be defined as 2 Letter code and full destination name *(e.g. Code:'EG', Destination: 'Egypt')*.
+- **Destinations:** You can find it in the ```Destination``` button in ```Administration``` ribbon group. Every destination should be defined as 2 Letter code and full destination name *(e.g. Code: "EG", Destination: "Egypt")*.
   ![Destinations](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Destinations.png "Destinations")
 
 - **Tour Operators:** You can find it in the ```T/O``` button in ```Administration``` ribbon group.
@@ -52,7 +52,7 @@ In order to have ```Profitability Tool``` running properly, you need to configur
 - **Currency Exchange:** You can find it in the ```Currency``` button in ```Administration``` ribbon group. Every Currency can be defined with multiple rates based on travel dates.
   ![Currency Exchange](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Currency.png "Currency Exchange")
 
-- **Margins:** You can find it in the ```Margin``` button in ```Administration``` ribbon group. The margin includes the acceptable margin difference range between the purchase price and sales price, also the acceptabled calculation descrepancy range between the ```DMC``` sales calculation and the ```Tour Operator``` cost calculation. The margin should be defined against each destination and tour operator.
+- **Margins:** You can find it in the ```Margin``` button in ```Administration``` ribbon group. The margin includes the acceptable margin difference range between the purchase price and sales price, also the acceptable calculation discrepancy range between the ```DMC``` sales calculation and the ```Tour Operator``` cost calculation. The margin should be defined against each destination and tour operator.
 
   ![Margins](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Manage_Margins.png "Margins")
 
@@ -93,31 +93,31 @@ After saving the booking, they are automatically categorized as:
 - **Deficit:** Deficit bookings are those that don't fulfil one or more of the ```matching parameters```.
 
 #### Those are the matching parameters:
-- **No negative margin:** Sales price is highter than the purchase price.
-- **No excessive margin:** The difference between the sales price and purchase price is within the range of the respecitve margin range.
+- **No negative margin:** Sales price is higher than the purchase price.
+- **No excessive margin:** The difference between the sales price and purchase price is within the range of the respective  margin range.
 - **No mismatch:** The difference between the DMC sales price and the tour operator cost price is within the range of the respective margin range.
 
 ### Filtering the Bookings:
 You can select the desired bookings category by selecting the following:
 1. Select the target destination.
-2. Select trave date from/to.
+2. Select travel date from/to.
 3. Click on the respective category button (Junk, Canceled, Matching, Deficit).
 Then the bookings show up in ```Profitability Tool``` grid.
-You can set further advanced filterations using the grid powerful interactive filteration options. The grid has the below options:
+You can set further advanced filtrations using the grid powerful interactive filtration options. The grid has the below options:
 - **Find:** You can search for any part in any column by pressing ```CTRL + F```.
 - **Filter:** You can add a filter to any column by hovering over the column header, the filter symbol will appear, click on it, and set the desired filter criteria.
 - **Grouping:** You can group the rows against any desired column(s), and on multiple levels. This can be done by selecting the header of the desired column, then *drag & drop* it into the upper part of the grid *(group panel)*.
 - **Sorting:** You can sort the rows by clicking on the desired column header. You can sort from *Ascending* to *Descending* or vice versa by repeating the mouse click.
 - **Rearranging Columns:** Drag the column headers into the desired order.
-- **Show/Hide Columns:** You can hide any column by dragging its header away from the grid. To show it again, righ-click on any column header, and select ```Column Chooser``` a window will appear with all the hidden columns, double-click in the desired column you want to show.
+- **Show/Hide Columns:** You can hide any column by dragging its header away from the grid. To show it again, right-click on any column header, and select ```Column Chooser``` a window will appear with all the hidden columns, double-click in the desired column you want to show.
 
 ### Changing Booking(s) Status
-After showing the desired category, and appling the needed filterations, you can change the booking(s) status by:
+After showing the desired category, and applying the needed filtrations, you can change the booking(s) status by:
 - Double-Click on the selected booking if a single selection.
 - Pressing ```Enter``` key if bulk selection.
 ![Disputes](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Booking_Disputes.png "Disputes")
 
-Then the comments/disputes window shows. In this windows, you can see the older disputes and comments thread, and you can also create a new comment by following the below steps:
+Then the comments/disputes window shows. In this window, you can see the older disputes and comments thread, and you can also create a new comment by following the below steps:
 1. Click on button ```New Comment```.
 2. Change the desired status.
 3. Insert your comment.     *(the smart tool can also detect if you type any calculation and inputs its result into the calculation field)*
@@ -128,7 +128,7 @@ Then the comments/disputes window shows. In this windows, you can see the older 
 - **Pending DMC:** The booking needs to be settled by ```Meeting Point```.
 - **Fixed DMC:** ```Meeting Point``` has settled the booking.
 - **Pending Tour Operator:** The booking needs to be settled by ```the Tour Operator```.
-- **Fixed Tour Operator:**. ```The Tour Operator``` has settled the booking.
+- **Fixed Tour Operator:** ```The Tour Operator``` has settled the booking.
 
 ### Working with Bookings in Dispute
 
@@ -153,7 +153,7 @@ Each DMC or Tour Operator can see its own disputed bookings only *(Fixed and Pen
 - 512 MB of RAM or more.
 - 4.5 GB of available hard disk space (x86) or more.
 - 4.5 GB of available hard disk space (x64) or more.
-- For maintanance a [DevExpress WinForms](https://www.devexpress.com/products/net/controls/winforms/) is needed & [VS.NET](https://visualstudio.microsoft.com/vs/).
+- For maintenance a [DevExpress WinForms](https://www.devexpress.com/products/net/controls/winforms/) is needed & [VS.NET](https://visualstudio.microsoft.com/vs/).
 
 ## Software License
 Commercial Software. Copyright to [FTI Touristik GmbH](http://www.fti.de/).
