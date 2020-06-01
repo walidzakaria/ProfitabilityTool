@@ -1,7 +1,9 @@
 # Profitability Tool
 Copyright to [FTI Touristik](http://www.fti.de/)
 
-This is a VB.NET windows application that imports daily bookings information, and aims to settle the margin profitability for **Meeting Point Internation**, and also to settle the calculation deficit between it and the different tour operators.
+This is a VB.NET Desktop Application that imports daily bookings information, and aims to:
+1. Settle the margin profitability for **Meeting Point Internation** *(difference between purchase & sales price)*.
+2. Settle the calculations deficit between it and its different tour operators.
 
 ## Installation
 1. The [SQL database](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Database%20Script.sql) needs to be hosted into SQL Server. A full database schema is included here.
