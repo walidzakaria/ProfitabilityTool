@@ -1255,7 +1255,7 @@ Partial Public Class frmEdit
         '
         Me.TabbedControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.TabbedControlGroup2.Name = "TabbedControlGroup2"
-        Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup7
+        Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup5
         Me.TabbedControlGroup2.Size = New System.Drawing.Size(738, 504)
         Me.TabbedControlGroup2.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup5, Me.LayoutControlGroup7})
         '
