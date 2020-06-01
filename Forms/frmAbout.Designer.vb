@@ -39,7 +39,7 @@ Partial Class frmAbout
         Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.frmAboutLayoutControl1ConvertedLayout, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.frmAboutLayoutControl1ConvertedLayout.SuspendLayout
+        Me.frmAboutLayoutControl1ConvertedLayout.SuspendLayout()
         CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEdit3.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,7 +53,7 @@ Partial Class frmAbout
         CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout
+        Me.SuspendLayout()
         '
         'frmAboutLayoutControl1ConvertedLayout
         '
@@ -81,7 +81,7 @@ Partial Class frmAbout
         '
         'TextEdit1
         '
-        Me.TextEdit1.EditValue = "Profitability Tool"
+        Me.TextEdit1.EditValue = "Profitability Tool©"
         Me.TextEdit1.Location = New System.Drawing.Point(98, 12)
         Me.TextEdit1.Name = "TextEdit1"
         Me.TextEdit1.Properties.ReadOnly = True
@@ -91,7 +91,7 @@ Partial Class frmAbout
         '
         'TextEdit2
         '
-        Me.TextEdit2.EditValue = "Walid Zakaria"
+        Me.TextEdit2.EditValue = "Walid Zakaria - RedSea24"
         Me.TextEdit2.Location = New System.Drawing.Point(98, 60)
         Me.TextEdit2.Name = "TextEdit2"
         Me.TextEdit2.Properties.ReadOnly = True
@@ -111,7 +111,7 @@ Partial Class frmAbout
         '
         'TextEdit4
         '
-        Me.TextEdit4.EditValue = "RedSea24"
+        Me.TextEdit4.EditValue = "FTI Touristik GmbH"
         Me.TextEdit4.Location = New System.Drawing.Point(98, 108)
         Me.TextEdit4.Name = "TextEdit4"
         Me.TextEdit4.Properties.ReadOnly = True
@@ -161,7 +161,7 @@ Partial Class frmAbout
         Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 96)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
         Me.LayoutControlItem5.Size = New System.Drawing.Size(430, 24)
-        Me.LayoutControlItem5.Text = "Company:"
+        Me.LayoutControlItem5.Text = "Copyright:"
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(83, 13)
         '
         'LayoutControlItem1

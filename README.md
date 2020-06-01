@@ -1,4 +1,4 @@
-# Profitability Tool ![Logo](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/profitability_logo.png)
+# Profitability Tool© ![Logo](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/profitability_logo.png)
 Copyright to [FTI Touristik GmbH](http://www.fti.de/).
 
 ```Profitability Tool``` is a VB.NET Desktop Application that imports daily bookings information and store them. ```Profitability Tool``` mainly aims to:
@@ -44,12 +44,15 @@ There are four different user profiles with different authority levels:
 
 In order to have ```Profitability Tool``` running properly, you need to configure the below:
 - **Destinations:** You can find it in the ```Destination``` button in ```Administration``` ribbon group. Every destination should be defined as 2 Letter code and full destination name *(e.g. Code: "EG", Destination: "Egypt")*.
+
   ![Destinations](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Destinations.png "Destinations")
 
 - **Tour Operators:** You can find it in the ```T/O``` button in ```Administration``` ribbon group.
+  
   ![Tour Operators](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Tour_Operators.png "Tour Operators")
 
 - **Currency Exchange:** You can find it in the ```Currency``` button in ```Administration``` ribbon group. Every Currency can be defined with multiple rates based on travel dates.
+
   ![Currency Exchange](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Currency.png "Currency Exchange")
 
 - **Margins:** You can find it in the ```Margin``` button in ```Administration``` ribbon group. The margin includes the acceptable margin difference range between the purchase price and sales price, also the acceptable calculation discrepancy range between the ```DMC``` sales calculation and the ```Tour Operator``` cost calculation. The margin should be defined against each destination and tour operator.
@@ -73,7 +76,8 @@ In order to have ```Profitability Tool``` running properly, you need to configur
 3. Remove any undesired rows by selecting them, and pressing ```Del``` key.
 4. Save the imported bookings, by clicking ```Save``` button in ```Data``` ribbon group. Make sure that there is no error message pops up, if so, please contact us.
 5. Check if any bookings have missing parameters by clicking on ```Errors``` button in ```Data``` ribbon group. If any bookings appear, you can open every booking, and check the error log.
-![Missing Paramters Log](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Booking_Information_Other_Log.png "Missing Parameters Log")
+
+    ![Missing Paramters Log](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Booking_Information_Other_Log.png "Missing Parameters Log")
 
 6. Fix the missing parameters, and resave the bookings again in order to recalculate those errors with the new parameters.
 7. You can edit a saved booking by double-clicking it, change the data, and ```save```.
@@ -115,7 +119,8 @@ You can set further advanced filtrations using the grid powerful interactive fil
 After showing the desired category, and applying the needed filtrations, you can change the booking(s) status by:
 - Double-Click on the selected booking if a single selection.
 - Pressing ```Enter``` key if bulk selection.
-![Disputes](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Booking_Disputes.png "Disputes")
+
+    ![Disputes](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Booking_Disputes.png "Disputes")
 
 Then the comments/disputes window shows. In this window, you can see the older disputes and comments thread, and you can also create a new comment by following the below steps:
 1. Click on button ```New Comment```.

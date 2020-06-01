@@ -409,10 +409,12 @@ Public Class Booking
                                      Reference, HotelCode, HotelName, CountryCode, GwgStatus, PurchaseCurrency,
                                      PurchasePrice, SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference,
                                      CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC, CheckHotel, CompanyGroup,
-                                     BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom,
-                                     Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag,
+                                     BookingDate.ToString("yyyy-MM-dd"), TravelDate.ToString("yyyy-MM-dd"),
+                                     RoomType, Board, Duration, TransferTo, TransferFrom,
+                                     Pax, Adult, Child, ImportDate.ToString("yyyy-MM-dd"), IncomingAgency,
+                                     BookingStateDesc, HotelFlag,
                                      MissingBookings, MarginCheck, DifferenceToPrice, ActionBy, PriceBreakdown,
-                                     GV.CurrentUser.LoginId, CheckJunk().ToString, BookingStatus, MPImportDate)
+                                     GV.CurrentUser.LoginId, CheckJunk().ToString, BookingStatus, MPImportDate.ToString("yyyy-MM-dd"))
 
 
         Dim queryResult As String = ExClass.QuerySet(query)
