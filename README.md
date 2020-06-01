@@ -1,5 +1,5 @@
 # Profitability Tool
-Copyright to [FTI Touristik](http://www.fti.de/)
+Copyright to [FTI Touristik GmbH](http://www.fti.de/)
 
 This is a VB.NET Desktop Application that imports daily bookings information, and aims to:
 1. Settle the margin profitability for **Meeting Point Internation** *(difference between purchase & sales price)*.
