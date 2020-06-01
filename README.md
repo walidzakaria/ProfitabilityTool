@@ -1,12 +1,12 @@
 # Profitability Tool
 Copyright to [FTI Touristik GmbH](http://www.fti.de/)
 
-This is a VB.NET Desktop Application that imports daily bookings information, and aims to:
-1. Settle the margin profitability for **Meeting Point Internation** *(difference between purchase & sales price)*.
-2. Settle the calculations deficit between it and its different tour operators.
+```Profitability Tool``` a VB.NET Desktop Application that imports daily bookings information and store them, it mainly aims to:
+- Settle the margin profitability for **Meeting Point International** *(difference between purchase & sales price)*.
+- Settle the calculations deficit between **Meeting Point International** and its different **tour operators**.
 
 ## Installation
-1. The [SQL database](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Database%20Script.sql) needs to be hosted into SQL Server. A full database schema is included here.
+1. The [SQL database](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Database%20Script.sql) needs to be hosted into SQL Server. A full database schema is included [here](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Database%20Script.sql).
 2. Copy the files in Debug Folder into the client machines.
 3. Run the executive file ```Profitability_Tool.exe```.
 
@@ -22,6 +22,7 @@ Once you open the Profitability Tool.exe file the following happens:
 
 ![Main Screen](https://github.com/walidzakaria/ProfitabilityTool/blob/master/Screenshots/Main.png "Main Screen")
 
+## User Permissions
 There are four different user profiles with different authority levels:
 1. **Admin:** A user profile with the highest permission levels, and aimed to manage user accounts.
 2. **RS (Red Sea):** A user profile with permissions to ```import, edit``` booking entries.
@@ -39,11 +40,16 @@ There are four different user profiles with different authority levels:
     > Pending DMC
 
     > Pending T/O
+    **Note:** You can change user permission level any time.
 
-### Pre-Configurations
-```
+## Pre-Configurations
+In order to have the ```Profitability Tool``` running properly, you need to configure the below:
+- **Destinations:** You can find it in the ```Destination``` button in ```Administration``` ribbon group. Every destination should be defined as 2 Letter code and full destination name *(e.g. Code:'EG', Destination: 'Egypt')*.
+- **Tour Operators:** You can find it in the ```T/O``` button in ```Administration``` ribbon group.
+- **Currency Exchange:** You can find it in the ```Currency``` button in ```Administration``` ribbon group. Every Currency can be defined with multiple rates based on travel dates.
+- **Margin:** You can find it in the ```Margin``` button in ```Administration``` ribbon group. The margin includes the acceptable margin difference between the purchase price and sales price, also the acceptabled calculation descrepancy between the ```DMC``` sales calculation and the ```Tour Operator``` cost calculation. The margin should be defined against each destination and tour operator.
+- **Users Visibility** To be more secured every single user needs to be granted permission to see which destination and which tour operator. In order to set that, user ```Manage Users``` button in ```Administration``` ribbon group, select the user, and then press button ```Options```.
 
-```
 
 ## Application Screenshots
 
