@@ -48,6 +48,7 @@ Partial Public Class frmManageUsers
         Me.itemLabel = New DevExpress.XtraLayout.LayoutControlItem()
         Me.itemGrid = New DevExpress.XtraLayout.LayoutControlItem()
         Me.windowsUIButtonPanel = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
+        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.layoutControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.layoutControl.SuspendLayout()
         CType(Me.gridControl, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -101,7 +102,7 @@ Partial Public Class frmManageUsers
         '
         'gridView
         '
-        Me.gridView.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn6, Me.GridColumn5, Me.GridColumn3, Me.GridColumn4})
+        Me.gridView.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn6, Me.GridColumn5, Me.GridColumn3, Me.GridColumn4, Me.GridColumn7})
         Me.gridView.GridControl = Me.gridControl
         Me.gridView.Name = "gridView"
         Me.gridView.OptionsCustomization.AllowColumnMoving = False
@@ -127,10 +128,9 @@ Partial Public Class frmManageUsers
         Me.GridColumn2.FieldName = "Username"
         Me.GridColumn2.Name = "GridColumn2"
         Me.GridColumn2.OptionsColumn.AllowEdit = False
-        Me.GridColumn2.OptionsColumn.FixedWidth = True
         Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 0
-        Me.GridColumn2.Width = 150
+        Me.GridColumn2.Width = 125
         '
         'GridColumn6
         '
@@ -140,7 +140,7 @@ Partial Public Class frmManageUsers
         Me.GridColumn6.OptionsColumn.AllowEdit = False
         Me.GridColumn6.Visible = True
         Me.GridColumn6.VisibleIndex = 1
-        Me.GridColumn6.Width = 148
+        Me.GridColumn6.Width = 123
         '
         'GridColumn5
         '
@@ -151,7 +151,7 @@ Partial Public Class frmManageUsers
         Me.GridColumn5.OptionsColumn.AllowEdit = False
         Me.GridColumn5.Visible = True
         Me.GridColumn5.VisibleIndex = 2
-        Me.GridColumn5.Width = 152
+        Me.GridColumn5.Width = 127
         '
         'RepositoryItemTextEdit1
         '
@@ -258,6 +258,17 @@ Partial Public Class frmManageUsers
         Me.windowsUIButtonPanel.Text = "windowsUIButtonPanel"
         Me.windowsUIButtonPanel.UseButtonBackgroundImages = False
         '
+        'GridColumn7
+        '
+        Me.GridColumn7.Caption = "Locked"
+        Me.GridColumn7.FieldName = "Locked"
+        Me.GridColumn7.Name = "GridColumn7"
+        Me.GridColumn7.OptionsColumn.AllowEdit = False
+        Me.GridColumn7.OptionsColumn.FixedWidth = True
+        Me.GridColumn7.Visible = True
+        Me.GridColumn7.VisibleIndex = 5
+        Me.GridColumn7.Width = 70
+        '
         'frmManageUsers
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
@@ -304,4 +315,5 @@ Partial Public Class frmManageUsers
     Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn5 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents RepositoryItemTextEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
+    Friend WithEvents GridColumn7 As DevExpress.XtraGrid.Columns.GridColumn
 End Class

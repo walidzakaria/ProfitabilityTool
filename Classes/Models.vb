@@ -15,6 +15,9 @@ Public Class Login
     Public Property Active() As Boolean
     Public Property UserDestinations() As List(Of Destination)
     Public Property UserOperators() As String
+    Public Property InvalidLogins() As Short
+    Public Property IsLocked() As Boolean
+
 
     Public Function HashPassword() As Integer
         Return Password.GetHashCode()
@@ -54,6 +57,8 @@ Public Class Login
                     Mail = CStr(dr(3))
                     Authority = CStr(dr(5))
                     Active = CBool(dr(6))
+                    InvalidLogins = CShort(dr(7))
+                    IsLocked = CBool(dr(8))
                     result = True
                 End If
             End Using
@@ -62,8 +67,35 @@ Public Class Login
         GetUserDestinations()
         GetUserOperators()
 
+        If Not result Then
+            IsLocked = ExceededLogins()
+        Else
+            ClearInvalidLogins()
+        End If
+
         Return result
     End Function
+
+    Private Function ExceededLogins() As Boolean
+        Dim result As Boolean = False
+        Dim query As String
+        query = String.Format("
+                UPDATE [Login] SET InvalidLogins = IIF(InvalidLogins < 5, InvalidLogins + 1, InvalidLogins),
+                Locked = IIF(InvalidLogins < 5, 0, 1) WHERE Username = '{0}';
+                SELECT COALESCE(Locked, 0) FROM [Login] WHERE Username = '{0}';", Username)
+        Dim dt As DataTable = ExClass.QueryGet(query)
+        If dt.Rows.Count > 0 Then
+            result = CBool(dt.Rows(0)(0))
+        End If
+
+
+        Return result
+    End Function
+
+    Private Sub ClearInvalidLogins()
+        InvalidLogins = 0
+        Update()
+    End Sub
 
     Public Function UniqueUsername() As Boolean
         Dim result As Boolean = True
@@ -96,9 +128,11 @@ Public Class Login
         Fullname = StrConv(FullName, VbStrConv.ProperCase)
         Mail = Mail.ToLower
 
-        Dim query As String = String.Format("UPDATE Login SET Username = '{0}', FullName = '{1}', Mail = '{2}', Authority = '{3}', Active = {4} WHERE LoginID = {5}", _
-                                            Username, FullName, Mail, Authority, CShort(Active), LoginId.ToString)
-
+        Dim query As String
+        query = String.Format("UPDATE Login SET Username = '{0}', FullName = '{1}', Mail = '{2}', Authority = '{3}',
+                                Active = {4}, InvalidLogins = {5}, Locked = {6} WHERE LoginID = {7};",
+                              Username, Fullname, Mail, Authority, CShort(Active).ToString, InvalidLogins.ToString,
+                              CShort(IsLocked).ToString, LoginId.ToString)
         result = ExClass.QuerySet(query) = "True"
 
         Return result
@@ -134,6 +168,8 @@ Public Class Login
             Password = CType(dt.Rows(0)(4), String)
             Authority = CType(dt.Rows(0)(5), String)
             Active = CType(dt.Rows(0)(6), Boolean)
+            InvalidLogins = CType(dt.Rows(0)(7), Short)
+            IsLocked = CType(dt.Rows(0)(8), Boolean)
             result = True
         End If
 
@@ -155,6 +191,8 @@ Public Class Login
             Password = CType(dt.Rows(0)(4), String)
             Authority = CType(dt.Rows(0)(5), String)
             Active = CType(dt.Rows(0)(6), Boolean)
+            InvalidLogins = CType(dt.Rows(0)(7), Short)
+            IsLocked = CType(dt.Rows(0)(8), Boolean)
             result = True
         End If
 

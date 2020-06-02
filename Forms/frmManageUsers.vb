@@ -83,7 +83,7 @@
     End Sub
 
     Private Sub ResetUser()
-        Dim ID As Integer = 0
+        Dim ID As Integer
 
         If IsDBNull(gridView.GetFocusedRowCellValue("LoginID")) Then
             Exit Sub

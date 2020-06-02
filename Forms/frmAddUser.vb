@@ -14,15 +14,17 @@
     End Sub
 
     Private Sub RecallUser(ByVal userId As Integer)
-        Dim user As New Login()
-        user.LoginId = userId
+        Dim user As New Login With {
+            .LoginId = userId
+        }
         user.GetById()
 
         txtUsername.EditValue = user.Username
-        txtFullName.EditValue = user.FullName
+        txtFullName.EditValue = user.Fullname
         txtEmail.EditValue = user.Mail
         rgAuthority.EditValue = user.Authority
         rgActive.EditValue = user.Active
+        rgLocked.EditValue = user.IsLocked
         LayoutControlItem4.Enabled = False
         LayoutControlItem5.Enabled = False
 
@@ -74,6 +76,10 @@
             user.Mail = txtEmail.EditValue.ToString
             user.Authority = rgAuthority.EditValue.ToString
             user.Active = CBool(rgActive.EditValue)
+            user.IsLocked = CBool(rgLocked.EditValue)
+            If Not user.IsLocked Then
+                user.InvalidLogins = 0
+            End If
             user.LoginId = userId
 
             If Not user.UniqueUsername Then
@@ -101,6 +107,8 @@
             user.Mail = txtEmail.EditValue.ToString
             user.Authority = rgAuthority.EditValue.ToString
             user.Active = CBool(rgActive.EditValue)
+            user.IsLocked = CBool(rgLocked.EditValue)
+            user.InvalidLogins = 0
 
             If Not user.UniqueUsername Then
                 MsgBox("The entered username already exists, please select a unique username!")

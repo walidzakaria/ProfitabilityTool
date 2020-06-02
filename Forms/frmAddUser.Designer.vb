@@ -54,6 +54,8 @@ Partial Public Class frmAddUser
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         Me.DxValidationProvider2 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
+        Me.rgLocked = New DevExpress.XtraEditors.RadioGroup()
+        Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
         CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dataLayoutControl1.SuspendLayout()
@@ -73,6 +75,8 @@ Partial Public Class frmAddUser
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DxValidationProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rgLocked.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtPassword
@@ -97,11 +101,12 @@ Partial Public Class frmAddUser
         Me.dataLayoutControl1.Controls.Add(Me.txtPassword)
         Me.dataLayoutControl1.Controls.Add(Me.txtRetype)
         Me.dataLayoutControl1.Controls.Add(Me.rgActive)
+        Me.dataLayoutControl1.Controls.Add(Me.rgLocked)
         Me.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataLayoutControl1.Location = New System.Drawing.Point(0, 30)
         Me.dataLayoutControl1.Name = "dataLayoutControl1"
         Me.dataLayoutControl1.Root = Me.layoutControlGroup1
-        Me.dataLayoutControl1.Size = New System.Drawing.Size(351, 217)
+        Me.dataLayoutControl1.Size = New System.Drawing.Size(351, 259)
         Me.dataLayoutControl1.TabIndex = 0
         '
         'rgAuthority
@@ -182,9 +187,9 @@ Partial Public Class frmAddUser
         '
         Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
         Me.layoutControlGroup1.GroupBordersVisible = False
-        Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7})
+        Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem8})
         Me.layoutControlGroup1.Name = "Root"
-        Me.layoutControlGroup1.Size = New System.Drawing.Size(351, 217)
+        Me.layoutControlGroup1.Size = New System.Drawing.Size(351, 259)
         Me.layoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem1
@@ -247,7 +252,7 @@ Partial Public Class frmAddUser
         Me.LayoutControlItem7.CustomizationFormText = "Authority:"
         Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 158)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(331, 39)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(331, 38)
         Me.LayoutControlItem7.Text = "Active:"
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(52, 13)
         '
@@ -274,7 +279,7 @@ Partial Public Class frmAddUser
         Me.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.windowsUIButtonPanelMain.EnableImageTransparency = True
         Me.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
-        Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(0, 247)
+        Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(0, 289)
         Me.windowsUIButtonPanelMain.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.windowsUIButtonPanelMain.MaximumSize = New System.Drawing.Size(0, 60)
         Me.windowsUIButtonPanelMain.MinimumSize = New System.Drawing.Size(60, 60)
@@ -302,6 +307,28 @@ Partial Public Class frmAddUser
         Me.labelControl.TabIndex = 1
         Me.labelControl.Text = "New User"
         '
+        'rgLocked
+        '
+        Me.rgLocked.EditValue = False
+        Me.rgLocked.Location = New System.Drawing.Point(67, 208)
+        Me.rgLocked.MaximumSize = New System.Drawing.Size(0, 28)
+        Me.rgLocked.Name = "rgLocked"
+        Me.rgLocked.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem(True, "Yes", True, True), New DevExpress.XtraEditors.Controls.RadioGroupItem(False, "No", True, False)})
+        Me.rgLocked.Size = New System.Drawing.Size(272, 28)
+        Me.rgLocked.StyleController = Me.dataLayoutControl1
+        Me.rgLocked.TabIndex = 20
+        '
+        'LayoutControlItem8
+        '
+        Me.LayoutControlItem8.Control = Me.rgLocked
+        Me.LayoutControlItem8.ControlAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.LayoutControlItem8.CustomizationFormText = "Authority:"
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 196)
+        Me.LayoutControlItem8.Name = "LayoutControlItem8"
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(331, 43)
+        Me.LayoutControlItem8.Text = "Locked:"
+        Me.LayoutControlItem8.TextSize = New System.Drawing.Size(52, 13)
+        '
         'frmAddUser
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
@@ -309,7 +336,7 @@ Partial Public Class frmAddUser
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(351, 307)
+        Me.ClientSize = New System.Drawing.Size(351, 349)
         Me.Controls.Add(Me.dataLayoutControl1)
         Me.Controls.Add(Me.labelControl)
         Me.Controls.Add(Me.windowsUIButtonPanelMain)
@@ -338,6 +365,8 @@ Partial Public Class frmAddUser
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DxValidationProvider2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rgLocked.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -364,4 +393,6 @@ Partial Public Class frmAddUser
     Friend WithEvents rgActive As DevExpress.XtraEditors.RadioGroup
     Friend WithEvents LayoutControlItem7 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents DxValidationProvider2 As DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider
+    Friend WithEvents rgLocked As DevExpress.XtraEditors.RadioGroup
+    Friend WithEvents LayoutControlItem8 As DevExpress.XtraLayout.LayoutControlItem
 End Class

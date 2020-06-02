@@ -6,35 +6,43 @@
     End Sub
 
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+
         If txtUserName.Text = "" Then
             MsgBox("Please enter username!")
             txtUserName.Focus()
+            Exit Sub
         ElseIf txtPassword.Text = "" Then
             MsgBox("Please enter password!")
             txtPassword.Focus()
+            Exit Sub
+        End If
+
+        Dim user As New Login With {
+            .Username = txtUserName.Text,
+            .Password = txtPassword.Text
+        }
+
+        Dim validUser As Boolean
+        validUser = user.ValidLogin()
+
+        If user.IsLocked Then
+            MsgBox("The entered user is had been locked, please contact the administrator!")
+        ElseIf Not validUser Then
+            MsgBox("Invalid Login!")
+        ElseIf Not user.Active Then
+            MsgBox("The entered user is deactivated!")
         Else
-            Dim user As New Login()
-            user.Username = txtUserName.Text
-            user.Password = txtPassword.Text
+            lblLoading.Visible = True
+            Application.DoEvents()
 
-            If Not user.ValidLogin Then
-                MsgBox("Invalid Login!")
-            Else
-                If Not user.Active Then
-                    MsgBox("The entered user is blocked!")
-                Else
-                    lblLoading.Visible = True
-                    Application.DoEvents()
-                    GV.CurrentUser = user
-                    frmMain.FillRibbonDestinations()
-                    frmMain.bhUsername.Caption = String.Format("<b><color=0, 0, 255>{0}</color></b>", GV.CurrentUser.Username)
-                    frmMain.biLoginTime.Caption = String.Format("Login time: <b><color=0, 0, 255>{0}</color></b>", Now.ToString("HH:mm"))
+            GV.CurrentUser = user
+            frmMain.FillRibbonDestinations()
+            frmMain.bhUsername.Caption = String.Format("<b><color=0, 0, 255>{0}</color></b>", GV.CurrentUser.Username)
+            frmMain.biLoginTime.Caption = String.Format("Login time: <b><color=0, 0, 255>{0}</color></b>", Now.ToString("HH:mm"))
 
-                    ExClass.Authorize(GV.CurrentUser.Authority)
-                    frmMain.Show()
-                    Me.Close()
-                End If
-            End If
+            ExClass.Authorize(GV.CurrentUser.Authority)
+            frmMain.Show()
+            Me.Close()
         End If
     End Sub
 
