@@ -93,10 +93,10 @@ After saving the booking, they are automatically categorized as:
     - NetRateHotelTC < 1
     - HotelName contains "rundreise", "circuit", or "roulette".
 - **Canceled:** Cancelled bookings are those that have status as "CNX".
-- **Matching:** Matching bookings are those that fulfill all ```matching parameters```.
-- **Deficit:** Deficit bookings are those that don't fulfil one or more of the ```matching parameters```.
+- **Matching:** Matching bookings are those that fulfill all ```Matching Criteria```.
+- **Deficit:** Deficit bookings are those that don't fulfil one or more of the ```Matching Criteria```.
 
-#### Those are the matching parameters:
+#### Those are the Matching Criteria:
 - **No negative margin:** Sales price is higher than the purchase price.
 - **No excessive margin:** The difference between the sales price and purchase price is within the range of the respective  margin range.
 - **No mismatch:** The difference between the DMC sales price and the tour operator cost price is within the range of the respective margin range.
