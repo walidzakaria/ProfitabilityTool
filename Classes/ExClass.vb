@@ -2,7 +2,12 @@
 
 
 Public Class ExClass
-    Public Shared myConn As New SqlConnection("Data Source=DESKTOP-5V3S1R4\MASTER;Initial Catalog=YT_DB;User ID=walid;Password=wwzzaa")
+    ''' <summary>
+    ''' Generic methods and functions
+    ''' </summary>
+
+    Public Shared myConn As New SqlConnection(My.Settings.DatabaseConnection)
+    'Public Shared myConn As New SqlConnection("Data Source=DESKTOP-5V3S1R4\MASTER;Initial Catalog=YT_DB;User ID=walid;Password=wwzzaa")
     'Public Shared myConn As New SqlConnection("workstation id=rs24profitabilitytool.mssql.somee.com;packet size=4096;user id=waliiid_SQLLogin_1;pwd=nhyb4lqews;data source=rs24profitabilitytool.mssql.somee.com;persist security info=False;initial catalog=rs24profitabilitytool")
 
     Public Shared Function QuerySet(ByVal query As String) As String
@@ -24,6 +29,9 @@ Public Class ExClass
     End Function
 
     Public Shared Function QueryGet(ByVal query As String) As DataTable
+        ' Get data from the database
+
+
         Dim result As New DataTable()
 
         Using cmd = New SqlCommand(query, myConn)
@@ -40,6 +48,8 @@ Public Class ExClass
     End Function
 
     Public Shared Function CalculateText(ByVal formula As String) As Single
+        ' Parse string value into suggested calculatation
+
         Dim result As Single = 0
         Dim newFormula As String = ""
         Dim i As String
@@ -99,6 +109,7 @@ Public Class ExClass
     End Function
 
     Public Shared Sub Authorize(ByVal userType As String)
+        ' Apply user profile authorization
 
         Select Case userType
             Case "Admin"

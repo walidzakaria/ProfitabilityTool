@@ -2,7 +2,13 @@
 Imports Microsoft.Office
 
 Public Class SendMail
-
+    ''' <summary>
+    ''' Send email from client Outlook
+    ''' </summary>
+    ''' <param name="sSubject"></param>
+    ''' <param name="sBody"></param>
+    ''' <param name="sTo"></param>
+    ''' <param name="sCC"></param>
     Public Shared Sub SetEmailSend(sSubject As String, sBody As String, _
                          sTo As String, sCC As String)
         frmMain.Wait(True)

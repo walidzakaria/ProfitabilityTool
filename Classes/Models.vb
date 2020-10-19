@@ -4,6 +4,9 @@ Public Class Models
 
 End Class
 
+''' <summary>
+''' Database models & properties
+''' </summary>
 
 Public Class Login
     Public Property LoginId() As Integer

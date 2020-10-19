@@ -1,4 +1,7 @@
 ﻿Public Class GV
+    ''' <summary>
+    ''' Application global variables
+    ''' </summary>
     Public Shared CurrentUser As New Login()
     Public Enum GwgStatus
         OK
@@ -18,7 +21,5 @@
 
     Public Shared Function CIntGwgStatus(ByVal status As GwgStatus) As Integer
         Return CInt(status)
-
-
     End Function
 End Class

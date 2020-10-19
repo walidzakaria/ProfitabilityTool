@@ -130,17 +130,6 @@ Partial Public Class frmEdit
         Me.txtActionBy = New DevExpress.XtraEditors.TextEdit()
         Me.layoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.TabbedControlGroup2 = New DevExpress.XtraLayout.TabbedControlGroup()
-        Me.LayoutControlGroup7 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.grpAddNewComment = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlItem34 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem35 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem36 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem37 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem38 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem33 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
-        Me.EmptySpaceItem2 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.LayoutControlGroup5 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -194,6 +183,17 @@ Partial Public Class frmEdit
         Me.LayoutControlItem49 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem50 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup7 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.grpAddNewComment = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem34 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem35 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem36 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem37 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem38 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem33 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.EmptySpaceItem2 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.LayoutControlGroup6 = New DevExpress.XtraLayout.LayoutControlGroup()
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -263,17 +263,6 @@ Partial Public Class frmEdit
         CType(Me.txtActionBy.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TabbedControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.grpAddNewComment, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem35, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem37, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem38, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem33, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -327,6 +316,17 @@ Partial Public Class frmEdit
         CType(Me.LayoutControlItem49, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem50, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grpAddNewComment, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem37, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem38, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem33, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -1259,102 +1259,6 @@ Partial Public Class frmEdit
         Me.TabbedControlGroup2.Size = New System.Drawing.Size(738, 504)
         Me.TabbedControlGroup2.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup5, Me.LayoutControlGroup7})
         '
-        'LayoutControlGroup7
-        '
-        Me.LayoutControlGroup7.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.grpAddNewComment, Me.LayoutControlItem33, Me.EmptySpaceItem1, Me.EmptySpaceItem2})
-        Me.LayoutControlGroup7.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlGroup7.Name = "LayoutControlGroup7"
-        Me.LayoutControlGroup7.Size = New System.Drawing.Size(714, 457)
-        Me.LayoutControlGroup7.Text = "DISPUTES"
-        '
-        'LayoutControlItem1
-        '
-        Me.LayoutControlItem1.Control = Me.GridControl1
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 248)
-        Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(714, 209)
-        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem1.TextVisible = False
-        '
-        'grpAddNewComment
-        '
-        Me.grpAddNewComment.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem34, Me.LayoutControlItem35, Me.LayoutControlItem36, Me.LayoutControlItem37, Me.LayoutControlItem38})
-        Me.grpAddNewComment.Location = New System.Drawing.Point(0, 36)
-        Me.grpAddNewComment.Name = "grpAddNewComment"
-        Me.grpAddNewComment.Size = New System.Drawing.Size(714, 202)
-        Me.grpAddNewComment.Text = "Add New Comment"
-        Me.grpAddNewComment.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
-        '
-        'LayoutControlItem34
-        '
-        Me.LayoutControlItem34.Control = Me.luStatus
-        Me.LayoutControlItem34.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem34.Name = "LayoutControlItem34"
-        Me.LayoutControlItem34.Size = New System.Drawing.Size(690, 24)
-        Me.LayoutControlItem34.Text = "Status"
-        Me.LayoutControlItem34.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem35
-        '
-        Me.LayoutControlItem35.Control = Me.txtComment
-        Me.LayoutControlItem35.Location = New System.Drawing.Point(0, 24)
-        Me.LayoutControlItem35.Name = "LayoutControlItem35"
-        Me.LayoutControlItem35.Size = New System.Drawing.Size(690, 83)
-        Me.LayoutControlItem35.Text = "Comment:"
-        Me.LayoutControlItem35.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem36
-        '
-        Me.LayoutControlItem36.Control = Me.txtCalculation
-        Me.LayoutControlItem36.Location = New System.Drawing.Point(0, 107)
-        Me.LayoutControlItem36.Name = "LayoutControlItem36"
-        Me.LayoutControlItem36.Size = New System.Drawing.Size(690, 24)
-        Me.LayoutControlItem36.Text = "Calculation:"
-        Me.LayoutControlItem36.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem37
-        '
-        Me.LayoutControlItem37.Control = Me.btnSaveComment
-        Me.LayoutControlItem37.Location = New System.Drawing.Point(0, 131)
-        Me.LayoutControlItem37.Name = "LayoutControlItem37"
-        Me.LayoutControlItem37.Size = New System.Drawing.Size(344, 26)
-        Me.LayoutControlItem37.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem37.TextVisible = False
-        '
-        'LayoutControlItem38
-        '
-        Me.LayoutControlItem38.Control = Me.btnCancelComment
-        Me.LayoutControlItem38.Location = New System.Drawing.Point(344, 131)
-        Me.LayoutControlItem38.Name = "LayoutControlItem38"
-        Me.LayoutControlItem38.Size = New System.Drawing.Size(346, 26)
-        Me.LayoutControlItem38.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem38.TextVisible = False
-        '
-        'LayoutControlItem33
-        '
-        Me.LayoutControlItem33.Control = Me.btnToggleComment
-        Me.LayoutControlItem33.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem33.Name = "LayoutControlItem33"
-        Me.LayoutControlItem33.Size = New System.Drawing.Size(714, 26)
-        Me.LayoutControlItem33.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem33.TextVisible = False
-        '
-        'EmptySpaceItem1
-        '
-        Me.EmptySpaceItem1.AllowHotTrack = False
-        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 26)
-        Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(714, 10)
-        Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
-        '
-        'EmptySpaceItem2
-        '
-        Me.EmptySpaceItem2.AllowHotTrack = False
-        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 238)
-        Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(714, 10)
-        Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
-        '
         'LayoutControlGroup5
         '
         Me.LayoutControlGroup5.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem2, Me.LayoutControlItem16, Me.TabbedControlGroup1, Me.LayoutControlItem8, Me.LayoutControlItem50})
@@ -1825,6 +1729,102 @@ Partial Public Class frmEdit
         Me.LayoutControlItem50.Text = "Booking Status"
         Me.LayoutControlItem50.TextSize = New System.Drawing.Size(122, 13)
         '
+        'LayoutControlGroup7
+        '
+        Me.LayoutControlGroup7.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.grpAddNewComment, Me.LayoutControlItem33, Me.EmptySpaceItem1, Me.EmptySpaceItem2})
+        Me.LayoutControlGroup7.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup7.Name = "LayoutControlGroup7"
+        Me.LayoutControlGroup7.Size = New System.Drawing.Size(714, 457)
+        Me.LayoutControlGroup7.Text = "DISPUTES"
+        '
+        'LayoutControlItem1
+        '
+        Me.LayoutControlItem1.Control = Me.GridControl1
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 248)
+        Me.LayoutControlItem1.Name = "LayoutControlItem1"
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(714, 209)
+        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem1.TextVisible = False
+        '
+        'grpAddNewComment
+        '
+        Me.grpAddNewComment.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem34, Me.LayoutControlItem35, Me.LayoutControlItem36, Me.LayoutControlItem37, Me.LayoutControlItem38})
+        Me.grpAddNewComment.Location = New System.Drawing.Point(0, 36)
+        Me.grpAddNewComment.Name = "grpAddNewComment"
+        Me.grpAddNewComment.Size = New System.Drawing.Size(714, 202)
+        Me.grpAddNewComment.Text = "Add New Comment"
+        Me.grpAddNewComment.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
+        '
+        'LayoutControlItem34
+        '
+        Me.LayoutControlItem34.Control = Me.luStatus
+        Me.LayoutControlItem34.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem34.Name = "LayoutControlItem34"
+        Me.LayoutControlItem34.Size = New System.Drawing.Size(690, 24)
+        Me.LayoutControlItem34.Text = "Status"
+        Me.LayoutControlItem34.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'LayoutControlItem35
+        '
+        Me.LayoutControlItem35.Control = Me.txtComment
+        Me.LayoutControlItem35.Location = New System.Drawing.Point(0, 24)
+        Me.LayoutControlItem35.Name = "LayoutControlItem35"
+        Me.LayoutControlItem35.Size = New System.Drawing.Size(690, 83)
+        Me.LayoutControlItem35.Text = "Comment:"
+        Me.LayoutControlItem35.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'LayoutControlItem36
+        '
+        Me.LayoutControlItem36.Control = Me.txtCalculation
+        Me.LayoutControlItem36.Location = New System.Drawing.Point(0, 107)
+        Me.LayoutControlItem36.Name = "LayoutControlItem36"
+        Me.LayoutControlItem36.Size = New System.Drawing.Size(690, 24)
+        Me.LayoutControlItem36.Text = "Calculation:"
+        Me.LayoutControlItem36.TextSize = New System.Drawing.Size(122, 13)
+        '
+        'LayoutControlItem37
+        '
+        Me.LayoutControlItem37.Control = Me.btnSaveComment
+        Me.LayoutControlItem37.Location = New System.Drawing.Point(0, 131)
+        Me.LayoutControlItem37.Name = "LayoutControlItem37"
+        Me.LayoutControlItem37.Size = New System.Drawing.Size(344, 26)
+        Me.LayoutControlItem37.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem37.TextVisible = False
+        '
+        'LayoutControlItem38
+        '
+        Me.LayoutControlItem38.Control = Me.btnCancelComment
+        Me.LayoutControlItem38.Location = New System.Drawing.Point(344, 131)
+        Me.LayoutControlItem38.Name = "LayoutControlItem38"
+        Me.LayoutControlItem38.Size = New System.Drawing.Size(346, 26)
+        Me.LayoutControlItem38.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem38.TextVisible = False
+        '
+        'LayoutControlItem33
+        '
+        Me.LayoutControlItem33.Control = Me.btnToggleComment
+        Me.LayoutControlItem33.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem33.Name = "LayoutControlItem33"
+        Me.LayoutControlItem33.Size = New System.Drawing.Size(714, 26)
+        Me.LayoutControlItem33.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem33.TextVisible = False
+        '
+        'EmptySpaceItem1
+        '
+        Me.EmptySpaceItem1.AllowHotTrack = False
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 26)
+        Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(714, 10)
+        Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'EmptySpaceItem2
+        '
+        Me.EmptySpaceItem2.AllowHotTrack = False
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 238)
+        Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(714, 10)
+        Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
+        '
         'labelControl
         '
         Me.labelControl.AllowHtmlString = True
@@ -1931,17 +1931,6 @@ Partial Public Class frmEdit
         CType(Me.txtActionBy.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TabbedControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.grpAddNewComment, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem35, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem37, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem38, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem33, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1995,6 +1984,17 @@ Partial Public Class frmEdit
         CType(Me.LayoutControlItem49, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem50, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grpAddNewComment, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem37, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem38, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
