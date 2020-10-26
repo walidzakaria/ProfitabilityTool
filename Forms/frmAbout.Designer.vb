@@ -111,7 +111,7 @@ Partial Class frmAbout
         '
         'TextEdit4
         '
-        Me.TextEdit4.EditValue = "FTI Touristik GmbH"
+        Me.TextEdit4.EditValue = "RedSea24 for Consulting Services"
         Me.TextEdit4.Location = New System.Drawing.Point(98, 108)
         Me.TextEdit4.Name = "TextEdit4"
         Me.TextEdit4.Properties.ReadOnly = True

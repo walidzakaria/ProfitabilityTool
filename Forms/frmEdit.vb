@@ -1,5 +1,6 @@
 ﻿Imports DevExpress.XtraLayout
 Imports DevExpress.XtraEditors
+Imports DevExpress.XtraBars.Docking2010
 
 Partial Public Class frmEdit
     Public Shared BookingId As Long
@@ -78,7 +79,7 @@ Partial Public Class frmEdit
     End Sub
 
     Private Sub frmEdit_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
-        If bookingsList.Count = 0 Then
+        If BookingsList.Count = 0 Then
             SelectedCurrentRow()
         End If
 
@@ -197,15 +198,15 @@ Partial Public Class frmEdit
 
         PopulateStatusMain()
 
-        If bookingsList.Count = 0 Then
-            currentBooking = GetDataSource(bookingId)
+        If BookingsList.Count = 0 Then
+            currentBooking = GetDataSource(BookingId)
             ShowBooking()
             GetComments()
             LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Always
             GridControl1.Visible = True
             If NoSave Then
-                Me.Text = BookingId.ToString & " - READ-ONLY"
-                For Each i In windowsUIButtonPanelMain.Buttons
+                Me.Text = BookingId.ToString & " (READ-ONLY)"
+                For Each i As WindowsUIButton In windowsUIButtonPanelMain.Buttons
                     If i.Caption = "Save" Then
                         i.Enabled = False
                         Exit For
@@ -214,7 +215,7 @@ Partial Public Class frmEdit
                 btnSaveComment.Enabled = False
             Else
                 Me.Text = BookingId.ToString
-                For Each i In windowsUIButtonPanelMain.Buttons
+                For Each i As WindowsUIButton In windowsUIButtonPanelMain.Buttons
                     If i.Caption = "Save" Then
                         i.Enabled = True
                         Exit For
@@ -228,11 +229,11 @@ Partial Public Class frmEdit
             labelControl.Text = "Multiple Bookings"
             GridControl1.DataSource = Nothing
             If NoSave Then
-                Me.Text = "Multi-Bookings - READ-ONLY"
+                Me.Text = "Multi-Bookings (READ-ONLY)"
             Else
                 Me.Text = "Multi-Bookings"
             End If
-            For Each i In windowsUIButtonPanelMain.Buttons
+            For Each i As WindowsUIButton In windowsUIButtonPanelMain.Buttons
                 If i.Caption = "Save" Then
                     i.Enabled = True
                     Exit For
@@ -279,21 +280,21 @@ Partial Public Class frmEdit
             SaveCurrent()
         ElseIf e.Button.Properties.Caption = "Reset Changes" Then
             frmMain.Wait(True)
-            currentBooking = GetDataSource(bookingId)
+            currentBooking = GetDataSource(BookingId)
             ShowBooking()
             frmMain.Wait(False)
         ElseIf e.Button.Properties.Caption = "Close" Then
             Me.Close()
         ElseIf e.Button.Properties.Caption = "Mail" Then
             Dim subject, body As String
-            
+
 
             subject = String.Format("Profitability Tool; Ref# {0} **{1}**",
                                     currentBooking.Reference, Today.ToString("dd.MM.yy"))
             body = String.Format("Dear {0}," & vbNewLine & vbNewLine & "Ref# {1}." & vbNewLine & "Please check this booking" _
                                  & vbNewLine & vbNewLine & "BR" & vbNewLine & "{2}",
-                                 currentBooking.LastUser.FullName,
-                                 currentBooking.Reference, GV.CurrentUser.FullName)
+                                 currentBooking.LastUser.Fullname,
+                                 currentBooking.Reference, GV.CurrentUser.Fullname)
 
             SendMail.SetEmailSend(subject, body, currentBooking.LastUser.Mail, "")
 
@@ -340,7 +341,7 @@ Partial Public Class frmEdit
                 comment.Calculation = CSng(txtCalculation.EditValue)
             End If
 
-            If bookingsList.Count = 0 Then
+            If BookingsList.Count = 0 Then
                 If comment.Save() Then
                     GetComments()
                     UpdateBookingStatus(False, comment.Status, GV.CurrentUser.LoginId, comment.Comment, comment.Calculation)

@@ -35,7 +35,7 @@
             destination &= dt.Rows(x)(0).ToString & ";"
         Next
 
-        Dim destinations() As String = destination.Split(";")
+        Dim destinations() As String = destination.Split(";"c)
         For x = 0 To clbDestination.ItemCount - 1
             If destinations.Contains(CType(clbDestination.GetDisplayItemValue(x), String)) Then
                 clbDestination.SetItemChecked(x, True)
@@ -58,7 +58,7 @@
         For x = 0 To dt.Rows.Count - 1
             tourOperator &= dt.Rows(x)(0).ToString & ";"
         Next
-        Dim tourOperators() As String = tourOperator.Split(";")
+        Dim tourOperators() As String = tourOperator.Split(";"c)
         For x = 0 To clbOperator.ItemCount - 1
             If tourOperators.Contains(CType(clbOperator.GetDisplayItemValue(x), String)) Then
                 clbOperator.SetItemChecked(x, True)
@@ -111,7 +111,7 @@
         Next
         If Not destinationString = "" Then
             destinationString = destinationString.TrimEnd
-            destinationString = destinationString.TrimEnd(",")
+            destinationString = destinationString.TrimEnd(","c)
 
             destinationString = String.Format("DELETE FROM UserDestination WHERE UserID = {0}; " _
                                               & "INSERT INTO UserDestination (UserID, DestinationID) VALUES {1};" _
@@ -135,7 +135,7 @@
         Next
         If Not operatorString = "" Then
             operatorString = operatorString.TrimEnd
-            operatorString = operatorString.TrimEnd(",")
+            operatorString = operatorString.TrimEnd(","c)
 
             operatorString = String.Format("DELETE FROM UserOperator WHERE UserID = {0}; " _
                                               & "INSERT INTO UserOperator (UserID, TourOperatorID) VALUES {1};" _
