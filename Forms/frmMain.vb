@@ -344,7 +344,7 @@ Partial Public Class frmMain
         Next
 
         For x = 0 To GridView1.RowCount - 1
-            If GridView1.IsRowSelected(x) Then
+            If GridView1.IsRowSelected(x) And frmEdit.BookingsList.Contains(CInt(GridView1.GetRowCellValue(x, "BookingID"))) Then
                 With BookingDT
                     .Rows(x).SetField("ActionBy", booking.LastUser.Username)
                     .Rows(x).SetField("Status", booking.Status)
@@ -439,9 +439,14 @@ Partial Public Class frmMain
             frmEdit.bookingsList.Clear()
             Dim bookingId As Long
             bookingId = CInt(GridView1.GetFocusedRowCellValue("BookingID"))
+
             If bookingId > 0 Then
+                ' Check if the booking is read-only
+                GetReadOnlyBookings(True, bookingId.ToString)
+                LockBookings(bookingId.ToString, True)
                 frmEdit.bookingId = bookingId
                 frmEdit.ShowDialog()
+                LockBookings(bookingId.ToString, False)
             End If
         ElseIf GridView1.SelectedRowsCount > 1 Then
             Dim bookingsList As New List(Of Integer)
@@ -449,8 +454,14 @@ Partial Public Class frmMain
             For Each i As Integer In GridView1.GetSelectedRows
                 bookingsList.Add(CInt(GridView1.GetRowCellValue(i, "BookingID")))
             Next
-            frmEdit.bookingsList = bookingsList
+
+            ' Check if some bookings are locked.
+            Dim bookings As String = String.Join(",", bookingsList.[Select](Function(i) i.ToString()).ToArray())
+            GetReadOnlyBookings(False, bookings)
+            LockBookings(bookings, True)
+            frmEdit.BookingsList = bookingsList
             frmEdit.ShowDialog()
+            LockBookings(bookings, False)
         End If
 
     End Sub
@@ -661,5 +672,71 @@ Partial Public Class frmMain
     Private Sub ResetGridLayout()
         GridView1.RestoreLayoutFromStream(defaultGridLayout)
         defaultGridLayout.Seek(0, System.IO.SeekOrigin.Begin)
+    End Sub
+
+    Private Sub GetReadOnlyBookings(ByVal singleBooking As Boolean, ByVal bookingIDs As String)
+        ' Check if the booking(s) is/are locked.
+        If singleBooking Then
+            Dim dt As DataTable = IsLocked(bookingIDs)
+            If dt.Rows.Count > 0 Then
+                Dim message As String = String.Format("The booking will open as Read-Only as it's locked by user '{0}' since '{1}'.",
+                                                      dt.Rows(0)(1), CDate(dt.Rows(0)(2)).ToString("HH:mm"))
+                MsgBox(message)
+                frmEdit.NoSave = True
+            Else
+                frmEdit.NoSave = False
+            End If
+        Else
+            Dim dt As DataTable = IsLocked(bookingIDs)
+
+            If dt.Rows.Count > 0 Then
+                Dim message As String
+
+                Dim listOfReadOnlyBookings As String = ""
+                    For Each row As DataRow In dt.Rows
+                        listOfReadOnlyBookings &= String.Format("Booking#: {0}, User: {1},  Since: {2}" & vbNewLine,
+                                                                row(0), row(1), CDate(row(2)).ToString("HH:mm"))
+                    Next
+                message = String.Format("Those bookings will open as Read-Only as they're locked by other users: " & vbNewLine & "{0}",
+                                            listOfReadOnlyBookings)
+
+
+                MsgBox(message)
+                frmEdit.NoSave = True
+            Else
+                frmEdit.NoSave = False
+            End If
+        End If
+
+    End Sub
+    Private Function IsLocked(ByVal bookingIDs As String) As DataTable
+        ' Return bookings locked by other users
+        Dim result As DataTable
+        Dim query As String = String.Format("
+            SELECT Booking.Reference, [Login].FullName, Booking.LockTime
+            FROM Booking
+            JOIN [Login] ON Booking.Locked = [Login].LoginID
+            WHERE Booking.Locked != {0} AND Booking.BookingID IN ({1});
+        ", GV.CurrentUser.LoginId, bookingIDs)
+
+        result = ExClass.QueryGet(query)
+
+        Return result
+    End Function
+
+    Private Sub LockBookings(ByVal bookingIDs As String, ByVal setLocked As Boolean)
+        Dim query As String
+        If setLocked Then
+            query = String.Format("
+                        UPDATE Booking SET Locked = {0}, LockTime = GETDATE() WHERE BookingID IN ({1}) AND Locked IS NULL;
+                    ", GV.CurrentUser.LoginId.ToString, bookingIDs)
+        Else
+            query = String.Format("
+                        UPDATE Booking SET Locked = NULL, LockTime = NULL WHERE BookingID IN ({0}) AND Locked = {1};
+                    ", bookingIDs, GV.CurrentUser.LoginId.ToString)
+        End If
+
+        ExClass.QuerySet(query)
+
     End Sub
 End Class

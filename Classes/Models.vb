@@ -618,21 +618,27 @@ Public Class Comment
         If Calculation = Nothing Then
             calcText = "NULL"
         End If
+
+
+
         Dim query As String = "INSERT INTO Comment (Date, BookingID, Comment, Calculation, LoginID, Status) VALUES "
         For x As Integer = 0 To bookingsList.Count - 1
-            query &= String.Format("('{0}', {1},'{2}', {3}, {4}, '{5}'), ", _
-                                   CommentDate.ToString("MM/dd/yyyy HH:mm"), bookingsList(x).ToString, Comment, calcText, LoginID, Status)
+
+            query &= String.Format("('{0}', {1},'{2}', {3}, {4}, '{5}'), ",
+                               CommentDate.ToString("MM/dd/yyyy HH:mm"), bookingsList(x).ToString, Comment, calcText, LoginID, Status)
         Next
         query = query.Substring(0, Len(query) - 2)
         query &= String.Format("; UPDATE Booking SET ActionBy = dbo.ActionBy(BookingID), Comments = dbo.LastComment(BookingID),
                                 AdjustedPrice = dbo.AdjustedPrice(BookingID), [Status] = dbo.LastStatus(BookingID)
                                 WHERE BookingID IN ({0});", String.Join(", ", bookingsList.ToArray))
 
+
         Dim queryResult As String = ExClass.QuerySet(query)
         If queryResult <> "True" Then
             MsgBox(queryResult)
             result = False
         End If
+
 
         Return result
     End Function

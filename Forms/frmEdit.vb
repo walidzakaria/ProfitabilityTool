@@ -2,9 +2,11 @@
 Imports DevExpress.XtraEditors
 
 Partial Public Class frmEdit
-    Public Shared bookingId As Long
+    Public Shared BookingId As Long
     Dim currentBooking As New Booking()
-    Public Shared bookingsList As New List(Of Integer)
+    Public Shared BookingsList As New List(Of Integer)
+    Public Shared NoSave As Boolean
+
     Public Sub New()
         InitializeComponent()
     End Sub
@@ -137,13 +139,13 @@ Partial Public Class frmEdit
 
     End Sub
     Private Sub frmEdit_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        If bookingsList.Count = 0 Then
+        If BookingsList.Count = 0 And BookingId <> 0 Then
             UpdateBooking()
 
             ' only check if user has the persmission to write the booking
-            If GV.CurrentUser.Authority = "Amin" Or GV.CurrentUser.Authority = "MPI" Then
+            If GV.CurrentUser.Authority = "Admin" Or GV.CurrentUser.Authority = "RS" Then
                 Dim tempBooking As New Booking()
-                tempBooking = GetDataSource(bookingId)
+                tempBooking = GetDataSource(BookingId)
 
                 If currentBooking.GetHashCode <> tempBooking.GetHashCode Then
                     Dim diaResult As DialogResult
@@ -201,11 +203,42 @@ Partial Public Class frmEdit
             GetComments()
             LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Always
             GridControl1.Visible = True
+            If NoSave Then
+                Me.Text = BookingId.ToString & " - READ-ONLY"
+                For Each i In windowsUIButtonPanelMain.Buttons
+                    If i.Caption = "Save" Then
+                        i.Enabled = False
+                        Exit For
+                    End If
+                Next
+                btnSaveComment.Enabled = False
+            Else
+                Me.Text = BookingId.ToString
+                For Each i In windowsUIButtonPanelMain.Buttons
+                    If i.Caption = "Save" Then
+                        i.Enabled = True
+                        Exit For
+                    End If
+                Next
+                btnSaveComment.Enabled = True
+            End If
         Else
             LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Never
             GridControl1.Visible = False
             labelControl.Text = "Multiple Bookings"
             GridControl1.DataSource = Nothing
+            If NoSave Then
+                Me.Text = "Multi-Bookings - READ-ONLY"
+            Else
+                Me.Text = "Multi-Bookings"
+            End If
+            For Each i In windowsUIButtonPanelMain.Buttons
+                If i.Caption = "Save" Then
+                    i.Enabled = True
+                    Exit For
+                End If
+            Next
+            btnSaveComment.Enabled = True
         End If
 
         frmMain.Wait(False)
@@ -230,11 +263,11 @@ Partial Public Class frmEdit
     End Sub
 
     Private Sub SaveCurrent()
-        If GV.CurrentUser.Authority = "Admin" Or GV.CurrentUser.Authority = "RS" Then
+        If Not NoSave And (GV.CurrentUser.Authority = "Admin" Or GV.CurrentUser.Authority = "RS") Then
             frmMain.Wait(True)
             UpdateBooking()
             If currentBooking.Save() Then
-                currentBooking = GetDataSource(bookingId)
+                currentBooking = GetDataSource(BookingId)
                 ShowBooking()
                 UpdateChangedRow()
             End If
@@ -316,13 +349,21 @@ Partial Public Class frmEdit
                     ClearComment()
                 End If
             Else
-                If comment.SaveMulti(bookingsList) Then
-                    UpdateBookingStatus(True, comment.Status, GV.CurrentUser.LoginId, comment.Comment, comment.Calculation)
-                    grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
+                RemoveReadOnly()
+                If BookingsList.Count > 0 Then
+                    If comment.SaveMulti(BookingsList) Then
+                        UpdateBookingStatus(True, comment.Status, GV.CurrentUser.LoginId, comment.Comment, comment.Calculation)
+                        grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
 
-                    ClearComment()
-                    Me.Close()
+                        ClearComment()
+                        Me.Close()
+                    End If
+                Else
+                    frmMain.Wait(False)
+                    MsgBox("Cannot save comment. All bookings are locked!")
+                    Exit Sub
                 End If
+
             End If
 
             frmMain.Wait(False)
@@ -350,4 +391,17 @@ Partial Public Class frmEdit
         End If
     End Sub
 
+    Private Sub RemoveReadOnly()
+        ' Remove locked bookings from the list
+        Dim unlockedBookings As String
+        unlockedBookings = String.Join(", ", BookingsList.[Select](Function(i) i.ToString()).ToArray)
+        Dim bookingsQuery As String = String.Format("
+                    SELECT BookingID FROM Booking WHERE BookingID IN ({0}) AND (Locked IS NULL OR Locked = {1});",
+                                                    unlockedBookings, GV.CurrentUser.LoginId.ToString)
+        Dim dt As DataTable = ExClass.QueryGet(bookingsQuery)
+        BookingsList = New List(Of Integer)
+        For Each r As DataRow In dt.Rows
+            BookingsList.Add(CInt(r(0)))
+        Next
+    End Sub
 End Class
