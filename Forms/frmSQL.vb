@@ -1,23 +1,23 @@
-﻿Public Class frmSQL
+﻿Public Class FrmSQL
 
-    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         meQuery.EditValue = Nothing
     End Sub
 
-    Private Sub btnRun_Click(sender As Object, e As EventArgs) Handles btnRun.Click
+    Private Sub BtnRun_Click(sender As Object, e As EventArgs) Handles btnRun.Click
         If CStr(meQuery.EditValue) = "" Then
             Exit Sub
         End If
         Dim query As String = CStr(meQuery.EditValue)
 
         If query.ToLower Like "*select*" Then
-            Dim dt As New DataTable()
+            Dim dt As DataTable
             Try
                 dt = ExClass.QueryGet(query)
-                gridControl1.DataSource = Nothing
+                GridControl1.DataSource = Nothing
 
-                gridControl1.DataSource = dt
-                gridView1.PopulateColumns()
+                GridControl1.DataSource = dt
+                GridView1.PopulateColumns()
             Catch ex As Exception
                 MsgBox(ex.ToString)
             End Try
@@ -27,7 +27,7 @@
         End If
     End Sub
 
-    Private Sub frmSQL_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub FrmSQL_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.F5 Then
             btnRun.PerformClick()
         ElseIf e.KeyCode = Keys.Escape Then

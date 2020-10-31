@@ -1,4 +1,4 @@
-﻿Public Class frmUserSettings 
+﻿Public Class FrmUserSettings 
     Public Shared userId As Integer
     Private Sub LoadDestinations()
 
@@ -66,7 +66,7 @@
         Next
     End Sub
 
-    Private Sub frmUserSettings_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub FrmUserSettings_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.Control And e.KeyCode = Keys.S Then
             SaveSettings()
         ElseIf e.KeyCode = Keys.Escape Then
@@ -74,12 +74,12 @@
             Me.Close()
         End If
     End Sub
-    Private Sub frmUserSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmUserSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadDestinations()
         LoadOperators()
     End Sub
 
-    Private Sub windowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
+    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
             SaveSettings()
         ElseIf e.Button.Properties.Caption = "Cancel" Then
@@ -103,7 +103,7 @@
     End Sub
 
     Private Function SaveUserDestinations() As Boolean
-        Dim result = False
+        Dim result As Boolean
         Dim destinationString As String = ""
         For Each item As Object In clbDestination.CheckedItems
             Dim row As DataRowView = TryCast(item, DataRowView)
@@ -127,7 +127,7 @@
     End Function
 
     Private Function SaveUserOperators() As Boolean
-        Dim result = False
+        Dim result As Boolean
         Dim operatorString As String = ""
         For Each item As Object In clbOperator.CheckedItems
             Dim row As DataRowView = TryCast(item, DataRowView)
@@ -150,7 +150,7 @@
         Return result
     End Function
 
-    Private Sub frmUserSettings_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+    Private Sub FrmUserSettings_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Application.DoEvents()
         LoadUserDestinations()
         LoadUserOperators()

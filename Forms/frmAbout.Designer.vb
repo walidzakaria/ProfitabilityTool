@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmAbout
+Partial Class FrmAbout
     Inherits DevExpress.XtraSplashScreen.SplashScreen
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class frmAbout
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAbout))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAbout))
         Me.frmAboutLayoutControl1ConvertedLayout = New DevExpress.XtraLayout.LayoutControl()
         Me.btnOK = New DevExpress.XtraEditors.SimpleButton()
         Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
@@ -199,14 +199,14 @@ Partial Class frmAbout
         Me.LayoutControlItem3.Text = "Developer Name:"
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(83, 13)
         '
-        'frmAbout
+        'FrmAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(450, 186)
         Me.Controls.Add(Me.frmAboutLayoutControl1ConvertedLayout)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmAbout"
+        Me.Name = "FrmAbout"
         Me.Text = "About"
         CType(Me.frmAboutLayoutControl1ConvertedLayout, System.ComponentModel.ISupportInitialize).EndInit()
         Me.frmAboutLayoutControl1ConvertedLayout.ResumeLayout(False)

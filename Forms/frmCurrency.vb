@@ -1,12 +1,12 @@
 ﻿
-Public Class frmCurrency
+Public Class FrmCurrency
     Private Sub LoadAllCurrencies()
 
         Dim query As String = "SELECT Exchange.ExchangeID, Exchange.Currency, Exchange.Rate, Exchange.EffectiveDate, [Login].Username" _
                               & " FROM Exchange, Login" _
                               & " WHERE Exchange.LoginID = Login.LoginId"
 
-        Dim dt As New DataTable()
+        Dim dt As DataTable
         dt = ExClass.QueryGet(query)
         gridControl.DataSource = dt
     End Sub
@@ -14,7 +14,7 @@ Public Class frmCurrency
     Public Sub New()
         InitializeComponent()
     End Sub
-    Private Sub windowsUIButtonPanel_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanel.ButtonClick
+    Private Sub WindowsUIButtonPanel_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanel.ButtonClick
         If e.Button.Properties.Caption = "Print" Then
             gridControl.ShowRibbonPrintPreview()
         ElseIf e.Button.Properties.Caption = "Close" Then
@@ -34,10 +34,10 @@ Public Class frmCurrency
         Dim currencyID As Integer
         currencyID = CInt(gridView.GetFocusedRowCellValue("ExchangeID"))
         If currencyID <> 0 Then
-            frmAddCurrency.currencyId = currencyID
+            FrmAddCurrency.currencyId = currencyID
 
-            frmAddCurrency.ShowDialog()
-            If frmAddCurrency.DialogResult = DialogResult.OK Then
+            FrmAddCurrency.ShowDialog()
+            If FrmAddCurrency.DialogResult = DialogResult.OK Then
                 LoadAllCurrencies()
             End If
         End If
@@ -49,8 +49,9 @@ Public Class frmCurrency
         If currencyId <> 0 Then
             Dim diaR As DialogResult = MessageBox.Show("Are you sure you want to delete this record?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If diaR = DialogResult.Yes Then
-                Dim currency As New Currency()
-                currency.CurrencyId = currencyId
+                Dim currency As New Currency With {
+                    .CurrencyId = currencyId
+                }
                 If currency.DeleteById() Then
                     LoadAllCurrencies()
                 End If
@@ -59,32 +60,32 @@ Public Class frmCurrency
     End Sub
 
     Private Sub AddNewCurrency()
-        frmAddCurrency.currencyId = 0
-        frmAddCurrency.ShowDialog()
+        FrmAddCurrency.currencyId = 0
+        FrmAddCurrency.ShowDialog()
 
-        If frmAddCurrency.DialogResult = DialogResult.OK Then
+        If FrmAddCurrency.DialogResult = DialogResult.OK Then
             LoadAllCurrencies()
         End If
     End Sub
 
-    Private Sub frmCurrency_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub FrmCurrency_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
             Me.Close()
         ElseIf e.Control And e.KeyCode = Keys.N Then
             AddNewCurrency()
         End If
     End Sub
-    Private Sub frmManageAllUsers_Load(sender As Object, e As EventArgs) Handles Me.Load
-        frmMain.Wait(True)
+    Private Sub FrmManageAllUsers_Load(sender As Object, e As EventArgs) Handles Me.Load
+        FrmMain.Wait(True)
         LoadAllCurrencies()
-        frmMain.Wait(False)
+        FrmMain.Wait(False)
     End Sub
 
-    Private Sub gridView_DoubleClick(sender As Object, e As EventArgs) Handles gridView.DoubleClick
+    Private Sub GridView_DoubleClick(sender As Object, e As EventArgs) Handles gridView.DoubleClick
         EditCurrency()
     End Sub
 
-    Private Sub gridView_KeyDown(sender As Object, e As KeyEventArgs) Handles gridView.KeyDown
+    Private Sub GridView_KeyDown(sender As Object, e As KeyEventArgs) Handles gridView.KeyDown
         If e.KeyCode = Keys.Enter Then
             EditCurrency()
         End If

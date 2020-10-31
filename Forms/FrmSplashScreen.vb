@@ -1,4 +1,4 @@
-﻿Public Class SplashScreen1
+﻿Public Class FrmSplashScreen
     Sub New
         InitializeComponent()
         Me.labelCopyright.Text = "Copyright RedSea24© 2020-" & DateTime.Now.Year.ToString()

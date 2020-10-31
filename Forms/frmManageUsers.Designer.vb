@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Public Class frmManageUsers
+Partial Public Class FrmManageUsers
     Inherits DevExpress.XtraEditors.XtraForm
     ''' <summary>
     ''' Required designer variable.
@@ -26,7 +26,7 @@ Partial Public Class frmManageUsers
     '''
     Private Sub InitializeComponent()
         Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmManageUsers))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmManageUsers))
         Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim WindowsUIButtonImageOptions3 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim WindowsUIButtonImageOptions4 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
@@ -44,11 +44,11 @@ Partial Public Class frmManageUsers
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryItemLookUpEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.layoutControlGroup = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.itemLabel = New DevExpress.XtraLayout.LayoutControlItem()
         Me.itemGrid = New DevExpress.XtraLayout.LayoutControlItem()
         Me.windowsUIButtonPanel = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
-        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.layoutControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.layoutControl.SuspendLayout()
         CType(Me.gridControl, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -191,6 +191,17 @@ Partial Public Class frmManageUsers
         Me.GridColumn4.VisibleIndex = 4
         Me.GridColumn4.Width = 70
         '
+        'GridColumn7
+        '
+        Me.GridColumn7.Caption = "Locked"
+        Me.GridColumn7.FieldName = "Locked"
+        Me.GridColumn7.Name = "GridColumn7"
+        Me.GridColumn7.OptionsColumn.AllowEdit = False
+        Me.GridColumn7.OptionsColumn.FixedWidth = True
+        Me.GridColumn7.Visible = True
+        Me.GridColumn7.VisibleIndex = 5
+        Me.GridColumn7.Width = 70
+        '
         'layoutControlGroup
         '
         Me.layoutControlGroup.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
@@ -258,18 +269,7 @@ Partial Public Class frmManageUsers
         Me.windowsUIButtonPanel.Text = "windowsUIButtonPanel"
         Me.windowsUIButtonPanel.UseButtonBackgroundImages = False
         '
-        'GridColumn7
-        '
-        Me.GridColumn7.Caption = "Locked"
-        Me.GridColumn7.FieldName = "Locked"
-        Me.GridColumn7.Name = "GridColumn7"
-        Me.GridColumn7.OptionsColumn.AllowEdit = False
-        Me.GridColumn7.OptionsColumn.FixedWidth = True
-        Me.GridColumn7.Visible = True
-        Me.GridColumn7.VisibleIndex = 5
-        Me.GridColumn7.Width = 70
-        '
-        'frmManageUsers
+        'FrmManageUsers
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
         Me.Appearance.Options.UseBackColor = True
@@ -282,7 +282,7 @@ Partial Public Class frmManageUsers
         Me.IconOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.profitability_logo
         Me.IconOptions.ShowIcon = False
         Me.KeyPreview = True
-        Me.Name = "frmManageUsers"
+        Me.Name = "FrmManageUsers"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         CType(Me.layoutControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.layoutControl.ResumeLayout(False)

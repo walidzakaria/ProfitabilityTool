@@ -1,6 +1,6 @@
 ﻿Imports DevExpress.XtraEditors
 
-Partial Public Class frmAddCurrency
+Partial Public Class FrmAddCurrency
 
     Public Shared currencyId As Integer = 0
     Public Sub New()
@@ -8,15 +8,15 @@ Partial Public Class frmAddCurrency
 
     End Sub
 
-    Private Sub frmAddCurrency_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub FrmAddCurrency_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.Control And e.KeyCode = Keys.S Then
             SaveCurrency()
         ElseIf e.KeyCode = Keys.Escape Then
             CloseCurrency()
         End If
     End Sub
-    Private Sub frmAddCurrency_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        
+    Private Sub FrmAddCurrency_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         If currencyId = 0 Then
             txtCurrency.EditValue = Nothing
             txtRate.EditValue = Nothing
@@ -30,8 +30,9 @@ Partial Public Class frmAddCurrency
     End Sub
 
     Private Sub RecallCurrency(ByVal currencyId As Integer)
-        Dim currency As New Currency()
-        currency.CurrencyId = currencyId
+        Dim currency As New Currency With {
+            .CurrencyId = currencyId
+        }
         If currency.GetById() Then
             txtCurrency.EditValue = currency.Currency
             txtRate.EditValue = currency.Rate
@@ -40,7 +41,7 @@ Partial Public Class frmAddCurrency
 
     End Sub
 
-    Private Sub windowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
+    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
             SaveCurrency()
         ElseIf e.Button.Properties.Caption = "Cancel" Then
@@ -49,7 +50,7 @@ Partial Public Class frmAddCurrency
 
     End Sub
 
-    Private Sub frmAddCurrency_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+    Private Sub FrmAddCurrency_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         txtCurrency.Focus()
         txtCurrency.SelectAll()
     End Sub
@@ -60,14 +61,15 @@ Partial Public Class frmAddCurrency
     End Sub
     Private Sub SaveCurrency()
         If DxValidationProvider1.Validate() Then
-            Dim currency As New Currency()
-            currency.CurrencyId = currencyId
-            currency.Currency = txtCurrency.EditValue.ToString.ToUpper
-            currency.Rate = CDec(Val(txtRate.EditValue))
+            Dim currency As New Currency With {
+                .CurrencyId = currencyId,
+                .Currency = txtCurrency.EditValue.ToString.ToUpper,
+                .Rate = CDec(Val(txtRate.EditValue))
+            }
             deEffectiveDate.RefreshEditValue()
             currency.EffectiveDate = CDate(deEffectiveDate.EditValue)
             currency.LoginID = GV.CurrentUser.LoginId
-            
+
             If currency.SaveCurrency() Then
                 Me.DialogResult = DialogResult.OK
                 Me.Close()

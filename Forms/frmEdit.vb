@@ -2,7 +2,7 @@
 Imports DevExpress.XtraEditors
 Imports DevExpress.XtraBars.Docking2010
 
-Partial Public Class frmEdit
+Partial Public Class FrmEdit
     Public Shared BookingId As Long
     Dim currentBooking As New Booking()
     Public Shared BookingsList As New List(Of Integer)
@@ -78,7 +78,7 @@ Partial Public Class frmEdit
 
     End Sub
 
-    Private Sub frmEdit_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+    Private Sub FrmEdit_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         If BookingsList.Count = 0 Then
             SelectedCurrentRow()
         End If
@@ -139,13 +139,13 @@ Partial Public Class frmEdit
         End With
 
     End Sub
-    Private Sub frmEdit_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub FrmEdit_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If BookingsList.Count = 0 And BookingId <> 0 Then
             UpdateBooking()
 
             ' only check if user has the persmission to write the booking
             If GV.CurrentUser.Authority = "Admin" Or GV.CurrentUser.Authority = "RS" Then
-                Dim tempBooking As New Booking()
+                Dim tempBooking As Booking
                 tempBooking = GetDataSource(BookingId)
 
                 If currentBooking.GetHashCode <> tempBooking.GetHashCode Then
@@ -168,21 +168,21 @@ Partial Public Class frmEdit
     End Sub
 
     Private Sub SelectedCurrentRow()
-        Dim rowHandle As Integer = frmMain.GridView1.LocateByValue("BookingID", currentBooking.BookingID)
+        Dim rowHandle As Integer = FrmMain.GridView1.LocateByValue("BookingID", currentBooking.BookingID)
         If rowHandle <> DevExpress.XtraGrid.GridControl.InvalidRowHandle Then
-            frmMain.GridView1.FocusedRowHandle = rowHandle
-            frmMain.GridView1.SelectRow(rowHandle)
+            FrmMain.GridView1.FocusedRowHandle = rowHandle
+            FrmMain.GridView1.SelectRow(rowHandle)
         End If
     End Sub
 
     Private Sub UpdateChangedRow()
-        Dim rowHandle As Integer = frmMain.GridView1.LocateByValue("BookingID", currentBooking.BookingID)
+        Dim rowHandle As Integer = FrmMain.GridView1.LocateByValue("BookingID", currentBooking.BookingID)
         If rowHandle <> DevExpress.XtraGrid.GridControl.InvalidRowHandle Then
-            frmMain.UpdateCertainRow(rowHandle, currentBooking)
+            FrmMain.UpdateCertainRow(rowHandle, currentBooking)
         End If
     End Sub
 
-    Private Sub frmEdit_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub FrmEdit_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.Control And e.KeyCode = Keys.S And TabbedControlGroup2.SelectedTabPageIndex = 0 Then
             SaveCurrent()
         ElseIf e.Control And e.KeyCode = Keys.S And TabbedControlGroup2.SelectedTabPageIndex = 2 _
@@ -193,8 +193,8 @@ Partial Public Class frmEdit
         End If
     End Sub
 
-    Private Sub frmEdit_Load(sender As Object, e As EventArgs) Handles Me.Load
-        frmMain.Wait(True)
+    Private Sub FrmEdit_Load(sender As Object, e As EventArgs) Handles Me.Load
+        FrmMain.Wait(True)
 
         PopulateStatusMain()
 
@@ -242,7 +242,7 @@ Partial Public Class frmEdit
             btnSaveComment.Enabled = True
         End If
 
-        frmMain.Wait(False)
+        FrmMain.Wait(False)
     End Sub
 
     Private Sub GetComments()
@@ -265,24 +265,24 @@ Partial Public Class frmEdit
 
     Private Sub SaveCurrent()
         If Not NoSave And (GV.CurrentUser.Authority = "Admin" Or GV.CurrentUser.Authority = "RS") Then
-            frmMain.Wait(True)
+            FrmMain.Wait(True)
             UpdateBooking()
             If currentBooking.Save() Then
                 currentBooking = GetDataSource(BookingId)
                 ShowBooking()
                 UpdateChangedRow()
             End If
-            frmMain.Wait(False)
+            FrmMain.Wait(False)
         End If
     End Sub
-    Private Sub windowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
+    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
             SaveCurrent()
         ElseIf e.Button.Properties.Caption = "Reset Changes" Then
-            frmMain.Wait(True)
+            FrmMain.Wait(True)
             currentBooking = GetDataSource(BookingId)
             ShowBooking()
-            frmMain.Wait(False)
+            FrmMain.Wait(False)
         ElseIf e.Button.Properties.Caption = "Close" Then
             Me.Close()
         ElseIf e.Button.Properties.Caption = "Mail" Then
@@ -302,7 +302,7 @@ Partial Public Class frmEdit
 
     End Sub
 
-    Private Sub btnToggleComment_Click(sender As Object, e As EventArgs) Handles btnToggleComment.Click
+    Private Sub BtnToggleComment_Click(sender As Object, e As EventArgs) Handles btnToggleComment.Click
         If grpAddNewComment.Visibility = Utils.LayoutVisibility.Never Then
             grpAddNewComment.Visibility = Utils.LayoutVisibility.Always
             luStatus.Focus()
@@ -311,7 +311,7 @@ Partial Public Class frmEdit
         End If
     End Sub
 
-    Private Sub btnCancelComment_Click(sender As Object, e As EventArgs) Handles btnCancelComment.Click
+    Private Sub BtnCancelComment_Click(sender As Object, e As EventArgs) Handles btnCancelComment.Click
         grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
         ClearComment()
     End Sub
@@ -322,7 +322,7 @@ Partial Public Class frmEdit
         txtCalculation.EditValue = ""
     End Sub
 
-    Private Sub btnSaveComment_Click(sender As Object, e As EventArgs) Handles btnSaveComment.Click
+    Private Sub BtnSaveComment_Click(sender As Object, e As EventArgs) Handles btnSaveComment.Click
         If luStatus.EditValue Is Nothing Then
             MsgBox("Please enter status!")
             luStatus.Focus()
@@ -330,11 +330,12 @@ Partial Public Class frmEdit
             MsgBox("please enter comment!")
             txtComment.Focus()
         Else
-            frmMain.Wait(True)
-            Dim comment = New Comment()
-            comment.Status = CStr(luStatus.EditValue)
-            comment.Comment = CStr(txtComment.EditValue)
-            comment.BookingID = currentBooking.BookingID
+            FrmMain.Wait(True)
+            Dim comment = New Comment With {
+                .Status = CStr(luStatus.EditValue),
+                .Comment = CStr(txtComment.EditValue),
+                .BookingID = currentBooking.BookingID
+            }
             If CStr(txtCalculation.EditValue) = "" Then
                 comment.Calculation = Nothing
             Else
@@ -360,32 +361,32 @@ Partial Public Class frmEdit
                         Me.Close()
                     End If
                 Else
-                    frmMain.Wait(False)
+                    FrmMain.Wait(False)
                     MsgBox("Cannot save comment. All bookings are locked!")
                     Exit Sub
                 End If
 
             End If
 
-            frmMain.Wait(False)
+            FrmMain.Wait(False)
         End If
     End Sub
 
     Private Sub UpdateBookingStatus(ByVal multiple As Boolean, ByVal status As String, ByVal actionBy As Integer, ByVal comment As String, ByVal adjustedPrice As Double)
 
-        currentBooking.Status = CStr(luStatus.EditValue)
+        currentBooking.Status = status
         currentBooking.ActionBy = actionBy
         currentBooking.Comments = comment
         currentBooking.AdjustedPrice = CStr(adjustedPrice)
         If Not multiple Then
-            frmMain.UpdateCertainRow(frmMain.GridView1.FocusedRowHandle, currentBooking)
+            FrmMain.UpdateCertainRow(FrmMain.GridView1.FocusedRowHandle, currentBooking)
         Else
             Dim withPrice As Boolean = adjustedPrice <> Nothing
-            frmMain.UpdateCertainRow(withPrice, currentBooking)
+            FrmMain.UpdateCertainRow(withPrice, currentBooking)
 
         End If
     End Sub
-    Private Sub txtComment_EditValueChanged(sender As Object, e As EventArgs) Handles txtComment.EditValueChanged
+    Private Sub TxtComment_EditValueChanged(sender As Object, e As EventArgs) Handles txtComment.EditValueChanged
         Dim textCalc As Single = ExClass.CalculateText(CStr(txtComment.EditValue))
         If textCalc <> 0 Then
             txtCalculation.Text = textCalc.ToString

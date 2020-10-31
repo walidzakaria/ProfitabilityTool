@@ -113,7 +113,7 @@ Public Class ExClass
 
         Select Case userType
             Case "Admin"
-                With frmMain
+                With FrmMain
                     .RibbonPageGroup1.Visible = True
                     .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
@@ -136,12 +136,12 @@ Public Class ExClass
                     .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                 End With
-                With frmEdit
+                With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = True
                     .windowsUIButtonPanelMain.Buttons(3).Properties.Enabled = True
                 End With
             Case "RS"
-                With frmMain
+                With FrmMain
                     .RibbonPageGroup1.Visible = True
                     .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
@@ -166,12 +166,12 @@ Public Class ExClass
                     .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                 End With
-                With frmEdit
+                With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = True
                     .windowsUIButtonPanelMain.Buttons(3).Properties.Enabled = True
                 End With
             Case "DMC"
-                With frmMain
+                With FrmMain
                     .RibbonPageGroup1.Visible = False
                     .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
@@ -196,12 +196,12 @@ Public Class ExClass
                     .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                 End With
-                With frmEdit
+                With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = False
                     .windowsUIButtonPanelMain.Buttons(3).Properties.Enabled = False
                 End With
             Case "TO"
-                With frmMain
+                With FrmMain
                     .RibbonPageGroup1.Visible = False
                     .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
@@ -229,7 +229,7 @@ Public Class ExClass
                     .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                 End With
-                With frmEdit
+                With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = False
                     .windowsUIButtonPanelMain.Buttons(3).Properties.Enabled = False
 

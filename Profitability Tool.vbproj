@@ -113,6 +113,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Outlook.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Outlook.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System">
@@ -182,90 +183,90 @@
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Classes\ExClass.vb" />
     <Compile Include="Classes\SendMail.vb" />
-    <Compile Include="Forms\frmAbout.Designer.vb">
-      <DependentUpon>frmAbout.vb</DependentUpon>
+    <Compile Include="Forms\FrmAbout.Designer.vb">
+      <DependentUpon>FrmAbout.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmAbout.vb">
+    <Compile Include="Forms\FrmAbout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmAddCurrency.Designer.vb">
-      <DependentUpon>frmAddCurrency.vb</DependentUpon>
+    <Compile Include="Forms\FrmAddCurrency.Designer.vb">
+      <DependentUpon>FrmAddCurrency.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmAddCurrency.vb">
+    <Compile Include="Forms\FrmAddCurrency.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmAddMargin.Designer.vb">
-      <DependentUpon>frmAddMargin.vb</DependentUpon>
+    <Compile Include="Forms\FrmAddMargin.Designer.vb">
+      <DependentUpon>FrmAddMargin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmAddMargin.vb">
+    <Compile Include="Forms\FrmAddMargin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmAddTourOperator.Designer.vb">
-      <DependentUpon>frmAddTourOperator.vb</DependentUpon>
+    <Compile Include="Forms\FrmAddTourOperator.Designer.vb">
+      <DependentUpon>FrmAddTourOperator.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmAddTourOperator.vb">
+    <Compile Include="Forms\FrmAddTourOperator.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmAddUser.Designer.vb">
-      <DependentUpon>frmAddUser.vb</DependentUpon>
+    <Compile Include="Forms\FrmAddUser.Designer.vb">
+      <DependentUpon>FrmAddUser.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmAddUser.vb">
+    <Compile Include="Forms\FrmAddUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmChangePassword.Designer.vb">
-      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    <Compile Include="Forms\FrmChangePassword.Designer.vb">
+      <DependentUpon>FrmChangePassword.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmChangePassword.vb">
+    <Compile Include="Forms\FrmChangePassword.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmCurrency.Designer.vb">
-      <DependentUpon>frmCurrency.vb</DependentUpon>
+    <Compile Include="Forms\FrmCurrency.Designer.vb">
+      <DependentUpon>FrmCurrency.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmCurrency.vb">
+    <Compile Include="Forms\FrmCurrency.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmLogin.Designer.vb">
-      <DependentUpon>frmLogin.vb</DependentUpon>
+    <Compile Include="Forms\FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmLogin.vb">
+    <Compile Include="Forms\FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmManageTourOperator.Designer.vb">
-      <DependentUpon>frmManageTourOperator.vb</DependentUpon>
+    <Compile Include="Forms\FrmManageTourOperator.Designer.vb">
+      <DependentUpon>FrmManageTourOperator.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmManageTourOperator.vb">
+    <Compile Include="Forms\FrmManageTourOperator.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmUserSettings.Designer.vb">
-      <DependentUpon>frmUserSettings.vb</DependentUpon>
+    <Compile Include="Forms\FrmUserSettings.Designer.vb">
+      <DependentUpon>FrmUserSettings.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmUserSettings.vb">
+    <Compile Include="Forms\FrmUserSettings.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMain.vb">
+    <Compile Include="Forms\FrmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMain.Designer.vb">
-      <DependentUpon>frmMain.vb</DependentUpon>
+    <Compile Include="Forms\FrmMain.Designer.vb">
+      <DependentUpon>FrmMain.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmManageMargin.Designer.vb">
-      <DependentUpon>frmManageMargin.vb</DependentUpon>
+    <Compile Include="Forms\FrmManageMargin.Designer.vb">
+      <DependentUpon>FrmManageMargin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmManageMargin.vb">
+    <Compile Include="Forms\FrmManageMargin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmSQL.Designer.vb">
-      <DependentUpon>frmSQL.vb</DependentUpon>
+    <Compile Include="Forms\FrmSQL.Designer.vb">
+      <DependentUpon>FrmSQL.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmSQL.vb">
+    <Compile Include="Forms\FrmSQL.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes\GV.vb" />
     <Compile Include="Classes\Models.vb" />
-    <Compile Include="Forms\SplashScreen1.Designer.vb">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    <Compile Include="Forms\FrmSplashScreen.Designer.vb">
+      <DependentUpon>FrmSplashScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SplashScreen1.vb">
+    <Compile Include="Forms\FrmSplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Application.Designer.vb">
@@ -273,94 +274,94 @@
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="Forms\frmEdit.Designer.vb">
-      <DependentUpon>frmEdit.vb</DependentUpon>
+    <Compile Include="Forms\FrmEdit.Designer.vb">
+      <DependentUpon>FrmEdit.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmEdit.vb">
+    <Compile Include="Forms\FrmEdit.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\WaitForm1.Designer.vb">
-      <DependentUpon>WaitForm1.vb</DependentUpon>
+    <Compile Include="Forms\FrmWait.Designer.vb">
+      <DependentUpon>FrmWait.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\WaitForm1.vb">
+    <Compile Include="Forms\FrmWait.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmManageDestinations.Designer.vb">
-      <DependentUpon>frmManageDestinations.vb</DependentUpon>
+    <Compile Include="Forms\FrmManageDestinations.Designer.vb">
+      <DependentUpon>FrmManageDestinations.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmManageDestinations.vb">
+    <Compile Include="Forms\FrmManageDestinations.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmManageUsers.Designer.vb">
-      <DependentUpon>frmManageUsers.vb</DependentUpon>
+    <Compile Include="Forms\FrmManageUsers.Designer.vb">
+      <DependentUpon>FrmManageUsers.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmManageUsers.vb">
+    <Compile Include="Forms\FrmManageUsers.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmAddDestination.Designer.vb">
-      <DependentUpon>frmAddDestination.vb</DependentUpon>
+    <Compile Include="Forms\FrmAddDestination.Designer.vb">
+      <DependentUpon>FrmAddDestination.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmAddDestination.vb">
+    <Compile Include="Forms\FrmAddDestination.vb">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="Forms\frmAbout.resx">
-      <DependentUpon>frmAbout.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmAbout.resx">
+      <DependentUpon>FrmAbout.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAddCurrency.resx">
-      <DependentUpon>frmAddCurrency.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmAddCurrency.resx">
+      <DependentUpon>FrmAddCurrency.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAddDestination.resx">
-      <DependentUpon>frmAddDestination.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmAddDestination.resx">
+      <DependentUpon>FrmAddDestination.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAddMargin.resx">
-      <DependentUpon>frmAddMargin.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmAddMargin.resx">
+      <DependentUpon>FrmAddMargin.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAddTourOperator.resx">
-      <DependentUpon>frmAddTourOperator.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmAddTourOperator.resx">
+      <DependentUpon>FrmAddTourOperator.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmAddUser.resx">
-      <DependentUpon>frmAddUser.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmAddUser.resx">
+      <DependentUpon>FrmAddUser.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmChangePassword.resx">
-      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmCurrency.resx">
-      <DependentUpon>frmCurrency.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmCurrency.resx">
+      <DependentUpon>FrmCurrency.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmEdit.resx">
-      <DependentUpon>frmEdit.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmEdit.resx">
+      <DependentUpon>FrmEdit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmLogin.resx">
-      <DependentUpon>frmLogin.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmManageTourOperator.resx">
-      <DependentUpon>frmManageTourOperator.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmManageTourOperator.resx">
+      <DependentUpon>FrmManageTourOperator.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmUserSettings.resx">
-      <DependentUpon>frmUserSettings.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmUserSettings.resx">
+      <DependentUpon>FrmUserSettings.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMain.resx">
-      <DependentUpon>frmMain.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmMain.resx">
+      <DependentUpon>FrmMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmManageMargin.resx">
-      <DependentUpon>frmManageMargin.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmManageMargin.resx">
+      <DependentUpon>FrmManageMargin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmManageUsers.resx">
-      <DependentUpon>frmManageUsers.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmManageUsers.resx">
+      <DependentUpon>FrmManageUsers.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmManageDestinations.resx">
-      <DependentUpon>frmManageDestinations.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmManageDestinations.resx">
+      <DependentUpon>FrmManageDestinations.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmSQL.resx">
-      <DependentUpon>frmSQL.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmSQL.resx">
+      <DependentUpon>FrmSQL.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SplashScreen1.resx">
-      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmSplashScreen.resx">
+      <DependentUpon>FrmSplashScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -369,8 +370,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\WaitForm1.resx">
-      <DependentUpon>WaitForm1.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmWait.resx">
+      <DependentUpon>FrmWait.vb</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="My Project\Settings.settings">
@@ -395,6 +396,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\Login.png" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿Public Class frmManageUsers
+﻿Public Class FrmManageUsers
 
     Private Sub LoadAuthorityOptions()
         Dim dt As New DataTable()
@@ -17,7 +17,7 @@
     Private Sub LoadAllUsers()
 
         Dim query As String = "SELECT * FROM Login ORDER BY Username;"
-        Dim dt As New DataTable()
+        Dim dt As DataTable
         dt = ExClass.QueryGet(query)
         gridControl.DataSource = dt
     End Sub
@@ -25,7 +25,7 @@
     Public Sub New()
         InitializeComponent()
     End Sub
-    Private Sub windowsUIButtonPanel_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanel.ButtonClick
+    Private Sub WindowsUIButtonPanel_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanel.ButtonClick
         If e.Button.Properties.Caption = "Print" Then
             gridControl.ShowRibbonPrintPreview()
         ElseIf e.Button.Properties.Caption = "Close" Then
@@ -41,15 +41,15 @@
                 Exit Sub
             End If
             Dim loginId As Integer = CInt(gridView.GetFocusedRowCellValue("LoginID"))
-            frmUserSettings.userId = loginId
-            frmUserSettings.ShowDialog()
+            FrmUserSettings.userId = loginId
+            FrmUserSettings.ShowDialog()
         End If
     End Sub
 
     Private Sub AddNewUser()
-        frmAddUser.userId = 0
-        frmAddUser.ShowDialog()
-        If frmAddUser.DialogResult = DialogResult.OK Then
+        FrmAddUser.userId = 0
+        FrmAddUser.ShowDialog()
+        If FrmAddUser.DialogResult = DialogResult.OK Then
             LoadAllUsers()
         End If
     End Sub
@@ -59,14 +59,14 @@
             Exit Sub
         End If
         Dim loginId As Integer = CInt(gridView.GetFocusedRowCellValue("LoginID"))
-        frmAddUser.userId = loginId
-        frmAddUser.ShowDialog()
-        If frmAddUser.DialogResult = DialogResult.OK Then
+        FrmAddUser.userId = loginId
+        FrmAddUser.ShowDialog()
+        If FrmAddUser.DialogResult = DialogResult.OK Then
             LoadAllUsers()
         End If
     End Sub
 
-    Private Sub frmManageUsers_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub FrmManageUsers_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
             Me.Close()
         ElseIf e.Control And e.KeyCode = Keys.N Then
@@ -74,12 +74,12 @@
 
         End If
     End Sub
-    Private Sub frmManageAllUsers_Load(sender As Object, e As EventArgs) Handles Me.Load
-        frmMain.Wait(True)
+    Private Sub FrmManageAllUsers_Load(sender As Object, e As EventArgs) Handles Me.Load
+        FrmMain.Wait(True)
         LoadAuthorityOptions()
         LoadAllUsers()
 
-        frmMain.Wait(False)
+        FrmMain.Wait(False)
     End Sub
 
     Private Sub ResetUser()
@@ -92,8 +92,9 @@
         ID = CInt(gridView.GetFocusedRowCellValue("LoginID"))
         Dim DiaR As DialogResult = MessageBox.Show("Are you sure you want to reset user password to be '123456'?", "Password Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If DiaR = DialogResult.Yes Then
-            Dim user As New Login()
-            user.LoginId = ID
+            Dim user As New Login With {
+                .LoginId = ID
+            }
             If user.ResetPassword() Then
                 MsgBox("Password was reset to '123456'!")
             Else
@@ -103,11 +104,11 @@
 
     End Sub
 
-    Private Sub gridView_DoubleClick(sender As Object, e As EventArgs) Handles gridView.DoubleClick
+    Private Sub GridView_DoubleClick(sender As Object, e As EventArgs) Handles gridView.DoubleClick
         EditUser()
     End Sub
 
-    Private Sub gridView_KeyDown(sender As Object, e As KeyEventArgs) Handles gridView.KeyDown
+    Private Sub GridView_KeyDown(sender As Object, e As KeyEventArgs) Handles gridView.KeyDown
         If e.KeyCode = Keys.Enter Then
             EditUser()
         End If

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class SplashScreen1
+Partial Class FrmSplashScreen
     Inherits DevExpress.XtraSplashScreen.SplashScreen
 
     'Form overrides dispose to clean up the component list.

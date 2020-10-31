@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Public Class frmManageTourOperator
+Partial Public Class FrmManageTourOperator
     Inherits DevExpress.XtraEditors.XtraForm
     ''' <summary>
     ''' Required designer variable.
@@ -26,7 +26,7 @@ Partial Public Class frmManageTourOperator
     '''
     Private Sub InitializeComponent()
         Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmManageTourOperator))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmManageTourOperator))
         Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim WindowsUIButtonImageOptions3 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim WindowsUIButtonImageOptions4 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
@@ -189,7 +189,7 @@ Partial Public Class frmManageTourOperator
         Me.windowsUIButtonPanel.Text = "windowsUIButtonPanel"
         Me.windowsUIButtonPanel.UseButtonBackgroundImages = False
         '
-        'frmManageTourOperator
+        'FrmManageTourOperator
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
         Me.Appearance.Options.UseBackColor = True
@@ -201,7 +201,7 @@ Partial Public Class frmManageTourOperator
         Me.IconOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.profitability_logo
         Me.IconOptions.ShowIcon = False
         Me.KeyPreview = True
-        Me.Name = "frmManageTourOperator"
+        Me.Name = "FrmManageTourOperator"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         CType(Me.layoutControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.layoutControl.ResumeLayout(False)

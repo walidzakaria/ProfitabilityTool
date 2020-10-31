@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Public Class frmAddCurrency
+Partial Public Class FrmAddCurrency
     Inherits DevExpress.XtraEditors.XtraForm
     ''' <summary>
     ''' Required designer variable.
@@ -43,7 +43,7 @@ Partial Public Class frmAddCurrency
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.dataLayoutControl1.SuspendLayout
+        Me.dataLayoutControl1.SuspendLayout()
         CType(Me.txtCurrency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtRate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.deEffectiveDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,7 +53,7 @@ Partial Public Class frmAddCurrency
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout
+        Me.SuspendLayout()
         '
         'dataLayoutControl1
         '
@@ -195,7 +195,7 @@ Partial Public Class frmAddCurrency
         Me.labelControl.TabIndex = 1
         Me.labelControl.Text = "New Margin"
         '
-        'frmAddCurrency
+        'FrmAddCurrency
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
         Me.Appearance.Options.UseBackColor = True
@@ -210,7 +210,7 @@ Partial Public Class frmAddCurrency
         Me.IconOptions.ShowIcon = False
         Me.KeyPreview = True
         Me.MaximizeBox = False
-        Me.Name = "frmAddCurrency"
+        Me.Name = "FrmAddCurrency"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.dataLayoutControl1.ResumeLayout(False)

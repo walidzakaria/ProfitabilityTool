@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmChangePassword
+Partial Class FrmChangePassword
     Inherits DevExpress.XtraSplashScreen.SplashScreen
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class frmChangePassword
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmChangePassword))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmChangePassword))
         Me.btnCancel = New DevExpress.XtraEditors.SimpleButton()
         Me.btnOK = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
@@ -129,7 +129,7 @@ Partial Class frmChangePassword
         Me.txtRetype.Size = New System.Drawing.Size(323, 24)
         Me.txtRetype.TabIndex = 21
         '
-        'frmChangePassword
+        'FrmChangePassword
         '
         Me.AllowControlsInImageMode = True
         Me.AutoFitImage = False
@@ -147,7 +147,7 @@ Partial Class frmChangePassword
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOK)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmChangePassword"
+        Me.Name = "FrmChangePassword"
         Me.ShowMode = DevExpress.XtraSplashScreen.ShowMode.Image
         Me.SplashImageOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.Sign_up
         Me.Text = "Login"

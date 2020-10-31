@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Public Class frmAddMargin
+Partial Public Class FrmAddMargin
     Inherits DevExpress.XtraEditors.XtraForm
     ''' <summary>
     ''' Required designer variable.
@@ -52,7 +52,7 @@ Partial Public Class frmAddMargin
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         Me.DxValidationProvider2 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.dataLayoutControl1.SuspendLayout
+        Me.dataLayoutControl1.SuspendLayout()
         CType(Me.txtMarginFrom.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtMarginTo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.deEffectiveDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,7 +71,7 @@ Partial Public Class frmAddMargin
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DxValidationProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DxValidationProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout
+        Me.SuspendLayout()
         '
         'dataLayoutControl1
         '
@@ -298,7 +298,7 @@ Partial Public Class frmAddMargin
         Me.labelControl.TabIndex = 1
         Me.labelControl.Text = "New Margin"
         '
-        'frmAddMargin
+        'FrmAddMargin
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
         Me.Appearance.Options.UseBackColor = True
@@ -313,7 +313,7 @@ Partial Public Class frmAddMargin
         Me.IconOptions.ShowIcon = False
         Me.KeyPreview = True
         Me.MaximizeBox = False
-        Me.Name = "frmAddMargin"
+        Me.Name = "FrmAddMargin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.dataLayoutControl1.ResumeLayout(False)

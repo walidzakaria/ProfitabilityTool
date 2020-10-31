@@ -1,5 +1,5 @@
 ﻿
-Public Class frmManageTourOperator
+Public Class FrmManageTourOperator
     Private Sub LoadAllTourOperators()
 
         Dim query As String = "SELECT * FROM TourOperator ORDER BY TourOperator;"
@@ -11,7 +11,7 @@ Public Class frmManageTourOperator
     Public Sub New()
         InitializeComponent()
     End Sub
-    Private Sub windowsUIButtonPanel_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanel.ButtonClick
+    Private Sub WindowsUIButtonPanel_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanel.ButtonClick
         If e.Button.Properties.Caption = "Print" Then
             gridControl.ShowRibbonPrintPreview()
         ElseIf e.Button.Properties.Caption = "Close" Then
@@ -26,10 +26,10 @@ Public Class frmManageTourOperator
     End Sub
 
     Private Sub AddNewOperator()
-        frmAddTourOperator.tourOperatorID = 0
-        frmAddTourOperator.ShowDialog()
+        FrmAddTourOperator.tourOperatorID = 0
+        FrmAddTourOperator.ShowDialog()
 
-        If frmAddTourOperator.DialogResult = DialogResult.OK Then
+        If FrmAddTourOperator.DialogResult = DialogResult.OK Then
             LoadAllTourOperators()
         End If
     End Sub
@@ -38,32 +38,32 @@ Public Class frmManageTourOperator
         Dim tourOperatorID As Integer
         tourOperatorID = CInt(gridView.GetFocusedRowCellValue("TourOperatorID"))
         If tourOperatorID <> 0 Then
-            frmAddTourOperator.tourOperatorID = tourOperatorID
-            frmAddTourOperator.ShowDialog()
-            If frmAddTourOperator.DialogResult = DialogResult.OK Then
+            FrmAddTourOperator.tourOperatorID = tourOperatorID
+            FrmAddTourOperator.ShowDialog()
+            If FrmAddTourOperator.DialogResult = DialogResult.OK Then
                 LoadAllTourOperators()
             End If
         End If
     End Sub
 
-    Private Sub frmManageTourOperator_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub FrmManageTourOperator_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
             Me.Close()
         ElseIf e.Control And e.KeyCode = Keys.N Then
             AddNewOperator()
         End If
     End Sub
-    Private Sub frmManageAllUsers_Load(sender As Object, e As EventArgs) Handles Me.Load
-        frmMain.Wait(True)
+    Private Sub FrmManageAllUsers_Load(sender As Object, e As EventArgs) Handles Me.Load
+        FrmMain.Wait(True)
         LoadAllTourOperators()
-        frmMain.Wait(False)
+        FrmMain.Wait(False)
     End Sub
 
-    Private Sub gridView_DoubleClick(sender As Object, e As EventArgs) Handles gridView.DoubleClick
+    Private Sub GridView_DoubleClick(sender As Object, e As EventArgs) Handles gridView.DoubleClick
         EditTourOperator()
     End Sub
 
-    Private Sub gridView_KeyDown(sender As Object, e As KeyEventArgs) Handles gridView.KeyDown
+    Private Sub GridView_KeyDown(sender As Object, e As KeyEventArgs) Handles gridView.KeyDown
         If e.KeyCode = Keys.Enter Then
             EditTourOperator()
         End If

@@ -11,7 +11,7 @@ Public Class SendMail
     ''' <param name="sCC"></param>
     Public Shared Sub SetEmailSend(sSubject As String, sBody As String, _
                          sTo As String, sCC As String)
-        frmMain.Wait(True)
+        FrmMain.Wait(True)
 
         Dim oApp As Interop.Outlook._Application
         oApp = New Interop.Outlook.Application
@@ -25,7 +25,7 @@ Public Class SendMail
         oMsg.To = sTo
         oMsg.CC = sCC
 
-        frmMain.Wait(False)
+        FrmMain.Wait(False)
         oMsg.Display(True)
 
     End Sub

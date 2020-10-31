@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmSQL
+Partial Class FrmSQL
     Inherits DevExpress.XtraEditors.XtraForm
 
     'Form overrides dispose to clean up the component list.
@@ -19,7 +19,7 @@ Partial Class frmSQL
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSQL))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSQL))
         Me.layoutControl1 = New DevExpress.XtraLayout.LayoutControl()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -150,7 +150,7 @@ Partial Class frmSQL
         Me.LayoutControlItem4.Text = "Query Text:"
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(59, 13)
         '
-        'frmSQL
+        'FrmSQL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -159,7 +159,7 @@ Partial Class frmSQL
         Me.IconOptions.Icon = CType(resources.GetObject("frmSQL.IconOptions.Icon"), System.Drawing.Icon)
         Me.IconOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.profitability_logo
         Me.KeyPreview = True
-        Me.Name = "frmSQL"
+        Me.Name = "FrmSQL"
         Me.Text = "SQL"
         CType(Me.layoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.layoutControl1.ResumeLayout(False)

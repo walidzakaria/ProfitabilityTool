@@ -1,9 +1,9 @@
 ﻿Imports DevExpress.LookAndFeel
 
 
-Partial Public Class frmMain
-    Dim BookingDT As New DataTable()
-    Dim defaultGridLayout As System.IO.Stream = New System.IO.MemoryStream()
+Partial Public Class FrmMain
+    Dim bookingDT As New DataTable()
+    ReadOnly defaultGridLayout As System.IO.Stream = New System.IO.MemoryStream()
     Public Sub Wait(ByVal wait As Boolean)
         If wait = True Then
             Try
@@ -45,14 +45,14 @@ Partial Public Class frmMain
                 Next
             End With
         End If
-        
+
         RepositoryItemLookUpEdit1.DataSource = Nothing
         RepositoryItemLookUpEdit1.DataSource = dt
         RepositoryItemLookUpEdit1.ValueMember = "DestinationCode"
         RepositoryItemLookUpEdit1.DisplayMember = "Destination"
 
     End Sub
-    Private Sub btnRate_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnRate.ItemClick
+    Private Sub BtnRate_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnRate.ItemClick
         Wait(True)
 
         ResetGridLayout()
@@ -72,8 +72,9 @@ Partial Public Class frmMain
 
         End Try
         sourceText = sourceText.Replace(vbTab, "$;&")
-        Dim txtBox As New TextBox
-        txtBox.Text = sourceText
+        Dim txtBox As New TextBox With {
+            .Text = sourceText
+        }
 
         Dim lineArray() As String
 
@@ -144,7 +145,7 @@ Partial Public Class frmMain
         Return result
     End Function
 
-    Private Sub btnSave_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSave.ItemClick
+    Private Sub BtnSave_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSave.ItemClick
         Wait(True)
         Dim query As String = ""
         Dim noNewRecords As Boolean = True
@@ -344,7 +345,7 @@ Partial Public Class frmMain
         Next
 
         For x = 0 To GridView1.RowCount - 1
-            If GridView1.IsRowSelected(x) And frmEdit.BookingsList.Contains(CInt(GridView1.GetRowCellValue(x, "BookingID"))) Then
+            If GridView1.IsRowSelected(x) And FrmEdit.BookingsList.Contains(CInt(GridView1.GetRowCellValue(x, "BookingID"))) Then
                 With BookingDT
                     .Rows(x).SetField("ActionBy", booking.LastUser.Username)
                     .Rows(x).SetField("Status", booking.Status)
@@ -425,7 +426,7 @@ Partial Public Class frmMain
 
     End Sub
 
-    Private Sub btnLoad_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnLoad.ItemClick
+    Private Sub BtnLoad_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnLoad.ItemClick
         LoadData("", False)
     End Sub
 
@@ -436,7 +437,7 @@ Partial Public Class frmMain
     Private Sub ViewBookingDetails()
 
         If GridView1.SelectedRowsCount = 1 Then
-            frmEdit.bookingsList.Clear()
+            FrmEdit.BookingsList.Clear()
             Dim bookingId As Long
             bookingId = CInt(GridView1.GetFocusedRowCellValue("BookingID"))
 
@@ -444,8 +445,8 @@ Partial Public Class frmMain
                 ' Check if the booking is read-only
                 GetReadOnlyBookings(True, bookingId.ToString)
                 LockBookings(bookingId.ToString, True)
-                frmEdit.bookingId = bookingId
-                frmEdit.ShowDialog()
+                FrmEdit.BookingId = bookingId
+                FrmEdit.ShowDialog()
                 LockBookings(bookingId.ToString, False)
             End If
         ElseIf GridView1.SelectedRowsCount > 1 Then
@@ -459,8 +460,8 @@ Partial Public Class frmMain
             Dim bookings As String = String.Join(",", bookingsList.[Select](Function(i) i.ToString()).ToArray())
             GetReadOnlyBookings(False, bookings)
             LockBookings(bookings, True)
-            frmEdit.BookingsList = bookingsList
-            frmEdit.ShowDialog()
+            FrmEdit.BookingsList = bookingsList
+            FrmEdit.ShowDialog()
             LockBookings(bookings, False)
         End If
 
@@ -470,12 +471,13 @@ Partial Public Class frmMain
         ViewBookingDetails()
     End Sub
 
-    Private Sub frmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub FrmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        LockBookings("", False)
         My.Settings.Theme = UserLookAndFeel.Default.SkinName.ToString
         My.Settings.Save()
     End Sub
 
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         beDateFrom.EditValue = My.Settings.RibbonDateFrom
         beDateTo.EditValue = Today().AddYears(3)
@@ -494,41 +496,41 @@ Partial Public Class frmMain
             End Try
         End If
 
-        frmLogin.Close()
+        FrmLogin.Close()
         If Not My.Settings.Theme = "" Then
             UserLookAndFeel.Default.SkinName = My.Settings.Theme.ToString()
         End If
     End Sub
 
-    Private Sub btnSwitchUser_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSwitchUser.ItemClick
-        frmLogin.ShowDialog()
-        BookingDT.Reset()
+    Private Sub BtnSwitchUser_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSwitchUser.ItemClick
+        FrmLogin.ShowDialog()
+        bookingDT.Reset()
     End Sub
 
-    Private Sub btnChangePassword_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnChangePassword.ItemClick
-        frmChangePassword.ShowDialog()
+    Private Sub BtnChangePassword_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnChangePassword.ItemClick
+        FrmChangePassword.ShowDialog()
     End Sub
 
-    Private Sub btnExit_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnExit.ItemClick
+    Private Sub BtnExit_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnExit.ItemClick
         Me.Close()
         Application.Exit()
     End Sub
 
-    Private Sub btnManageUsers_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageUsers.ItemClick
-        frmManageUsers.ShowDialog()
+    Private Sub BtnManageUsers_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageUsers.ItemClick
+        FrmManageUsers.ShowDialog()
     End Sub
 
-    Private Sub beDateFrom_EditValueChanged(sender As Object, e As EventArgs) Handles beDateFrom.EditValueChanged
+    Private Sub BeDateFrom_EditValueChanged(sender As Object, e As EventArgs) Handles beDateFrom.EditValueChanged
         My.Settings.RibbonDateFrom = CDate(beDateFrom.EditValue)
         My.Settings.Save()
     End Sub
 
-    Private Sub btnManageDestination_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnDestination.ItemClick
-        frmManageDestinations.ShowDialog()
+    Private Sub BtnManageDestination_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnDestination.ItemClick
+        FrmManageDestinations.ShowDialog()
     End Sub
 
-    Private Sub btnManageMargin_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageMargin.ItemClick
-        frmManageMargin.ShowDialog()
+    Private Sub BtnManageMargin_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageMargin.ItemClick
+        FrmManageMargin.ShowDialog()
     End Sub
 
     Private Sub GridControl1_KeyDown(sender As Object, e As KeyEventArgs) Handles GridControl1.KeyDown
@@ -539,28 +541,28 @@ Partial Public Class frmMain
         End If
     End Sub
 
-    Private Sub beCountry_EditValueChanged(sender As Object, e As EventArgs) Handles beCountry.EditValueChanged
-        My.Settings.Destination = cstr(beCountry.EditValue)
+    Private Sub BeCountry_EditValueChanged(sender As Object, e As EventArgs) Handles beCountry.EditValueChanged
+        My.Settings.Destination = CStr(beCountry.EditValue)
         My.Settings.Save()
     End Sub
 
-    Private Sub btnJunk_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnJunk.ItemClick
+    Private Sub BtnJunk_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnJunk.ItemClick
         LoadData("AND Junk = 1 AND GwgStatus != 'Can'", False)
     End Sub
 
-    Private Sub brnCanceled_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles brnCanceled.ItemClick
+    Private Sub BrnCanceled_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles brnCanceled.ItemClick
         LoadData("AND GwgStatus = 'Can'", False)
     End Sub
 
-    Private Sub btnMatching_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMatching.ItemClick
+    Private Sub BtnMatching_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMatching.ItemClick
         Dim status As String
         status = " AND Junk = 0 AND GwgStatus != 'Can' AND NegativeMargin = 0 
                     AND ExcessiveMargin = 0 AND MismatchCalc = 0"
         LoadData(status, False)
     End Sub
 
-    Private Sub btnShowDefict_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnShowDefict.ItemClick
-        Dim status As String = " AND Junk = 0 AND GwgStatus != 'Can' AND [Status] IS NULL AND ("
+    Private Sub BtnShowDefict_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnShowDefict.ItemClick
+        Dim status As String = " AND Junk = 0 AND GwgStatus != 'Can' AND ([Status] IS NULL OR [Status] = '') AND ("
 
         If Not bcExcessive.Checked And Not bcNegative.Checked And Not bcMismatch.Checked Then
             MsgBox("Please select at least one option!")
@@ -587,7 +589,7 @@ Partial Public Class frmMain
 
     End Sub
 
-    Private Sub btnShow_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnShow.ItemClick
+    Private Sub BtnShow_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnShow.ItemClick
         Dim status As String = " AND Junk = 0 AND GwgStatus != 'Can' AND ("
         If Not bcPendingDmc.Checked And Not bcPendingTo.Checked And Not bcFixedDmc.Checked And Not bcFixedTo.Checked And Not bcNewRecord.Checked Then
             MsgBox("Please select at least one option!")
@@ -626,26 +628,26 @@ Partial Public Class frmMain
         LoadData(status, False)
     End Sub
 
-    Private Sub btnAddDispute_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAddDispute.ItemClick
+    Private Sub BtnAddDispute_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAddDispute.ItemClick
         ViewBookingDetails()
     End Sub
 
-    Private Sub btnTO_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnTO.ItemClick
-        frmManageTourOperator.ShowDialog()
+    Private Sub BtnTO_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnTO.ItemClick
+        FrmManageTourOperator.ShowDialog()
     End Sub
 
-    Private Sub btnManageCurrency_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageCurrency.ItemClick
-        frmCurrency.ShowDialog()
+    Private Sub BtnManageCurrency_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageCurrency.ItemClick
+        FrmCurrency.ShowDialog()
     End Sub
 
-    Private Sub btnErrors_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnErrors.ItemClick
+    Private Sub BtnErrors_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnErrors.ItemClick
         Dim status As String
         status = " AND (MissingCurrency = 1 OR MissingDestination = 1 OR MissingTO = 1 OR MissingMargin = 1)"
         LoadData(status, True)
     End Sub
 
-    Private Sub btnAbout_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAbout.ItemClick
-        frmAbout.ShowDialog()
+    Private Sub BtnAbout_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAbout.ItemClick
+        FrmAbout.ShowDialog()
     End Sub
 
     Private Sub GridView1_Click(sender As Object, e As EventArgs) Handles GridView1.Click
@@ -658,13 +660,13 @@ Partial Public Class frmMain
         End If
     End Sub
 
-    Private Sub bhUsername_ItemDoubleClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bhUsername.ItemDoubleClick
+    Private Sub BhUsername_ItemDoubleClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bhUsername.ItemDoubleClick
         If GV.CurrentUser.Authority = "Admin" Or GV.CurrentUser.Authority = "Developer" Then
-            frmSQL.Show()
+            FrmSQL.Show()
         End If
     End Sub
 
-    Private Sub frmMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+    Private Sub FrmMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         GridView1.SaveLayoutToStream(defaultGridLayout)
         defaultGridLayout.Seek(0, System.IO.SeekOrigin.Begin)
     End Sub
@@ -682,9 +684,9 @@ Partial Public Class frmMain
                 Dim message As String = String.Format("The booking will open as Read-Only as it's locked by user '{0}' since '{1}'.",
                                                       dt.Rows(0)(1), CDate(dt.Rows(0)(2)).ToString("HH:mm"))
                 MsgBox(message)
-                frmEdit.NoSave = True
+                FrmEdit.NoSave = True
             Else
-                frmEdit.NoSave = False
+                FrmEdit.NoSave = False
             End If
         Else
             Dim dt As DataTable = IsLocked(bookingIDs)
@@ -693,18 +695,18 @@ Partial Public Class frmMain
                 Dim message As String
 
                 Dim listOfReadOnlyBookings As String = ""
-                    For Each row As DataRow In dt.Rows
-                        listOfReadOnlyBookings &= String.Format("Booking#: {0}, User: {1},  Since: {2}" & vbNewLine,
+                For Each row As DataRow In dt.Rows
+                    listOfReadOnlyBookings &= String.Format("Booking#: {0}, User: {1},  Since: {2}" & vbNewLine,
                                                                 row(0), row(1), CDate(row(2)).ToString("HH:mm"))
-                    Next
+                Next
                 message = String.Format("Those bookings will open as Read-Only as they're locked by other users: " & vbNewLine & "{0}",
                                             listOfReadOnlyBookings)
 
 
                 MsgBox(message)
-                frmEdit.NoSave = True
+                FrmEdit.NoSave = True
             Else
-                frmEdit.NoSave = False
+                FrmEdit.NoSave = False
             End If
         End If
 
@@ -731,9 +733,17 @@ Partial Public Class frmMain
                         UPDATE Booking SET Locked = {0}, LockTime = GETDATE() WHERE BookingID IN ({1}) AND Locked IS NULL;
                     ", GV.CurrentUser.LoginId.ToString, bookingIDs)
         Else
-            query = String.Format("
+
+
+            If bookingIDs <> "" Then
+                query = String.Format("
                         UPDATE Booking SET Locked = NULL, LockTime = NULL WHERE BookingID IN ({0}) AND Locked = {1};
                     ", bookingIDs, GV.CurrentUser.LoginId.ToString)
+            Else
+                query = String.Format("
+                        UPDATE Booking SET Locked = NULL, LockTime = NULL WHERE Locked = {0};
+                    ", GV.CurrentUser.LoginId.ToString)
+            End If
         End If
 
         ExClass.QuerySet(query)

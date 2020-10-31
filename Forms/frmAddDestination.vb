@@ -1,6 +1,6 @@
 ﻿Imports DevExpress.XtraEditors
 
-Partial Public Class frmAddDestination
+Partial Public Class FrmAddDestination
 
     Public Shared destinationId As Integer = 0
     Public Sub New()
@@ -8,14 +8,14 @@ Partial Public Class frmAddDestination
 
     End Sub
 
-    Private Sub frmAddDestination_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub FrmAddDestination_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.Control And e.KeyCode = Keys.S Then
             SaveDestination()
         ElseIf e.KeyCode = Keys.Escape Then
             CloseDestination()
         End If
     End Sub
-    Private Sub frmAddDestination_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmAddDestination_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If destinationId = 0 Then
             txtCode.EditValue = Nothing
             txtDestination.EditValue = Nothing
@@ -27,15 +27,16 @@ Partial Public Class frmAddDestination
     End Sub
 
     Private Sub RecallDestination(ByVal destinationId As Integer)
-        Dim destination As New Destination()
-        destination.DestinationId = destinationId
+        Dim destination As New Destination With {
+            .DestinationId = destinationId
+        }
         If destination.GetById() Then
             txtCode.EditValue = destination.DestinationCode
             txtDestination.EditValue = destination.Destination
         End If
     End Sub
 
-    Private Sub windowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
+    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
             SaveDestination()
         ElseIf e.Button.Properties.Caption = "Cancel" Then
@@ -44,7 +45,7 @@ Partial Public Class frmAddDestination
 
     End Sub
 
-    Private Sub frmAddDestination_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+    Private Sub FrmAddDestination_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         txtCode.Focus()
         txtCode.SelectAll()
     End Sub
@@ -55,10 +56,11 @@ Partial Public Class frmAddDestination
     End Sub
     Private Sub SaveDestination()
         If DxValidationProvider1.Validate() Then
-            Dim destination As New Destination()
-            destination.DestinationCode = txtCode.Text
-            destination.Destination = txtDestination.Text
-            destination.DestinationId = destinationId
+            Dim destination As New Destination With {
+                .DestinationCode = txtCode.Text,
+                .Destination = txtDestination.Text,
+                .DestinationId = destinationId
+            }
             If destination.UniqueCode() Then
                 If destination.SaveDestination() Then
                     Me.DialogResult = DialogResult.OK

@@ -1,4 +1,4 @@
-﻿Public Class frmAbout
+﻿Public Class FrmAbout
     Sub New
         InitializeComponent()
     End Sub
@@ -11,22 +11,22 @@
         SomeCommandId
     End Enum
 
-    Private Sub frmAbout_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub FrmAbout_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
             Me.Close()
         End If
     End Sub
 
-    Private Sub frmAbout_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub FrmAbout_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.Opacity = 100%
         txtVersion.EditValue = String.Format("Version No. {0}", Application.ProductVersion)
     End Sub
 
-    Private Sub frmAbout_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+    Private Sub FrmAbout_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Me.Opacity = 100%
     End Sub
 
-    Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+    Private Sub BtnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
         Me.Close()
     End Sub
 End Class

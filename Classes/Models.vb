@@ -677,7 +677,7 @@ Public Class Destination
         queryResult = ExClass.QuerySet(query)
         If queryResult = "True" Then
             result = True
-            frmMain.FillRibbonDestinations()
+            FrmMain.FillRibbonDestinations()
         Else
             MsgBox(queryResult)
         End If

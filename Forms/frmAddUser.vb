@@ -1,4 +1,4 @@
-﻿Public Class frmAddUser 
+﻿Public Class FrmAddUser 
     Public Shared userId As Integer = 0
     Private Sub Clear()
         txtUsername.Text = ""
@@ -30,7 +30,7 @@
 
     End Sub
 
-    Private Sub frmAddUser_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub FrmAddUser_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
             Me.DialogResult = DialogResult.Cancel
         ElseIf e.Control And e.KeyCode = Keys.S Then
@@ -41,7 +41,7 @@
             End If
         End If
     End Sub
-    Private Sub frmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Clear()
 
         If userId <> 0 Then
@@ -49,11 +49,11 @@
         End If
     End Sub
 
-    Private Sub frmAddUser_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+    Private Sub FrmAddUser_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         txtUsername.Focus()
     End Sub
 
-    Private Sub windowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
+    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
             If userId = 0 Then
                 AddUser()
@@ -69,14 +69,15 @@
 
     Private Sub UpdateUser()
         If DxValidationProvider2.Validate() Then
-            Dim user As New Login()
-            user.Username = txtUsername.EditValue.ToString
-            user.FullName = txtFullName.EditValue.ToString
-            user.Password = txtPassword.EditValue.ToString
-            user.Mail = txtEmail.EditValue.ToString
-            user.Authority = rgAuthority.EditValue.ToString
-            user.Active = CBool(rgActive.EditValue)
-            user.IsLocked = CBool(rgLocked.EditValue)
+            Dim user As New Login With {
+                .Username = txtUsername.EditValue.ToString,
+                .Fullname = txtFullName.EditValue.ToString,
+                .Password = txtPassword.EditValue.ToString,
+                .Mail = txtEmail.EditValue.ToString,
+                .Authority = rgAuthority.EditValue.ToString,
+                .Active = CBool(rgActive.EditValue),
+                .IsLocked = CBool(rgLocked.EditValue)
+            }
             If Not user.IsLocked Then
                 user.InvalidLogins = 0
             End If
@@ -100,15 +101,16 @@
     Private Sub AddUser()
 
         If DxValidationProvider1.Validate() Then
-            Dim user As New Login()
-            user.Username = txtUsername.EditValue.ToString
-            user.FullName = txtFullName.EditValue.ToString
-            user.Password = txtPassword.EditValue.ToString
-            user.Mail = txtEmail.EditValue.ToString
-            user.Authority = rgAuthority.EditValue.ToString
-            user.Active = CBool(rgActive.EditValue)
-            user.IsLocked = CBool(rgLocked.EditValue)
-            user.InvalidLogins = 0
+            Dim user As New Login With {
+                .Username = txtUsername.EditValue.ToString,
+                .Fullname = txtFullName.EditValue.ToString,
+                .Password = txtPassword.EditValue.ToString,
+                .Mail = txtEmail.EditValue.ToString,
+                .Authority = rgAuthority.EditValue.ToString,
+                .Active = CBool(rgActive.EditValue),
+                .IsLocked = CBool(rgLocked.EditValue),
+                .InvalidLogins = 0
+            }
 
             If Not user.UniqueUsername Then
                 MsgBox("The entered username already exists, please select a unique username!")

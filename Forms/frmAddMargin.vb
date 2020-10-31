@@ -1,6 +1,6 @@
 ﻿Imports DevExpress.XtraEditors
 
-Partial Public Class frmAddMargin
+Partial Public Class FrmAddMargin
 
     Public Shared marginId As Integer = 0
     Public Shared marginCloned As Boolean = False
@@ -11,7 +11,7 @@ Partial Public Class frmAddMargin
 
     Private Sub FillDestinations()
         Dim query As String = "SELECT * FROM Destination ORDER BY Destination;"
-        Dim dt As New DataTable()
+        Dim dt As DataTable
         dt = ExClass.QueryGet(query)
         luDestination.Properties.DataSource = Nothing
         luDestination.Properties.DataSource = dt
@@ -22,7 +22,7 @@ Partial Public Class frmAddMargin
 
     Private Sub FillTourOperators()
         Dim query As String = "SELECT * FROM TourOperator;"
-        Dim dt As New DataTable()
+        Dim dt As DataTable
         dt = ExClass.QueryGet(query)
         luTourOperator.Properties.DataSource = Nothing
         luTourOperator.Properties.DataSource = dt
@@ -31,14 +31,14 @@ Partial Public Class frmAddMargin
 
     End Sub
 
-    Private Sub frmAddMargin_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+    Private Sub FrmAddMargin_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.Control And e.KeyCode = Keys.S Then
             SaveMargin()
         ElseIf e.KeyCode = Keys.Escape Then
             CloseMargin()
         End If
     End Sub
-    Private Sub frmAddDestination_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmAddDestination_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FillDestinations()
         FillTourOperators()
         If marginId = 0 Then
@@ -58,8 +58,9 @@ Partial Public Class frmAddMargin
     End Sub
 
     Private Sub RecallMargin(ByVal marginId As Integer)
-        Dim margin As New Margin()
-        margin.MarginId = marginId
+        Dim margin As New Margin With {
+            .MarginId = marginId
+        }
         If margin.GetById() Then
             luDestination.EditValue = margin.DestinationId
             luTourOperator.EditValue = margin.TourOperatorId
@@ -72,7 +73,7 @@ Partial Public Class frmAddMargin
         End If
     End Sub
 
-    Private Sub windowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
+    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
             SaveMargin()
         ElseIf e.Button.Properties.Caption = "Cancel" Then
@@ -81,7 +82,7 @@ Partial Public Class frmAddMargin
 
     End Sub
 
-    Private Sub frmAddMargin_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+    Private Sub FrmAddMargin_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         luDestination.Focus()
         luDestination.SelectAll()
     End Sub
@@ -92,14 +93,15 @@ Partial Public Class frmAddMargin
     End Sub
     Private Sub SaveMargin()
         If DxValidationProvider1.Validate() Then
-            Dim margin As New Margin()
-            margin.MarginId = marginId
-            margin.DestinationId = CInt(luDestination.EditValue)
-            margin.TourOperatorId = CInt(luTourOperator.EditValue)
-            margin.MarginFrom = CSng(Val(txtMarginFrom.EditValue))
-            margin.MarginTo = CSng(Val(txtMarginTo.EditValue))
-            margin.DifferenceFrom = CSng(Val(txtDifferenceFrom.EditValue))
-            margin.DifferenceTo = CSng(Val(txtDifferenceTo.EditValue))
+            Dim margin As New Margin With {
+                .MarginId = marginId,
+                .DestinationId = CInt(luDestination.EditValue),
+                .TourOperatorId = CInt(luTourOperator.EditValue),
+                .MarginFrom = CSng(Val(txtMarginFrom.EditValue)),
+                .MarginTo = CSng(Val(txtMarginTo.EditValue)),
+                .DifferenceFrom = CSng(Val(txtDifferenceFrom.EditValue)),
+                .DifferenceTo = CSng(Val(txtDifferenceTo.EditValue))
+            }
             deEffectiveDate.RefreshEditValue()
             margin.EffectiveDate = CDate(deEffectiveDate.EditValue)
 

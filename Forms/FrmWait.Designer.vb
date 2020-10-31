@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class WaitForm1
+Partial Class FrmWait
     Inherits DevExpress.XtraWaitForm.WaitForm
 
     'Form overrides dispose to clean up the component list.

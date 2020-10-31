@@ -1,4 +1,4 @@
-﻿Public Class frmChangePassword
+﻿Public Class FrmChangePassword
     Sub New()
         InitializeComponent()
     End Sub
@@ -11,11 +11,11 @@
         SomeCommandId
     End Enum
 
-    Private Sub frmChangePassword_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+    Private Sub FrmChangePassword_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         Me.Opacity = 100%
     End Sub
 
-    Private Sub frmChangePassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FrmChangePassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Opacity = 100%
         txtNewPassword.Text = ""
         txtOldPassword.Text = ""
@@ -25,15 +25,15 @@
 
     End Sub
 
-    Private Sub frmChangePassword_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+    Private Sub FrmChangePassword_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         txtOldPassword.Focus()
     End Sub
 
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 
-    Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+    Private Sub BtnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
         If txtOldPassword.Text = "" Then
             MsgBox("Please enter your old password!")
             txtOldPassword.Focus()
@@ -49,9 +49,10 @@
             txtNewPassword.Focus()
             txtNewPassword.SelectAll()
         Else
-            Dim user As New Login()
-            user.LoginId = GV.CurrentUser.LoginId
-            user.Password = txtOldPassword.Text
+            Dim user As New Login With {
+                .LoginId = GV.CurrentUser.LoginId,
+                .Password = txtOldPassword.Text
+            }
             If user.Password <> GV.CurrentUser.Password Then
                 MessageBox.Show("The entered passwords are different!", "Wrong Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 txtRetype.Text = ""

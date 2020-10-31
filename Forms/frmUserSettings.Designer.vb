@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Public Class frmUserSettings
+Partial Public Class FrmUserSettings
     Inherits DevExpress.XtraEditors.XtraForm
     ''' <summary>
     ''' Required designer variable.
@@ -157,7 +157,7 @@ Partial Public Class frmUserSettings
         Me.lblUsername.TabIndex = 1
         Me.lblUsername.Text = "User Options"
         '
-        'frmUserSettings
+        'FrmUserSettings
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
         Me.Appearance.Options.UseBackColor = True
@@ -172,7 +172,7 @@ Partial Public Class frmUserSettings
         Me.IconOptions.ShowIcon = False
         Me.KeyPreview = True
         Me.MaximizeBox = False
-        Me.Name = "frmUserSettings"
+        Me.Name = "FrmUserSettings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.dataLayoutControl1.ResumeLayout(False)
