@@ -18,9 +18,9 @@ Partial Public Class FrmAddCurrency
     Private Sub FrmAddCurrency_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         If currencyId = 0 Then
-            txtCurrency.EditValue = Nothing
-            txtRate.EditValue = Nothing
-            deEffectiveDate.EditValue = Today
+            TxtCurrency.EditValue = Nothing
+            TxtRate.EditValue = Nothing
+            DeEffectiveDate.EditValue = Today
 
             labelControl.Text = "Add Currency"
         Else
@@ -34,14 +34,14 @@ Partial Public Class FrmAddCurrency
             .CurrencyId = currencyId
         }
         If currency.GetById() Then
-            txtCurrency.EditValue = currency.Currency
-            txtRate.EditValue = currency.Rate
-            deEffectiveDate.EditValue = currency.EffectiveDate
+            TxtCurrency.EditValue = currency.Currency
+            TxtRate.EditValue = currency.Rate
+            DeEffectiveDate.EditValue = currency.EffectiveDate
         End If
 
     End Sub
 
-    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
+    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles WindowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
             SaveCurrency()
         ElseIf e.Button.Properties.Caption = "Cancel" Then
@@ -51,8 +51,8 @@ Partial Public Class FrmAddCurrency
     End Sub
 
     Private Sub FrmAddCurrency_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        txtCurrency.Focus()
-        txtCurrency.SelectAll()
+        TxtCurrency.Focus()
+        TxtCurrency.SelectAll()
     End Sub
 
     Private Sub CloseCurrency()
@@ -63,11 +63,11 @@ Partial Public Class FrmAddCurrency
         If DxValidationProvider1.Validate() Then
             Dim currency As New Currency With {
                 .CurrencyId = currencyId,
-                .Currency = txtCurrency.EditValue.ToString.ToUpper,
-                .Rate = CDec(Val(txtRate.EditValue))
+                .Currency = TxtCurrency.EditValue.ToString.ToUpper,
+                .Rate = CDec(Val(TxtRate.EditValue))
             }
-            deEffectiveDate.RefreshEditValue()
-            currency.EffectiveDate = CDate(deEffectiveDate.EditValue)
+            DeEffectiveDate.RefreshEditValue()
+            currency.EffectiveDate = CDate(DeEffectiveDate.EditValue)
             currency.LoginID = GV.CurrentUser.LoginId
 
             If currency.SaveCurrency() Then

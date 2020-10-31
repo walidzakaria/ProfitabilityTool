@@ -23,9 +23,9 @@ Partial Class FrmSQL
         Me.layoutControl1 = New DevExpress.XtraLayout.LayoutControl()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.btnRun = New DevExpress.XtraEditors.SimpleButton()
-        Me.btnClear = New DevExpress.XtraEditors.SimpleButton()
-        Me.meQuery = New DevExpress.XtraEditors.MemoEdit()
+        Me.BtnRun = New DevExpress.XtraEditors.SimpleButton()
+        Me.BtnClear = New DevExpress.XtraEditors.SimpleButton()
+        Me.MeQuery = New DevExpress.XtraEditors.MemoEdit()
         Me.layoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.layoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.layoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -35,7 +35,7 @@ Partial Class FrmSQL
         Me.layoutControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.meQuery.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MeQuery.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,9 +46,9 @@ Partial Class FrmSQL
         'layoutControl1
         '
         Me.layoutControl1.Controls.Add(Me.GridControl1)
-        Me.layoutControl1.Controls.Add(Me.btnRun)
-        Me.layoutControl1.Controls.Add(Me.btnClear)
-        Me.layoutControl1.Controls.Add(Me.meQuery)
+        Me.layoutControl1.Controls.Add(Me.BtnRun)
+        Me.layoutControl1.Controls.Add(Me.BtnClear)
+        Me.layoutControl1.Controls.Add(Me.MeQuery)
         Me.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.layoutControl1.Location = New System.Drawing.Point(0, 0)
         Me.layoutControl1.Name = "layoutControl1"
@@ -77,33 +77,33 @@ Partial Class FrmSQL
         Me.GridView1.OptionsView.ColumnAutoWidth = False
         Me.GridView1.OptionsView.ShowFooter = True
         '
-        'btnRun
+        'BtnRun
         '
-        Me.btnRun.Location = New System.Drawing.Point(422, 408)
-        Me.btnRun.Name = "btnRun"
-        Me.btnRun.Size = New System.Drawing.Size(426, 22)
-        Me.btnRun.StyleController = Me.layoutControl1
-        Me.btnRun.TabIndex = 6
-        Me.btnRun.Text = "Run"
+        Me.BtnRun.Location = New System.Drawing.Point(422, 408)
+        Me.BtnRun.Name = "BtnRun"
+        Me.BtnRun.Size = New System.Drawing.Size(426, 22)
+        Me.BtnRun.StyleController = Me.layoutControl1
+        Me.BtnRun.TabIndex = 6
+        Me.BtnRun.Text = "Run"
         '
-        'btnClear
+        'BtnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(12, 408)
-        Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(406, 22)
-        Me.btnClear.StyleController = Me.layoutControl1
-        Me.btnClear.TabIndex = 5
-        Me.btnClear.Text = "Clear"
+        Me.BtnClear.Location = New System.Drawing.Point(12, 408)
+        Me.BtnClear.Name = "BtnClear"
+        Me.BtnClear.Size = New System.Drawing.Size(406, 22)
+        Me.BtnClear.StyleController = Me.layoutControl1
+        Me.BtnClear.TabIndex = 5
+        Me.BtnClear.Text = "Clear"
         '
-        'meQuery
+        'MeQuery
         '
-        Me.meQuery.Location = New System.Drawing.Point(74, 326)
-        Me.meQuery.Name = "meQuery"
-        Me.meQuery.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.meQuery.Properties.Appearance.Options.UseFont = True
-        Me.meQuery.Size = New System.Drawing.Size(774, 78)
-        Me.meQuery.StyleController = Me.layoutControl1
-        Me.meQuery.TabIndex = 7
+        Me.MeQuery.Location = New System.Drawing.Point(74, 326)
+        Me.MeQuery.Name = "MeQuery"
+        Me.MeQuery.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MeQuery.Properties.Appearance.Options.UseFont = True
+        Me.MeQuery.Size = New System.Drawing.Size(774, 78)
+        Me.MeQuery.StyleController = Me.layoutControl1
+        Me.MeQuery.TabIndex = 7
         '
         'layoutControlGroup1
         '
@@ -116,7 +116,7 @@ Partial Class FrmSQL
         '
         'layoutControlItem2
         '
-        Me.layoutControlItem2.Control = Me.btnClear
+        Me.layoutControlItem2.Control = Me.BtnClear
         Me.layoutControlItem2.Location = New System.Drawing.Point(0, 396)
         Me.layoutControlItem2.Name = "layoutControlItem2"
         Me.layoutControlItem2.Size = New System.Drawing.Size(410, 26)
@@ -125,7 +125,7 @@ Partial Class FrmSQL
         '
         'layoutControlItem3
         '
-        Me.layoutControlItem3.Control = Me.btnRun
+        Me.layoutControlItem3.Control = Me.BtnRun
         Me.layoutControlItem3.Location = New System.Drawing.Point(410, 396)
         Me.layoutControlItem3.Name = "layoutControlItem3"
         Me.layoutControlItem3.Size = New System.Drawing.Size(430, 26)
@@ -143,7 +143,7 @@ Partial Class FrmSQL
         '
         'LayoutControlItem4
         '
-        Me.LayoutControlItem4.Control = Me.meQuery
+        Me.LayoutControlItem4.Control = Me.MeQuery
         Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 314)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
         Me.LayoutControlItem4.Size = New System.Drawing.Size(840, 82)
@@ -156,7 +156,7 @@ Partial Class FrmSQL
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(860, 442)
         Me.Controls.Add(Me.layoutControl1)
-        Me.IconOptions.Icon = CType(resources.GetObject("frmSQL.IconOptions.Icon"), System.Drawing.Icon)
+        Me.IconOptions.Icon = CType(resources.GetObject("FrmSQL.IconOptions.Icon"), System.Drawing.Icon)
         Me.IconOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.profitability_logo
         Me.KeyPreview = True
         Me.Name = "FrmSQL"
@@ -165,7 +165,7 @@ Partial Class FrmSQL
         Me.layoutControl1.ResumeLayout(False)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.meQuery.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MeQuery.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -175,12 +175,12 @@ Partial Class FrmSQL
 
     End Sub
     Private WithEvents layoutControl1 As DevExpress.XtraLayout.LayoutControl
-    Private WithEvents btnRun As DevExpress.XtraEditors.SimpleButton
-    Private WithEvents btnClear As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BtnRun As DevExpress.XtraEditors.SimpleButton
+    Private WithEvents BtnClear As DevExpress.XtraEditors.SimpleButton
     Private WithEvents layoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
     Private WithEvents layoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
     Private WithEvents layoutControlItem3 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents meQuery As DevExpress.XtraEditors.MemoEdit
+    Friend WithEvents MeQuery As DevExpress.XtraEditors.MemoEdit
     Friend WithEvents LayoutControlItem4 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView

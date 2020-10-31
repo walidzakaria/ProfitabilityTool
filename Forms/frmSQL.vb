@@ -1,14 +1,14 @@
 ﻿Public Class FrmSQL
 
-    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        meQuery.EditValue = Nothing
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+        MeQuery.EditValue = Nothing
     End Sub
 
-    Private Sub BtnRun_Click(sender As Object, e As EventArgs) Handles btnRun.Click
-        If CStr(meQuery.EditValue) = "" Then
+    Private Sub BtnRun_Click(sender As Object, e As EventArgs) Handles BtnRun.Click
+        If CStr(MeQuery.EditValue) = "" Then
             Exit Sub
         End If
-        Dim query As String = CStr(meQuery.EditValue)
+        Dim query As String = CStr(MeQuery.EditValue)
 
         If query.ToLower Like "*select*" Then
             Dim dt As DataTable
@@ -29,7 +29,7 @@
 
     Private Sub FrmSQL_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.F5 Then
-            btnRun.PerformClick()
+            BtnRun.PerformClick()
         ElseIf e.KeyCode = Keys.Escape Then
             Me.Close()
         End If

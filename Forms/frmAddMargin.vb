@@ -13,10 +13,10 @@ Partial Public Class FrmAddMargin
         Dim query As String = "SELECT * FROM Destination ORDER BY Destination;"
         Dim dt As DataTable
         dt = ExClass.QueryGet(query)
-        luDestination.Properties.DataSource = Nothing
-        luDestination.Properties.DataSource = dt
-        luDestination.Properties.DisplayMember = "Destination"
-        luDestination.Properties.ValueMember = "DestinationID"
+        LuDestination.Properties.DataSource = Nothing
+        LuDestination.Properties.DataSource = dt
+        LuDestination.Properties.DisplayMember = "Destination"
+        LuDestination.Properties.ValueMember = "DestinationID"
 
     End Sub
 
@@ -24,10 +24,10 @@ Partial Public Class FrmAddMargin
         Dim query As String = "SELECT * FROM TourOperator;"
         Dim dt As DataTable
         dt = ExClass.QueryGet(query)
-        luTourOperator.Properties.DataSource = Nothing
-        luTourOperator.Properties.DataSource = dt
-        luTourOperator.Properties.DisplayMember = "TourOperator"
-        luTourOperator.Properties.ValueMember = "TourOperatorID"
+        LuTourOperator.Properties.DataSource = Nothing
+        LuTourOperator.Properties.DataSource = dt
+        LuTourOperator.Properties.DisplayMember = "TourOperator"
+        LuTourOperator.Properties.ValueMember = "TourOperatorID"
 
     End Sub
 
@@ -42,13 +42,13 @@ Partial Public Class FrmAddMargin
         FillDestinations()
         FillTourOperators()
         If marginId = 0 Then
-            luDestination.EditValue = Nothing
-            luTourOperator.EditValue = Nothing
-            txtMarginFrom.EditValue = Nothing
-            txtMarginTo.EditValue = Nothing
-            txtDifferenceFrom.EditValue = Nothing
-            txtDifferenceTo.EditValue = Nothing
-            deEffectiveDate.EditValue = Today
+            LuDestination.EditValue = Nothing
+            LuTourOperator.EditValue = Nothing
+            TxtMarginFrom.EditValue = Nothing
+            TxtMarginTo.EditValue = Nothing
+            TxtDifferenceFrom.EditValue = Nothing
+            TxtDifferenceTo.EditValue = Nothing
+            DeEffectiveDate.EditValue = Today
 
             labelControl.Text = "Add Margin"
         Else
@@ -62,18 +62,18 @@ Partial Public Class FrmAddMargin
             .MarginId = marginId
         }
         If margin.GetById() Then
-            luDestination.EditValue = margin.DestinationId
-            luTourOperator.EditValue = margin.TourOperatorId
-            txtMarginFrom.EditValue = margin.MarginFrom.ToString
-            txtMarginTo.EditValue = margin.MarginTo.ToString
-            txtDifferenceFrom.EditValue = margin.DifferenceFrom.ToString
-            txtDifferenceTo.EditValue = margin.DifferenceTo.ToString
-            deEffectiveDate.EditValue = margin.EffectiveDate
+            LuDestination.EditValue = margin.DestinationId
+            LuTourOperator.EditValue = margin.TourOperatorId
+            TxtMarginFrom.EditValue = margin.MarginFrom.ToString
+            TxtMarginTo.EditValue = margin.MarginTo.ToString
+            TxtDifferenceFrom.EditValue = margin.DifferenceFrom.ToString
+            TxtDifferenceTo.EditValue = margin.DifferenceTo.ToString
+            DeEffectiveDate.EditValue = margin.EffectiveDate
 
         End If
     End Sub
 
-    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
+    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles WindowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
             SaveMargin()
         ElseIf e.Button.Properties.Caption = "Cancel" Then
@@ -83,8 +83,8 @@ Partial Public Class FrmAddMargin
     End Sub
 
     Private Sub FrmAddMargin_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        luDestination.Focus()
-        luDestination.SelectAll()
+        LuDestination.Focus()
+        LuDestination.SelectAll()
     End Sub
 
     Private Sub CloseMargin()
@@ -95,15 +95,15 @@ Partial Public Class FrmAddMargin
         If DxValidationProvider1.Validate() Then
             Dim margin As New Margin With {
                 .MarginId = marginId,
-                .DestinationId = CInt(luDestination.EditValue),
-                .TourOperatorId = CInt(luTourOperator.EditValue),
-                .MarginFrom = CSng(Val(txtMarginFrom.EditValue)),
-                .MarginTo = CSng(Val(txtMarginTo.EditValue)),
-                .DifferenceFrom = CSng(Val(txtDifferenceFrom.EditValue)),
-                .DifferenceTo = CSng(Val(txtDifferenceTo.EditValue))
+                .DestinationId = CInt(LuDestination.EditValue),
+                .TourOperatorId = CInt(LuTourOperator.EditValue),
+                .MarginFrom = CSng(Val(TxtMarginFrom.EditValue)),
+                .MarginTo = CSng(Val(TxtMarginTo.EditValue)),
+                .DifferenceFrom = CSng(Val(TxtDifferenceFrom.EditValue)),
+                .DifferenceTo = CSng(Val(TxtDifferenceTo.EditValue))
             }
-            deEffectiveDate.RefreshEditValue()
-            margin.EffectiveDate = CDate(deEffectiveDate.EditValue)
+            DeEffectiveDate.RefreshEditValue()
+            margin.EffectiveDate = CDate(DeEffectiveDate.EditValue)
 
             If margin.SaveMargin() Then
                 Me.DialogResult = DialogResult.OK

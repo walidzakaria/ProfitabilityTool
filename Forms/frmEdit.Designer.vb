@@ -25,34 +25,34 @@ Partial Public Class FrmEdit
     ''' </summary>
     '''
     Private Sub InitializeComponent()
-        Dim TableColumnDefinition7 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition8 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition9 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition10 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition11 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition12 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableRowDefinition5 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition6 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition7 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition8 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableSpan4 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
-        Dim TableSpan5 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
-        Dim TableSpan6 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
-        Dim TileViewItemElement11 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement12 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement13 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement14 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement15 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement16 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement17 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement18 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement19 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement20 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim WindowsUIButtonImageOptions5 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim TableColumnDefinition1 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition2 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition3 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition4 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition5 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition6 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableRowDefinition1 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition2 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition3 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition4 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableSpan1 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TableSpan2 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TableSpan3 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TileViewItemElement1 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement2 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement3 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement4 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement5 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement6 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement7 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement8 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement9 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement10 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEdit))
-        Dim WindowsUIButtonImageOptions6 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions7 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions8 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions3 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions4 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.TileViewColumn()
@@ -76,58 +76,58 @@ Partial Public Class FrmEdit
         Me.RepositoryItemComboBox1 = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.TileView1 = New DevExpress.XtraGrid.Views.Tile.TileView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.TileViewColumn()
-        Me.txtHotelCode = New DevExpress.XtraEditors.TextEdit()
-        Me.txtHotelName = New DevExpress.XtraEditors.TextEdit()
-        Me.txtCountry = New DevExpress.XtraEditors.TextEdit()
-        Me.txtPurchaseCurrency = New DevExpress.XtraEditors.TextEdit()
-        Me.txtPurchasePrice = New DevExpress.XtraEditors.TextEdit()
-        Me.txtSalesCurrency = New DevExpress.XtraEditors.TextEdit()
-        Me.txtSalesPrice = New DevExpress.XtraEditors.TextEdit()
-        Me.txtHandlingFee = New DevExpress.XtraEditors.TextEdit()
-        Me.txtMargin = New DevExpress.XtraEditors.TextEdit()
-        Me.txtDifference = New DevExpress.XtraEditors.TextEdit()
-        Me.txtCurrencyHotelTc = New DevExpress.XtraEditors.TextEdit()
-        Me.txtNetRateHotelTc = New DevExpress.XtraEditors.TextEdit()
-        Me.txtNetRateHandlingTc = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtHotelCode = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtHotelName = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtCountry = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtPurchaseCurrency = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtPurchasePrice = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtSalesCurrency = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtSalesPrice = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtHandlingFee = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtMargin = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtDifference = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtCurrencyHotelTc = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtNetRateHotelTc = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtNetRateHandlingTc = New DevExpress.XtraEditors.TextEdit()
         Me.txtHotelCheck = New DevExpress.XtraEditors.TextEdit()
-        Me.txtCompanyGroup = New DevExpress.XtraEditors.TextEdit()
-        Me.deBookingDate = New DevExpress.XtraEditors.DateEdit()
-        Me.deTravelDate = New DevExpress.XtraEditors.DateEdit()
-        Me.txtRoomType = New DevExpress.XtraEditors.TextEdit()
-        Me.txtBaord = New DevExpress.XtraEditors.TextEdit()
-        Me.txtDuration = New DevExpress.XtraEditors.TextEdit()
-        Me.txtTransferTo = New DevExpress.XtraEditors.TextEdit()
-        Me.txtTransferFrom = New DevExpress.XtraEditors.TextEdit()
-        Me.txtPax = New DevExpress.XtraEditors.TextEdit()
-        Me.txtAdult = New DevExpress.XtraEditors.TextEdit()
-        Me.txtChild = New DevExpress.XtraEditors.TextEdit()
-        Me.deImportDate = New DevExpress.XtraEditors.DateEdit()
-        Me.txtIncomingAgency = New DevExpress.XtraEditors.TextEdit()
-        Me.txtBookingStateDesc = New DevExpress.XtraEditors.TextEdit()
-        Me.txtPriceBreakdown = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtCompanyGroup = New DevExpress.XtraEditors.TextEdit()
+        Me.DeBookingDate = New DevExpress.XtraEditors.DateEdit()
+        Me.DeTravelDate = New DevExpress.XtraEditors.DateEdit()
+        Me.TxtRoomType = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtBaord = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtDuration = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtTransferTo = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtTransferFrom = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtPax = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtAdult = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtChild = New DevExpress.XtraEditors.TextEdit()
+        Me.DeImportDate = New DevExpress.XtraEditors.DateEdit()
+        Me.TxtIncomingAgency = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtBookingStateDesc = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtPriceBreakdown = New DevExpress.XtraEditors.TextEdit()
         Me.windowsUIButtonPanelMain = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
-        Me.btnToggleComment = New DevExpress.XtraEditors.SimpleButton()
-        Me.txtComment = New DevExpress.XtraEditors.MemoEdit()
-        Me.txtCalculation = New DevExpress.XtraEditors.TextEdit()
-        Me.btnSaveComment = New DevExpress.XtraEditors.SimpleButton()
-        Me.btnCancelComment = New DevExpress.XtraEditors.SimpleButton()
-        Me.cbGWGStatus = New DevExpress.XtraEditors.ComboBoxEdit()
-        Me.txtUser = New DevExpress.XtraEditors.TextEdit()
-        Me.luStatus = New DevExpress.XtraEditors.LookUpEdit()
-        Me.txtPurchaseEUR = New DevExpress.XtraEditors.TextEdit()
-        Me.txtSalesEUR = New DevExpress.XtraEditors.TextEdit()
-        Me.txtMarginEUR = New DevExpress.XtraEditors.TextEdit()
-        Me.txtNetRateEUR = New DevExpress.XtraEditors.TextEdit()
-        Me.txtDifferenceEUR = New DevExpress.XtraEditors.TextEdit()
-        Me.txtJunk = New DevExpress.XtraEditors.TextEdit()
-        Me.txtCancelled = New DevExpress.XtraEditors.TextEdit()
-        Me.txtExcessive = New DevExpress.XtraEditors.TextEdit()
-        Me.txtNegative = New DevExpress.XtraEditors.TextEdit()
-        Me.txtError = New DevExpress.XtraEditors.TextEdit()
-        Me.txtMismatching = New DevExpress.XtraEditors.TextEdit()
-        Me.deMPImportDate = New DevExpress.XtraEditors.DateEdit()
-        Me.cbBookingStatus = New DevExpress.XtraEditors.ComboBoxEdit()
-        Me.txtActionBy = New DevExpress.XtraEditors.TextEdit()
+        Me.BtnToggleComment = New DevExpress.XtraEditors.SimpleButton()
+        Me.TxtComment = New DevExpress.XtraEditors.MemoEdit()
+        Me.TxtCalculation = New DevExpress.XtraEditors.TextEdit()
+        Me.BtnSaveComment = New DevExpress.XtraEditors.SimpleButton()
+        Me.BtnCancelComment = New DevExpress.XtraEditors.SimpleButton()
+        Me.CbGWGStatus = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.TxtUser = New DevExpress.XtraEditors.TextEdit()
+        Me.LuStatus = New DevExpress.XtraEditors.LookUpEdit()
+        Me.TxtPurchaseEUR = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtSalesEUR = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtMarginEUR = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtNetRateEUR = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtDifferenceEUR = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtJunk = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtCancelled = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtExcessive = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtNegative = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtError = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtMismatching = New DevExpress.XtraEditors.TextEdit()
+        Me.DeMPImportDate = New DevExpress.XtraEditors.DateEdit()
+        Me.CbBookingStatus = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.TxtActionBy = New DevExpress.XtraEditors.TextEdit()
         Me.layoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.TabbedControlGroup2 = New DevExpress.XtraLayout.TabbedControlGroup()
         Me.LayoutControlGroup5 = New DevExpress.XtraLayout.LayoutControlGroup()
@@ -209,58 +209,58 @@ Partial Public Class FrmEdit
         CType(Me.LayoutViewCard1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TileView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtHotelCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtHotelName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtCountry.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtPurchaseCurrency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtPurchasePrice.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtSalesCurrency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtSalesPrice.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtHandlingFee.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtMargin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtDifference.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtCurrencyHotelTc.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtNetRateHotelTc.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtNetRateHandlingTc.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtHotelCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtHotelName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtCountry.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtPurchaseCurrency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtPurchasePrice.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtSalesCurrency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtSalesPrice.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtHandlingFee.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtMargin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtDifference.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtCurrencyHotelTc.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtNetRateHotelTc.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtNetRateHandlingTc.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtHotelCheck.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtCompanyGroup.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.deBookingDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.deBookingDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.deTravelDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.deTravelDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtRoomType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtBaord.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtDuration.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTransferTo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTransferFrom.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtPax.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtAdult.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtChild.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.deImportDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.deImportDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtIncomingAgency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtBookingStateDesc.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtPriceBreakdown.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtComment.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtCalculation.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cbGWGStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtUser.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.luStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtPurchaseEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtSalesEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtMarginEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtNetRateEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtDifferenceEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtJunk.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtCancelled.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtExcessive.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtNegative.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtError.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtMismatching.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.deMPImportDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.deMPImportDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cbBookingStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtActionBy.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtCompanyGroup.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DeBookingDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DeBookingDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DeTravelDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DeTravelDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtRoomType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtBaord.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtDuration.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtTransferTo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtTransferFrom.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtPax.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtAdult.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtChild.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DeImportDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DeImportDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtIncomingAgency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtBookingStateDesc.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtPriceBreakdown.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtComment.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtCalculation.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CbGWGStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtUser.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LuStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtPurchaseEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtSalesEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtMarginEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtNetRateEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtDifferenceEUR.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtJunk.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtCancelled.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtExcessive.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtNegative.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtError.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtMismatching.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DeMPImportDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DeMPImportDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CbBookingStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtActionBy.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TabbedControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -384,58 +384,58 @@ Partial Public Class FrmEdit
         '
         Me.dataLayoutControl1.AllowCustomization = False
         Me.dataLayoutControl1.Controls.Add(Me.GridControl1)
-        Me.dataLayoutControl1.Controls.Add(Me.txtHotelCode)
-        Me.dataLayoutControl1.Controls.Add(Me.txtHotelName)
-        Me.dataLayoutControl1.Controls.Add(Me.txtCountry)
-        Me.dataLayoutControl1.Controls.Add(Me.txtPurchaseCurrency)
-        Me.dataLayoutControl1.Controls.Add(Me.txtPurchasePrice)
-        Me.dataLayoutControl1.Controls.Add(Me.txtSalesCurrency)
-        Me.dataLayoutControl1.Controls.Add(Me.txtSalesPrice)
-        Me.dataLayoutControl1.Controls.Add(Me.txtHandlingFee)
-        Me.dataLayoutControl1.Controls.Add(Me.txtMargin)
-        Me.dataLayoutControl1.Controls.Add(Me.txtDifference)
-        Me.dataLayoutControl1.Controls.Add(Me.txtCurrencyHotelTc)
-        Me.dataLayoutControl1.Controls.Add(Me.txtNetRateHotelTc)
-        Me.dataLayoutControl1.Controls.Add(Me.txtNetRateHandlingTc)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtHotelCode)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtHotelName)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtCountry)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtPurchaseCurrency)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtPurchasePrice)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtSalesCurrency)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtSalesPrice)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtHandlingFee)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtMargin)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtDifference)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtCurrencyHotelTc)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtNetRateHotelTc)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtNetRateHandlingTc)
         Me.dataLayoutControl1.Controls.Add(Me.txtHotelCheck)
-        Me.dataLayoutControl1.Controls.Add(Me.txtCompanyGroup)
-        Me.dataLayoutControl1.Controls.Add(Me.deBookingDate)
-        Me.dataLayoutControl1.Controls.Add(Me.deTravelDate)
-        Me.dataLayoutControl1.Controls.Add(Me.txtRoomType)
-        Me.dataLayoutControl1.Controls.Add(Me.txtBaord)
-        Me.dataLayoutControl1.Controls.Add(Me.txtDuration)
-        Me.dataLayoutControl1.Controls.Add(Me.txtTransferTo)
-        Me.dataLayoutControl1.Controls.Add(Me.txtTransferFrom)
-        Me.dataLayoutControl1.Controls.Add(Me.txtPax)
-        Me.dataLayoutControl1.Controls.Add(Me.txtAdult)
-        Me.dataLayoutControl1.Controls.Add(Me.txtChild)
-        Me.dataLayoutControl1.Controls.Add(Me.deImportDate)
-        Me.dataLayoutControl1.Controls.Add(Me.txtIncomingAgency)
-        Me.dataLayoutControl1.Controls.Add(Me.txtBookingStateDesc)
-        Me.dataLayoutControl1.Controls.Add(Me.txtPriceBreakdown)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtCompanyGroup)
+        Me.dataLayoutControl1.Controls.Add(Me.DeBookingDate)
+        Me.dataLayoutControl1.Controls.Add(Me.DeTravelDate)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtRoomType)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtBaord)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtDuration)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtTransferTo)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtTransferFrom)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtPax)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtAdult)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtChild)
+        Me.dataLayoutControl1.Controls.Add(Me.DeImportDate)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtIncomingAgency)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtBookingStateDesc)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtPriceBreakdown)
         Me.dataLayoutControl1.Controls.Add(Me.windowsUIButtonPanelMain)
-        Me.dataLayoutControl1.Controls.Add(Me.btnToggleComment)
-        Me.dataLayoutControl1.Controls.Add(Me.txtComment)
-        Me.dataLayoutControl1.Controls.Add(Me.txtCalculation)
-        Me.dataLayoutControl1.Controls.Add(Me.btnSaveComment)
-        Me.dataLayoutControl1.Controls.Add(Me.btnCancelComment)
-        Me.dataLayoutControl1.Controls.Add(Me.cbGWGStatus)
-        Me.dataLayoutControl1.Controls.Add(Me.txtUser)
-        Me.dataLayoutControl1.Controls.Add(Me.luStatus)
-        Me.dataLayoutControl1.Controls.Add(Me.txtPurchaseEUR)
-        Me.dataLayoutControl1.Controls.Add(Me.txtSalesEUR)
-        Me.dataLayoutControl1.Controls.Add(Me.txtMarginEUR)
-        Me.dataLayoutControl1.Controls.Add(Me.txtNetRateEUR)
-        Me.dataLayoutControl1.Controls.Add(Me.txtDifferenceEUR)
-        Me.dataLayoutControl1.Controls.Add(Me.txtJunk)
-        Me.dataLayoutControl1.Controls.Add(Me.txtCancelled)
-        Me.dataLayoutControl1.Controls.Add(Me.txtExcessive)
-        Me.dataLayoutControl1.Controls.Add(Me.txtNegative)
-        Me.dataLayoutControl1.Controls.Add(Me.txtError)
-        Me.dataLayoutControl1.Controls.Add(Me.txtMismatching)
-        Me.dataLayoutControl1.Controls.Add(Me.deMPImportDate)
-        Me.dataLayoutControl1.Controls.Add(Me.cbBookingStatus)
-        Me.dataLayoutControl1.Controls.Add(Me.txtActionBy)
+        Me.dataLayoutControl1.Controls.Add(Me.BtnToggleComment)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtComment)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtCalculation)
+        Me.dataLayoutControl1.Controls.Add(Me.BtnSaveComment)
+        Me.dataLayoutControl1.Controls.Add(Me.BtnCancelComment)
+        Me.dataLayoutControl1.Controls.Add(Me.CbGWGStatus)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtUser)
+        Me.dataLayoutControl1.Controls.Add(Me.LuStatus)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtPurchaseEUR)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtSalesEUR)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtMarginEUR)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtNetRateEUR)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtDifferenceEUR)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtJunk)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtCancelled)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtExcessive)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtNegative)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtError)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtMismatching)
+        Me.dataLayoutControl1.Controls.Add(Me.DeMPImportDate)
+        Me.dataLayoutControl1.Controls.Add(Me.CbBookingStatus)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtActionBy)
         Me.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataLayoutControl1.Location = New System.Drawing.Point(0, 30)
         Me.dataLayoutControl1.Name = "dataLayoutControl1"
@@ -601,154 +601,154 @@ Partial Public Class FrmEdit
         Me.TileView1.OptionsTiles.LayoutMode = DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.List
         Me.TileView1.OptionsTiles.Orientation = System.Windows.Forms.Orientation.Vertical
         Me.TileView1.OptionsTiles.Padding = New System.Windows.Forms.Padding(5)
-        TableColumnDefinition7.Length.Value = 104.0R
-        TableColumnDefinition8.Length.Value = 104.0R
-        TableColumnDefinition9.Length.Value = 109.0R
-        TableColumnDefinition10.Length.Value = 101.0R
-        TableColumnDefinition11.Length.Value = 105.0R
-        TableColumnDefinition12.Length.Value = 105.0R
-        Me.TileView1.TileColumns.Add(TableColumnDefinition7)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition8)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition9)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition10)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition11)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition12)
-        TableRowDefinition5.Length.Value = 27.0R
-        TableRowDefinition6.Length.Value = 37.0R
-        TableRowDefinition7.Length.Value = 48.0R
-        TableRowDefinition8.Length.Value = 30.0R
-        Me.TileView1.TileRows.Add(TableRowDefinition5)
-        Me.TileView1.TileRows.Add(TableRowDefinition6)
-        Me.TileView1.TileRows.Add(TableRowDefinition7)
-        Me.TileView1.TileRows.Add(TableRowDefinition8)
-        TableSpan4.ColumnIndex = 1
-        TableSpan4.ColumnSpan = 5
-        TableSpan4.RowIndex = 1
-        TableSpan4.RowSpan = 2
-        TableSpan5.ColumnIndex = 1
-        TableSpan5.ColumnSpan = 2
-        TableSpan5.RowIndex = 3
-        TableSpan6.ColumnIndex = 1
-        TableSpan6.ColumnSpan = 3
-        Me.TileView1.TileSpans.Add(TableSpan4)
-        Me.TileView1.TileSpans.Add(TableSpan5)
-        Me.TileView1.TileSpans.Add(TableSpan6)
-        TileViewItemElement11.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        TileViewItemElement11.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement11.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement11.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement11.StretchHorizontal = True
-        TileViewItemElement11.StretchVertical = True
-        TileViewItemElement11.Text = "Date:"
-        TileViewItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement11.TextLocation = New System.Drawing.Point(-10, 0)
-        TileViewItemElement12.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileViewItemElement12.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement12.Column = Me.GridColumn2
-        TileViewItemElement12.ColumnIndex = 1
-        TileViewItemElement12.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement12.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement12.StretchHorizontal = True
-        TileViewItemElement12.StretchVertical = True
-        TileViewItemElement12.Text = "GridColumn2"
-        TileViewItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
-        TileViewItemElement12.TextLocation = New System.Drawing.Point(-35, 0)
-        TileViewItemElement13.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        TileViewItemElement13.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement13.ColumnIndex = 4
-        TileViewItemElement13.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement13.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement13.StretchHorizontal = True
-        TileViewItemElement13.StretchVertical = True
-        TileViewItemElement13.Text = "User:"
-        TileViewItemElement13.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement14.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        TileViewItemElement14.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement14.Column = Me.GridColumn5
-        TileViewItemElement14.ColumnIndex = 5
-        TileViewItemElement14.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement14.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement14.StretchHorizontal = True
-        TileViewItemElement14.StretchVertical = True
-        TileViewItemElement14.Text = "GridColumn5"
-        TileViewItemElement14.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement15.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        TileViewItemElement15.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement15.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement15.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement15.RowIndex = 1
-        TileViewItemElement15.StretchHorizontal = True
-        TileViewItemElement15.StretchVertical = True
-        TileViewItemElement15.Text = "Comment:"
-        TileViewItemElement15.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement15.TextLocation = New System.Drawing.Point(-10, 0)
-        TileViewItemElement16.Appearance.Normal.BorderColor = System.Drawing.Color.Gray
-        TileViewItemElement16.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        TileViewItemElement16.Appearance.Normal.Options.UseBorderColor = True
-        TileViewItemElement16.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement16.Appearance.Normal.Options.UseTextOptions = True
-        TileViewItemElement16.Appearance.Normal.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
-        TileViewItemElement16.Appearance.Normal.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
-        TileViewItemElement16.Column = Me.GridColumn3
-        TileViewItemElement16.ColumnIndex = 1
-        TileViewItemElement16.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement16.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement16.RowIndex = 1
-        TileViewItemElement16.StretchHorizontal = True
-        TileViewItemElement16.StretchVertical = True
-        TileViewItemElement16.Text = "GridColumn3"
-        TileViewItemElement16.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileViewItemElement16.TextLocation = New System.Drawing.Point(0, 8)
-        TileViewItemElement17.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileViewItemElement17.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement17.ColumnIndex = 4
-        TileViewItemElement17.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement17.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement17.RowIndex = 3
-        TileViewItemElement17.StretchHorizontal = True
-        TileViewItemElement17.StretchVertical = True
-        TileViewItemElement17.Text = "Calculation:"
-        TileViewItemElement17.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement18.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        TileViewItemElement18.Appearance.Normal.ForeColor = System.Drawing.Color.Red
-        TileViewItemElement18.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement18.Appearance.Normal.Options.UseForeColor = True
-        TileViewItemElement18.Column = Me.GridColumn4
-        TileViewItemElement18.ColumnIndex = 5
-        TileViewItemElement18.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement18.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement18.RowIndex = 3
-        TileViewItemElement18.StretchHorizontal = True
-        TileViewItemElement18.StretchVertical = True
-        TileViewItemElement18.Text = "GridColumn4"
-        TileViewItemElement18.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement19.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        TileViewItemElement19.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement19.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement19.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement19.RowIndex = 3
-        TileViewItemElement19.Text = "Status:"
-        TileViewItemElement19.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement19.TextLocation = New System.Drawing.Point(-10, 0)
-        TileViewItemElement20.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        TileViewItemElement20.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement20.Column = Me.TileViewColumn1
-        TileViewItemElement20.ColumnIndex = 1
-        TileViewItemElement20.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement20.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement20.RowIndex = 3
-        TileViewItemElement20.Text = "TileViewColumn1"
-        TileViewItemElement20.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
-        Me.TileView1.TileTemplate.Add(TileViewItemElement11)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement12)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement13)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement14)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement15)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement16)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement17)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement18)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement19)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement20)
+        TableColumnDefinition1.Length.Value = 104.0R
+        TableColumnDefinition2.Length.Value = 104.0R
+        TableColumnDefinition3.Length.Value = 109.0R
+        TableColumnDefinition4.Length.Value = 101.0R
+        TableColumnDefinition5.Length.Value = 105.0R
+        TableColumnDefinition6.Length.Value = 105.0R
+        Me.TileView1.TileColumns.Add(TableColumnDefinition1)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition2)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition3)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition4)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition5)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition6)
+        TableRowDefinition1.Length.Value = 27.0R
+        TableRowDefinition2.Length.Value = 37.0R
+        TableRowDefinition3.Length.Value = 48.0R
+        TableRowDefinition4.Length.Value = 30.0R
+        Me.TileView1.TileRows.Add(TableRowDefinition1)
+        Me.TileView1.TileRows.Add(TableRowDefinition2)
+        Me.TileView1.TileRows.Add(TableRowDefinition3)
+        Me.TileView1.TileRows.Add(TableRowDefinition4)
+        TableSpan1.ColumnIndex = 1
+        TableSpan1.ColumnSpan = 5
+        TableSpan1.RowIndex = 1
+        TableSpan1.RowSpan = 2
+        TableSpan2.ColumnIndex = 1
+        TableSpan2.ColumnSpan = 2
+        TableSpan2.RowIndex = 3
+        TableSpan3.ColumnIndex = 1
+        TableSpan3.ColumnSpan = 3
+        Me.TileView1.TileSpans.Add(TableSpan1)
+        Me.TileView1.TileSpans.Add(TableSpan2)
+        Me.TileView1.TileSpans.Add(TableSpan3)
+        TileViewItemElement1.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        TileViewItemElement1.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement1.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement1.StretchHorizontal = True
+        TileViewItemElement1.StretchVertical = True
+        TileViewItemElement1.Text = "Date:"
+        TileViewItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement1.TextLocation = New System.Drawing.Point(-10, 0)
+        TileViewItemElement2.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement2.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement2.Column = Me.GridColumn2
+        TileViewItemElement2.ColumnIndex = 1
+        TileViewItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement2.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement2.StretchHorizontal = True
+        TileViewItemElement2.StretchVertical = True
+        TileViewItemElement2.Text = "GridColumn2"
+        TileViewItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
+        TileViewItemElement2.TextLocation = New System.Drawing.Point(-35, 0)
+        TileViewItemElement3.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        TileViewItemElement3.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement3.ColumnIndex = 4
+        TileViewItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement3.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement3.StretchHorizontal = True
+        TileViewItemElement3.StretchVertical = True
+        TileViewItemElement3.Text = "User:"
+        TileViewItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement4.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement4.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement4.Column = Me.GridColumn5
+        TileViewItemElement4.ColumnIndex = 5
+        TileViewItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement4.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement4.StretchHorizontal = True
+        TileViewItemElement4.StretchVertical = True
+        TileViewItemElement4.Text = "GridColumn5"
+        TileViewItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement5.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        TileViewItemElement5.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement5.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement5.RowIndex = 1
+        TileViewItemElement5.StretchHorizontal = True
+        TileViewItemElement5.StretchVertical = True
+        TileViewItemElement5.Text = "Comment:"
+        TileViewItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement5.TextLocation = New System.Drawing.Point(-10, 0)
+        TileViewItemElement6.Appearance.Normal.BorderColor = System.Drawing.Color.Gray
+        TileViewItemElement6.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement6.Appearance.Normal.Options.UseBorderColor = True
+        TileViewItemElement6.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement6.Appearance.Normal.Options.UseTextOptions = True
+        TileViewItemElement6.Appearance.Normal.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+        TileViewItemElement6.Appearance.Normal.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
+        TileViewItemElement6.Column = Me.GridColumn3
+        TileViewItemElement6.ColumnIndex = 1
+        TileViewItemElement6.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement6.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement6.RowIndex = 1
+        TileViewItemElement6.StretchHorizontal = True
+        TileViewItemElement6.StretchVertical = True
+        TileViewItemElement6.Text = "GridColumn3"
+        TileViewItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileViewItemElement6.TextLocation = New System.Drawing.Point(0, 8)
+        TileViewItemElement7.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement7.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement7.ColumnIndex = 4
+        TileViewItemElement7.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement7.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement7.RowIndex = 3
+        TileViewItemElement7.StretchHorizontal = True
+        TileViewItemElement7.StretchVertical = True
+        TileViewItemElement7.Text = "Calculation:"
+        TileViewItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement8.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement8.Appearance.Normal.ForeColor = System.Drawing.Color.Red
+        TileViewItemElement8.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement8.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement8.Column = Me.GridColumn4
+        TileViewItemElement8.ColumnIndex = 5
+        TileViewItemElement8.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement8.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement8.RowIndex = 3
+        TileViewItemElement8.StretchHorizontal = True
+        TileViewItemElement8.StretchVertical = True
+        TileViewItemElement8.Text = "GridColumn4"
+        TileViewItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement9.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        TileViewItemElement9.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement9.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement9.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement9.RowIndex = 3
+        TileViewItemElement9.Text = "Status:"
+        TileViewItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement9.TextLocation = New System.Drawing.Point(-10, 0)
+        TileViewItemElement10.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement10.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement10.Column = Me.TileViewColumn1
+        TileViewItemElement10.ColumnIndex = 1
+        TileViewItemElement10.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement10.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement10.RowIndex = 3
+        TileViewItemElement10.Text = "TileViewColumn1"
+        TileViewItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
+        Me.TileView1.TileTemplate.Add(TileViewItemElement1)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement2)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement3)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement4)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement5)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement6)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement7)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement8)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement9)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement10)
         '
         'GridColumn1
         '
@@ -759,109 +759,109 @@ Partial Public Class FrmEdit
         Me.GridColumn1.Visible = True
         Me.GridColumn1.VisibleIndex = 0
         '
-        'txtHotelCode
+        'TxtHotelCode
         '
-        Me.txtHotelCode.Location = New System.Drawing.Point(149, 47)
-        Me.txtHotelCode.Name = "txtHotelCode"
-        Me.txtHotelCode.Size = New System.Drawing.Size(585, 20)
-        Me.txtHotelCode.StyleController = Me.dataLayoutControl1
-        Me.txtHotelCode.TabIndex = 1
+        Me.TxtHotelCode.Location = New System.Drawing.Point(149, 47)
+        Me.TxtHotelCode.Name = "TxtHotelCode"
+        Me.TxtHotelCode.Size = New System.Drawing.Size(585, 20)
+        Me.TxtHotelCode.StyleController = Me.dataLayoutControl1
+        Me.TxtHotelCode.TabIndex = 1
         '
-        'txtHotelName
+        'TxtHotelName
         '
-        Me.txtHotelName.Location = New System.Drawing.Point(149, 71)
-        Me.txtHotelName.Name = "txtHotelName"
-        Me.txtHotelName.Size = New System.Drawing.Size(585, 20)
-        Me.txtHotelName.StyleController = Me.dataLayoutControl1
-        Me.txtHotelName.TabIndex = 1
+        Me.TxtHotelName.Location = New System.Drawing.Point(149, 71)
+        Me.TxtHotelName.Name = "TxtHotelName"
+        Me.TxtHotelName.Size = New System.Drawing.Size(585, 20)
+        Me.TxtHotelName.StyleController = Me.dataLayoutControl1
+        Me.TxtHotelName.TabIndex = 1
         '
-        'txtCountry
+        'TxtCountry
         '
-        Me.txtCountry.Location = New System.Drawing.Point(149, 95)
-        Me.txtCountry.Name = "txtCountry"
-        Me.txtCountry.Size = New System.Drawing.Size(227, 20)
-        Me.txtCountry.StyleController = Me.dataLayoutControl1
-        Me.txtCountry.TabIndex = 1
+        Me.TxtCountry.Location = New System.Drawing.Point(149, 95)
+        Me.TxtCountry.Name = "TxtCountry"
+        Me.TxtCountry.Size = New System.Drawing.Size(227, 20)
+        Me.TxtCountry.StyleController = Me.dataLayoutControl1
+        Me.TxtCountry.TabIndex = 1
         '
-        'txtPurchaseCurrency
+        'TxtPurchaseCurrency
         '
-        Me.txtPurchaseCurrency.Location = New System.Drawing.Point(161, 178)
-        Me.txtPurchaseCurrency.Name = "txtPurchaseCurrency"
-        Me.txtPurchaseCurrency.Size = New System.Drawing.Size(215, 20)
-        Me.txtPurchaseCurrency.StyleController = Me.dataLayoutControl1
-        Me.txtPurchaseCurrency.TabIndex = 1
+        Me.TxtPurchaseCurrency.Location = New System.Drawing.Point(161, 178)
+        Me.TxtPurchaseCurrency.Name = "TxtPurchaseCurrency"
+        Me.TxtPurchaseCurrency.Size = New System.Drawing.Size(215, 20)
+        Me.TxtPurchaseCurrency.StyleController = Me.dataLayoutControl1
+        Me.TxtPurchaseCurrency.TabIndex = 1
         '
-        'txtPurchasePrice
+        'TxtPurchasePrice
         '
-        Me.txtPurchasePrice.Location = New System.Drawing.Point(505, 178)
-        Me.txtPurchasePrice.Name = "txtPurchasePrice"
-        Me.txtPurchasePrice.Size = New System.Drawing.Size(217, 20)
-        Me.txtPurchasePrice.StyleController = Me.dataLayoutControl1
-        Me.txtPurchasePrice.TabIndex = 1
+        Me.TxtPurchasePrice.Location = New System.Drawing.Point(505, 178)
+        Me.TxtPurchasePrice.Name = "TxtPurchasePrice"
+        Me.TxtPurchasePrice.Size = New System.Drawing.Size(217, 20)
+        Me.TxtPurchasePrice.StyleController = Me.dataLayoutControl1
+        Me.TxtPurchasePrice.TabIndex = 1
         '
-        'txtSalesCurrency
+        'TxtSalesCurrency
         '
-        Me.txtSalesCurrency.Location = New System.Drawing.Point(161, 202)
-        Me.txtSalesCurrency.Name = "txtSalesCurrency"
-        Me.txtSalesCurrency.Size = New System.Drawing.Size(215, 20)
-        Me.txtSalesCurrency.StyleController = Me.dataLayoutControl1
-        Me.txtSalesCurrency.TabIndex = 1
+        Me.TxtSalesCurrency.Location = New System.Drawing.Point(161, 202)
+        Me.TxtSalesCurrency.Name = "TxtSalesCurrency"
+        Me.TxtSalesCurrency.Size = New System.Drawing.Size(215, 20)
+        Me.TxtSalesCurrency.StyleController = Me.dataLayoutControl1
+        Me.TxtSalesCurrency.TabIndex = 1
         '
-        'txtSalesPrice
+        'TxtSalesPrice
         '
-        Me.txtSalesPrice.Location = New System.Drawing.Point(505, 202)
-        Me.txtSalesPrice.Name = "txtSalesPrice"
-        Me.txtSalesPrice.Size = New System.Drawing.Size(217, 20)
-        Me.txtSalesPrice.StyleController = Me.dataLayoutControl1
-        Me.txtSalesPrice.TabIndex = 1
+        Me.TxtSalesPrice.Location = New System.Drawing.Point(505, 202)
+        Me.TxtSalesPrice.Name = "TxtSalesPrice"
+        Me.TxtSalesPrice.Size = New System.Drawing.Size(217, 20)
+        Me.TxtSalesPrice.StyleController = Me.dataLayoutControl1
+        Me.TxtSalesPrice.TabIndex = 1
         '
-        'txtHandlingFee
+        'TxtHandlingFee
         '
-        Me.txtHandlingFee.Location = New System.Drawing.Point(161, 226)
-        Me.txtHandlingFee.Name = "txtHandlingFee"
-        Me.txtHandlingFee.Size = New System.Drawing.Size(561, 20)
-        Me.txtHandlingFee.StyleController = Me.dataLayoutControl1
-        Me.txtHandlingFee.TabIndex = 1
+        Me.TxtHandlingFee.Location = New System.Drawing.Point(161, 226)
+        Me.TxtHandlingFee.Name = "TxtHandlingFee"
+        Me.TxtHandlingFee.Size = New System.Drawing.Size(561, 20)
+        Me.TxtHandlingFee.StyleController = Me.dataLayoutControl1
+        Me.TxtHandlingFee.TabIndex = 1
         '
-        'txtMargin
+        'TxtMargin
         '
-        Me.txtMargin.Location = New System.Drawing.Point(161, 250)
-        Me.txtMargin.Name = "txtMargin"
-        Me.txtMargin.Size = New System.Drawing.Size(561, 20)
-        Me.txtMargin.StyleController = Me.dataLayoutControl1
-        Me.txtMargin.TabIndex = 1
+        Me.TxtMargin.Location = New System.Drawing.Point(161, 250)
+        Me.TxtMargin.Name = "TxtMargin"
+        Me.TxtMargin.Size = New System.Drawing.Size(561, 20)
+        Me.TxtMargin.StyleController = Me.dataLayoutControl1
+        Me.TxtMargin.TabIndex = 1
         '
-        'txtDifference
+        'TxtDifference
         '
-        Me.txtDifference.Location = New System.Drawing.Point(161, 274)
-        Me.txtDifference.Name = "txtDifference"
-        Me.txtDifference.Size = New System.Drawing.Size(561, 20)
-        Me.txtDifference.StyleController = Me.dataLayoutControl1
-        Me.txtDifference.TabIndex = 1
+        Me.TxtDifference.Location = New System.Drawing.Point(161, 274)
+        Me.TxtDifference.Name = "TxtDifference"
+        Me.TxtDifference.Size = New System.Drawing.Size(561, 20)
+        Me.TxtDifference.StyleController = Me.dataLayoutControl1
+        Me.TxtDifference.TabIndex = 1
         '
-        'txtCurrencyHotelTc
+        'TxtCurrencyHotelTc
         '
-        Me.txtCurrencyHotelTc.Location = New System.Drawing.Point(161, 298)
-        Me.txtCurrencyHotelTc.Name = "txtCurrencyHotelTc"
-        Me.txtCurrencyHotelTc.Size = New System.Drawing.Size(215, 20)
-        Me.txtCurrencyHotelTc.StyleController = Me.dataLayoutControl1
-        Me.txtCurrencyHotelTc.TabIndex = 1
+        Me.TxtCurrencyHotelTc.Location = New System.Drawing.Point(161, 298)
+        Me.TxtCurrencyHotelTc.Name = "TxtCurrencyHotelTc"
+        Me.TxtCurrencyHotelTc.Size = New System.Drawing.Size(215, 20)
+        Me.TxtCurrencyHotelTc.StyleController = Me.dataLayoutControl1
+        Me.TxtCurrencyHotelTc.TabIndex = 1
         '
-        'txtNetRateHotelTc
+        'TxtNetRateHotelTc
         '
-        Me.txtNetRateHotelTc.Location = New System.Drawing.Point(505, 298)
-        Me.txtNetRateHotelTc.Name = "txtNetRateHotelTc"
-        Me.txtNetRateHotelTc.Size = New System.Drawing.Size(217, 20)
-        Me.txtNetRateHotelTc.StyleController = Me.dataLayoutControl1
-        Me.txtNetRateHotelTc.TabIndex = 1
+        Me.TxtNetRateHotelTc.Location = New System.Drawing.Point(505, 298)
+        Me.TxtNetRateHotelTc.Name = "TxtNetRateHotelTc"
+        Me.TxtNetRateHotelTc.Size = New System.Drawing.Size(217, 20)
+        Me.TxtNetRateHotelTc.StyleController = Me.dataLayoutControl1
+        Me.TxtNetRateHotelTc.TabIndex = 1
         '
-        'txtNetRateHandlingTc
+        'TxtNetRateHandlingTc
         '
-        Me.txtNetRateHandlingTc.Location = New System.Drawing.Point(161, 322)
-        Me.txtNetRateHandlingTc.Name = "txtNetRateHandlingTc"
-        Me.txtNetRateHandlingTc.Size = New System.Drawing.Size(561, 20)
-        Me.txtNetRateHandlingTc.StyleController = Me.dataLayoutControl1
-        Me.txtNetRateHandlingTc.TabIndex = 1
+        Me.TxtNetRateHandlingTc.Location = New System.Drawing.Point(161, 322)
+        Me.TxtNetRateHandlingTc.Name = "TxtNetRateHandlingTc"
+        Me.TxtNetRateHandlingTc.Size = New System.Drawing.Size(561, 20)
+        Me.TxtNetRateHandlingTc.StyleController = Me.dataLayoutControl1
+        Me.TxtNetRateHandlingTc.TabIndex = 1
         '
         'txtHotelCheck
         '
@@ -871,134 +871,134 @@ Partial Public Class FrmEdit
         Me.txtHotelCheck.StyleController = Me.dataLayoutControl1
         Me.txtHotelCheck.TabIndex = 1
         '
-        'txtCompanyGroup
+        'TxtCompanyGroup
         '
-        Me.txtCompanyGroup.Location = New System.Drawing.Point(161, 178)
-        Me.txtCompanyGroup.Name = "txtCompanyGroup"
-        Me.txtCompanyGroup.Size = New System.Drawing.Size(561, 20)
-        Me.txtCompanyGroup.StyleController = Me.dataLayoutControl1
-        Me.txtCompanyGroup.TabIndex = 1
+        Me.TxtCompanyGroup.Location = New System.Drawing.Point(161, 178)
+        Me.TxtCompanyGroup.Name = "TxtCompanyGroup"
+        Me.TxtCompanyGroup.Size = New System.Drawing.Size(561, 20)
+        Me.TxtCompanyGroup.StyleController = Me.dataLayoutControl1
+        Me.TxtCompanyGroup.TabIndex = 1
         '
-        'deBookingDate
+        'DeBookingDate
         '
-        Me.deBookingDate.EditValue = Nothing
-        Me.deBookingDate.Location = New System.Drawing.Point(161, 202)
-        Me.deBookingDate.Name = "deBookingDate"
-        Me.deBookingDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.deBookingDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.deBookingDate.Size = New System.Drawing.Size(100, 20)
-        Me.deBookingDate.StyleController = Me.dataLayoutControl1
-        Me.deBookingDate.TabIndex = 1
+        Me.DeBookingDate.EditValue = Nothing
+        Me.DeBookingDate.Location = New System.Drawing.Point(161, 202)
+        Me.DeBookingDate.Name = "DeBookingDate"
+        Me.DeBookingDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DeBookingDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DeBookingDate.Size = New System.Drawing.Size(100, 20)
+        Me.DeBookingDate.StyleController = Me.dataLayoutControl1
+        Me.DeBookingDate.TabIndex = 1
         '
-        'deTravelDate
+        'DeTravelDate
         '
-        Me.deTravelDate.EditValue = Nothing
-        Me.deTravelDate.Location = New System.Drawing.Point(390, 202)
-        Me.deTravelDate.Name = "deTravelDate"
-        Me.deTravelDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.deTravelDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.deTravelDate.Size = New System.Drawing.Size(101, 20)
-        Me.deTravelDate.StyleController = Me.dataLayoutControl1
-        Me.deTravelDate.TabIndex = 1
+        Me.DeTravelDate.EditValue = Nothing
+        Me.DeTravelDate.Location = New System.Drawing.Point(390, 202)
+        Me.DeTravelDate.Name = "DeTravelDate"
+        Me.DeTravelDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DeTravelDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DeTravelDate.Size = New System.Drawing.Size(101, 20)
+        Me.DeTravelDate.StyleController = Me.dataLayoutControl1
+        Me.DeTravelDate.TabIndex = 1
         '
-        'txtRoomType
+        'TxtRoomType
         '
-        Me.txtRoomType.Location = New System.Drawing.Point(161, 226)
-        Me.txtRoomType.Name = "txtRoomType"
-        Me.txtRoomType.Size = New System.Drawing.Size(100, 20)
-        Me.txtRoomType.StyleController = Me.dataLayoutControl1
-        Me.txtRoomType.TabIndex = 1
+        Me.TxtRoomType.Location = New System.Drawing.Point(161, 226)
+        Me.TxtRoomType.Name = "TxtRoomType"
+        Me.TxtRoomType.Size = New System.Drawing.Size(100, 20)
+        Me.TxtRoomType.StyleController = Me.dataLayoutControl1
+        Me.TxtRoomType.TabIndex = 1
         '
-        'txtBaord
+        'TxtBaord
         '
-        Me.txtBaord.Location = New System.Drawing.Point(390, 226)
-        Me.txtBaord.Name = "txtBaord"
-        Me.txtBaord.Size = New System.Drawing.Size(101, 20)
-        Me.txtBaord.StyleController = Me.dataLayoutControl1
-        Me.txtBaord.TabIndex = 1
+        Me.TxtBaord.Location = New System.Drawing.Point(390, 226)
+        Me.TxtBaord.Name = "TxtBaord"
+        Me.TxtBaord.Size = New System.Drawing.Size(101, 20)
+        Me.TxtBaord.StyleController = Me.dataLayoutControl1
+        Me.TxtBaord.TabIndex = 1
         '
-        'txtDuration
+        'TxtDuration
         '
-        Me.txtDuration.Location = New System.Drawing.Point(620, 202)
-        Me.txtDuration.Name = "txtDuration"
-        Me.txtDuration.Size = New System.Drawing.Size(102, 20)
-        Me.txtDuration.StyleController = Me.dataLayoutControl1
-        Me.txtDuration.TabIndex = 1
+        Me.TxtDuration.Location = New System.Drawing.Point(620, 202)
+        Me.TxtDuration.Name = "TxtDuration"
+        Me.TxtDuration.Size = New System.Drawing.Size(102, 20)
+        Me.TxtDuration.StyleController = Me.dataLayoutControl1
+        Me.TxtDuration.TabIndex = 1
         '
-        'txtTransferTo
+        'TxtTransferTo
         '
-        Me.txtTransferTo.Location = New System.Drawing.Point(173, 283)
-        Me.txtTransferTo.Name = "txtTransferTo"
-        Me.txtTransferTo.Size = New System.Drawing.Size(203, 20)
-        Me.txtTransferTo.StyleController = Me.dataLayoutControl1
-        Me.txtTransferTo.TabIndex = 1
+        Me.TxtTransferTo.Location = New System.Drawing.Point(173, 283)
+        Me.TxtTransferTo.Name = "TxtTransferTo"
+        Me.TxtTransferTo.Size = New System.Drawing.Size(203, 20)
+        Me.TxtTransferTo.StyleController = Me.dataLayoutControl1
+        Me.TxtTransferTo.TabIndex = 1
         '
-        'txtTransferFrom
+        'TxtTransferFrom
         '
-        Me.txtTransferFrom.Location = New System.Drawing.Point(505, 283)
-        Me.txtTransferFrom.Name = "txtTransferFrom"
-        Me.txtTransferFrom.Size = New System.Drawing.Size(205, 20)
-        Me.txtTransferFrom.StyleController = Me.dataLayoutControl1
-        Me.txtTransferFrom.TabIndex = 1
+        Me.TxtTransferFrom.Location = New System.Drawing.Point(505, 283)
+        Me.TxtTransferFrom.Name = "TxtTransferFrom"
+        Me.TxtTransferFrom.Size = New System.Drawing.Size(205, 20)
+        Me.TxtTransferFrom.StyleController = Me.dataLayoutControl1
+        Me.TxtTransferFrom.TabIndex = 1
         '
-        'txtPax
+        'TxtPax
         '
-        Me.txtPax.Location = New System.Drawing.Point(173, 307)
-        Me.txtPax.Name = "txtPax"
-        Me.txtPax.Size = New System.Drawing.Size(93, 20)
-        Me.txtPax.StyleController = Me.dataLayoutControl1
-        Me.txtPax.TabIndex = 1
+        Me.TxtPax.Location = New System.Drawing.Point(173, 307)
+        Me.TxtPax.Name = "TxtPax"
+        Me.TxtPax.Size = New System.Drawing.Size(93, 20)
+        Me.TxtPax.StyleController = Me.dataLayoutControl1
+        Me.TxtPax.TabIndex = 1
         '
-        'txtAdult
+        'TxtAdult
         '
-        Me.txtAdult.Location = New System.Drawing.Point(395, 307)
-        Me.txtAdult.Name = "txtAdult"
-        Me.txtAdult.Size = New System.Drawing.Size(92, 20)
-        Me.txtAdult.StyleController = Me.dataLayoutControl1
-        Me.txtAdult.TabIndex = 1
+        Me.TxtAdult.Location = New System.Drawing.Point(395, 307)
+        Me.TxtAdult.Name = "TxtAdult"
+        Me.TxtAdult.Size = New System.Drawing.Size(92, 20)
+        Me.TxtAdult.StyleController = Me.dataLayoutControl1
+        Me.TxtAdult.TabIndex = 1
         '
-        'txtChild
+        'TxtChild
         '
-        Me.txtChild.Location = New System.Drawing.Point(616, 307)
-        Me.txtChild.Name = "txtChild"
-        Me.txtChild.Size = New System.Drawing.Size(94, 20)
-        Me.txtChild.StyleController = Me.dataLayoutControl1
-        Me.txtChild.TabIndex = 1
+        Me.TxtChild.Location = New System.Drawing.Point(616, 307)
+        Me.TxtChild.Name = "TxtChild"
+        Me.TxtChild.Size = New System.Drawing.Size(94, 20)
+        Me.TxtChild.StyleController = Me.dataLayoutControl1
+        Me.TxtChild.TabIndex = 1
         '
-        'deImportDate
+        'DeImportDate
         '
-        Me.deImportDate.EditValue = Nothing
-        Me.deImportDate.Location = New System.Drawing.Point(173, 331)
-        Me.deImportDate.Name = "deImportDate"
-        Me.deImportDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.deImportDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.deImportDate.Size = New System.Drawing.Size(93, 20)
-        Me.deImportDate.StyleController = Me.dataLayoutControl1
-        Me.deImportDate.TabIndex = 1
+        Me.DeImportDate.EditValue = Nothing
+        Me.DeImportDate.Location = New System.Drawing.Point(173, 331)
+        Me.DeImportDate.Name = "DeImportDate"
+        Me.DeImportDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DeImportDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DeImportDate.Size = New System.Drawing.Size(93, 20)
+        Me.DeImportDate.StyleController = Me.dataLayoutControl1
+        Me.DeImportDate.TabIndex = 1
         '
-        'txtIncomingAgency
+        'TxtIncomingAgency
         '
-        Me.txtIncomingAgency.Location = New System.Drawing.Point(505, 355)
-        Me.txtIncomingAgency.Name = "txtIncomingAgency"
-        Me.txtIncomingAgency.Size = New System.Drawing.Size(205, 20)
-        Me.txtIncomingAgency.StyleController = Me.dataLayoutControl1
-        Me.txtIncomingAgency.TabIndex = 1
+        Me.TxtIncomingAgency.Location = New System.Drawing.Point(505, 355)
+        Me.TxtIncomingAgency.Name = "TxtIncomingAgency"
+        Me.TxtIncomingAgency.Size = New System.Drawing.Size(205, 20)
+        Me.TxtIncomingAgency.StyleController = Me.dataLayoutControl1
+        Me.TxtIncomingAgency.TabIndex = 1
         '
-        'txtBookingStateDesc
+        'TxtBookingStateDesc
         '
-        Me.txtBookingStateDesc.Location = New System.Drawing.Point(173, 355)
-        Me.txtBookingStateDesc.Name = "txtBookingStateDesc"
-        Me.txtBookingStateDesc.Size = New System.Drawing.Size(203, 20)
-        Me.txtBookingStateDesc.StyleController = Me.dataLayoutControl1
-        Me.txtBookingStateDesc.TabIndex = 1
+        Me.TxtBookingStateDesc.Location = New System.Drawing.Point(173, 355)
+        Me.TxtBookingStateDesc.Name = "TxtBookingStateDesc"
+        Me.TxtBookingStateDesc.Size = New System.Drawing.Size(203, 20)
+        Me.TxtBookingStateDesc.StyleController = Me.dataLayoutControl1
+        Me.TxtBookingStateDesc.TabIndex = 1
         '
-        'txtPriceBreakdown
+        'TxtPriceBreakdown
         '
-        Me.txtPriceBreakdown.Location = New System.Drawing.Point(173, 379)
-        Me.txtPriceBreakdown.Name = "txtPriceBreakdown"
-        Me.txtPriceBreakdown.Size = New System.Drawing.Size(537, 20)
-        Me.txtPriceBreakdown.StyleController = Me.dataLayoutControl1
-        Me.txtPriceBreakdown.TabIndex = 1
+        Me.TxtPriceBreakdown.Location = New System.Drawing.Point(173, 379)
+        Me.TxtPriceBreakdown.Name = "TxtPriceBreakdown"
+        Me.TxtPriceBreakdown.Size = New System.Drawing.Size(537, 20)
+        Me.TxtPriceBreakdown.StyleController = Me.dataLayoutControl1
+        Me.TxtPriceBreakdown.TabIndex = 1
         '
         'windowsUIButtonPanelMain
         '
@@ -1017,11 +1017,11 @@ Partial Public Class FrmEdit
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = True
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = True
         Me.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        WindowsUIButtonImageOptions5.Image = CType(resources.GetObject("WindowsUIButtonImageOptions5.Image"), System.Drawing.Image)
-        WindowsUIButtonImageOptions6.ImageUri.Uri = "Save;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions7.ImageUri.Uri = "Reset;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions8.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
-        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Mail", True, WindowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", True, WindowsUIButtonImageOptions7, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions8, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False)})
+        WindowsUIButtonImageOptions1.Image = CType(resources.GetObject("WindowsUIButtonImageOptions1.Image"), System.Drawing.Image)
+        WindowsUIButtonImageOptions2.ImageUri.Uri = "Save;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions3.ImageUri.Uri = "Reset;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions4.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
+        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Mail", True, WindowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", True, WindowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False)})
         Me.windowsUIButtonPanelMain.EnableImageTransparency = True
         Me.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
         Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(24, 427)
@@ -1034,213 +1034,223 @@ Partial Public Class FrmEdit
         Me.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain"
         Me.windowsUIButtonPanelMain.UseButtonBackgroundImages = False
         '
-        'btnToggleComment
+        'BtnToggleComment
         '
-        Me.btnToggleComment.Location = New System.Drawing.Point(24, 47)
-        Me.btnToggleComment.Name = "btnToggleComment"
-        Me.btnToggleComment.Size = New System.Drawing.Size(710, 22)
-        Me.btnToggleComment.StyleController = Me.dataLayoutControl1
-        Me.btnToggleComment.TabIndex = 2
-        Me.btnToggleComment.Text = "New Comment"
+        Me.BtnToggleComment.Appearance.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.BtnToggleComment.Appearance.Options.UseFont = True
+        Me.BtnToggleComment.Location = New System.Drawing.Point(24, 47)
+        Me.BtnToggleComment.Name = "BtnToggleComment"
+        Me.BtnToggleComment.Size = New System.Drawing.Size(710, 22)
+        Me.BtnToggleComment.StyleController = Me.dataLayoutControl1
+        Me.BtnToggleComment.TabIndex = 2
+        Me.BtnToggleComment.Text = "New Comment"
         '
-        'txtComment
+        'TxtComment
         '
-        Me.txtComment.Location = New System.Drawing.Point(161, 140)
-        Me.txtComment.Name = "txtComment"
-        Me.txtComment.Size = New System.Drawing.Size(561, 79)
-        Me.txtComment.StyleController = Me.dataLayoutControl1
-        Me.txtComment.TabIndex = 4
+        Me.TxtComment.Location = New System.Drawing.Point(161, 140)
+        Me.TxtComment.Name = "TxtComment"
+        Me.TxtComment.Size = New System.Drawing.Size(561, 79)
+        Me.TxtComment.StyleController = Me.dataLayoutControl1
+        Me.TxtComment.TabIndex = 4
         '
-        'txtCalculation
+        'TxtCalculation
         '
-        Me.txtCalculation.Location = New System.Drawing.Point(161, 223)
-        Me.txtCalculation.Name = "txtCalculation"
-        Me.txtCalculation.Properties.Mask.EditMask = "\d+(\R.\d{0,2})?"
-        Me.txtCalculation.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
-        Me.txtCalculation.Size = New System.Drawing.Size(561, 20)
-        Me.txtCalculation.StyleController = Me.dataLayoutControl1
-        Me.txtCalculation.TabIndex = 5
+        Me.TxtCalculation.Location = New System.Drawing.Point(161, 223)
+        Me.TxtCalculation.Name = "TxtCalculation"
+        Me.TxtCalculation.Properties.Mask.EditMask = "\d+(\R.\d{0,2})?"
+        Me.TxtCalculation.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
+        Me.TxtCalculation.Size = New System.Drawing.Size(561, 20)
+        Me.TxtCalculation.StyleController = Me.dataLayoutControl1
+        Me.TxtCalculation.TabIndex = 5
         '
-        'btnSaveComment
+        'BtnSaveComment
         '
-        Me.btnSaveComment.Location = New System.Drawing.Point(36, 247)
-        Me.btnSaveComment.Name = "btnSaveComment"
-        Me.btnSaveComment.Size = New System.Drawing.Size(340, 22)
-        Me.btnSaveComment.StyleController = Me.dataLayoutControl1
-        Me.btnSaveComment.TabIndex = 6
-        Me.btnSaveComment.Text = "SAVE"
+        Me.BtnSaveComment.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSaveComment.Appearance.ForeColor = System.Drawing.Color.Green
+        Me.BtnSaveComment.Appearance.Options.UseFont = True
+        Me.BtnSaveComment.Appearance.Options.UseForeColor = True
+        Me.BtnSaveComment.Location = New System.Drawing.Point(36, 247)
+        Me.BtnSaveComment.Name = "BtnSaveComment"
+        Me.BtnSaveComment.Size = New System.Drawing.Size(340, 22)
+        Me.BtnSaveComment.StyleController = Me.dataLayoutControl1
+        Me.BtnSaveComment.TabIndex = 6
+        Me.BtnSaveComment.Text = "SAVE"
         '
-        'btnCancelComment
+        'BtnCancelComment
         '
-        Me.btnCancelComment.Location = New System.Drawing.Point(380, 247)
-        Me.btnCancelComment.Name = "btnCancelComment"
-        Me.btnCancelComment.Size = New System.Drawing.Size(342, 22)
-        Me.btnCancelComment.StyleController = Me.dataLayoutControl1
-        Me.btnCancelComment.TabIndex = 7
-        Me.btnCancelComment.Text = "CANCEL"
+        Me.BtnCancelComment.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelComment.Appearance.ForeColor = System.Drawing.Color.Red
+        Me.BtnCancelComment.Appearance.Options.UseFont = True
+        Me.BtnCancelComment.Appearance.Options.UseForeColor = True
+        Me.BtnCancelComment.Location = New System.Drawing.Point(380, 247)
+        Me.BtnCancelComment.Name = "BtnCancelComment"
+        Me.BtnCancelComment.Size = New System.Drawing.Size(342, 22)
+        Me.BtnCancelComment.StyleController = Me.dataLayoutControl1
+        Me.BtnCancelComment.TabIndex = 7
+        Me.BtnCancelComment.Text = "CANCEL"
         '
-        'cbGWGStatus
+        'CbGWGStatus
         '
-        Me.cbGWGStatus.Location = New System.Drawing.Point(505, 95)
-        Me.cbGWGStatus.Name = "cbGWGStatus"
-        Me.cbGWGStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.cbGWGStatus.Properties.Items.AddRange(New Object() {"OK", "CAN", "OnR", "BNA", "Stp"})
-        Me.cbGWGStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
-        Me.cbGWGStatus.Size = New System.Drawing.Size(229, 20)
-        Me.cbGWGStatus.StyleController = Me.dataLayoutControl1
-        Me.cbGWGStatus.TabIndex = 1
+        Me.CbGWGStatus.Location = New System.Drawing.Point(505, 95)
+        Me.CbGWGStatus.Name = "CbGWGStatus"
+        Me.CbGWGStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.CbGWGStatus.Properties.Items.AddRange(New Object() {"OK", "CAN", "OnR", "BNA", "Stp"})
+        Me.CbGWGStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
+        Me.CbGWGStatus.Size = New System.Drawing.Size(229, 20)
+        Me.CbGWGStatus.StyleController = Me.dataLayoutControl1
+        Me.CbGWGStatus.TabIndex = 1
         '
-        'txtUser
+        'TxtUser
         '
-        Me.txtUser.Location = New System.Drawing.Point(161, 346)
-        Me.txtUser.Name = "txtUser"
-        Me.txtUser.Properties.ReadOnly = True
-        Me.txtUser.Size = New System.Drawing.Size(561, 20)
-        Me.txtUser.StyleController = Me.dataLayoutControl1
-        Me.txtUser.TabIndex = 1
+        Me.TxtUser.Location = New System.Drawing.Point(161, 346)
+        Me.TxtUser.Name = "TxtUser"
+        Me.TxtUser.Properties.ReadOnly = True
+        Me.TxtUser.Size = New System.Drawing.Size(561, 20)
+        Me.TxtUser.StyleController = Me.dataLayoutControl1
+        Me.TxtUser.TabIndex = 1
         '
-        'luStatus
+        'LuStatus
         '
-        Me.luStatus.Location = New System.Drawing.Point(161, 116)
-        Me.luStatus.Name = "luStatus"
-        Me.luStatus.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit
-        Me.luStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.luStatus.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.[Default]), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Status", "Status")})
-        Me.luStatus.Properties.NullText = ""
-        Me.luStatus.Properties.PopupSizeable = False
-        Me.luStatus.Properties.ShowHeader = False
-        Me.luStatus.Size = New System.Drawing.Size(561, 20)
-        Me.luStatus.StyleController = Me.dataLayoutControl1
-        Me.luStatus.TabIndex = 3
+        Me.LuStatus.Location = New System.Drawing.Point(161, 116)
+        Me.LuStatus.Name = "LuStatus"
+        Me.LuStatus.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit
+        Me.LuStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.LuStatus.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.[Default]), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Status", "Status")})
+        Me.LuStatus.Properties.NullText = ""
+        Me.LuStatus.Properties.PopupSizeable = False
+        Me.LuStatus.Properties.ShowHeader = False
+        Me.LuStatus.Size = New System.Drawing.Size(561, 20)
+        Me.LuStatus.StyleController = Me.dataLayoutControl1
+        Me.LuStatus.TabIndex = 3
         '
-        'txtPurchaseEUR
+        'TxtPurchaseEUR
         '
-        Me.txtPurchaseEUR.Location = New System.Drawing.Point(161, 178)
-        Me.txtPurchaseEUR.Name = "txtPurchaseEUR"
-        Me.txtPurchaseEUR.Properties.ReadOnly = True
-        Me.txtPurchaseEUR.Size = New System.Drawing.Size(215, 20)
-        Me.txtPurchaseEUR.StyleController = Me.dataLayoutControl1
-        Me.txtPurchaseEUR.TabIndex = 9
+        Me.TxtPurchaseEUR.Location = New System.Drawing.Point(161, 178)
+        Me.TxtPurchaseEUR.Name = "TxtPurchaseEUR"
+        Me.TxtPurchaseEUR.Properties.ReadOnly = True
+        Me.TxtPurchaseEUR.Size = New System.Drawing.Size(215, 20)
+        Me.TxtPurchaseEUR.StyleController = Me.dataLayoutControl1
+        Me.TxtPurchaseEUR.TabIndex = 9
         '
-        'txtSalesEUR
+        'TxtSalesEUR
         '
-        Me.txtSalesEUR.Location = New System.Drawing.Point(505, 178)
-        Me.txtSalesEUR.Name = "txtSalesEUR"
-        Me.txtSalesEUR.Properties.ReadOnly = True
-        Me.txtSalesEUR.Size = New System.Drawing.Size(217, 20)
-        Me.txtSalesEUR.StyleController = Me.dataLayoutControl1
-        Me.txtSalesEUR.TabIndex = 10
+        Me.TxtSalesEUR.Location = New System.Drawing.Point(505, 178)
+        Me.TxtSalesEUR.Name = "TxtSalesEUR"
+        Me.TxtSalesEUR.Properties.ReadOnly = True
+        Me.TxtSalesEUR.Size = New System.Drawing.Size(217, 20)
+        Me.TxtSalesEUR.StyleController = Me.dataLayoutControl1
+        Me.TxtSalesEUR.TabIndex = 10
         '
-        'txtMarginEUR
+        'TxtMarginEUR
         '
-        Me.txtMarginEUR.Location = New System.Drawing.Point(161, 202)
-        Me.txtMarginEUR.Name = "txtMarginEUR"
-        Me.txtMarginEUR.Properties.ReadOnly = True
-        Me.txtMarginEUR.Size = New System.Drawing.Size(215, 20)
-        Me.txtMarginEUR.StyleController = Me.dataLayoutControl1
-        Me.txtMarginEUR.TabIndex = 11
+        Me.TxtMarginEUR.Location = New System.Drawing.Point(161, 202)
+        Me.TxtMarginEUR.Name = "TxtMarginEUR"
+        Me.TxtMarginEUR.Properties.ReadOnly = True
+        Me.TxtMarginEUR.Size = New System.Drawing.Size(215, 20)
+        Me.TxtMarginEUR.StyleController = Me.dataLayoutControl1
+        Me.TxtMarginEUR.TabIndex = 11
         '
-        'txtNetRateEUR
+        'TxtNetRateEUR
         '
-        Me.txtNetRateEUR.Location = New System.Drawing.Point(505, 202)
-        Me.txtNetRateEUR.Name = "txtNetRateEUR"
-        Me.txtNetRateEUR.Properties.ReadOnly = True
-        Me.txtNetRateEUR.Size = New System.Drawing.Size(217, 20)
-        Me.txtNetRateEUR.StyleController = Me.dataLayoutControl1
-        Me.txtNetRateEUR.TabIndex = 12
+        Me.TxtNetRateEUR.Location = New System.Drawing.Point(505, 202)
+        Me.TxtNetRateEUR.Name = "TxtNetRateEUR"
+        Me.TxtNetRateEUR.Properties.ReadOnly = True
+        Me.TxtNetRateEUR.Size = New System.Drawing.Size(217, 20)
+        Me.TxtNetRateEUR.StyleController = Me.dataLayoutControl1
+        Me.TxtNetRateEUR.TabIndex = 12
         '
-        'txtDifferenceEUR
+        'TxtDifferenceEUR
         '
-        Me.txtDifferenceEUR.Location = New System.Drawing.Point(161, 226)
-        Me.txtDifferenceEUR.Name = "txtDifferenceEUR"
-        Me.txtDifferenceEUR.Properties.ReadOnly = True
-        Me.txtDifferenceEUR.Size = New System.Drawing.Size(215, 20)
-        Me.txtDifferenceEUR.StyleController = Me.dataLayoutControl1
-        Me.txtDifferenceEUR.TabIndex = 13
+        Me.TxtDifferenceEUR.Location = New System.Drawing.Point(161, 226)
+        Me.TxtDifferenceEUR.Name = "TxtDifferenceEUR"
+        Me.TxtDifferenceEUR.Properties.ReadOnly = True
+        Me.TxtDifferenceEUR.Size = New System.Drawing.Size(215, 20)
+        Me.TxtDifferenceEUR.StyleController = Me.dataLayoutControl1
+        Me.TxtDifferenceEUR.TabIndex = 13
         '
-        'txtJunk
+        'TxtJunk
         '
-        Me.txtJunk.Location = New System.Drawing.Point(161, 251)
-        Me.txtJunk.Name = "txtJunk"
-        Me.txtJunk.Properties.ReadOnly = True
-        Me.txtJunk.Size = New System.Drawing.Size(561, 20)
-        Me.txtJunk.StyleController = Me.dataLayoutControl1
-        Me.txtJunk.TabIndex = 14
+        Me.TxtJunk.Location = New System.Drawing.Point(161, 251)
+        Me.TxtJunk.Name = "TxtJunk"
+        Me.TxtJunk.Properties.ReadOnly = True
+        Me.TxtJunk.Size = New System.Drawing.Size(561, 20)
+        Me.TxtJunk.StyleController = Me.dataLayoutControl1
+        Me.TxtJunk.TabIndex = 14
         '
-        'txtCancelled
+        'TxtCancelled
         '
-        Me.txtCancelled.Location = New System.Drawing.Point(161, 275)
-        Me.txtCancelled.Name = "txtCancelled"
-        Me.txtCancelled.Properties.ReadOnly = True
-        Me.txtCancelled.Size = New System.Drawing.Size(561, 20)
-        Me.txtCancelled.StyleController = Me.dataLayoutControl1
-        Me.txtCancelled.TabIndex = 15
+        Me.TxtCancelled.Location = New System.Drawing.Point(161, 275)
+        Me.TxtCancelled.Name = "TxtCancelled"
+        Me.TxtCancelled.Properties.ReadOnly = True
+        Me.TxtCancelled.Size = New System.Drawing.Size(561, 20)
+        Me.TxtCancelled.StyleController = Me.dataLayoutControl1
+        Me.TxtCancelled.TabIndex = 15
         '
-        'txtExcessive
+        'TxtExcessive
         '
-        Me.txtExcessive.Location = New System.Drawing.Point(161, 299)
-        Me.txtExcessive.Name = "txtExcessive"
-        Me.txtExcessive.Properties.ReadOnly = True
-        Me.txtExcessive.Size = New System.Drawing.Size(561, 20)
-        Me.txtExcessive.StyleController = Me.dataLayoutControl1
-        Me.txtExcessive.TabIndex = 16
+        Me.TxtExcessive.Location = New System.Drawing.Point(161, 299)
+        Me.TxtExcessive.Name = "TxtExcessive"
+        Me.TxtExcessive.Properties.ReadOnly = True
+        Me.TxtExcessive.Size = New System.Drawing.Size(561, 20)
+        Me.TxtExcessive.StyleController = Me.dataLayoutControl1
+        Me.TxtExcessive.TabIndex = 16
         '
-        'txtNegative
+        'TxtNegative
         '
-        Me.txtNegative.Location = New System.Drawing.Point(161, 323)
-        Me.txtNegative.Name = "txtNegative"
-        Me.txtNegative.Properties.ReadOnly = True
-        Me.txtNegative.Size = New System.Drawing.Size(561, 20)
-        Me.txtNegative.StyleController = Me.dataLayoutControl1
-        Me.txtNegative.TabIndex = 17
+        Me.TxtNegative.Location = New System.Drawing.Point(161, 323)
+        Me.TxtNegative.Name = "TxtNegative"
+        Me.TxtNegative.Properties.ReadOnly = True
+        Me.TxtNegative.Size = New System.Drawing.Size(561, 20)
+        Me.TxtNegative.StyleController = Me.dataLayoutControl1
+        Me.TxtNegative.TabIndex = 17
         '
-        'txtError
+        'TxtError
         '
-        Me.txtError.Location = New System.Drawing.Point(161, 371)
-        Me.txtError.Name = "txtError"
-        Me.txtError.Properties.ReadOnly = True
-        Me.txtError.Size = New System.Drawing.Size(561, 20)
-        Me.txtError.StyleController = Me.dataLayoutControl1
-        Me.txtError.TabIndex = 18
+        Me.TxtError.Location = New System.Drawing.Point(161, 371)
+        Me.TxtError.Name = "TxtError"
+        Me.TxtError.Properties.ReadOnly = True
+        Me.TxtError.Size = New System.Drawing.Size(561, 20)
+        Me.TxtError.StyleController = Me.dataLayoutControl1
+        Me.TxtError.TabIndex = 18
         '
-        'txtMismatching
+        'TxtMismatching
         '
-        Me.txtMismatching.Location = New System.Drawing.Point(161, 347)
-        Me.txtMismatching.Name = "txtMismatching"
-        Me.txtMismatching.Properties.ReadOnly = True
-        Me.txtMismatching.Size = New System.Drawing.Size(561, 20)
-        Me.txtMismatching.StyleController = Me.dataLayoutControl1
-        Me.txtMismatching.TabIndex = 19
+        Me.TxtMismatching.Location = New System.Drawing.Point(161, 347)
+        Me.TxtMismatching.Name = "TxtMismatching"
+        Me.TxtMismatching.Properties.ReadOnly = True
+        Me.TxtMismatching.Size = New System.Drawing.Size(561, 20)
+        Me.TxtMismatching.StyleController = Me.dataLayoutControl1
+        Me.TxtMismatching.TabIndex = 19
         '
-        'deMPImportDate
+        'DeMPImportDate
         '
-        Me.deMPImportDate.EditValue = Nothing
-        Me.deMPImportDate.Location = New System.Drawing.Point(395, 331)
-        Me.deMPImportDate.Name = "deMPImportDate"
-        Me.deMPImportDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.deMPImportDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.deMPImportDate.Size = New System.Drawing.Size(315, 20)
-        Me.deMPImportDate.StyleController = Me.dataLayoutControl1
-        Me.deMPImportDate.TabIndex = 21
+        Me.DeMPImportDate.EditValue = Nothing
+        Me.DeMPImportDate.Location = New System.Drawing.Point(395, 331)
+        Me.DeMPImportDate.Name = "DeMPImportDate"
+        Me.DeMPImportDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DeMPImportDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DeMPImportDate.Size = New System.Drawing.Size(315, 20)
+        Me.DeMPImportDate.StyleController = Me.dataLayoutControl1
+        Me.DeMPImportDate.TabIndex = 21
         '
-        'cbBookingStatus
+        'CbBookingStatus
         '
-        Me.cbBookingStatus.Location = New System.Drawing.Point(505, 119)
-        Me.cbBookingStatus.Name = "cbBookingStatus"
-        Me.cbBookingStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.cbBookingStatus.Properties.Items.AddRange(New Object() {"New", "Ame", "Can", "BNA"})
-        Me.cbBookingStatus.Size = New System.Drawing.Size(229, 20)
-        Me.cbBookingStatus.StyleController = Me.dataLayoutControl1
-        Me.cbBookingStatus.TabIndex = 20
+        Me.CbBookingStatus.Location = New System.Drawing.Point(505, 119)
+        Me.CbBookingStatus.Name = "CbBookingStatus"
+        Me.CbBookingStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.CbBookingStatus.Properties.Items.AddRange(New Object() {"New", "Ame", "Can", "BNA"})
+        Me.CbBookingStatus.Size = New System.Drawing.Size(229, 20)
+        Me.CbBookingStatus.StyleController = Me.dataLayoutControl1
+        Me.CbBookingStatus.TabIndex = 20
         '
-        'txtActionBy
+        'TxtActionBy
         '
-        Me.txtActionBy.Location = New System.Drawing.Point(161, 370)
-        Me.txtActionBy.Name = "txtActionBy"
-        Me.txtActionBy.Properties.ReadOnly = True
-        Me.txtActionBy.Size = New System.Drawing.Size(561, 20)
-        Me.txtActionBy.StyleController = Me.dataLayoutControl1
-        Me.txtActionBy.TabIndex = 22
+        Me.TxtActionBy.Location = New System.Drawing.Point(161, 370)
+        Me.TxtActionBy.Name = "TxtActionBy"
+        Me.TxtActionBy.Properties.ReadOnly = True
+        Me.TxtActionBy.Size = New System.Drawing.Size(561, 20)
+        Me.TxtActionBy.StyleController = Me.dataLayoutControl1
+        Me.TxtActionBy.TabIndex = 22
         '
         'layoutControlGroup1
         '
@@ -1255,7 +1265,7 @@ Partial Public Class FrmEdit
         '
         Me.TabbedControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.TabbedControlGroup2.Name = "TabbedControlGroup2"
-        Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup5
+        Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup7
         Me.TabbedControlGroup2.Size = New System.Drawing.Size(738, 504)
         Me.TabbedControlGroup2.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup5, Me.LayoutControlGroup7})
         '
@@ -1269,7 +1279,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem3
         '
-        Me.LayoutControlItem3.Control = Me.txtHotelName
+        Me.LayoutControlItem3.Control = Me.TxtHotelName
         Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
         Me.LayoutControlItem3.Size = New System.Drawing.Size(714, 24)
@@ -1278,7 +1288,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem4
         '
-        Me.LayoutControlItem4.Control = Me.txtCountry
+        Me.LayoutControlItem4.Control = Me.TxtCountry
         Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
         Me.LayoutControlItem4.Size = New System.Drawing.Size(356, 24)
@@ -1287,7 +1297,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem5
         '
-        Me.LayoutControlItem5.Control = Me.cbGWGStatus
+        Me.LayoutControlItem5.Control = Me.CbGWGStatus
         Me.LayoutControlItem5.Location = New System.Drawing.Point(356, 48)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
         Me.LayoutControlItem5.Size = New System.Drawing.Size(358, 24)
@@ -1296,7 +1306,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem2
         '
-        Me.LayoutControlItem2.Control = Me.txtHotelCode
+        Me.LayoutControlItem2.Control = Me.TxtHotelCode
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
         Me.LayoutControlItem2.Size = New System.Drawing.Size(714, 24)
@@ -1316,7 +1326,7 @@ Partial Public Class FrmEdit
         '
         Me.TabbedControlGroup1.Location = New System.Drawing.Point(0, 96)
         Me.TabbedControlGroup1.Name = "TabbedControlGroup1"
-        Me.TabbedControlGroup1.SelectedTabPage = Me.LayoutControlGroup3
+        Me.TabbedControlGroup1.SelectedTabPage = Me.LayoutControlGroup8
         Me.TabbedControlGroup1.Size = New System.Drawing.Size(714, 284)
         Me.TabbedControlGroup1.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup3, Me.LayoutControlGroup2, Me.LayoutControlGroup8})
         Me.TabbedControlGroup1.Text = "Other Details"
@@ -1331,7 +1341,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem6
         '
-        Me.LayoutControlItem6.Control = Me.txtPurchaseCurrency
+        Me.LayoutControlItem6.Control = Me.TxtPurchaseCurrency
         Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
         Me.LayoutControlItem6.Size = New System.Drawing.Size(344, 24)
@@ -1340,7 +1350,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem7
         '
-        Me.LayoutControlItem7.Control = Me.txtPurchasePrice
+        Me.LayoutControlItem7.Control = Me.TxtPurchasePrice
         Me.LayoutControlItem7.Location = New System.Drawing.Point(344, 0)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
         Me.LayoutControlItem7.Size = New System.Drawing.Size(346, 24)
@@ -1349,7 +1359,7 @@ Partial Public Class FrmEdit
         '
         'lblSalesCurrency
         '
-        Me.lblSalesCurrency.Control = Me.txtSalesCurrency
+        Me.lblSalesCurrency.Control = Me.TxtSalesCurrency
         Me.lblSalesCurrency.Location = New System.Drawing.Point(0, 24)
         Me.lblSalesCurrency.Name = "lblSalesCurrency"
         Me.lblSalesCurrency.Size = New System.Drawing.Size(344, 24)
@@ -1358,7 +1368,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem9
         '
-        Me.LayoutControlItem9.Control = Me.txtSalesPrice
+        Me.LayoutControlItem9.Control = Me.TxtSalesPrice
         Me.LayoutControlItem9.Location = New System.Drawing.Point(344, 24)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
         Me.LayoutControlItem9.Size = New System.Drawing.Size(346, 24)
@@ -1367,7 +1377,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem10
         '
-        Me.LayoutControlItem10.Control = Me.txtHandlingFee
+        Me.LayoutControlItem10.Control = Me.TxtHandlingFee
         Me.LayoutControlItem10.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
         Me.LayoutControlItem10.Size = New System.Drawing.Size(690, 24)
@@ -1376,7 +1386,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem11
         '
-        Me.LayoutControlItem11.Control = Me.txtMargin
+        Me.LayoutControlItem11.Control = Me.TxtMargin
         Me.LayoutControlItem11.Location = New System.Drawing.Point(0, 72)
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
         Me.LayoutControlItem11.Size = New System.Drawing.Size(690, 24)
@@ -1385,7 +1395,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem12
         '
-        Me.LayoutControlItem12.Control = Me.txtDifference
+        Me.LayoutControlItem12.Control = Me.TxtDifference
         Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 96)
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
         Me.LayoutControlItem12.Size = New System.Drawing.Size(690, 24)
@@ -1394,7 +1404,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem13
         '
-        Me.LayoutControlItem13.Control = Me.txtCurrencyHotelTc
+        Me.LayoutControlItem13.Control = Me.TxtCurrencyHotelTc
         Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 120)
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
         Me.LayoutControlItem13.Size = New System.Drawing.Size(344, 24)
@@ -1403,7 +1413,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem15
         '
-        Me.LayoutControlItem15.Control = Me.txtNetRateHandlingTc
+        Me.LayoutControlItem15.Control = Me.TxtNetRateHandlingTc
         Me.LayoutControlItem15.Location = New System.Drawing.Point(0, 144)
         Me.LayoutControlItem15.Name = "LayoutControlItem15"
         Me.LayoutControlItem15.Size = New System.Drawing.Size(690, 24)
@@ -1412,7 +1422,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem14
         '
-        Me.LayoutControlItem14.Control = Me.txtNetRateHotelTc
+        Me.LayoutControlItem14.Control = Me.TxtNetRateHotelTc
         Me.LayoutControlItem14.Location = New System.Drawing.Point(344, 120)
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
         Me.LayoutControlItem14.Size = New System.Drawing.Size(346, 24)
@@ -1421,7 +1431,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem32
         '
-        Me.LayoutControlItem32.Control = Me.txtUser
+        Me.LayoutControlItem32.Control = Me.TxtUser
         Me.LayoutControlItem32.Location = New System.Drawing.Point(0, 168)
         Me.LayoutControlItem32.Name = "LayoutControlItem32"
         Me.LayoutControlItem32.Size = New System.Drawing.Size(690, 24)
@@ -1430,7 +1440,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem52
         '
-        Me.LayoutControlItem52.Control = Me.txtActionBy
+        Me.LayoutControlItem52.Control = Me.TxtActionBy
         Me.LayoutControlItem52.Location = New System.Drawing.Point(0, 192)
         Me.LayoutControlItem52.Name = "LayoutControlItem52"
         Me.LayoutControlItem52.Size = New System.Drawing.Size(690, 45)
@@ -1447,7 +1457,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem17
         '
-        Me.LayoutControlItem17.Control = Me.txtCompanyGroup
+        Me.LayoutControlItem17.Control = Me.TxtCompanyGroup
         Me.LayoutControlItem17.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem17.Name = "LayoutControlItem17"
         Me.LayoutControlItem17.Size = New System.Drawing.Size(690, 24)
@@ -1456,7 +1466,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem18
         '
-        Me.LayoutControlItem18.Control = Me.deBookingDate
+        Me.LayoutControlItem18.Control = Me.DeBookingDate
         Me.LayoutControlItem18.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem18.Name = "LayoutControlItem18"
         Me.LayoutControlItem18.Size = New System.Drawing.Size(229, 24)
@@ -1465,7 +1475,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem19
         '
-        Me.LayoutControlItem19.Control = Me.deTravelDate
+        Me.LayoutControlItem19.Control = Me.DeTravelDate
         Me.LayoutControlItem19.Location = New System.Drawing.Point(229, 24)
         Me.LayoutControlItem19.Name = "LayoutControlItem19"
         Me.LayoutControlItem19.Size = New System.Drawing.Size(230, 24)
@@ -1474,7 +1484,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem20
         '
-        Me.LayoutControlItem20.Control = Me.txtRoomType
+        Me.LayoutControlItem20.Control = Me.TxtRoomType
         Me.LayoutControlItem20.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem20.Name = "LayoutControlItem20"
         Me.LayoutControlItem20.Size = New System.Drawing.Size(229, 24)
@@ -1483,7 +1493,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem21
         '
-        Me.LayoutControlItem21.Control = Me.txtBaord
+        Me.LayoutControlItem21.Control = Me.TxtBaord
         Me.LayoutControlItem21.Location = New System.Drawing.Point(229, 48)
         Me.LayoutControlItem21.Name = "LayoutControlItem21"
         Me.LayoutControlItem21.Size = New System.Drawing.Size(230, 24)
@@ -1500,7 +1510,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem23
         '
-        Me.LayoutControlItem23.Control = Me.txtTransferTo
+        Me.LayoutControlItem23.Control = Me.TxtTransferTo
         Me.LayoutControlItem23.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem23.Name = "LayoutControlItem23"
         Me.LayoutControlItem23.Size = New System.Drawing.Size(332, 24)
@@ -1509,7 +1519,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem24
         '
-        Me.LayoutControlItem24.Control = Me.txtTransferFrom
+        Me.LayoutControlItem24.Control = Me.TxtTransferFrom
         Me.LayoutControlItem24.Location = New System.Drawing.Point(332, 0)
         Me.LayoutControlItem24.Name = "LayoutControlItem24"
         Me.LayoutControlItem24.Size = New System.Drawing.Size(334, 24)
@@ -1518,7 +1528,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem26
         '
-        Me.LayoutControlItem26.Control = Me.txtAdult
+        Me.LayoutControlItem26.Control = Me.TxtAdult
         Me.LayoutControlItem26.Location = New System.Drawing.Point(222, 24)
         Me.LayoutControlItem26.Name = "LayoutControlItem26"
         Me.LayoutControlItem26.Size = New System.Drawing.Size(221, 24)
@@ -1527,7 +1537,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem25
         '
-        Me.LayoutControlItem25.Control = Me.txtPax
+        Me.LayoutControlItem25.Control = Me.TxtPax
         Me.LayoutControlItem25.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem25.Name = "LayoutControlItem25"
         Me.LayoutControlItem25.Size = New System.Drawing.Size(222, 24)
@@ -1536,7 +1546,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem27
         '
-        Me.LayoutControlItem27.Control = Me.txtChild
+        Me.LayoutControlItem27.Control = Me.TxtChild
         Me.LayoutControlItem27.Location = New System.Drawing.Point(443, 24)
         Me.LayoutControlItem27.Name = "LayoutControlItem27"
         Me.LayoutControlItem27.Size = New System.Drawing.Size(223, 24)
@@ -1545,7 +1555,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem28
         '
-        Me.LayoutControlItem28.Control = Me.deImportDate
+        Me.LayoutControlItem28.Control = Me.DeImportDate
         Me.LayoutControlItem28.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem28.Name = "LayoutControlItem28"
         Me.LayoutControlItem28.Size = New System.Drawing.Size(222, 24)
@@ -1554,7 +1564,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem30
         '
-        Me.LayoutControlItem30.Control = Me.txtBookingStateDesc
+        Me.LayoutControlItem30.Control = Me.TxtBookingStateDesc
         Me.LayoutControlItem30.Location = New System.Drawing.Point(0, 72)
         Me.LayoutControlItem30.Name = "LayoutControlItem30"
         Me.LayoutControlItem30.Size = New System.Drawing.Size(332, 24)
@@ -1563,7 +1573,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem31
         '
-        Me.LayoutControlItem31.Control = Me.txtPriceBreakdown
+        Me.LayoutControlItem31.Control = Me.TxtPriceBreakdown
         Me.LayoutControlItem31.Location = New System.Drawing.Point(0, 96)
         Me.LayoutControlItem31.Name = "LayoutControlItem31"
         Me.LayoutControlItem31.Size = New System.Drawing.Size(666, 24)
@@ -1572,7 +1582,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem51
         '
-        Me.LayoutControlItem51.Control = Me.deMPImportDate
+        Me.LayoutControlItem51.Control = Me.DeMPImportDate
         Me.LayoutControlItem51.Location = New System.Drawing.Point(222, 48)
         Me.LayoutControlItem51.Name = "LayoutControlItem51"
         Me.LayoutControlItem51.Size = New System.Drawing.Size(444, 24)
@@ -1581,7 +1591,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem29
         '
-        Me.LayoutControlItem29.Control = Me.txtIncomingAgency
+        Me.LayoutControlItem29.Control = Me.TxtIncomingAgency
         Me.LayoutControlItem29.Location = New System.Drawing.Point(332, 72)
         Me.LayoutControlItem29.Name = "LayoutControlItem29"
         Me.LayoutControlItem29.Size = New System.Drawing.Size(334, 24)
@@ -1590,7 +1600,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem22
         '
-        Me.LayoutControlItem22.Control = Me.txtDuration
+        Me.LayoutControlItem22.Control = Me.TxtDuration
         Me.LayoutControlItem22.Location = New System.Drawing.Point(459, 24)
         Me.LayoutControlItem22.Name = "LayoutControlItem22"
         Me.LayoutControlItem22.Size = New System.Drawing.Size(231, 48)
@@ -1607,7 +1617,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem39
         '
-        Me.LayoutControlItem39.Control = Me.txtPurchaseEUR
+        Me.LayoutControlItem39.Control = Me.TxtPurchaseEUR
         Me.LayoutControlItem39.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem39.Name = "LayoutControlItem39"
         Me.LayoutControlItem39.Size = New System.Drawing.Size(344, 24)
@@ -1616,7 +1626,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem41
         '
-        Me.LayoutControlItem41.Control = Me.txtMarginEUR
+        Me.LayoutControlItem41.Control = Me.TxtMarginEUR
         Me.LayoutControlItem41.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem41.Name = "LayoutControlItem41"
         Me.LayoutControlItem41.Size = New System.Drawing.Size(344, 24)
@@ -1625,7 +1635,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem44
         '
-        Me.LayoutControlItem44.Control = Me.txtJunk
+        Me.LayoutControlItem44.Control = Me.TxtJunk
         Me.LayoutControlItem44.Location = New System.Drawing.Point(0, 73)
         Me.LayoutControlItem44.Name = "LayoutControlItem44"
         Me.LayoutControlItem44.Size = New System.Drawing.Size(690, 24)
@@ -1634,7 +1644,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem45
         '
-        Me.LayoutControlItem45.Control = Me.txtCancelled
+        Me.LayoutControlItem45.Control = Me.TxtCancelled
         Me.LayoutControlItem45.Location = New System.Drawing.Point(0, 97)
         Me.LayoutControlItem45.Name = "LayoutControlItem45"
         Me.LayoutControlItem45.Size = New System.Drawing.Size(690, 24)
@@ -1643,7 +1653,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem46
         '
-        Me.LayoutControlItem46.Control = Me.txtExcessive
+        Me.LayoutControlItem46.Control = Me.TxtExcessive
         Me.LayoutControlItem46.Location = New System.Drawing.Point(0, 121)
         Me.LayoutControlItem46.Name = "LayoutControlItem46"
         Me.LayoutControlItem46.Size = New System.Drawing.Size(690, 24)
@@ -1652,7 +1662,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem47
         '
-        Me.LayoutControlItem47.Control = Me.txtNegative
+        Me.LayoutControlItem47.Control = Me.TxtNegative
         Me.LayoutControlItem47.Location = New System.Drawing.Point(0, 145)
         Me.LayoutControlItem47.Name = "LayoutControlItem47"
         Me.LayoutControlItem47.Size = New System.Drawing.Size(690, 24)
@@ -1661,7 +1671,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem40
         '
-        Me.LayoutControlItem40.Control = Me.txtSalesEUR
+        Me.LayoutControlItem40.Control = Me.TxtSalesEUR
         Me.LayoutControlItem40.Location = New System.Drawing.Point(344, 0)
         Me.LayoutControlItem40.Name = "LayoutControlItem40"
         Me.LayoutControlItem40.Size = New System.Drawing.Size(346, 24)
@@ -1670,7 +1680,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem42
         '
-        Me.LayoutControlItem42.Control = Me.txtNetRateEUR
+        Me.LayoutControlItem42.Control = Me.TxtNetRateEUR
         Me.LayoutControlItem42.Location = New System.Drawing.Point(344, 24)
         Me.LayoutControlItem42.Name = "LayoutControlItem42"
         Me.LayoutControlItem42.Size = New System.Drawing.Size(346, 48)
@@ -1679,7 +1689,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem43
         '
-        Me.LayoutControlItem43.Control = Me.txtDifferenceEUR
+        Me.LayoutControlItem43.Control = Me.TxtDifferenceEUR
         Me.LayoutControlItem43.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem43.Name = "LayoutControlItem43"
         Me.LayoutControlItem43.Size = New System.Drawing.Size(344, 24)
@@ -1695,7 +1705,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem48
         '
-        Me.LayoutControlItem48.Control = Me.txtError
+        Me.LayoutControlItem48.Control = Me.TxtError
         Me.LayoutControlItem48.Location = New System.Drawing.Point(0, 193)
         Me.LayoutControlItem48.Name = "LayoutControlItem48"
         Me.LayoutControlItem48.Size = New System.Drawing.Size(690, 44)
@@ -1704,7 +1714,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem49
         '
-        Me.LayoutControlItem49.Control = Me.txtMismatching
+        Me.LayoutControlItem49.Control = Me.TxtMismatching
         Me.LayoutControlItem49.Location = New System.Drawing.Point(0, 169)
         Me.LayoutControlItem49.Name = "LayoutControlItem49"
         Me.LayoutControlItem49.Size = New System.Drawing.Size(690, 24)
@@ -1722,7 +1732,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem50
         '
-        Me.LayoutControlItem50.Control = Me.cbBookingStatus
+        Me.LayoutControlItem50.Control = Me.CbBookingStatus
         Me.LayoutControlItem50.Location = New System.Drawing.Point(356, 72)
         Me.LayoutControlItem50.Name = "LayoutControlItem50"
         Me.LayoutControlItem50.Size = New System.Drawing.Size(358, 24)
@@ -1757,7 +1767,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem34
         '
-        Me.LayoutControlItem34.Control = Me.luStatus
+        Me.LayoutControlItem34.Control = Me.LuStatus
         Me.LayoutControlItem34.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem34.Name = "LayoutControlItem34"
         Me.LayoutControlItem34.Size = New System.Drawing.Size(690, 24)
@@ -1766,7 +1776,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem35
         '
-        Me.LayoutControlItem35.Control = Me.txtComment
+        Me.LayoutControlItem35.Control = Me.TxtComment
         Me.LayoutControlItem35.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem35.Name = "LayoutControlItem35"
         Me.LayoutControlItem35.Size = New System.Drawing.Size(690, 83)
@@ -1775,7 +1785,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem36
         '
-        Me.LayoutControlItem36.Control = Me.txtCalculation
+        Me.LayoutControlItem36.Control = Me.TxtCalculation
         Me.LayoutControlItem36.Location = New System.Drawing.Point(0, 107)
         Me.LayoutControlItem36.Name = "LayoutControlItem36"
         Me.LayoutControlItem36.Size = New System.Drawing.Size(690, 24)
@@ -1784,7 +1794,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem37
         '
-        Me.LayoutControlItem37.Control = Me.btnSaveComment
+        Me.LayoutControlItem37.Control = Me.BtnSaveComment
         Me.LayoutControlItem37.Location = New System.Drawing.Point(0, 131)
         Me.LayoutControlItem37.Name = "LayoutControlItem37"
         Me.LayoutControlItem37.Size = New System.Drawing.Size(344, 26)
@@ -1793,7 +1803,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem38
         '
-        Me.LayoutControlItem38.Control = Me.btnCancelComment
+        Me.LayoutControlItem38.Control = Me.BtnCancelComment
         Me.LayoutControlItem38.Location = New System.Drawing.Point(344, 131)
         Me.LayoutControlItem38.Name = "LayoutControlItem38"
         Me.LayoutControlItem38.Size = New System.Drawing.Size(346, 26)
@@ -1802,7 +1812,7 @@ Partial Public Class FrmEdit
         '
         'LayoutControlItem33
         '
-        Me.LayoutControlItem33.Control = Me.btnToggleComment
+        Me.LayoutControlItem33.Control = Me.BtnToggleComment
         Me.LayoutControlItem33.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem33.Name = "LayoutControlItem33"
         Me.LayoutControlItem33.Size = New System.Drawing.Size(714, 26)
@@ -1859,8 +1869,8 @@ Partial Public Class FrmEdit
         Me.ClientSize = New System.Drawing.Size(758, 554)
         Me.Controls.Add(Me.dataLayoutControl1)
         Me.Controls.Add(Me.labelControl)
-        Me.IconOptions.Icon = CType(resources.GetObject("frmEdit.IconOptions.Icon"), System.Drawing.Icon)
-        Me.IconOptions.Image = CType(resources.GetObject("frmEdit.IconOptions.Image"), System.Drawing.Image)
+        Me.IconOptions.Icon = CType(resources.GetObject("FrmEdit.IconOptions.Icon"), System.Drawing.Icon)
+        Me.IconOptions.Image = CType(resources.GetObject("FrmEdit.IconOptions.Image"), System.Drawing.Image)
         Me.KeyPreview = True
         Me.Name = "FrmEdit"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -1877,58 +1887,58 @@ Partial Public Class FrmEdit
         CType(Me.LayoutViewCard1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TileView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtHotelCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtHotelName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtCountry.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtPurchaseCurrency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtPurchasePrice.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtSalesCurrency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtSalesPrice.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtHandlingFee.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtMargin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtDifference.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtCurrencyHotelTc.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtNetRateHotelTc.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtNetRateHandlingTc.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtHotelCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtHotelName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtCountry.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtPurchaseCurrency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtPurchasePrice.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtSalesCurrency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtSalesPrice.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtHandlingFee.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtMargin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtDifference.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtCurrencyHotelTc.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtNetRateHotelTc.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtNetRateHandlingTc.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtHotelCheck.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtCompanyGroup.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.deBookingDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.deBookingDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.deTravelDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.deTravelDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtRoomType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtBaord.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtDuration.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTransferTo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTransferFrom.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtPax.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtAdult.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtChild.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.deImportDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.deImportDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtIncomingAgency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtBookingStateDesc.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtPriceBreakdown.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtComment.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtCalculation.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cbGWGStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtUser.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.luStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtPurchaseEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtSalesEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtMarginEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtNetRateEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtDifferenceEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtJunk.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtCancelled.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtExcessive.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtNegative.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtError.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtMismatching.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.deMPImportDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.deMPImportDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cbBookingStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtActionBy.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtCompanyGroup.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DeBookingDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DeBookingDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DeTravelDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DeTravelDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtRoomType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtBaord.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtDuration.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtTransferTo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtTransferFrom.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtPax.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtAdult.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtChild.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DeImportDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DeImportDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtIncomingAgency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtBookingStateDesc.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtPriceBreakdown.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtComment.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtCalculation.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CbGWGStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtUser.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LuStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtPurchaseEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtSalesEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtMarginEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtNetRateEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtDifferenceEUR.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtJunk.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtCancelled.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtExcessive.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtNegative.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtError.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtMismatching.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DeMPImportDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DeMPImportDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CbBookingStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtActionBy.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TabbedControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup5, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2003,10 +2013,10 @@ Partial Public Class FrmEdit
 #End Region
 
     Private WithEvents labelControl As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents txtHotelCode As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtHotelName As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtCountry As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtPurchasePrice As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtHotelCode As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtHotelName As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtCountry As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtPurchasePrice As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem3 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem4 As DevExpress.XtraLayout.LayoutControlItem
@@ -2022,10 +2032,10 @@ Partial Public Class FrmEdit
     Friend WithEvents LayoutControlItem14 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem15 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents txtHotelCheck As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtCompanyGroup As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents deBookingDate As DevExpress.XtraEditors.DateEdit
-    Friend WithEvents deTravelDate As DevExpress.XtraEditors.DateEdit
-    Friend WithEvents txtRoomType As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtCompanyGroup As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents DeBookingDate As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents DeTravelDate As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents TxtRoomType As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem16 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem17 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem18 As DevExpress.XtraLayout.LayoutControlItem
@@ -2046,28 +2056,28 @@ Partial Public Class FrmEdit
     Public WithEvents LayoutControlGroup4 As DevExpress.XtraLayout.LayoutControlGroup
     Public WithEvents LayoutControlGroup3 As DevExpress.XtraLayout.LayoutControlGroup
     Public WithEvents TabbedControlGroup1 As DevExpress.XtraLayout.TabbedControlGroup
-    Public WithEvents txtPurchaseCurrency As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtSalesCurrency As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtSalesPrice As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtHandlingFee As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtMargin As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtDifference As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtCurrencyHotelTc As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtNetRateHotelTc As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtNetRateHandlingTc As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtPurchaseCurrency As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtSalesCurrency As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtSalesPrice As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtHandlingFee As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtMargin As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtDifference As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtCurrencyHotelTc As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtNetRateHotelTc As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtNetRateHandlingTc As DevExpress.XtraEditors.TextEdit
     Public WithEvents dataLayoutControl1 As DevExpress.XtraDataLayout.DataLayoutControl
-    Public WithEvents txtBaord As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtDuration As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtTransferTo As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtTransferFrom As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtPax As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtAdult As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtChild As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtBaord As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtDuration As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtTransferTo As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtTransferFrom As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtPax As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtAdult As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtChild As DevExpress.XtraEditors.TextEdit
     Public WithEvents LayoutControlGroup2 As DevExpress.XtraLayout.LayoutControlGroup
-    Public WithEvents deImportDate As DevExpress.XtraEditors.DateEdit
-    Public WithEvents txtIncomingAgency As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtBookingStateDesc As DevExpress.XtraEditors.TextEdit
-    Public WithEvents txtPriceBreakdown As DevExpress.XtraEditors.TextEdit
+    Public WithEvents DeImportDate As DevExpress.XtraEditors.DateEdit
+    Public WithEvents TxtIncomingAgency As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtBookingStateDesc As DevExpress.XtraEditors.TextEdit
+    Public WithEvents TxtPriceBreakdown As DevExpress.XtraEditors.TextEdit
     Friend WithEvents TabbedControlGroup2 As DevExpress.XtraLayout.TabbedControlGroup
     Friend WithEvents LayoutControlGroup5 As DevExpress.XtraLayout.LayoutControlGroup
     Friend WithEvents LayoutControlItem8 As DevExpress.XtraLayout.LayoutControlItem
@@ -2084,15 +2094,15 @@ Partial Public Class FrmEdit
     Friend WithEvents LayoutControlItem32 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents TileViewColumn1 As DevExpress.XtraGrid.Columns.TileViewColumn
     Friend WithEvents grpAddNewComment As DevExpress.XtraLayout.LayoutControlGroup
-    Friend WithEvents btnToggleComment As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents txtComment As DevExpress.XtraEditors.MemoEdit
-    Friend WithEvents txtCalculation As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents BtnToggleComment As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents TxtComment As DevExpress.XtraEditors.MemoEdit
+    Friend WithEvents TxtCalculation As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem34 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem35 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem36 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem33 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents btnSaveComment As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents btnCancelComment As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BtnSaveComment As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BtnCancelComment As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LayoutControlItem37 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem38 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents EmptySpaceItem1 As DevExpress.XtraLayout.EmptySpaceItem
@@ -2104,7 +2114,7 @@ Partial Public Class FrmEdit
     Friend WithEvents BandedGridColumn4 As DevExpress.XtraGrid.Columns.LayoutViewColumn
     Friend WithEvents BandedGridColumn5 As DevExpress.XtraGrid.Columns.LayoutViewColumn
     Friend WithEvents BandedGridColumn6 As DevExpress.XtraGrid.Columns.LayoutViewColumn
-    Friend WithEvents cbGWGStatus As DevExpress.XtraEditors.ComboBoxEdit
+    Friend WithEvents CbGWGStatus As DevExpress.XtraEditors.ComboBoxEdit
     Friend WithEvents RepositoryItemComboBox1 As DevExpress.XtraEditors.Repository.RepositoryItemComboBox
     Friend WithEvents layoutViewField_BandedGridColumn2 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents layoutViewField_BandedGridColumn3 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
@@ -2113,18 +2123,18 @@ Partial Public Class FrmEdit
     Friend WithEvents layoutViewField_BandedGridColumn6 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents LayoutViewCard1 As DevExpress.XtraGrid.Views.Layout.LayoutViewCard
     Public WithEvents windowsUIButtonPanelMain As DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel
-    Friend WithEvents txtUser As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents luStatus As DevExpress.XtraEditors.LookUpEdit
+    Friend WithEvents TxtUser As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LuStatus As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents LayoutControlGroup8 As DevExpress.XtraLayout.LayoutControlGroup
-    Friend WithEvents txtPurchaseEUR As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtSalesEUR As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtMarginEUR As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtNetRateEUR As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtDifferenceEUR As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtJunk As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtCancelled As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtExcessive As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtNegative As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtPurchaseEUR As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtSalesEUR As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtMarginEUR As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtNetRateEUR As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtDifferenceEUR As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtJunk As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtCancelled As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtExcessive As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtNegative As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem39 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem41 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem44 As DevExpress.XtraLayout.LayoutControlItem
@@ -2134,15 +2144,15 @@ Partial Public Class FrmEdit
     Friend WithEvents LayoutControlItem40 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem42 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem43 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents txtError As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtError As DevExpress.XtraEditors.TextEdit
     Friend WithEvents SimpleSeparator1 As DevExpress.XtraLayout.SimpleSeparator
     Friend WithEvents LayoutControlItem48 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents txtMismatching As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtMismatching As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem49 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem50 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents deMPImportDate As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents DeMPImportDate As DevExpress.XtraEditors.DateEdit
     Friend WithEvents LayoutControlItem51 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents cbBookingStatus As DevExpress.XtraEditors.ComboBoxEdit
-    Friend WithEvents txtActionBy As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents CbBookingStatus As DevExpress.XtraEditors.ComboBoxEdit
+    Friend WithEvents TxtActionBy As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem52 As DevExpress.XtraLayout.LayoutControlItem
 End Class

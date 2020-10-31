@@ -23,45 +23,45 @@ Partial Class FrmChangePassword
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmChangePassword))
-        Me.btnCancel = New DevExpress.XtraEditors.SimpleButton()
-        Me.btnOK = New DevExpress.XtraEditors.SimpleButton()
+        Me.BtnCancel = New DevExpress.XtraEditors.SimpleButton()
+        Me.BtnOK = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
-        Me.txtNewPassword = New DevExpress.XtraEditors.TextEdit()
-        Me.txtOldPassword = New DevExpress.XtraEditors.TextEdit()
-        Me.txtRetype = New DevExpress.XtraEditors.TextEdit()
-        CType(Me.txtNewPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtOldPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtRetype.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TxtNewPassword = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtOldPassword = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtRetype = New DevExpress.XtraEditors.TextEdit()
+        CType(Me.TxtNewPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtOldPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtRetype.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btnCancel
+        'BtnCancel
         '
-        Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCancel.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Appearance.ForeColor = System.Drawing.Color.Red
-        Me.btnCancel.Appearance.Options.UseFont = True
-        Me.btnCancel.Appearance.Options.UseForeColor = True
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(411, 173)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(106, 32)
-        Me.btnCancel.TabIndex = 3
-        Me.btnCancel.Text = "Cancel"
+        Me.BtnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnCancel.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancel.Appearance.ForeColor = System.Drawing.Color.Red
+        Me.BtnCancel.Appearance.Options.UseFont = True
+        Me.BtnCancel.Appearance.Options.UseForeColor = True
+        Me.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.BtnCancel.Location = New System.Drawing.Point(411, 173)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(106, 32)
+        Me.BtnCancel.TabIndex = 3
+        Me.BtnCancel.Text = "Cancel"
         '
-        'btnOK
+        'BtnOK
         '
-        Me.btnOK.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnOK.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOK.Appearance.ForeColor = System.Drawing.Color.Green
-        Me.btnOK.Appearance.Options.UseFont = True
-        Me.btnOK.Appearance.Options.UseForeColor = True
-        Me.btnOK.Location = New System.Drawing.Point(299, 173)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(106, 32)
-        Me.btnOK.TabIndex = 2
-        Me.btnOK.Text = "OK"
+        Me.BtnOK.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnOK.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnOK.Appearance.ForeColor = System.Drawing.Color.Green
+        Me.BtnOK.Appearance.Options.UseFont = True
+        Me.BtnOK.Appearance.Options.UseForeColor = True
+        Me.BtnOK.Location = New System.Drawing.Point(299, 173)
+        Me.BtnOK.Name = "BtnOK"
+        Me.BtnOK.Size = New System.Drawing.Size(106, 32)
+        Me.BtnOK.TabIndex = 2
+        Me.BtnOK.Text = "OK"
         '
         'LabelControl2
         '
@@ -93,41 +93,41 @@ Partial Class FrmChangePassword
         Me.LabelControl3.TabIndex = 18
         Me.LabelControl3.Text = "Retype:"
         '
-        'txtNewPassword
+        'TxtNewPassword
         '
-        Me.txtNewPassword.EnterMoveNextControl = True
-        Me.txtNewPassword.Location = New System.Drawing.Point(169, 76)
-        Me.txtNewPassword.Name = "txtNewPassword"
-        Me.txtNewPassword.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.txtNewPassword.Properties.Appearance.Options.UseFont = True
-        Me.txtNewPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.txtNewPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtNewPassword.Size = New System.Drawing.Size(323, 24)
-        Me.txtNewPassword.TabIndex = 20
+        Me.TxtNewPassword.EnterMoveNextControl = True
+        Me.TxtNewPassword.Location = New System.Drawing.Point(169, 76)
+        Me.TxtNewPassword.Name = "TxtNewPassword"
+        Me.TxtNewPassword.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
+        Me.TxtNewPassword.Properties.Appearance.Options.UseFont = True
+        Me.TxtNewPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.TxtNewPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TxtNewPassword.Size = New System.Drawing.Size(323, 24)
+        Me.TxtNewPassword.TabIndex = 20
         '
-        'txtOldPassword
+        'TxtOldPassword
         '
-        Me.txtOldPassword.EnterMoveNextControl = True
-        Me.txtOldPassword.Location = New System.Drawing.Point(169, 36)
-        Me.txtOldPassword.Name = "txtOldPassword"
-        Me.txtOldPassword.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.txtOldPassword.Properties.Appearance.Options.UseFont = True
-        Me.txtOldPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.txtOldPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtOldPassword.Size = New System.Drawing.Size(323, 24)
-        Me.txtOldPassword.TabIndex = 19
+        Me.TxtOldPassword.EnterMoveNextControl = True
+        Me.TxtOldPassword.Location = New System.Drawing.Point(169, 36)
+        Me.TxtOldPassword.Name = "TxtOldPassword"
+        Me.TxtOldPassword.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
+        Me.TxtOldPassword.Properties.Appearance.Options.UseFont = True
+        Me.TxtOldPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.TxtOldPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TxtOldPassword.Size = New System.Drawing.Size(323, 24)
+        Me.TxtOldPassword.TabIndex = 19
         '
-        'txtRetype
+        'TxtRetype
         '
-        Me.txtRetype.EnterMoveNextControl = True
-        Me.txtRetype.Location = New System.Drawing.Point(169, 118)
-        Me.txtRetype.Name = "txtRetype"
-        Me.txtRetype.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.txtRetype.Properties.Appearance.Options.UseFont = True
-        Me.txtRetype.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.txtRetype.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtRetype.Size = New System.Drawing.Size(323, 24)
-        Me.txtRetype.TabIndex = 21
+        Me.TxtRetype.EnterMoveNextControl = True
+        Me.TxtRetype.Location = New System.Drawing.Point(169, 118)
+        Me.TxtRetype.Name = "TxtRetype"
+        Me.TxtRetype.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
+        Me.TxtRetype.Properties.Appearance.Options.UseFont = True
+        Me.TxtRetype.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.TxtRetype.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TxtRetype.Size = New System.Drawing.Size(323, 24)
+        Me.TxtRetype.TabIndex = 21
         '
         'FrmChangePassword
         '
@@ -136,34 +136,34 @@ Partial Class FrmChangePassword
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.CancelButton = Me.btnCancel
+        Me.CancelButton = Me.BtnCancel
         Me.ClientSize = New System.Drawing.Size(536, 217)
-        Me.Controls.Add(Me.txtRetype)
-        Me.Controls.Add(Me.txtNewPassword)
-        Me.Controls.Add(Me.txtOldPassword)
+        Me.Controls.Add(Me.TxtRetype)
+        Me.Controls.Add(Me.TxtNewPassword)
+        Me.Controls.Add(Me.TxtOldPassword)
         Me.Controls.Add(Me.LabelControl3)
         Me.Controls.Add(Me.LabelControl2)
         Me.Controls.Add(Me.LabelControl1)
-        Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.btnOK)
+        Me.Controls.Add(Me.BtnCancel)
+        Me.Controls.Add(Me.BtnOK)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmChangePassword"
         Me.ShowMode = DevExpress.XtraSplashScreen.ShowMode.Image
         Me.SplashImageOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.Sign_up
         Me.Text = "Login"
-        CType(Me.txtNewPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtOldPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtRetype.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtNewPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtOldPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtRetype.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnCancel As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents btnOK As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BtnCancel As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BtnOK As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LabelControl2 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents txtNewPassword As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtOldPassword As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtRetype As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtNewPassword As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtOldPassword As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtRetype As DevExpress.XtraEditors.TextEdit
 End Class

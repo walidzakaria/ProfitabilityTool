@@ -1,25 +1,25 @@
 ﻿Public Class FrmLogin
 
-    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Close()
         Application.Exit()
     End Sub
 
-    Private Sub BtnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+    Private Sub BtnOK_Click(sender As Object, e As EventArgs) Handles BtnOK.Click
 
-        If txtUserName.Text = "" Then
+        If TxtUserName.Text = "" Then
             MsgBox("Please enter username!")
-            txtUserName.Focus()
+            TxtUserName.Focus()
             Exit Sub
-        ElseIf txtPassword.Text = "" Then
+        ElseIf TxtPassword.Text = "" Then
             MsgBox("Please enter password!")
-            txtPassword.Focus()
+            TxtPassword.Focus()
             Exit Sub
         End If
 
         Dim user As New Login With {
-            .Username = txtUserName.Text,
-            .Password = txtPassword.Text
+            .Username = TxtUserName.Text,
+            .Password = TxtPassword.Text
         }
 
         Dim validUser As Boolean
@@ -32,7 +32,7 @@
         ElseIf Not user.Active Then
             MsgBox("The entered user is deactivated!")
         Else
-            lblLoading.Visible = True
+            LblLoading.Visible = True
             Application.DoEvents()
 
             GV.CurrentUser = user
@@ -51,35 +51,35 @@
     End Sub
 
     Private Sub FrmLogin_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        lblLoading.Visible = False
+        LblLoading.Visible = False
     End Sub
 
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
-        lblLoading.Visible = False
-        txtUserName.Text = ""
-        txtPassword.Text = ""
+        LblLoading.Visible = False
+        TxtUserName.Text = ""
+        TxtPassword.Text = ""
     End Sub
 
     Private Sub FrmLogin_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        txtUserName.Focus()
+        TxtUserName.Focus()
     End Sub
 
-    Private Sub TxtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPassword.KeyDown
-        If e.KeyCode = Keys.Enter AndAlso txtUserName.Text <> "" AndAlso txtPassword.Text <> "" Then
+    Private Sub TxtPassword_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtPassword.KeyDown
+        If e.KeyCode = Keys.Enter AndAlso TxtUserName.Text <> "" AndAlso TxtPassword.Text <> "" Then
             e.Handled = True
-            btnOK.PerformClick()
+            BtnOK.PerformClick()
         ElseIf e.KeyCode = Keys.Up Then
-            txtUserName.Focus()
-            txtUserName.SelectAll()
+            TxtUserName.Focus()
+            TxtUserName.SelectAll()
         ElseIf e.KeyCode = Keys.Down Then
-            btnOK.Focus()
+            BtnOK.Focus()
         End If
     End Sub
 
-    Private Sub TxtUserName_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUserName.KeyDown
+    Private Sub TxtUserName_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtUserName.KeyDown
         If e.KeyCode = Keys.Down Then
-            txtPassword.Focus()
-            txtPassword.SelectAll()
+            TxtPassword.Focus()
+            TxtPassword.SelectAll()
         End If
     End Sub
 End Class

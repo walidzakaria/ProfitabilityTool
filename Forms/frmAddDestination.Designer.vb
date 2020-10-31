@@ -32,18 +32,18 @@ Partial Public Class FrmAddDestination
         Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAddDestination))
         Me.dataLayoutControl1 = New DevExpress.XtraDataLayout.DataLayoutControl()
-        Me.txtCode = New DevExpress.XtraEditors.TextEdit()
-        Me.txtDestination = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtCode = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtDestination = New DevExpress.XtraEditors.TextEdit()
         Me.layoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.windowsUIButtonPanelMain = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
+        Me.WindowsUIButtonPanelMain = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dataLayoutControl1.SuspendLayout()
-        CType(Me.txtCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtDestination.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtDestination.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,8 +53,8 @@ Partial Public Class FrmAddDestination
         'dataLayoutControl1
         '
         Me.dataLayoutControl1.AllowCustomization = False
-        Me.dataLayoutControl1.Controls.Add(Me.txtCode)
-        Me.dataLayoutControl1.Controls.Add(Me.txtDestination)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtCode)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtDestination)
         Me.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataLayoutControl1.Location = New System.Drawing.Point(0, 30)
         Me.dataLayoutControl1.Name = "dataLayoutControl1"
@@ -62,28 +62,28 @@ Partial Public Class FrmAddDestination
         Me.dataLayoutControl1.Size = New System.Drawing.Size(313, 99)
         Me.dataLayoutControl1.TabIndex = 0
         '
-        'txtCode
+        'TxtCode
         '
-        Me.txtCode.Location = New System.Drawing.Point(73, 12)
-        Me.txtCode.Name = "txtCode"
-        Me.txtCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCode.Size = New System.Drawing.Size(228, 20)
-        Me.txtCode.StyleController = Me.dataLayoutControl1
-        Me.txtCode.TabIndex = 4
+        Me.TxtCode.Location = New System.Drawing.Point(73, 12)
+        Me.TxtCode.Name = "TxtCode"
+        Me.TxtCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtCode.Size = New System.Drawing.Size(228, 20)
+        Me.TxtCode.StyleController = Me.dataLayoutControl1
+        Me.TxtCode.TabIndex = 4
         ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
         ConditionValidationRule1.ErrorText = "This value is not valid"
-        Me.DxValidationProvider1.SetValidationRule(Me.txtCode, ConditionValidationRule1)
+        Me.DxValidationProvider1.SetValidationRule(Me.TxtCode, ConditionValidationRule1)
         '
-        'txtDestination
+        'TxtDestination
         '
-        Me.txtDestination.Location = New System.Drawing.Point(73, 36)
-        Me.txtDestination.Name = "txtDestination"
-        Me.txtDestination.Size = New System.Drawing.Size(228, 20)
-        Me.txtDestination.StyleController = Me.dataLayoutControl1
-        Me.txtDestination.TabIndex = 5
+        Me.TxtDestination.Location = New System.Drawing.Point(73, 36)
+        Me.TxtDestination.Name = "TxtDestination"
+        Me.TxtDestination.Size = New System.Drawing.Size(228, 20)
+        Me.TxtDestination.StyleController = Me.dataLayoutControl1
+        Me.TxtDestination.TabIndex = 5
         ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
         ConditionValidationRule2.ErrorText = "This value is not valid"
-        Me.DxValidationProvider1.SetValidationRule(Me.txtDestination, ConditionValidationRule2)
+        Me.DxValidationProvider1.SetValidationRule(Me.TxtDestination, ConditionValidationRule2)
         '
         'layoutControlGroup1
         '
@@ -96,7 +96,7 @@ Partial Public Class FrmAddDestination
         '
         'LayoutControlItem1
         '
-        Me.LayoutControlItem1.Control = Me.txtCode
+        Me.LayoutControlItem1.Control = Me.TxtCode
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
         Me.LayoutControlItem1.Size = New System.Drawing.Size(293, 24)
@@ -105,45 +105,45 @@ Partial Public Class FrmAddDestination
         '
         'LayoutControlItem2
         '
-        Me.LayoutControlItem2.Control = Me.txtDestination
+        Me.LayoutControlItem2.Control = Me.TxtDestination
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
         Me.LayoutControlItem2.Size = New System.Drawing.Size(293, 55)
         Me.LayoutControlItem2.Text = "Destination:"
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(58, 13)
         '
-        'windowsUIButtonPanelMain
+        'WindowsUIButtonPanelMain
         '
-        Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.FontSizeDelta = -1
-        Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.Options.UseBackColor = True
-        Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.Options.UseFont = True
-        Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.Options.UseForeColor = True
-        Me.windowsUIButtonPanelMain.AppearanceButton.Normal.FontSizeDelta = -1
-        Me.windowsUIButtonPanelMain.AppearanceButton.Normal.Options.UseFont = True
-        Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.BackColor = System.Drawing.Color.FromArgb(CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer))
-        Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.FontSizeDelta = -1
-        Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.ForeColor = System.Drawing.Color.FromArgb(CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer))
-        Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseBackColor = True
-        Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = True
-        Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = True
-        Me.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Hovered.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Hovered.FontSizeDelta = -1
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Hovered.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Hovered.Options.UseBackColor = True
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Hovered.Options.UseFont = True
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Hovered.Options.UseForeColor = True
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Normal.FontSizeDelta = -1
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Normal.Options.UseFont = True
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Pressed.BackColor = System.Drawing.Color.FromArgb(CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Pressed.FontSizeDelta = -1
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Pressed.ForeColor = System.Drawing.Color.FromArgb(CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseBackColor = True
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = True
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = True
+        Me.WindowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
         WindowsUIButtonImageOptions1.ImageUri.Uri = "Save;Size32x32;GrayScaled"
         WindowsUIButtonImageOptions2.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
-        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Cancel", True, WindowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False)})
-        Me.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.windowsUIButtonPanelMain.EnableImageTransparency = True
-        Me.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
-        Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(0, 129)
-        Me.windowsUIButtonPanelMain.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.windowsUIButtonPanelMain.MaximumSize = New System.Drawing.Size(0, 60)
-        Me.windowsUIButtonPanelMain.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain"
-        Me.windowsUIButtonPanelMain.Size = New System.Drawing.Size(313, 60)
-        Me.windowsUIButtonPanelMain.TabIndex = 3
-        Me.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain"
-        Me.windowsUIButtonPanelMain.UseButtonBackgroundImages = False
+        Me.WindowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Cancel", True, WindowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False)})
+        Me.WindowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.WindowsUIButtonPanelMain.EnableImageTransparency = True
+        Me.WindowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
+        Me.WindowsUIButtonPanelMain.Location = New System.Drawing.Point(0, 129)
+        Me.WindowsUIButtonPanelMain.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.WindowsUIButtonPanelMain.MaximumSize = New System.Drawing.Size(0, 60)
+        Me.WindowsUIButtonPanelMain.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.WindowsUIButtonPanelMain.Name = "WindowsUIButtonPanelMain"
+        Me.WindowsUIButtonPanelMain.Size = New System.Drawing.Size(313, 60)
+        Me.WindowsUIButtonPanelMain.TabIndex = 3
+        Me.WindowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain"
+        Me.WindowsUIButtonPanelMain.UseButtonBackgroundImages = False
         '
         'labelControl
         '
@@ -173,7 +173,7 @@ Partial Public Class FrmAddDestination
         Me.ClientSize = New System.Drawing.Size(313, 189)
         Me.Controls.Add(Me.dataLayoutControl1)
         Me.Controls.Add(Me.labelControl)
-        Me.Controls.Add(Me.windowsUIButtonPanelMain)
+        Me.Controls.Add(Me.WindowsUIButtonPanelMain)
         Me.IconOptions.Icon = CType(resources.GetObject("frmAddDestination.IconOptions.Icon"), System.Drawing.Icon)
         Me.IconOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.profitability_logo
         Me.IconOptions.ShowIcon = False
@@ -183,8 +183,8 @@ Partial Public Class FrmAddDestination
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.dataLayoutControl1.ResumeLayout(False)
-        CType(Me.txtCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtDestination.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtDestination.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -197,10 +197,10 @@ Partial Public Class FrmAddDestination
 
     Private WithEvents dataLayoutControl1 As DevExpress.XtraDataLayout.DataLayoutControl
     Private WithEvents layoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
-    Private WithEvents windowsUIButtonPanelMain As DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel
+    Private WithEvents WindowsUIButtonPanelMain As DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel
     Private WithEvents labelControl As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents txtCode As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtDestination As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtCode As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtDestination As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents DxValidationProvider1 As DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider

@@ -32,22 +32,22 @@ Partial Public Class FrmAddCurrency
         Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Me.dataLayoutControl1 = New DevExpress.XtraDataLayout.DataLayoutControl()
-        Me.txtCurrency = New DevExpress.XtraEditors.TextEdit()
-        Me.txtRate = New DevExpress.XtraEditors.TextEdit()
-        Me.deEffectiveDate = New DevExpress.XtraEditors.DateEdit()
+        Me.TxtCurrency = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtRate = New DevExpress.XtraEditors.TextEdit()
+        Me.DeEffectiveDate = New DevExpress.XtraEditors.DateEdit()
         Me.layoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.windowsUIButtonPanelMain = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
+        Me.WindowsUIButtonPanelMain = New DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.DxValidationProvider1 = New DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(Me.components)
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dataLayoutControl1.SuspendLayout()
-        CType(Me.txtCurrency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtRate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.deEffectiveDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.deEffectiveDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtCurrency.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtRate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DeEffectiveDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DeEffectiveDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,9 +58,9 @@ Partial Public Class FrmAddCurrency
         'dataLayoutControl1
         '
         Me.dataLayoutControl1.AllowCustomization = False
-        Me.dataLayoutControl1.Controls.Add(Me.txtCurrency)
-        Me.dataLayoutControl1.Controls.Add(Me.txtRate)
-        Me.dataLayoutControl1.Controls.Add(Me.deEffectiveDate)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtCurrency)
+        Me.dataLayoutControl1.Controls.Add(Me.TxtRate)
+        Me.dataLayoutControl1.Controls.Add(Me.DeEffectiveDate)
         Me.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataLayoutControl1.Location = New System.Drawing.Point(0, 30)
         Me.dataLayoutControl1.Name = "dataLayoutControl1"
@@ -68,45 +68,45 @@ Partial Public Class FrmAddCurrency
         Me.dataLayoutControl1.Size = New System.Drawing.Size(314, 110)
         Me.dataLayoutControl1.TabIndex = 0
         '
-        'txtCurrency
+        'TxtCurrency
         '
-        Me.txtCurrency.Location = New System.Drawing.Point(88, 12)
-        Me.txtCurrency.Name = "txtCurrency"
-        Me.txtCurrency.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCurrency.Properties.MaxLength = 3
-        Me.txtCurrency.Size = New System.Drawing.Size(214, 20)
-        Me.txtCurrency.StyleController = Me.dataLayoutControl1
-        Me.txtCurrency.TabIndex = 5
+        Me.TxtCurrency.Location = New System.Drawing.Point(88, 12)
+        Me.TxtCurrency.Name = "TxtCurrency"
+        Me.TxtCurrency.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtCurrency.Properties.MaxLength = 3
+        Me.TxtCurrency.Size = New System.Drawing.Size(214, 20)
+        Me.TxtCurrency.StyleController = Me.dataLayoutControl1
+        Me.TxtCurrency.TabIndex = 5
         ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
         ConditionValidationRule1.ErrorText = "This value is not valid"
-        Me.DxValidationProvider1.SetValidationRule(Me.txtCurrency, ConditionValidationRule1)
+        Me.DxValidationProvider1.SetValidationRule(Me.TxtCurrency, ConditionValidationRule1)
         '
-        'txtRate
+        'TxtRate
         '
-        Me.txtRate.Location = New System.Drawing.Point(88, 36)
-        Me.txtRate.Name = "txtRate"
-        Me.txtRate.Properties.Mask.EditMask = "-?\d+(\R.\d{0,4})?"
-        Me.txtRate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
-        Me.txtRate.Size = New System.Drawing.Size(214, 20)
-        Me.txtRate.StyleController = Me.dataLayoutControl1
-        Me.txtRate.TabIndex = 6
+        Me.TxtRate.Location = New System.Drawing.Point(88, 36)
+        Me.TxtRate.Name = "TxtRate"
+        Me.TxtRate.Properties.Mask.EditMask = "-?\d+(\R.\d{0,4})?"
+        Me.TxtRate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
+        Me.TxtRate.Size = New System.Drawing.Size(214, 20)
+        Me.TxtRate.StyleController = Me.dataLayoutControl1
+        Me.TxtRate.TabIndex = 6
         ConditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
         ConditionValidationRule2.ErrorText = "This value is not valid"
-        Me.DxValidationProvider1.SetValidationRule(Me.txtRate, ConditionValidationRule2)
+        Me.DxValidationProvider1.SetValidationRule(Me.TxtRate, ConditionValidationRule2)
         '
-        'deEffectiveDate
+        'DeEffectiveDate
         '
-        Me.deEffectiveDate.EditValue = Nothing
-        Me.deEffectiveDate.Location = New System.Drawing.Point(88, 60)
-        Me.deEffectiveDate.Name = "deEffectiveDate"
-        Me.deEffectiveDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.deEffectiveDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.deEffectiveDate.Size = New System.Drawing.Size(214, 20)
-        Me.deEffectiveDate.StyleController = Me.dataLayoutControl1
-        Me.deEffectiveDate.TabIndex = 7
+        Me.DeEffectiveDate.EditValue = Nothing
+        Me.DeEffectiveDate.Location = New System.Drawing.Point(88, 60)
+        Me.DeEffectiveDate.Name = "DeEffectiveDate"
+        Me.DeEffectiveDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DeEffectiveDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DeEffectiveDate.Size = New System.Drawing.Size(214, 20)
+        Me.DeEffectiveDate.StyleController = Me.dataLayoutControl1
+        Me.DeEffectiveDate.TabIndex = 7
         ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
         ConditionValidationRule3.ErrorText = "This value is not valid"
-        Me.DxValidationProvider1.SetValidationRule(Me.deEffectiveDate, ConditionValidationRule3)
+        Me.DxValidationProvider1.SetValidationRule(Me.DeEffectiveDate, ConditionValidationRule3)
         '
         'layoutControlGroup1
         '
@@ -119,7 +119,7 @@ Partial Public Class FrmAddCurrency
         '
         'LayoutControlItem2
         '
-        Me.LayoutControlItem2.Control = Me.txtCurrency
+        Me.LayoutControlItem2.Control = Me.TxtCurrency
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
         Me.LayoutControlItem2.Size = New System.Drawing.Size(294, 24)
@@ -128,7 +128,7 @@ Partial Public Class FrmAddCurrency
         '
         'LayoutControlItem3
         '
-        Me.LayoutControlItem3.Control = Me.txtRate
+        Me.LayoutControlItem3.Control = Me.TxtRate
         Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
         Me.LayoutControlItem3.Size = New System.Drawing.Size(294, 24)
@@ -137,45 +137,45 @@ Partial Public Class FrmAddCurrency
         '
         'LayoutControlItem4
         '
-        Me.LayoutControlItem4.Control = Me.deEffectiveDate
+        Me.LayoutControlItem4.Control = Me.DeEffectiveDate
         Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
         Me.LayoutControlItem4.Size = New System.Drawing.Size(294, 42)
         Me.LayoutControlItem4.Text = "Effective Date:"
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(73, 13)
         '
-        'windowsUIButtonPanelMain
+        'WindowsUIButtonPanelMain
         '
-        Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.FontSizeDelta = -1
-        Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.Options.UseBackColor = True
-        Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.Options.UseFont = True
-        Me.windowsUIButtonPanelMain.AppearanceButton.Hovered.Options.UseForeColor = True
-        Me.windowsUIButtonPanelMain.AppearanceButton.Normal.FontSizeDelta = -1
-        Me.windowsUIButtonPanelMain.AppearanceButton.Normal.Options.UseFont = True
-        Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.BackColor = System.Drawing.Color.FromArgb(CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer))
-        Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.FontSizeDelta = -1
-        Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.ForeColor = System.Drawing.Color.FromArgb(CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer))
-        Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseBackColor = True
-        Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = True
-        Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = True
-        Me.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Hovered.BackColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Hovered.FontSizeDelta = -1
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Hovered.ForeColor = System.Drawing.Color.FromArgb(CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer), CType(CType(130, Byte), Integer))
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Hovered.Options.UseBackColor = True
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Hovered.Options.UseFont = True
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Hovered.Options.UseForeColor = True
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Normal.FontSizeDelta = -1
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Normal.Options.UseFont = True
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Pressed.BackColor = System.Drawing.Color.FromArgb(CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Pressed.FontSizeDelta = -1
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Pressed.ForeColor = System.Drawing.Color.FromArgb(CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer), CType(CType(159, Byte), Integer))
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseBackColor = True
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = True
+        Me.WindowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = True
+        Me.WindowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
         WindowsUIButtonImageOptions1.ImageUri.Uri = "Save;Size32x32;GrayScaled"
         WindowsUIButtonImageOptions2.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
-        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Cancel", True, WindowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False)})
-        Me.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.windowsUIButtonPanelMain.EnableImageTransparency = True
-        Me.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
-        Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(0, 140)
-        Me.windowsUIButtonPanelMain.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.windowsUIButtonPanelMain.MaximumSize = New System.Drawing.Size(0, 60)
-        Me.windowsUIButtonPanelMain.MinimumSize = New System.Drawing.Size(60, 60)
-        Me.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain"
-        Me.windowsUIButtonPanelMain.Size = New System.Drawing.Size(314, 60)
-        Me.windowsUIButtonPanelMain.TabIndex = 3
-        Me.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain"
-        Me.windowsUIButtonPanelMain.UseButtonBackgroundImages = False
+        Me.WindowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Cancel", True, WindowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False)})
+        Me.WindowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.WindowsUIButtonPanelMain.EnableImageTransparency = True
+        Me.WindowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
+        Me.WindowsUIButtonPanelMain.Location = New System.Drawing.Point(0, 140)
+        Me.WindowsUIButtonPanelMain.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.WindowsUIButtonPanelMain.MaximumSize = New System.Drawing.Size(0, 60)
+        Me.WindowsUIButtonPanelMain.MinimumSize = New System.Drawing.Size(60, 60)
+        Me.WindowsUIButtonPanelMain.Name = "WindowsUIButtonPanelMain"
+        Me.WindowsUIButtonPanelMain.Size = New System.Drawing.Size(314, 60)
+        Me.WindowsUIButtonPanelMain.TabIndex = 3
+        Me.WindowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain"
+        Me.WindowsUIButtonPanelMain.UseButtonBackgroundImages = False
         '
         'labelControl
         '
@@ -205,7 +205,7 @@ Partial Public Class FrmAddCurrency
         Me.ClientSize = New System.Drawing.Size(314, 200)
         Me.Controls.Add(Me.dataLayoutControl1)
         Me.Controls.Add(Me.labelControl)
-        Me.Controls.Add(Me.windowsUIButtonPanelMain)
+        Me.Controls.Add(Me.WindowsUIButtonPanelMain)
         Me.IconOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.profitability_logo
         Me.IconOptions.ShowIcon = False
         Me.KeyPreview = True
@@ -214,10 +214,10 @@ Partial Public Class FrmAddCurrency
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.dataLayoutControl1.ResumeLayout(False)
-        CType(Me.txtCurrency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtRate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.deEffectiveDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.deEffectiveDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtCurrency.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtRate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DeEffectiveDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DeEffectiveDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -231,13 +231,13 @@ Partial Public Class FrmAddCurrency
 
     Private WithEvents dataLayoutControl1 As DevExpress.XtraDataLayout.DataLayoutControl
     Private WithEvents layoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
-    Private WithEvents windowsUIButtonPanelMain As DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel
+    Private WithEvents WindowsUIButtonPanelMain As DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel
     Private WithEvents labelControl As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents txtCurrency As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtCurrency As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LayoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents DxValidationProvider1 As DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider
-    Friend WithEvents txtRate As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents deEffectiveDate As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents TxtRate As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents DeEffectiveDate As DevExpress.XtraEditors.DateEdit
     Friend WithEvents LayoutControlItem3 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LayoutControlItem4 As DevExpress.XtraLayout.LayoutControlItem
 End Class

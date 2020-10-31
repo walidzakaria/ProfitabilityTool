@@ -32,48 +32,48 @@ Partial Public Class FrmEdit
         If GV.CurrentUser.Authority <> "DMC" And GV.CurrentUser.Authority <> "RS" Then
             dt.Rows.Add({"FIXED T/O", "FIXED T/O"})
         End If
-        luStatus.Properties.DataSource = Nothing
-        luStatus.Properties.DataSource = dt
-        luStatus.Properties.ValueMember = "ID"
-        luStatus.Properties.DisplayMember = "Status"
+        LuStatus.Properties.DataSource = Nothing
+        LuStatus.Properties.DataSource = dt
+        LuStatus.Properties.ValueMember = "ID"
+        LuStatus.Properties.DisplayMember = "Status"
 
     End Sub
 
     Private Sub UpdateBooking()
 
         With currentBooking
-            .HotelCode = CStr(txtHotelCode.EditValue)
-            .HotelName = CStr(txtHotelName.EditValue)
-            .CountryCode = CStr(txtCountry.EditValue)
-            .GwgStatus = cbGWGStatus.Properties.GetDisplayText(cbGWGStatus.SelectedIndex)
-            .BookingStatus = cbBookingStatus.Properties.GetDisplayText(cbBookingStatus.SelectedIndex)
-            .PurchaseCurrency = CStr(txtPurchaseCurrency.EditValue)
-            .PurchasePrice = CDbl(txtPurchasePrice.EditValue)
-            .SalesCurrency = CStr(txtSalesCurrency.EditValue)
-            .SalesPrice = CDbl(txtSalesPrice.EditValue)
-            .GwgHandlingFee = CDbl(txtHandlingFee.EditValue)
-            .Margin = CDbl(txtMargin.EditValue)
-            .Difference = CDbl(txtDifference.EditValue)
-            .CurrencyHotelTC = CStr(txtCurrencyHotelTc.EditValue)
-            .NetRateHotelTC = CDbl(txtNetRateHotelTc.EditValue)
-            .NetRateHandlingTC = CDbl(txtNetRateHandlingTc.EditValue)
+            .HotelCode = CStr(TxtHotelCode.EditValue)
+            .HotelName = CStr(TxtHotelName.EditValue)
+            .CountryCode = CStr(TxtCountry.EditValue)
+            .GwgStatus = CbGWGStatus.Properties.GetDisplayText(CbGWGStatus.SelectedIndex)
+            .BookingStatus = CbBookingStatus.Properties.GetDisplayText(CbBookingStatus.SelectedIndex)
+            .PurchaseCurrency = CStr(TxtPurchaseCurrency.EditValue)
+            .PurchasePrice = CDbl(TxtPurchasePrice.EditValue)
+            .SalesCurrency = CStr(TxtSalesCurrency.EditValue)
+            .SalesPrice = CDbl(TxtSalesPrice.EditValue)
+            .GwgHandlingFee = CDbl(TxtHandlingFee.EditValue)
+            .Margin = CDbl(TxtMargin.EditValue)
+            .Difference = CDbl(TxtDifference.EditValue)
+            .CurrencyHotelTC = CStr(TxtCurrencyHotelTc.EditValue)
+            .NetRateHotelTC = CDbl(TxtNetRateHotelTc.EditValue)
+            .NetRateHandlingTC = CDbl(TxtNetRateHandlingTc.EditValue)
             .CheckHotel = CStr(txtHotelCheck.EditValue)
-            .CompanyGroup = CStr(txtCompanyGroup.EditValue)
-            .BookingDate = CDate(deBookingDate.EditValue)
-            .TravelDate = CDate(deTravelDate.EditValue)
-            .RoomType = CStr(txtRoomType.EditValue)
-            .Board = CStr(txtBaord.EditValue)
-            .Duration = CInt(txtDuration.EditValue)
-            .TransferTo = CStr(txtTransferTo.EditValue)
-            .TransferFrom = CStr(txtTransferFrom.EditValue)
-            .Pax = CShort(txtPax.EditValue)
-            .Adult = CShort(txtAdult.EditValue)
-            .Child = CShort(txtChild.EditValue)
-            .ImportDate = CDate(deImportDate.EditValue)
-            .MPImportDate = CDate(deMPImportDate.EditValue)
-            .IncomingAgency = CStr(txtIncomingAgency.EditValue)
-            .BookingStateDesc = CStr(txtBookingStateDesc.EditValue)
-            .PriceBreakdown = CStr(txtPriceBreakdown.EditValue)
+            .CompanyGroup = CStr(TxtCompanyGroup.EditValue)
+            .BookingDate = CDate(DeBookingDate.EditValue)
+            .TravelDate = CDate(DeTravelDate.EditValue)
+            .RoomType = CStr(TxtRoomType.EditValue)
+            .Board = CStr(TxtBaord.EditValue)
+            .Duration = CInt(TxtDuration.EditValue)
+            .TransferTo = CStr(TxtTransferTo.EditValue)
+            .TransferFrom = CStr(TxtTransferFrom.EditValue)
+            .Pax = CShort(TxtPax.EditValue)
+            .Adult = CShort(TxtAdult.EditValue)
+            .Child = CShort(TxtChild.EditValue)
+            .ImportDate = CDate(DeImportDate.EditValue)
+            .MPImportDate = CDate(DeMPImportDate.EditValue)
+            .IncomingAgency = CStr(TxtIncomingAgency.EditValue)
+            .BookingStateDesc = CStr(TxtBookingStateDesc.EditValue)
+            .PriceBreakdown = CStr(TxtPriceBreakdown.EditValue)
         End With
 
     End Sub
@@ -89,52 +89,52 @@ Partial Public Class FrmEdit
 
         With currentBooking
             labelControl.Text = String.Format("Booking# <b><color=0, 0, 255>{0}</color></b>", .Reference)
-            txtHotelCode.EditValue = .HotelCode
-            txtHotelName.EditValue = .HotelName
-            txtCountry.EditValue = .CountryCode
-            cbGWGStatus.SelectedIndex = .GwgStatusNumber()
-            cbBookingStatus.SelectedIndex = .BookingStatusNumber()
-            txtPurchaseCurrency.EditValue = .PurchaseCurrency
-            txtPurchasePrice.EditValue = .PurchasePrice
-            txtSalesCurrency.EditValue = .SalesCurrency
-            txtSalesPrice.EditValue = .SalesPrice
-            txtHandlingFee.EditValue = .GwgHandlingFee
-            txtMargin.EditValue = .Margin
-            txtDifference.EditValue = .Difference
-            txtCurrencyHotelTc.EditValue = .CurrencyHotelTC
-            txtNetRateHotelTc.EditValue = .NetRateHotelTC
-            txtNetRateHandlingTc.EditValue = .NetRateHandlingTC
+            TxtHotelCode.EditValue = .HotelCode
+            TxtHotelName.EditValue = .HotelName
+            TxtCountry.EditValue = .CountryCode
+            CbGWGStatus.SelectedIndex = .GwgStatusNumber()
+            CbBookingStatus.SelectedIndex = .BookingStatusNumber()
+            TxtPurchaseCurrency.EditValue = .PurchaseCurrency
+            TxtPurchasePrice.EditValue = .PurchasePrice
+            TxtSalesCurrency.EditValue = .SalesCurrency
+            TxtSalesPrice.EditValue = .SalesPrice
+            TxtHandlingFee.EditValue = .GwgHandlingFee
+            TxtMargin.EditValue = .Margin
+            TxtDifference.EditValue = .Difference
+            TxtCurrencyHotelTc.EditValue = .CurrencyHotelTC
+            TxtNetRateHotelTc.EditValue = .NetRateHotelTC
+            TxtNetRateHandlingTc.EditValue = .NetRateHandlingTC
             txtHotelCheck.EditValue = .CheckHotel
-            txtCompanyGroup.EditValue = .CompanyGroup
-            deBookingDate.EditValue = .BookingDate
-            deTravelDate.EditValue = .TravelDate
-            txtRoomType.EditValue = .RoomType
-            txtBaord.EditValue = .Board
-            txtDuration.EditValue = .Duration
-            txtTransferTo.EditValue = .TransferTo
-            txtTransferFrom.EditValue = .TransferFrom
-            txtPax.EditValue = .Pax
-            txtAdult.EditValue = .Adult
-            txtChild.EditValue = .Child
-            deImportDate.EditValue = .ImportDate
-            txtIncomingAgency.EditValue = .IncomingAgency
-            txtBookingStateDesc.EditValue = .BookingStateDesc
-            txtUser.EditValue = .Username().Username
-            deMPImportDate.EditValue = .MPImportDate
-            txtPriceBreakdown.EditValue = .PriceBreakdown
-            txtActionBy.EditValue = .LastUser.Username
+            TxtCompanyGroup.EditValue = .CompanyGroup
+            DeBookingDate.EditValue = .BookingDate
+            DeTravelDate.EditValue = .TravelDate
+            TxtRoomType.EditValue = .RoomType
+            TxtBaord.EditValue = .Board
+            TxtDuration.EditValue = .Duration
+            TxtTransferTo.EditValue = .TransferTo
+            TxtTransferFrom.EditValue = .TransferFrom
+            TxtPax.EditValue = .Pax
+            TxtAdult.EditValue = .Adult
+            TxtChild.EditValue = .Child
+            DeImportDate.EditValue = .ImportDate
+            TxtIncomingAgency.EditValue = .IncomingAgency
+            TxtBookingStateDesc.EditValue = .BookingStateDesc
+            TxtUser.EditValue = .Username().Username
+            DeMPImportDate.EditValue = .MPImportDate
+            TxtPriceBreakdown.EditValue = .PriceBreakdown
+            TxtActionBy.EditValue = .LastUser.Username
             'show log data
-            txtPurchaseEUR.EditValue = .PurchaseEUR
-            txtSalesEUR.EditValue = .SalesEUR
-            txtMarginEUR.EditValue = .MarginEUR
-            txtNetRateEUR.EditValue = .NetRateEUR
-            txtDifferenceEUR.EditValue = .DifferenceEUR
-            If .Junk Then txtJunk.EditValue = "YES" Else txtJunk.EditValue = "NO"
-            If .Cancelled Then txtCancelled.EditValue = "YES" Else txtCancelled.EditValue = "NO"
-            If .Excessive Then txtExcessive.EditValue = "YES" Else txtExcessive.EditValue = "NO"
-            If .Mismatch Then txtMismatching.EditValue = "YES" Else txtMismatching.EditValue = "NO"
-            txtError.EditValue = .ErrorLog
-            If .Negative Then txtNegative.EditValue = "YES" Else txtNegative.EditValue = "NO"
+            TxtPurchaseEUR.EditValue = .PurchaseEUR
+            TxtSalesEUR.EditValue = .SalesEUR
+            TxtMarginEUR.EditValue = .MarginEUR
+            TxtNetRateEUR.EditValue = .NetRateEUR
+            TxtDifferenceEUR.EditValue = .DifferenceEUR
+            If .Junk Then TxtJunk.EditValue = "YES" Else TxtJunk.EditValue = "NO"
+            If .Cancelled Then TxtCancelled.EditValue = "YES" Else TxtCancelled.EditValue = "NO"
+            If .Excessive Then TxtExcessive.EditValue = "YES" Else TxtExcessive.EditValue = "NO"
+            If .Mismatch Then TxtMismatching.EditValue = "YES" Else TxtMismatching.EditValue = "NO"
+            TxtError.EditValue = .ErrorLog
+            If .Negative Then TxtNegative.EditValue = "YES" Else TxtNegative.EditValue = "NO"
 
         End With
 
@@ -187,7 +187,7 @@ Partial Public Class FrmEdit
             SaveCurrent()
         ElseIf e.Control And e.KeyCode = Keys.S And TabbedControlGroup2.SelectedTabPageIndex = 2 _
             And grpAddNewComment.Visibility = Utils.LayoutVisibility.Always Then
-            btnSaveComment.PerformClick()
+            BtnSaveComment.PerformClick()
         ElseIf e.KeyCode = Keys.Escape Then
             Me.Close()
         End If
@@ -212,7 +212,7 @@ Partial Public Class FrmEdit
                         Exit For
                     End If
                 Next
-                btnSaveComment.Enabled = False
+                BtnSaveComment.Enabled = False
             Else
                 Me.Text = BookingId.ToString
                 For Each i As WindowsUIButton In windowsUIButtonPanelMain.Buttons
@@ -221,7 +221,7 @@ Partial Public Class FrmEdit
                         Exit For
                     End If
                 Next
-                btnSaveComment.Enabled = True
+                BtnSaveComment.Enabled = True
             End If
         Else
             LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Never
@@ -239,7 +239,7 @@ Partial Public Class FrmEdit
                     Exit For
                 End If
             Next
-            btnSaveComment.Enabled = True
+            BtnSaveComment.Enabled = True
         End If
 
         FrmMain.Wait(False)
@@ -302,44 +302,44 @@ Partial Public Class FrmEdit
 
     End Sub
 
-    Private Sub BtnToggleComment_Click(sender As Object, e As EventArgs) Handles btnToggleComment.Click
+    Private Sub BtnToggleComment_Click(sender As Object, e As EventArgs) Handles BtnToggleComment.Click
         If grpAddNewComment.Visibility = Utils.LayoutVisibility.Never Then
             grpAddNewComment.Visibility = Utils.LayoutVisibility.Always
-            luStatus.Focus()
+            LuStatus.Focus()
         Else
             grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
         End If
     End Sub
 
-    Private Sub BtnCancelComment_Click(sender As Object, e As EventArgs) Handles btnCancelComment.Click
+    Private Sub BtnCancelComment_Click(sender As Object, e As EventArgs) Handles BtnCancelComment.Click
         grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
         ClearComment()
     End Sub
 
     Private Sub ClearComment()
-        luStatus.EditValue = Nothing
-        txtComment.EditValue = ""
-        txtCalculation.EditValue = ""
+        LuStatus.EditValue = Nothing
+        TxtComment.EditValue = ""
+        TxtCalculation.EditValue = ""
     End Sub
 
-    Private Sub BtnSaveComment_Click(sender As Object, e As EventArgs) Handles btnSaveComment.Click
-        If luStatus.EditValue Is Nothing Then
+    Private Sub BtnSaveComment_Click(sender As Object, e As EventArgs) Handles BtnSaveComment.Click
+        If LuStatus.EditValue Is Nothing Then
             MsgBox("Please enter status!")
-            luStatus.Focus()
-        ElseIf CStr(txtComment.EditValue) = "" Then
+            LuStatus.Focus()
+        ElseIf CStr(TxtComment.EditValue) = "" Then
             MsgBox("please enter comment!")
-            txtComment.Focus()
+            TxtComment.Focus()
         Else
             FrmMain.Wait(True)
             Dim comment = New Comment With {
-                .Status = CStr(luStatus.EditValue),
-                .Comment = CStr(txtComment.EditValue),
+                .Status = CStr(LuStatus.EditValue),
+                .Comment = CStr(TxtComment.EditValue),
                 .BookingID = currentBooking.BookingID
             }
-            If CStr(txtCalculation.EditValue) = "" Then
+            If CStr(TxtCalculation.EditValue) = "" Then
                 comment.Calculation = Nothing
             Else
-                comment.Calculation = CSng(txtCalculation.EditValue)
+                comment.Calculation = CSng(TxtCalculation.EditValue)
             End If
 
             If BookingsList.Count = 0 Then
@@ -386,10 +386,10 @@ Partial Public Class FrmEdit
 
         End If
     End Sub
-    Private Sub TxtComment_EditValueChanged(sender As Object, e As EventArgs) Handles txtComment.EditValueChanged
-        Dim textCalc As Single = ExClass.CalculateText(CStr(txtComment.EditValue))
+    Private Sub TxtComment_EditValueChanged(sender As Object, e As EventArgs) Handles TxtComment.EditValueChanged
+        Dim textCalc As Single = ExClass.CalculateText(CStr(TxtComment.EditValue))
         If textCalc <> 0 Then
-            txtCalculation.Text = textCalc.ToString
+            TxtCalculation.Text = textCalc.ToString
         End If
     End Sub
 
@@ -406,4 +406,5 @@ Partial Public Class FrmEdit
             BookingsList.Add(CInt(r(0)))
         Next
     End Sub
+
 End Class

@@ -24,7 +24,7 @@ Partial Class FrmAbout
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAbout))
         Me.frmAboutLayoutControl1ConvertedLayout = New DevExpress.XtraLayout.LayoutControl()
-        Me.btnOK = New DevExpress.XtraEditors.SimpleButton()
+        Me.BtnOK = New DevExpress.XtraEditors.SimpleButton()
         Me.TextEdit1 = New DevExpress.XtraEditors.TextEdit()
         Me.TextEdit2 = New DevExpress.XtraEditors.TextEdit()
         Me.TextEdit3 = New DevExpress.XtraEditors.TextEdit()
@@ -57,7 +57,7 @@ Partial Class FrmAbout
         '
         'frmAboutLayoutControl1ConvertedLayout
         '
-        Me.frmAboutLayoutControl1ConvertedLayout.Controls.Add(Me.btnOK)
+        Me.frmAboutLayoutControl1ConvertedLayout.Controls.Add(Me.BtnOK)
         Me.frmAboutLayoutControl1ConvertedLayout.Controls.Add(Me.TextEdit1)
         Me.frmAboutLayoutControl1ConvertedLayout.Controls.Add(Me.TextEdit2)
         Me.frmAboutLayoutControl1ConvertedLayout.Controls.Add(Me.TextEdit3)
@@ -70,14 +70,14 @@ Partial Class FrmAbout
         Me.frmAboutLayoutControl1ConvertedLayout.Size = New System.Drawing.Size(450, 186)
         Me.frmAboutLayoutControl1ConvertedLayout.TabIndex = 14
         '
-        'btnOK
+        'BtnOK
         '
-        Me.btnOK.Location = New System.Drawing.Point(12, 152)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(426, 22)
-        Me.btnOK.StyleController = Me.frmAboutLayoutControl1ConvertedLayout
-        Me.btnOK.TabIndex = 18
-        Me.btnOK.Text = "OK"
+        Me.BtnOK.Location = New System.Drawing.Point(12, 152)
+        Me.BtnOK.Name = "BtnOK"
+        Me.BtnOK.Size = New System.Drawing.Size(426, 22)
+        Me.BtnOK.StyleController = Me.frmAboutLayoutControl1ConvertedLayout
+        Me.BtnOK.TabIndex = 18
+        Me.BtnOK.Text = "OK"
         '
         'TextEdit1
         '
@@ -166,7 +166,7 @@ Partial Class FrmAbout
         '
         'LayoutControlItem1
         '
-        Me.LayoutControlItem1.Control = Me.btnOK
+        Me.LayoutControlItem1.Control = Me.BtnOK
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 140)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
         Me.LayoutControlItem1.Size = New System.Drawing.Size(430, 26)
@@ -227,7 +227,7 @@ Partial Class FrmAbout
 
     End Sub
     Friend WithEvents frmAboutLayoutControl1ConvertedLayout As DevExpress.XtraLayout.LayoutControl
-    Friend WithEvents btnOK As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BtnOK As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents TextEdit1 As DevExpress.XtraEditors.TextEdit
     Friend WithEvents TextEdit2 As DevExpress.XtraEditors.TextEdit
     Friend WithEvents TextEdit3 As DevExpress.XtraEditors.TextEdit

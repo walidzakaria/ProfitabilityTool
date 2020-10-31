@@ -23,43 +23,43 @@ Partial Class FrmLogin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLogin))
-        Me.btnCancel = New DevExpress.XtraEditors.SimpleButton()
-        Me.btnOK = New DevExpress.XtraEditors.SimpleButton()
+        Me.BtnCancel = New DevExpress.XtraEditors.SimpleButton()
+        Me.BtnOK = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
-        Me.lblLoading = New DevExpress.XtraEditors.LabelControl()
-        Me.txtUserName = New DevExpress.XtraEditors.TextEdit()
-        Me.txtPassword = New DevExpress.XtraEditors.TextEdit()
-        CType(Me.txtUserName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LblLoading = New DevExpress.XtraEditors.LabelControl()
+        Me.TxtUserName = New DevExpress.XtraEditors.TextEdit()
+        Me.TxtPassword = New DevExpress.XtraEditors.TextEdit()
+        CType(Me.TxtUserName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btnCancel
+        'BtnCancel
         '
-        Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCancel.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Appearance.ForeColor = System.Drawing.Color.Red
-        Me.btnCancel.Appearance.Options.UseFont = True
-        Me.btnCancel.Appearance.Options.UseForeColor = True
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(412, 170)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(106, 32)
-        Me.btnCancel.TabIndex = 3
-        Me.btnCancel.Text = "Cancel"
+        Me.BtnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnCancel.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancel.Appearance.ForeColor = System.Drawing.Color.Red
+        Me.BtnCancel.Appearance.Options.UseFont = True
+        Me.BtnCancel.Appearance.Options.UseForeColor = True
+        Me.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.BtnCancel.Location = New System.Drawing.Point(412, 170)
+        Me.BtnCancel.Name = "BtnCancel"
+        Me.BtnCancel.Size = New System.Drawing.Size(106, 32)
+        Me.BtnCancel.TabIndex = 3
+        Me.BtnCancel.Text = "Cancel"
         '
-        'btnOK
+        'BtnOK
         '
-        Me.btnOK.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnOK.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOK.Appearance.ForeColor = System.Drawing.Color.Green
-        Me.btnOK.Appearance.Options.UseFont = True
-        Me.btnOK.Appearance.Options.UseForeColor = True
-        Me.btnOK.Location = New System.Drawing.Point(300, 170)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(106, 32)
-        Me.btnOK.TabIndex = 2
-        Me.btnOK.Text = "OK"
+        Me.BtnOK.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnOK.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnOK.Appearance.ForeColor = System.Drawing.Color.Green
+        Me.BtnOK.Appearance.Options.UseFont = True
+        Me.BtnOK.Appearance.Options.UseForeColor = True
+        Me.BtnOK.Location = New System.Drawing.Point(300, 170)
+        Me.BtnOK.Name = "BtnOK"
+        Me.BtnOK.Size = New System.Drawing.Size(106, 32)
+        Me.BtnOK.TabIndex = 2
+        Me.BtnOK.Text = "OK"
         '
         'LabelControl1
         '
@@ -81,43 +81,43 @@ Partial Class FrmLogin
         Me.LabelControl2.TabIndex = 15
         Me.LabelControl2.Text = "Password:"
         '
-        'lblLoading
+        'LblLoading
         '
-        Me.lblLoading.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.lblLoading.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.lblLoading.Appearance.Options.UseFont = True
-        Me.lblLoading.Appearance.Options.UseForeColor = True
-        Me.lblLoading.Location = New System.Drawing.Point(45, 183)
-        Me.lblLoading.Name = "lblLoading"
-        Me.lblLoading.Size = New System.Drawing.Size(71, 19)
-        Me.lblLoading.TabIndex = 16
-        Me.lblLoading.Text = "Loading..."
-        Me.lblLoading.Visible = False
+        Me.LblLoading.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
+        Me.LblLoading.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.LblLoading.Appearance.Options.UseFont = True
+        Me.LblLoading.Appearance.Options.UseForeColor = True
+        Me.LblLoading.Location = New System.Drawing.Point(45, 183)
+        Me.LblLoading.Name = "LblLoading"
+        Me.LblLoading.Size = New System.Drawing.Size(71, 19)
+        Me.LblLoading.TabIndex = 16
+        Me.LblLoading.Text = "Loading..."
+        Me.LblLoading.Visible = False
         '
-        'txtUserName
+        'TxtUserName
         '
-        Me.txtUserName.EnterMoveNextControl = True
-        Me.txtUserName.Location = New System.Drawing.Point(170, 78)
-        Me.txtUserName.Name = "txtUserName"
-        Me.txtUserName.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.txtUserName.Properties.Appearance.Options.UseFont = True
-        Me.txtUserName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.txtUserName.Properties.Padding = New System.Windows.Forms.Padding(3, 0, 3, 0)
-        Me.txtUserName.Size = New System.Drawing.Size(323, 24)
-        Me.txtUserName.TabIndex = 0
+        Me.TxtUserName.EnterMoveNextControl = True
+        Me.TxtUserName.Location = New System.Drawing.Point(170, 78)
+        Me.TxtUserName.Name = "TxtUserName"
+        Me.TxtUserName.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
+        Me.TxtUserName.Properties.Appearance.Options.UseFont = True
+        Me.TxtUserName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.TxtUserName.Properties.Padding = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.TxtUserName.Size = New System.Drawing.Size(323, 24)
+        Me.TxtUserName.TabIndex = 0
         '
-        'txtPassword
+        'TxtPassword
         '
-        Me.txtPassword.EnterMoveNextControl = True
-        Me.txtPassword.Location = New System.Drawing.Point(170, 118)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.txtPassword.Properties.Appearance.Options.UseFont = True
-        Me.txtPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.txtPassword.Properties.Padding = New System.Windows.Forms.Padding(3, 0, 3, 0)
-        Me.txtPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(323, 24)
-        Me.txtPassword.TabIndex = 1
+        Me.TxtPassword.EnterMoveNextControl = True
+        Me.TxtPassword.Location = New System.Drawing.Point(170, 118)
+        Me.TxtPassword.Name = "TxtPassword"
+        Me.TxtPassword.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
+        Me.TxtPassword.Properties.Appearance.Options.UseFont = True
+        Me.TxtPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.TxtPassword.Properties.Padding = New System.Windows.Forms.Padding(3, 0, 3, 0)
+        Me.TxtPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TxtPassword.Size = New System.Drawing.Size(323, 24)
+        Me.TxtPassword.TabIndex = 1
         '
         'FrmLogin
         '
@@ -126,32 +126,32 @@ Partial Class FrmLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.CancelButton = Me.btnCancel
+        Me.CancelButton = Me.BtnCancel
         Me.ClientSize = New System.Drawing.Size(536, 217)
-        Me.Controls.Add(Me.txtPassword)
-        Me.Controls.Add(Me.txtUserName)
-        Me.Controls.Add(Me.lblLoading)
+        Me.Controls.Add(Me.TxtPassword)
+        Me.Controls.Add(Me.TxtUserName)
+        Me.Controls.Add(Me.LblLoading)
         Me.Controls.Add(Me.LabelControl2)
         Me.Controls.Add(Me.LabelControl1)
-        Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.btnOK)
+        Me.Controls.Add(Me.BtnCancel)
+        Me.Controls.Add(Me.BtnOK)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmLogin"
         Me.ShowInTaskbar = True
         Me.ShowMode = DevExpress.XtraSplashScreen.ShowMode.Image
         Me.SplashImageOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.Login
         Me.Text = "Login"
-        CType(Me.txtUserName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtUserName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnCancel As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents btnOK As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BtnCancel As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents BtnOK As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents LabelControl2 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents lblLoading As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents txtUserName As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtPassword As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LblLoading As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents TxtUserName As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents TxtPassword As DevExpress.XtraEditors.TextEdit
 End Class

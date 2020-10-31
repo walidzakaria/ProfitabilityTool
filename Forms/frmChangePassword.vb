@@ -17,49 +17,49 @@
 
     Private Sub FrmChangePassword_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Opacity = 100%
-        txtNewPassword.Text = ""
-        txtOldPassword.Text = ""
-        txtRetype.Text = ""
+        TxtNewPassword.Text = ""
+        TxtOldPassword.Text = ""
+        TxtRetype.Text = ""
 
-        txtOldPassword.Focus()
+        TxtOldPassword.Focus()
 
     End Sub
 
     Private Sub FrmChangePassword_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        txtOldPassword.Focus()
+        TxtOldPassword.Focus()
     End Sub
 
-    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Close()
     End Sub
 
-    Private Sub BtnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
-        If txtOldPassword.Text = "" Then
+    Private Sub BtnOK_Click(sender As Object, e As EventArgs) Handles BtnOK.Click
+        If TxtOldPassword.Text = "" Then
             MsgBox("Please enter your old password!")
-            txtOldPassword.Focus()
-        ElseIf txtNewPassword.Text = "" Then
+            TxtOldPassword.Focus()
+        ElseIf TxtNewPassword.Text = "" Then
             MsgBox("Please enter your new password!")
-            txtNewPassword.Focus()
-        ElseIf txtRetype.Text = "" Then
+            TxtNewPassword.Focus()
+        ElseIf TxtRetype.Text = "" Then
             MsgBox("Please retype your new password!")
-            txtRetype.Focus()
-        ElseIf txtNewPassword.Text <> txtRetype.Text Then
+            TxtRetype.Focus()
+        ElseIf TxtNewPassword.Text <> TxtRetype.Text Then
             MessageBox.Show("The entered passwords are different!", "Wrong Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            txtRetype.Text = ""
-            txtNewPassword.Focus()
-            txtNewPassword.SelectAll()
+            TxtRetype.Text = ""
+            TxtNewPassword.Focus()
+            TxtNewPassword.SelectAll()
         Else
             Dim user As New Login With {
                 .LoginId = GV.CurrentUser.LoginId,
-                .Password = txtOldPassword.Text
+                .Password = TxtOldPassword.Text
             }
             If user.Password <> GV.CurrentUser.Password Then
                 MessageBox.Show("The entered passwords are different!", "Wrong Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                txtRetype.Text = ""
-                txtNewPassword.Focus()
-                txtNewPassword.SelectAll()
+                TxtRetype.Text = ""
+                TxtNewPassword.Focus()
+                TxtNewPassword.SelectAll()
             Else
-                If user.ChangePassowrd(txtNewPassword.Text) Then
+                If user.ChangePassowrd(TxtNewPassword.Text) Then
                     GV.CurrentUser.Password = user.Password
                     MsgBox("Password changed successfully!")
                     Me.Close()

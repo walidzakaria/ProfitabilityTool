@@ -115,26 +115,26 @@ Public Class ExClass
             Case "Admin"
                 With FrmMain
                     .RibbonPageGroup1.Visible = True
-                    .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .brnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .btnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BrnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .RibbonPageGroup5.Visible = True
 
-                    .bcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcPendingDmc.Checked = True
-                    .bcFixedDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcFixedDmc.Checked = True
-                    .bcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcPendingTo.Checked = True
-                    .bcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcFixedTo.Checked = True
-                    .btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
-                    .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .btnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcPendingDmc.Checked = True
+                    .BcFixedDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcFixedDmc.Checked = True
+                    .BcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcPendingTo.Checked = True
+                    .BcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcFixedTo.Checked = True
+                    .BtnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
+                    .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                 End With
                 With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = True
@@ -143,28 +143,28 @@ Public Class ExClass
             Case "RS"
                 With FrmMain
                     .RibbonPageGroup1.Visible = True
-                    .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .brnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .btnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BrnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .RibbonPageGroup5.Visible = True
-                    .bcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcPendingDmc.Checked = True
-                    .bcFixedDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcFixedDmc.Checked = True
-                    .bcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcPendingTo.Checked = True
-                    .bcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcFixedTo.Checked = True
-                    .bcNewRecord.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcNewRecord.Checked = True
+                    .BcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcPendingDmc.Checked = True
+                    .BcFixedDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcFixedDmc.Checked = True
+                    .BcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcPendingTo.Checked = True
+                    .BcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcFixedTo.Checked = True
+                    .BcNewRecord.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcNewRecord.Checked = True
 
-                    .btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
-                    .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .btnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+                    .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                 End With
                 With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = True
@@ -173,28 +173,28 @@ Public Class ExClass
             Case "DMC"
                 With FrmMain
                     .RibbonPageGroup1.Visible = False
-                    .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .brnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BrnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .RibbonPageGroup5.Visible = False
-                    .bcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcPendingDmc.Checked = True
-                    .bcFixedDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcFixedDmc.Checked = True
-                    .bcPendingTo.Checked = False
-                    .bcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .bcFixedTo.Checked = False
-                    .bcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .bcNewRecord.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcNewRecord.Checked = True
+                    .BcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcPendingDmc.Checked = True
+                    .BcFixedDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcFixedDmc.Checked = True
+                    .BcPendingTo.Checked = False
+                    .BcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BcFixedTo.Checked = False
+                    .BcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BcNewRecord.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcNewRecord.Checked = True
 
-                    .btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
-                    .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+                    .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                 End With
                 With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = False
@@ -203,31 +203,31 @@ Public Class ExClass
             Case "TO"
                 With FrmMain
                     .RibbonPageGroup1.Visible = False
-                    .btnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .brnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BrnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .RibbonPageGroup5.Visible = False
 
-                    .bcPendingDmc.Checked = False
-                    .bcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .bcFixedDmc.Checked = False
-                    .bcFixedDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BcPendingDmc.Checked = False
+                    .BcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BcFixedDmc.Checked = False
+                    .BcFixedDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
 
-                    .bcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcPendingTo.Checked = True
-                    .bcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .bcFixedTo.Checked = True
-                    .bcNewRecord.Checked = False
-                    .bcNewRecord.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcPendingTo.Checked = True
+                    .BcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BcFixedTo.Checked = True
+                    .BcNewRecord.Checked = False
+                    .BcNewRecord.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
 
 
-                    .btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
-                    .btnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .btnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+                    .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                 End With
                 With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = False

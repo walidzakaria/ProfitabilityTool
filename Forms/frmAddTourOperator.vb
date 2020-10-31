@@ -17,7 +17,7 @@ Partial Public Class FrmAddTourOperator
     End Sub
     Private Sub FrmAddTourOperator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If tourOperatorID = 0 Then
-            txtTourOperator.EditValue = Nothing
+            TxtTourOperator.EditValue = Nothing
             labelControl.Text = "Add Tour Operator"
         Else
             labelControl.Text = "Edit Tour Operator"
@@ -31,11 +31,11 @@ Partial Public Class FrmAddTourOperator
         }
 
         If tourOperator.GetById() Then
-            txtTourOperator.EditValue = tourOperator.TourOperator
+            TxtTourOperator.EditValue = tourOperator.TourOperator
         End If
     End Sub
 
-    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
+    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles WindowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
             SaveTourOperator()
         ElseIf e.Button.Properties.Caption = "Cancel" Then
@@ -45,8 +45,8 @@ Partial Public Class FrmAddTourOperator
     End Sub
 
     Private Sub FrmAddDestination_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        txtTourOperator.Focus()
-        txtTourOperator.SelectAll()
+        TxtTourOperator.Focus()
+        TxtTourOperator.SelectAll()
     End Sub
 
     Private Sub CloseTourOperator()
@@ -56,7 +56,7 @@ Partial Public Class FrmAddTourOperator
     Private Sub SaveTourOperator()
         If DxValidationProvider1.Validate() Then
             Dim tourOperator As New TourOperator With {
-                .TourOperator = txtTourOperator.Text,
+                .TourOperator = TxtTourOperator.Text,
                 .TourOperatorID = tourOperatorID
             }
             If tourOperator.UniqueCode() Then

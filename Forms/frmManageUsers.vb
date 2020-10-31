@@ -19,15 +19,15 @@
         Dim query As String = "SELECT * FROM Login ORDER BY Username;"
         Dim dt As DataTable
         dt = ExClass.QueryGet(query)
-        gridControl.DataSource = dt
+        GridControl.DataSource = dt
     End Sub
 
     Public Sub New()
         InitializeComponent()
     End Sub
-    Private Sub WindowsUIButtonPanel_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanel.ButtonClick
+    Private Sub WindowsUIButtonPanel_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles WindowsUIButtonPanel.ButtonClick
         If e.Button.Properties.Caption = "Print" Then
-            gridControl.ShowRibbonPrintPreview()
+            GridControl.ShowRibbonPrintPreview()
         ElseIf e.Button.Properties.Caption = "Close" Then
             Me.Close()
         ElseIf e.Button.Properties.Caption = "Reset" Then

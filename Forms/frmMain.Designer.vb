@@ -24,48 +24,49 @@
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
+        Dim SkinPaddingEdges1 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMain))
         Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.SkinRibbonGalleryBarItem1 = New DevExpress.XtraBars.SkinRibbonGalleryBarItem()
-        Me.btnRate = New DevExpress.XtraBars.BarButtonItem()
-        Me.btnSave = New DevExpress.XtraBars.BarButtonItem()
-        Me.btnLoad = New DevExpress.XtraBars.BarButtonItem()
-        Me.btnSwitchUser = New DevExpress.XtraBars.BarButtonItem()
-        Me.btnManageUsers = New DevExpress.XtraBars.BarButtonItem()
-        Me.btnChangePassword = New DevExpress.XtraBars.BarButtonItem()
-        Me.btnExit = New DevExpress.XtraBars.BarButtonItem()
-        Me.beDateFrom = New DevExpress.XtraBars.BarEditItem()
+        Me.BtnRate = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnSave = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnLoad = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnSwitchUser = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnManageUsers = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnChangePassword = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnExit = New DevExpress.XtraBars.BarButtonItem()
+        Me.BeDateFrom = New DevExpress.XtraBars.BarEditItem()
         Me.RepositoryItemDateEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
-        Me.beDateTo = New DevExpress.XtraBars.BarEditItem()
+        Me.BeDateTo = New DevExpress.XtraBars.BarEditItem()
         Me.RepositoryItemDateEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
-        Me.beCountry = New DevExpress.XtraBars.BarEditItem()
+        Me.BeCountry = New DevExpress.XtraBars.BarEditItem()
         Me.RepositoryItemLookUpEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit()
-        Me.btnDestination = New DevExpress.XtraBars.BarButtonItem()
-        Me.btnManageMargin = New DevExpress.XtraBars.BarButtonItem()
-        Me.btnJunk = New DevExpress.XtraBars.BarButtonItem()
-        Me.brnCanceled = New DevExpress.XtraBars.BarButtonItem()
-        Me.btnMatching = New DevExpress.XtraBars.BarButtonItem()
-        Me.bcNegative = New DevExpress.XtraBars.BarCheckItem()
-        Me.bcExcessive = New DevExpress.XtraBars.BarCheckItem()
-        Me.bcMismatch = New DevExpress.XtraBars.BarCheckItem()
-        Me.btnShowDefict = New DevExpress.XtraBars.BarButtonItem()
-        Me.bcPendingDmc = New DevExpress.XtraBars.BarCheckItem()
-        Me.bcFixedDmc = New DevExpress.XtraBars.BarCheckItem()
-        Me.bcPendingTo = New DevExpress.XtraBars.BarCheckItem()
-        Me.bcFixedTo = New DevExpress.XtraBars.BarCheckItem()
-        Me.btnShow = New DevExpress.XtraBars.BarButtonItem()
-        Me.bcNewRecord = New DevExpress.XtraBars.BarCheckItem()
-        Me.btnAddDispute = New DevExpress.XtraBars.BarButtonItem()
-        Me.btnTO = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnDestination = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnManageMargin = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnJunk = New DevExpress.XtraBars.BarButtonItem()
+        Me.BrnCanceled = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnMatching = New DevExpress.XtraBars.BarButtonItem()
+        Me.BcNegative = New DevExpress.XtraBars.BarCheckItem()
+        Me.BcExcessive = New DevExpress.XtraBars.BarCheckItem()
+        Me.BcMismatch = New DevExpress.XtraBars.BarCheckItem()
+        Me.BtnShowDefict = New DevExpress.XtraBars.BarButtonItem()
+        Me.BcPendingDmc = New DevExpress.XtraBars.BarCheckItem()
+        Me.BcFixedDmc = New DevExpress.XtraBars.BarCheckItem()
+        Me.BcPendingTo = New DevExpress.XtraBars.BarCheckItem()
+        Me.BcFixedTo = New DevExpress.XtraBars.BarCheckItem()
+        Me.BtnShow = New DevExpress.XtraBars.BarButtonItem()
+        Me.BcNewRecord = New DevExpress.XtraBars.BarCheckItem()
+        Me.BtnAddDispute = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnTO = New DevExpress.XtraBars.BarButtonItem()
         Me.BarStaticItem1 = New DevExpress.XtraBars.BarStaticItem()
         Me.bhUsername = New DevExpress.XtraBars.BarHeaderItem()
         Me.biLoginTime = New DevExpress.XtraBars.BarStaticItem()
         Me.bhLogginTime = New DevExpress.XtraBars.BarHeaderItem()
         Me.BarHeaderItem1 = New DevExpress.XtraBars.BarHeaderItem()
         Me.BarButtonGroup1 = New DevExpress.XtraBars.BarButtonGroup()
-        Me.btnManageCurrency = New DevExpress.XtraBars.BarButtonItem()
-        Me.btnErrors = New DevExpress.XtraBars.BarButtonItem()
-        Me.btnAbout = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnManageCurrency = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnErrors = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnAbout = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -140,7 +141,7 @@
         Me.RibbonControl1.AllowMinimizeRibbon = False
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
         Me.RibbonControl1.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.RibbonControl1.SearchEditItem, Me.SkinRibbonGalleryBarItem1, Me.btnRate, Me.btnSave, Me.btnLoad, Me.btnSwitchUser, Me.btnManageUsers, Me.btnChangePassword, Me.btnExit, Me.beDateFrom, Me.beDateTo, Me.beCountry, Me.btnDestination, Me.btnManageMargin, Me.btnJunk, Me.brnCanceled, Me.btnMatching, Me.bcNegative, Me.bcExcessive, Me.bcMismatch, Me.btnShowDefict, Me.bcPendingDmc, Me.bcFixedDmc, Me.bcPendingTo, Me.bcFixedTo, Me.btnShow, Me.bcNewRecord, Me.btnAddDispute, Me.btnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.btnManageCurrency, Me.btnErrors, Me.btnAbout})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.RibbonControl1.SearchEditItem, Me.SkinRibbonGalleryBarItem1, Me.BtnRate, Me.BtnSave, Me.BtnLoad, Me.BtnSwitchUser, Me.BtnManageUsers, Me.BtnChangePassword, Me.BtnExit, Me.BeDateFrom, Me.BeDateTo, Me.BeCountry, Me.BtnDestination, Me.BtnManageMargin, Me.BtnJunk, Me.BrnCanceled, Me.BtnMatching, Me.BcNegative, Me.BcExcessive, Me.BcMismatch, Me.BtnShowDefict, Me.BcPendingDmc, Me.BcFixedDmc, Me.BcPendingTo, Me.BcFixedTo, Me.BtnShow, Me.BcNewRecord, Me.BtnAddDispute, Me.BtnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.BtnManageCurrency, Me.BtnErrors, Me.BtnAbout})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl1.MaxItemId = 44
         Me.RibbonControl1.Name = "RibbonControl1"
@@ -159,76 +160,91 @@
         'SkinRibbonGalleryBarItem1
         '
         Me.SkinRibbonGalleryBarItem1.Caption = "SkinRibbonGalleryBarItem1"
+        '
+        '
+        '
+        Me.SkinRibbonGalleryBarItem1.Gallery.AllowHoverImages = True
+        Me.SkinRibbonGalleryBarItem1.Gallery.ColumnCount = 4
+        Me.SkinRibbonGalleryBarItem1.Gallery.FixedHoverImageSize = False
+        Me.SkinRibbonGalleryBarItem1.Gallery.ImageSize = New System.Drawing.Size(16, 16)
+        Me.SkinRibbonGalleryBarItem1.Gallery.ItemCheckMode = DevExpress.XtraBars.Ribbon.Gallery.ItemCheckMode.SingleRadio
+        Me.SkinRibbonGalleryBarItem1.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.Squeeze
+        Me.SkinRibbonGalleryBarItem1.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Top
+        SkinPaddingEdges1.Left = 8
+        SkinPaddingEdges1.Right = 8
+        Me.SkinRibbonGalleryBarItem1.Gallery.ItemImagePadding = SkinPaddingEdges1
+        Me.SkinRibbonGalleryBarItem1.Gallery.ScaleImages = DevExpress.Utils.DefaultBoolean.[False]
         Me.SkinRibbonGalleryBarItem1.Id = 1
+        Me.SkinRibbonGalleryBarItem1.ImageOptions.SvgImage = CType(resources.GetObject("SkinRibbonGalleryBarItem1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.SkinRibbonGalleryBarItem1.Name = "SkinRibbonGalleryBarItem1"
         '
-        'btnRate
+        'BtnRate
         '
-        Me.btnRate.Caption = "Import"
-        Me.btnRate.Id = 2
-        Me.btnRate.ImageOptions.Image = CType(resources.GetObject("btnRate.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnRate.Name = "btnRate"
-        Me.btnRate.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.BtnRate.Caption = "Import"
+        Me.BtnRate.Id = 2
+        Me.BtnRate.ImageOptions.Image = CType(resources.GetObject("btnRate.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnRate.Name = "BtnRate"
+        Me.BtnRate.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
-        'btnSave
+        'BtnSave
         '
-        Me.btnSave.Caption = "Save"
-        Me.btnSave.Id = 3
-        Me.btnSave.ImageOptions.Image = CType(resources.GetObject("btnSave.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.BtnSave.Caption = "Save"
+        Me.BtnSave.Id = 3
+        Me.BtnSave.ImageOptions.Image = CType(resources.GetObject("btnSave.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnSave.Name = "BtnSave"
+        Me.BtnSave.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
-        'btnLoad
+        'BtnLoad
         '
-        Me.btnLoad.Caption = "Load" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "All"
-        Me.btnLoad.Id = 4
-        Me.btnLoad.ImageOptions.Image = CType(resources.GetObject("btnLoad.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnLoad.Name = "btnLoad"
-        Me.btnLoad.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.BtnLoad.Caption = "Load" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "All"
+        Me.BtnLoad.Id = 4
+        Me.BtnLoad.ImageOptions.Image = CType(resources.GetObject("btnLoad.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnLoad.Name = "BtnLoad"
+        Me.BtnLoad.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
-        'btnSwitchUser
+        'BtnSwitchUser
         '
-        Me.btnSwitchUser.Caption = "Switch" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "User"
-        Me.btnSwitchUser.Id = 5
-        Me.btnSwitchUser.ImageOptions.Image = CType(resources.GetObject("btnSwitchUser.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnSwitchUser.ImageOptions.LargeImage = CType(resources.GetObject("btnSwitchUser.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnSwitchUser.Name = "btnSwitchUser"
-        Me.btnSwitchUser.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.BtnSwitchUser.Caption = "Switch" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "User"
+        Me.BtnSwitchUser.Id = 5
+        Me.BtnSwitchUser.ImageOptions.Image = CType(resources.GetObject("btnSwitchUser.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnSwitchUser.ImageOptions.LargeImage = CType(resources.GetObject("btnSwitchUser.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnSwitchUser.Name = "BtnSwitchUser"
+        Me.BtnSwitchUser.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
-        'btnManageUsers
+        'BtnManageUsers
         '
-        Me.btnManageUsers.Caption = "Manage Users"
-        Me.btnManageUsers.Id = 6
-        Me.btnManageUsers.ImageOptions.Image = CType(resources.GetObject("btnManageUsers.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnManageUsers.ImageOptions.LargeImage = CType(resources.GetObject("btnManageUsers.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnManageUsers.Name = "btnManageUsers"
-        Me.btnManageUsers.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
+        Me.BtnManageUsers.Caption = "Manage Users"
+        Me.BtnManageUsers.Id = 6
+        Me.BtnManageUsers.ImageOptions.Image = CType(resources.GetObject("btnManageUsers.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnManageUsers.ImageOptions.LargeImage = CType(resources.GetObject("btnManageUsers.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnManageUsers.Name = "BtnManageUsers"
+        Me.BtnManageUsers.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
-        'btnChangePassword
+        'BtnChangePassword
         '
-        Me.btnChangePassword.Caption = "Change" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Password"
-        Me.btnChangePassword.Id = 8
-        Me.btnChangePassword.ImageOptions.Image = CType(resources.GetObject("btnChangePassword.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnChangePassword.ImageOptions.LargeImage = CType(resources.GetObject("btnChangePassword.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnChangePassword.Name = "btnChangePassword"
-        Me.btnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
+        Me.BtnChangePassword.Caption = "Change" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Password"
+        Me.BtnChangePassword.Id = 8
+        Me.BtnChangePassword.ImageOptions.Image = CType(resources.GetObject("btnChangePassword.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnChangePassword.ImageOptions.LargeImage = CType(resources.GetObject("btnChangePassword.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnChangePassword.Name = "BtnChangePassword"
+        Me.BtnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
-        'btnExit
+        'BtnExit
         '
-        Me.btnExit.Caption = "Exit"
-        Me.btnExit.Id = 9
-        Me.btnExit.ImageOptions.Image = CType(resources.GetObject("btnExit.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnExit.ImageOptions.LargeImage = CType(resources.GetObject("btnExit.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.RibbonStyle = CType((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
+        Me.BtnExit.Caption = "Exit"
+        Me.BtnExit.Id = 9
+        Me.BtnExit.ImageOptions.Image = CType(resources.GetObject("btnExit.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnExit.ImageOptions.LargeImage = CType(resources.GetObject("btnExit.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnExit.Name = "BtnExit"
+        Me.BtnExit.RibbonStyle = CType((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
-        'beDateFrom
+        'BeDateFrom
         '
-        Me.beDateFrom.Caption = "Date From"
-        Me.beDateFrom.Edit = Me.RepositoryItemDateEdit1
-        Me.beDateFrom.EditWidth = 85
-        Me.beDateFrom.Id = 11
-        Me.beDateFrom.Name = "beDateFrom"
+        Me.BeDateFrom.Caption = "Date From"
+        Me.BeDateFrom.Edit = Me.RepositoryItemDateEdit1
+        Me.BeDateFrom.EditWidth = 85
+        Me.BeDateFrom.Id = 11
+        Me.BeDateFrom.Name = "BeDateFrom"
         '
         'RepositoryItemDateEdit1
         '
@@ -237,13 +253,13 @@
         Me.RepositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemDateEdit1.Name = "RepositoryItemDateEdit1"
         '
-        'beDateTo
+        'BeDateTo
         '
-        Me.beDateTo.Caption = "Date To    "
-        Me.beDateTo.Edit = Me.RepositoryItemDateEdit2
-        Me.beDateTo.EditWidth = 85
-        Me.beDateTo.Id = 12
-        Me.beDateTo.Name = "beDateTo"
+        Me.BeDateTo.Caption = "Date To    "
+        Me.BeDateTo.Edit = Me.RepositoryItemDateEdit2
+        Me.BeDateTo.EditWidth = 85
+        Me.BeDateTo.Id = 12
+        Me.BeDateTo.Name = "BeDateTo"
         '
         'RepositoryItemDateEdit2
         '
@@ -252,13 +268,13 @@
         Me.RepositoryItemDateEdit2.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemDateEdit2.Name = "RepositoryItemDateEdit2"
         '
-        'beCountry
+        'BeCountry
         '
-        Me.beCountry.Caption = "Country    "
-        Me.beCountry.Edit = Me.RepositoryItemLookUpEdit1
-        Me.beCountry.EditWidth = 85
-        Me.beCountry.Id = 13
-        Me.beCountry.Name = "beCountry"
+        Me.BeCountry.Caption = "Country    "
+        Me.BeCountry.Edit = Me.RepositoryItemLookUpEdit1
+        Me.BeCountry.EditWidth = 85
+        Me.BeCountry.Id = 13
+        Me.BeCountry.Name = "BeCountry"
         '
         'RepositoryItemLookUpEdit1
         '
@@ -268,157 +284,157 @@
         Me.RepositoryItemLookUpEdit1.Name = "RepositoryItemLookUpEdit1"
         Me.RepositoryItemLookUpEdit1.NullText = "Select Country"
         '
-        'btnDestination
+        'BtnDestination
         '
-        Me.btnDestination.Caption = "" & Global.Microsoft.VisualBasic.ChrW(10) & "Destination"
-        Me.btnDestination.Id = 14
-        Me.btnDestination.ImageOptions.Image = CType(resources.GetObject("btnDestination.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnDestination.ImageOptions.LargeImage = CType(resources.GetObject("btnDestination.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnDestination.Name = "btnDestination"
-        Me.btnDestination.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
+        Me.BtnDestination.Caption = "" & Global.Microsoft.VisualBasic.ChrW(10) & "Destination"
+        Me.BtnDestination.Id = 14
+        Me.BtnDestination.ImageOptions.Image = CType(resources.GetObject("btnDestination.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnDestination.ImageOptions.LargeImage = CType(resources.GetObject("btnDestination.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnDestination.Name = "BtnDestination"
+        Me.BtnDestination.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
-        'btnManageMargin
+        'BtnManageMargin
         '
-        Me.btnManageMargin.Caption = "" & Global.Microsoft.VisualBasic.ChrW(10) & "Margin"
-        Me.btnManageMargin.Id = 15
-        Me.btnManageMargin.ImageOptions.Image = CType(resources.GetObject("btnManageMargin.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnManageMargin.Name = "btnManageMargin"
-        Me.btnManageMargin.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
+        Me.BtnManageMargin.Caption = "" & Global.Microsoft.VisualBasic.ChrW(10) & "Margin"
+        Me.BtnManageMargin.Id = 15
+        Me.BtnManageMargin.ImageOptions.Image = CType(resources.GetObject("btnManageMargin.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnManageMargin.Name = "BtnManageMargin"
+        Me.BtnManageMargin.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
-        'btnJunk
+        'BtnJunk
         '
-        Me.btnJunk.Caption = "Junk"
-        Me.btnJunk.Id = 16
-        Me.btnJunk.ImageOptions.Image = CType(resources.GetObject("btnJunk.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnJunk.Name = "btnJunk"
-        Me.btnJunk.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.BtnJunk.Caption = "Junk"
+        Me.BtnJunk.Id = 16
+        Me.BtnJunk.ImageOptions.Image = CType(resources.GetObject("btnJunk.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnJunk.Name = "BtnJunk"
+        Me.BtnJunk.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
-        'brnCanceled
+        'BrnCanceled
         '
-        Me.brnCanceled.Caption = "Canceled"
-        Me.brnCanceled.Id = 17
-        Me.brnCanceled.ImageOptions.Image = CType(resources.GetObject("brnCanceled.ImageOptions.Image"), System.Drawing.Image)
-        Me.brnCanceled.ImageOptions.LargeImage = CType(resources.GetObject("brnCanceled.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.brnCanceled.Name = "brnCanceled"
-        Me.brnCanceled.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.BrnCanceled.Caption = "Canceled"
+        Me.BrnCanceled.Id = 17
+        Me.BrnCanceled.ImageOptions.Image = CType(resources.GetObject("brnCanceled.ImageOptions.Image"), System.Drawing.Image)
+        Me.BrnCanceled.ImageOptions.LargeImage = CType(resources.GetObject("brnCanceled.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BrnCanceled.Name = "BrnCanceled"
+        Me.BrnCanceled.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
-        'btnMatching
+        'BtnMatching
         '
-        Me.btnMatching.Caption = "Matching"
-        Me.btnMatching.Id = 18
-        Me.btnMatching.ImageOptions.Image = CType(resources.GetObject("btnMatching.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnMatching.ImageOptions.LargeImage = CType(resources.GetObject("btnMatching.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnMatching.Name = "btnMatching"
-        Me.btnMatching.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.BtnMatching.Caption = "Matching"
+        Me.BtnMatching.Id = 18
+        Me.BtnMatching.ImageOptions.Image = CType(resources.GetObject("btnMatching.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnMatching.ImageOptions.LargeImage = CType(resources.GetObject("btnMatching.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnMatching.Name = "BtnMatching"
+        Me.BtnMatching.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
-        'bcNegative
+        'BcNegative
         '
-        Me.bcNegative.BindableChecked = True
-        Me.bcNegative.Caption = "Negative "
-        Me.bcNegative.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
-        Me.bcNegative.Checked = True
-        Me.bcNegative.Id = 19
-        Me.bcNegative.Name = "bcNegative"
-        Me.bcNegative.SmallWithTextWidth = 78
+        Me.BcNegative.BindableChecked = True
+        Me.BcNegative.Caption = "Negative "
+        Me.BcNegative.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BcNegative.Checked = True
+        Me.BcNegative.Id = 19
+        Me.BcNegative.Name = "BcNegative"
+        Me.BcNegative.SmallWithTextWidth = 78
         '
-        'bcExcessive
+        'BcExcessive
         '
-        Me.bcExcessive.BindableChecked = True
-        Me.bcExcessive.Caption = "Excessive"
-        Me.bcExcessive.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
-        Me.bcExcessive.Checked = True
-        Me.bcExcessive.Id = 20
-        Me.bcExcessive.Name = "bcExcessive"
-        Me.bcExcessive.SmallWithTextWidth = 78
+        Me.BcExcessive.BindableChecked = True
+        Me.BcExcessive.Caption = "Excessive"
+        Me.BcExcessive.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BcExcessive.Checked = True
+        Me.BcExcessive.Id = 20
+        Me.BcExcessive.Name = "BcExcessive"
+        Me.BcExcessive.SmallWithTextWidth = 78
         '
-        'bcMismatch
+        'BcMismatch
         '
-        Me.bcMismatch.BindableChecked = True
-        Me.bcMismatch.Caption = "Mismatch "
-        Me.bcMismatch.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
-        Me.bcMismatch.Checked = True
-        Me.bcMismatch.Id = 21
-        Me.bcMismatch.Name = "bcMismatch"
-        Me.bcMismatch.SmallWithTextWidth = 78
+        Me.BcMismatch.BindableChecked = True
+        Me.BcMismatch.Caption = "Mismatch "
+        Me.BcMismatch.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BcMismatch.Checked = True
+        Me.BcMismatch.Id = 21
+        Me.BcMismatch.Name = "BcMismatch"
+        Me.BcMismatch.SmallWithTextWidth = 78
         '
-        'btnShowDefict
+        'BtnShowDefict
         '
-        Me.btnShowDefict.Caption = "Show" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Deficit"
-        Me.btnShowDefict.Id = 22
-        Me.btnShowDefict.ImageOptions.Image = CType(resources.GetObject("btnShowDefict.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnShowDefict.Name = "btnShowDefict"
-        Me.btnShowDefict.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.BtnShowDefict.Caption = "Show" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Deficit"
+        Me.BtnShowDefict.Id = 22
+        Me.BtnShowDefict.ImageOptions.Image = CType(resources.GetObject("btnShowDefict.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnShowDefict.Name = "BtnShowDefict"
+        Me.BtnShowDefict.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
-        'bcPendingDmc
+        'BcPendingDmc
         '
-        Me.bcPendingDmc.BindableChecked = True
-        Me.bcPendingDmc.Caption = "Pending DMC"
-        Me.bcPendingDmc.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
-        Me.bcPendingDmc.Checked = True
-        Me.bcPendingDmc.Id = 23
-        Me.bcPendingDmc.Name = "bcPendingDmc"
+        Me.BcPendingDmc.BindableChecked = True
+        Me.BcPendingDmc.Caption = "Pending DMC"
+        Me.BcPendingDmc.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BcPendingDmc.Checked = True
+        Me.BcPendingDmc.Id = 23
+        Me.BcPendingDmc.Name = "BcPendingDmc"
         '
-        'bcFixedDmc
+        'BcFixedDmc
         '
-        Me.bcFixedDmc.BindableChecked = True
-        Me.bcFixedDmc.Caption = "Fixed DMC"
-        Me.bcFixedDmc.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
-        Me.bcFixedDmc.Checked = True
-        Me.bcFixedDmc.Id = 24
-        Me.bcFixedDmc.Name = "bcFixedDmc"
+        Me.BcFixedDmc.BindableChecked = True
+        Me.BcFixedDmc.Caption = "Fixed DMC"
+        Me.BcFixedDmc.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BcFixedDmc.Checked = True
+        Me.BcFixedDmc.Id = 24
+        Me.BcFixedDmc.Name = "BcFixedDmc"
         '
-        'bcPendingTo
+        'BcPendingTo
         '
-        Me.bcPendingTo.BindableChecked = True
-        Me.bcPendingTo.Caption = "Pending T/O"
-        Me.bcPendingTo.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
-        Me.bcPendingTo.Checked = True
-        Me.bcPendingTo.Id = 25
-        Me.bcPendingTo.Name = "bcPendingTo"
+        Me.BcPendingTo.BindableChecked = True
+        Me.BcPendingTo.Caption = "Pending T/O"
+        Me.BcPendingTo.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BcPendingTo.Checked = True
+        Me.BcPendingTo.Id = 25
+        Me.BcPendingTo.Name = "BcPendingTo"
         '
-        'bcFixedTo
+        'BcFixedTo
         '
-        Me.bcFixedTo.BindableChecked = True
-        Me.bcFixedTo.Caption = "Fixed T/O"
-        Me.bcFixedTo.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
-        Me.bcFixedTo.Checked = True
-        Me.bcFixedTo.Id = 26
-        Me.bcFixedTo.Name = "bcFixedTo"
+        Me.BcFixedTo.BindableChecked = True
+        Me.BcFixedTo.Caption = "Fixed T/O"
+        Me.BcFixedTo.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BcFixedTo.Checked = True
+        Me.BcFixedTo.Id = 26
+        Me.BcFixedTo.Name = "BcFixedTo"
         '
-        'btnShow
+        'BtnShow
         '
-        Me.btnShow.Caption = "Show"
-        Me.btnShow.Id = 27
-        Me.btnShow.ImageOptions.Image = CType(resources.GetObject("btnShow.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnShow.Name = "btnShow"
-        Me.btnShow.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.BtnShow.Caption = "Show"
+        Me.BtnShow.Id = 27
+        Me.BtnShow.ImageOptions.Image = CType(resources.GetObject("btnShow.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnShow.Name = "BtnShow"
+        Me.BtnShow.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
-        'bcNewRecord
+        'BcNewRecord
         '
-        Me.bcNewRecord.BindableChecked = True
-        Me.bcNewRecord.Caption = "New Record"
-        Me.bcNewRecord.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
-        Me.bcNewRecord.Checked = True
-        Me.bcNewRecord.Id = 29
-        Me.bcNewRecord.Name = "bcNewRecord"
+        Me.BcNewRecord.BindableChecked = True
+        Me.BcNewRecord.Caption = "New Record"
+        Me.BcNewRecord.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
+        Me.BcNewRecord.Checked = True
+        Me.BcNewRecord.Id = 29
+        Me.BcNewRecord.Name = "BcNewRecord"
         '
-        'btnAddDispute
+        'BtnAddDispute
         '
-        Me.btnAddDispute.Caption = "Add Dispute"
-        Me.btnAddDispute.Id = 30
-        Me.btnAddDispute.ImageOptions.Image = CType(resources.GetObject("btnAddDispute.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnAddDispute.ImageOptions.LargeImage = CType(resources.GetObject("btnAddDispute.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnAddDispute.Name = "btnAddDispute"
-        Me.btnAddDispute.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
+        Me.BtnAddDispute.Caption = "Add Dispute"
+        Me.BtnAddDispute.Id = 30
+        Me.BtnAddDispute.ImageOptions.Image = CType(resources.GetObject("btnAddDispute.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnAddDispute.ImageOptions.LargeImage = CType(resources.GetObject("btnAddDispute.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnAddDispute.Name = "BtnAddDispute"
+        Me.BtnAddDispute.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
-        'btnTO
+        'BtnTO
         '
-        Me.btnTO.Caption = "T/O"
-        Me.btnTO.Id = 31
-        Me.btnTO.ImageOptions.Image = CType(resources.GetObject("btnTO.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnTO.ImageOptions.LargeImage = CType(resources.GetObject("btnTO.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.btnTO.Name = "btnTO"
-        Me.btnTO.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
+        Me.BtnTO.Caption = "T/O"
+        Me.BtnTO.Id = 31
+        Me.BtnTO.ImageOptions.Image = CType(resources.GetObject("btnTO.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnTO.ImageOptions.LargeImage = CType(resources.GetObject("btnTO.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnTO.Name = "BtnTO"
+        Me.BtnTO.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
         'BarStaticItem1
         '
@@ -466,29 +482,29 @@
         Me.BarButtonGroup1.Id = 38
         Me.BarButtonGroup1.Name = "BarButtonGroup1"
         '
-        'btnManageCurrency
+        'BtnManageCurrency
         '
-        Me.btnManageCurrency.Caption = "Currency"
-        Me.btnManageCurrency.Id = 41
-        Me.btnManageCurrency.ImageOptions.Image = CType(resources.GetObject("btnManageCurrency.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnManageCurrency.Name = "btnManageCurrency"
-        Me.btnManageCurrency.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
+        Me.BtnManageCurrency.Caption = "Currency"
+        Me.BtnManageCurrency.Id = 41
+        Me.BtnManageCurrency.ImageOptions.Image = CType(resources.GetObject("btnManageCurrency.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnManageCurrency.Name = "BtnManageCurrency"
+        Me.BtnManageCurrency.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
-        'btnErrors
+        'BtnErrors
         '
-        Me.btnErrors.Caption = "Errors"
-        Me.btnErrors.Id = 42
-        Me.btnErrors.ImageOptions.Image = CType(resources.GetObject("btnErrors.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnErrors.Name = "btnErrors"
-        Me.btnErrors.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.BtnErrors.Caption = "Errors"
+        Me.BtnErrors.Id = 42
+        Me.BtnErrors.ImageOptions.Image = CType(resources.GetObject("btnErrors.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnErrors.Name = "BtnErrors"
+        Me.BtnErrors.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
-        'btnAbout
+        'BtnAbout
         '
-        Me.btnAbout.Caption = "About"
-        Me.btnAbout.Id = 43
-        Me.btnAbout.ImageOptions.Image = CType(resources.GetObject("btnAbout.ImageOptions.Image"), System.Drawing.Image)
-        Me.btnAbout.Name = "btnAbout"
-        Me.btnAbout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.BtnAbout.Caption = "About"
+        Me.BtnAbout.Id = 43
+        Me.BtnAbout.ImageOptions.Image = CType(resources.GetObject("btnAbout.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnAbout.Name = "BtnAbout"
+        Me.BtnAbout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
         'RibbonPage1
         '
@@ -500,9 +516,9 @@
         '
         Me.RibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonPageGroup1.ImageOptions.Image = CType(resources.GetObject("RibbonPageGroup1.ImageOptions.Image"), System.Drawing.Image)
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnRate)
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnSave)
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.btnErrors)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnRate)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnSave)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnErrors)
         Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
         Me.RibbonPageGroup1.Text = "Data"
         '
@@ -510,13 +526,13 @@
         '
         Me.RibbonPageGroup2.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonPageGroup2.ImageOptions.Image = CType(resources.GetObject("RibbonPageGroup2.ImageOptions.Image"), System.Drawing.Image)
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.beCountry)
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.beDateFrom)
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.beDateTo)
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.btnLoad)
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.btnJunk)
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.brnCanceled)
-        Me.RibbonPageGroup2.ItemLinks.Add(Me.btnMatching)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.BeCountry)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.BeDateFrom)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.BeDateTo)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.BtnLoad)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.BtnJunk)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.BrnCanceled)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.BtnMatching)
         Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
         Me.RibbonPageGroup2.Text = "Show"
         '
@@ -524,10 +540,10 @@
         '
         Me.RibbonPageGroup5.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonPageGroup5.ImageOptions.Image = CType(resources.GetObject("RibbonPageGroup5.ImageOptions.Image"), System.Drawing.Image)
-        Me.RibbonPageGroup5.ItemLinks.Add(Me.bcNegative)
-        Me.RibbonPageGroup5.ItemLinks.Add(Me.bcExcessive)
-        Me.RibbonPageGroup5.ItemLinks.Add(Me.bcMismatch)
-        Me.RibbonPageGroup5.ItemLinks.Add(Me.btnShowDefict)
+        Me.RibbonPageGroup5.ItemLinks.Add(Me.BcNegative)
+        Me.RibbonPageGroup5.ItemLinks.Add(Me.BcExcessive)
+        Me.RibbonPageGroup5.ItemLinks.Add(Me.BcMismatch)
+        Me.RibbonPageGroup5.ItemLinks.Add(Me.BtnShowDefict)
         Me.RibbonPageGroup5.Name = "RibbonPageGroup5"
         Me.RibbonPageGroup5.Text = "Deficit"
         '
@@ -536,13 +552,13 @@
         Me.RibbonPageGroup7.AllowTextClipping = False
         Me.RibbonPageGroup7.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonPageGroup7.ImageOptions.Image = CType(resources.GetObject("RibbonPageGroup7.ImageOptions.Image"), System.Drawing.Image)
-        Me.RibbonPageGroup7.ItemLinks.Add(Me.bcPendingDmc)
-        Me.RibbonPageGroup7.ItemLinks.Add(Me.bcFixedDmc)
-        Me.RibbonPageGroup7.ItemLinks.Add(Me.bcPendingTo)
-        Me.RibbonPageGroup7.ItemLinks.Add(Me.bcFixedTo)
-        Me.RibbonPageGroup7.ItemLinks.Add(Me.bcNewRecord)
-        Me.RibbonPageGroup7.ItemLinks.Add(Me.btnAddDispute)
-        Me.RibbonPageGroup7.ItemLinks.Add(Me.btnShow)
+        Me.RibbonPageGroup7.ItemLinks.Add(Me.BcPendingDmc)
+        Me.RibbonPageGroup7.ItemLinks.Add(Me.BcFixedDmc)
+        Me.RibbonPageGroup7.ItemLinks.Add(Me.BcPendingTo)
+        Me.RibbonPageGroup7.ItemLinks.Add(Me.BcFixedTo)
+        Me.RibbonPageGroup7.ItemLinks.Add(Me.BcNewRecord)
+        Me.RibbonPageGroup7.ItemLinks.Add(Me.BtnAddDispute)
+        Me.RibbonPageGroup7.ItemLinks.Add(Me.BtnShow)
         Me.RibbonPageGroup7.Name = "RibbonPageGroup7"
         Me.RibbonPageGroup7.Text = "Disputes"
         '
@@ -550,13 +566,13 @@
         '
         Me.RibbonPageGroup3.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonPageGroup3.ImageOptions.Image = CType(resources.GetObject("RibbonPageGroup3.ImageOptions.Image"), System.Drawing.Image)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnSwitchUser)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnChangePassword)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageUsers)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageCurrency)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnDestination, True)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnTO)
-        Me.RibbonPageGroup3.ItemLinks.Add(Me.btnManageMargin)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.BtnSwitchUser)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.BtnChangePassword)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.BtnManageUsers)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.BtnManageCurrency)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.BtnDestination, True)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.BtnTO)
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.BtnManageMargin)
         Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
         Me.RibbonPageGroup3.Text = "Administration"
         '
@@ -565,8 +581,8 @@
         Me.RibbonPageGroup4.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonPageGroup4.ImageOptions.Image = CType(resources.GetObject("RibbonPageGroup4.ImageOptions.Image"), System.Drawing.Image)
         Me.RibbonPageGroup4.ItemLinks.Add(Me.SkinRibbonGalleryBarItem1)
-        Me.RibbonPageGroup4.ItemLinks.Add(Me.btnAbout)
-        Me.RibbonPageGroup4.ItemLinks.Add(Me.btnExit)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BtnAbout)
+        Me.RibbonPageGroup4.ItemLinks.Add(Me.BtnExit)
         Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
         Me.RibbonPageGroup4.Text = "Settings"
         '
@@ -1026,7 +1042,7 @@
         Me.BarSubItem1.Id = 28
         Me.BarSubItem1.Name = "BarSubItem1"
         '
-        'frmMain
+        'FrmMain
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[False]
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1035,9 +1051,9 @@
         Me.Controls.Add(Me.GridControl1)
         Me.Controls.Add(Me.RibbonStatusBar1)
         Me.Controls.Add(Me.RibbonControl1)
-        Me.IconOptions.Icon = CType(resources.GetObject("frmMain.IconOptions.Icon"), System.Drawing.Icon)
+        Me.IconOptions.Icon = CType(resources.GetObject("FrmMain.IconOptions.Icon"), System.Drawing.Icon)
         Me.IconOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.profitability_logo
-        Me.Name = "frmMain"
+        Me.Name = "FrmMain"
         Me.Ribbon = Me.RibbonControl1
         Me.StatusBar = Me.RibbonStatusBar1
         Me.Text = "Profitability Tool"
@@ -1063,7 +1079,7 @@
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents SkinRibbonGalleryBarItem1 As DevExpress.XtraBars.SkinRibbonGalleryBarItem
-    Friend WithEvents btnRate As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnRate As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
@@ -1105,44 +1121,44 @@
     Friend WithEvents GridColumn38 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn39 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn40 As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents btnSave As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnSave As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup2 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-    Friend WithEvents btnLoad As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents btnSwitchUser As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnLoad As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnSwitchUser As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup3 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents RibbonPageGroup6 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-    Friend WithEvents btnManageUsers As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents btnChangePassword As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnManageUsers As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnChangePassword As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup4 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-    Friend WithEvents btnExit As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnExit As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents SplashScreenManager1 As DevExpress.XtraSplashScreen.SplashScreenManager
     Friend WithEvents RepositoryItemLookUpEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
-    Friend WithEvents beDateFrom As DevExpress.XtraBars.BarEditItem
+    Friend WithEvents BeDateFrom As DevExpress.XtraBars.BarEditItem
     Friend WithEvents RepositoryItemDateEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemDateEdit
-    Friend WithEvents beDateTo As DevExpress.XtraBars.BarEditItem
+    Friend WithEvents BeDateTo As DevExpress.XtraBars.BarEditItem
     Friend WithEvents RepositoryItemDateEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemDateEdit
-    Friend WithEvents beCountry As DevExpress.XtraBars.BarEditItem
+    Friend WithEvents BeCountry As DevExpress.XtraBars.BarEditItem
     Friend WithEvents RepositoryItemLookUpEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit
-    Friend WithEvents btnDestination As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents btnManageMargin As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents btnJunk As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents brnCanceled As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents btnMatching As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnDestination As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnManageMargin As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnJunk As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BrnCanceled As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnMatching As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup5 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-    Friend WithEvents bcNegative As DevExpress.XtraBars.BarCheckItem
-    Friend WithEvents bcExcessive As DevExpress.XtraBars.BarCheckItem
-    Friend WithEvents bcMismatch As DevExpress.XtraBars.BarCheckItem
-    Friend WithEvents btnShowDefict As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BcNegative As DevExpress.XtraBars.BarCheckItem
+    Friend WithEvents BcExcessive As DevExpress.XtraBars.BarCheckItem
+    Friend WithEvents BcMismatch As DevExpress.XtraBars.BarCheckItem
+    Friend WithEvents BtnShowDefict As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup7 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-    Friend WithEvents bcPendingDmc As DevExpress.XtraBars.BarCheckItem
-    Friend WithEvents bcFixedDmc As DevExpress.XtraBars.BarCheckItem
-    Friend WithEvents bcPendingTo As DevExpress.XtraBars.BarCheckItem
-    Friend WithEvents bcFixedTo As DevExpress.XtraBars.BarCheckItem
-    Friend WithEvents btnShow As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BcPendingDmc As DevExpress.XtraBars.BarCheckItem
+    Friend WithEvents BcFixedDmc As DevExpress.XtraBars.BarCheckItem
+    Friend WithEvents BcPendingTo As DevExpress.XtraBars.BarCheckItem
+    Friend WithEvents BcFixedTo As DevExpress.XtraBars.BarCheckItem
+    Friend WithEvents BtnShow As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarSubItem1 As DevExpress.XtraBars.BarSubItem
-    Friend WithEvents bcNewRecord As DevExpress.XtraBars.BarCheckItem
-    Friend WithEvents btnAddDispute As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents btnTO As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BcNewRecord As DevExpress.XtraBars.BarCheckItem
+    Friend WithEvents BtnAddDispute As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnTO As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarStaticItem1 As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents biLoginTime As DevExpress.XtraBars.BarStaticItem
     Friend WithEvents RibbonStatusBar1 As DevExpress.XtraBars.Ribbon.RibbonStatusBar
@@ -1150,9 +1166,9 @@
     Public WithEvents bhLogginTime As DevExpress.XtraBars.BarHeaderItem
     Friend WithEvents BarHeaderItem1 As DevExpress.XtraBars.BarHeaderItem
     Friend WithEvents BarButtonGroup1 As DevExpress.XtraBars.BarButtonGroup
-    Friend WithEvents btnManageCurrency As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents btnErrors As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents btnAbout As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnManageCurrency As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnErrors As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnAbout As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents GridColumn41 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn42 As DevExpress.XtraGrid.Columns.GridColumn
 End Class

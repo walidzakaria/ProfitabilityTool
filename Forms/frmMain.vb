@@ -52,7 +52,7 @@ Partial Public Class FrmMain
         RepositoryItemLookUpEdit1.DisplayMember = "Destination"
 
     End Sub
-    Private Sub BtnRate_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnRate.ItemClick
+    Private Sub BtnRate_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnRate.ItemClick
         Wait(True)
 
         ResetGridLayout()
@@ -145,7 +145,7 @@ Partial Public Class FrmMain
         Return result
     End Function
 
-    Private Sub BtnSave_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSave.ItemClick
+    Private Sub BtnSave_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnSave.ItemClick
         Wait(True)
         Dim query As String = ""
         Dim noNewRecords As Boolean = True
@@ -376,7 +376,7 @@ Partial Public Class FrmMain
 
     Private Sub LoadData(ByVal status As String, ByVal allCountries As Boolean)
 
-        If beCountry.EditValue Is Nothing And Not allCountries Then
+        If BeCountry.EditValue Is Nothing And Not allCountries Then
             MsgBox("Please select destination!")
             Exit Sub
         ElseIf GV.CurrentUser.UserOperators = "" And Not allCountries Then
@@ -389,9 +389,9 @@ Partial Public Class FrmMain
 
         Dim startDate, endDate As Date
         Dim destination As String
-        startDate = CDate(beDateFrom.EditValue)
-        endDate = CDate(beDateTo.EditValue)
-        destination = CStr(beCountry.EditValue)
+        startDate = CDate(BeDateFrom.EditValue)
+        endDate = CDate(BeDateTo.EditValue)
+        destination = CStr(BeCountry.EditValue)
 
 
         Dim querySelect As String = "SELECT BookingID, Reference, HotelCode, HotelName, HotelCountry, GwgStatus, PurchaseCurrency, PurchasePrice,
@@ -426,7 +426,7 @@ Partial Public Class FrmMain
 
     End Sub
 
-    Private Sub BtnLoad_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnLoad.ItemClick
+    Private Sub BtnLoad_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnLoad.ItemClick
         LoadData("", False)
     End Sub
 
@@ -479,14 +479,14 @@ Partial Public Class FrmMain
 
     Private Sub FrmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        beDateFrom.EditValue = My.Settings.RibbonDateFrom
-        beDateTo.EditValue = Today().AddYears(3)
+        BeDateFrom.EditValue = My.Settings.RibbonDateFrom
+        BeDateTo.EditValue = Today().AddYears(3)
 
         If My.Settings.Destination <> "" Then
             Try
                 For x = 0 To GV.CurrentUser.UserDestinations.Count - 1
                     If GV.CurrentUser.UserDestinations(x).DestinationCode = My.Settings.Destination Then
-                        beCountry.EditValue = My.Settings.Destination
+                        BeCountry.EditValue = My.Settings.Destination
                         Exit For
                     End If
                 Next
@@ -502,34 +502,34 @@ Partial Public Class FrmMain
         End If
     End Sub
 
-    Private Sub BtnSwitchUser_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnSwitchUser.ItemClick
+    Private Sub BtnSwitchUser_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnSwitchUser.ItemClick
         FrmLogin.ShowDialog()
         bookingDT.Reset()
     End Sub
 
-    Private Sub BtnChangePassword_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnChangePassword.ItemClick
+    Private Sub BtnChangePassword_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnChangePassword.ItemClick
         FrmChangePassword.ShowDialog()
     End Sub
 
-    Private Sub BtnExit_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnExit.ItemClick
+    Private Sub BtnExit_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnExit.ItemClick
         Me.Close()
         Application.Exit()
     End Sub
 
-    Private Sub BtnManageUsers_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageUsers.ItemClick
+    Private Sub BtnManageUsers_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnManageUsers.ItemClick
         FrmManageUsers.ShowDialog()
     End Sub
 
-    Private Sub BeDateFrom_EditValueChanged(sender As Object, e As EventArgs) Handles beDateFrom.EditValueChanged
-        My.Settings.RibbonDateFrom = CDate(beDateFrom.EditValue)
+    Private Sub BeDateFrom_EditValueChanged(sender As Object, e As EventArgs) Handles BeDateFrom.EditValueChanged
+        My.Settings.RibbonDateFrom = CDate(BeDateFrom.EditValue)
         My.Settings.Save()
     End Sub
 
-    Private Sub BtnManageDestination_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnDestination.ItemClick
+    Private Sub BtnManageDestination_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnDestination.ItemClick
         FrmManageDestinations.ShowDialog()
     End Sub
 
-    Private Sub BtnManageMargin_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageMargin.ItemClick
+    Private Sub BtnManageMargin_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnManageMargin.ItemClick
         FrmManageMargin.ShowDialog()
     End Sub
 
@@ -541,45 +541,45 @@ Partial Public Class FrmMain
         End If
     End Sub
 
-    Private Sub BeCountry_EditValueChanged(sender As Object, e As EventArgs) Handles beCountry.EditValueChanged
-        My.Settings.Destination = CStr(beCountry.EditValue)
+    Private Sub BeCountry_EditValueChanged(sender As Object, e As EventArgs) Handles BeCountry.EditValueChanged
+        My.Settings.Destination = CStr(BeCountry.EditValue)
         My.Settings.Save()
     End Sub
 
-    Private Sub BtnJunk_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnJunk.ItemClick
+    Private Sub BtnJunk_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnJunk.ItemClick
         LoadData("AND Junk = 1 AND GwgStatus != 'Can'", False)
     End Sub
 
-    Private Sub BrnCanceled_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles brnCanceled.ItemClick
+    Private Sub BrnCanceled_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BrnCanceled.ItemClick
         LoadData("AND GwgStatus = 'Can'", False)
     End Sub
 
-    Private Sub BtnMatching_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnMatching.ItemClick
+    Private Sub BtnMatching_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnMatching.ItemClick
         Dim status As String
         status = " AND Junk = 0 AND GwgStatus != 'Can' AND NegativeMargin = 0 
                     AND ExcessiveMargin = 0 AND MismatchCalc = 0"
         LoadData(status, False)
     End Sub
 
-    Private Sub BtnShowDefict_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnShowDefict.ItemClick
+    Private Sub BtnShowDefict_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnShowDefict.ItemClick
         Dim status As String = " AND Junk = 0 AND GwgStatus != 'Can' AND ([Status] IS NULL OR [Status] = '') AND ("
 
-        If Not bcExcessive.Checked And Not bcNegative.Checked And Not bcMismatch.Checked Then
+        If Not BcExcessive.Checked And Not BcNegative.Checked And Not BcMismatch.Checked Then
             MsgBox("Please select at least one option!")
             Exit Sub
         End If
 
-        If bcNegative.Checked Then
+        If BcNegative.Checked Then
             status &= "NegativeMargin = 1"
         End If
-        If bcExcessive.Checked Then
-            If bcNegative.Checked Then
+        If BcExcessive.Checked Then
+            If BcNegative.Checked Then
                 status &= " OR "
             End If
             status &= "ExcessiveMargin = 1"
         End If
-        If bcMismatch.Checked Then
-            If bcNegative.Checked Or bcExcessive.Checked Then
+        If BcMismatch.Checked Then
+            If BcNegative.Checked Or BcExcessive.Checked Then
                 status &= " OR "
             End If
             status &= "MismatchCalc = 1"
@@ -589,37 +589,37 @@ Partial Public Class FrmMain
 
     End Sub
 
-    Private Sub BtnShow_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnShow.ItemClick
+    Private Sub BtnShow_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnShow.ItemClick
         Dim status As String = " AND Junk = 0 AND GwgStatus != 'Can' AND ("
-        If Not bcPendingDmc.Checked And Not bcPendingTo.Checked And Not bcFixedDmc.Checked And Not bcFixedTo.Checked And Not bcNewRecord.Checked Then
+        If Not BcPendingDmc.Checked And Not BcPendingTo.Checked And Not BcFixedDmc.Checked And Not BcFixedTo.Checked And Not BcNewRecord.Checked Then
             MsgBox("Please select at least one option!")
             Exit Sub
         End If
 
-        If bcPendingDmc.Checked Then
+        If BcPendingDmc.Checked Then
             status &= "[Status] = 'PENDING DMC'"
         End If
 
-        If bcFixedDmc.Checked Then
-            If bcPendingDmc.Checked Then
+        If BcFixedDmc.Checked Then
+            If BcPendingDmc.Checked Then
                 status &= " OR "
             End If
             status &= "[Status] = 'FIXED DMC'"
         End If
-        If bcPendingTo.Checked Then
-            If bcPendingDmc.Checked Or bcFixedDmc.Checked Then
+        If BcPendingTo.Checked Then
+            If BcPendingDmc.Checked Or BcFixedDmc.Checked Then
                 status &= " OR "
             End If
             status &= "[Status] = 'PENDING T/O'"
         End If
-        If bcFixedTo.Checked Then
-            If bcPendingDmc.Checked Or bcFixedDmc.Checked Or bcPendingTo.Checked Then
+        If BcFixedTo.Checked Then
+            If BcPendingDmc.Checked Or BcFixedDmc.Checked Or BcPendingTo.Checked Then
                 status &= " OR "
             End If
             status &= "[Status] = 'FIXED T/O'"
         End If
-        If bcNewRecord.Checked Then
-            If bcPendingDmc.Checked Or bcFixedDmc.Checked Or bcPendingTo.Checked Or bcFixedTo.Checked Then
+        If BcNewRecord.Checked Then
+            If BcPendingDmc.Checked Or BcFixedDmc.Checked Or BcPendingTo.Checked Or BcFixedTo.Checked Then
                 status &= " OR "
             End If
             status &= "[Status] IS NULL"
@@ -628,25 +628,25 @@ Partial Public Class FrmMain
         LoadData(status, False)
     End Sub
 
-    Private Sub BtnAddDispute_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAddDispute.ItemClick
+    Private Sub BtnAddDispute_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnAddDispute.ItemClick
         ViewBookingDetails()
     End Sub
 
-    Private Sub BtnTO_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnTO.ItemClick
+    Private Sub BtnTO_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnTO.ItemClick
         FrmManageTourOperator.ShowDialog()
     End Sub
 
-    Private Sub BtnManageCurrency_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnManageCurrency.ItemClick
+    Private Sub BtnManageCurrency_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnManageCurrency.ItemClick
         FrmCurrency.ShowDialog()
     End Sub
 
-    Private Sub BtnErrors_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnErrors.ItemClick
+    Private Sub BtnErrors_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnErrors.ItemClick
         Dim status As String
         status = " AND (MissingCurrency = 1 OR MissingDestination = 1 OR MissingTO = 1 OR MissingMargin = 1)"
         LoadData(status, True)
     End Sub
 
-    Private Sub BtnAbout_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnAbout.ItemClick
+    Private Sub BtnAbout_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnAbout.ItemClick
         FrmAbout.ShowDialog()
     End Sub
 
@@ -666,7 +666,7 @@ Partial Public Class FrmMain
         End If
     End Sub
 
-    Private Sub FrmMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+    Private Sub frmMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         GridView1.SaveLayoutToStream(defaultGridLayout)
         defaultGridLayout.Seek(0, System.IO.SeekOrigin.Begin)
     End Sub

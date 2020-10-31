@@ -17,8 +17,8 @@ Partial Public Class FrmAddDestination
     End Sub
     Private Sub FrmAddDestination_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If destinationId = 0 Then
-            txtCode.EditValue = Nothing
-            txtDestination.EditValue = Nothing
+            TxtCode.EditValue = Nothing
+            TxtDestination.EditValue = Nothing
             labelControl.Text = "Add Destination"
         Else
             labelControl.Text = "Edit Destination"
@@ -31,12 +31,12 @@ Partial Public Class FrmAddDestination
             .DestinationId = destinationId
         }
         If destination.GetById() Then
-            txtCode.EditValue = destination.DestinationCode
-            txtDestination.EditValue = destination.Destination
+            TxtCode.EditValue = destination.DestinationCode
+            TxtDestination.EditValue = destination.Destination
         End If
     End Sub
 
-    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
+    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles WindowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
             SaveDestination()
         ElseIf e.Button.Properties.Caption = "Cancel" Then
@@ -46,8 +46,8 @@ Partial Public Class FrmAddDestination
     End Sub
 
     Private Sub FrmAddDestination_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        txtCode.Focus()
-        txtCode.SelectAll()
+        TxtCode.Focus()
+        TxtCode.SelectAll()
     End Sub
 
     Private Sub CloseDestination()
@@ -57,8 +57,8 @@ Partial Public Class FrmAddDestination
     Private Sub SaveDestination()
         If DxValidationProvider1.Validate() Then
             Dim destination As New Destination With {
-                .DestinationCode = txtCode.Text,
-                .Destination = txtDestination.Text,
+                .DestinationCode = TxtCode.Text,
+                .Destination = TxtDestination.Text,
                 .DestinationId = destinationId
             }
             If destination.UniqueCode() Then

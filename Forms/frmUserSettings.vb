@@ -5,9 +5,9 @@
         Dim query As String = "SELECT * FROM Destination ORDER BY Destination;"
         Dim dt As DataTable = CType(ExClass.QueryGet(query), DataTable)
 
-        clbDestination.DataSource = dt
-        clbDestination.DisplayMember = "DestinationCode"
-        clbDestination.ValueMember = "DestinationID"
+        ClbDestination.DataSource = dt
+        ClbDestination.DisplayMember = "DestinationCode"
+        ClbDestination.ValueMember = "DestinationID"
 
     End Sub
 
@@ -16,9 +16,9 @@
         Dim query As String = "SELECT * FROM TourOperator ORDER BY TourOperator;"
         Dim dt As DataTable = ExClass.QueryGet(query)
 
-        clbOperator.DataSource = dt
-        clbOperator.DisplayMember = "TourOperator"
-        clbOperator.ValueMember = "TourOperatorID"
+        ClbOperator.DataSource = dt
+        ClbOperator.DisplayMember = "TourOperator"
+        ClbOperator.ValueMember = "TourOperatorID"
     End Sub
 
     Private Sub LoadUserDestinations()
@@ -28,7 +28,7 @@
                                             & " AND UserDestination.UserID = {0};", userId.ToString)
 
         Dim dt As DataTable = ExClass.QueryGet(query)
-        clbDestination.UnCheckAll()
+        ClbDestination.UnCheckAll()
 
         Dim destination As String = ""
         For x = 0 To dt.Rows.Count - 1
@@ -36,9 +36,9 @@
         Next
 
         Dim destinations() As String = destination.Split(";"c)
-        For x = 0 To clbDestination.ItemCount - 1
-            If destinations.Contains(CType(clbDestination.GetDisplayItemValue(x), String)) Then
-                clbDestination.SetItemChecked(x, True)
+        For x = 0 To ClbDestination.ItemCount - 1
+            If destinations.Contains(CType(ClbDestination.GetDisplayItemValue(x), String)) Then
+                ClbDestination.SetItemChecked(x, True)
             End If
         Next
 
@@ -52,16 +52,16 @@
 
 
         Dim dt As DataTable = ExClass.QueryGet(query)
-        clbOperator.UnCheckAll()
+        ClbOperator.UnCheckAll()
 
         Dim tourOperator As String = ""
         For x = 0 To dt.Rows.Count - 1
             tourOperator &= dt.Rows(x)(0).ToString & ";"
         Next
         Dim tourOperators() As String = tourOperator.Split(";"c)
-        For x = 0 To clbOperator.ItemCount - 1
-            If tourOperators.Contains(CType(clbOperator.GetDisplayItemValue(x), String)) Then
-                clbOperator.SetItemChecked(x, True)
+        For x = 0 To ClbOperator.ItemCount - 1
+            If tourOperators.Contains(CType(ClbOperator.GetDisplayItemValue(x), String)) Then
+                ClbOperator.SetItemChecked(x, True)
             End If
         Next
     End Sub
@@ -79,7 +79,7 @@
         LoadOperators()
     End Sub
 
-    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
+    Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles WindowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
             SaveSettings()
         ElseIf e.Button.Properties.Caption = "Cancel" Then
@@ -105,7 +105,7 @@
     Private Function SaveUserDestinations() As Boolean
         Dim result As Boolean
         Dim destinationString As String = ""
-        For Each item As Object In clbDestination.CheckedItems
+        For Each item As Object In ClbDestination.CheckedItems
             Dim row As DataRowView = TryCast(item, DataRowView)
             destinationString &= String.Format("({0}, {1}), ", userId.ToString, row("DestinationID"))
         Next
@@ -129,7 +129,7 @@
     Private Function SaveUserOperators() As Boolean
         Dim result As Boolean
         Dim operatorString As String = ""
-        For Each item As Object In clbOperator.CheckedItems
+        For Each item As Object In ClbOperator.CheckedItems
             Dim row As DataRowView = TryCast(item, DataRowView)
             operatorString &= String.Format("({0}, {1}), ", userId.ToString, row("TourOperatorID"))
         Next

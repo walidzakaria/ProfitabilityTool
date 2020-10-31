@@ -1,13 +1,13 @@
 ﻿Public Class FrmAddUser 
     Public Shared userId As Integer = 0
     Private Sub Clear()
-        txtUsername.Text = ""
-        txtFullName.Text = ""
-        txtEmail.Text = ""
+        TxtUsername.Text = ""
+        TxtFullName.Text = ""
+        TxtEmail.Text = ""
 
-        txtPassword.Text = ""
-        txtRetype.Text = ""
-        rgAuthority.SelectedIndex = 1
+        TxtPassword.Text = ""
+        TxtRetype.Text = ""
+        RgAuthority.SelectedIndex = 1
         LayoutControlItem4.Enabled = True
         LayoutControlItem5.Enabled = True
 
@@ -19,12 +19,12 @@
         }
         user.GetById()
 
-        txtUsername.EditValue = user.Username
-        txtFullName.EditValue = user.Fullname
-        txtEmail.EditValue = user.Mail
-        rgAuthority.EditValue = user.Authority
-        rgActive.EditValue = user.Active
-        rgLocked.EditValue = user.IsLocked
+        TxtUsername.EditValue = user.Username
+        TxtFullName.EditValue = user.Fullname
+        TxtEmail.EditValue = user.Mail
+        RgAuthority.EditValue = user.Authority
+        RgActive.EditValue = user.Active
+        RgLocked.EditValue = user.IsLocked
         LayoutControlItem4.Enabled = False
         LayoutControlItem5.Enabled = False
 
@@ -50,7 +50,7 @@
     End Sub
 
     Private Sub FrmAddUser_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        txtUsername.Focus()
+        TxtUsername.Focus()
     End Sub
 
     Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
@@ -70,13 +70,13 @@
     Private Sub UpdateUser()
         If DxValidationProvider2.Validate() Then
             Dim user As New Login With {
-                .Username = txtUsername.EditValue.ToString,
-                .Fullname = txtFullName.EditValue.ToString,
-                .Password = txtPassword.EditValue.ToString,
-                .Mail = txtEmail.EditValue.ToString,
-                .Authority = rgAuthority.EditValue.ToString,
-                .Active = CBool(rgActive.EditValue),
-                .IsLocked = CBool(rgLocked.EditValue)
+                .Username = TxtUsername.EditValue.ToString,
+                .Fullname = TxtFullName.EditValue.ToString,
+                .Password = TxtPassword.EditValue.ToString,
+                .Mail = TxtEmail.EditValue.ToString,
+                .Authority = RgAuthority.EditValue.ToString,
+                .Active = CBool(RgActive.EditValue),
+                .IsLocked = CBool(RgLocked.EditValue)
             }
             If Not user.IsLocked Then
                 user.InvalidLogins = 0
@@ -102,13 +102,13 @@
 
         If DxValidationProvider1.Validate() Then
             Dim user As New Login With {
-                .Username = txtUsername.EditValue.ToString,
-                .Fullname = txtFullName.EditValue.ToString,
-                .Password = txtPassword.EditValue.ToString,
-                .Mail = txtEmail.EditValue.ToString,
-                .Authority = rgAuthority.EditValue.ToString,
-                .Active = CBool(rgActive.EditValue),
-                .IsLocked = CBool(rgLocked.EditValue),
+                .Username = TxtUsername.EditValue.ToString,
+                .Fullname = TxtFullName.EditValue.ToString,
+                .Password = TxtPassword.EditValue.ToString,
+                .Mail = TxtEmail.EditValue.ToString,
+                .Authority = RgAuthority.EditValue.ToString,
+                .Active = CBool(RgActive.EditValue),
+                .IsLocked = CBool(RgLocked.EditValue),
                 .InvalidLogins = 0
             }
 
