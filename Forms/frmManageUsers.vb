@@ -1,4 +1,5 @@
-﻿Public Class FrmManageUsers
+﻿Imports DevExpress.XtraEditors
+Public Class FrmManageUsers
 
     Private Sub LoadAuthorityOptions()
         Dim dt As New DataTable()
@@ -90,15 +91,15 @@
         End If
 
         ID = CInt(gridView.GetFocusedRowCellValue("LoginID"))
-        Dim DiaR As DialogResult = MessageBox.Show("Are you sure you want to reset user password to be '123456'?", "Password Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim DiaR As DialogResult = XtraMessageBox.Show("Are you sure you want to reset user password to be '123456'?", "Password Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If DiaR = DialogResult.Yes Then
             Dim user As New Login With {
                 .LoginId = ID
             }
             If user.ResetPassword() Then
-                MsgBox("Password was reset to '123456'!")
+                XtraMessageBox.Show("Password was reset to '123456'!")
             Else
-                MsgBox("Failed to reset password!")
+                XtraMessageBox.Show("Failed to reset password!")
             End If
         End If
 

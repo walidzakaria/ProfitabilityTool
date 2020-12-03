@@ -1,4 +1,5 @@
-﻿Public Class FrmSQL
+﻿Imports DevExpress.XtraEditors
+Public Class FrmSQL
 
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
         MeQuery.EditValue = Nothing
@@ -19,7 +20,7 @@
                 GridControl1.DataSource = dt
                 GridView1.PopulateColumns()
             Catch ex As Exception
-                MsgBox(ex.ToString)
+                XtraMessageBox.Show(ex.ToString)
             End Try
 
         Else

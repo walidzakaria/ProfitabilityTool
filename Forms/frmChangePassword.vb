@@ -1,4 +1,5 @@
-﻿Public Class FrmChangePassword
+﻿Imports DevExpress.XtraEditors
+Public Class FrmChangePassword
     Sub New()
         InitializeComponent()
     End Sub
@@ -35,16 +36,16 @@
 
     Private Sub BtnOK_Click(sender As Object, e As EventArgs) Handles BtnOK.Click
         If TxtOldPassword.Text = "" Then
-            MsgBox("Please enter your old password!")
+            XtraMessageBox.Show("Please enter your old password!")
             TxtOldPassword.Focus()
         ElseIf TxtNewPassword.Text = "" Then
-            MsgBox("Please enter your new password!")
+            XtraMessageBox.Show("Please enter your new password!")
             TxtNewPassword.Focus()
         ElseIf TxtRetype.Text = "" Then
-            MsgBox("Please retype your new password!")
+            XtraMessageBox.Show("Please retype your new password!")
             TxtRetype.Focus()
         ElseIf TxtNewPassword.Text <> TxtRetype.Text Then
-            MessageBox.Show("The entered passwords are different!", "Wrong Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            XtraMessageBox.Show("The entered passwords are different!", "Wrong Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
             TxtRetype.Text = ""
             TxtNewPassword.Focus()
             TxtNewPassword.SelectAll()
@@ -54,17 +55,17 @@
                 .Password = TxtOldPassword.Text
             }
             If user.Password <> GV.CurrentUser.Password Then
-                MessageBox.Show("The entered passwords are different!", "Wrong Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                XtraMessageBox.Show("The entered passwords are different!", "Wrong Password", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 TxtRetype.Text = ""
                 TxtNewPassword.Focus()
                 TxtNewPassword.SelectAll()
             Else
                 If user.ChangePassowrd(TxtNewPassword.Text) Then
                     GV.CurrentUser.Password = user.Password
-                    MsgBox("Password changed successfully!")
+                    XtraMessageBox.Show("Password changed successfully!")
                     Me.Close()
                 Else
-                    MsgBox("Failed to change your password!")
+                    XtraMessageBox.Show("Failed to change your password!")
                 End If
             End If
         End If

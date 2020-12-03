@@ -22,10 +22,13 @@ Partial Class FrmSplashScreen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSplashScreen))
         Me.LabelStatus = New DevExpress.XtraEditors.LabelControl()
         Me.LabelCopyright = New DevExpress.XtraEditors.LabelControl()
         Me.ProgressBarControl = New DevExpress.XtraEditors.MarqueeProgressBarControl()
         Me.PeImage = New DevExpress.XtraEditors.PictureEdit()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.ProgressBarControl.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PeImage.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,6 +74,10 @@ Partial Class FrmSplashScreen
         Me.PeImage.Size = New System.Drawing.Size(426, 180)
         Me.PeImage.TabIndex = 14
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 3500
+        '
         'FrmSplashScreen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -80,8 +87,8 @@ Partial Class FrmSplashScreen
         Me.Controls.Add(Me.LabelStatus)
         Me.Controls.Add(Me.LabelCopyright)
         Me.Controls.Add(Me.ProgressBarControl)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmSplashScreen"
-        Me.Text = "Form1"
         CType(Me.ProgressBarControl.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PeImage.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -92,4 +99,5 @@ Partial Class FrmSplashScreen
     Private WithEvents LabelStatus As DevExpress.XtraEditors.LabelControl
     Private WithEvents LabelCopyright As DevExpress.XtraEditors.LabelControl
     Private WithEvents ProgressBarControl As DevExpress.XtraEditors.MarqueeProgressBarControl
+    Friend WithEvents Timer1 As Timer
 End Class

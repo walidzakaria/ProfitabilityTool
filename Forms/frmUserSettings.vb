@@ -1,4 +1,5 @@
-﻿Public Class FrmUserSettings 
+﻿Imports DevExpress.XtraEditors
+Public Class FrmUserSettings
     Public Shared userId As Integer
     Private Sub LoadDestinations()
 
@@ -93,11 +94,11 @@
         Dim saveDestinations As Boolean = SaveUserDestinations()
         Dim saveOperators As Boolean = SaveUserOperators()
         If saveDestinations = saveOperators = True Then
-            MsgBox("Settings saved successfully!")
+            XtraMessageBox.Show("Settings saved successfully!")
             Me.DialogResult = DialogResult.OK
             Me.Close()
         Else
-            MsgBox("Failed to save!")
+            XtraMessageBox.Show("Failed to save!")
         End If
 
     End Sub

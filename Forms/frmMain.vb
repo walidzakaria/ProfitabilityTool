@@ -1,5 +1,5 @@
 ﻿Imports DevExpress.LookAndFeel
-
+Imports DevExpress.XtraEditors
 
 Partial Public Class FrmMain
     Dim bookingDT As New DataTable()
@@ -140,7 +140,7 @@ Partial Public Class FrmMain
         If formatError Then
             result = Nothing
             Wait(False)
-            MsgBox(errorMessage)
+            XtraMessageBox.Show(errorMessage)
         End If
         Return result
     End Function
@@ -278,7 +278,7 @@ Partial Public Class FrmMain
 
             If Not result = "True" Then
                 Wait(False)
-                MsgBox(result)
+                XtraMessageBox.Show(result)
             End If
         End If
         Wait(False)
@@ -286,12 +286,12 @@ Partial Public Class FrmMain
 
     Public Sub UpdateCertainRow(ByVal rowHandle As Integer, ByVal booking As Booking)
 
-        For x = 0 To BookingDT.Columns.Count - 1
-            BookingDT.Columns(x).ReadOnly = False
+        For x = 0 To bookingDT.Columns.Count - 1
+            bookingDT.Columns(x).ReadOnly = False
         Next
 
 
-        With BookingDT
+        With bookingDT
             .Rows(rowHandle).SetField("Reference", booking.Reference)
             .Rows(rowHandle).SetField("HotelCode", booking.HotelCode)
             .Rows(rowHandle).SetField("HotelName", booking.HotelName)
@@ -340,13 +340,13 @@ Partial Public Class FrmMain
 
     Public Sub UpdateCertainRow(ByVal adjustPrice As Boolean, ByVal booking As Booking)
 
-        For x = 0 To BookingDT.Columns.Count - 1
-            BookingDT.Columns(x).ReadOnly = False
+        For x = 0 To bookingDT.Columns.Count - 1
+            bookingDT.Columns(x).ReadOnly = False
         Next
 
         For x = 0 To GridView1.RowCount - 1
             If GridView1.IsRowSelected(x) And FrmEdit.BookingsList.Contains(CInt(GridView1.GetRowCellValue(x, "BookingID"))) Then
-                With BookingDT
+                With bookingDT
                     .Rows(x).SetField("ActionBy", booking.LastUser.Username)
                     .Rows(x).SetField("Status", booking.Status)
                     .Rows(x).SetField("Comments", booking.Comments)
@@ -377,10 +377,10 @@ Partial Public Class FrmMain
     Private Sub LoadData(ByVal status As String, ByVal allCountries As Boolean)
 
         If BeCountry.EditValue Is Nothing And Not allCountries Then
-            MsgBox("Please select destination!")
+            XtraMessageBox.Show("Please select destination!")
             Exit Sub
         ElseIf GV.CurrentUser.UserOperators = "" And Not allCountries Then
-            MsgBox("You don't have permission to view data!")
+            XtraMessageBox.Show("You don't have permission to view data!")
             Exit Sub
         End If
 
@@ -419,8 +419,8 @@ Partial Public Class FrmMain
 
         End If
 
-        BookingDT = ExClass.QueryGet(query)
-        GridControl1.DataSource = BookingDT
+        bookingDT = ExClass.QueryGet(query)
+        GridControl1.DataSource = bookingDT
 
         Wait(False)
 
@@ -472,9 +472,18 @@ Partial Public Class FrmMain
     End Sub
 
     Private Sub FrmMain_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        LockBookings("", False)
-        My.Settings.Theme = UserLookAndFeel.Default.SkinName.ToString
-        My.Settings.Save()
+        If e.CloseReason = CloseReason.UserClosing Then
+            Dim mboxResult As DialogResult = XtraMessageBox.Show("Are you sure you want to close?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If mboxResult = DialogResult.Yes Then
+                LockBookings("", False)
+                My.Settings.Theme = UserLookAndFeel.Default.SkinName.ToString
+                My.Settings.Save()
+                Application.Exit()
+                e.Cancel = False
+            Else
+                e.Cancel = True
+            End If
+        End If
     End Sub
 
     Private Sub FrmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -513,7 +522,6 @@ Partial Public Class FrmMain
 
     Private Sub BtnExit_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnExit.ItemClick
         Me.Close()
-        Application.Exit()
     End Sub
 
     Private Sub BtnManageUsers_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnManageUsers.ItemClick
@@ -565,7 +573,7 @@ Partial Public Class FrmMain
         Dim status As String = " AND Junk = 0 AND GwgStatus != 'Can' AND ([Status] IS NULL OR [Status] = '') AND ("
 
         If Not BcExcessive.Checked And Not BcNegative.Checked And Not BcMismatch.Checked Then
-            MsgBox("Please select at least one option!")
+            XtraMessageBox.Show("Please select at least one option!")
             Exit Sub
         End If
 
@@ -592,7 +600,7 @@ Partial Public Class FrmMain
     Private Sub BtnShow_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnShow.ItemClick
         Dim status As String = " AND Junk = 0 AND GwgStatus != 'Can' AND ("
         If Not BcPendingDmc.Checked And Not BcPendingTo.Checked And Not BcFixedDmc.Checked And Not BcFixedTo.Checked And Not BcNewRecord.Checked Then
-            MsgBox("Please select at least one option!")
+            XtraMessageBox.Show("Please select at least one option!")
             Exit Sub
         End If
 
@@ -622,7 +630,7 @@ Partial Public Class FrmMain
             If BcPendingDmc.Checked Or BcFixedDmc.Checked Or BcPendingTo.Checked Or BcFixedTo.Checked Then
                 status &= " OR "
             End If
-            status &= "[Status] IS NULL"
+            status &= "([Status] IS NULL OR [Status] = '')"
         End If
         status &= ");"
         LoadData(status, False)
@@ -683,7 +691,7 @@ Partial Public Class FrmMain
             If dt.Rows.Count > 0 Then
                 Dim message As String = String.Format("The booking will open as Read-Only as it's locked by user '{0}' since '{1}'.",
                                                       dt.Rows(0)(1), CDate(dt.Rows(0)(2)).ToString("HH:mm"))
-                MsgBox(message)
+                XtraMessageBox.Show(message)
                 FrmEdit.NoSave = True
             Else
                 FrmEdit.NoSave = False
@@ -703,7 +711,7 @@ Partial Public Class FrmMain
                                             listOfReadOnlyBookings)
 
 
-                MsgBox(message)
+                XtraMessageBox.Show(message)
                 FrmEdit.NoSave = True
             Else
                 FrmEdit.NoSave = False

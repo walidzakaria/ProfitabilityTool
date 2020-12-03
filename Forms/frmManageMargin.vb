@@ -1,4 +1,5 @@
-﻿Public Class FrmManageMargin
+﻿Imports DevExpress.XtraEditors
+Public Class FrmManageMargin
     Private Sub LoadAllMargins()
 
         Dim query As String = "SELECT Ma.MarginID, De.Destination, TourOperator.TourOperator, Ma.MarginFrom, Ma.MarginTo, Ma.DifferenceFrom, Ma.DifferenceTo, Ma.EffectiveDate" _
@@ -52,7 +53,7 @@
         Dim marginId As Integer
         marginId = CInt(gridView.GetFocusedRowCellValue("MarginID"))
         If marginId <> 0 Then
-            Dim diaR As DialogResult = MessageBox.Show("Are you sure you want to delete this record?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            Dim diaR As DialogResult = xtraMessageBox.Show("Are you sure you want to delete this record?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If diaR = DialogResult.Yes Then
                 Dim margin As New Margin With {
                     .MarginId = marginId

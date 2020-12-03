@@ -1,4 +1,5 @@
-﻿Public Class FrmLogin
+﻿Imports DevExpress.XtraEditors
+Public Class FrmLogin
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Close()
@@ -8,11 +9,11 @@
     Private Sub BtnOK_Click(sender As Object, e As EventArgs) Handles BtnOK.Click
 
         If TxtUserName.Text = "" Then
-            MsgBox("Please enter username!")
+            XtraMessageBox.Show("Please enter username!")
             TxtUserName.Focus()
             Exit Sub
         ElseIf TxtPassword.Text = "" Then
-            MsgBox("Please enter password!")
+            XtraMessageBox.Show("Please enter password!")
             TxtPassword.Focus()
             Exit Sub
         End If
@@ -26,11 +27,11 @@
         validUser = user.ValidLogin()
 
         If user.IsLocked Then
-            MsgBox("The entered user is had been locked, please contact the administrator!")
+            XtraMessageBox.Show("The entered user is had been locked, please contact the administrator!")
         ElseIf Not validUser Then
-            MsgBox("Invalid Login!")
+            XtraMessageBox.Show("Invalid Login!")
         ElseIf Not user.Active Then
-            MsgBox("The entered user is deactivated!")
+            XtraMessageBox.Show("The entered user is deactivated!")
         Else
             LblLoading.Visible = True
             Application.DoEvents()

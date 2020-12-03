@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports DevExpress.XtraEditors
 
 Public Class Models
 
@@ -460,7 +461,7 @@ Public Class Booking
 
         Dim queryResult As String = ExClass.QuerySet(query)
         If queryResult <> "True" Then
-            MsgBox(queryResult)
+            XtraMessageBox.Show(queryResult)
             result = False
         End If
 
@@ -602,7 +603,7 @@ Public Class Comment
 
         Dim queryResult As String = ExClass.QuerySet(query)
         If queryResult <> "True" Then
-            MsgBox(queryResult)
+            XtraMessageBox.Show(queryResult)
             result = False
         End If
 
@@ -635,7 +636,7 @@ Public Class Comment
 
         Dim queryResult As String = ExClass.QuerySet(query)
         If queryResult <> "True" Then
-            MsgBox(queryResult)
+            XtraMessageBox.Show(queryResult)
             result = False
         End If
 
@@ -679,7 +680,7 @@ Public Class Destination
             result = True
             FrmMain.FillRibbonDestinations()
         Else
-            MsgBox(queryResult)
+            XtraMessageBox.Show(queryResult)
         End If
 
         Return result
@@ -736,7 +737,7 @@ Public Class TourOperator
         If queryResult = "True" Then
             result = True
         Else
-            MsgBox(queryResult)
+            XtraMessageBox.Show(queryResult)
         End If
 
         Return result
@@ -789,7 +790,7 @@ Public Class Margin
         If queryResult = "True" Then
             result = True
         Else
-            MsgBox(queryResult)
+            XtraMessageBox.Show(queryResult)
         End If
 
         Return result
@@ -825,7 +826,7 @@ Public Class Margin
         If messageResult = "True" Then
             result = True
         Else
-            MsgBox(messageResult)
+            XtraMessageBox.Show(messageResult)
         End If
 
         Return result
@@ -859,7 +860,7 @@ Public Class Currency
         If queryResult = "True" Then
             result = True
         Else
-            MsgBox(queryResult)
+            XtraMessageBox.Show(queryResult)
         End If
 
         Return result
@@ -892,7 +893,7 @@ Public Class Currency
         If messageResult = "True" Then
             result = True
         Else
-            MsgBox(messageResult)
+            XtraMessageBox.Show(messageResult)
         End If
 
         Return result

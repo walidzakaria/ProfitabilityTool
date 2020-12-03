@@ -67,7 +67,7 @@ Partial Public Class FrmAddDestination
                     Me.Close()
                 End If
             Else
-                MsgBox("Please enter a unique code")
+                XtraMessageBox.Show("Please enter a unique code!")
             End If
         End If
     End Sub

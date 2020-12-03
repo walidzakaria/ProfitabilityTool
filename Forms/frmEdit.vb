@@ -150,7 +150,7 @@ Partial Public Class FrmEdit
 
                 If currentBooking.GetHashCode <> tempBooking.GetHashCode Then
                     Dim diaResult As DialogResult
-                    diaResult = MessageBox.Show("Want to save changes to " & currentBooking.Reference & "?", "Save", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
+                    diaResult = XtraMessageBox.Show("Want to save changes to " & currentBooking.Reference & "?", "Save", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
                     If diaResult = DialogResult.Yes Then
                         If currentBooking.Save() Then
                             UpdateChangedRow()
@@ -324,10 +324,10 @@ Partial Public Class FrmEdit
 
     Private Sub BtnSaveComment_Click(sender As Object, e As EventArgs) Handles BtnSaveComment.Click
         If LuStatus.EditValue Is Nothing Then
-            MsgBox("Please enter status!")
+            XtraMessageBox.Show("Please enter status!")
             LuStatus.Focus()
         ElseIf CStr(TxtComment.EditValue) = "" Then
-            MsgBox("please enter comment!")
+            XtraMessageBox.Show("please enter comment!")
             TxtComment.Focus()
         Else
             FrmMain.Wait(True)
@@ -362,7 +362,7 @@ Partial Public Class FrmEdit
                     End If
                 Else
                     FrmMain.Wait(False)
-                    MsgBox("Cannot save comment. All bookings are locked!")
+                    XtraMessageBox.Show("Cannot save comment. All bookings are locked!")
                     Exit Sub
                 End If
 

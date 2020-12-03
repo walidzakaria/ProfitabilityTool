@@ -1,4 +1,4 @@
-﻿
+﻿Imports DevExpress.XtraEditors
 Public Class FrmCurrency
     Private Sub LoadAllCurrencies()
 
@@ -47,7 +47,7 @@ Public Class FrmCurrency
         Dim currencyId As Integer
         currencyId = CInt(gridView.GetFocusedRowCellValue("ExchangeID"))
         If currencyId <> 0 Then
-            Dim diaR As DialogResult = MessageBox.Show("Are you sure you want to delete this record?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            Dim diaR As DialogResult = XtraMessageBox.Show("Are you sure you want to delete this record?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If diaR = DialogResult.Yes Then
                 Dim currency As New Currency With {
                     .CurrencyId = currencyId

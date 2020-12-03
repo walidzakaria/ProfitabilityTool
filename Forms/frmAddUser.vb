@@ -1,4 +1,5 @@
-﻿Public Class FrmAddUser 
+﻿Imports DevExpress.XtraEditors
+Public Class FrmAddUser
     Public Shared userId As Integer = 0
     Private Sub Clear()
         TxtUsername.Text = ""
@@ -84,14 +85,14 @@
             user.LoginId = userId
 
             If Not user.UniqueUsername Then
-                MsgBox("The entered username already exists, please select a unique username!")
+                XtraMessageBox.Show("The entered username already exists, please select a unique username!")
             Else
                 If user.Update Then
-                    MsgBox(String.Format("User '{0}' has been updated successfully!", user.Username))
+                    XtraMessageBox.Show(String.Format("User '{0}' has been updated successfully!", user.Username))
                     Me.DialogResult = DialogResult.OK
                     Me.Close()
                 Else
-                    MsgBox("Failed to update!")
+                    XtraMessageBox.Show("Failed to update!")
                 End If
             End If
         End If
@@ -113,14 +114,14 @@
             }
 
             If Not user.UniqueUsername Then
-                MsgBox("The entered username already exists, please select a unique username!")
+                XtraMessageBox.Show("The entered username already exists, please select a unique username!")
             Else
                 If user.Signup() Then
-                    MsgBox(String.Format("User '{0}' has been signed up successfully!", user.Username))
+                    XtraMessageBox.Show(String.Format("User '{0}' has been signed up successfully!", user.Username))
                     Me.DialogResult = DialogResult.OK
                     Me.Close()
                 Else
-                    MsgBox("Failed to sign up!")
+                    XtraMessageBox.Show("Failed to sign up!")
                 End If
             End If
         End If

@@ -182,7 +182,7 @@
         '
         Me.BtnRate.Caption = "Import"
         Me.BtnRate.Id = 2
-        Me.BtnRate.ImageOptions.Image = CType(resources.GetObject("btnRate.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnRate.ImageOptions.Image = CType(resources.GetObject("BtnRate.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnRate.Name = "BtnRate"
         Me.BtnRate.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -190,7 +190,7 @@
         '
         Me.BtnSave.Caption = "Save"
         Me.BtnSave.Id = 3
-        Me.BtnSave.ImageOptions.Image = CType(resources.GetObject("btnSave.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnSave.ImageOptions.Image = CType(resources.GetObject("BtnSave.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnSave.Name = "BtnSave"
         Me.BtnSave.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -198,7 +198,7 @@
         '
         Me.BtnLoad.Caption = "Load" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "All"
         Me.BtnLoad.Id = 4
-        Me.BtnLoad.ImageOptions.Image = CType(resources.GetObject("btnLoad.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnLoad.ImageOptions.Image = CType(resources.GetObject("BtnLoad.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnLoad.Name = "BtnLoad"
         Me.BtnLoad.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -206,8 +206,8 @@
         '
         Me.BtnSwitchUser.Caption = "Switch" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "User"
         Me.BtnSwitchUser.Id = 5
-        Me.BtnSwitchUser.ImageOptions.Image = CType(resources.GetObject("btnSwitchUser.ImageOptions.Image"), System.Drawing.Image)
-        Me.BtnSwitchUser.ImageOptions.LargeImage = CType(resources.GetObject("btnSwitchUser.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnSwitchUser.ImageOptions.Image = CType(resources.GetObject("BtnSwitchUser.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnSwitchUser.ImageOptions.LargeImage = CType(resources.GetObject("BtnSwitchUser.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BtnSwitchUser.Name = "BtnSwitchUser"
         Me.BtnSwitchUser.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -215,8 +215,8 @@
         '
         Me.BtnManageUsers.Caption = "Manage Users"
         Me.BtnManageUsers.Id = 6
-        Me.BtnManageUsers.ImageOptions.Image = CType(resources.GetObject("btnManageUsers.ImageOptions.Image"), System.Drawing.Image)
-        Me.BtnManageUsers.ImageOptions.LargeImage = CType(resources.GetObject("btnManageUsers.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnManageUsers.ImageOptions.Image = CType(resources.GetObject("BtnManageUsers.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnManageUsers.ImageOptions.LargeImage = CType(resources.GetObject("BtnManageUsers.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BtnManageUsers.Name = "BtnManageUsers"
         Me.BtnManageUsers.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -224,8 +224,8 @@
         '
         Me.BtnChangePassword.Caption = "Change" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Password"
         Me.BtnChangePassword.Id = 8
-        Me.BtnChangePassword.ImageOptions.Image = CType(resources.GetObject("btnChangePassword.ImageOptions.Image"), System.Drawing.Image)
-        Me.BtnChangePassword.ImageOptions.LargeImage = CType(resources.GetObject("btnChangePassword.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnChangePassword.ImageOptions.Image = CType(resources.GetObject("BtnChangePassword.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnChangePassword.ImageOptions.LargeImage = CType(resources.GetObject("BtnChangePassword.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BtnChangePassword.Name = "BtnChangePassword"
         Me.BtnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -233,8 +233,8 @@
         '
         Me.BtnExit.Caption = "Exit"
         Me.BtnExit.Id = 9
-        Me.BtnExit.ImageOptions.Image = CType(resources.GetObject("btnExit.ImageOptions.Image"), System.Drawing.Image)
-        Me.BtnExit.ImageOptions.LargeImage = CType(resources.GetObject("btnExit.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnExit.ImageOptions.Image = CType(resources.GetObject("BtnExit.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnExit.ImageOptions.LargeImage = CType(resources.GetObject("BtnExit.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BtnExit.Name = "BtnExit"
         Me.BtnExit.RibbonStyle = CType((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
@@ -288,8 +288,8 @@
         '
         Me.BtnDestination.Caption = "" & Global.Microsoft.VisualBasic.ChrW(10) & "Destination"
         Me.BtnDestination.Id = 14
-        Me.BtnDestination.ImageOptions.Image = CType(resources.GetObject("btnDestination.ImageOptions.Image"), System.Drawing.Image)
-        Me.BtnDestination.ImageOptions.LargeImage = CType(resources.GetObject("btnDestination.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnDestination.ImageOptions.Image = CType(resources.GetObject("BtnDestination.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnDestination.ImageOptions.LargeImage = CType(resources.GetObject("BtnDestination.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BtnDestination.Name = "BtnDestination"
         Me.BtnDestination.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -297,7 +297,7 @@
         '
         Me.BtnManageMargin.Caption = "" & Global.Microsoft.VisualBasic.ChrW(10) & "Margin"
         Me.BtnManageMargin.Id = 15
-        Me.BtnManageMargin.ImageOptions.Image = CType(resources.GetObject("btnManageMargin.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnManageMargin.ImageOptions.Image = CType(resources.GetObject("BtnManageMargin.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnManageMargin.Name = "BtnManageMargin"
         Me.BtnManageMargin.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -305,7 +305,7 @@
         '
         Me.BtnJunk.Caption = "Junk"
         Me.BtnJunk.Id = 16
-        Me.BtnJunk.ImageOptions.Image = CType(resources.GetObject("btnJunk.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnJunk.ImageOptions.Image = CType(resources.GetObject("BtnJunk.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnJunk.Name = "BtnJunk"
         Me.BtnJunk.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -313,8 +313,8 @@
         '
         Me.BrnCanceled.Caption = "Canceled"
         Me.BrnCanceled.Id = 17
-        Me.BrnCanceled.ImageOptions.Image = CType(resources.GetObject("brnCanceled.ImageOptions.Image"), System.Drawing.Image)
-        Me.BrnCanceled.ImageOptions.LargeImage = CType(resources.GetObject("brnCanceled.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BrnCanceled.ImageOptions.Image = CType(resources.GetObject("BrnCanceled.ImageOptions.Image"), System.Drawing.Image)
+        Me.BrnCanceled.ImageOptions.LargeImage = CType(resources.GetObject("BrnCanceled.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BrnCanceled.Name = "BrnCanceled"
         Me.BrnCanceled.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -322,8 +322,8 @@
         '
         Me.BtnMatching.Caption = "Matching"
         Me.BtnMatching.Id = 18
-        Me.BtnMatching.ImageOptions.Image = CType(resources.GetObject("btnMatching.ImageOptions.Image"), System.Drawing.Image)
-        Me.BtnMatching.ImageOptions.LargeImage = CType(resources.GetObject("btnMatching.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnMatching.ImageOptions.Image = CType(resources.GetObject("BtnMatching.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnMatching.ImageOptions.LargeImage = CType(resources.GetObject("BtnMatching.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BtnMatching.Name = "BtnMatching"
         Me.BtnMatching.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -361,7 +361,7 @@
         '
         Me.BtnShowDefict.Caption = "Show" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Deficit"
         Me.BtnShowDefict.Id = 22
-        Me.BtnShowDefict.ImageOptions.Image = CType(resources.GetObject("btnShowDefict.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnShowDefict.ImageOptions.Image = CType(resources.GetObject("BtnShowDefict.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnShowDefict.Name = "BtnShowDefict"
         Me.BtnShowDefict.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -405,7 +405,7 @@
         '
         Me.BtnShow.Caption = "Show"
         Me.BtnShow.Id = 27
-        Me.BtnShow.ImageOptions.Image = CType(resources.GetObject("btnShow.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnShow.ImageOptions.Image = CType(resources.GetObject("BtnShow.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnShow.Name = "BtnShow"
         Me.BtnShow.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -422,8 +422,8 @@
         '
         Me.BtnAddDispute.Caption = "Add Dispute"
         Me.BtnAddDispute.Id = 30
-        Me.BtnAddDispute.ImageOptions.Image = CType(resources.GetObject("btnAddDispute.ImageOptions.Image"), System.Drawing.Image)
-        Me.BtnAddDispute.ImageOptions.LargeImage = CType(resources.GetObject("btnAddDispute.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnAddDispute.ImageOptions.Image = CType(resources.GetObject("BtnAddDispute.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnAddDispute.ImageOptions.LargeImage = CType(resources.GetObject("BtnAddDispute.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BtnAddDispute.Name = "BtnAddDispute"
         Me.BtnAddDispute.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -431,8 +431,8 @@
         '
         Me.BtnTO.Caption = "T/O"
         Me.BtnTO.Id = 31
-        Me.BtnTO.ImageOptions.Image = CType(resources.GetObject("btnTO.ImageOptions.Image"), System.Drawing.Image)
-        Me.BtnTO.ImageOptions.LargeImage = CType(resources.GetObject("btnTO.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnTO.ImageOptions.Image = CType(resources.GetObject("BtnTO.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnTO.ImageOptions.LargeImage = CType(resources.GetObject("BtnTO.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BtnTO.Name = "BtnTO"
         Me.BtnTO.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -486,7 +486,7 @@
         '
         Me.BtnManageCurrency.Caption = "Currency"
         Me.BtnManageCurrency.Id = 41
-        Me.BtnManageCurrency.ImageOptions.Image = CType(resources.GetObject("btnManageCurrency.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnManageCurrency.ImageOptions.Image = CType(resources.GetObject("BtnManageCurrency.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnManageCurrency.Name = "BtnManageCurrency"
         Me.BtnManageCurrency.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -494,7 +494,7 @@
         '
         Me.BtnErrors.Caption = "Errors"
         Me.BtnErrors.Id = 42
-        Me.BtnErrors.ImageOptions.Image = CType(resources.GetObject("btnErrors.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnErrors.ImageOptions.Image = CType(resources.GetObject("BtnErrors.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnErrors.Name = "BtnErrors"
         Me.BtnErrors.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -502,7 +502,7 @@
         '
         Me.BtnAbout.Caption = "About"
         Me.BtnAbout.Id = 43
-        Me.BtnAbout.ImageOptions.Image = CType(resources.GetObject("btnAbout.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnAbout.ImageOptions.Image = CType(resources.GetObject("BtnAbout.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnAbout.Name = "BtnAbout"
         Me.BtnAbout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
