@@ -190,7 +190,7 @@ Partial Public Class FrmMain
         Dim actionBy As String
         Dim priceBreakdown As String
         Dim loginId As Integer = GV.CurrentUser.LoginId
-        Dim junk As Boolean
+        Dim junk As String
 
         For x = 0 To GridView1.RowCount - 1
 
@@ -248,7 +248,7 @@ Partial Public Class FrmMain
                     End If
 
 
-                    junk = CBool(Booking.CheckJunk(gwgStatus, marginCheck, Val(netRateHotelTC), hotelName))
+                    junk = (Booking.CheckJunk(gwgStatus, marginCheck, Val(purchasePrice), Val(salesPrice), Val(netRateHotelTC), hotelName)).ToString
                     lineText = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', N'{2}', '{3}', '{4}', '{5}', '{6}',
                                             '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', 
                                             '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}',
@@ -261,7 +261,7 @@ Partial Public Class FrmMain
                                                 roomType, board, duration, transferTo, transferFrom, pax, adult, child,
                                                 importDate, incomingAgency, bookingStateDesc, hotelFlag, missingBookings,
                                                 marginCheck, differenceTOPrice, actionBy, priceBreakdown, loginId,
-                                                junk.ToString, bookingStatus, mpImportDate)
+                                                junk, bookingStatus, mpImportDate)
 
                     query &= lineText
                 End If
@@ -387,11 +387,13 @@ Partial Public Class FrmMain
         Wait(True)
 
 
-        Dim startDate, endDate As Date
+        Dim startDate, endDate, importFrom, importTill As Date
         Dim destination As String
         startDate = CDate(BeDateFrom.EditValue)
         endDate = CDate(BeDateTo.EditValue)
         destination = CStr(BeCountry.EditValue)
+        importFrom = CDate(BeImportFrom.EditValue)
+        importTill = CDate(BeImportTill.EditValue)
 
 
         Dim querySelect As String = "SELECT BookingID, Reference, HotelCode, HotelName, HotelCountry, GwgStatus, PurchaseCurrency, PurchasePrice,
@@ -407,15 +409,19 @@ Partial Public Class FrmMain
         Dim query As String
         If Not allCountries Then
             query = String.Format("{0}
-                              WHERE HotelCountry = '{1}' AND (TravelDate BETWEEN '{2}' AND '{3}') AND CompanyGroup IN {4} {5};" _
+                              WHERE HotelCountry = '{1}' AND (TravelDate BETWEEN '{2}' AND '{3}') AND CompanyGroup IN {4} {5} AND ToolImport BETWEEN '{6}' AND '{7}' " _
                               , querySelect, destination,
                               startDate.ToString("MM/dd/yyyy"), endDate.ToString("MM/dd/yyyy"),
-                              GV.CurrentUser.UserOperators, status)
+                              GV.CurrentUser.UserOperators, status,
+                              importFrom.ToString("MM/dd/yyyy") & " 00:00:00.001",
+                              importTill.ToString("MM/dd/yyyy") & " 23:59:59.999")
         Else
             query = String.Format("{0}
-                              WHERE (TravelDate BETWEEN '{1}' AND '{2}' {3});" _
+                              WHERE (TravelDate BETWEEN '{1}' AND '{2}' {3}) AND ToolImport BETWEEN '{4}' AND '{5}' " _
                               , querySelect,
-                              startDate.ToString("MM/dd/yyyy"), endDate.ToString("MM/dd/yyyy"), status)
+                              startDate.ToString("MM/dd/yyyy"), endDate.ToString("MM/dd/yyyy"), status,
+                              importFrom.ToString("MM/dd/yyyy") & " 00:00:00.001",
+                              importTill.ToString("MM/dd/yyyy") & " 23:59:59.999")
 
         End If
 
@@ -443,11 +449,12 @@ Partial Public Class FrmMain
 
             If bookingId > 0 Then
                 ' Check if the booking is read-only
-                GetReadOnlyBookings(True, bookingId.ToString)
-                LockBookings(bookingId.ToString, True)
-                FrmEdit.BookingId = bookingId
-                FrmEdit.ShowDialog()
-                LockBookings(bookingId.ToString, False)
+                If Not IsReadOnlyBookings(True, bookingId.ToString) Then
+                    LockBookings(bookingId.ToString, True)
+                    FrmEdit.BookingId = bookingId
+                    FrmEdit.ShowDialog()
+                    LockBookings(bookingId.ToString, False)
+                End If
             End If
         ElseIf GridView1.SelectedRowsCount > 1 Then
             Dim bookingsList As New List(Of Integer)
@@ -458,11 +465,12 @@ Partial Public Class FrmMain
 
             ' Check if some bookings are locked.
             Dim bookings As String = String.Join(",", bookingsList.[Select](Function(i) i.ToString()).ToArray())
-            GetReadOnlyBookings(False, bookings)
-            LockBookings(bookings, True)
-            FrmEdit.BookingsList = bookingsList
-            FrmEdit.ShowDialog()
-            LockBookings(bookings, False)
+            If Not IsReadOnlyBookings(False, bookings) Then
+                LockBookings(bookings, True)
+                FrmEdit.BookingsList = bookingsList
+                FrmEdit.ShowDialog()
+                LockBookings(bookings, False)
+            End If
         End If
 
     End Sub
@@ -490,6 +498,8 @@ Partial Public Class FrmMain
 
         BeDateFrom.EditValue = My.Settings.RibbonDateFrom
         BeDateTo.EditValue = Today().AddYears(3)
+        BeImportFrom.EditValue = Today()
+        BeImportTill.EditValue = Today()
 
         If My.Settings.Destination <> "" Then
             Try
@@ -555,22 +565,24 @@ Partial Public Class FrmMain
     End Sub
 
     Private Sub BtnJunk_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnJunk.ItemClick
-        LoadData("AND Junk = 1 AND GwgStatus != 'Can'", False)
+        LoadData(" AND Junk = 1 ", False)
     End Sub
 
     Private Sub BrnCanceled_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BrnCanceled.ItemClick
-        LoadData("AND GwgStatus = 'Can'", False)
+        Dim status As String
+        status = " AND Junk = 0 AND GwgStatus = 'Can' AND MismatchCalc = 0 "
+        LoadData(status, False)
     End Sub
 
     Private Sub BtnMatching_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnMatching.ItemClick
         Dim status As String
         status = " AND Junk = 0 AND GwgStatus != 'Can' AND NegativeMargin = 0 
-                    AND ExcessiveMargin = 0 AND MismatchCalc = 0"
+                    AND ExcessiveMargin = 0 AND MismatchCalc = 0 "
         LoadData(status, False)
     End Sub
 
     Private Sub BtnShowDefict_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnShowDefict.ItemClick
-        Dim status As String = " AND Junk = 0 AND GwgStatus != 'Can' AND ([Status] IS NULL OR [Status] = '') AND ("
+        Dim status As String = " AND Junk = 0 AND ([Status] IS NULL OR [Status] = '') AND ("
 
         If Not BcExcessive.Checked And Not BcNegative.Checked And Not BcMismatch.Checked Then
             XtraMessageBox.Show("Please select at least one option!")
@@ -592,14 +604,14 @@ Partial Public Class FrmMain
             End If
             status &= "MismatchCalc = 1"
         End If
-        status &= ");"
+        status &= ")"
         LoadData(status, False)
 
     End Sub
 
     Private Sub BtnShow_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnShow.ItemClick
-        Dim status As String = " AND Junk = 0 AND GwgStatus != 'Can' AND ("
-        If Not BcPendingDmc.Checked And Not BcPendingTo.Checked And Not BcFixedDmc.Checked And Not BcFixedTo.Checked And Not BcNewRecord.Checked Then
+        Dim status As String = " AND Junk = 0 AND ("
+        If Not BcPendingDmc.Checked And Not BcPendingTo.Checked And Not BcFixedDmc.Checked And Not BcFixedTo.Checked Then
             XtraMessageBox.Show("Please select at least one option!")
             Exit Sub
         End If
@@ -626,13 +638,7 @@ Partial Public Class FrmMain
             End If
             status &= "[Status] = 'FIXED T/O'"
         End If
-        If BcNewRecord.Checked Then
-            If BcPendingDmc.Checked Or BcFixedDmc.Checked Or BcPendingTo.Checked Or BcFixedTo.Checked Then
-                status &= " OR "
-            End If
-            status &= "([Status] IS NULL OR [Status] = '')"
-        End If
-        status &= ");"
+        status &= ")"
         LoadData(status, False)
     End Sub
 
@@ -684,8 +690,8 @@ Partial Public Class FrmMain
         defaultGridLayout.Seek(0, System.IO.SeekOrigin.Begin)
     End Sub
 
-    Private Sub GetReadOnlyBookings(ByVal singleBooking As Boolean, ByVal bookingIDs As String)
-        ' Check if the booking(s) is/are locked.
+    Private Function IsReadOnlyBookings(ByVal singleBooking As Boolean, ByVal bookingIDs As String) As Boolean
+        Dim result As Boolean
         If singleBooking Then
             Dim dt As DataTable = IsLocked(bookingIDs)
             If dt.Rows.Count > 0 Then
@@ -693,8 +699,10 @@ Partial Public Class FrmMain
                                                       dt.Rows(0)(1), CDate(dt.Rows(0)(2)).ToString("HH:mm"))
                 XtraMessageBox.Show(message)
                 FrmEdit.NoSave = True
+                result = True
             Else
                 FrmEdit.NoSave = False
+                result = False
             End If
         Else
             Dim dt As DataTable = IsLocked(bookingIDs)
@@ -713,12 +721,14 @@ Partial Public Class FrmMain
 
                 XtraMessageBox.Show(message)
                 FrmEdit.NoSave = True
+                result = True
             Else
                 FrmEdit.NoSave = False
+                result = False
             End If
         End If
-
-    End Sub
+        Return result
+    End Function
     Private Function IsLocked(ByVal bookingIDs As String) As DataTable
         ' Return bookings locked by other users
         Dim result As DataTable
@@ -738,18 +748,18 @@ Partial Public Class FrmMain
         Dim query As String
         If setLocked Then
             query = String.Format("
-                        UPDATE Booking SET Locked = {0}, LockTime = GETDATE() WHERE BookingID IN ({1}) AND Locked IS NULL;
+                        UPDATE Booking SET Locked = {0}, LockTime = GETDATE() WHERE BookingID IN ({1}) AND Locked IS NULL
                     ", GV.CurrentUser.LoginId.ToString, bookingIDs)
         Else
 
 
             If bookingIDs <> "" Then
                 query = String.Format("
-                        UPDATE Booking SET Locked = NULL, LockTime = NULL WHERE BookingID IN ({0}) AND Locked = {1};
+                        UPDATE Booking SET Locked = NULL, LockTime = NULL WHERE BookingID IN ({0}) AND Locked = {1}
                     ", bookingIDs, GV.CurrentUser.LoginId.ToString)
             Else
                 query = String.Format("
-                        UPDATE Booking SET Locked = NULL, LockTime = NULL WHERE Locked = {0};
+                        UPDATE Booking SET Locked = NULL, LockTime = NULL WHERE Locked = {0}
                     ", GV.CurrentUser.LoginId.ToString)
             End If
         End If

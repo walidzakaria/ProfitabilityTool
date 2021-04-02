@@ -9,7 +9,11 @@
     End Sub
 
     Private Sub FrmSplashScreen_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Timer1.Enabled = True
+        If Not UpToDate() Then
+            RunUpdater()
+        Else
+            Timer1.Enabled = True
+        End If
     End Sub
 
     Public Enum SplashScreenCommand
@@ -23,4 +27,19 @@
         FrmLogin.Show()
     End Sub
 
+    Private Function UpToDate() As Boolean
+        Dim result As Boolean
+        Dim dt As DataTable = ExClass.QueryGet("SELECT * FROM VersionNumber;")
+        result = dt.Rows(0)(0).ToString.Equals(Application.ProductVersion)
+        Return result
+    End Function
+
+    Private Sub RunUpdater()
+        Shell("PR_Updater.exe")
+        Dim pProcess() As Process = System.Diagnostics.Process.GetProcessesByName("Profitability_Tool")
+        For Each p As Process In pProcess
+            p.Kill()
+        Next
+        Application.Exit()
+    End Sub
 End Class

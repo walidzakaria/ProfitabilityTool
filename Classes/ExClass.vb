@@ -135,10 +135,19 @@ Public Class ExClass
                     .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .GridColumn7.Visible = True
+                    .GridColumn7.OptionsColumn.AllowShowHide = True
+                    .GridColumn8.Visible = True
+                    .GridColumn8.OptionsColumn.AllowShowHide = True
+                    .GridColumn12.Visible = True
+                    .GridColumn12.OptionsColumn.AllowShowHide = True
                 End With
                 With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = True
                     .windowsUIButtonPanelMain.Buttons(3).Properties.Enabled = True
+                    .LayoutControlItem6.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
+                    .LayoutControlItem7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
+                    .LayoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
                 End With
             Case "RS"
                 With FrmMain
@@ -156,8 +165,6 @@ Public Class ExClass
                     .BcPendingTo.Checked = True
                     .BcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BcFixedTo.Checked = True
-                    .BcNewRecord.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .BcNewRecord.Checked = True
 
                     .BtnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
                     .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
@@ -165,29 +172,36 @@ Public Class ExClass
                     .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .GridColumn7.Visible = True
+                    .GridColumn7.OptionsColumn.AllowShowHide = True
+                    .GridColumn8.Visible = True
+                    .GridColumn8.OptionsColumn.AllowShowHide = True
+                    .GridColumn12.Visible = True
+                    .GridColumn12.OptionsColumn.AllowShowHide = True
                 End With
                 With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = True
                     .windowsUIButtonPanelMain.Buttons(3).Properties.Enabled = True
+                    .LayoutControlItem6.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
+                    .LayoutControlItem7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
+                    .LayoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
                 End With
             Case "DMC"
                 With FrmMain
                     .RibbonPageGroup1.Visible = False
-                    .BtnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .BrnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .BtnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .RibbonPageGroup5.Visible = False
+                    .BrnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .RibbonPageGroup5.Visible = True
                     .BcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BcPendingDmc.Checked = True
                     .BcFixedDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BcFixedDmc.Checked = True
                     .BcPendingTo.Checked = False
-                    .BcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BcPendingTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BcFixedTo.Checked = False
-                    .BcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .BcNewRecord.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .BcNewRecord.Checked = True
+                    .BcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
 
                     .BtnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
                     .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
@@ -195,10 +209,19 @@ Public Class ExClass
                     .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .GridColumn7.Visible = True
+                    .GridColumn7.OptionsColumn.AllowShowHide = True
+                    .GridColumn8.Visible = True
+                    .GridColumn8.OptionsColumn.AllowShowHide = True
+                    .GridColumn12.Visible = True
+                    .GridColumn12.OptionsColumn.AllowShowHide = True
                 End With
                 With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = False
                     .windowsUIButtonPanelMain.Buttons(3).Properties.Enabled = False
+                    .LayoutControlItem6.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
+                    .LayoutControlItem7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
+                    .LayoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
                 End With
             Case "TO"
                 With FrmMain
@@ -218,8 +241,6 @@ Public Class ExClass
                     .BcPendingTo.Checked = True
                     .BcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BcFixedTo.Checked = True
-                    .BcNewRecord.Checked = False
-                    .BcNewRecord.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
 
 
                     .BtnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
@@ -228,11 +249,19 @@ Public Class ExClass
                     .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .GridColumn7.Visible = False
+                    .GridColumn7.OptionsColumn.AllowShowHide = False
+                    .GridColumn8.Visible = False
+                    .GridColumn8.OptionsColumn.AllowShowHide = False
+                    .GridColumn12.Visible = False
+                    .GridColumn12.OptionsColumn.AllowShowHide = False
                 End With
                 With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = False
                     .windowsUIButtonPanelMain.Buttons(3).Properties.Enabled = False
-
+                    .LayoutControlItem6.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
+                    .LayoutControlItem7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
+                    .LayoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
                 End With
         End Select
     End Sub

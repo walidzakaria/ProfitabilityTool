@@ -94,7 +94,7 @@ Partial Public Class FrmAddMargin
         '
         Me.TxtMarginFrom.Location = New System.Drawing.Point(96, 60)
         Me.TxtMarginFrom.Name = "TxtMarginFrom"
-        Me.TxtMarginFrom.Properties.Mask.EditMask = "-?\d+(\R.\d{0,2})?"
+        Me.TxtMarginFrom.Properties.Mask.EditMask = "-?\d+(\R.\d{0,4})?"
         Me.TxtMarginFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
         Me.TxtMarginFrom.Size = New System.Drawing.Size(206, 20)
         Me.TxtMarginFrom.StyleController = Me.dataLayoutControl1
@@ -104,7 +104,7 @@ Partial Public Class FrmAddMargin
         '
         Me.TxtMarginTo.Location = New System.Drawing.Point(96, 84)
         Me.TxtMarginTo.Name = "TxtMarginTo"
-        Me.TxtMarginTo.Properties.Mask.EditMask = "-?\d+(\R.\d{0,2})?"
+        Me.TxtMarginTo.Properties.Mask.EditMask = "-?\d+(\R.\d{0,4})?"
         Me.TxtMarginTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
         Me.TxtMarginTo.Size = New System.Drawing.Size(206, 20)
         Me.TxtMarginTo.StyleController = Me.dataLayoutControl1
@@ -142,7 +142,7 @@ Partial Public Class FrmAddMargin
         '
         Me.TxtDifferenceFrom.Location = New System.Drawing.Point(96, 108)
         Me.TxtDifferenceFrom.Name = "TxtDifferenceFrom"
-        Me.TxtDifferenceFrom.Properties.Mask.EditMask = "-?\d+(\R.\d{0,2})?"
+        Me.TxtDifferenceFrom.Properties.Mask.EditMask = "-?\d+(\R.\d{0,4})?"
         Me.TxtDifferenceFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
         Me.TxtDifferenceFrom.Size = New System.Drawing.Size(206, 20)
         Me.TxtDifferenceFrom.StyleController = Me.dataLayoutControl1
@@ -152,7 +152,7 @@ Partial Public Class FrmAddMargin
         '
         Me.TxtDifferenceTo.Location = New System.Drawing.Point(96, 132)
         Me.TxtDifferenceTo.Name = "TxtDifferenceTo"
-        Me.TxtDifferenceTo.Properties.Mask.EditMask = "-?\d+(\R.\d{0,2})?"
+        Me.TxtDifferenceTo.Properties.Mask.EditMask = "-?\d+(\R.\d{0,4})?"
         Me.TxtDifferenceTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
         Me.TxtDifferenceTo.Size = New System.Drawing.Size(206, 20)
         Me.TxtDifferenceTo.StyleController = Me.dataLayoutControl1

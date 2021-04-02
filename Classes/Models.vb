@@ -318,23 +318,27 @@ Public Class Booking
         Dim result As Short = 0
         Dim status As String = GwgStatus.ToLower
 
-        If status = "bna" Or status = "onr" Or status = "stp" Or MarginCheck.ToLower = "request" _
-            Or MarginCheck.ToLower = "option" Or NetRateHotelTC < 1 Or HotelName.ToLower Like "*rundreise*" _
-            Or HotelName.ToLower Like "*circuit*" Or HotelName.ToLower Like "*roulette*" Then
+        If status = "onr" Or MarginCheck.ToLower = "request" _
+            Or MarginCheck.ToLower = "option" Or NetRateHotelTC <= 0 Or HotelName.ToLower Like "*rundreise*" _
+            Or HotelName.ToLower Like "*circuit*" _ ' Or HotelName.ToLower Like "*roulette*" _
+            Or (status = "can" AndAlso PurchasePrice = 0 AndAlso SalesPrice = 0 AndAlso NetRateHotelTC = 0) Then
             result = 1
         End If
 
         Return result
     End Function
 
-    Public Shared Function CheckJunk(ByVal gwgStatus As String, ByVal marginCheck As String, ByVal netRateHotelTc As Double, ByVal hotelName As String) As Short
+    Public Shared Function CheckJunk(ByVal gwgStatus As String, ByVal marginCheck As String,
+                                     ByVal purchasePrice As Double, ByVal salesPrice As Double,
+                                     ByVal netRateHotelTc As Double, ByVal hotelName As String) As Short
         Dim result As Short = 0
 
         Dim status As String = gwgStatus.ToLower
 
-        If status = "bna" Or status = "onr" Or status = "stp" Or marginCheck.ToLower = "request" _
-            Or marginCheck.ToLower = "option" Or netRateHotelTc < 1 Or hotelName.ToLower Like "*rundreise*" _
-            Or hotelName.ToLower Like "*circuit*" Or hotelName.ToLower Like "*roulette*" Then
+        If status = "onr" Or marginCheck.ToLower = "request" _
+            Or marginCheck.ToLower = "option" Or netRateHotelTc <= 0 Or hotelName.ToLower Like "*rundreise*" _
+            Or hotelName.ToLower Like "*circuit*" _ ' Or hotelName.ToLower Like "*roulette*" _
+            Or (status = "can" AndAlso purchasePrice = 0 AndAlso salesPrice = 0 AndAlso netRateHotelTc = 0) Then
             result = 1
         End If
 
@@ -553,10 +557,10 @@ Public Class Booking
             If Not IsDBNull(dt.Rows(0)(46)) Then
                 DifferenceEUR = CDbl(dt.Rows(0)(46))
             End If
-            Cancelled = CShort(dt.Rows(0)(47)) = 1
-            Excessive = CShort(dt.Rows(0)(48)) = 1
-            Mismatch = CShort(dt.Rows(0)(49)) = 1
-            Negative = CShort(dt.Rows(0)(50)) = 1
+            Cancelled = CBool(dt.Rows(0)(47))
+            Excessive = CBool(dt.Rows(0)(48))
+            Mismatch = CBool(dt.Rows(0)(49))
+            Negative = CBool(dt.Rows(0)(50))
             ErrorLog = CStr(dt.Rows(0)(53))
             BookingStatus = CStr(dt.Rows(0)(51))
             If Not IsDBNull(dt.Rows(0)(52)) Then

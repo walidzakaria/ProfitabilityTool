@@ -55,7 +55,6 @@
         Me.BcPendingTo = New DevExpress.XtraBars.BarCheckItem()
         Me.BcFixedTo = New DevExpress.XtraBars.BarCheckItem()
         Me.BtnShow = New DevExpress.XtraBars.BarButtonItem()
-        Me.BcNewRecord = New DevExpress.XtraBars.BarCheckItem()
         Me.BtnAddDispute = New DevExpress.XtraBars.BarButtonItem()
         Me.BtnTO = New DevExpress.XtraBars.BarButtonItem()
         Me.BarStaticItem1 = New DevExpress.XtraBars.BarStaticItem()
@@ -67,6 +66,10 @@
         Me.BtnManageCurrency = New DevExpress.XtraBars.BarButtonItem()
         Me.BtnErrors = New DevExpress.XtraBars.BarButtonItem()
         Me.BtnAbout = New DevExpress.XtraBars.BarButtonItem()
+        Me.BeImportFrom = New DevExpress.XtraBars.BarEditItem()
+        Me.RepositoryItemDateEdit3 = New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
+        Me.BeImportTill = New DevExpress.XtraBars.BarEditItem()
+        Me.RepositoryItemDateEdit4 = New DevExpress.XtraEditors.Repository.RepositoryItemDateEdit()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -123,12 +126,17 @@
         Me.RibbonPageGroup6 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.SplashScreenManager1 = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.ProfitabilityTool.FrmWait), True, True)
         Me.BarSubItem1 = New DevExpress.XtraBars.BarSubItem()
+        Me.BarEditItem1 = New DevExpress.XtraBars.BarEditItem()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit2.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemDateEdit3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemDateEdit3.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemDateEdit4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemDateEdit4.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemLookUpEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -141,12 +149,12 @@
         Me.RibbonControl1.AllowMinimizeRibbon = False
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
         Me.RibbonControl1.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.RibbonControl1.SearchEditItem, Me.SkinRibbonGalleryBarItem1, Me.BtnRate, Me.BtnSave, Me.BtnLoad, Me.BtnSwitchUser, Me.BtnManageUsers, Me.BtnChangePassword, Me.BtnExit, Me.BeDateFrom, Me.BeDateTo, Me.BeCountry, Me.BtnDestination, Me.BtnManageMargin, Me.BtnJunk, Me.BrnCanceled, Me.BtnMatching, Me.BcNegative, Me.BcExcessive, Me.BcMismatch, Me.BtnShowDefict, Me.BcPendingDmc, Me.BcFixedDmc, Me.BcPendingTo, Me.BcFixedTo, Me.BtnShow, Me.BcNewRecord, Me.BtnAddDispute, Me.BtnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.BtnManageCurrency, Me.BtnErrors, Me.BtnAbout})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.RibbonControl1.SearchEditItem, Me.SkinRibbonGalleryBarItem1, Me.BtnRate, Me.BtnSave, Me.BtnLoad, Me.BtnSwitchUser, Me.BtnManageUsers, Me.BtnChangePassword, Me.BtnExit, Me.BeDateFrom, Me.BeDateTo, Me.BeCountry, Me.BtnDestination, Me.BtnManageMargin, Me.BtnJunk, Me.BrnCanceled, Me.BtnMatching, Me.BcNegative, Me.BcExcessive, Me.BcMismatch, Me.BtnShowDefict, Me.BcPendingDmc, Me.BcFixedDmc, Me.BcPendingTo, Me.BcFixedTo, Me.BtnShow, Me.BtnAddDispute, Me.BtnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.BtnManageCurrency, Me.BtnErrors, Me.BtnAbout, Me.BeImportFrom, Me.BeImportTill})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl1.MaxItemId = 44
+        Me.RibbonControl1.MaxItemId = 46
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
-        Me.RibbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2, Me.RepositoryItemLookUpEdit2})
+        Me.RibbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2, Me.RepositoryItemLookUpEdit2, Me.RepositoryItemDateEdit3, Me.RepositoryItemDateEdit4})
         Me.RibbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
         Me.RibbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonControl1.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.[False]
@@ -240,7 +248,7 @@
         '
         'BeDateFrom
         '
-        Me.BeDateFrom.Caption = "Date From"
+        Me.BeDateFrom.Caption = "Travel From"
         Me.BeDateFrom.Edit = Me.RepositoryItemDateEdit1
         Me.BeDateFrom.EditWidth = 85
         Me.BeDateFrom.Id = 11
@@ -252,10 +260,11 @@
         Me.RepositoryItemDateEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemDateEdit1.Name = "RepositoryItemDateEdit1"
+        Me.RepositoryItemDateEdit1.NullDate = New Date(2020, 1, 1, 13, 47, 58, 0)
         '
         'BeDateTo
         '
-        Me.BeDateTo.Caption = "Date To    "
+        Me.BeDateTo.Caption = "Travel Till    "
         Me.BeDateTo.Edit = Me.RepositoryItemDateEdit2
         Me.BeDateTo.EditWidth = 85
         Me.BeDateTo.Id = 12
@@ -263,14 +272,16 @@
         '
         'RepositoryItemDateEdit2
         '
+        Me.RepositoryItemDateEdit2.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
         Me.RepositoryItemDateEdit2.AutoHeight = False
         Me.RepositoryItemDateEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemDateEdit2.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemDateEdit2.Name = "RepositoryItemDateEdit2"
+        Me.RepositoryItemDateEdit2.NullDate = New Date(2050, 12, 31, 13, 48, 36, 0)
         '
         'BeCountry
         '
-        Me.BeCountry.Caption = "Country    "
+        Me.BeCountry.Caption = "Country      "
         Me.BeCountry.Edit = Me.RepositoryItemLookUpEdit1
         Me.BeCountry.EditWidth = 85
         Me.BeCountry.Id = 13
@@ -409,15 +420,6 @@
         Me.BtnShow.Name = "BtnShow"
         Me.BtnShow.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
-        'BcNewRecord
-        '
-        Me.BcNewRecord.BindableChecked = True
-        Me.BcNewRecord.Caption = "New Record"
-        Me.BcNewRecord.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
-        Me.BcNewRecord.Checked = True
-        Me.BcNewRecord.Id = 29
-        Me.BcNewRecord.Name = "BcNewRecord"
-        '
         'BtnAddDispute
         '
         Me.BtnAddDispute.Caption = "Add Dispute"
@@ -506,6 +508,40 @@
         Me.BtnAbout.Name = "BtnAbout"
         Me.BtnAbout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
+        'BeImportFrom
+        '
+        Me.BeImportFrom.Caption = "Import From"
+        Me.BeImportFrom.Edit = Me.RepositoryItemDateEdit3
+        Me.BeImportFrom.EditWidth = 85
+        Me.BeImportFrom.Id = 44
+        Me.BeImportFrom.Name = "BeImportFrom"
+        '
+        'RepositoryItemDateEdit3
+        '
+        Me.RepositoryItemDateEdit3.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
+        Me.RepositoryItemDateEdit3.AutoHeight = False
+        Me.RepositoryItemDateEdit3.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemDateEdit3.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemDateEdit3.Name = "RepositoryItemDateEdit3"
+        Me.RepositoryItemDateEdit3.NullDate = New Date(2021, 1, 1, 13, 47, 58, 0)
+        '
+        'BeImportTill
+        '
+        Me.BeImportTill.Caption = "Import Till    "
+        Me.BeImportTill.Edit = Me.RepositoryItemDateEdit4
+        Me.BeImportTill.EditWidth = 85
+        Me.BeImportTill.Id = 45
+        Me.BeImportTill.Name = "BeImportTill"
+        '
+        'RepositoryItemDateEdit4
+        '
+        Me.RepositoryItemDateEdit4.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
+        Me.RepositoryItemDateEdit4.AutoHeight = False
+        Me.RepositoryItemDateEdit4.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemDateEdit4.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.RepositoryItemDateEdit4.Name = "RepositoryItemDateEdit4"
+        Me.RepositoryItemDateEdit4.NullDate = New Date(2021, 1, 1, 13, 47, 58, 0)
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2, Me.RibbonPageGroup5, Me.RibbonPageGroup7, Me.RibbonPageGroup3, Me.RibbonPageGroup4})
@@ -529,6 +565,8 @@
         Me.RibbonPageGroup2.ItemLinks.Add(Me.BeCountry)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.BeDateFrom)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.BeDateTo)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.BeImportFrom)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.BeImportTill)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.BtnLoad)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.BtnJunk)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.BrnCanceled)
@@ -556,7 +594,6 @@
         Me.RibbonPageGroup7.ItemLinks.Add(Me.BcFixedDmc)
         Me.RibbonPageGroup7.ItemLinks.Add(Me.BcPendingTo)
         Me.RibbonPageGroup7.ItemLinks.Add(Me.BcFixedTo)
-        Me.RibbonPageGroup7.ItemLinks.Add(Me.BcNewRecord)
         Me.RibbonPageGroup7.ItemLinks.Add(Me.BtnAddDispute)
         Me.RibbonPageGroup7.ItemLinks.Add(Me.BtnShow)
         Me.RibbonPageGroup7.Name = "RibbonPageGroup7"
@@ -702,6 +739,12 @@
         '
         'GridColumn8
         '
+        Me.GridColumn8.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.GridColumn8.AppearanceCell.Options.UseFont = True
+        Me.GridColumn8.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.GridColumn8.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn8.AppearanceHeader.Options.UseBackColor = True
+        Me.GridColumn8.AppearanceHeader.Options.UseFont = True
         Me.GridColumn8.Caption = "Purchase Price"
         Me.GridColumn8.FieldName = "PurchasePrice"
         Me.GridColumn8.Name = "GridColumn8"
@@ -722,6 +765,12 @@
         '
         'GridColumn10
         '
+        Me.GridColumn10.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.GridColumn10.AppearanceCell.Options.UseFont = True
+        Me.GridColumn10.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.GridColumn10.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn10.AppearanceHeader.Options.UseBackColor = True
+        Me.GridColumn10.AppearanceHeader.Options.UseFont = True
         Me.GridColumn10.Caption = "Sales Price"
         Me.GridColumn10.FieldName = "SalesPrice"
         Me.GridColumn10.Name = "GridColumn10"
@@ -742,6 +791,12 @@
         '
         'GridColumn12
         '
+        Me.GridColumn12.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.GridColumn12.AppearanceCell.Options.UseFont = True
+        Me.GridColumn12.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.GridColumn12.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GridColumn12.AppearanceHeader.Options.UseBackColor = True
+        Me.GridColumn12.AppearanceHeader.Options.UseFont = True
         Me.GridColumn12.Caption = "Margin"
         Me.GridColumn12.FieldName = "Margin"
         Me.GridColumn12.Name = "GridColumn12"
@@ -752,6 +807,14 @@
         '
         'GridColumn13
         '
+        Me.GridColumn13.AppearanceCell.BackColor = System.Drawing.Color.White
+        Me.GridColumn13.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.GridColumn13.AppearanceCell.Options.UseBackColor = True
+        Me.GridColumn13.AppearanceCell.Options.UseFont = True
+        Me.GridColumn13.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.GridColumn13.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.GridColumn13.AppearanceHeader.Options.UseBackColor = True
+        Me.GridColumn13.AppearanceHeader.Options.UseFont = True
         Me.GridColumn13.Caption = "Difference"
         Me.GridColumn13.FieldName = "Difference"
         Me.GridColumn13.Name = "GridColumn13"
@@ -773,6 +836,14 @@
         '
         'GridColumn15
         '
+        Me.GridColumn15.AppearanceCell.BackColor = System.Drawing.Color.White
+        Me.GridColumn15.AppearanceCell.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.GridColumn15.AppearanceCell.Options.UseBackColor = True
+        Me.GridColumn15.AppearanceCell.Options.UseFont = True
+        Me.GridColumn15.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.GridColumn15.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.GridColumn15.AppearanceHeader.Options.UseBackColor = True
+        Me.GridColumn15.AppearanceHeader.Options.UseFont = True
         Me.GridColumn15.Caption = "Net Rate Hotel TC"
         Me.GridColumn15.FieldName = "NetRateHotelTC"
         Me.GridColumn15.Name = "GridColumn15"
@@ -983,6 +1054,10 @@
         '
         'GridColumn36
         '
+        Me.GridColumn36.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.GridColumn36.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.GridColumn36.AppearanceHeader.Options.UseBackColor = True
+        Me.GridColumn36.AppearanceHeader.Options.UseFont = True
         Me.GridColumn36.Caption = "ActionBy"
         Me.GridColumn36.FieldName = "ActionBy"
         Me.GridColumn36.Name = "GridColumn36"
@@ -992,6 +1067,10 @@
         '
         'GridColumn37
         '
+        Me.GridColumn37.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.GridColumn37.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.GridColumn37.AppearanceHeader.Options.UseBackColor = True
+        Me.GridColumn37.AppearanceHeader.Options.UseFont = True
         Me.GridColumn37.Caption = "Status"
         Me.GridColumn37.FieldName = "Status"
         Me.GridColumn37.Name = "GridColumn37"
@@ -1001,6 +1080,10 @@
         '
         'GridColumn38
         '
+        Me.GridColumn38.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.GridColumn38.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.GridColumn38.AppearanceHeader.Options.UseBackColor = True
+        Me.GridColumn38.AppearanceHeader.Options.UseFont = True
         Me.GridColumn38.Caption = "Comments"
         Me.GridColumn38.FieldName = "Comments"
         Me.GridColumn38.Name = "GridColumn38"
@@ -1042,6 +1125,14 @@
         Me.BarSubItem1.Id = 28
         Me.BarSubItem1.Name = "BarSubItem1"
         '
+        'BarEditItem1
+        '
+        Me.BarEditItem1.Caption = "Travel From"
+        Me.BarEditItem1.Edit = Me.RepositoryItemDateEdit1
+        Me.BarEditItem1.EditWidth = 85
+        Me.BarEditItem1.Id = 11
+        Me.BarEditItem1.Name = "BarEditItem1"
+        '
         'FrmMain
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[False]
@@ -1064,6 +1155,10 @@
         CType(Me.RepositoryItemDateEdit2.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemDateEdit2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemLookUpEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemDateEdit3.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemDateEdit3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemDateEdit4.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemDateEdit4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemLookUpEdit2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1156,7 +1251,6 @@
     Friend WithEvents BcFixedTo As DevExpress.XtraBars.BarCheckItem
     Friend WithEvents BtnShow As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarSubItem1 As DevExpress.XtraBars.BarSubItem
-    Friend WithEvents BcNewRecord As DevExpress.XtraBars.BarCheckItem
     Friend WithEvents BtnAddDispute As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BtnTO As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BarStaticItem1 As DevExpress.XtraBars.BarStaticItem
@@ -1171,4 +1265,9 @@
     Friend WithEvents BtnAbout As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents GridColumn41 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn42 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents BeImportFrom As DevExpress.XtraBars.BarEditItem
+    Friend WithEvents RepositoryItemDateEdit3 As DevExpress.XtraEditors.Repository.RepositoryItemDateEdit
+    Friend WithEvents BeImportTill As DevExpress.XtraBars.BarEditItem
+    Friend WithEvents RepositoryItemDateEdit4 As DevExpress.XtraEditors.Repository.RepositoryItemDateEdit
+    Friend WithEvents BarEditItem1 As DevExpress.XtraBars.BarEditItem
 End Class
