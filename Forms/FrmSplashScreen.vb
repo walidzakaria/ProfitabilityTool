@@ -1,5 +1,7 @@
-﻿Public Class FrmSplashScreen
-    Sub New
+﻿Imports DevExpress.XtraEditors
+
+Public Class FrmSplashScreen
+    Sub New()
         InitializeComponent()
         Me.LabelCopyright.Text = "Copyright RedSea24© 2020-" & DateTime.Now.Year.ToString()
     End Sub
@@ -8,13 +10,6 @@
         MyBase.ProcessCommand(cmd, arg)
     End Sub
 
-    Private Sub FrmSplashScreen_Load(sender As Object, e As EventArgs) Handles Me.Load
-        If Not UpToDate() Then
-            RunUpdater()
-        Else
-            Timer1.Enabled = True
-        End If
-    End Sub
 
     Public Enum SplashScreenCommand
         SomeCommandId
@@ -41,5 +36,15 @@
             p.Kill()
         Next
         Application.Exit()
+    End Sub
+
+    Private Sub FrmSplashScreen_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        If Not UpToDate() Then
+            Dim mboxResult As DialogResult = XtraMessageBox.Show("The version you're using is not the last updated version. Update now?", "Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If mboxResult = DialogResult.Yes Then
+                RunUpdater()
+            End If
+        End If
+        Timer1.Enabled = True
     End Sub
 End Class

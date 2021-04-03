@@ -15,35 +15,26 @@ Public Class Form1
         ReadConn()
         ReadUpdateData()
 
-        If Not upToDate Then
-            CurrentFile = 1
-            DownloadStart("Profitability_Tool.exe")
-            For Each f As String In UpdateFiles
-                CurrentFile += 1
-                DownloadStart(f)
-            Next
-        End If
     End Sub
 
     Public Sub DownloadStart(fileName As String)
         LblProgress.Text = String.Format("Updating step {0} of {1}",
                                          CurrentFile.ToString, (UpdateFiles.Length + 1).ToString)
-        ProgressBar1.Visible = True
         Downloader = New WebClient
         Dim fileFullLink As String
-        fileFullLink = String.Format("https://github.com/walidzakaria/ssss/{0}", fileName)
-
-        Downloader.DownloadFileAsync(New Uri(fileFullLink), fileName)
-
+        fileFullLink = String.Format("https://github.com/walidzakaria/ProfitabilityTool/raw/master/UpdateFiles/{0}", fileName)
+        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 Or SecurityProtocolType.Tls11 Or SecurityProtocolType.Tls Or SecurityProtocolType.Ssl3
+        Downloader.DownloadFile(New Uri(fileFullLink), fileName)
+        Me.Text = "PR Updater"
     End Sub
 
     Private Sub downloader_DownloadProgressChanged(sender As Object, e As DownloadProgressChangedEventArgs) _
         Handles Downloader.DownloadProgressChanged
-        ProgressBar1.Value = e.ProgressPercentage
+        Me.Text = String.Format("PR Updater - {0}", e.ProgressPercentage.ToString)
     End Sub
 
     Private Sub ReadConn()
-        Dim fs As New FileStream("E:\Profitability Tool\bin\Debug\Profitability_Tool.exe.config", FileMode.Open, FileAccess.Read)
+        Dim fs As New FileStream("Profitability_Tool.exe.config", FileMode.Open, FileAccess.Read)
         Dim xmlDoc As XDocument = XDocument.Load(fs)
 
         Dim name = xmlDoc.Descendants(XName.Get("connectionStrings")).First().FirstNode().ToString
@@ -73,5 +64,18 @@ Public Class Form1
         If Not IsDBNull(dt.Rows(0)(1)) AndAlso Not dt.Rows(0)(1).ToString = "" Then
             UpdateFiles = dt.Rows(0)(1).ToString.Split(";"c)
         End If
+    End Sub
+
+    Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        If Not upToDate Then
+            CurrentFile = 1
+            DownloadStart("Profitability_Tool.exe")
+            For Each f As String In UpdateFiles
+                CurrentFile += 1
+                DownloadStart(f)
+            Next
+        End If
+        Shell("Profitability_Tool.exe")
+        Application.Exit()
     End Sub
 End Class
