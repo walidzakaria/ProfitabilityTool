@@ -5,3 +5,4 @@ Service References
 *.mdf
 *.ldf
 *.rar
+PR_Installer/*
