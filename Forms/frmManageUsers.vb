@@ -9,6 +9,9 @@ Public Class FrmManageUsers
         dt.Rows.Add({"DMC", "DMC"})
         dt.Rows.Add({"TO", "TO"})
         dt.Rows.Add({"RS", "RS"})
+        dt.Rows.Add({"SU DMC", "SU DMC"})
+        dt.Rows.Add({"SU TO", "SU TO"})
+
         RepositoryItemLookUpEdit1.DataSource = Nothing
         RepositoryItemLookUpEdit1.DataSource = dt
         RepositoryItemLookUpEdit1.ValueMember = "ID"
@@ -17,7 +20,14 @@ Public Class FrmManageUsers
     End Sub
     Private Sub LoadAllUsers()
 
-        Dim query As String = "SELECT * FROM Login ORDER BY Username;"
+        Dim query As String
+        If GV.CurrentUser.Authority = "SU DMC" Then
+            query = "SELECT * FROM Login WHERE Authority IN ('SU DMC', 'DMC') ORDER BY Username;"
+        ElseIf GV.CurrentUser.Authority = "SU TO" Then
+            query = "SELECT * FROM Login Username WHERE Authority IN ('SU TO', 'TO') ORDER BY Username;"
+        Else
+            query = "SELECT * FROM Login ORDER BY Username;"
+        End If
         Dim dt As DataTable
         dt = ExClass.QueryGet(query)
         GridControl.DataSource = dt
@@ -37,7 +47,7 @@ Public Class FrmManageUsers
             AddNewUser()
         ElseIf e.Button.Properties.Caption = "Edit" Then
             EditUser()
-        ElseIf e.Button.Properties.Caption = "Options" Then
+        ElseIf e.Button.Properties.Caption = "Permissions" Then
             If IsDBNull(gridView.GetFocusedRowCellValue("LoginID")) Then
                 Exit Sub
             End If

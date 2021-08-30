@@ -84,7 +84,7 @@ Partial Public Class FrmAddUser
         Me.TxtPassword.Location = New System.Drawing.Point(67, 84)
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtPassword.Size = New System.Drawing.Size(272, 20)
+        Me.TxtPassword.Size = New System.Drawing.Size(256, 20)
         Me.TxtPassword.StyleController = Me.dataLayoutControl1
         Me.TxtPassword.TabIndex = 7
         ConditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
@@ -106,17 +106,16 @@ Partial Public Class FrmAddUser
         Me.dataLayoutControl1.Location = New System.Drawing.Point(0, 30)
         Me.dataLayoutControl1.Name = "dataLayoutControl1"
         Me.dataLayoutControl1.Root = Me.layoutControlGroup1
-        Me.dataLayoutControl1.Size = New System.Drawing.Size(351, 259)
+        Me.dataLayoutControl1.Size = New System.Drawing.Size(335, 290)
         Me.dataLayoutControl1.TabIndex = 0
         '
         'RgAuthority
         '
         Me.RgAuthority.EditValue = "Admin"
         Me.RgAuthority.Location = New System.Drawing.Point(67, 132)
-        Me.RgAuthority.MaximumSize = New System.Drawing.Size(0, 28)
         Me.RgAuthority.Name = "RgAuthority"
-        Me.RgAuthority.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem("Admin", "Admin", True, "Admin"), New DevExpress.XtraEditors.Controls.RadioGroupItem("RS", "RS", True, "RS"), New DevExpress.XtraEditors.Controls.RadioGroupItem("DMC", "DMC", True, "DMC"), New DevExpress.XtraEditors.Controls.RadioGroupItem("TO", "TO", True, "TO")})
-        Me.RgAuthority.Size = New System.Drawing.Size(272, 28)
+        Me.RgAuthority.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem("Admin", "Admin", True, "Admin"), New DevExpress.XtraEditors.Controls.RadioGroupItem("RS", "RS", True, "RS"), New DevExpress.XtraEditors.Controls.RadioGroupItem("DMC", "DMC", True, "DMC"), New DevExpress.XtraEditors.Controls.RadioGroupItem("TO", "TO", True, "TO"), New DevExpress.XtraEditors.Controls.RadioGroupItem("SU DMC", "SU DMC", True, "SU DMC"), New DevExpress.XtraEditors.Controls.RadioGroupItem("SU TO", "SU TO", True, "SU TO")})
+        Me.RgAuthority.Size = New System.Drawing.Size(256, 70)
         Me.RgAuthority.StyleController = Me.dataLayoutControl1
         Me.RgAuthority.TabIndex = 20
         '
@@ -125,7 +124,7 @@ Partial Public Class FrmAddUser
         Me.TxtUsername.Location = New System.Drawing.Point(67, 12)
         Me.TxtUsername.Name = "TxtUsername"
         Me.TxtUsername.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtUsername.Size = New System.Drawing.Size(272, 20)
+        Me.TxtUsername.Size = New System.Drawing.Size(256, 20)
         Me.TxtUsername.StyleController = Me.dataLayoutControl1
         Me.TxtUsername.TabIndex = 4
         ConditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
@@ -139,7 +138,7 @@ Partial Public Class FrmAddUser
         '
         Me.TxtFullName.Location = New System.Drawing.Point(67, 36)
         Me.TxtFullName.Name = "TxtFullName"
-        Me.TxtFullName.Size = New System.Drawing.Size(272, 20)
+        Me.TxtFullName.Size = New System.Drawing.Size(256, 20)
         Me.TxtFullName.StyleController = Me.dataLayoutControl1
         Me.TxtFullName.TabIndex = 5
         ConditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank
@@ -155,7 +154,7 @@ Partial Public Class FrmAddUser
         Me.TxtEmail.Name = "TxtEmail"
         Me.TxtEmail.Properties.Mask.EditMask = "(\w|[\.\-])+@(\w|[\-]+\.)*(\w|[\-]){2,63}\.[a-zA-Z]{2,4}"
         Me.TxtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
-        Me.TxtEmail.Size = New System.Drawing.Size(272, 20)
+        Me.TxtEmail.Size = New System.Drawing.Size(256, 20)
         Me.TxtEmail.StyleController = Me.dataLayoutControl1
         Me.TxtEmail.TabIndex = 6
         '
@@ -164,7 +163,7 @@ Partial Public Class FrmAddUser
         Me.TxtRetype.Location = New System.Drawing.Point(67, 108)
         Me.TxtRetype.Name = "TxtRetype"
         Me.TxtRetype.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtRetype.Size = New System.Drawing.Size(272, 20)
+        Me.TxtRetype.Size = New System.Drawing.Size(256, 20)
         Me.TxtRetype.StyleController = Me.dataLayoutControl1
         Me.TxtRetype.TabIndex = 8
         CompareAgainstControlValidationRule1.CompareControlOperator = DevExpress.XtraEditors.DXErrorProvider.CompareControlOperator.Equals
@@ -175,22 +174,22 @@ Partial Public Class FrmAddUser
         'RgActive
         '
         Me.RgActive.EditValue = True
-        Me.RgActive.Location = New System.Drawing.Point(67, 170)
+        Me.RgActive.Location = New System.Drawing.Point(67, 206)
         Me.RgActive.MaximumSize = New System.Drawing.Size(0, 28)
         Me.RgActive.Name = "RgActive"
         Me.RgActive.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem(True, "Yes", True, True), New DevExpress.XtraEditors.Controls.RadioGroupItem(False, "No", True, False)})
-        Me.RgActive.Size = New System.Drawing.Size(272, 28)
+        Me.RgActive.Size = New System.Drawing.Size(256, 28)
         Me.RgActive.StyleController = Me.dataLayoutControl1
         Me.RgActive.TabIndex = 20
         '
         'RgLocked
         '
         Me.RgLocked.EditValue = False
-        Me.RgLocked.Location = New System.Drawing.Point(67, 208)
+        Me.RgLocked.Location = New System.Drawing.Point(67, 244)
         Me.RgLocked.MaximumSize = New System.Drawing.Size(0, 28)
         Me.RgLocked.Name = "RgLocked"
         Me.RgLocked.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem(True, "Yes", True, True), New DevExpress.XtraEditors.Controls.RadioGroupItem(False, "No", True, False)})
-        Me.RgLocked.Size = New System.Drawing.Size(272, 28)
+        Me.RgLocked.Size = New System.Drawing.Size(256, 28)
         Me.RgLocked.StyleController = Me.dataLayoutControl1
         Me.RgLocked.TabIndex = 20
         '
@@ -200,7 +199,7 @@ Partial Public Class FrmAddUser
         Me.layoutControlGroup1.GroupBordersVisible = False
         Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.LayoutControlItem2, Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem6, Me.LayoutControlItem7, Me.LayoutControlItem8})
         Me.layoutControlGroup1.Name = "Root"
-        Me.layoutControlGroup1.Size = New System.Drawing.Size(351, 259)
+        Me.layoutControlGroup1.Size = New System.Drawing.Size(335, 290)
         Me.layoutControlGroup1.TextVisible = False
         '
         'LayoutControlItem1
@@ -208,7 +207,7 @@ Partial Public Class FrmAddUser
         Me.LayoutControlItem1.Control = Me.TxtUsername
         Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(331, 24)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(315, 24)
         Me.LayoutControlItem1.Text = "Username:"
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(52, 13)
         '
@@ -217,7 +216,7 @@ Partial Public Class FrmAddUser
         Me.LayoutControlItem2.Control = Me.TxtFullName
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 24)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(331, 24)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(315, 24)
         Me.LayoutControlItem2.Text = "Full Name:"
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(52, 13)
         '
@@ -226,7 +225,7 @@ Partial Public Class FrmAddUser
         Me.LayoutControlItem3.Control = Me.TxtEmail
         Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 48)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(331, 24)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(315, 24)
         Me.LayoutControlItem3.Text = "E-Mail:"
         Me.LayoutControlItem3.TextSize = New System.Drawing.Size(52, 13)
         '
@@ -235,7 +234,7 @@ Partial Public Class FrmAddUser
         Me.LayoutControlItem4.Control = Me.TxtPassword
         Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 72)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(331, 24)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(315, 24)
         Me.LayoutControlItem4.Text = "Password"
         Me.LayoutControlItem4.TextSize = New System.Drawing.Size(52, 13)
         '
@@ -244,7 +243,7 @@ Partial Public Class FrmAddUser
         Me.LayoutControlItem5.Control = Me.TxtRetype
         Me.LayoutControlItem5.Location = New System.Drawing.Point(0, 96)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(331, 24)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(315, 24)
         Me.LayoutControlItem5.Text = "Retype:"
         Me.LayoutControlItem5.TextSize = New System.Drawing.Size(52, 13)
         '
@@ -253,7 +252,7 @@ Partial Public Class FrmAddUser
         Me.LayoutControlItem6.Control = Me.RgAuthority
         Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 120)
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(331, 38)
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(315, 74)
         Me.LayoutControlItem6.Text = "Status:"
         Me.LayoutControlItem6.TextSize = New System.Drawing.Size(52, 13)
         '
@@ -261,9 +260,9 @@ Partial Public Class FrmAddUser
         '
         Me.LayoutControlItem7.Control = Me.RgActive
         Me.LayoutControlItem7.CustomizationFormText = "Authority:"
-        Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 158)
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(0, 194)
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(331, 38)
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(315, 38)
         Me.LayoutControlItem7.Text = "Active:"
         Me.LayoutControlItem7.TextSize = New System.Drawing.Size(52, 13)
         '
@@ -272,9 +271,9 @@ Partial Public Class FrmAddUser
         Me.LayoutControlItem8.Control = Me.RgLocked
         Me.LayoutControlItem8.ControlAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.LayoutControlItem8.CustomizationFormText = "Authority:"
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 196)
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 232)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(331, 43)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(315, 38)
         Me.LayoutControlItem8.Text = "Locked:"
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(52, 13)
         '
@@ -301,12 +300,12 @@ Partial Public Class FrmAddUser
         Me.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.windowsUIButtonPanelMain.EnableImageTransparency = True
         Me.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
-        Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(0, 289)
+        Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(0, 320)
         Me.windowsUIButtonPanelMain.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.windowsUIButtonPanelMain.MaximumSize = New System.Drawing.Size(0, 60)
         Me.windowsUIButtonPanelMain.MinimumSize = New System.Drawing.Size(60, 60)
         Me.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain"
-        Me.windowsUIButtonPanelMain.Size = New System.Drawing.Size(351, 60)
+        Me.windowsUIButtonPanelMain.Size = New System.Drawing.Size(335, 60)
         Me.windowsUIButtonPanelMain.TabIndex = 3
         Me.windowsUIButtonPanelMain.Text = "WindowsUIButtonPanelMain"
         Me.windowsUIButtonPanelMain.UseButtonBackgroundImages = False
@@ -325,7 +324,7 @@ Partial Public Class FrmAddUser
         Me.labelControl.Location = New System.Drawing.Point(0, 0)
         Me.labelControl.Name = "labelControl"
         Me.labelControl.Padding = New System.Windows.Forms.Padding(10, 5, 0, 0)
-        Me.labelControl.Size = New System.Drawing.Size(351, 30)
+        Me.labelControl.Size = New System.Drawing.Size(335, 30)
         Me.labelControl.TabIndex = 1
         Me.labelControl.Text = "New User"
         '
@@ -336,7 +335,7 @@ Partial Public Class FrmAddUser
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(351, 349)
+        Me.ClientSize = New System.Drawing.Size(335, 380)
         Me.Controls.Add(Me.dataLayoutControl1)
         Me.Controls.Add(Me.labelControl)
         Me.Controls.Add(Me.windowsUIButtonPanelMain)

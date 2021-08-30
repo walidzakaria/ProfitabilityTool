@@ -39,12 +39,12 @@ Public Class FrmSplashScreen
     End Sub
 
     Private Sub FrmSplashScreen_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        If Not UpToDate() Then
-            Dim mboxResult As DialogResult = XtraMessageBox.Show("The version you're using is not the last updated version. Update now?", "Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-            If mboxResult = DialogResult.Yes Then
-                RunUpdater()
-            End If
-        End If
+        'If Not UpToDate() Then
+        '    Dim mboxResult As DialogResult = XtraMessageBox.Show("The version you're using is not the last updated version. Update now?", "Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        '    If mboxResult = DialogResult.Yes Then
+        '        RunUpdater()
+        '    End If
+        'End If
         Timer1.Enabled = True
     End Sub
 End Class

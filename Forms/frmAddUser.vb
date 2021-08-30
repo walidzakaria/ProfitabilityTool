@@ -8,7 +8,13 @@ Public Class FrmAddUser
 
         TxtPassword.Text = ""
         TxtRetype.Text = ""
-        RgAuthority.SelectedIndex = 1
+        If GV.CurrentUser.Authority = "Admin" Then
+            RgAuthority.SelectedIndex = 1
+        ElseIf GV.CurrentUser.Authority = "SU DMC" Then
+            RgAuthority.SelectedIndex = 2
+        ElseIf GV.CurrentUser.Authority = "SU TO" Then
+            RgAuthority.SelectedIndex = 3
+        End If
         LayoutControlItem4.Enabled = True
         LayoutControlItem5.Enabled = True
 
@@ -44,7 +50,21 @@ Public Class FrmAddUser
     End Sub
     Private Sub FrmAddUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Clear()
-
+        If GV.CurrentUser.Authority = "Admin" Then
+            For x As Integer = 0 To RgAuthority.Properties.Items.Count - 1
+                RgAuthority.Properties.Items(x).Enabled = True
+            Next
+        ElseIf GV.CurrentUser.Authority = "SU DMC" Then
+            RgAuthority.Properties.Items(0).Enabled = False
+            RgAuthority.Properties.Items(1).Enabled = False
+            RgAuthority.Properties.Items(3).Enabled = False
+            RgAuthority.Properties.Items(5).Enabled = False
+        ElseIf GV.CurrentUser.Authority = "SU TO" Then
+            RgAuthority.Properties.Items(0).Enabled = False
+            RgAuthority.Properties.Items(1).Enabled = False
+            RgAuthority.Properties.Items(2).Enabled = False
+            RgAuthority.Properties.Items(4).Enabled = False
+        End If
         If userId <> 0 Then
             RecallUser(userId)
         End If

@@ -186,7 +186,7 @@ Public Class ExClass
                     .LayoutControlItem7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
                     .LayoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
                 End With
-            Case "DMC"
+            Case "DMC", "SU DMC"
                 With FrmMain
                     .RibbonPageGroup1.Visible = False
                     .BtnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
@@ -204,7 +204,6 @@ Public Class ExClass
                     .BcFixedTo.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
 
                     .BtnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
-                    .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
@@ -215,6 +214,11 @@ Public Class ExClass
                     .GridColumn8.OptionsColumn.AllowShowHide = True
                     .GridColumn12.Visible = True
                     .GridColumn12.OptionsColumn.AllowShowHide = True
+                    If userType = "DMC" Then
+                        .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    Else
+                        .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    End If
                 End With
                 With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = False
@@ -223,7 +227,7 @@ Public Class ExClass
                     .LayoutControlItem7.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
                     .LayoutControlItem11.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always
                 End With
-            Case "TO"
+            Case "TO", "SU TO"
                 With FrmMain
                     .RibbonPageGroup1.Visible = False
                     .BtnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
@@ -244,7 +248,11 @@ Public Class ExClass
 
 
                     .BtnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
-                    .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    If userType = "TO" Then
+                        .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    Else
+                        .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    End If
                     .BtnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
