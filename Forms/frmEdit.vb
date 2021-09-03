@@ -25,11 +25,12 @@ Partial Public Class FrmEdit
         dt.Columns.Add("ID")
         dt.Columns.Add("Status")
         dt.Rows.Add({"PENDING DMC", "PENDING DMC"})
-        If GV.CurrentUser.Authority <> "TO" Then
+        If GV.CurrentUser.Authority <> "TO" AndAlso GV.CurrentUser.Authority <> "SU TO" Then
             dt.Rows.Add({"FIXED DMC", "FIXED DMC"})
+            dt.Rows.Add({"CANNOT FIX", "CANNOT FIX"})
         End If
         dt.Rows.Add({"PENDING T/O", "PENDING T/O"})
-        If GV.CurrentUser.Authority <> "DMC" And GV.CurrentUser.Authority <> "RS" Then
+        If GV.CurrentUser.Authority <> "DMC" AndAlso GV.CurrentUser.Authority <> "RS" AndAlso GV.CurrentUser.Authority <> "SU DMC" Then
             dt.Rows.Add({"FIXED T/O", "FIXED T/O"})
         End If
         LuStatus.Properties.DataSource = Nothing
@@ -407,4 +408,25 @@ Partial Public Class FrmEdit
         Next
     End Sub
 
+    Private Sub LuStatus_EditValueChanged(sender As Object, e As EventArgs) Handles LuStatus.EditValueChanged
+        If LuStatus.EditValue Is Nothing Then
+            LuSection.EditValue = Nothing
+        Else
+            Dim userType As String
+            If GV.CurrentUser.Authority = "TO" OrElse GV.CurrentUser.Authority = "SU TO" Then
+                userType = "TO"
+            Else
+                userType = "DMC"
+            End If
+            Dim query As String = $"SELECT SectionID AS ID, Section
+                                   FROM Section
+                                   WHERE [Status] = '{LuStatus.EditValue}' AND UserType = '{userType}'
+                                   ORDER BY Section;"
+            Dim dt As DataTable = ExClass.QueryGet(query)
+            LuSection.Properties.DataSource = Nothing
+            LuSection.Properties.DataSource = dt
+            LuSection.Properties.ValueMember = "ID"
+            LuSection.Properties.DisplayMember = "Section"
+        End If
+    End Sub
 End Class

@@ -852,11 +852,11 @@ Public Class Currency
         Dim query As String
         If CurrencyId = 0 Then
             query = String.Format("INSERT INTO Exchange (Currency, Rate, EffectiveDate, LoginID) " _
-                                  & "VALUES ('{0}', {1}, '{2}', {3});", _
+                                  & "VALUES ('{0}', {1}, '{2}', {3});",
                                   Currency.ToUpper, Rate.ToString, EffectiveDate.ToString("MM/dd/yyyy"), LoginID.ToString)
         Else
             query = String.Format("UPDATE Exchange SET Currency = '{0}', Rate = {1}, EffectiveDate = '{2}', LoginID = {3}" _
-                                  & " WHERE ExchangeID = {4};", _
+                                  & " WHERE ExchangeID = {4};",
                                   Currency.ToUpper, Rate.ToString, EffectiveDate.ToString("MM/dd/yyyy"), LoginID.ToString, CurrencyId.ToString)
         End If
 
@@ -892,6 +892,66 @@ Public Class Currency
     Public Function DeleteById() As Boolean
         Dim result As Boolean = False
         Dim query As String = "DELETE FROM Exchange WHERE ExchangeID = " & CurrencyId.ToString & ";"
+        Dim messageResult As String
+        messageResult = ExClass.QuerySet(query)
+        If messageResult = "True" Then
+            result = True
+        Else
+            XtraMessageBox.Show(messageResult)
+        End If
+
+        Return result
+    End Function
+End Class
+
+Public Class Section
+    Public Property SectionId() As Integer
+    Public Property Section() As String
+    Public Property Status() As String
+    Public Property UserType() As String
+
+    Public Function SaveSection() As Boolean
+        Dim result As Boolean = False
+        Dim queryResult As String
+        Dim query As String
+        If SectionId = 0 Then
+            query = $"INSERT INTO Section (Section, [Status], UserType)
+                      VALUES ('{Section.Trim.Replace("'", "''")}', '{Status}', '{UserType}');"
+        Else
+            query = $"UPDATE Section SET Section = '{Section.Trim.Replace("'", "''")}',
+                        [Status] = '{Status}', UserType = '{UserType}' WHERE SectionID = {SectionId};"
+        End If
+
+        queryResult = ExClass.QuerySet(query)
+        If queryResult = "True" Then
+            result = True
+        Else
+            XtraMessageBox.Show(queryResult)
+        End If
+
+        Return result
+    End Function
+
+    Public Function GetById() As Boolean
+        Dim result As Boolean = False
+        Dim query As String = $"SELECT * FROM Section WHERE SectionID = {SectionId};"
+
+        Dim dt As DataTable = ExClass.QueryGet(query)
+
+        If dt.Rows.Count <> 0 Then
+            Section = dt.Rows(0)(1).ToString
+            Status = dt.Rows(0)(2).ToString
+            UserType = dt.Rows(0)(3).ToString
+            result = True
+        End If
+
+        Return result
+
+    End Function
+
+    Public Function DeleteById() As Boolean
+        Dim result As Boolean = False
+        Dim query As String = $"DELETE FROM Section WHERE SectionID = {SectionId};"
         Dim messageResult As String
         messageResult = ExClass.QuerySet(query)
         If messageResult = "True" Then

@@ -4,6 +4,18 @@ Imports DevExpress.XtraEditors
 Partial Public Class FrmMain
     Dim bookingDT As New DataTable()
     ReadOnly defaultGridLayout As System.IO.Stream = New System.IO.MemoryStream()
+
+    Private Sub SetCheckedRibbonButton(Optional excludedButton As DevExpress.XtraBars.BarButtonItem = Nothing)
+        For Each item In RibbonControl1.Items
+            If TypeOf (item) Is DevExpress.XtraBars.BarButtonItem Then
+                item.Down = False
+            End If
+        Next
+        If Not excludedButton Is Nothing Then
+            excludedButton.Down = True
+        End If
+    End Sub
+
     Public Sub Wait(ByVal wait As Boolean)
         If wait = True Then
             Try
@@ -61,6 +73,7 @@ Partial Public Class FrmMain
         GridControl1.DataSource = dt
         GridView1.BestFitColumns()
         Wait(False)
+        SetCheckedRibbonButton(BtnRate)
     End Sub
 
     Private Function ParseText() As DataTable
@@ -282,6 +295,7 @@ Partial Public Class FrmMain
             End If
         End If
         Wait(False)
+        SetCheckedRibbonButton()
     End Sub
 
     Public Sub UpdateCertainRow(ByVal rowHandle As Integer, ByVal booking As Booking)
@@ -290,52 +304,51 @@ Partial Public Class FrmMain
             bookingDT.Columns(x).ReadOnly = False
         Next
 
-
-        With bookingDT
-            .Rows(rowHandle).SetField("Reference", booking.Reference)
-            .Rows(rowHandle).SetField("HotelCode", booking.HotelCode)
-            .Rows(rowHandle).SetField("HotelName", booking.HotelName)
-            .Rows(rowHandle).SetField("HotelCountry", booking.CountryCode)
-            .Rows(rowHandle).SetField("GwgStatus", booking.GwgStatus)
-            .Rows(rowHandle).SetField("BookingStatus", booking.BookingStatus)
-            .Rows(rowHandle).SetField("PurchaseCurrency", booking.PurchaseCurrency)
-            .Rows(rowHandle).SetField("PurchasePrice", booking.PurchasePrice)
-            .Rows(rowHandle).SetField("SalesCurrency", booking.SalesCurrency)
-            .Rows(rowHandle).SetField("SalesPrice", booking.SalesPrice)
-            .Rows(rowHandle).SetField("GwgHandlingFee", booking.GwgHandlingFee)
-            .Rows(rowHandle).SetField("Margin", booking.Margin)
-            .Rows(rowHandle).SetField("Difference", booking.Difference)
-            .Rows(rowHandle).SetField("CurrencyHotelTC", booking.CurrencyHotelTC)
-            .Rows(rowHandle).SetField("NetRateHotelTC", booking.NetRateHotelTC)
-            .Rows(rowHandle).SetField("NetRateHandlingTC", booking.NetRateHandlingTC)
-            .Rows(rowHandle).SetField("CheckHotel", booking.CheckHotel)
-            .Rows(rowHandle).SetField("CompanyGroup", booking.CompanyGroup)
-            .Rows(rowHandle).SetField("BookingDate", booking.BookingDate)
-            .Rows(rowHandle).SetField("TravelDate", booking.TravelDate)
-            .Rows(rowHandle).SetField("RoomType", booking.RoomType)
-            .Rows(rowHandle).SetField("Board", booking.Board)
-            .Rows(rowHandle).SetField("Duration", booking.Duration)
-            .Rows(rowHandle).SetField("TransferTo", booking.TransferTo)
-            .Rows(rowHandle).SetField("TransferFrom", booking.TransferFrom)
-            .Rows(rowHandle).SetField("Pax", booking.Pax)
-            .Rows(rowHandle).SetField("Adult", booking.Adult)
-            .Rows(rowHandle).SetField("Child", booking.Child)
-            .Rows(rowHandle).SetField("ImportDate", booking.ImportDate)
-            .Rows(rowHandle).SetField("MPImportDate", booking.MPImportDate)
-            .Rows(rowHandle).SetField("IncomingAgency", booking.IncomingAgency)
-            .Rows(rowHandle).SetField("BookingStateDesc", booking.BookingStateDesc)
-            .Rows(rowHandle).SetField("HotelFlag", booking.HotelFlag)
-            .Rows(rowHandle).SetField("MissingBookings", booking.MissingBookings)
-            .Rows(rowHandle).SetField("MarginCheck", booking.MarginCheck)
-            .Rows(rowHandle).SetField("DifferenceTOPrice", booking.DifferenceToPrice)
-            .Rows(rowHandle).SetField("ActionBy", booking.LastUser.Username)
-            .Rows(rowHandle).SetField("Status", booking.Status)
-            .Rows(rowHandle).SetField("Comments", booking.Comments)
-            .Rows(rowHandle).SetField("AdjustedPrice", booking.AdjustedPrice)
-            .Rows(rowHandle).SetField("PriceBreakdown", booking.PriceBreakdown)
+        With GridView1
+            .SetRowCellValue(rowHandle, "Reference", booking.Reference)
+            .SetRowCellValue(rowHandle, "HotelCode", booking.HotelCode)
+            .SetRowCellValue(rowHandle, "HotelName", booking.HotelName)
+            .SetRowCellValue(rowHandle, "HotelCountry", booking.CountryCode)
+            .SetRowCellValue(rowHandle, "GwgStatus", booking.GwgStatus)
+            .SetRowCellValue(rowHandle, "BookingStatus", booking.BookingStatus)
+            .SetRowCellValue(rowHandle, "PurchaseCurrency", booking.PurchaseCurrency)
+            .SetRowCellValue(rowHandle, "PurchasePrice", booking.PurchasePrice)
+            .SetRowCellValue(rowHandle, "SalesCurrency", booking.SalesCurrency)
+            .SetRowCellValue(rowHandle, "SalesPrice", booking.SalesPrice)
+            .SetRowCellValue(rowHandle, "GwgHandlingFee", booking.GwgHandlingFee)
+            .SetRowCellValue(rowHandle, "Margin", booking.Margin)
+            .SetRowCellValue(rowHandle, "Difference", booking.Difference)
+            .SetRowCellValue(rowHandle, "CurrencyHotelTC", booking.CurrencyHotelTC)
+            .SetRowCellValue(rowHandle, "NetRateHotelTC", booking.NetRateHotelTC)
+            .SetRowCellValue(rowHandle, "NetRateHandlingTC", booking.NetRateHandlingTC)
+            .SetRowCellValue(rowHandle, "CheckHotel", booking.CheckHotel)
+            .SetRowCellValue(rowHandle, "CompanyGroup", booking.CompanyGroup)
+            .SetRowCellValue(rowHandle, "BookingDate", booking.BookingDate)
+            .SetRowCellValue(rowHandle, "TravelDate", booking.TravelDate)
+            .SetRowCellValue(rowHandle, "RoomType", booking.RoomType)
+            .SetRowCellValue(rowHandle, "Board", booking.Board)
+            .SetRowCellValue(rowHandle, "Duration", booking.Duration)
+            .SetRowCellValue(rowHandle, "TransferTo", booking.TransferTo)
+            .SetRowCellValue(rowHandle, "TransferFrom", booking.TransferFrom)
+            .SetRowCellValue(rowHandle, "Pax", booking.Pax)
+            .SetRowCellValue(rowHandle, "Adult", booking.Adult)
+            .SetRowCellValue(rowHandle, "Child", booking.Child)
+            .SetRowCellValue(rowHandle, "ImportDate", booking.ImportDate)
+            .SetRowCellValue(rowHandle, "MPImportDate", booking.MPImportDate)
+            .SetRowCellValue(rowHandle, "IncomingAgency", booking.IncomingAgency)
+            .SetRowCellValue(rowHandle, "BookingStateDesc", booking.BookingStateDesc)
+            .SetRowCellValue(rowHandle, "HotelFlag", booking.HotelFlag)
+            .SetRowCellValue(rowHandle, "MissingBookings", booking.MissingBookings)
+            .SetRowCellValue(rowHandle, "MarginCheck", booking.MarginCheck)
+            .SetRowCellValue(rowHandle, "DifferenceTOPrice", booking.DifferenceToPrice)
+            .SetRowCellValue(rowHandle, "ActionBy", booking.LastUser.Username)
+            .SetRowCellValue(rowHandle, "Status", booking.Status)
+            .SetRowCellValue(rowHandle, "Comments", booking.Comments)
+            .SetRowCellValue(rowHandle, "AdjustedPrice", booking.AdjustedPrice)
+            .SetRowCellValue(rowHandle, "PriceBreakdown", booking.PriceBreakdown)
         End With
 
-
+        GridView1.RefreshData()
     End Sub
 
     Public Sub UpdateCertainRow(ByVal adjustPrice As Boolean, ByVal booking As Booking)
@@ -361,6 +374,7 @@ Partial Public Class FrmMain
     Private Function TextToDate(ByVal dateText As String) As Date
         Dim result As Date = New Date(1900, 1, 1)
         Dim tempDate() As String
+        dateText = dateText.Replace("/", ".")
         tempDate = Split(dateText, ".")
         If dateText <> "" Then
             Try
@@ -374,14 +388,14 @@ Partial Public Class FrmMain
         Return result
     End Function
 
-    Private Sub LoadData(ByVal status As String, ByVal allCountries As Boolean)
+    Private Function LoadData(ByVal status As String, ByVal allCountries As Boolean) As Boolean
 
         If BeCountry.EditValue Is Nothing And Not allCountries Then
             XtraMessageBox.Show("Please select destination!")
-            Exit Sub
+            Return False
         ElseIf GV.CurrentUser.UserOperators = "" And Not allCountries Then
             XtraMessageBox.Show("You don't have permission to view data!")
-            Exit Sub
+            Return False
         End If
 
         Wait(True)
@@ -429,11 +443,13 @@ Partial Public Class FrmMain
         GridControl1.DataSource = bookingDT
 
         Wait(False)
-
-    End Sub
+        Return True
+    End Function
 
     Private Sub BtnLoad_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnLoad.ItemClick
-        LoadData("", False)
+        If LoadData("", False) Then
+            SetCheckedRibbonButton(BtnLoad)
+        End If
     End Sub
 
     Private Sub RemoveRows()
@@ -486,6 +502,7 @@ Partial Public Class FrmMain
                 LockBookings("", False)
                 My.Settings.Theme = UserLookAndFeel.Default.SkinName.ToString
                 My.Settings.Save()
+                GridView1.SaveLayoutToRegistry("PrToolLayout")
                 Application.Exit()
                 e.Cancel = False
             Else
@@ -565,20 +582,26 @@ Partial Public Class FrmMain
     End Sub
 
     Private Sub BtnJunk_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnJunk.ItemClick
-        LoadData(" AND Junk = 1 ", False)
+        If LoadData(" AND Junk = 1 ", False) Then
+            SetCheckedRibbonButton(BtnJunk)
+        End If
     End Sub
 
-    Private Sub BrnCanceled_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BrnCanceled.ItemClick
+    Private Sub BtnCanceled_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnCanceled.ItemClick
         Dim status As String
         status = " AND Junk = 0 AND GwgStatus = 'Can' AND MismatchCalc = 0 "
-        LoadData(status, False)
+        If LoadData(status, False) Then
+            SetCheckedRibbonButton(BtnCanceled)
+        End If
     End Sub
 
     Private Sub BtnMatching_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnMatching.ItemClick
         Dim status As String
         status = " AND Junk = 0 AND GwgStatus != 'Can' AND NegativeMargin = 0 
                     AND ExcessiveMargin = 0 AND MismatchCalc = 0 "
-        LoadData(status, False)
+        If LoadData(status, False) Then
+            SetCheckedRibbonButton(BtnMatching)
+        End If
     End Sub
 
     Private Sub BtnShowDefict_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnShowDefict.ItemClick
@@ -586,6 +609,7 @@ Partial Public Class FrmMain
 
         If Not BcExcessive.Checked And Not BcNegative.Checked And Not BcMismatch.Checked Then
             XtraMessageBox.Show("Please select at least one option!")
+            BtnShowDefict.Down = False
             Exit Sub
         End If
 
@@ -605,14 +629,18 @@ Partial Public Class FrmMain
             status &= "MismatchCalc = 1"
         End If
         status &= ")"
-        LoadData(status, False)
+        If LoadData(status, False) Then
+            SetCheckedRibbonButton(BtnShowDefict)
+        End If
 
     End Sub
 
     Private Sub BtnShow_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnShow.ItemClick
         Dim status As String = " AND Junk = 0 AND ("
-        If Not BcPendingDmc.Checked And Not BcPendingTo.Checked And Not BcFixedDmc.Checked And Not BcFixedTo.Checked Then
+        If Not BcPendingDmc.Checked And Not BcPendingTo.Checked _
+            And Not BcFixedDmc.Checked And Not BcFixedTo.Checked And Not BcCannotFix.Checked Then
             XtraMessageBox.Show("Please select at least one option!")
+            BtnShow.Down = False
             Exit Sub
         End If
 
@@ -638,8 +666,16 @@ Partial Public Class FrmMain
             End If
             status &= "[Status] = 'FIXED T/O'"
         End If
+        If BcCannotFix.Checked Then
+            If BcPendingDmc.Checked Or BcFixedDmc.Checked Or BcPendingTo.Checked Or BcFixedTo.Checked Then
+                status &= " OR "
+            End If
+            status &= "[Status] = 'CANNOT FIX'"
+        End If
         status &= ")"
-        LoadData(status, False)
+        If LoadData(status, False) Then
+            SetCheckedRibbonButton(BtnShow)
+        End If
     End Sub
 
     Private Sub BtnAddDispute_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnAddDispute.ItemClick
@@ -657,7 +693,9 @@ Partial Public Class FrmMain
     Private Sub BtnErrors_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnErrors.ItemClick
         Dim status As String
         status = " AND (MissingCurrency = 1 OR MissingDestination = 1 OR MissingTO = 1 OR MissingMargin = 1)"
-        LoadData(status, True)
+        If LoadData(status, True) Then
+            SetCheckedRibbonButton(BtnErrors)
+        End If
     End Sub
 
     Private Sub BtnAbout_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnAbout.ItemClick
@@ -683,6 +721,8 @@ Partial Public Class FrmMain
     Private Sub frmMain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         GridView1.SaveLayoutToStream(defaultGridLayout)
         defaultGridLayout.Seek(0, System.IO.SeekOrigin.Begin)
+
+        GridView1.RestoreLayoutFromRegistry("PrToolLayout")
     End Sub
 
     Private Sub ResetGridLayout()
@@ -766,5 +806,13 @@ Partial Public Class FrmMain
 
         ExClass.QuerySet(query)
 
+    End Sub
+
+    Private Sub BtnSection_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnSection.ItemClick
+        FrmManageSection.ShowDialog()
+    End Sub
+
+    Private Sub BtnResetGrid_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnResetGrid.ItemClick
+        ResetGridLayout()
     End Sub
 End Class

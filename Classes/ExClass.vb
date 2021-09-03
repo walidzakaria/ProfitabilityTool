@@ -6,9 +6,9 @@ Public Class ExClass
     ''' Generic methods and functions
     ''' </summary>
 
-    Public Shared myConn As New SqlConnection(My.Settings.DatabaseConnection)
-    'Public Shared myConn As New SqlConnection("Data Source=DESKTOP-5V3S1R4\MASTER;Initial Catalog=YT_DB;User ID=walid;Password=wwzzaa")
+    'Public Shared myConn As New SqlConnection(My.Settings.DatabaseConnection)
     'Public Shared myConn As New SqlConnection("workstation id=rs24profitabilitytool.mssql.somee.com;packet size=4096;user id=waliiid_SQLLogin_1;pwd=nhyb4lqews;data source=rs24profitabilitytool.mssql.somee.com;persist security info=False;initial catalog=rs24profitabilitytool")
+    Public Shared myConn As New SqlConnection("Data Source=desktop-9i7uufn\MASTER;Initial Catalog=YT_DB;Integrated Security=SSPI;")
 
     Public Shared Function QuerySet(ByVal query As String) As String
         Dim result As String
@@ -117,7 +117,7 @@ Public Class ExClass
                     .RibbonPageGroup1.Visible = True
                     .BtnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .BrnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .RibbonPageGroup5.Visible = True
 
@@ -141,6 +141,7 @@ Public Class ExClass
                     .GridColumn8.OptionsColumn.AllowShowHide = True
                     .GridColumn12.Visible = True
                     .GridColumn12.OptionsColumn.AllowShowHide = True
+                    .BtnSection.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                 End With
                 With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = True
@@ -154,7 +155,7 @@ Public Class ExClass
                     .RibbonPageGroup1.Visible = True
                     .BtnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .BrnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .RibbonPageGroup5.Visible = True
                     .BcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
@@ -178,6 +179,7 @@ Public Class ExClass
                     .GridColumn8.OptionsColumn.AllowShowHide = True
                     .GridColumn12.Visible = True
                     .GridColumn12.OptionsColumn.AllowShowHide = True
+                    .BtnSection.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                 End With
                 With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = True
@@ -191,7 +193,7 @@ Public Class ExClass
                     .RibbonPageGroup1.Visible = False
                     .BtnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .BrnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                    .BtnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .RibbonPageGroup5.Visible = True
                     .BcPendingDmc.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
@@ -216,8 +218,10 @@ Public Class ExClass
                     .GridColumn12.OptionsColumn.AllowShowHide = True
                     If userType = "DMC" Then
                         .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                        .BtnSection.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     Else
                         .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                        .BtnSection.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     End If
                 End With
                 With FrmEdit
@@ -232,7 +236,7 @@ Public Class ExClass
                     .RibbonPageGroup1.Visible = False
                     .BtnLoad.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnJunk.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .BrnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                    .BtnCanceled.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnMatching.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .RibbonPageGroup5.Visible = False
 
@@ -250,8 +254,10 @@ Public Class ExClass
                     .BtnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
                     If userType = "TO" Then
                         .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
+                        .BtnSection.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     Else
                         .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
+                        .BtnSection.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     End If
                     .BtnDestination.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Never

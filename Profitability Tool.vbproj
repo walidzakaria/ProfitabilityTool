@@ -202,6 +202,12 @@
     <Compile Include="Forms\FrmAddMargin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FrmAddSection.Designer.vb">
+      <DependentUpon>FrmAddSection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAddSection.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FrmAddTourOperator.Designer.vb">
       <DependentUpon>FrmAddTourOperator.vb</DependentUpon>
     </Compile>
@@ -230,6 +236,12 @@
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmManageSection.Designer.vb">
+      <DependentUpon>FrmManageSection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmManageSection.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmManageTourOperator.Designer.vb">
@@ -322,6 +334,9 @@
       <DependentUpon>FrmAddMargin.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddSection.resx">
+      <DependentUpon>FrmAddSection.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAddTourOperator.resx">
       <DependentUpon>FrmAddTourOperator.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -340,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmManageSection.resx">
+      <DependentUpon>FrmManageSection.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmManageTourOperator.resx">
       <DependentUpon>FrmManageTourOperator.vb</DependentUpon>
