@@ -27,8 +27,8 @@ Partial Class FrmSplashScreen
         Me.LabelStatus = New DevExpress.XtraEditors.LabelControl()
         Me.LabelCopyright = New DevExpress.XtraEditors.LabelControl()
         Me.ProgressBarControl = New DevExpress.XtraEditors.MarqueeProgressBarControl()
-        Me.PeImage = New DevExpress.XtraEditors.PictureEdit()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PeImage = New DevExpress.XtraEditors.PictureEdit()
         CType(Me.ProgressBarControl.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PeImage.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -59,6 +59,10 @@ Partial Class FrmSplashScreen
         Me.ProgressBarControl.Size = New System.Drawing.Size(382, 15)
         Me.ProgressBarControl.TabIndex = 10
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 3500
+        '
         'PeImage
         '
         Me.PeImage.Cursor = System.Windows.Forms.Cursors.Default
@@ -73,10 +77,6 @@ Partial Class FrmSplashScreen
         Me.PeImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Squeeze
         Me.PeImage.Size = New System.Drawing.Size(426, 180)
         Me.PeImage.TabIndex = 14
-        '
-        'Timer1
-        '
-        Me.Timer1.Interval = 3500
         '
         'FrmSplashScreen
         '

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ChartDataSet" targetNamespace="http://tempuri.org/ChartDataSet.xsd" xmlns:mstns="http://tempuri.org/ChartDataSet.xsd" xmlns="http://tempuri.org/ChartDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ChartDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ChartDataSet" msprop:Generator_UserDSName="ChartDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BookingStatus" msprop:Generator_TableClassName="BookingStatusDataTable" msprop:Generator_TableVarName="tableBookingStatus" msprop:Generator_RowChangedName="BookingStatusRowChanged" msprop:Generator_TablePropName="BookingStatus" msprop:Generator_RowDeletingName="BookingStatusRowDeleting" msprop:Generator_RowChangingName="BookingStatusRowChanging" msprop:Generator_RowEvHandlerName="BookingStatusRowChangeEventHandler" msprop:Generator_RowDeletedName="BookingStatusRowDeleted" msprop:Generator_RowClassName="BookingStatusRow" msprop:Generator_UserTableName="BookingStatus" msprop:Generator_RowEvArgName="BookingStatusRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Country" msprop:Generator_ColumnVarNameInTable="columnCountry" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnPropNameInTable="CountryColumn" msprop:Generator_UserColumnName="Country" type="xs:string" minOccurs="0" />
+              <xs:element name="Matching" msprop:Generator_ColumnVarNameInTable="columnMatching" msprop:Generator_ColumnPropNameInRow="Matching" msprop:Generator_ColumnPropNameInTable="MatchingColumn" msprop:Generator_UserColumnName="Matching" type="xs:int" minOccurs="0" />
+              <xs:element name="Negative" msprop:Generator_ColumnVarNameInTable="columnNegative" msprop:Generator_ColumnPropNameInRow="Negative" msprop:Generator_ColumnPropNameInTable="NegativeColumn" msprop:Generator_UserColumnName="Negative" type="xs:int" minOccurs="0" />
+              <xs:element name="Excessive" msprop:Generator_ColumnVarNameInTable="columnExcessive" msprop:Generator_ColumnPropNameInRow="Excessive" msprop:Generator_ColumnPropNameInTable="ExcessiveColumn" msprop:Generator_UserColumnName="Excessive" type="xs:int" minOccurs="0" />
+              <xs:element name="Mismatch" msprop:Generator_ColumnVarNameInTable="columnMismatch" msprop:Generator_ColumnPropNameInRow="Mismatch" msprop:Generator_ColumnPropNameInTable="MismatchColumn" msprop:Generator_UserColumnName="Mismatch" type="xs:int" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DisputeStatus" msprop:Generator_TableClassName="DisputeStatusDataTable" msprop:Generator_TableVarName="tableDisputeStatus" msprop:Generator_TablePropName="DisputeStatus" msprop:Generator_RowDeletingName="DisputeStatusRowDeleting" msprop:Generator_RowChangingName="DisputeStatusRowChanging" msprop:Generator_RowEvHandlerName="DisputeStatusRowChangeEventHandler" msprop:Generator_RowDeletedName="DisputeStatusRowDeleted" msprop:Generator_UserTableName="DisputeStatus" msprop:Generator_RowChangedName="DisputeStatusRowChanged" msprop:Generator_RowEvArgName="DisputeStatusRowChangeEvent" msprop:Generator_RowClassName="DisputeStatusRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" type="xs:string" minOccurs="0" />
+              <xs:element name="Number" msprop:Generator_ColumnVarNameInTable="columnNumber" msprop:Generator_ColumnPropNameInRow="Number" msprop:Generator_ColumnPropNameInTable="NumberColumn" msprop:Generator_UserColumnName="Number" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CompanyStatus" msprop:Generator_TableClassName="CompanyStatusDataTable" msprop:Generator_TableVarName="tableCompanyStatus" msprop:Generator_TablePropName="CompanyStatus" msprop:Generator_RowDeletingName="CompanyStatusRowDeleting" msprop:Generator_RowChangingName="CompanyStatusRowChanging" msprop:Generator_RowEvHandlerName="CompanyStatusRowChangeEventHandler" msprop:Generator_RowDeletedName="CompanyStatusRowDeleted" msprop:Generator_UserTableName="CompanyStatus" msprop:Generator_RowChangedName="CompanyStatusRowChanged" msprop:Generator_RowEvArgName="CompanyStatusRowChangeEvent" msprop:Generator_RowClassName="CompanyStatusRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Company" msdata:Caption="Status" msprop:Generator_ColumnVarNameInTable="columnCompany" msprop:Generator_ColumnPropNameInRow="Company" msprop:Generator_ColumnPropNameInTable="CompanyColumn" msprop:Generator_UserColumnName="Company" type="xs:string" minOccurs="0" />
+              <xs:element name="Number" msprop:Generator_ColumnVarNameInTable="columnNumber" msprop:Generator_ColumnPropNameInRow="Number" msprop:Generator_ColumnPropNameInTable="NumberColumn" msprop:Generator_UserColumnName="Number" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

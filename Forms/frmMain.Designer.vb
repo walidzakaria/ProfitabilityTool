@@ -24,11 +24,31 @@
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
-        Dim SkinPaddingEdges2 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
+        Me.components = New System.ComponentModel.Container()
+        Dim SkinPaddingEdges1 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMain))
+        Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim PieSeriesLabel1 As DevExpress.XtraCharts.PieSeriesLabel = New DevExpress.XtraCharts.PieSeriesLabel()
+        Dim PieSeriesView1 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
+        Dim SeriesTitle1 As DevExpress.XtraCharts.SeriesTitle = New DevExpress.XtraCharts.SeriesTitle()
+        Dim XyDiagram1 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
+        Dim Series2 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series3 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim LineSeriesView1 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim Series4 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim LineSeriesView2 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim Series5 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim LineSeriesView3 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim Series6 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim LineSeriesView4 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim ChartTitle1 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
+        Dim Series7 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim PieSeriesLabel2 As DevExpress.XtraCharts.PieSeriesLabel = New DevExpress.XtraCharts.PieSeriesLabel()
+        Dim PieSeriesView2 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
+        Dim SeriesTitle2 As DevExpress.XtraCharts.SeriesTitle = New DevExpress.XtraCharts.SeriesTitle()
         Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.SkinRibbonGalleryBarItem1 = New DevExpress.XtraBars.SkinRibbonGalleryBarItem()
-        Me.BtnRate = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnImport = New DevExpress.XtraBars.BarButtonItem()
         Me.BtnSave = New DevExpress.XtraBars.BarButtonItem()
         Me.BtnLoad = New DevExpress.XtraBars.BarButtonItem()
         Me.BtnSwitchUser = New DevExpress.XtraBars.BarButtonItem()
@@ -73,6 +93,7 @@
         Me.BtnSection = New DevExpress.XtraBars.BarButtonItem()
         Me.BcCannotFix = New DevExpress.XtraBars.BarCheckItem()
         Me.BtnResetGrid = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnReport = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -86,6 +107,7 @@
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.RepositoryItemTextEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTextEdit()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -123,6 +145,7 @@
         Me.GridColumn35 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn36 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn37 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn43 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn38 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn39 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn40 = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -130,6 +153,20 @@
         Me.SplashScreenManager1 = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.ProfitabilityTool.FrmWait), True, True)
         Me.BarSubItem1 = New DevExpress.XtraBars.BarSubItem()
         Me.BarEditItem1 = New DevExpress.XtraBars.BarEditItem()
+        Me.NavigationFrame1 = New DevExpress.XtraBars.Navigation.NavigationFrame()
+        Me.NavigationPage1 = New DevExpress.XtraBars.Navigation.NavigationPage()
+        Me.XtraScrollableControl1 = New DevExpress.XtraEditors.XtraScrollableControl()
+        Me.ChartControl3 = New DevExpress.XtraCharts.ChartControl()
+        Me.ChartControl1 = New DevExpress.XtraCharts.ChartControl()
+        Me.ChartControl2 = New DevExpress.XtraCharts.ChartControl()
+        Me.NavigationPage2 = New DevExpress.XtraBars.Navigation.NavigationPage()
+        Me.CompanyStatusBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ChartDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ChartDataSet = New ProfitabilityTool.ChartDataSet()
+        Me.DisputeStatusBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CompanyStatusBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BookingStatusBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BookingStatusBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -143,6 +180,38 @@
         CType(Me.RepositoryItemLookUpEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NavigationFrame1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.NavigationFrame1.SuspendLayout()
+        Me.NavigationPage1.SuspendLayout()
+        Me.XtraScrollableControl1.SuspendLayout()
+        CType(Me.ChartControl3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(LineSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(LineSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(LineSeriesView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(LineSeriesView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.NavigationPage2.SuspendLayout()
+        CType(Me.CompanyStatusBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DisputeStatusBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CompanyStatusBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BookingStatusBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BookingStatusBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RibbonControl1
@@ -152,9 +221,9 @@
         Me.RibbonControl1.AllowMinimizeRibbon = False
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
         Me.RibbonControl1.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.RibbonControl1.SearchEditItem, Me.SkinRibbonGalleryBarItem1, Me.BtnRate, Me.BtnSave, Me.BtnLoad, Me.BtnSwitchUser, Me.BtnManageUsers, Me.BtnChangePassword, Me.BtnExit, Me.BeDateFrom, Me.BeDateTo, Me.BeCountry, Me.BtnDestination, Me.BtnManageMargin, Me.BtnJunk, Me.BtnCanceled, Me.BtnMatching, Me.BcNegative, Me.BcExcessive, Me.BcMismatch, Me.BtnShowDefict, Me.BcPendingDmc, Me.BcFixedDmc, Me.BcPendingTo, Me.BcFixedTo, Me.BtnShow, Me.BtnAddDispute, Me.BtnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.BtnManageCurrency, Me.BtnErrors, Me.BtnAbout, Me.BeImportFrom, Me.BeImportTill, Me.BtnSection, Me.BcCannotFix, Me.BtnResetGrid})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.RibbonControl1.SearchEditItem, Me.SkinRibbonGalleryBarItem1, Me.BtnImport, Me.BtnSave, Me.BtnLoad, Me.BtnSwitchUser, Me.BtnManageUsers, Me.BtnChangePassword, Me.BtnExit, Me.BeDateFrom, Me.BeDateTo, Me.BeCountry, Me.BtnDestination, Me.BtnManageMargin, Me.BtnJunk, Me.BtnCanceled, Me.BtnMatching, Me.BcNegative, Me.BcExcessive, Me.BcMismatch, Me.BtnShowDefict, Me.BcPendingDmc, Me.BcFixedDmc, Me.BcPendingTo, Me.BcFixedTo, Me.BtnShow, Me.BtnAddDispute, Me.BtnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.BtnManageCurrency, Me.BtnErrors, Me.BtnAbout, Me.BeImportFrom, Me.BeImportTill, Me.BtnSection, Me.BcCannotFix, Me.BtnResetGrid, Me.BtnReport})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl1.MaxItemId = 53
+        Me.RibbonControl1.MaxItemId = 54
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2, Me.RepositoryItemLookUpEdit2, Me.RepositoryItemDateEdit3, Me.RepositoryItemDateEdit4})
@@ -164,7 +233,7 @@
         Me.RibbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.ShowOnMultiplePages
         Me.RibbonControl1.ShowToolbarCustomizeItem = False
-        Me.RibbonControl1.Size = New System.Drawing.Size(1376, 132)
+        Me.RibbonControl1.Size = New System.Drawing.Size(1384, 132)
         Me.RibbonControl1.StatusBar = Me.RibbonStatusBar1
         Me.RibbonControl1.Toolbar.ShowCustomizeItem = False
         '
@@ -181,24 +250,24 @@
         Me.SkinRibbonGalleryBarItem1.Gallery.ItemCheckMode = DevExpress.XtraBars.Ribbon.Gallery.ItemCheckMode.SingleRadio
         Me.SkinRibbonGalleryBarItem1.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.Squeeze
         Me.SkinRibbonGalleryBarItem1.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Top
-        SkinPaddingEdges2.Left = 8
-        SkinPaddingEdges2.Right = 8
-        Me.SkinRibbonGalleryBarItem1.Gallery.ItemImagePadding = SkinPaddingEdges2
+        SkinPaddingEdges1.Left = 8
+        SkinPaddingEdges1.Right = 8
+        Me.SkinRibbonGalleryBarItem1.Gallery.ItemImagePadding = SkinPaddingEdges1
         Me.SkinRibbonGalleryBarItem1.Gallery.ScaleImages = DevExpress.Utils.DefaultBoolean.[False]
         Me.SkinRibbonGalleryBarItem1.Id = 1
         Me.SkinRibbonGalleryBarItem1.ImageOptions.SvgImage = CType(resources.GetObject("SkinRibbonGalleryBarItem1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.SkinRibbonGalleryBarItem1.Name = "SkinRibbonGalleryBarItem1"
         '
-        'BtnRate
+        'BtnImport
         '
-        Me.BtnRate.AllowAllUp = True
-        Me.BtnRate.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check
-        Me.BtnRate.Caption = "Import"
-        Me.BtnRate.GroupIndex = 1
-        Me.BtnRate.Id = 2
-        Me.BtnRate.ImageOptions.Image = CType(resources.GetObject("BtnRate.ImageOptions.Image"), System.Drawing.Image)
-        Me.BtnRate.Name = "BtnRate"
-        Me.BtnRate.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        Me.BtnImport.AllowAllUp = True
+        Me.BtnImport.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check
+        Me.BtnImport.Caption = "Import"
+        Me.BtnImport.GroupIndex = 1
+        Me.BtnImport.Id = 2
+        Me.BtnImport.ImageOptions.Image = CType(resources.GetObject("BtnImport.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnImport.Name = "BtnImport"
+        Me.BtnImport.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
         'BtnSave
         '
@@ -596,6 +665,18 @@
         Me.BtnResetGrid.Name = "BtnResetGrid"
         Me.BtnResetGrid.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
+        'BtnReport
+        '
+        Me.BtnReport.AllowAllUp = True
+        Me.BtnReport.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.Check
+        Me.BtnReport.Caption = "Statistics"
+        Me.BtnReport.Down = True
+        Me.BtnReport.GroupIndex = 8
+        Me.BtnReport.Id = 53
+        Me.BtnReport.ImageOptions.Image = CType(resources.GetObject("BtnReport.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnReport.Name = "BtnReport"
+        Me.BtnReport.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2, Me.RibbonPageGroup5, Me.RibbonPageGroup7, Me.RibbonPageGroup3, Me.RibbonPageGroup4})
@@ -606,7 +687,7 @@
         '
         Me.RibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonPageGroup1.ImageOptions.Image = CType(resources.GetObject("RibbonPageGroup1.ImageOptions.Image"), System.Drawing.Image)
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnRate)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnImport)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnSave)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnErrors)
         Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
@@ -636,6 +717,7 @@
         Me.RibbonPageGroup5.ItemLinks.Add(Me.BcExcessive)
         Me.RibbonPageGroup5.ItemLinks.Add(Me.BcMismatch)
         Me.RibbonPageGroup5.ItemLinks.Add(Me.BtnShowDefict)
+        Me.RibbonPageGroup5.ItemLinks.Add(Me.BtnReport)
         Me.RibbonPageGroup5.Name = "RibbonPageGroup5"
         Me.RibbonPageGroup5.Text = "Deficit"
         '
@@ -692,25 +774,26 @@
         Me.RibbonStatusBar1.ItemLinks.Add(Me.BarStaticItem1)
         Me.RibbonStatusBar1.ItemLinks.Add(Me.bhUsername)
         Me.RibbonStatusBar1.ItemLinks.Add(Me.biLoginTime)
-        Me.RibbonStatusBar1.Location = New System.Drawing.Point(0, 467)
+        Me.RibbonStatusBar1.Location = New System.Drawing.Point(0, 615)
         Me.RibbonStatusBar1.Name = "RibbonStatusBar1"
         Me.RibbonStatusBar1.Ribbon = Me.RibbonControl1
-        Me.RibbonStatusBar1.Size = New System.Drawing.Size(1376, 24)
+        Me.RibbonStatusBar1.Size = New System.Drawing.Size(1384, 24)
         '
         'GridControl1
         '
         Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl1.Location = New System.Drawing.Point(0, 132)
+        Me.GridControl1.Location = New System.Drawing.Point(0, 0)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.MenuManager = Me.RibbonControl1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(1376, 335)
+        Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1})
+        Me.GridControl1.Size = New System.Drawing.Size(1384, 483)
         Me.GridControl1.TabIndex = 1
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn6, Me.GridColumn41, Me.GridColumn7, Me.GridColumn8, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12, Me.GridColumn13, Me.GridColumn14, Me.GridColumn15, Me.GridColumn16, Me.GridColumn17, Me.GridColumn18, Me.GridColumn19, Me.GridColumn20, Me.GridColumn21, Me.GridColumn22, Me.GridColumn23, Me.GridColumn24, Me.GridColumn25, Me.GridColumn26, Me.GridColumn27, Me.GridColumn28, Me.GridColumn29, Me.GridColumn42, Me.GridColumn30, Me.GridColumn31, Me.GridColumn32, Me.GridColumn33, Me.GridColumn34, Me.GridColumn35, Me.GridColumn36, Me.GridColumn37, Me.GridColumn38, Me.GridColumn39, Me.GridColumn40})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn6, Me.GridColumn41, Me.GridColumn7, Me.GridColumn8, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12, Me.GridColumn13, Me.GridColumn14, Me.GridColumn15, Me.GridColumn16, Me.GridColumn17, Me.GridColumn18, Me.GridColumn19, Me.GridColumn20, Me.GridColumn21, Me.GridColumn22, Me.GridColumn23, Me.GridColumn24, Me.GridColumn25, Me.GridColumn26, Me.GridColumn27, Me.GridColumn28, Me.GridColumn29, Me.GridColumn42, Me.GridColumn30, Me.GridColumn31, Me.GridColumn32, Me.GridColumn33, Me.GridColumn34, Me.GridColumn35, Me.GridColumn36, Me.GridColumn37, Me.GridColumn43, Me.GridColumn38, Me.GridColumn39, Me.GridColumn40})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "Reference", Nothing, "(Number of Bookings: {0})")})
         Me.GridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always
@@ -730,37 +813,43 @@
         'GridColumn2
         '
         Me.GridColumn2.Caption = "Ref"
+        Me.GridColumn2.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn2.FieldName = "Reference"
         Me.GridColumn2.Name = "GridColumn2"
-        Me.GridColumn2.OptionsColumn.AllowEdit = False
         Me.GridColumn2.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Reference", "{0}")})
         Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 0
         '
+        'RepositoryItemTextEdit1
+        '
+        Me.RepositoryItemTextEdit1.AutoHeight = False
+        Me.RepositoryItemTextEdit1.Name = "RepositoryItemTextEdit1"
+        Me.RepositoryItemTextEdit1.ReadOnly = True
+        '
         'GridColumn3
         '
         Me.GridColumn3.Caption = "Hotel Code"
+        Me.GridColumn3.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn3.FieldName = "HotelCode"
         Me.GridColumn3.Name = "GridColumn3"
-        Me.GridColumn3.OptionsColumn.AllowEdit = False
         Me.GridColumn3.Visible = True
         Me.GridColumn3.VisibleIndex = 1
         '
         'GridColumn4
         '
         Me.GridColumn4.Caption = "Hotel Name"
+        Me.GridColumn4.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn4.FieldName = "HotelName"
         Me.GridColumn4.Name = "GridColumn4"
-        Me.GridColumn4.OptionsColumn.AllowEdit = False
         Me.GridColumn4.Visible = True
         Me.GridColumn4.VisibleIndex = 2
         '
         'GridColumn5
         '
         Me.GridColumn5.Caption = "Country"
+        Me.GridColumn5.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn5.FieldName = "HotelCountry"
         Me.GridColumn5.Name = "GridColumn5"
-        Me.GridColumn5.OptionsColumn.AllowEdit = False
         Me.GridColumn5.Visible = True
         Me.GridColumn5.VisibleIndex = 3
         Me.GridColumn5.Width = 60
@@ -768,9 +857,9 @@
         'GridColumn6
         '
         Me.GridColumn6.Caption = "GWGStatus"
+        Me.GridColumn6.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn6.FieldName = "GwgStatus"
         Me.GridColumn6.Name = "GridColumn6"
-        Me.GridColumn6.OptionsColumn.AllowEdit = False
         Me.GridColumn6.Visible = True
         Me.GridColumn6.VisibleIndex = 4
         Me.GridColumn6.Width = 50
@@ -778,18 +867,18 @@
         'GridColumn41
         '
         Me.GridColumn41.Caption = "BookingStatus"
+        Me.GridColumn41.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn41.FieldName = "BookingStatus"
         Me.GridColumn41.Name = "GridColumn41"
-        Me.GridColumn41.OptionsColumn.AllowEdit = False
         Me.GridColumn41.Visible = True
         Me.GridColumn41.VisibleIndex = 5
         '
         'GridColumn7
         '
         Me.GridColumn7.Caption = "Purchase Currency"
+        Me.GridColumn7.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn7.FieldName = "PurchaseCurrency"
         Me.GridColumn7.Name = "GridColumn7"
-        Me.GridColumn7.OptionsColumn.AllowEdit = False
         Me.GridColumn7.Visible = True
         Me.GridColumn7.VisibleIndex = 6
         Me.GridColumn7.Width = 60
@@ -803,9 +892,9 @@
         Me.GridColumn8.AppearanceHeader.Options.UseBackColor = True
         Me.GridColumn8.AppearanceHeader.Options.UseFont = True
         Me.GridColumn8.Caption = "Purchase Price"
+        Me.GridColumn8.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn8.FieldName = "PurchasePrice"
         Me.GridColumn8.Name = "GridColumn8"
-        Me.GridColumn8.OptionsColumn.AllowEdit = False
         Me.GridColumn8.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PurchasePrice", "{0:0.##}")})
         Me.GridColumn8.Visible = True
         Me.GridColumn8.VisibleIndex = 7
@@ -813,9 +902,9 @@
         'GridColumn9
         '
         Me.GridColumn9.Caption = "Sales Currency"
+        Me.GridColumn9.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn9.FieldName = "SalesCurrency"
         Me.GridColumn9.Name = "GridColumn9"
-        Me.GridColumn9.OptionsColumn.AllowEdit = False
         Me.GridColumn9.Visible = True
         Me.GridColumn9.VisibleIndex = 8
         Me.GridColumn9.Width = 60
@@ -829,9 +918,9 @@
         Me.GridColumn10.AppearanceHeader.Options.UseBackColor = True
         Me.GridColumn10.AppearanceHeader.Options.UseFont = True
         Me.GridColumn10.Caption = "Sales Price"
+        Me.GridColumn10.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn10.FieldName = "SalesPrice"
         Me.GridColumn10.Name = "GridColumn10"
-        Me.GridColumn10.OptionsColumn.AllowEdit = False
         Me.GridColumn10.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SalesPrice", "{0:0.##}")})
         Me.GridColumn10.Visible = True
         Me.GridColumn10.VisibleIndex = 9
@@ -839,9 +928,9 @@
         'GridColumn11
         '
         Me.GridColumn11.Caption = "GWG Handling Fee"
+        Me.GridColumn11.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn11.FieldName = "GwgHandlingFee"
         Me.GridColumn11.Name = "GridColumn11"
-        Me.GridColumn11.OptionsColumn.AllowEdit = False
         Me.GridColumn11.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GwgHandlingFee", "{0:0.##}")})
         Me.GridColumn11.Visible = True
         Me.GridColumn11.VisibleIndex = 10
@@ -855,9 +944,9 @@
         Me.GridColumn12.AppearanceHeader.Options.UseBackColor = True
         Me.GridColumn12.AppearanceHeader.Options.UseFont = True
         Me.GridColumn12.Caption = "Margin"
+        Me.GridColumn12.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn12.FieldName = "Margin"
         Me.GridColumn12.Name = "GridColumn12"
-        Me.GridColumn12.OptionsColumn.AllowEdit = False
         Me.GridColumn12.Visible = True
         Me.GridColumn12.VisibleIndex = 11
         Me.GridColumn12.Width = 60
@@ -873,9 +962,9 @@
         Me.GridColumn13.AppearanceHeader.Options.UseBackColor = True
         Me.GridColumn13.AppearanceHeader.Options.UseFont = True
         Me.GridColumn13.Caption = "Difference"
+        Me.GridColumn13.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn13.FieldName = "Difference"
         Me.GridColumn13.Name = "GridColumn13"
-        Me.GridColumn13.OptionsColumn.AllowEdit = False
         Me.GridColumn13.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Difference", "{0:0.##}")})
         Me.GridColumn13.Visible = True
         Me.GridColumn13.VisibleIndex = 12
@@ -884,9 +973,9 @@
         'GridColumn14
         '
         Me.GridColumn14.Caption = "Currency Hotel TC"
+        Me.GridColumn14.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn14.FieldName = "CurrencyHotelTC"
         Me.GridColumn14.Name = "GridColumn14"
-        Me.GridColumn14.OptionsColumn.AllowEdit = False
         Me.GridColumn14.Visible = True
         Me.GridColumn14.VisibleIndex = 13
         Me.GridColumn14.Width = 60
@@ -902,9 +991,9 @@
         Me.GridColumn15.AppearanceHeader.Options.UseBackColor = True
         Me.GridColumn15.AppearanceHeader.Options.UseFont = True
         Me.GridColumn15.Caption = "Net Rate Hotel TC"
+        Me.GridColumn15.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn15.FieldName = "NetRateHotelTC"
         Me.GridColumn15.Name = "GridColumn15"
-        Me.GridColumn15.OptionsColumn.AllowEdit = False
         Me.GridColumn15.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetRateHotelTC", "{0:0.##}")})
         Me.GridColumn15.Visible = True
         Me.GridColumn15.VisibleIndex = 14
@@ -913,9 +1002,9 @@
         'GridColumn16
         '
         Me.GridColumn16.Caption = "Net Rate Handling TC"
+        Me.GridColumn16.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn16.FieldName = "NetRateHandlingTC"
         Me.GridColumn16.Name = "GridColumn16"
-        Me.GridColumn16.OptionsColumn.AllowEdit = False
         Me.GridColumn16.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "NetRateHandlingTC", "{0:0.##}")})
         Me.GridColumn16.Visible = True
         Me.GridColumn16.VisibleIndex = 15
@@ -924,45 +1013,45 @@
         'GridColumn17
         '
         Me.GridColumn17.Caption = "Check Hotel"
+        Me.GridColumn17.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn17.FieldName = "CheckHotel"
         Me.GridColumn17.Name = "GridColumn17"
-        Me.GridColumn17.OptionsColumn.AllowEdit = False
         Me.GridColumn17.Visible = True
         Me.GridColumn17.VisibleIndex = 16
         '
         'GridColumn18
         '
         Me.GridColumn18.Caption = "Company Group"
+        Me.GridColumn18.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn18.FieldName = "CompanyGroup"
         Me.GridColumn18.Name = "GridColumn18"
-        Me.GridColumn18.OptionsColumn.AllowEdit = False
         Me.GridColumn18.Visible = True
         Me.GridColumn18.VisibleIndex = 17
         '
         'GridColumn19
         '
         Me.GridColumn19.Caption = "Booking Date"
+        Me.GridColumn19.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn19.FieldName = "BookingDate"
         Me.GridColumn19.Name = "GridColumn19"
-        Me.GridColumn19.OptionsColumn.AllowEdit = False
         Me.GridColumn19.Visible = True
         Me.GridColumn19.VisibleIndex = 18
         '
         'GridColumn20
         '
         Me.GridColumn20.Caption = "Travel Date"
+        Me.GridColumn20.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn20.FieldName = "TravelDate"
         Me.GridColumn20.Name = "GridColumn20"
-        Me.GridColumn20.OptionsColumn.AllowEdit = False
         Me.GridColumn20.Visible = True
         Me.GridColumn20.VisibleIndex = 19
         '
         'GridColumn21
         '
         Me.GridColumn21.Caption = "Room Type"
+        Me.GridColumn21.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn21.FieldName = "RoomType"
         Me.GridColumn21.Name = "GridColumn21"
-        Me.GridColumn21.OptionsColumn.AllowEdit = False
         Me.GridColumn21.Visible = True
         Me.GridColumn21.VisibleIndex = 20
         Me.GridColumn21.Width = 60
@@ -970,9 +1059,9 @@
         'GridColumn22
         '
         Me.GridColumn22.Caption = "Board"
+        Me.GridColumn22.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn22.FieldName = "Board"
         Me.GridColumn22.Name = "GridColumn22"
-        Me.GridColumn22.OptionsColumn.AllowEdit = False
         Me.GridColumn22.Visible = True
         Me.GridColumn22.VisibleIndex = 21
         Me.GridColumn22.Width = 50
@@ -980,9 +1069,9 @@
         'GridColumn23
         '
         Me.GridColumn23.Caption = "Duration"
+        Me.GridColumn23.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn23.FieldName = "Duration"
         Me.GridColumn23.Name = "GridColumn23"
-        Me.GridColumn23.OptionsColumn.AllowEdit = False
         Me.GridColumn23.Visible = True
         Me.GridColumn23.VisibleIndex = 22
         Me.GridColumn23.Width = 50
@@ -990,9 +1079,9 @@
         'GridColumn24
         '
         Me.GridColumn24.Caption = "TransferTo"
+        Me.GridColumn24.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn24.FieldName = "TransferTo"
         Me.GridColumn24.Name = "GridColumn24"
-        Me.GridColumn24.OptionsColumn.AllowEdit = False
         Me.GridColumn24.Visible = True
         Me.GridColumn24.VisibleIndex = 23
         Me.GridColumn24.Width = 50
@@ -1000,9 +1089,9 @@
         'GridColumn25
         '
         Me.GridColumn25.Caption = "TransferFrom"
+        Me.GridColumn25.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn25.FieldName = "TransferFrom"
         Me.GridColumn25.Name = "GridColumn25"
-        Me.GridColumn25.OptionsColumn.AllowEdit = False
         Me.GridColumn25.Visible = True
         Me.GridColumn25.VisibleIndex = 24
         Me.GridColumn25.Width = 50
@@ -1010,9 +1099,9 @@
         'GridColumn26
         '
         Me.GridColumn26.Caption = "Pax"
+        Me.GridColumn26.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn26.FieldName = "Pax"
         Me.GridColumn26.Name = "GridColumn26"
-        Me.GridColumn26.OptionsColumn.AllowEdit = False
         Me.GridColumn26.Visible = True
         Me.GridColumn26.VisibleIndex = 25
         Me.GridColumn26.Width = 45
@@ -1020,9 +1109,9 @@
         'GridColumn27
         '
         Me.GridColumn27.Caption = "Adult"
+        Me.GridColumn27.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn27.FieldName = "Adult"
         Me.GridColumn27.Name = "GridColumn27"
-        Me.GridColumn27.OptionsColumn.AllowEdit = False
         Me.GridColumn27.Visible = True
         Me.GridColumn27.VisibleIndex = 26
         Me.GridColumn27.Width = 45
@@ -1030,9 +1119,9 @@
         'GridColumn28
         '
         Me.GridColumn28.Caption = "Child"
+        Me.GridColumn28.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn28.FieldName = "Child"
         Me.GridColumn28.Name = "GridColumn28"
-        Me.GridColumn28.OptionsColumn.AllowEdit = False
         Me.GridColumn28.Visible = True
         Me.GridColumn28.VisibleIndex = 27
         Me.GridColumn28.Width = 45
@@ -1040,72 +1129,72 @@
         'GridColumn29
         '
         Me.GridColumn29.Caption = "ImportDate"
+        Me.GridColumn29.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn29.FieldName = "ImportDate"
         Me.GridColumn29.Name = "GridColumn29"
-        Me.GridColumn29.OptionsColumn.AllowEdit = False
         Me.GridColumn29.Visible = True
         Me.GridColumn29.VisibleIndex = 28
         '
         'GridColumn42
         '
         Me.GridColumn42.Caption = "MPImportData"
+        Me.GridColumn42.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn42.FieldName = "MPImportDate"
         Me.GridColumn42.Name = "GridColumn42"
-        Me.GridColumn42.OptionsColumn.AllowEdit = False
         Me.GridColumn42.Visible = True
         Me.GridColumn42.VisibleIndex = 30
         '
         'GridColumn30
         '
         Me.GridColumn30.Caption = "IncomingAgency"
+        Me.GridColumn30.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn30.FieldName = "IncomingAgency"
         Me.GridColumn30.Name = "GridColumn30"
-        Me.GridColumn30.OptionsColumn.AllowEdit = False
         Me.GridColumn30.Visible = True
         Me.GridColumn30.VisibleIndex = 29
         '
         'GridColumn31
         '
         Me.GridColumn31.Caption = "BookingStateDesc"
+        Me.GridColumn31.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn31.FieldName = "BookingStateDesc"
         Me.GridColumn31.Name = "GridColumn31"
-        Me.GridColumn31.OptionsColumn.AllowEdit = False
         Me.GridColumn31.Visible = True
         Me.GridColumn31.VisibleIndex = 31
         '
         'GridColumn32
         '
         Me.GridColumn32.Caption = "HotelFlag"
+        Me.GridColumn32.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn32.FieldName = "HotelFlag"
         Me.GridColumn32.Name = "GridColumn32"
-        Me.GridColumn32.OptionsColumn.AllowEdit = False
         Me.GridColumn32.Visible = True
         Me.GridColumn32.VisibleIndex = 32
         '
         'GridColumn33
         '
         Me.GridColumn33.Caption = "MissingBookings"
+        Me.GridColumn33.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn33.FieldName = "MissingBookings"
         Me.GridColumn33.Name = "GridColumn33"
-        Me.GridColumn33.OptionsColumn.AllowEdit = False
         Me.GridColumn33.Visible = True
         Me.GridColumn33.VisibleIndex = 33
         '
         'GridColumn34
         '
         Me.GridColumn34.Caption = "MarginCheck"
+        Me.GridColumn34.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn34.FieldName = "MarginCheck"
         Me.GridColumn34.Name = "GridColumn34"
-        Me.GridColumn34.OptionsColumn.AllowEdit = False
         Me.GridColumn34.Visible = True
         Me.GridColumn34.VisibleIndex = 34
         '
         'GridColumn35
         '
         Me.GridColumn35.Caption = "DifferenceTOPrice"
+        Me.GridColumn35.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn35.FieldName = "DifferenceTOPrice"
         Me.GridColumn35.Name = "GridColumn35"
-        Me.GridColumn35.OptionsColumn.AllowEdit = False
         Me.GridColumn35.Visible = True
         Me.GridColumn35.VisibleIndex = 35
         '
@@ -1116,9 +1205,9 @@
         Me.GridColumn36.AppearanceHeader.Options.UseBackColor = True
         Me.GridColumn36.AppearanceHeader.Options.UseFont = True
         Me.GridColumn36.Caption = "ActionBy"
+        Me.GridColumn36.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn36.FieldName = "ActionBy"
         Me.GridColumn36.Name = "GridColumn36"
-        Me.GridColumn36.OptionsColumn.AllowEdit = False
         Me.GridColumn36.Visible = True
         Me.GridColumn36.VisibleIndex = 36
         '
@@ -1129,11 +1218,24 @@
         Me.GridColumn37.AppearanceHeader.Options.UseBackColor = True
         Me.GridColumn37.AppearanceHeader.Options.UseFont = True
         Me.GridColumn37.Caption = "Status"
+        Me.GridColumn37.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn37.FieldName = "Status"
         Me.GridColumn37.Name = "GridColumn37"
-        Me.GridColumn37.OptionsColumn.AllowEdit = False
         Me.GridColumn37.Visible = True
         Me.GridColumn37.VisibleIndex = 37
+        '
+        'GridColumn43
+        '
+        Me.GridColumn43.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.GridColumn43.AppearanceHeader.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.GridColumn43.AppearanceHeader.Options.UseBackColor = True
+        Me.GridColumn43.AppearanceHeader.Options.UseFont = True
+        Me.GridColumn43.Caption = "Section"
+        Me.GridColumn43.ColumnEdit = Me.RepositoryItemTextEdit1
+        Me.GridColumn43.FieldName = "Section"
+        Me.GridColumn43.Name = "GridColumn43"
+        Me.GridColumn43.Visible = True
+        Me.GridColumn43.VisibleIndex = 38
         '
         'GridColumn38
         '
@@ -1142,20 +1244,20 @@
         Me.GridColumn38.AppearanceHeader.Options.UseBackColor = True
         Me.GridColumn38.AppearanceHeader.Options.UseFont = True
         Me.GridColumn38.Caption = "Comments"
+        Me.GridColumn38.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn38.FieldName = "Comments"
         Me.GridColumn38.Name = "GridColumn38"
-        Me.GridColumn38.OptionsColumn.AllowEdit = False
         Me.GridColumn38.Visible = True
-        Me.GridColumn38.VisibleIndex = 38
+        Me.GridColumn38.VisibleIndex = 39
         '
         'GridColumn39
         '
         Me.GridColumn39.Caption = "AdjustedPrice"
+        Me.GridColumn39.ColumnEdit = Me.RepositoryItemTextEdit1
         Me.GridColumn39.FieldName = "AdjustedPrice"
         Me.GridColumn39.Name = "GridColumn39"
-        Me.GridColumn39.OptionsColumn.AllowEdit = False
         Me.GridColumn39.Visible = True
-        Me.GridColumn39.VisibleIndex = 39
+        Me.GridColumn39.VisibleIndex = 40
         '
         'GridColumn40
         '
@@ -1164,7 +1266,7 @@
         Me.GridColumn40.Name = "GridColumn40"
         Me.GridColumn40.OptionsColumn.AllowEdit = False
         Me.GridColumn40.Visible = True
-        Me.GridColumn40.VisibleIndex = 40
+        Me.GridColumn40.VisibleIndex = 41
         '
         'RibbonPageGroup6
         '
@@ -1190,17 +1292,172 @@
         Me.BarEditItem1.Id = 11
         Me.BarEditItem1.Name = "BarEditItem1"
         '
+        'NavigationFrame1
+        '
+        Me.NavigationFrame1.Controls.Add(Me.NavigationPage1)
+        Me.NavigationFrame1.Controls.Add(Me.NavigationPage2)
+        Me.NavigationFrame1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.NavigationFrame1.Location = New System.Drawing.Point(0, 132)
+        Me.NavigationFrame1.Name = "NavigationFrame1"
+        Me.NavigationFrame1.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.NavigationPage1, Me.NavigationPage2})
+        Me.NavigationFrame1.SelectedPage = Me.NavigationPage1
+        Me.NavigationFrame1.Size = New System.Drawing.Size(1384, 483)
+        Me.NavigationFrame1.TabIndex = 4
+        Me.NavigationFrame1.Text = "NavigationFrame1"
+        '
+        'NavigationPage1
+        '
+        Me.NavigationPage1.Controls.Add(Me.XtraScrollableControl1)
+        Me.NavigationPage1.Name = "NavigationPage1"
+        Me.NavigationPage1.Size = New System.Drawing.Size(1384, 483)
+        '
+        'XtraScrollableControl1
+        '
+        Me.XtraScrollableControl1.AllowTouchScroll = True
+        Me.XtraScrollableControl1.Controls.Add(Me.ChartControl3)
+        Me.XtraScrollableControl1.Controls.Add(Me.ChartControl1)
+        Me.XtraScrollableControl1.Controls.Add(Me.ChartControl2)
+        Me.XtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.XtraScrollableControl1.Location = New System.Drawing.Point(0, 0)
+        Me.XtraScrollableControl1.Name = "XtraScrollableControl1"
+        Me.XtraScrollableControl1.Size = New System.Drawing.Size(1384, 483)
+        Me.XtraScrollableControl1.TabIndex = 3
+        '
+        'ChartControl3
+        '
+        Me.ChartControl3.Legend.Name = "Default Legend"
+        Me.ChartControl3.Legend.Visibility = DevExpress.Utils.DefaultBoolean.[True]
+        Me.ChartControl3.Location = New System.Drawing.Point(17, 8)
+        Me.ChartControl3.Name = "ChartControl3"
+        Series1.ArgumentDataMember = "Company"
+        Series1.ColorDataMember = "Status"
+        PieSeriesLabel1.LineVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        PieSeriesLabel1.TextPattern = "{A}: ({V})"
+        Series1.Label = PieSeriesLabel1
+        Series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        Series1.Name = "Dispute Status"
+        Series1.ToolTipHintDataMember = "Number"
+        Series1.ValueDataMembersSerializable = "Number"
+        SeriesTitle1.Text = "Companies"
+        PieSeriesView1.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle1})
+        Series1.View = PieSeriesView1
+        Me.ChartControl3.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
+        Me.ChartControl3.Size = New System.Drawing.Size(456, 270)
+        Me.ChartControl3.TabIndex = 2
+        '
+        'ChartControl1
+        '
+        XyDiagram1.AxisX.VisibleInPanesSerializable = "-1"
+        XyDiagram1.AxisY.VisibleInPanesSerializable = "-1"
+        Me.ChartControl1.Diagram = XyDiagram1
+        Me.ChartControl1.Legend.Name = "Default Legend"
+        Me.ChartControl1.Location = New System.Drawing.Point(17, 289)
+        Me.ChartControl1.Name = "ChartControl1"
+        Series2.ArgumentDataMember = "Country"
+        Series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        Series2.Name = "Total Bookings"
+        Series2.ValueDataMembersSerializable = "Total"
+        Series3.ArgumentDataMember = "Country"
+        Series3.Name = "Matched Bookings"
+        Series3.ValueDataMembersSerializable = "Matching"
+        LineSeriesView1.Color = System.Drawing.Color.FromArgb(CType(CType(146, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(80, Byte), Integer))
+        Series3.View = LineSeriesView1
+        Series4.ArgumentDataMember = "Country"
+        Series4.Name = "Negative Bookings"
+        Series4.ValueDataMembersSerializable = "Negative"
+        LineSeriesView2.Color = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Series4.View = LineSeriesView2
+        Series5.ArgumentDataMember = "Country"
+        Series5.Name = "Mismatching Bookings"
+        Series5.ValueDataMembersSerializable = "Mismatch"
+        LineSeriesView3.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Series5.View = LineSeriesView3
+        Series6.ArgumentDataMember = "Country"
+        Series6.Name = "Excessive Bookings"
+        Series6.ValueDataMembersSerializable = "Excessive"
+        LineSeriesView4.Color = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(148, Byte), Integer))
+        Series6.View = LineSeriesView4
+        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series2, Series3, Series4, Series5, Series6}
+        Me.ChartControl1.Size = New System.Drawing.Size(910, 331)
+        Me.ChartControl1.TabIndex = 0
+        ChartTitle1.Text = "Destinations Bookings"
+        Me.ChartControl1.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle1})
+        '
+        'ChartControl2
+        '
+        Me.ChartControl2.Legend.Name = "Default Legend"
+        Me.ChartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.[True]
+        Me.ChartControl2.Location = New System.Drawing.Point(486, 8)
+        Me.ChartControl2.Name = "ChartControl2"
+        Series7.ArgumentDataMember = "Status"
+        Series7.ColorDataMember = "Status"
+        PieSeriesLabel2.LineVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        PieSeriesLabel2.TextPattern = "{A}: ({V})"
+        Series7.Label = PieSeriesLabel2
+        Series7.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        Series7.Name = "Dispute Status"
+        Series7.ToolTipHintDataMember = "Number"
+        Series7.ValueDataMembersSerializable = "Number"
+        SeriesTitle2.Visibility = DevExpress.Utils.DefaultBoolean.[True]
+        PieSeriesView2.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle2})
+        Series7.View = PieSeriesView2
+        Me.ChartControl2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series7}
+        Me.ChartControl2.Size = New System.Drawing.Size(441, 270)
+        Me.ChartControl2.TabIndex = 1
+        '
+        'NavigationPage2
+        '
+        Me.NavigationPage2.Controls.Add(Me.GridControl1)
+        Me.NavigationPage2.Name = "NavigationPage2"
+        Me.NavigationPage2.Size = New System.Drawing.Size(1384, 483)
+        '
+        'CompanyStatusBindingSource1
+        '
+        Me.CompanyStatusBindingSource1.DataMember = "CompanyStatus"
+        Me.CompanyStatusBindingSource1.DataSource = Me.ChartDataSetBindingSource
+        '
+        'ChartDataSetBindingSource
+        '
+        Me.ChartDataSetBindingSource.DataSource = Me.ChartDataSet
+        Me.ChartDataSetBindingSource.Position = 0
+        '
+        'ChartDataSet
+        '
+        Me.ChartDataSet.DataSetName = "ChartDataSet"
+        Me.ChartDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DisputeStatusBindingSource
+        '
+        Me.DisputeStatusBindingSource.DataMember = "DisputeStatus"
+        Me.DisputeStatusBindingSource.DataSource = Me.ChartDataSet
+        '
+        'CompanyStatusBindingSource
+        '
+        Me.CompanyStatusBindingSource.DataMember = "CompanyStatus"
+        Me.CompanyStatusBindingSource.DataSource = Me.ChartDataSetBindingSource
+        '
+        'BookingStatusBindingSource1
+        '
+        Me.BookingStatusBindingSource1.DataMember = "BookingStatus"
+        Me.BookingStatusBindingSource1.DataSource = Me.ChartDataSetBindingSource
+        '
+        'BookingStatusBindingSource
+        '
+        Me.BookingStatusBindingSource.DataMember = "BookingStatus"
+        Me.BookingStatusBindingSource.DataSource = Me.ChartDataSetBindingSource
+        '
         'FrmMain
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[False]
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1376, 491)
-        Me.Controls.Add(Me.GridControl1)
+        Me.ClientSize = New System.Drawing.Size(1384, 639)
+        Me.Controls.Add(Me.NavigationFrame1)
         Me.Controls.Add(Me.RibbonStatusBar1)
         Me.Controls.Add(Me.RibbonControl1)
         Me.IconOptions.Icon = CType(resources.GetObject("FrmMain.IconOptions.Icon"), System.Drawing.Icon)
         Me.IconOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.profitability_logo
+        Me.KeyPreview = True
         Me.Name = "FrmMain"
         Me.Ribbon = Me.RibbonControl1
         Me.StatusBar = Me.RibbonStatusBar1
@@ -1219,6 +1476,38 @@
         CType(Me.RepositoryItemLookUpEdit2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemTextEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NavigationFrame1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.NavigationFrame1.ResumeLayout(False)
+        Me.NavigationPage1.ResumeLayout(False)
+        Me.XtraScrollableControl1.ResumeLayout(False)
+        CType(PieSeriesLabel1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(PieSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartControl3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(LineSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(LineSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(LineSeriesView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(LineSeriesView4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(PieSeriesLabel2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(PieSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.NavigationPage2.ResumeLayout(False)
+        CType(Me.CompanyStatusBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DisputeStatusBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CompanyStatusBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BookingStatusBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BookingStatusBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1231,7 +1520,7 @@
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents SkinRibbonGalleryBarItem1 As DevExpress.XtraBars.SkinRibbonGalleryBarItem
-    Friend WithEvents BtnRate As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnImport As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
@@ -1330,4 +1619,21 @@
     Friend WithEvents BtnSection As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents BcCannotFix As DevExpress.XtraBars.BarCheckItem
     Friend WithEvents BtnResetGrid As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RepositoryItemTextEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemTextEdit
+    Friend WithEvents GridColumn43 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents NavigationFrame1 As DevExpress.XtraBars.Navigation.NavigationFrame
+    Friend WithEvents NavigationPage1 As DevExpress.XtraBars.Navigation.NavigationPage
+    Friend WithEvents NavigationPage2 As DevExpress.XtraBars.Navigation.NavigationPage
+    Friend WithEvents BtnReport As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BookingStatusBindingSource As BindingSource
+    Friend WithEvents ChartDataSetBindingSource As BindingSource
+    Friend WithEvents ChartDataSet As ChartDataSet
+    Friend WithEvents ChartControl1 As DevExpress.XtraCharts.ChartControl
+    Friend WithEvents BookingStatusBindingSource1 As BindingSource
+    Friend WithEvents ChartControl2 As DevExpress.XtraCharts.ChartControl
+    Friend WithEvents DisputeStatusBindingSource As BindingSource
+    Friend WithEvents CompanyStatusBindingSource As BindingSource
+    Friend WithEvents CompanyStatusBindingSource1 As BindingSource
+    Friend WithEvents ChartControl3 As DevExpress.XtraCharts.ChartControl
+    Friend WithEvents XtraScrollableControl1 As DevExpress.XtraEditors.XtraScrollableControl
 End Class

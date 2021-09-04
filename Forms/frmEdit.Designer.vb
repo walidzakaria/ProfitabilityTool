@@ -62,17 +62,11 @@ Partial Public Class FrmEdit
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.LayoutView1 = New DevExpress.XtraGrid.Views.Layout.LayoutView()
         Me.BandedGridColumn2 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
-        Me.layoutViewField_BandedGridColumn2 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
         Me.BandedGridColumn3 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
         Me.RepositoryItemMemoEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit()
-        Me.layoutViewField_BandedGridColumn3 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
         Me.BandedGridColumn4 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
-        Me.layoutViewField_BandedGridColumn4 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
         Me.BandedGridColumn5 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
-        Me.layoutViewField_BandedGridColumn5 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
         Me.BandedGridColumn6 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
-        Me.layoutViewField_BandedGridColumn6 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
-        Me.LayoutViewCard1 = New DevExpress.XtraGrid.Views.Layout.LayoutViewCard()
         Me.RepositoryItemComboBox1 = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.TileView1 = New DevExpress.XtraGrid.Views.Tile.TileView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.TileViewColumn()
@@ -198,17 +192,19 @@ Partial Public Class FrmEdit
         Me.LayoutControlItem50 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.LayoutControlGroup6 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutViewColumn1 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
+        Me.LayoutViewCard1 = New DevExpress.XtraGrid.Views.Layout.LayoutViewCard()
+        Me.layoutViewField_BandedGridColumn3 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
+        Me.layoutViewField_BandedGridColumn4 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
+        Me.layoutViewField_BandedGridColumn5 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
+        Me.layoutViewField_BandedGridColumn6 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
+        Me.layoutViewField_LayoutViewColumn1 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
+        Me.layoutViewField_BandedGridColumn2 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dataLayoutControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.layoutViewField_BandedGridColumn2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemMemoEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.layoutViewField_BandedGridColumn3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.layoutViewField_BandedGridColumn4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.layoutViewField_BandedGridColumn5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.layoutViewField_BandedGridColumn6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutViewCard1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TileView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtHotelCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -332,6 +328,13 @@ Partial Public Class FrmEdit
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem50, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutViewCard1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.layoutViewField_BandedGridColumn3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.layoutViewField_BandedGridColumn4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.layoutViewField_BandedGridColumn5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.layoutViewField_BandedGridColumn6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.layoutViewField_LayoutViewColumn1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.layoutViewField_BandedGridColumn2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GridColumn2
@@ -444,7 +447,7 @@ Partial Public Class FrmEdit
         Me.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dataLayoutControl1.Location = New System.Drawing.Point(0, 30)
         Me.dataLayoutControl1.Name = "dataLayoutControl1"
-        Me.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(582, 190, 450, 400)
+        Me.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(105, 165, 721, 400)
         Me.dataLayoutControl1.Root = Me.layoutControlGroup1
         Me.dataLayoutControl1.Size = New System.Drawing.Size(758, 524)
         Me.dataLayoutControl1.TabIndex = 0
@@ -461,8 +464,6 @@ Partial Public Class FrmEdit
         '
         'LayoutView1
         '
-        Me.LayoutView1.Appearance.Card.Font = New System.Drawing.Font("Tahoma", 10.0!)
-        Me.LayoutView1.Appearance.Card.Options.UseFont = True
         Me.LayoutView1.Appearance.CardCaption.Font = New System.Drawing.Font("Tahoma", 10.0!)
         Me.LayoutView1.Appearance.CardCaption.Options.UseFont = True
         Me.LayoutView1.Appearance.FieldCaption.Font = New System.Drawing.Font("Tahoma", 10.0!)
@@ -475,8 +476,8 @@ Partial Public Class FrmEdit
         Me.LayoutView1.Appearance.FocusedCardCaption.Options.UseFont = True
         Me.LayoutView1.Appearance.HeaderPanel.Font = New System.Drawing.Font("Tahoma", 10.0!)
         Me.LayoutView1.Appearance.HeaderPanel.Options.UseFont = True
-        Me.LayoutView1.CardMinSize = New System.Drawing.Size(105, 179)
-        Me.LayoutView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.LayoutViewColumn() {Me.BandedGridColumn2, Me.BandedGridColumn3, Me.BandedGridColumn4, Me.BandedGridColumn5, Me.BandedGridColumn6})
+        Me.LayoutView1.CardMinSize = New System.Drawing.Size(105, 182)
+        Me.LayoutView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.LayoutViewColumn() {Me.BandedGridColumn2, Me.LayoutViewColumn1, Me.BandedGridColumn3, Me.BandedGridColumn4, Me.BandedGridColumn5, Me.BandedGridColumn6})
         Me.LayoutView1.GridControl = Me.GridControl1
         Me.LayoutView1.Name = "LayoutView1"
         Me.LayoutView1.OptionsBehavior.ReadOnly = True
@@ -496,14 +497,6 @@ Partial Public Class FrmEdit
         Me.BandedGridColumn2.OptionsColumn.FixedWidth = True
         Me.BandedGridColumn2.Width = 140
         '
-        'layoutViewField_BandedGridColumn2
-        '
-        Me.layoutViewField_BandedGridColumn2.EditorPreferredWidth = 515
-        Me.layoutViewField_BandedGridColumn2.Location = New System.Drawing.Point(0, 24)
-        Me.layoutViewField_BandedGridColumn2.Name = "layoutViewField_BandedGridColumn2"
-        Me.layoutViewField_BandedGridColumn2.Size = New System.Drawing.Size(580, 20)
-        Me.layoutViewField_BandedGridColumn2.TextSize = New System.Drawing.Size(56, 13)
-        '
         'BandedGridColumn3
         '
         Me.BandedGridColumn3.Caption = "Comment"
@@ -518,14 +511,6 @@ Partial Public Class FrmEdit
         '
         Me.RepositoryItemMemoEdit1.Name = "RepositoryItemMemoEdit1"
         '
-        'layoutViewField_BandedGridColumn3
-        '
-        Me.layoutViewField_BandedGridColumn3.EditorPreferredWidth = 515
-        Me.layoutViewField_BandedGridColumn3.Location = New System.Drawing.Point(0, 44)
-        Me.layoutViewField_BandedGridColumn3.Name = "layoutViewField_BandedGridColumn3"
-        Me.layoutViewField_BandedGridColumn3.Size = New System.Drawing.Size(580, 21)
-        Me.layoutViewField_BandedGridColumn3.TextSize = New System.Drawing.Size(56, 13)
-        '
         'BandedGridColumn4
         '
         Me.BandedGridColumn4.Caption = "Calculation"
@@ -535,14 +520,6 @@ Partial Public Class FrmEdit
         Me.BandedGridColumn4.OptionsColumn.AllowEdit = False
         Me.BandedGridColumn4.OptionsColumn.FixedWidth = True
         Me.BandedGridColumn4.Width = 100
-        '
-        'layoutViewField_BandedGridColumn4
-        '
-        Me.layoutViewField_BandedGridColumn4.EditorPreferredWidth = 515
-        Me.layoutViewField_BandedGridColumn4.Location = New System.Drawing.Point(0, 65)
-        Me.layoutViewField_BandedGridColumn4.Name = "layoutViewField_BandedGridColumn4"
-        Me.layoutViewField_BandedGridColumn4.Size = New System.Drawing.Size(580, 24)
-        Me.layoutViewField_BandedGridColumn4.TextSize = New System.Drawing.Size(56, 13)
         '
         'BandedGridColumn5
         '
@@ -555,14 +532,6 @@ Partial Public Class FrmEdit
         Me.BandedGridColumn5.OptionsColumn.ImmediateUpdateRowPosition = DevExpress.Utils.DefaultBoolean.[False]
         Me.BandedGridColumn5.Width = 50
         '
-        'layoutViewField_BandedGridColumn5
-        '
-        Me.layoutViewField_BandedGridColumn5.EditorPreferredWidth = 515
-        Me.layoutViewField_BandedGridColumn5.Location = New System.Drawing.Point(0, 89)
-        Me.layoutViewField_BandedGridColumn5.Name = "layoutViewField_BandedGridColumn5"
-        Me.layoutViewField_BandedGridColumn5.Size = New System.Drawing.Size(580, 24)
-        Me.layoutViewField_BandedGridColumn5.TextSize = New System.Drawing.Size(56, 13)
-        '
         'BandedGridColumn6
         '
         Me.BandedGridColumn6.Caption = "Status"
@@ -570,23 +539,6 @@ Partial Public Class FrmEdit
         Me.BandedGridColumn6.LayoutViewField = Me.layoutViewField_BandedGridColumn6
         Me.BandedGridColumn6.Name = "BandedGridColumn6"
         Me.BandedGridColumn6.OptionsColumn.AllowEdit = False
-        '
-        'layoutViewField_BandedGridColumn6
-        '
-        Me.layoutViewField_BandedGridColumn6.EditorPreferredWidth = 515
-        Me.layoutViewField_BandedGridColumn6.Location = New System.Drawing.Point(0, 0)
-        Me.layoutViewField_BandedGridColumn6.Name = "layoutViewField_BandedGridColumn6"
-        Me.layoutViewField_BandedGridColumn6.Size = New System.Drawing.Size(580, 24)
-        Me.layoutViewField_BandedGridColumn6.TextSize = New System.Drawing.Size(56, 13)
-        '
-        'LayoutViewCard1
-        '
-        Me.LayoutViewCard1.CustomizationFormText = "TemplateCard"
-        Me.LayoutViewCard1.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText
-        Me.LayoutViewCard1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.layoutViewField_BandedGridColumn2, Me.layoutViewField_BandedGridColumn3, Me.layoutViewField_BandedGridColumn4, Me.layoutViewField_BandedGridColumn5, Me.layoutViewField_BandedGridColumn6})
-        Me.LayoutViewCard1.Name = "layoutViewTemplateCard"
-        Me.LayoutViewCard1.OptionsItemText.TextToControlDistance = 5
-        Me.LayoutViewCard1.Text = "TemplateCard"
         '
         'RepositoryItemComboBox1
         '
@@ -1890,6 +1842,70 @@ Partial Public Class FrmEdit
         Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
         Me.LayoutControlGroup6.Size = New System.Drawing.Size(740, 477)
         '
+        'LayoutViewColumn1
+        '
+        Me.LayoutViewColumn1.Caption = "Section"
+        Me.LayoutViewColumn1.FieldName = "Section"
+        Me.LayoutViewColumn1.LayoutViewField = Me.layoutViewField_LayoutViewColumn1
+        Me.LayoutViewColumn1.Name = "LayoutViewColumn1"
+        '
+        'LayoutViewCard1
+        '
+        Me.LayoutViewCard1.CustomizationFormText = "TemplateCard"
+        Me.LayoutViewCard1.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText
+        Me.LayoutViewCard1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.layoutViewField_BandedGridColumn3, Me.layoutViewField_BandedGridColumn4, Me.layoutViewField_BandedGridColumn5, Me.layoutViewField_BandedGridColumn6, Me.layoutViewField_LayoutViewColumn1, Me.layoutViewField_BandedGridColumn2})
+        Me.LayoutViewCard1.Name = "LayoutViewCard1"
+        Me.LayoutViewCard1.OptionsItemText.TextToControlDistance = 5
+        Me.LayoutViewCard1.Text = "TemplateCard"
+        '
+        'layoutViewField_BandedGridColumn3
+        '
+        Me.layoutViewField_BandedGridColumn3.EditorPreferredWidth = 513
+        Me.layoutViewField_BandedGridColumn3.Location = New System.Drawing.Point(0, 48)
+        Me.layoutViewField_BandedGridColumn3.Name = "layoutViewField_BandedGridColumn3"
+        Me.layoutViewField_BandedGridColumn3.Size = New System.Drawing.Size(580, 45)
+        Me.layoutViewField_BandedGridColumn3.TextSize = New System.Drawing.Size(56, 13)
+        '
+        'layoutViewField_BandedGridColumn4
+        '
+        Me.layoutViewField_BandedGridColumn4.EditorPreferredWidth = 513
+        Me.layoutViewField_BandedGridColumn4.Location = New System.Drawing.Point(0, 93)
+        Me.layoutViewField_BandedGridColumn4.Name = "layoutViewField_BandedGridColumn4"
+        Me.layoutViewField_BandedGridColumn4.Size = New System.Drawing.Size(580, 24)
+        Me.layoutViewField_BandedGridColumn4.TextSize = New System.Drawing.Size(56, 13)
+        '
+        'layoutViewField_BandedGridColumn5
+        '
+        Me.layoutViewField_BandedGridColumn5.EditorPreferredWidth = 513
+        Me.layoutViewField_BandedGridColumn5.Location = New System.Drawing.Point(0, 117)
+        Me.layoutViewField_BandedGridColumn5.Name = "layoutViewField_BandedGridColumn5"
+        Me.layoutViewField_BandedGridColumn5.Size = New System.Drawing.Size(580, 24)
+        Me.layoutViewField_BandedGridColumn5.TextSize = New System.Drawing.Size(56, 13)
+        '
+        'layoutViewField_BandedGridColumn6
+        '
+        Me.layoutViewField_BandedGridColumn6.EditorPreferredWidth = 270
+        Me.layoutViewField_BandedGridColumn6.Location = New System.Drawing.Point(0, 0)
+        Me.layoutViewField_BandedGridColumn6.Name = "layoutViewField_BandedGridColumn6"
+        Me.layoutViewField_BandedGridColumn6.Size = New System.Drawing.Size(336, 24)
+        Me.layoutViewField_BandedGridColumn6.TextSize = New System.Drawing.Size(56, 13)
+        '
+        'layoutViewField_LayoutViewColumn1
+        '
+        Me.layoutViewField_LayoutViewColumn1.EditorPreferredWidth = 513
+        Me.layoutViewField_LayoutViewColumn1.Location = New System.Drawing.Point(0, 24)
+        Me.layoutViewField_LayoutViewColumn1.Name = "layoutViewField_LayoutViewColumn1"
+        Me.layoutViewField_LayoutViewColumn1.Size = New System.Drawing.Size(580, 24)
+        Me.layoutViewField_LayoutViewColumn1.TextSize = New System.Drawing.Size(56, 13)
+        '
+        'layoutViewField_BandedGridColumn2
+        '
+        Me.layoutViewField_BandedGridColumn2.EditorPreferredWidth = 178
+        Me.layoutViewField_BandedGridColumn2.Location = New System.Drawing.Point(336, 0)
+        Me.layoutViewField_BandedGridColumn2.Name = "layoutViewField_BandedGridColumn2"
+        Me.layoutViewField_BandedGridColumn2.Size = New System.Drawing.Size(244, 24)
+        Me.layoutViewField_BandedGridColumn2.TextSize = New System.Drawing.Size(56, 13)
+        '
         'FrmEdit
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
@@ -1909,13 +1925,7 @@ Partial Public Class FrmEdit
         Me.dataLayoutControl1.ResumeLayout(False)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.layoutViewField_BandedGridColumn2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemMemoEdit1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.layoutViewField_BandedGridColumn3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.layoutViewField_BandedGridColumn4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.layoutViewField_BandedGridColumn5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.layoutViewField_BandedGridColumn6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutViewCard1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TileView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtHotelCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2039,6 +2049,13 @@ Partial Public Class FrmEdit
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem50, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutViewCard1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.layoutViewField_BandedGridColumn3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.layoutViewField_BandedGridColumn4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.layoutViewField_BandedGridColumn5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.layoutViewField_BandedGridColumn6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.layoutViewField_LayoutViewColumn1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.layoutViewField_BandedGridColumn2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2149,12 +2166,6 @@ Partial Public Class FrmEdit
     Friend WithEvents BandedGridColumn6 As DevExpress.XtraGrid.Columns.LayoutViewColumn
     Friend WithEvents CbGWGStatus As DevExpress.XtraEditors.ComboBoxEdit
     Friend WithEvents RepositoryItemComboBox1 As DevExpress.XtraEditors.Repository.RepositoryItemComboBox
-    Friend WithEvents layoutViewField_BandedGridColumn2 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
-    Friend WithEvents layoutViewField_BandedGridColumn3 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
-    Friend WithEvents layoutViewField_BandedGridColumn4 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
-    Friend WithEvents layoutViewField_BandedGridColumn5 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
-    Friend WithEvents layoutViewField_BandedGridColumn6 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
-    Friend WithEvents LayoutViewCard1 As DevExpress.XtraGrid.Views.Layout.LayoutViewCard
     Public WithEvents windowsUIButtonPanelMain As DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel
     Friend WithEvents TxtUser As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LuStatus As DevExpress.XtraEditors.LookUpEdit
@@ -2190,4 +2201,12 @@ Partial Public Class FrmEdit
     Friend WithEvents LayoutControlItem52 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LuSection As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents LayoutControlItem53 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents layoutViewField_BandedGridColumn2 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
+    Friend WithEvents LayoutViewColumn1 As DevExpress.XtraGrid.Columns.LayoutViewColumn
+    Friend WithEvents layoutViewField_LayoutViewColumn1 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
+    Friend WithEvents layoutViewField_BandedGridColumn3 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
+    Friend WithEvents layoutViewField_BandedGridColumn4 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
+    Friend WithEvents layoutViewField_BandedGridColumn5 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
+    Friend WithEvents layoutViewField_BandedGridColumn6 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
+    Friend WithEvents LayoutViewCard1 As DevExpress.XtraGrid.Views.Layout.LayoutViewCard
 End Class

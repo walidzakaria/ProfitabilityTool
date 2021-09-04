@@ -312,6 +312,7 @@ Public Class Booking
     Public Property Negative() As Boolean
     Public Property ErrorLog() As String
     Public Property SysImportDate() As Date
+    Public Property Section() As String
 
 
     Public Function CheckJunk() As Short
@@ -482,7 +483,7 @@ Public Class Booking
                                 AdjustedPrice, PriceBreakdown, Booking.LoginID, Junk, PurchasePriceEUR, SalesPriceEUR, MarginEUR, NetRateEUR,
                                 DifferenceEUR, (CASE WHEN GWGStatus = 'Can' THEN 1 ELSE 0 END) AS Cancelled, ExcessiveMargin AS Excessive,
                                 MismatchCalc As Mismatch, NegativeMargin,
-                                BookingStatus, MPImportDate, [Log]
+                                BookingStatus, MPImportDate, [Log], Section
                                 From Booking
                                 JOIN [Login] ON [Login].LoginID = Booking.ActionBy
                                 WHERE BookingID = " & BookingID.ToString & ";"
@@ -566,6 +567,7 @@ Public Class Booking
             If Not IsDBNull(dt.Rows(0)(52)) Then
                 MPImportDate = CDate(dt.Rows(0)(52))
             End If
+            Section = CStr(dt.Rows(0)(54))
             result = True
         End If
         Return result
@@ -580,6 +582,7 @@ Public Class Comment
     Public Property Calculation() As Single
     Public Property Status() As String
     Public Property LoginID() As Integer
+    Public Property SectionID() As Integer
 
     Public Function Username() As Login
         Dim result As New Login With {
@@ -599,10 +602,18 @@ Public Class Comment
         If Calculation = Nothing Then
             calcText = "NULL"
         End If
-        query = String.Format("INSERT INTO Comment (Date, BookingID, Comment, Calculation, LoginID, Status) VALUES ('{0}', {1},'{2}', {3}, {4}, '{5}');", _
-                              CommentDate.ToString("MM/dd/yyyy HH:mm"), BookingID, Comment, calcText, LoginID, Status)
+
+        Dim sectionText As String = "NULL"
+        If SectionID <> 0 Then
+            sectionText = SectionID.ToString
+        End If
+
+        query = String.Format("INSERT INTO Comment (Date, BookingID, Comment, Calculation, LoginID, Status, SectionID)
+                               VALUES ('{0}', {1},'{2}', {3}, {4}, '{5}', {6});",
+                              CommentDate.ToString("MM/dd/yyyy HH:mm"), BookingID, Comment, calcText, LoginID, Status, sectionText)
         query &= String.Format(" UPDATE Booking SET ActionBy = dbo.ActionBy(BookingID), Comments = dbo.LastComment(BookingID),
-                                AdjustedPrice = dbo.AdjustedPrice(BookingID), [Status] = dbo.LastStatus(BookingID)
+                                AdjustedPrice = dbo.AdjustedPrice(BookingID), [Status] = dbo.LastStatus(BookingID),
+                                Section = dbo.LastSection(BookingID)
                                 WHERE BookingID = {0};", BookingID.ToString)
 
         Dim queryResult As String = ExClass.QuerySet(query)
@@ -634,7 +645,8 @@ Public Class Comment
         Next
         query = query.Substring(0, Len(query) - 2)
         query &= String.Format("; UPDATE Booking SET ActionBy = dbo.ActionBy(BookingID), Comments = dbo.LastComment(BookingID),
-                                AdjustedPrice = dbo.AdjustedPrice(BookingID), [Status] = dbo.LastStatus(BookingID)
+                                AdjustedPrice = dbo.AdjustedPrice(BookingID), [Status] = dbo.LastStatus(BookingID),
+                                Section = dbo.LastSection(BookingID)
                                 WHERE BookingID IN ({0});", String.Join(", ", bookingsList.ToArray))
 
 

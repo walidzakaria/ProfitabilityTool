@@ -247,13 +247,19 @@ Partial Public Class FrmEdit
     End Sub
 
     Private Sub GetComments()
-        Dim query As String = "SELECT * FROM Comment, Login WHERE Comment.LoginID = Login.LoginID AND" _
-                              & " BookingID = " & currentBooking.BookingID.ToString _
-                              & " ORDER BY Date DESC;"
+        Dim query As String
+
+        query = $"SELECT * FROM
+                Comment JOIN Login ON Comment.LoginID = Login.LoginID
+                LEFT JOIN Section ON Comment.SectionID = Section.SectionID
+                WHERE BookingID = {currentBooking.BookingID}
+                ORDER BY Date DESC;
+            "
         Dim dt As New DataTable()
         dt.Columns.Add("CommentID")
         dt.Columns.Add("BookingID")
         dt.Columns.Add("Date", GetType(DateTime))
+        dt.Columns.Add("Section")
         dt.Columns.Add("Comment")
         dt.Columns.Add("Calculation")
         dt.Columns.Add("Status", GetType(Integer))
@@ -318,6 +324,7 @@ Partial Public Class FrmEdit
     End Sub
 
     Private Sub ClearComment()
+
         LuStatus.EditValue = Nothing
         TxtComment.EditValue = ""
         TxtCalculation.EditValue = ""
@@ -332,10 +339,15 @@ Partial Public Class FrmEdit
             TxtComment.Focus()
         Else
             FrmMain.Wait(True)
+            Dim section As Integer
+            If Not LuSection.EditValue Is Nothing Then
+                section = CInt(LuSection.EditValue)
+            End If
             Dim comment = New Comment With {
                 .Status = CStr(LuStatus.EditValue),
                 .Comment = CStr(TxtComment.EditValue),
-                .BookingID = currentBooking.BookingID
+                .BookingID = currentBooking.BookingID,
+                .SectionID = section
             }
             If CStr(TxtCalculation.EditValue) = "" Then
                 comment.Calculation = Nothing
@@ -346,7 +358,8 @@ Partial Public Class FrmEdit
             If BookingsList.Count = 0 Then
                 If comment.Save() Then
                     GetComments()
-                    UpdateBookingStatus(False, comment.Status, GV.CurrentUser.LoginId, comment.Comment, comment.Calculation)
+                    UpdateBookingStatus(False, comment.Status, GV.CurrentUser.LoginId,
+                                        comment.Comment, comment.Calculation, comment.SectionID)
                     grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
 
                     ClearComment()
@@ -355,7 +368,8 @@ Partial Public Class FrmEdit
                 RemoveReadOnly()
                 If BookingsList.Count > 0 Then
                     If comment.SaveMulti(BookingsList) Then
-                        UpdateBookingStatus(True, comment.Status, GV.CurrentUser.LoginId, comment.Comment, comment.Calculation)
+                        UpdateBookingStatus(True, comment.Status, GV.CurrentUser.LoginId, comment.Comment,
+                                            comment.Calculation, comment.SectionID)
                         grpAddNewComment.Visibility = Utils.LayoutVisibility.Never
 
                         ClearComment()
@@ -373,12 +387,15 @@ Partial Public Class FrmEdit
         End If
     End Sub
 
-    Private Sub UpdateBookingStatus(ByVal multiple As Boolean, ByVal status As String, ByVal actionBy As Integer, ByVal comment As String, ByVal adjustedPrice As Double)
+    Private Sub UpdateBookingStatus(ByVal multiple As Boolean, ByVal status As String,
+                                    ByVal actionBy As Integer, ByVal comment As String,
+                                    ByVal adjustedPrice As Double, ByVal sectionId As Integer)
 
         currentBooking.Status = status
         currentBooking.ActionBy = actionBy
         currentBooking.Comments = comment
         currentBooking.AdjustedPrice = CStr(adjustedPrice)
+        currentBooking.Section = LuSection.Properties.GetDisplayText(sectionId)
         If Not multiple Then
             FrmMain.UpdateCertainRow(FrmMain.GridView1.FocusedRowHandle, currentBooking)
         Else

@@ -64,16 +64,16 @@ Partial Public Class FrmMain
         RepositoryItemLookUpEdit1.DisplayMember = "Destination"
 
     End Sub
-    Private Sub BtnRate_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnRate.ItemClick
+    Private Sub BtnImport_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnImport.ItemClick
         Wait(True)
-
+        NavigationFrame1.SelectedPageIndex = 1
         ResetGridLayout()
 
         Dim dt As DataTable = ParseText()
         GridControl1.DataSource = dt
         GridView1.BestFitColumns()
         Wait(False)
-        SetCheckedRibbonButton(BtnRate)
+        SetCheckedRibbonButton(BtnImport)
     End Sub
 
     Private Function ParseText() As DataTable
@@ -134,6 +134,7 @@ Partial Public Class FrmMain
         result.Columns.Add("AdjustedPrice")
         result.Columns.Add("PriceBreakdown")
         result.Columns.Add("LoginIID")
+        result.Columns.Add("Section")
 
         Dim lineText As String
         Dim formatError As Boolean = False
@@ -158,143 +159,9 @@ Partial Public Class FrmMain
         Return result
     End Function
 
+
     Private Sub BtnSave_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnSave.ItemClick
-        Wait(True)
-        Dim query As String = ""
-        Dim noNewRecords As Boolean = True
-        Dim lineText As String
-
-        Dim reference As String
-        Dim hotelCode As String
-        Dim hotelName As String
-        Dim hotelCountry As String
-        Dim gwgStatus As String
-        Dim bookingStatus As String
-        Dim purchaseCurrency As String
-        Dim purchasePrice As String
-        Dim salesCurrency As String
-        Dim salesPrice As String
-        Dim gwgHandlingFee As String
-        Dim margin As String
-        Dim difference As String
-        Dim currencyHotelTC As String
-        Dim netRateHotelTC As String
-        Dim netRateHandlingTC As String
-        Dim checkHotel As String
-        Dim companyGroup As String
-        Dim bookingDate As String
-        Dim traveldate As String
-        Dim roomType As String
-        Dim board As String
-        Dim duration As String
-        Dim transferTo As String
-        Dim transferFrom As String
-        Dim pax As String
-        Dim adult As String
-        Dim child As String
-        Dim importDate As String
-        Dim mpImportDate As String
-        Dim incomingAgency As String
-        Dim bookingStateDesc As String
-        Dim hotelFlag As String
-        Dim missingBookings As String
-        Dim marginCheck As String
-        Dim differenceTOPrice As String
-        Dim actionBy As String
-        Dim priceBreakdown As String
-        Dim loginId As Integer = GV.CurrentUser.LoginId
-        Dim junk As String
-
-        For x = 0 To GridView1.RowCount - 1
-
-            If GridView1.GetRowCellValue(x, "BookingID").ToString = "0" Then
-
-                With GridView1
-                    reference = .GetRowCellValue(x, "Reference").ToString
-                    hotelCode = .GetRowCellValue(x, "HotelCode").ToString
-                    hotelName = Replace(.GetRowCellValue(x, "HotelName").ToString, "'", "''")
-                    hotelCountry = .GetRowCellValue(x, "HotelCountry").ToString
-                    gwgStatus = .GetRowCellValue(x, "GwgStatus").ToString
-                    bookingStatus = .GetRowCellValue(x, "BookingStatus").ToString
-                    purchaseCurrency = .GetRowCellValue(x, "PurchaseCurrency").ToString
-                    purchasePrice = Val(.GetRowCellValue(x, "PurchasePrice").ToString.Replace(",", "")).ToString
-                    salesCurrency = .GetRowCellValue(x, "SalesCurrency").ToString
-                    salesPrice = Val(.GetRowCellValue(x, "SalesPrice").ToString.Replace(",", "")).ToString
-                    gwgHandlingFee = Val(.GetRowCellValue(x, "GwgHandlingFee").ToString.Replace(",", "")).ToString
-                    margin = Val(.GetRowCellValue(x, "Margin").ToString.Replace(",", "")).ToString
-                    difference = Val(.GetRowCellValue(x, "Difference").ToString.Replace(",", "")).ToString
-                    currencyHotelTC = .GetRowCellValue(x, "CurrencyHotelTC").ToString
-                    netRateHotelTC = Val(.GetRowCellValue(x, "NetRateHotelTC").ToString.Replace(",", "")).ToString
-                    netRateHandlingTC = Val(.GetRowCellValue(x, "NetRateHandlingTC").ToString.Replace(",", "")).ToString
-                    checkHotel = .GetRowCellValue(x, "CheckHotel").ToString
-                    companyGroup = .GetRowCellValue(x, "CompanyGroup").ToString
-                    bookingDate = TextToDate(.GetRowCellValue(x, "BookingDate").ToString).ToString("MM/dd/yyyy")
-                    traveldate = TextToDate(.GetRowCellValue(x, "TravelDate").ToString).ToString("MM/dd/yyyy")
-                    roomType = .GetRowCellValue(x, "RoomType").ToString
-                    board = .GetRowCellValue(x, "Board").ToString
-                    duration = .GetRowCellValue(x, "Duration").ToString
-                    transferTo = .GetRowCellValue(x, "TransferTo").ToString
-                    transferFrom = .GetRowCellValue(x, "TransferFrom").ToString
-                    pax = .GetRowCellValue(x, "Pax").ToString
-                    adult = .GetRowCellValue(x, "Adult").ToString
-                    child = .GetRowCellValue(x, "Child").ToString
-                    importDate = TextToDate(.GetRowCellValue(x, "ImportDate").ToString).ToString("MM/dd/yyyy")
-                    mpImportDate = TextToDate(.GetRowCellValue(x, "MPImportDate").ToString).ToString("MM/dd/yyyy")
-                    incomingAgency = .GetRowCellValue(x, "IncomingAgency").ToString
-                    bookingStateDesc = .GetRowCellValue(x, "BookingStateDesc").ToString
-                    hotelFlag = .GetRowCellValue(x, "HotelFlag").ToString
-                    missingBookings = .GetRowCellValue(x, "MissingBookings").ToString
-                    marginCheck = .GetRowCellValue(x, "MarginCheck").ToString
-                    differenceTOPrice = .GetRowCellValue(x, "DifferenceTOPrice").ToString
-                    actionBy = .GetRowCellValue(x, "ActionBy").ToString
-                    priceBreakdown = .GetRowCellValue(x, "PriceBreakdown").ToString
-
-                End With
-                If hotelCode <> "" Then
-
-                    If purchaseCurrency = "" Then
-                        purchaseCurrency = currencyHotelTC
-                    End If
-
-                    If salesCurrency = "" Then
-                        salesCurrency = purchaseCurrency
-                    End If
-
-
-                    junk = (Booking.CheckJunk(gwgStatus, marginCheck, Val(purchasePrice), Val(salesPrice), Val(netRateHotelTC), hotelName)).ToString
-                    lineText = String.Format("EXEC dbo.SaveBooking 0, '{0}', '{1}', N'{2}', '{3}', '{4}', '{5}', '{6}',
-                                            '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', 
-                                            '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}',
-                                            '{25}', '{26}', '{27}', '{28}', '{29}', '{30}', '{31}', '{32}', '{33}',
-                                            '{34}', '{35}', {36}, {37}, '{38}', '{39}'; ",
-                                                reference, hotelCode, hotelName, hotelCountry, gwgStatus,
-                                                purchaseCurrency, purchasePrice, salesCurrency, salesPrice,
-                                                gwgHandlingFee, margin, difference, currencyHotelTC, netRateHotelTC,
-                                                netRateHandlingTC, checkHotel, companyGroup, bookingDate, traveldate,
-                                                roomType, board, duration, transferTo, transferFrom, pax, adult, child,
-                                                importDate, incomingAgency, bookingStateDesc, hotelFlag, missingBookings,
-                                                marginCheck, differenceTOPrice, actionBy, priceBreakdown, loginId,
-                                                junk, bookingStatus, mpImportDate)
-
-                    query &= lineText
-                End If
-
-                noNewRecords = False
-
-            End If
-
-        Next
-
-
-        If Not noNewRecords Then
-            Dim result As String = ExClass.QuerySet(query)
-
-            If Not result = "True" Then
-                Wait(False)
-                XtraMessageBox.Show(result)
-            End If
-        End If
-        Wait(False)
+        FrmProgress.ShowDialog()
         SetCheckedRibbonButton()
     End Sub
 
@@ -346,6 +213,7 @@ Partial Public Class FrmMain
             .SetRowCellValue(rowHandle, "Comments", booking.Comments)
             .SetRowCellValue(rowHandle, "AdjustedPrice", booking.AdjustedPrice)
             .SetRowCellValue(rowHandle, "PriceBreakdown", booking.PriceBreakdown)
+            .SetRowCellValue(rowHandle, "Section", booking.Section)
         End With
 
         GridView1.RefreshData()
@@ -359,19 +227,22 @@ Partial Public Class FrmMain
 
         For x = 0 To GridView1.RowCount - 1
             If GridView1.IsRowSelected(x) And FrmEdit.BookingsList.Contains(CInt(GridView1.GetRowCellValue(x, "BookingID"))) Then
-                With bookingDT
-                    .Rows(x).SetField("ActionBy", booking.LastUser.Username)
-                    .Rows(x).SetField("Status", booking.Status)
-                    .Rows(x).SetField("Comments", booking.Comments)
+                With GridView1
+
+                    .SetRowCellValue(x, "ActionBy", booking.LastUser.Username)
+                    .SetRowCellValue(x, "Status", booking.Status)
+                    .SetRowCellValue(x, "Comments", booking.Comments)
                     If adjustPrice Then
-                        .Rows(x).SetField("AdjustedPrice", booking.AdjustedPrice)
+                        .SetRowCellValue(x, "AdjustedPrice", booking.AdjustedPrice)
                     End If
+                    .SetRowCellValue(x, "Action", booking.ActionBy)
+                    .SetRowCellValue(x, "Section", booking.Section)
                 End With
             End If
         Next
 
     End Sub
-    Private Function TextToDate(ByVal dateText As String) As Date
+    Public Function TextToDate(ByVal dateText As String) As Date
         Dim result As Date = New Date(1900, 1, 1)
         Dim tempDate() As String
         dateText = dateText.Replace("/", ".")
@@ -389,7 +260,7 @@ Partial Public Class FrmMain
     End Function
 
     Private Function LoadData(ByVal status As String, ByVal allCountries As Boolean) As Boolean
-
+        NavigationFrame1.SelectedPageIndex = 1
         If BeCountry.EditValue Is Nothing And Not allCountries Then
             XtraMessageBox.Show("Please select destination!")
             Return False
@@ -415,7 +286,7 @@ Partial Public Class FrmMain
                                     CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom,
                                     Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck,
                                     DifferenceTOPrice, [Login].Username AS ActionBy, [Status], Comments,
-                                    AdjustedPrice, PriceBreakdown, Booking.LoginID, Junk, BookingStatus, MPImportDate
+                                    AdjustedPrice, PriceBreakdown, Booking.LoginID, Junk, BookingStatus, MPImportDate, Section
                                     FROM Booking 
                                     JOIN [Login] ON [Login].LoginID = Booking.ActionBy"
 
@@ -512,7 +383,9 @@ Partial Public Class FrmMain
     End Sub
 
     Private Sub FrmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        ChartControl1.DataSource = Nothing
+        ChartControl2.DataSource = Nothing
+        ChartControl3.DataSource = Nothing
         BeDateFrom.EditValue = My.Settings.RibbonDateFrom
         BeDateTo.EditValue = Today().AddYears(3)
         BeImportFrom.EditValue = Today()
@@ -558,6 +431,10 @@ Partial Public Class FrmMain
     Private Sub BeDateFrom_EditValueChanged(sender As Object, e As EventArgs) Handles BeDateFrom.EditValueChanged
         My.Settings.RibbonDateFrom = CDate(BeDateFrom.EditValue)
         My.Settings.Save()
+
+        If NavigationFrame1.SelectedPageIndex = 0 Then
+            LoadCharts()
+        End If
     End Sub
 
     Private Sub BtnManageDestination_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnDestination.ItemClick
@@ -579,6 +456,10 @@ Partial Public Class FrmMain
     Private Sub BeCountry_EditValueChanged(sender As Object, e As EventArgs) Handles BeCountry.EditValueChanged
         My.Settings.Destination = CStr(BeCountry.EditValue)
         My.Settings.Save()
+        If NavigationFrame1.SelectedPageIndex = 0 Then
+            LoadCharts()
+        End If
+
     End Sub
 
     Private Sub BtnJunk_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnJunk.ItemClick
@@ -723,6 +604,49 @@ Partial Public Class FrmMain
         defaultGridLayout.Seek(0, System.IO.SeekOrigin.Begin)
 
         GridView1.RestoreLayoutFromRegistry("PrToolLayout")
+        LoadCharts()
+
+    End Sub
+
+    Private Sub LoadCharts()
+        Wait(True)
+        Dim startDate, endDate As Date
+        Dim destination As String
+        startDate = CDate(BeDateFrom.EditValue)
+        endDate = CDate(BeDateTo.EditValue)
+        destination = CStr(BeCountry.EditValue)
+
+        ' Destination Status
+        Dim query As String = $"SELECT HotelCountry AS Country,
+            SUM(IIF(NegativeMargin = 1 OR ExcessiveMargin = 1 OR MismatchCalc = 1, 0, 1)) AS Matching,
+            SUM(CONVERT(TINYINT, NegativeMargin)) AS Negative,
+            SUM(CONVERT(TINYINT, ExcessiveMargin)) - SUM(CONVERT(TINYINT, NegativeMargin)) AS Excessive,
+            SUM(CONVERT(TINYINT, MismatchCalc)) AS Mismatch, COUNT(*) AS Total
+            FROM Booking
+            WHERE TravelDate BETWEEN '{startDate:yyyy-MM-dd}' AND '{endDate:yyyy-MM-dd}'
+            GROUP BY HotelCountry;"
+        Dim destinationDT As DataTable = ExClass.QueryGet(query)
+        ChartControl1.DataSource = destinationDT
+
+        ' Booking Disputes
+        query = $"SELECT IIF([Status] = '', 'NEW', [Status]) AS [Status], COUNT(*) AS Number
+                FROM Booking
+                WHERE HotelCountry = '{destination}'
+                AND TravelDate BETWEEN '{startDate:yyyy-MM-dd}' AND '{endDate:yyyy-MM-dd}'
+                GROUP BY [Status];"
+
+        Dim disputesDT As DataTable = ExClass.QueryGet(query)
+        ChartControl2.DataSource = disputesDT
+
+        ' Company Status
+        query = $"SELECT CompanyGroup AS Company, COUNT(*) AS Number
+                FROM Booking
+                WHERE HotelCountry = '{destination}'
+                AND TravelDate BETWEEN '{startDate:yyyy-MM-dd}' AND '{endDate:yyyy-MM-dd}'
+                GROUP BY CompanyGroup;"
+        Dim companyDT As DataTable = ExClass.QueryGet(query)
+        ChartControl3.DataSource = companyDT
+        Wait(False)
     End Sub
 
     Private Sub ResetGridLayout()
@@ -814,5 +738,87 @@ Partial Public Class FrmMain
 
     Private Sub BtnResetGrid_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnResetGrid.ItemClick
         ResetGridLayout()
+    End Sub
+
+    Private Sub RepositoryItemTextEdit1_KeyDown(sender As Object, e As KeyEventArgs) Handles RepositoryItemTextEdit1.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            ViewBookingDetails()
+        End If
+    End Sub
+
+    Private Sub BtnReport_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnReport.ItemClick
+        NavigationFrame1.SelectedPageIndex = 0
+        LoadCharts()
+        SetCheckedRibbonButton(BtnReport)
+    End Sub
+
+    Private Sub BeDateTo_EditValueChanged(sender As Object, e As EventArgs) Handles BeDateTo.EditValueChanged
+        If NavigationFrame1.SelectedPageIndex = 0 Then
+            LoadCharts()
+        End If
+    End Sub
+
+    Private Sub ChartControl3_Click(sender As Object, e As EventArgs) Handles ChartControl3.Click
+
+    End Sub
+
+    Private Sub ChartControl3_DoubleClick(sender As Object, e As EventArgs) Handles ChartControl3.DoubleClick
+        If ChartControl3.Dock = DockStyle.Fill Then
+            ChartControl3.Dock = DockStyle.None
+            ChartControl3.Left = 18
+            ChartControl3.Top = 8
+            ChartControl1.Visible = True
+            ChartControl2.Visible = True
+        Else
+            ChartControl1.Visible = False
+            ChartControl2.Visible = False
+            ChartControl3.Dock = DockStyle.Fill
+        End If
+    End Sub
+
+
+    Private Sub ChartControl2_DoubleClick(sender As Object, e As EventArgs) Handles ChartControl2.DoubleClick
+        If ChartControl2.Dock = DockStyle.Fill Then
+            ChartControl2.Dock = DockStyle.None
+            ChartControl2.Left = 486
+            ChartControl2.Top = 8
+            ChartControl1.Visible = True
+            ChartControl3.Visible = True
+        Else
+            ChartControl1.Visible = False
+            ChartControl3.Visible = False
+            ChartControl2.Dock = DockStyle.Fill
+        End If
+    End Sub
+
+    Private Sub ChartControl1_DoubleClick(sender As Object, e As EventArgs) Handles ChartControl1.DoubleClick
+        If ChartControl1.Dock = DockStyle.Fill Then
+            ChartControl1.Dock = DockStyle.None
+            ChartControl1.Left = 18
+            ChartControl1.Top = 289
+            ChartControl2.Visible = True
+            ChartControl3.Visible = True
+        Else
+            ChartControl2.Visible = False
+            ChartControl3.Visible = False
+            ChartControl1.Dock = DockStyle.Fill
+        End If
+    End Sub
+
+    Private Sub FrmMain_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            ChartControl3.Left = 18
+            ChartControl3.Top = 8
+            ChartControl1.Visible = True
+            ChartControl2.Visible = True
+            ChartControl3.Visible = True
+            ChartControl2.Left = 486
+            ChartControl2.Top = 8
+            ChartControl1.Left = 18
+            ChartControl1.Top = 289
+            ChartControl1.Dock = DockStyle.None
+            ChartControl2.Dock = DockStyle.None
+            ChartControl3.Dock = DockStyle.None
+        End If
     End Sub
 End Class

@@ -1,0 +1,29 @@
+CREATE TABLE [dbo].[Section](
+	[SectionID] [int] IDENTITY(1,1) NOT NULL,
+	[Section] [nvarchar](200) NOT NULL,
+	[Status] [nvarchar](20) NULL,
+	[UserType] [nvarchar](10) NULL DEFAULT ('DMC'),
+PRIMARY KEY CLUSTERED 
+(
+	[SectionID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO;
+
+alter table Comment add SectionID int null foreign key references Section(SectionID);
+alter table Booking add Section nvarchar(200) not null default '';
+GO;
+CREATE function [dbo].[LastSection] (@BookingID bigint)
+returns nvarchar(20) as
+begin
+
+	DECLARE @Result nvarchar(200) = (
+	SELECT TOP 1 COALESCE(Section.Section, '')
+	FROM Comment LEFT JOIN Section ON Comment.SectionID = Section.SectionID
+	WHERE Comment.BookingID = @BookingID
+	ORDER BY Comment.CommentID DESC
+	)
+	
+	return @Result
+end;
