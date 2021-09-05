@@ -40,6 +40,14 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="SectionStatus" msprop:Generator_TableClassName="SectionStatusDataTable" msprop:Generator_TableVarName="tableSectionStatus" msprop:Generator_TablePropName="SectionStatus" msprop:Generator_RowDeletingName="SectionStatusRowDeleting" msprop:Generator_RowChangingName="SectionStatusRowChanging" msprop:Generator_RowEvHandlerName="SectionStatusRowChangeEventHandler" msprop:Generator_RowDeletedName="SectionStatusRowDeleted" msprop:Generator_UserTableName="SectionStatus" msprop:Generator_RowChangedName="SectionStatusRowChanged" msprop:Generator_RowEvArgName="SectionStatusRowChangeEvent" msprop:Generator_RowClassName="SectionStatusRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Section" msdata:Caption="Status" msprop:Generator_ColumnVarNameInTable="columnSection" msprop:Generator_ColumnPropNameInRow="Section" msprop:Generator_ColumnPropNameInTable="SectionColumn" msprop:Generator_UserColumnName="Section" type="xs:string" minOccurs="0" />
+              <xs:element name="Number" msprop:Generator_ColumnVarNameInTable="columnNumber" msprop:Generator_ColumnPropNameInRow="Number" msprop:Generator_ColumnPropNameInTable="NumberColumn" msprop:Generator_UserColumnName="Number" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

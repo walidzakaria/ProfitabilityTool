@@ -135,12 +135,7 @@ Public Class ExClass
                     .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .GridColumn7.Visible = True
-                    .GridColumn7.OptionsColumn.AllowShowHide = True
-                    .GridColumn8.Visible = True
-                    .GridColumn8.OptionsColumn.AllowShowHide = True
-                    .GridColumn12.Visible = True
-                    .GridColumn12.OptionsColumn.AllowShowHide = True
+                    AuthorizeColumns()
                     .BtnSection.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                 End With
                 With FrmEdit
@@ -173,12 +168,7 @@ Public Class ExClass
                     .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                     .BtnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
-                    .GridColumn7.Visible = True
-                    .GridColumn7.OptionsColumn.AllowShowHide = True
-                    .GridColumn8.Visible = True
-                    .GridColumn8.OptionsColumn.AllowShowHide = True
-                    .GridColumn12.Visible = True
-                    .GridColumn12.OptionsColumn.AllowShowHide = True
+                    AuthorizeColumns()
                     .BtnSection.Visibility = DevExpress.XtraBars.BarItemVisibility.Always
                 End With
                 With FrmEdit
@@ -210,12 +200,7 @@ Public Class ExClass
                     .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .GridColumn7.Visible = True
-                    .GridColumn7.OptionsColumn.AllowShowHide = True
-                    .GridColumn8.Visible = True
-                    .GridColumn8.OptionsColumn.AllowShowHide = True
-                    .GridColumn12.Visible = True
-                    .GridColumn12.OptionsColumn.AllowShowHide = True
+                    AuthorizeColumns()
                     If userType = "DMC" Then
                         .BtnManageUsers.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                         .BtnSection.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
@@ -263,12 +248,7 @@ Public Class ExClass
                     .BtnManageCurrency.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnTO.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
                     .BtnManageMargin.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
-                    .GridColumn7.Visible = False
-                    .GridColumn7.OptionsColumn.AllowShowHide = False
-                    .GridColumn8.Visible = False
-                    .GridColumn8.OptionsColumn.AllowShowHide = False
-                    .GridColumn12.Visible = False
-                    .GridColumn12.OptionsColumn.AllowShowHide = False
+                    AuthorizeColumns()
                 End With
                 With FrmEdit
                     .windowsUIButtonPanelMain.Buttons(2).Properties.Enabled = False
@@ -280,4 +260,18 @@ Public Class ExClass
         End Select
     End Sub
 
+    Public Shared Sub AuthorizeColumns()
+        Dim toHide As Boolean
+        toHide = GV.CurrentUser.Authority <> "TO" AndAlso GV.CurrentUser.Authority <> "SU TO"
+        With FrmMain
+            .GridColumn7.Visible = toHide
+            .GridColumn7.OptionsColumn.AllowShowHide = toHide
+            .GridColumn8.Visible = toHide
+            .GridColumn8.OptionsColumn.AllowShowHide = toHide
+            .GridColumn12.Visible = toHide
+            .GridColumn12.OptionsColumn.AllowShowHide = toHide
+            .GridColumn40.Visible = toHide
+            .GridColumn40.OptionsColumn.AllowShowHide = toHide
+        End With
+    End Sub
 End Class

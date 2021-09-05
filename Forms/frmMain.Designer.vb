@@ -24,28 +24,32 @@
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim SkinPaddingEdges1 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMain))
         Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim PieSeriesLabel1 As DevExpress.XtraCharts.PieSeriesLabel = New DevExpress.XtraCharts.PieSeriesLabel()
         Dim PieSeriesView1 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
         Dim SeriesTitle1 As DevExpress.XtraCharts.SeriesTitle = New DevExpress.XtraCharts.SeriesTitle()
-        Dim XyDiagram1 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
         Dim Series2 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim Series3 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim LineSeriesView1 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
-        Dim Series4 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim LineSeriesView2 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
-        Dim Series5 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim LineSeriesView3 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
-        Dim Series6 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim LineSeriesView4 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
-        Dim ChartTitle1 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
-        Dim Series7 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
         Dim PieSeriesLabel2 As DevExpress.XtraCharts.PieSeriesLabel = New DevExpress.XtraCharts.PieSeriesLabel()
         Dim PieSeriesView2 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
         Dim SeriesTitle2 As DevExpress.XtraCharts.SeriesTitle = New DevExpress.XtraCharts.SeriesTitle()
+        Dim XyDiagram1 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
+        Dim Series3 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series4 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim LineSeriesView1 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim Series5 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim LineSeriesView2 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim Series6 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim LineSeriesView3 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim Series7 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim LineSeriesView4 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim ChartTitle1 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
+        Dim Series8 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim PieSeriesLabel3 As DevExpress.XtraCharts.PieSeriesLabel = New DevExpress.XtraCharts.PieSeriesLabel()
+        Dim PieSeriesView3 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
+        Dim SeriesTitle3 As DevExpress.XtraCharts.SeriesTitle = New DevExpress.XtraCharts.SeriesTitle()
+        Me.ChartDataSet = New ProfitabilityTool.ChartDataSet()
         Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.SkinRibbonGalleryBarItem1 = New DevExpress.XtraBars.SkinRibbonGalleryBarItem()
         Me.BtnImport = New DevExpress.XtraBars.BarButtonItem()
@@ -156,17 +160,12 @@
         Me.NavigationFrame1 = New DevExpress.XtraBars.Navigation.NavigationFrame()
         Me.NavigationPage1 = New DevExpress.XtraBars.Navigation.NavigationPage()
         Me.XtraScrollableControl1 = New DevExpress.XtraEditors.XtraScrollableControl()
+        Me.ChartControl4 = New DevExpress.XtraCharts.ChartControl()
         Me.ChartControl3 = New DevExpress.XtraCharts.ChartControl()
         Me.ChartControl1 = New DevExpress.XtraCharts.ChartControl()
         Me.ChartControl2 = New DevExpress.XtraCharts.ChartControl()
         Me.NavigationPage2 = New DevExpress.XtraBars.Navigation.NavigationPage()
-        Me.CompanyStatusBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ChartDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ChartDataSet = New ProfitabilityTool.ChartDataSet()
-        Me.DisputeStatusBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CompanyStatusBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BookingStatusBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BookingStatusBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        CType(Me.ChartDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -185,34 +184,36 @@
         Me.NavigationFrame1.SuspendLayout()
         Me.NavigationPage1.SuspendLayout()
         Me.XtraScrollableControl1.SuspendLayout()
-        CType(Me.ChartControl3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartControl4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(PieSeriesLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(PieSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartControl3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(LineSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(LineSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(LineSeriesView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(LineSeriesView4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(PieSeriesLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(PieSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(LineSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(LineSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(LineSeriesView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(LineSeriesView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavigationPage2.SuspendLayout()
-        CType(Me.CompanyStatusBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ChartDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ChartDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DisputeStatusBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CompanyStatusBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BookingStatusBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BookingStatusBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ChartDataSet
+        '
+        Me.ChartDataSet.DataSetName = "ChartDataSet"
+        Me.ChartDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'RibbonControl1
         '
@@ -1314,6 +1315,7 @@
         'XtraScrollableControl1
         '
         Me.XtraScrollableControl1.AllowTouchScroll = True
+        Me.XtraScrollableControl1.Controls.Add(Me.ChartControl4)
         Me.XtraScrollableControl1.Controls.Add(Me.ChartControl3)
         Me.XtraScrollableControl1.Controls.Add(Me.ChartControl1)
         Me.XtraScrollableControl1.Controls.Add(Me.ChartControl2)
@@ -1323,25 +1325,49 @@
         Me.XtraScrollableControl1.Size = New System.Drawing.Size(1384, 483)
         Me.XtraScrollableControl1.TabIndex = 3
         '
+        'ChartControl4
+        '
+        Me.ChartControl4.Legend.AlignmentHorizontal = DevExpress.XtraCharts.LegendAlignmentHorizontal.Center
+        Me.ChartControl4.Legend.AlignmentVertical = DevExpress.XtraCharts.LegendAlignmentVertical.BottomOutside
+        Me.ChartControl4.Legend.Name = "Default Legend"
+        Me.ChartControl4.Legend.Visibility = DevExpress.Utils.DefaultBoolean.[True]
+        Me.ChartControl4.Location = New System.Drawing.Point(921, 8)
+        Me.ChartControl4.Name = "ChartControl4"
+        Series1.ArgumentDataMember = "Section"
+        Series1.ColorDataMember = "Section"
+        PieSeriesLabel1.LineVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        PieSeriesLabel1.TextPattern = "{A}: ({V})"
+        Series1.Label = PieSeriesLabel1
+        Series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[False]
+        Series1.Name = "Section Status"
+        Series1.ToolTipHintDataMember = "Number"
+        Series1.ValueDataMembersSerializable = "Number"
+        SeriesTitle1.Visibility = DevExpress.Utils.DefaultBoolean.[True]
+        PieSeriesView1.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle1})
+        Series1.View = PieSeriesView1
+        Me.ChartControl4.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
+        Me.ChartControl4.Size = New System.Drawing.Size(428, 609)
+        Me.ChartControl4.TabIndex = 3
+        '
         'ChartControl3
         '
         Me.ChartControl3.Legend.Name = "Default Legend"
         Me.ChartControl3.Legend.Visibility = DevExpress.Utils.DefaultBoolean.[True]
-        Me.ChartControl3.Location = New System.Drawing.Point(17, 8)
+        Me.ChartControl3.Location = New System.Drawing.Point(12, 8)
         Me.ChartControl3.Name = "ChartControl3"
-        Series1.ArgumentDataMember = "Company"
-        Series1.ColorDataMember = "Status"
-        PieSeriesLabel1.LineVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        PieSeriesLabel1.TextPattern = "{A}: ({V})"
-        Series1.Label = PieSeriesLabel1
-        Series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        Series1.Name = "Dispute Status"
-        Series1.ToolTipHintDataMember = "Number"
-        Series1.ValueDataMembersSerializable = "Number"
-        SeriesTitle1.Text = "Companies"
-        PieSeriesView1.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle1})
-        Series1.View = PieSeriesView1
-        Me.ChartControl3.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
+        Series2.ArgumentDataMember = "Company"
+        Series2.ColorDataMember = "Status"
+        PieSeriesLabel2.LineVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        PieSeriesLabel2.TextPattern = "{A}: ({V})"
+        Series2.Label = PieSeriesLabel2
+        Series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        Series2.Name = "Dispute Status"
+        Series2.ToolTipHintDataMember = "Number"
+        Series2.ValueDataMembersSerializable = "Number"
+        SeriesTitle2.Text = "Companies"
+        PieSeriesView2.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle2})
+        Series2.View = PieSeriesView2
+        Me.ChartControl3.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series2}
         Me.ChartControl3.Size = New System.Drawing.Size(456, 270)
         Me.ChartControl3.TabIndex = 2
         '
@@ -1351,34 +1377,34 @@
         XyDiagram1.AxisY.VisibleInPanesSerializable = "-1"
         Me.ChartControl1.Diagram = XyDiagram1
         Me.ChartControl1.Legend.Name = "Default Legend"
-        Me.ChartControl1.Location = New System.Drawing.Point(17, 289)
+        Me.ChartControl1.Location = New System.Drawing.Point(12, 289)
         Me.ChartControl1.Name = "ChartControl1"
-        Series2.ArgumentDataMember = "Country"
-        Series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        Series2.Name = "Total Bookings"
-        Series2.ValueDataMembersSerializable = "Total"
         Series3.ArgumentDataMember = "Country"
-        Series3.Name = "Matched Bookings"
-        Series3.ValueDataMembersSerializable = "Matching"
-        LineSeriesView1.Color = System.Drawing.Color.FromArgb(CType(CType(146, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(80, Byte), Integer))
-        Series3.View = LineSeriesView1
+        Series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        Series3.Name = "Total Bookings"
+        Series3.ValueDataMembersSerializable = "Total"
         Series4.ArgumentDataMember = "Country"
-        Series4.Name = "Negative Bookings"
-        Series4.ValueDataMembersSerializable = "Negative"
-        LineSeriesView2.Color = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Series4.View = LineSeriesView2
+        Series4.Name = "Matched Bookings"
+        Series4.ValueDataMembersSerializable = "Matching"
+        LineSeriesView1.Color = System.Drawing.Color.FromArgb(CType(CType(146, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(80, Byte), Integer))
+        Series4.View = LineSeriesView1
         Series5.ArgumentDataMember = "Country"
-        Series5.Name = "Mismatching Bookings"
-        Series5.ValueDataMembersSerializable = "Mismatch"
-        LineSeriesView3.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Series5.View = LineSeriesView3
+        Series5.Name = "Negative Bookings"
+        Series5.ValueDataMembersSerializable = "Negative"
+        LineSeriesView2.Color = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Series5.View = LineSeriesView2
         Series6.ArgumentDataMember = "Country"
-        Series6.Name = "Excessive Bookings"
-        Series6.ValueDataMembersSerializable = "Excessive"
+        Series6.Name = "Mismatching Bookings"
+        Series6.ValueDataMembersSerializable = "Mismatch"
+        LineSeriesView3.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Series6.View = LineSeriesView3
+        Series7.ArgumentDataMember = "Country"
+        Series7.Name = "Excessive Bookings"
+        Series7.ValueDataMembersSerializable = "Excessive"
         LineSeriesView4.Color = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(148, Byte), Integer))
-        Series6.View = LineSeriesView4
-        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series2, Series3, Series4, Series5, Series6}
-        Me.ChartControl1.Size = New System.Drawing.Size(910, 331)
+        Series7.View = LineSeriesView4
+        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series3, Series4, Series5, Series6, Series7}
+        Me.ChartControl1.Size = New System.Drawing.Size(903, 328)
         Me.ChartControl1.TabIndex = 0
         ChartTitle1.Text = "Destinations Bookings"
         Me.ChartControl1.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle1})
@@ -1387,21 +1413,21 @@
         '
         Me.ChartControl2.Legend.Name = "Default Legend"
         Me.ChartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.[True]
-        Me.ChartControl2.Location = New System.Drawing.Point(486, 8)
+        Me.ChartControl2.Location = New System.Drawing.Point(474, 8)
         Me.ChartControl2.Name = "ChartControl2"
-        Series7.ArgumentDataMember = "Status"
-        Series7.ColorDataMember = "Status"
-        PieSeriesLabel2.LineVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        PieSeriesLabel2.TextPattern = "{A}: ({V})"
-        Series7.Label = PieSeriesLabel2
-        Series7.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        Series7.Name = "Dispute Status"
-        Series7.ToolTipHintDataMember = "Number"
-        Series7.ValueDataMembersSerializable = "Number"
-        SeriesTitle2.Visibility = DevExpress.Utils.DefaultBoolean.[True]
-        PieSeriesView2.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle2})
-        Series7.View = PieSeriesView2
-        Me.ChartControl2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series7}
+        Series8.ArgumentDataMember = "Status"
+        Series8.ColorDataMember = "Status"
+        PieSeriesLabel3.LineVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        PieSeriesLabel3.TextPattern = "{A}: ({V})"
+        Series8.Label = PieSeriesLabel3
+        Series8.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        Series8.Name = "Dispute Status"
+        Series8.ToolTipHintDataMember = "Number"
+        Series8.ValueDataMembersSerializable = "Number"
+        SeriesTitle3.Visibility = DevExpress.Utils.DefaultBoolean.[True]
+        PieSeriesView3.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle3})
+        Series8.View = PieSeriesView3
+        Me.ChartControl2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series8}
         Me.ChartControl2.Size = New System.Drawing.Size(441, 270)
         Me.ChartControl2.TabIndex = 1
         '
@@ -1410,41 +1436,6 @@
         Me.NavigationPage2.Controls.Add(Me.GridControl1)
         Me.NavigationPage2.Name = "NavigationPage2"
         Me.NavigationPage2.Size = New System.Drawing.Size(1384, 483)
-        '
-        'CompanyStatusBindingSource1
-        '
-        Me.CompanyStatusBindingSource1.DataMember = "CompanyStatus"
-        Me.CompanyStatusBindingSource1.DataSource = Me.ChartDataSetBindingSource
-        '
-        'ChartDataSetBindingSource
-        '
-        Me.ChartDataSetBindingSource.DataSource = Me.ChartDataSet
-        Me.ChartDataSetBindingSource.Position = 0
-        '
-        'ChartDataSet
-        '
-        Me.ChartDataSet.DataSetName = "ChartDataSet"
-        Me.ChartDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DisputeStatusBindingSource
-        '
-        Me.DisputeStatusBindingSource.DataMember = "DisputeStatus"
-        Me.DisputeStatusBindingSource.DataSource = Me.ChartDataSet
-        '
-        'CompanyStatusBindingSource
-        '
-        Me.CompanyStatusBindingSource.DataMember = "CompanyStatus"
-        Me.CompanyStatusBindingSource.DataSource = Me.ChartDataSetBindingSource
-        '
-        'BookingStatusBindingSource1
-        '
-        Me.BookingStatusBindingSource1.DataMember = "BookingStatus"
-        Me.BookingStatusBindingSource1.DataSource = Me.ChartDataSetBindingSource
-        '
-        'BookingStatusBindingSource
-        '
-        Me.BookingStatusBindingSource.DataMember = "BookingStatus"
-        Me.BookingStatusBindingSource.DataSource = Me.ChartDataSetBindingSource
         '
         'FrmMain
         '
@@ -1463,6 +1454,7 @@
         Me.StatusBar = Me.RibbonStatusBar1
         Me.Text = "Profitability Tool"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.ChartDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemDateEdit1.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1484,30 +1476,27 @@
         CType(PieSeriesLabel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(PieSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ChartControl3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(LineSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(LineSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(LineSeriesView3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(LineSeriesView4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartControl4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(PieSeriesLabel2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(PieSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartControl3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(LineSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(LineSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(LineSeriesView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(LineSeriesView4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Series7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(PieSeriesLabel3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(PieSeriesView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavigationPage2.ResumeLayout(False)
-        CType(Me.CompanyStatusBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ChartDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ChartDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DisputeStatusBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CompanyStatusBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BookingStatusBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BookingStatusBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1625,15 +1614,10 @@
     Friend WithEvents NavigationPage1 As DevExpress.XtraBars.Navigation.NavigationPage
     Friend WithEvents NavigationPage2 As DevExpress.XtraBars.Navigation.NavigationPage
     Friend WithEvents BtnReport As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents BookingStatusBindingSource As BindingSource
-    Friend WithEvents ChartDataSetBindingSource As BindingSource
     Friend WithEvents ChartDataSet As ChartDataSet
     Friend WithEvents ChartControl1 As DevExpress.XtraCharts.ChartControl
-    Friend WithEvents BookingStatusBindingSource1 As BindingSource
     Friend WithEvents ChartControl2 As DevExpress.XtraCharts.ChartControl
-    Friend WithEvents DisputeStatusBindingSource As BindingSource
-    Friend WithEvents CompanyStatusBindingSource As BindingSource
-    Friend WithEvents CompanyStatusBindingSource1 As BindingSource
     Friend WithEvents ChartControl3 As DevExpress.XtraCharts.ChartControl
     Friend WithEvents XtraScrollableControl1 As DevExpress.XtraEditors.XtraScrollableControl
+    Friend WithEvents ChartControl4 As DevExpress.XtraCharts.ChartControl
 End Class

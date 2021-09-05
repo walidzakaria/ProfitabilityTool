@@ -386,6 +386,7 @@ Partial Public Class FrmMain
         ChartControl1.DataSource = Nothing
         ChartControl2.DataSource = Nothing
         ChartControl3.DataSource = Nothing
+        ChartControl4.DataSource = Nothing
         BeDateFrom.EditValue = My.Settings.RibbonDateFrom
         BeDateTo.EditValue = Today().AddYears(3)
         BeImportFrom.EditValue = Today()
@@ -428,13 +429,14 @@ Partial Public Class FrmMain
         FrmManageUsers.ShowDialog()
     End Sub
 
-    Private Sub BeDateFrom_EditValueChanged(sender As Object, e As EventArgs) Handles BeDateFrom.EditValueChanged
+    Private Sub BeDateFrom_EditValueChanged()
         My.Settings.RibbonDateFrom = CDate(BeDateFrom.EditValue)
         My.Settings.Save()
 
         If NavigationFrame1.SelectedPageIndex = 0 Then
             LoadCharts()
         End If
+
     End Sub
 
     Private Sub BtnManageDestination_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnDestination.ItemClick
@@ -453,7 +455,7 @@ Partial Public Class FrmMain
         End If
     End Sub
 
-    Private Sub BeCountry_EditValueChanged(sender As Object, e As EventArgs) Handles BeCountry.EditValueChanged
+    Private Sub BeCountry_EditValueChanged()
         My.Settings.Destination = CStr(BeCountry.EditValue)
         My.Settings.Save()
         If NavigationFrame1.SelectedPageIndex = 0 Then
@@ -604,8 +606,11 @@ Partial Public Class FrmMain
         defaultGridLayout.Seek(0, System.IO.SeekOrigin.Begin)
 
         GridView1.RestoreLayoutFromRegistry("PrToolLayout")
+        ExClass.AuthorizeColumns()
         LoadCharts()
-
+        AddHandler BeCountry.EditValueChanged, AddressOf BeCountry_EditValueChanged
+        AddHandler BeDateTo.EditValueChanged, AddressOf BeDateFrom_EditValueChanged
+        AddHandler BeDateFrom.EditValueChanged, AddressOf BeDateFrom_EditValueChanged
     End Sub
 
     Private Sub LoadCharts()
@@ -620,7 +625,7 @@ Partial Public Class FrmMain
         Dim query As String = $"SELECT HotelCountry AS Country,
             SUM(IIF(NegativeMargin = 1 OR ExcessiveMargin = 1 OR MismatchCalc = 1, 0, 1)) AS Matching,
             SUM(CONVERT(TINYINT, NegativeMargin)) AS Negative,
-            SUM(CONVERT(TINYINT, ExcessiveMargin)) - SUM(CONVERT(TINYINT, NegativeMargin)) AS Excessive,
+            SUM(CONVERT(TINYINT, ExcessiveMargin)) AS Excessive,
             SUM(CONVERT(TINYINT, MismatchCalc)) AS Mismatch, COUNT(*) AS Total
             FROM Booking
             WHERE TravelDate BETWEEN '{startDate:yyyy-MM-dd}' AND '{endDate:yyyy-MM-dd}'
@@ -646,11 +651,22 @@ Partial Public Class FrmMain
                 GROUP BY CompanyGroup;"
         Dim companyDT As DataTable = ExClass.QueryGet(query)
         ChartControl3.DataSource = companyDT
+
+        ' Section Status
+        query = $"SELECT Section, COUNT(*) AS Number
+                FROM Booking
+                WHERE HotelCountry = '{destination}'
+                AND TravelDate BETWEEN '{startDate:yyyy-MM-dd}' AND '{endDate:yyyy-MM-dd}'
+                GROUP BY Section;"
+
+        Dim sectionDT As DataTable = ExClass.QueryGet(query)
+        ChartControl4.DataSource = sectionDT
         Wait(False)
     End Sub
 
     Private Sub ResetGridLayout()
         GridView1.RestoreLayoutFromStream(defaultGridLayout)
+        ExClass.AuthorizeColumns()
         defaultGridLayout.Seek(0, System.IO.SeekOrigin.Begin)
     End Sub
 
@@ -752,26 +768,30 @@ Partial Public Class FrmMain
         SetCheckedRibbonButton(BtnReport)
     End Sub
 
-    Private Sub BeDateTo_EditValueChanged(sender As Object, e As EventArgs) Handles BeDateTo.EditValueChanged
+    Private Sub BeDateTo_EditValueChanged()
         If NavigationFrame1.SelectedPageIndex = 0 Then
             LoadCharts()
         End If
     End Sub
 
-    Private Sub ChartControl3_Click(sender As Object, e As EventArgs) Handles ChartControl3.Click
-
+    Private Sub RefreshCharts()
+        NavigationFrame1.SelectedPageIndex = 0
+        LoadCharts()
+        SetCheckedRibbonButton(BtnReport)
     End Sub
 
     Private Sub ChartControl3_DoubleClick(sender As Object, e As EventArgs) Handles ChartControl3.DoubleClick
         If ChartControl3.Dock = DockStyle.Fill Then
             ChartControl3.Dock = DockStyle.None
-            ChartControl3.Left = 18
+            ChartControl3.Left = 12
             ChartControl3.Top = 8
             ChartControl1.Visible = True
             ChartControl2.Visible = True
+            ChartControl4.Visible = True
         Else
             ChartControl1.Visible = False
             ChartControl2.Visible = False
+            ChartControl4.Visible = False
             ChartControl3.Dock = DockStyle.Fill
         End If
     End Sub
@@ -780,13 +800,15 @@ Partial Public Class FrmMain
     Private Sub ChartControl2_DoubleClick(sender As Object, e As EventArgs) Handles ChartControl2.DoubleClick
         If ChartControl2.Dock = DockStyle.Fill Then
             ChartControl2.Dock = DockStyle.None
-            ChartControl2.Left = 486
+            ChartControl2.Left = 474
             ChartControl2.Top = 8
             ChartControl1.Visible = True
             ChartControl3.Visible = True
+            ChartControl4.Visible = True
         Else
             ChartControl1.Visible = False
             ChartControl3.Visible = False
+            ChartControl4.Visible = False
             ChartControl2.Dock = DockStyle.Fill
         End If
     End Sub
@@ -794,31 +816,54 @@ Partial Public Class FrmMain
     Private Sub ChartControl1_DoubleClick(sender As Object, e As EventArgs) Handles ChartControl1.DoubleClick
         If ChartControl1.Dock = DockStyle.Fill Then
             ChartControl1.Dock = DockStyle.None
-            ChartControl1.Left = 18
+            ChartControl1.Left = 12
             ChartControl1.Top = 289
             ChartControl2.Visible = True
             ChartControl3.Visible = True
+            ChartControl4.Visible = True
         Else
             ChartControl2.Visible = False
             ChartControl3.Visible = False
+            ChartControl4.Visible = False
             ChartControl1.Dock = DockStyle.Fill
         End If
     End Sub
 
     Private Sub FrmMain_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyCode = Keys.Escape Then
-            ChartControl3.Left = 18
+            ChartControl3.Left = 12
             ChartControl3.Top = 8
             ChartControl1.Visible = True
             ChartControl2.Visible = True
             ChartControl3.Visible = True
-            ChartControl2.Left = 486
+            ChartControl4.Visible = True
+            ChartControl2.Left = 474
             ChartControl2.Top = 8
-            ChartControl1.Left = 18
+            ChartControl1.Left = 12
             ChartControl1.Top = 289
+            ChartControl4.Top = 8
+            ChartControl4.Left = 921
             ChartControl1.Dock = DockStyle.None
             ChartControl2.Dock = DockStyle.None
             ChartControl3.Dock = DockStyle.None
+            ChartControl4.Dock = DockStyle.None
+
+        End If
+    End Sub
+
+    Private Sub ChartControl4_DoubleClick(sender As Object, e As EventArgs) Handles ChartControl4.DoubleClick
+        If ChartControl4.Dock = DockStyle.Fill Then
+            ChartControl4.Dock = DockStyle.None
+            ChartControl4.Left = 921
+            ChartControl4.Top = 8
+            ChartControl2.Visible = True
+            ChartControl3.Visible = True
+            ChartControl1.Visible = True
+        Else
+            ChartControl2.Visible = False
+            ChartControl3.Visible = False
+            ChartControl1.Visible = False
+            ChartControl4.Dock = DockStyle.Fill
         End If
     End Sub
 End Class
