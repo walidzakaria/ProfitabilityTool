@@ -3,7 +3,7 @@
 Public Class FrmSplashScreen
     Sub New()
         InitializeComponent()
-        Me.LabelCopyright.Text = "Copyright RedSea24© 2020-" & DateTime.Now.Year.ToString()
+        Me.LabelCopyright.Text = String.Format("By RS24 - Version No. {0}", Application.ProductVersion)
     End Sub
 
     Public Overrides Sub ProcessCommand(ByVal cmd As System.Enum, ByVal arg As Object)

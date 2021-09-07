@@ -6,9 +6,9 @@ Public Class ExClass
     ''' Generic methods and functions
     ''' </summary>
 
-    'Public Shared myConn As New SqlConnection(My.Settings.DatabaseConnection)
+    Public Shared myConn As New SqlConnection(My.Settings.DatabaseConnection)
     'Public Shared myConn As New SqlConnection("workstation id=rs24profitabilitytool.mssql.somee.com;packet size=4096;user id=waliiid_SQLLogin_1;pwd=nhyb4lqews;data source=rs24profitabilitytool.mssql.somee.com;persist security info=False;initial catalog=rs24profitabilitytool")
-    Public Shared myConn As New SqlConnection("Data Source=desktop-9i7uufn\MASTER;Initial Catalog=YT_DB;Integrated Security=SSPI;")
+    'Public Shared myConn As New SqlConnection("Data Source=desktop-9i7uufn\MASTER;Initial Catalog=YT_DB;Integrated Security=SSPI;")
 
     Public Shared Function QuerySet(ByVal query As String) As String
         Dim result As String

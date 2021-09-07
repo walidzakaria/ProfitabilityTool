@@ -82,8 +82,14 @@
                 bookingStatus = .GetRowCellValue(rowIndex, "BookingStatus").ToString
                 purchaseCurrency = .GetRowCellValue(rowIndex, "PurchaseCurrency").ToString
                 purchasePrice = Val(.GetRowCellValue(rowIndex, "PurchasePrice").ToString.Replace(",", "")).ToString
+                If purchasePrice.ToLower.Contains("e") Then
+                    purchasePrice = "0"
+                End If
                 salesCurrency = .GetRowCellValue(rowIndex, "SalesCurrency").ToString
                 salesPrice = Val(.GetRowCellValue(rowIndex, "SalesPrice").ToString.Replace(",", "")).ToString
+                If salesPrice.ToLower.Contains("e") Then
+                    salesPrice = "0"
+                End If
                 gwgHandlingFee = Val(.GetRowCellValue(rowIndex, "GwgHandlingFee").ToString.Replace(",", "")).ToString
                 margin = Val(.GetRowCellValue(rowIndex, "Margin").ToString.Replace(",", "")).ToString
                 difference = Val(.GetRowCellValue(rowIndex, "Difference").ToString.Replace(",", "")).ToString

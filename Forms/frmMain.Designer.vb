@@ -718,7 +718,6 @@
         Me.RibbonPageGroup5.ItemLinks.Add(Me.BcExcessive)
         Me.RibbonPageGroup5.ItemLinks.Add(Me.BcMismatch)
         Me.RibbonPageGroup5.ItemLinks.Add(Me.BtnShowDefict)
-        Me.RibbonPageGroup5.ItemLinks.Add(Me.BtnReport)
         Me.RibbonPageGroup5.Name = "RibbonPageGroup5"
         Me.RibbonPageGroup5.Text = "Deficit"
         '
@@ -734,6 +733,7 @@
         Me.RibbonPageGroup7.ItemLinks.Add(Me.BcCannotFix)
         Me.RibbonPageGroup7.ItemLinks.Add(Me.BtnAddDispute)
         Me.RibbonPageGroup7.ItemLinks.Add(Me.BtnShow)
+        Me.RibbonPageGroup7.ItemLinks.Add(Me.BtnReport)
         Me.RibbonPageGroup7.Name = "RibbonPageGroup7"
         Me.RibbonPageGroup7.Text = "Disputes"
         '
@@ -775,7 +775,7 @@
         Me.RibbonStatusBar1.ItemLinks.Add(Me.BarStaticItem1)
         Me.RibbonStatusBar1.ItemLinks.Add(Me.bhUsername)
         Me.RibbonStatusBar1.ItemLinks.Add(Me.biLoginTime)
-        Me.RibbonStatusBar1.Location = New System.Drawing.Point(0, 615)
+        Me.RibbonStatusBar1.Location = New System.Drawing.Point(0, 744)
         Me.RibbonStatusBar1.Name = "RibbonStatusBar1"
         Me.RibbonStatusBar1.Ribbon = Me.RibbonControl1
         Me.RibbonStatusBar1.Size = New System.Drawing.Size(1384, 24)
@@ -788,7 +788,7 @@
         Me.GridControl1.MenuManager = Me.RibbonControl1
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1})
-        Me.GridControl1.Size = New System.Drawing.Size(1384, 483)
+        Me.GridControl1.Size = New System.Drawing.Size(1384, 612)
         Me.GridControl1.TabIndex = 1
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -1302,7 +1302,7 @@
         Me.NavigationFrame1.Name = "NavigationFrame1"
         Me.NavigationFrame1.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.NavigationPage1, Me.NavigationPage2})
         Me.NavigationFrame1.SelectedPage = Me.NavigationPage1
-        Me.NavigationFrame1.Size = New System.Drawing.Size(1384, 483)
+        Me.NavigationFrame1.Size = New System.Drawing.Size(1384, 612)
         Me.NavigationFrame1.TabIndex = 4
         Me.NavigationFrame1.Text = "NavigationFrame1"
         '
@@ -1310,7 +1310,7 @@
         '
         Me.NavigationPage1.Controls.Add(Me.XtraScrollableControl1)
         Me.NavigationPage1.Name = "NavigationPage1"
-        Me.NavigationPage1.Size = New System.Drawing.Size(1384, 483)
+        Me.NavigationPage1.Size = New System.Drawing.Size(1384, 612)
         '
         'XtraScrollableControl1
         '
@@ -1322,7 +1322,7 @@
         Me.XtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.XtraScrollableControl1.Location = New System.Drawing.Point(0, 0)
         Me.XtraScrollableControl1.Name = "XtraScrollableControl1"
-        Me.XtraScrollableControl1.Size = New System.Drawing.Size(1384, 483)
+        Me.XtraScrollableControl1.Size = New System.Drawing.Size(1384, 612)
         Me.XtraScrollableControl1.TabIndex = 3
         '
         'ChartControl4
@@ -1435,14 +1435,14 @@
         '
         Me.NavigationPage2.Controls.Add(Me.GridControl1)
         Me.NavigationPage2.Name = "NavigationPage2"
-        Me.NavigationPage2.Size = New System.Drawing.Size(1384, 483)
+        Me.NavigationPage2.Size = New System.Drawing.Size(1384, 612)
         '
         'FrmMain
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[False]
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1384, 639)
+        Me.ClientSize = New System.Drawing.Size(1384, 768)
         Me.Controls.Add(Me.NavigationFrame1)
         Me.Controls.Add(Me.RibbonStatusBar1)
         Me.Controls.Add(Me.RibbonControl1)

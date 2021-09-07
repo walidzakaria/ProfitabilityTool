@@ -57,7 +57,7 @@ Partial Class FrmProgress
         Me.labelFailure.Appearance.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold)
         Me.labelFailure.Appearance.Options.UseFont = True
         Me.labelFailure.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.labelFailure.Location = New System.Drawing.Point(366, 57)
+        Me.labelFailure.Location = New System.Drawing.Point(24, 76)
         Me.labelFailure.Name = "labelFailure"
         Me.labelFailure.Size = New System.Drawing.Size(60, 13)
         Me.labelFailure.TabIndex = 15

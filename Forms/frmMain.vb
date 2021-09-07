@@ -249,7 +249,12 @@ Partial Public Class FrmMain
         tempDate = Split(dateText, ".")
         If dateText <> "" Then
             Try
-                result = New Date(CInt(tempDate(2).Substring(0, 4)), CInt(tempDate(1)), CInt(tempDate(0)))
+                If Len(tempDate(0)) = 2 Then
+                    result = New Date(CInt(tempDate(2).Substring(0, 4)), CInt(tempDate(1)), CInt(tempDate(0)))
+                Else
+                    result = New Date(CInt(tempDate(0).Substring(0, 4)), CInt(tempDate(1)), CInt(tempDate(2)))
+                End If
+
             Catch ex As Exception
 
             End Try
