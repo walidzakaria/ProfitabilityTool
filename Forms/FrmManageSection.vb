@@ -18,7 +18,7 @@ Public Class FrmManageSection
     Public Sub New()
         InitializeComponent()
     End Sub
-    Private Sub WindowsUIButtonPanel_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) 
+    Private Sub WindowsUIButtonPanel_ButtonClick(ByVal sender As Object, ByVal e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles WindowsUIButtonPanel.ButtonClick
         If e.Button.Properties.Caption = "Print" Then
             GridControl.ShowRibbonPrintPreview()
         ElseIf e.Button.Properties.Caption = "Close" Then

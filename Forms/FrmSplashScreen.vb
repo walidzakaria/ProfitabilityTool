@@ -47,4 +47,5 @@ Public Class FrmSplashScreen
         'End If
         Timer1.Enabled = True
     End Sub
+
 End Class

@@ -871,4 +871,9 @@ Partial Public Class FrmMain
             ChartControl4.Dock = DockStyle.Fill
         End If
     End Sub
+
+    Private Sub BtnUpdate_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnUpdate.ItemClick
+        FrmUpdateRates.ShowDialog()
+        SetCheckedRibbonButton()
+    End Sub
 End Class

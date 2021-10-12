@@ -447,7 +447,7 @@ Public Class Booking
     Public Function Save() As Boolean
         Dim query As String
         Dim result As Boolean = True
-
+        Difference = SalesPrice - NetRateHotelTC
         query = String.Format("EXEC dbo.SaveBooking 0, '{0}', N'{1}', '{2}', '{3}', '{4}', '{5}', 
                                 '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', 
                                 '{16}', '{17}', '{18}', '{19}', '{20}', '{21}', '{22}', '{23}', '{24}', '{25}',

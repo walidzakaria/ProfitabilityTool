@@ -92,7 +92,6 @@
                 End If
                 gwgHandlingFee = Val(.GetRowCellValue(rowIndex, "GwgHandlingFee").ToString.Replace(",", "")).ToString
                 margin = Val(.GetRowCellValue(rowIndex, "Margin").ToString.Replace(",", "")).ToString
-                difference = Val(.GetRowCellValue(rowIndex, "Difference").ToString.Replace(",", "")).ToString
                 currencyHotelTC = .GetRowCellValue(rowIndex, "CurrencyHotelTC").ToString
                 netRateHotelTC = Val(.GetRowCellValue(rowIndex, "NetRateHotelTC").ToString.Replace(",", "")).ToString
                 netRateHandlingTC = Val(.GetRowCellValue(rowIndex, "NetRateHandlingTC").ToString.Replace(",", "")).ToString
@@ -118,7 +117,7 @@
                 differenceTOPrice = .GetRowCellValue(rowIndex, "DifferenceTOPrice").ToString
                 actionBy = .GetRowCellValue(rowIndex, "ActionBy").ToString
                 priceBreakdown = .GetRowCellValue(rowIndex, "PriceBreakdown").ToString
-
+                difference = (Val(salesPrice) - Val(netRateHotelTC)).ToString
             End With
             If hotelCode <> "" Then
                 If purchaseCurrency = "" Then

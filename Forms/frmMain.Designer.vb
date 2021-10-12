@@ -98,6 +98,7 @@
         Me.BcCannotFix = New DevExpress.XtraBars.BarCheckItem()
         Me.BtnResetGrid = New DevExpress.XtraBars.BarButtonItem()
         Me.BtnReport = New DevExpress.XtraBars.BarButtonItem()
+        Me.BtnUpdate = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -222,9 +223,9 @@
         Me.RibbonControl1.AllowMinimizeRibbon = False
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
         Me.RibbonControl1.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.RibbonControl1.SearchEditItem, Me.SkinRibbonGalleryBarItem1, Me.BtnImport, Me.BtnSave, Me.BtnLoad, Me.BtnSwitchUser, Me.BtnManageUsers, Me.BtnChangePassword, Me.BtnExit, Me.BeDateFrom, Me.BeDateTo, Me.BeCountry, Me.BtnDestination, Me.BtnManageMargin, Me.BtnJunk, Me.BtnCanceled, Me.BtnMatching, Me.BcNegative, Me.BcExcessive, Me.BcMismatch, Me.BtnShowDefict, Me.BcPendingDmc, Me.BcFixedDmc, Me.BcPendingTo, Me.BcFixedTo, Me.BtnShow, Me.BtnAddDispute, Me.BtnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.BtnManageCurrency, Me.BtnErrors, Me.BtnAbout, Me.BeImportFrom, Me.BeImportTill, Me.BtnSection, Me.BcCannotFix, Me.BtnResetGrid, Me.BtnReport})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.RibbonControl1.SearchEditItem, Me.SkinRibbonGalleryBarItem1, Me.BtnImport, Me.BtnSave, Me.BtnLoad, Me.BtnSwitchUser, Me.BtnManageUsers, Me.BtnChangePassword, Me.BtnExit, Me.BeDateFrom, Me.BeDateTo, Me.BeCountry, Me.BtnDestination, Me.BtnManageMargin, Me.BtnJunk, Me.BtnCanceled, Me.BtnMatching, Me.BcNegative, Me.BcExcessive, Me.BcMismatch, Me.BtnShowDefict, Me.BcPendingDmc, Me.BcFixedDmc, Me.BcPendingTo, Me.BcFixedTo, Me.BtnShow, Me.BtnAddDispute, Me.BtnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.BtnManageCurrency, Me.BtnErrors, Me.BtnAbout, Me.BeImportFrom, Me.BeImportTill, Me.BtnSection, Me.BcCannotFix, Me.BtnResetGrid, Me.BtnReport, Me.BtnUpdate})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl1.MaxItemId = 54
+        Me.RibbonControl1.MaxItemId = 55
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2, Me.RepositoryItemLookUpEdit2, Me.RepositoryItemDateEdit3, Me.RepositoryItemDateEdit4})
@@ -678,6 +679,14 @@
         Me.BtnReport.Name = "BtnReport"
         Me.BtnReport.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
+        'BtnUpdate
+        '
+        Me.BtnUpdate.Caption = "Update"
+        Me.BtnUpdate.Id = 54
+        Me.BtnUpdate.ImageOptions.Image = CType(resources.GetObject("BtnUpdate.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnUpdate.ImageOptions.LargeImage = CType(resources.GetObject("BtnUpdate.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnUpdate.Name = "BtnUpdate"
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2, Me.RibbonPageGroup5, Me.RibbonPageGroup7, Me.RibbonPageGroup3, Me.RibbonPageGroup4})
@@ -691,6 +700,7 @@
         Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnImport)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnSave)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnErrors)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnUpdate)
         Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
         Me.RibbonPageGroup1.Text = "Data"
         '
@@ -1620,4 +1630,5 @@
     Friend WithEvents ChartControl3 As DevExpress.XtraCharts.ChartControl
     Friend WithEvents XtraScrollableControl1 As DevExpress.XtraEditors.XtraScrollableControl
     Friend WithEvents ChartControl4 As DevExpress.XtraCharts.ChartControl
+    Friend WithEvents BtnUpdate As DevExpress.XtraBars.BarButtonItem
 End Class
