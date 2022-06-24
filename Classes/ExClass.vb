@@ -8,11 +8,17 @@ Public Class ExClass
 
     Public Shared myConn As New SqlConnection(My.Settings.DatabaseConnection)
     'Public Shared myConn As New SqlConnection("workstation id=rs24profitabilitytool.mssql.somee.com;packet size=4096;user id=waliiid_SQLLogin_1;pwd=nhyb4lqews;data source=rs24profitabilitytool.mssql.somee.com;persist security info=False;initial catalog=rs24profitabilitytool")
-    'Public Shared myConn As New SqlConnection("Data Source=desktop-9i7uufn\MASTER;Initial Catalog=YT_DB;Integrated Security=SSPI;")
+    'Public Shared myConn As New SqlConnection($"Data Source={My.Computer.Name}\MASTER;Initial Catalog=YT_DB;Integrated Security=SSPI;")
 
-    Public Shared Function QuerySet(ByVal query As String) As String
+    Public Shared Function QuerySet(query As String, Optional liParams As List(Of SqlParameter) = Nothing) As String
         Dim result As String
         Using cmd = New SqlCommand(query, myConn)
+            If liParams IsNot Nothing Then
+                For Each param In liParams
+                    cmd.Parameters.Add(param)
+                Next
+            End If
+
             If myConn.State = ConnectionState.Closed Then
                 myConn.Open()
             End If

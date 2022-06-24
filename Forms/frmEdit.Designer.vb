@@ -25,48 +25,69 @@ Partial Public Class FrmEdit
     ''' </summary>
     '''
     Private Sub InitializeComponent()
-        Dim TableColumnDefinition1 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition2 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition3 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition4 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition5 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition6 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableRowDefinition1 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition2 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition3 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition4 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableSpan1 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
-        Dim TableSpan2 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
-        Dim TableSpan3 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
-        Dim TileViewItemElement1 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement2 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement3 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement4 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement5 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement6 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement7 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement8 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement9 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement10 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim TableColumnDefinition7 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition8 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition9 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition10 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition11 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition12 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableRowDefinition5 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition6 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition7 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition8 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableSpan4 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TableSpan5 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TableSpan6 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TileViewItemElement11 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement12 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement13 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement14 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement15 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement16 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement17 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement18 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement19 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement20 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim WindowsUIButtonImageOptions5 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEdit))
-        Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions3 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions4 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions6 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions7 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions8 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.GridColumn4 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.TileViewColumn1 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.dataLayoutControl1 = New DevExpress.XtraDataLayout.DataLayoutControl()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.GridControl2 = New DevExpress.XtraGrid.GridControl()
+        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridColumn6 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn9 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn7 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn8 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
+        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.ListBoxControl1 = New DevExpress.XtraEditors.ListBoxControl()
+        Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
+        Me.ListBoxControl2 = New DevExpress.XtraEditors.ListBoxControl()
+        Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.LayoutView1 = New DevExpress.XtraGrid.Views.Layout.LayoutView()
         Me.BandedGridColumn2 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
+        Me.layoutViewField_BandedGridColumn2 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
+        Me.LayoutViewColumn1 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
+        Me.layoutViewField_LayoutViewColumn1 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
         Me.BandedGridColumn3 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
         Me.RepositoryItemMemoEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit()
+        Me.layoutViewField_BandedGridColumn3 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
         Me.BandedGridColumn4 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
+        Me.layoutViewField_BandedGridColumn4 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
         Me.BandedGridColumn5 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
+        Me.layoutViewField_BandedGridColumn5 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
         Me.BandedGridColumn6 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
+        Me.layoutViewField_BandedGridColumn6 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
+        Me.LayoutViewCard1 = New DevExpress.XtraGrid.Views.Layout.LayoutViewCard()
         Me.RepositoryItemComboBox1 = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.TileView1 = New DevExpress.XtraGrid.Views.Tile.TileView()
         Me.GridColumn1 = New DevExpress.XtraGrid.Columns.TileViewColumn()
@@ -144,22 +165,34 @@ Partial Public Class FrmEdit
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem16 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.TabbedControlGroup1 = New DevExpress.XtraLayout.TabbedControlGroup()
+        Me.LayoutControlGroup8 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem39 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem41 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem44 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem45 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem46 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem47 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem40 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem42 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem43 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.SimpleSeparator1 = New DevExpress.XtraLayout.SimpleSeparator()
+        Me.LayoutControlItem48 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem49 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup3 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.lblSalesCurrency = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem9 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem10 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem11 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem15 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem14 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem32 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem52 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem11 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem15 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem17 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem18 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem19 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem20 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem21 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -174,37 +207,39 @@ Partial Public Class FrmEdit
         Me.LayoutControlItem31 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem51 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem29 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem18 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem22 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlGroup8 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlItem39 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem41 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem44 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem45 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem46 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem47 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem40 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem42 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem43 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.SimpleSeparator1 = New DevExpress.XtraLayout.SimpleSeparator()
-        Me.LayoutControlItem48 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem49 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem50 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup9 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem54 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.LayoutControlGroup6 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutViewColumn1 = New DevExpress.XtraGrid.Columns.LayoutViewColumn()
-        Me.LayoutViewCard1 = New DevExpress.XtraGrid.Views.Layout.LayoutViewCard()
-        Me.layoutViewField_BandedGridColumn3 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
-        Me.layoutViewField_BandedGridColumn4 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
-        Me.layoutViewField_BandedGridColumn5 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
-        Me.layoutViewField_BandedGridColumn6 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
-        Me.layoutViewField_LayoutViewColumn1 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
-        Me.layoutViewField_BandedGridColumn2 = New DevExpress.XtraGrid.Views.Layout.LayoutViewField()
+        Me.btnAttachments = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dataLayoutControl1.SuspendLayout()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
+        Me.SplitContainer1.SuspendLayout()
+        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer2.Panel1.SuspendLayout()
+        Me.SplitContainer2.Panel2.SuspendLayout()
+        Me.SplitContainer2.SuspendLayout()
+        CType(Me.ListBoxControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ListBoxControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.layoutViewField_BandedGridColumn2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.layoutViewField_LayoutViewColumn1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemMemoEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.layoutViewField_BandedGridColumn3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.layoutViewField_BandedGridColumn4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.layoutViewField_BandedGridColumn5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.layoutViewField_BandedGridColumn6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutViewCard1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TileView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtHotelCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -281,22 +316,34 @@ Partial Public Class FrmEdit
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TabbedControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem39, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem41, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem44, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem45, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem46, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem47, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem40, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem42, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem43, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SimpleSeparator1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem48, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem49, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblSalesCurrency, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem32, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem52, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem19, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem20, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem21, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -311,30 +358,13 @@ Partial Public Class FrmEdit
         CType(Me.LayoutControlItem31, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem51, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem29, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlGroup8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem39, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem41, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem44, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem45, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem46, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem47, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem40, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem42, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem43, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SimpleSeparator1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem48, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem49, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem50, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem54, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutViewCard1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.layoutViewField_BandedGridColumn3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.layoutViewField_BandedGridColumn4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.layoutViewField_BandedGridColumn5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.layoutViewField_BandedGridColumn6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.layoutViewField_LayoutViewColumn1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.layoutViewField_BandedGridColumn2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GridColumn2
@@ -390,6 +420,7 @@ Partial Public Class FrmEdit
         'dataLayoutControl1
         '
         Me.dataLayoutControl1.AllowCustomization = False
+        Me.dataLayoutControl1.Controls.Add(Me.SplitContainer1)
         Me.dataLayoutControl1.Controls.Add(Me.GridControl1)
         Me.dataLayoutControl1.Controls.Add(Me.TxtHotelCode)
         Me.dataLayoutControl1.Controls.Add(Me.TxtHotelName)
@@ -449,34 +480,218 @@ Partial Public Class FrmEdit
         Me.dataLayoutControl1.Name = "dataLayoutControl1"
         Me.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = New System.Drawing.Rectangle(105, 165, 721, 400)
         Me.dataLayoutControl1.Root = Me.layoutControlGroup1
-        Me.dataLayoutControl1.Size = New System.Drawing.Size(758, 524)
+        Me.dataLayoutControl1.Size = New System.Drawing.Size(758, 565)
         Me.dataLayoutControl1.TabIndex = 0
+        '
+        'SplitContainer1
+        '
+        Me.SplitContainer1.Location = New System.Drawing.Point(24, 51)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.GridControl2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.LabelControl1)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
+        Me.SplitContainer1.Size = New System.Drawing.Size(693, 492)
+        Me.SplitContainer1.SplitterDistance = 176
+        Me.SplitContainer1.TabIndex = 23
+        '
+        'GridControl2
+        '
+        Me.GridControl2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GridControl2.Location = New System.Drawing.Point(0, 22)
+        Me.GridControl2.MainView = Me.GridView1
+        Me.GridControl2.Name = "GridControl2"
+        Me.GridControl2.Size = New System.Drawing.Size(693, 154)
+        Me.GridControl2.TabIndex = 0
+        Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
+        '
+        'GridView1
+        '
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn6, Me.GridColumn9, Me.GridColumn7, Me.GridColumn8})
+        Me.GridView1.GridControl = Me.GridControl2
+        Me.GridView1.Name = "GridView1"
+        Me.GridView1.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.Hidden
+        Me.GridView1.OptionsView.ShowGroupPanel = False
+        '
+        'GridColumn6
+        '
+        Me.GridColumn6.Caption = "ID"
+        Me.GridColumn6.FieldName = "AuditTrailID"
+        Me.GridColumn6.Name = "GridColumn6"
+        Me.GridColumn6.OptionsColumn.AllowEdit = False
+        Me.GridColumn6.OptionsColumn.AllowShowHide = False
+        '
+        'GridColumn9
+        '
+        Me.GridColumn9.Caption = "Date"
+        Me.GridColumn9.DisplayFormat.FormatString = "dd.MM.yyyy"
+        Me.GridColumn9.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.GridColumn9.FieldName = "Time"
+        Me.GridColumn9.Name = "GridColumn9"
+        Me.GridColumn9.Visible = True
+        Me.GridColumn9.VisibleIndex = 0
+        '
+        'GridColumn7
+        '
+        Me.GridColumn7.Caption = "Time"
+        Me.GridColumn7.DisplayFormat.FormatString = "HH:mm"
+        Me.GridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
+        Me.GridColumn7.FieldName = "Time"
+        Me.GridColumn7.Name = "GridColumn7"
+        Me.GridColumn7.OptionsColumn.AllowEdit = False
+        Me.GridColumn7.OptionsColumn.AllowShowHide = False
+        Me.GridColumn7.Visible = True
+        Me.GridColumn7.VisibleIndex = 1
+        '
+        'GridColumn8
+        '
+        Me.GridColumn8.Caption = "Username"
+        Me.GridColumn8.FieldName = "Username"
+        Me.GridColumn8.Name = "GridColumn8"
+        Me.GridColumn8.OptionsColumn.AllowEdit = False
+        Me.GridColumn8.OptionsColumn.AllowShowHide = False
+        Me.GridColumn8.Visible = True
+        Me.GridColumn8.VisibleIndex = 2
+        '
+        'LabelControl1
+        '
+        Me.LabelControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl1.Appearance.Options.UseBackColor = True
+        Me.LabelControl1.Appearance.Options.UseFont = True
+        Me.LabelControl1.Appearance.Options.UseTextOptions = True
+        Me.LabelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.LabelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+        Me.LabelControl1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.LabelControl1.Location = New System.Drawing.Point(0, 0)
+        Me.LabelControl1.Name = "LabelControl1"
+        Me.LabelControl1.Size = New System.Drawing.Size(693, 22)
+        Me.LabelControl1.TabIndex = 1
+        Me.LabelControl1.Text = "Save History"
+        '
+        'SplitContainer2
+        '
+        Me.SplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer2.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer2.Name = "SplitContainer2"
+        '
+        'SplitContainer2.Panel1
+        '
+        Me.SplitContainer2.Panel1.Controls.Add(Me.ListBoxControl1)
+        Me.SplitContainer2.Panel1.Controls.Add(Me.LabelControl2)
+        '
+        'SplitContainer2.Panel2
+        '
+        Me.SplitContainer2.Panel2.Controls.Add(Me.ListBoxControl2)
+        Me.SplitContainer2.Panel2.Controls.Add(Me.LabelControl3)
+        Me.SplitContainer2.Size = New System.Drawing.Size(693, 312)
+        Me.SplitContainer2.SplitterDistance = 341
+        Me.SplitContainer2.TabIndex = 0
+        '
+        'ListBoxControl1
+        '
+        Me.ListBoxControl1.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.[True]
+        Me.ListBoxControl1.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBoxControl1.Appearance.Options.UseFont = True
+        Me.ListBoxControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListBoxControl1.Location = New System.Drawing.Point(0, 22)
+        Me.ListBoxControl1.Name = "ListBoxControl1"
+        Me.ListBoxControl1.Size = New System.Drawing.Size(341, 290)
+        Me.ListBoxControl1.TabIndex = 3
+        '
+        'LabelControl2
+        '
+        Me.LabelControl2.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LabelControl2.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl2.Appearance.Options.UseBackColor = True
+        Me.LabelControl2.Appearance.Options.UseFont = True
+        Me.LabelControl2.Appearance.Options.UseTextOptions = True
+        Me.LabelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.LabelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+        Me.LabelControl2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.LabelControl2.Location = New System.Drawing.Point(0, 0)
+        Me.LabelControl2.Name = "LabelControl2"
+        Me.LabelControl2.Size = New System.Drawing.Size(341, 22)
+        Me.LabelControl2.TabIndex = 2
+        Me.LabelControl2.Text = "Old Values"
+        '
+        'ListBoxControl2
+        '
+        Me.ListBoxControl2.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.[True]
+        Me.ListBoxControl2.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListBoxControl2.Appearance.Options.UseFont = True
+        Me.ListBoxControl2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListBoxControl2.Location = New System.Drawing.Point(0, 22)
+        Me.ListBoxControl2.Name = "ListBoxControl2"
+        Me.ListBoxControl2.Size = New System.Drawing.Size(348, 290)
+        Me.ListBoxControl2.TabIndex = 4
+        '
+        'LabelControl3
+        '
+        Me.LabelControl3.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LabelControl3.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelControl3.Appearance.Options.UseBackColor = True
+        Me.LabelControl3.Appearance.Options.UseFont = True
+        Me.LabelControl3.Appearance.Options.UseTextOptions = True
+        Me.LabelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.LabelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None
+        Me.LabelControl3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.LabelControl3.Location = New System.Drawing.Point(0, 0)
+        Me.LabelControl3.Name = "LabelControl3"
+        Me.LabelControl3.Size = New System.Drawing.Size(348, 22)
+        Me.LabelControl3.TabIndex = 2
+        Me.LabelControl3.Text = "New Values"
         '
         'GridControl1
         '
-        Me.GridControl1.Location = New System.Drawing.Point(24, 297)
+        Me.GridControl1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.GridControl1.Location = New System.Drawing.Point(24, 334)
         Me.GridControl1.MainView = Me.LayoutView1
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemMemoEdit1, Me.RepositoryItemComboBox1})
-        Me.GridControl1.Size = New System.Drawing.Size(710, 203)
+        Me.GridControl1.Size = New System.Drawing.Size(693, 209)
         Me.GridControl1.TabIndex = 8
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.LayoutView1, Me.TileView1})
         '
         'LayoutView1
         '
-        Me.LayoutView1.Appearance.CardCaption.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.LayoutView1.Appearance.Card.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.LayoutView1.Appearance.Card.Options.UseFont = True
+        Me.LayoutView1.Appearance.CardCaption.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold)
         Me.LayoutView1.Appearance.CardCaption.Options.UseFont = True
-        Me.LayoutView1.Appearance.FieldCaption.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.LayoutView1.Appearance.FieldCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.LayoutView1.Appearance.FieldCaption.Options.UseFont = True
-        Me.LayoutView1.Appearance.FieldEditingValue.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.LayoutView1.Appearance.FieldEditingValue.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.LayoutView1.Appearance.FieldEditingValue.Options.UseFont = True
-        Me.LayoutView1.Appearance.FieldValue.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.LayoutView1.Appearance.FieldValue.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.LayoutView1.Appearance.FieldValue.Options.UseFont = True
-        Me.LayoutView1.Appearance.FocusedCardCaption.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.LayoutView1.Appearance.FilterCloseButton.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutView1.Appearance.FilterCloseButton.Options.UseFont = True
+        Me.LayoutView1.Appearance.FilterPanel.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutView1.Appearance.FilterPanel.Options.UseFont = True
+        Me.LayoutView1.Appearance.FocusedCardCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.LayoutView1.Appearance.FocusedCardCaption.Options.UseFont = True
-        Me.LayoutView1.Appearance.HeaderPanel.Font = New System.Drawing.Font("Tahoma", 10.0!)
+        Me.LayoutView1.Appearance.HeaderPanel.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.LayoutView1.Appearance.HeaderPanel.Options.UseFont = True
-        Me.LayoutView1.CardMinSize = New System.Drawing.Size(105, 182)
+        Me.LayoutView1.Appearance.HideSelectionCardCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutView1.Appearance.HideSelectionCardCaption.Options.UseFont = True
+        Me.LayoutView1.Appearance.SelectedCardCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutView1.Appearance.SelectedCardCaption.Options.UseFont = True
+        Me.LayoutView1.Appearance.SelectionFrame.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutView1.Appearance.SelectionFrame.Options.UseFont = True
+        Me.LayoutView1.Appearance.SeparatorLine.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutView1.Appearance.SeparatorLine.Options.UseFont = True
+        Me.LayoutView1.Appearance.ViewBackground.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutView1.Appearance.ViewBackground.Options.UseFont = True
+        Me.LayoutView1.Appearance.ViewCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutView1.Appearance.ViewCaption.Options.UseFont = True
+        Me.LayoutView1.CardMinSize = New System.Drawing.Size(190, 158)
         Me.LayoutView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.LayoutViewColumn() {Me.BandedGridColumn2, Me.LayoutViewColumn1, Me.BandedGridColumn3, Me.BandedGridColumn4, Me.BandedGridColumn5, Me.BandedGridColumn6})
         Me.LayoutView1.GridControl = Me.GridControl1
         Me.LayoutView1.Name = "LayoutView1"
@@ -497,6 +712,31 @@ Partial Public Class FrmEdit
         Me.BandedGridColumn2.OptionsColumn.FixedWidth = True
         Me.BandedGridColumn2.Width = 140
         '
+        'layoutViewField_BandedGridColumn2
+        '
+        Me.layoutViewField_BandedGridColumn2.EditorPreferredWidth = 180
+        Me.layoutViewField_BandedGridColumn2.Location = New System.Drawing.Point(342, 0)
+        Me.layoutViewField_BandedGridColumn2.Name = "layoutViewField_BandedGridColumn2"
+        Me.layoutViewField_BandedGridColumn2.Padding = New DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3)
+        Me.layoutViewField_BandedGridColumn2.Size = New System.Drawing.Size(248, 26)
+        Me.layoutViewField_BandedGridColumn2.TextSize = New System.Drawing.Size(56, 13)
+        '
+        'LayoutViewColumn1
+        '
+        Me.LayoutViewColumn1.Caption = "Section"
+        Me.LayoutViewColumn1.FieldName = "Section"
+        Me.LayoutViewColumn1.LayoutViewField = Me.layoutViewField_LayoutViewColumn1
+        Me.LayoutViewColumn1.Name = "LayoutViewColumn1"
+        '
+        'layoutViewField_LayoutViewColumn1
+        '
+        Me.layoutViewField_LayoutViewColumn1.EditorPreferredWidth = 521
+        Me.layoutViewField_LayoutViewColumn1.Location = New System.Drawing.Point(0, 26)
+        Me.layoutViewField_LayoutViewColumn1.Name = "layoutViewField_LayoutViewColumn1"
+        Me.layoutViewField_LayoutViewColumn1.Padding = New DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3)
+        Me.layoutViewField_LayoutViewColumn1.Size = New System.Drawing.Size(590, 26)
+        Me.layoutViewField_LayoutViewColumn1.TextSize = New System.Drawing.Size(56, 13)
+        '
         'BandedGridColumn3
         '
         Me.BandedGridColumn3.Caption = "Comment"
@@ -511,6 +751,15 @@ Partial Public Class FrmEdit
         '
         Me.RepositoryItemMemoEdit1.Name = "RepositoryItemMemoEdit1"
         '
+        'layoutViewField_BandedGridColumn3
+        '
+        Me.layoutViewField_BandedGridColumn3.EditorPreferredWidth = 521
+        Me.layoutViewField_BandedGridColumn3.Location = New System.Drawing.Point(0, 52)
+        Me.layoutViewField_BandedGridColumn3.Name = "layoutViewField_BandedGridColumn3"
+        Me.layoutViewField_BandedGridColumn3.Padding = New DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3)
+        Me.layoutViewField_BandedGridColumn3.Size = New System.Drawing.Size(590, 86)
+        Me.layoutViewField_BandedGridColumn3.TextSize = New System.Drawing.Size(56, 13)
+        '
         'BandedGridColumn4
         '
         Me.BandedGridColumn4.Caption = "Calculation"
@@ -520,6 +769,15 @@ Partial Public Class FrmEdit
         Me.BandedGridColumn4.OptionsColumn.AllowEdit = False
         Me.BandedGridColumn4.OptionsColumn.FixedWidth = True
         Me.BandedGridColumn4.Width = 100
+        '
+        'layoutViewField_BandedGridColumn4
+        '
+        Me.layoutViewField_BandedGridColumn4.EditorPreferredWidth = 274
+        Me.layoutViewField_BandedGridColumn4.Location = New System.Drawing.Point(0, 138)
+        Me.layoutViewField_BandedGridColumn4.Name = "layoutViewField_BandedGridColumn4"
+        Me.layoutViewField_BandedGridColumn4.Padding = New DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3)
+        Me.layoutViewField_BandedGridColumn4.Size = New System.Drawing.Size(342, 26)
+        Me.layoutViewField_BandedGridColumn4.TextSize = New System.Drawing.Size(56, 13)
         '
         'BandedGridColumn5
         '
@@ -532,6 +790,15 @@ Partial Public Class FrmEdit
         Me.BandedGridColumn5.OptionsColumn.ImmediateUpdateRowPosition = DevExpress.Utils.DefaultBoolean.[False]
         Me.BandedGridColumn5.Width = 50
         '
+        'layoutViewField_BandedGridColumn5
+        '
+        Me.layoutViewField_BandedGridColumn5.EditorPreferredWidth = 180
+        Me.layoutViewField_BandedGridColumn5.Location = New System.Drawing.Point(342, 138)
+        Me.layoutViewField_BandedGridColumn5.Name = "layoutViewField_BandedGridColumn5"
+        Me.layoutViewField_BandedGridColumn5.Padding = New DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3)
+        Me.layoutViewField_BandedGridColumn5.Size = New System.Drawing.Size(248, 26)
+        Me.layoutViewField_BandedGridColumn5.TextSize = New System.Drawing.Size(56, 13)
+        '
         'BandedGridColumn6
         '
         Me.BandedGridColumn6.Caption = "Status"
@@ -539,6 +806,25 @@ Partial Public Class FrmEdit
         Me.BandedGridColumn6.LayoutViewField = Me.layoutViewField_BandedGridColumn6
         Me.BandedGridColumn6.Name = "BandedGridColumn6"
         Me.BandedGridColumn6.OptionsColumn.AllowEdit = False
+        '
+        'layoutViewField_BandedGridColumn6
+        '
+        Me.layoutViewField_BandedGridColumn6.EditorPreferredWidth = 274
+        Me.layoutViewField_BandedGridColumn6.Location = New System.Drawing.Point(0, 0)
+        Me.layoutViewField_BandedGridColumn6.Name = "layoutViewField_BandedGridColumn6"
+        Me.layoutViewField_BandedGridColumn6.Padding = New DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3)
+        Me.layoutViewField_BandedGridColumn6.Size = New System.Drawing.Size(342, 26)
+        Me.layoutViewField_BandedGridColumn6.TextSize = New System.Drawing.Size(56, 13)
+        '
+        'LayoutViewCard1
+        '
+        Me.LayoutViewCard1.CustomizationFormText = "TemplateCard"
+        Me.LayoutViewCard1.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText
+        Me.LayoutViewCard1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.layoutViewField_BandedGridColumn3, Me.layoutViewField_BandedGridColumn4, Me.layoutViewField_BandedGridColumn6, Me.layoutViewField_LayoutViewColumn1, Me.layoutViewField_BandedGridColumn2, Me.layoutViewField_BandedGridColumn5})
+        Me.LayoutViewCard1.Name = "LayoutViewCard1"
+        Me.LayoutViewCard1.OptionsItemText.TextToControlDistance = 5
+        Me.LayoutViewCard1.Padding = New DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3)
+        Me.LayoutViewCard1.Text = "TemplateCard"
         '
         'RepositoryItemComboBox1
         '
@@ -558,154 +844,154 @@ Partial Public Class FrmEdit
         Me.TileView1.OptionsTiles.LayoutMode = DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.List
         Me.TileView1.OptionsTiles.Orientation = System.Windows.Forms.Orientation.Vertical
         Me.TileView1.OptionsTiles.Padding = New System.Windows.Forms.Padding(5)
-        TableColumnDefinition1.Length.Value = 104.0R
-        TableColumnDefinition2.Length.Value = 104.0R
-        TableColumnDefinition3.Length.Value = 109.0R
-        TableColumnDefinition4.Length.Value = 101.0R
-        TableColumnDefinition5.Length.Value = 105.0R
-        TableColumnDefinition6.Length.Value = 105.0R
-        Me.TileView1.TileColumns.Add(TableColumnDefinition1)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition2)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition3)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition4)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition5)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition6)
-        TableRowDefinition1.Length.Value = 27.0R
-        TableRowDefinition2.Length.Value = 37.0R
-        TableRowDefinition3.Length.Value = 48.0R
-        TableRowDefinition4.Length.Value = 30.0R
-        Me.TileView1.TileRows.Add(TableRowDefinition1)
-        Me.TileView1.TileRows.Add(TableRowDefinition2)
-        Me.TileView1.TileRows.Add(TableRowDefinition3)
-        Me.TileView1.TileRows.Add(TableRowDefinition4)
-        TableSpan1.ColumnIndex = 1
-        TableSpan1.ColumnSpan = 5
-        TableSpan1.RowIndex = 1
-        TableSpan1.RowSpan = 2
-        TableSpan2.ColumnIndex = 1
-        TableSpan2.ColumnSpan = 2
-        TableSpan2.RowIndex = 3
-        TableSpan3.ColumnIndex = 1
-        TableSpan3.ColumnSpan = 3
-        Me.TileView1.TileSpans.Add(TableSpan1)
-        Me.TileView1.TileSpans.Add(TableSpan2)
-        Me.TileView1.TileSpans.Add(TableSpan3)
-        TileViewItemElement1.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        TileViewItemElement1.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement1.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement1.StretchHorizontal = True
-        TileViewItemElement1.StretchVertical = True
-        TileViewItemElement1.Text = "Date:"
-        TileViewItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement1.TextLocation = New System.Drawing.Point(-10, 0)
-        TileViewItemElement2.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileViewItemElement2.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement2.Column = Me.GridColumn2
-        TileViewItemElement2.ColumnIndex = 1
-        TileViewItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement2.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement2.StretchHorizontal = True
-        TileViewItemElement2.StretchVertical = True
-        TileViewItemElement2.Text = "GridColumn2"
-        TileViewItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
-        TileViewItemElement2.TextLocation = New System.Drawing.Point(-35, 0)
-        TileViewItemElement3.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        TileViewItemElement3.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement3.ColumnIndex = 4
-        TileViewItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement3.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement3.StretchHorizontal = True
-        TileViewItemElement3.StretchVertical = True
-        TileViewItemElement3.Text = "User:"
-        TileViewItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement4.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        TileViewItemElement4.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement4.Column = Me.GridColumn5
-        TileViewItemElement4.ColumnIndex = 5
-        TileViewItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement4.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement4.StretchHorizontal = True
-        TileViewItemElement4.StretchVertical = True
-        TileViewItemElement4.Text = "GridColumn5"
-        TileViewItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement5.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        TileViewItemElement5.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement5.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement5.RowIndex = 1
-        TileViewItemElement5.StretchHorizontal = True
-        TileViewItemElement5.StretchVertical = True
-        TileViewItemElement5.Text = "Comment:"
-        TileViewItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement5.TextLocation = New System.Drawing.Point(-10, 0)
-        TileViewItemElement6.Appearance.Normal.BorderColor = System.Drawing.Color.Gray
-        TileViewItemElement6.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        TileViewItemElement6.Appearance.Normal.Options.UseBorderColor = True
-        TileViewItemElement6.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement6.Appearance.Normal.Options.UseTextOptions = True
-        TileViewItemElement6.Appearance.Normal.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
-        TileViewItemElement6.Appearance.Normal.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
-        TileViewItemElement6.Column = Me.GridColumn3
-        TileViewItemElement6.ColumnIndex = 1
-        TileViewItemElement6.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement6.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement6.RowIndex = 1
-        TileViewItemElement6.StretchHorizontal = True
-        TileViewItemElement6.StretchVertical = True
-        TileViewItemElement6.Text = "GridColumn3"
-        TileViewItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileViewItemElement6.TextLocation = New System.Drawing.Point(0, 8)
-        TileViewItemElement7.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileViewItemElement7.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement7.ColumnIndex = 4
-        TileViewItemElement7.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement7.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement7.RowIndex = 3
-        TileViewItemElement7.StretchHorizontal = True
-        TileViewItemElement7.StretchVertical = True
-        TileViewItemElement7.Text = "Calculation:"
-        TileViewItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement8.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        TileViewItemElement8.Appearance.Normal.ForeColor = System.Drawing.Color.Red
-        TileViewItemElement8.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement8.Appearance.Normal.Options.UseForeColor = True
-        TileViewItemElement8.Column = Me.GridColumn4
-        TileViewItemElement8.ColumnIndex = 5
-        TileViewItemElement8.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement8.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement8.RowIndex = 3
-        TileViewItemElement8.StretchHorizontal = True
-        TileViewItemElement8.StretchVertical = True
-        TileViewItemElement8.Text = "GridColumn4"
-        TileViewItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement9.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        TileViewItemElement9.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement9.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement9.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement9.RowIndex = 3
-        TileViewItemElement9.Text = "Status:"
-        TileViewItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement9.TextLocation = New System.Drawing.Point(-10, 0)
-        TileViewItemElement10.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        TileViewItemElement10.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement10.Column = Me.TileViewColumn1
-        TileViewItemElement10.ColumnIndex = 1
-        TileViewItemElement10.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement10.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement10.RowIndex = 3
-        TileViewItemElement10.Text = "TileViewColumn1"
-        TileViewItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
-        Me.TileView1.TileTemplate.Add(TileViewItemElement1)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement2)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement3)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement4)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement5)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement6)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement7)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement8)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement9)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement10)
+        TableColumnDefinition7.Length.Value = 104.0R
+        TableColumnDefinition8.Length.Value = 104.0R
+        TableColumnDefinition9.Length.Value = 109.0R
+        TableColumnDefinition10.Length.Value = 101.0R
+        TableColumnDefinition11.Length.Value = 105.0R
+        TableColumnDefinition12.Length.Value = 105.0R
+        Me.TileView1.TileColumns.Add(TableColumnDefinition7)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition8)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition9)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition10)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition11)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition12)
+        TableRowDefinition5.Length.Value = 27.0R
+        TableRowDefinition6.Length.Value = 37.0R
+        TableRowDefinition7.Length.Value = 48.0R
+        TableRowDefinition8.Length.Value = 30.0R
+        Me.TileView1.TileRows.Add(TableRowDefinition5)
+        Me.TileView1.TileRows.Add(TableRowDefinition6)
+        Me.TileView1.TileRows.Add(TableRowDefinition7)
+        Me.TileView1.TileRows.Add(TableRowDefinition8)
+        TableSpan4.ColumnIndex = 1
+        TableSpan4.ColumnSpan = 5
+        TableSpan4.RowIndex = 1
+        TableSpan4.RowSpan = 2
+        TableSpan5.ColumnIndex = 1
+        TableSpan5.ColumnSpan = 2
+        TableSpan5.RowIndex = 3
+        TableSpan6.ColumnIndex = 1
+        TableSpan6.ColumnSpan = 3
+        Me.TileView1.TileSpans.Add(TableSpan4)
+        Me.TileView1.TileSpans.Add(TableSpan5)
+        Me.TileView1.TileSpans.Add(TableSpan6)
+        TileViewItemElement11.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        TileViewItemElement11.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement11.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement11.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement11.StretchHorizontal = True
+        TileViewItemElement11.StretchVertical = True
+        TileViewItemElement11.Text = "Date:"
+        TileViewItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement11.TextLocation = New System.Drawing.Point(-10, 0)
+        TileViewItemElement12.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement12.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement12.Column = Me.GridColumn2
+        TileViewItemElement12.ColumnIndex = 1
+        TileViewItemElement12.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement12.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement12.StretchHorizontal = True
+        TileViewItemElement12.StretchVertical = True
+        TileViewItemElement12.Text = "GridColumn2"
+        TileViewItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
+        TileViewItemElement12.TextLocation = New System.Drawing.Point(-35, 0)
+        TileViewItemElement13.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        TileViewItemElement13.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement13.ColumnIndex = 4
+        TileViewItemElement13.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement13.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement13.StretchHorizontal = True
+        TileViewItemElement13.StretchVertical = True
+        TileViewItemElement13.Text = "User:"
+        TileViewItemElement13.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement14.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement14.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement14.Column = Me.GridColumn5
+        TileViewItemElement14.ColumnIndex = 5
+        TileViewItemElement14.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement14.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement14.StretchHorizontal = True
+        TileViewItemElement14.StretchVertical = True
+        TileViewItemElement14.Text = "GridColumn5"
+        TileViewItemElement14.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement15.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        TileViewItemElement15.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement15.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement15.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement15.RowIndex = 1
+        TileViewItemElement15.StretchHorizontal = True
+        TileViewItemElement15.StretchVertical = True
+        TileViewItemElement15.Text = "Comment:"
+        TileViewItemElement15.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement15.TextLocation = New System.Drawing.Point(-10, 0)
+        TileViewItemElement16.Appearance.Normal.BorderColor = System.Drawing.Color.Gray
+        TileViewItemElement16.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement16.Appearance.Normal.Options.UseBorderColor = True
+        TileViewItemElement16.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement16.Appearance.Normal.Options.UseTextOptions = True
+        TileViewItemElement16.Appearance.Normal.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+        TileViewItemElement16.Appearance.Normal.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
+        TileViewItemElement16.Column = Me.GridColumn3
+        TileViewItemElement16.ColumnIndex = 1
+        TileViewItemElement16.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement16.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement16.RowIndex = 1
+        TileViewItemElement16.StretchHorizontal = True
+        TileViewItemElement16.StretchVertical = True
+        TileViewItemElement16.Text = "GridColumn3"
+        TileViewItemElement16.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileViewItemElement16.TextLocation = New System.Drawing.Point(0, 8)
+        TileViewItemElement17.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement17.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement17.ColumnIndex = 4
+        TileViewItemElement17.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement17.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement17.RowIndex = 3
+        TileViewItemElement17.StretchHorizontal = True
+        TileViewItemElement17.StretchVertical = True
+        TileViewItemElement17.Text = "Calculation:"
+        TileViewItemElement17.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement18.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement18.Appearance.Normal.ForeColor = System.Drawing.Color.Red
+        TileViewItemElement18.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement18.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement18.Column = Me.GridColumn4
+        TileViewItemElement18.ColumnIndex = 5
+        TileViewItemElement18.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement18.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement18.RowIndex = 3
+        TileViewItemElement18.StretchHorizontal = True
+        TileViewItemElement18.StretchVertical = True
+        TileViewItemElement18.Text = "GridColumn4"
+        TileViewItemElement18.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement19.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        TileViewItemElement19.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement19.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement19.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement19.RowIndex = 3
+        TileViewItemElement19.Text = "Status:"
+        TileViewItemElement19.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement19.TextLocation = New System.Drawing.Point(-10, 0)
+        TileViewItemElement20.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement20.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement20.Column = Me.TileViewColumn1
+        TileViewItemElement20.ColumnIndex = 1
+        TileViewItemElement20.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement20.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement20.RowIndex = 3
+        TileViewItemElement20.Text = "TileViewColumn1"
+        TileViewItemElement20.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
+        Me.TileView1.TileTemplate.Add(TileViewItemElement11)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement12)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement13)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement14)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement15)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement16)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement17)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement18)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement19)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement20)
         '
         'GridColumn1
         '
@@ -718,242 +1004,300 @@ Partial Public Class FrmEdit
         '
         'TxtHotelCode
         '
-        Me.TxtHotelCode.Location = New System.Drawing.Point(149, 47)
+        Me.TxtHotelCode.Location = New System.Drawing.Point(177, 51)
         Me.TxtHotelCode.Name = "TxtHotelCode"
-        Me.TxtHotelCode.Size = New System.Drawing.Size(585, 20)
+        Me.TxtHotelCode.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtHotelCode.Properties.Appearance.Options.UseFont = True
+        Me.TxtHotelCode.Size = New System.Drawing.Size(540, 24)
         Me.TxtHotelCode.StyleController = Me.dataLayoutControl1
         Me.TxtHotelCode.TabIndex = 1
         '
         'TxtHotelName
         '
-        Me.TxtHotelName.Location = New System.Drawing.Point(149, 71)
+        Me.TxtHotelName.Location = New System.Drawing.Point(177, 79)
         Me.TxtHotelName.Name = "TxtHotelName"
-        Me.TxtHotelName.Size = New System.Drawing.Size(585, 20)
+        Me.TxtHotelName.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtHotelName.Properties.Appearance.Options.UseFont = True
+        Me.TxtHotelName.Size = New System.Drawing.Size(540, 24)
         Me.TxtHotelName.StyleController = Me.dataLayoutControl1
         Me.TxtHotelName.TabIndex = 1
         '
         'TxtCountry
         '
-        Me.TxtCountry.Location = New System.Drawing.Point(149, 95)
+        Me.TxtCountry.Location = New System.Drawing.Point(177, 107)
         Me.TxtCountry.Name = "TxtCountry"
-        Me.TxtCountry.Size = New System.Drawing.Size(227, 20)
+        Me.TxtCountry.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtCountry.Properties.Appearance.Options.UseFont = True
+        Me.TxtCountry.Size = New System.Drawing.Size(191, 24)
         Me.TxtCountry.StyleController = Me.dataLayoutControl1
         Me.TxtCountry.TabIndex = 1
         '
         'TxtPurchaseCurrency
         '
-        Me.TxtPurchaseCurrency.Location = New System.Drawing.Point(161, 178)
+        Me.TxtPurchaseCurrency.Location = New System.Drawing.Point(189, 202)
         Me.TxtPurchaseCurrency.Name = "TxtPurchaseCurrency"
-        Me.TxtPurchaseCurrency.Size = New System.Drawing.Size(215, 20)
+        Me.TxtPurchaseCurrency.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtPurchaseCurrency.Properties.Appearance.Options.UseFont = True
+        Me.TxtPurchaseCurrency.Size = New System.Drawing.Size(179, 24)
         Me.TxtPurchaseCurrency.StyleController = Me.dataLayoutControl1
         Me.TxtPurchaseCurrency.TabIndex = 1
         '
         'TxtPurchasePrice
         '
-        Me.TxtPurchasePrice.Location = New System.Drawing.Point(505, 178)
+        Me.TxtPurchasePrice.Location = New System.Drawing.Point(525, 202)
         Me.TxtPurchasePrice.Name = "TxtPurchasePrice"
-        Me.TxtPurchasePrice.Size = New System.Drawing.Size(217, 20)
+        Me.TxtPurchasePrice.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtPurchasePrice.Properties.Appearance.Options.UseFont = True
+        Me.TxtPurchasePrice.Size = New System.Drawing.Size(180, 24)
         Me.TxtPurchasePrice.StyleController = Me.dataLayoutControl1
         Me.TxtPurchasePrice.TabIndex = 1
         '
         'TxtSalesCurrency
         '
-        Me.TxtSalesCurrency.Location = New System.Drawing.Point(161, 202)
+        Me.TxtSalesCurrency.Location = New System.Drawing.Point(189, 230)
         Me.TxtSalesCurrency.Name = "TxtSalesCurrency"
-        Me.TxtSalesCurrency.Size = New System.Drawing.Size(215, 20)
+        Me.TxtSalesCurrency.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtSalesCurrency.Properties.Appearance.Options.UseFont = True
+        Me.TxtSalesCurrency.Size = New System.Drawing.Size(179, 24)
         Me.TxtSalesCurrency.StyleController = Me.dataLayoutControl1
         Me.TxtSalesCurrency.TabIndex = 1
         '
         'TxtSalesPrice
         '
-        Me.TxtSalesPrice.Location = New System.Drawing.Point(505, 202)
+        Me.TxtSalesPrice.Location = New System.Drawing.Point(525, 230)
         Me.TxtSalesPrice.Name = "TxtSalesPrice"
-        Me.TxtSalesPrice.Size = New System.Drawing.Size(217, 20)
+        Me.TxtSalesPrice.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtSalesPrice.Properties.Appearance.Options.UseFont = True
+        Me.TxtSalesPrice.Size = New System.Drawing.Size(180, 24)
         Me.TxtSalesPrice.StyleController = Me.dataLayoutControl1
         Me.TxtSalesPrice.TabIndex = 1
         '
         'TxtHandlingFee
         '
-        Me.TxtHandlingFee.Location = New System.Drawing.Point(161, 226)
+        Me.TxtHandlingFee.Location = New System.Drawing.Point(189, 258)
         Me.TxtHandlingFee.Name = "TxtHandlingFee"
-        Me.TxtHandlingFee.Size = New System.Drawing.Size(561, 20)
+        Me.TxtHandlingFee.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtHandlingFee.Properties.Appearance.Options.UseFont = True
+        Me.TxtHandlingFee.Size = New System.Drawing.Size(179, 24)
         Me.TxtHandlingFee.StyleController = Me.dataLayoutControl1
         Me.TxtHandlingFee.TabIndex = 1
         '
         'TxtMargin
         '
-        Me.TxtMargin.Location = New System.Drawing.Point(161, 250)
+        Me.TxtMargin.Location = New System.Drawing.Point(525, 258)
         Me.TxtMargin.Name = "TxtMargin"
-        Me.TxtMargin.Size = New System.Drawing.Size(561, 20)
+        Me.TxtMargin.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtMargin.Properties.Appearance.Options.UseFont = True
+        Me.TxtMargin.Size = New System.Drawing.Size(180, 24)
         Me.TxtMargin.StyleController = Me.dataLayoutControl1
         Me.TxtMargin.TabIndex = 1
         '
         'TxtDifference
         '
-        Me.TxtDifference.Location = New System.Drawing.Point(161, 274)
+        Me.TxtDifference.Location = New System.Drawing.Point(189, 286)
         Me.TxtDifference.Name = "TxtDifference"
-        Me.TxtDifference.Size = New System.Drawing.Size(561, 20)
+        Me.TxtDifference.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtDifference.Properties.Appearance.Options.UseFont = True
+        Me.TxtDifference.Size = New System.Drawing.Size(179, 24)
         Me.TxtDifference.StyleController = Me.dataLayoutControl1
         Me.TxtDifference.TabIndex = 1
         '
         'TxtCurrencyHotelTc
         '
-        Me.TxtCurrencyHotelTc.Location = New System.Drawing.Point(161, 298)
+        Me.TxtCurrencyHotelTc.Location = New System.Drawing.Point(525, 286)
         Me.TxtCurrencyHotelTc.Name = "TxtCurrencyHotelTc"
-        Me.TxtCurrencyHotelTc.Size = New System.Drawing.Size(215, 20)
+        Me.TxtCurrencyHotelTc.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtCurrencyHotelTc.Properties.Appearance.Options.UseFont = True
+        Me.TxtCurrencyHotelTc.Size = New System.Drawing.Size(180, 24)
         Me.TxtCurrencyHotelTc.StyleController = Me.dataLayoutControl1
         Me.TxtCurrencyHotelTc.TabIndex = 1
         '
         'TxtNetRateHotelTc
         '
-        Me.TxtNetRateHotelTc.Location = New System.Drawing.Point(505, 298)
+        Me.TxtNetRateHotelTc.Location = New System.Drawing.Point(189, 314)
         Me.TxtNetRateHotelTc.Name = "TxtNetRateHotelTc"
-        Me.TxtNetRateHotelTc.Size = New System.Drawing.Size(217, 20)
+        Me.TxtNetRateHotelTc.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtNetRateHotelTc.Properties.Appearance.Options.UseFont = True
+        Me.TxtNetRateHotelTc.Size = New System.Drawing.Size(179, 24)
         Me.TxtNetRateHotelTc.StyleController = Me.dataLayoutControl1
         Me.TxtNetRateHotelTc.TabIndex = 1
         '
         'TxtNetRateHandlingTc
         '
-        Me.TxtNetRateHandlingTc.Location = New System.Drawing.Point(161, 322)
+        Me.TxtNetRateHandlingTc.Location = New System.Drawing.Point(525, 314)
         Me.TxtNetRateHandlingTc.Name = "TxtNetRateHandlingTc"
-        Me.TxtNetRateHandlingTc.Size = New System.Drawing.Size(561, 20)
+        Me.TxtNetRateHandlingTc.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtNetRateHandlingTc.Properties.Appearance.Options.UseFont = True
+        Me.TxtNetRateHandlingTc.Size = New System.Drawing.Size(180, 24)
         Me.TxtNetRateHandlingTc.StyleController = Me.dataLayoutControl1
         Me.TxtNetRateHandlingTc.TabIndex = 1
         '
         'txtHotelCheck
         '
-        Me.txtHotelCheck.Location = New System.Drawing.Point(149, 119)
+        Me.txtHotelCheck.Location = New System.Drawing.Point(177, 135)
         Me.txtHotelCheck.Name = "txtHotelCheck"
-        Me.txtHotelCheck.Size = New System.Drawing.Size(227, 20)
+        Me.txtHotelCheck.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.txtHotelCheck.Properties.Appearance.Options.UseFont = True
+        Me.txtHotelCheck.Size = New System.Drawing.Size(191, 24)
         Me.txtHotelCheck.StyleController = Me.dataLayoutControl1
         Me.txtHotelCheck.TabIndex = 1
         '
         'TxtCompanyGroup
         '
-        Me.TxtCompanyGroup.Location = New System.Drawing.Point(161, 178)
+        Me.TxtCompanyGroup.Location = New System.Drawing.Point(189, 202)
         Me.TxtCompanyGroup.Name = "TxtCompanyGroup"
-        Me.TxtCompanyGroup.Size = New System.Drawing.Size(561, 20)
+        Me.TxtCompanyGroup.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtCompanyGroup.Properties.Appearance.Options.UseFont = True
+        Me.TxtCompanyGroup.Size = New System.Drawing.Size(225, 24)
         Me.TxtCompanyGroup.StyleController = Me.dataLayoutControl1
         Me.TxtCompanyGroup.TabIndex = 1
         '
         'DeBookingDate
         '
         Me.DeBookingDate.EditValue = Nothing
-        Me.DeBookingDate.Location = New System.Drawing.Point(161, 202)
+        Me.DeBookingDate.Location = New System.Drawing.Point(189, 230)
         Me.DeBookingDate.Name = "DeBookingDate"
+        Me.DeBookingDate.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.DeBookingDate.Properties.Appearance.Options.UseFont = True
         Me.DeBookingDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DeBookingDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DeBookingDate.Size = New System.Drawing.Size(100, 20)
+        Me.DeBookingDate.Size = New System.Drawing.Size(128, 24)
         Me.DeBookingDate.StyleController = Me.dataLayoutControl1
         Me.DeBookingDate.TabIndex = 1
         '
         'DeTravelDate
         '
         Me.DeTravelDate.EditValue = Nothing
-        Me.DeTravelDate.Location = New System.Drawing.Point(390, 202)
+        Me.DeTravelDate.Location = New System.Drawing.Point(474, 230)
         Me.DeTravelDate.Name = "DeTravelDate"
+        Me.DeTravelDate.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.DeTravelDate.Properties.Appearance.Options.UseFont = True
         Me.DeTravelDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DeTravelDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DeTravelDate.Size = New System.Drawing.Size(101, 20)
+        Me.DeTravelDate.Size = New System.Drawing.Size(231, 24)
         Me.DeTravelDate.StyleController = Me.dataLayoutControl1
         Me.DeTravelDate.TabIndex = 1
         '
         'TxtRoomType
         '
-        Me.TxtRoomType.Location = New System.Drawing.Point(161, 226)
+        Me.TxtRoomType.Location = New System.Drawing.Point(189, 258)
         Me.TxtRoomType.Name = "TxtRoomType"
-        Me.TxtRoomType.Size = New System.Drawing.Size(100, 20)
+        Me.TxtRoomType.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtRoomType.Properties.Appearance.Options.UseFont = True
+        Me.TxtRoomType.Size = New System.Drawing.Size(128, 24)
         Me.TxtRoomType.StyleController = Me.dataLayoutControl1
         Me.TxtRoomType.TabIndex = 1
         '
         'TxtBaord
         '
-        Me.TxtBaord.Location = New System.Drawing.Point(390, 226)
+        Me.TxtBaord.Location = New System.Drawing.Point(474, 258)
         Me.TxtBaord.Name = "TxtBaord"
-        Me.TxtBaord.Size = New System.Drawing.Size(101, 20)
+        Me.TxtBaord.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtBaord.Properties.Appearance.Options.UseFont = True
+        Me.TxtBaord.Size = New System.Drawing.Size(231, 24)
         Me.TxtBaord.StyleController = Me.dataLayoutControl1
         Me.TxtBaord.TabIndex = 1
         '
         'TxtDuration
         '
-        Me.TxtDuration.Location = New System.Drawing.Point(620, 202)
+        Me.TxtDuration.Location = New System.Drawing.Point(571, 202)
         Me.TxtDuration.Name = "TxtDuration"
-        Me.TxtDuration.Size = New System.Drawing.Size(102, 20)
+        Me.TxtDuration.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtDuration.Properties.Appearance.Options.UseFont = True
+        Me.TxtDuration.Size = New System.Drawing.Size(134, 24)
         Me.TxtDuration.StyleController = Me.dataLayoutControl1
         Me.TxtDuration.TabIndex = 1
         '
         'TxtTransferTo
         '
-        Me.TxtTransferTo.Location = New System.Drawing.Point(173, 283)
+        Me.TxtTransferTo.Location = New System.Drawing.Point(201, 319)
         Me.TxtTransferTo.Name = "TxtTransferTo"
-        Me.TxtTransferTo.Size = New System.Drawing.Size(203, 20)
+        Me.TxtTransferTo.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtTransferTo.Properties.Appearance.Options.UseFont = True
+        Me.TxtTransferTo.Size = New System.Drawing.Size(167, 24)
         Me.TxtTransferTo.StyleController = Me.dataLayoutControl1
         Me.TxtTransferTo.TabIndex = 1
         '
         'TxtTransferFrom
         '
-        Me.TxtTransferFrom.Location = New System.Drawing.Point(505, 283)
+        Me.TxtTransferFrom.Location = New System.Drawing.Point(525, 319)
         Me.TxtTransferFrom.Name = "TxtTransferFrom"
-        Me.TxtTransferFrom.Size = New System.Drawing.Size(205, 20)
+        Me.TxtTransferFrom.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtTransferFrom.Properties.Appearance.Options.UseFont = True
+        Me.TxtTransferFrom.Size = New System.Drawing.Size(168, 24)
         Me.TxtTransferFrom.StyleController = Me.dataLayoutControl1
         Me.TxtTransferFrom.TabIndex = 1
         '
         'TxtPax
         '
-        Me.TxtPax.Location = New System.Drawing.Point(173, 307)
+        Me.TxtPax.Location = New System.Drawing.Point(201, 347)
         Me.TxtPax.Name = "TxtPax"
-        Me.TxtPax.Size = New System.Drawing.Size(93, 20)
+        Me.TxtPax.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtPax.Properties.Appearance.Options.UseFont = True
+        Me.TxtPax.Size = New System.Drawing.Size(74, 24)
         Me.TxtPax.StyleController = Me.dataLayoutControl1
         Me.TxtPax.TabIndex = 1
         '
         'TxtAdult
         '
-        Me.TxtAdult.Location = New System.Drawing.Point(395, 307)
+        Me.TxtAdult.Location = New System.Drawing.Point(432, 347)
         Me.TxtAdult.Name = "TxtAdult"
-        Me.TxtAdult.Size = New System.Drawing.Size(92, 20)
+        Me.TxtAdult.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtAdult.Properties.Appearance.Options.UseFont = True
+        Me.TxtAdult.Size = New System.Drawing.Size(50, 24)
         Me.TxtAdult.StyleController = Me.dataLayoutControl1
         Me.TxtAdult.TabIndex = 1
         '
         'TxtChild
         '
-        Me.TxtChild.Location = New System.Drawing.Point(616, 307)
+        Me.TxtChild.Location = New System.Drawing.Point(639, 347)
         Me.TxtChild.Name = "TxtChild"
-        Me.TxtChild.Size = New System.Drawing.Size(94, 20)
+        Me.TxtChild.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtChild.Properties.Appearance.Options.UseFont = True
+        Me.TxtChild.Size = New System.Drawing.Size(54, 24)
         Me.TxtChild.StyleController = Me.dataLayoutControl1
         Me.TxtChild.TabIndex = 1
         '
         'DeImportDate
         '
         Me.DeImportDate.EditValue = Nothing
-        Me.DeImportDate.Location = New System.Drawing.Point(173, 331)
+        Me.DeImportDate.Location = New System.Drawing.Point(201, 375)
         Me.DeImportDate.Name = "DeImportDate"
+        Me.DeImportDate.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.DeImportDate.Properties.Appearance.Options.UseFont = True
         Me.DeImportDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DeImportDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DeImportDate.Size = New System.Drawing.Size(93, 20)
+        Me.DeImportDate.Size = New System.Drawing.Size(167, 24)
         Me.DeImportDate.StyleController = Me.dataLayoutControl1
         Me.DeImportDate.TabIndex = 1
         '
         'TxtIncomingAgency
         '
-        Me.TxtIncomingAgency.Location = New System.Drawing.Point(505, 355)
+        Me.TxtIncomingAgency.Location = New System.Drawing.Point(525, 403)
         Me.TxtIncomingAgency.Name = "TxtIncomingAgency"
-        Me.TxtIncomingAgency.Size = New System.Drawing.Size(205, 20)
+        Me.TxtIncomingAgency.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtIncomingAgency.Properties.Appearance.Options.UseFont = True
+        Me.TxtIncomingAgency.Size = New System.Drawing.Size(168, 24)
         Me.TxtIncomingAgency.StyleController = Me.dataLayoutControl1
         Me.TxtIncomingAgency.TabIndex = 1
         '
         'TxtBookingStateDesc
         '
-        Me.TxtBookingStateDesc.Location = New System.Drawing.Point(173, 355)
+        Me.TxtBookingStateDesc.Location = New System.Drawing.Point(201, 403)
         Me.TxtBookingStateDesc.Name = "TxtBookingStateDesc"
-        Me.TxtBookingStateDesc.Size = New System.Drawing.Size(203, 20)
+        Me.TxtBookingStateDesc.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtBookingStateDesc.Properties.Appearance.Options.UseFont = True
+        Me.TxtBookingStateDesc.Size = New System.Drawing.Size(167, 24)
         Me.TxtBookingStateDesc.StyleController = Me.dataLayoutControl1
         Me.TxtBookingStateDesc.TabIndex = 1
         '
         'TxtPriceBreakdown
         '
-        Me.TxtPriceBreakdown.Location = New System.Drawing.Point(173, 379)
+        Me.TxtPriceBreakdown.Location = New System.Drawing.Point(201, 431)
         Me.TxtPriceBreakdown.Name = "TxtPriceBreakdown"
-        Me.TxtPriceBreakdown.Size = New System.Drawing.Size(537, 20)
+        Me.TxtPriceBreakdown.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtPriceBreakdown.Properties.Appearance.Options.UseFont = True
+        Me.TxtPriceBreakdown.Size = New System.Drawing.Size(492, 24)
         Me.TxtPriceBreakdown.StyleController = Me.dataLayoutControl1
         Me.TxtPriceBreakdown.TabIndex = 1
         '
@@ -974,19 +1318,19 @@ Partial Public Class FrmEdit
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = True
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = True
         Me.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        WindowsUIButtonImageOptions1.Image = CType(resources.GetObject("WindowsUIButtonImageOptions1.Image"), System.Drawing.Image)
-        WindowsUIButtonImageOptions2.ImageUri.Uri = "Save;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions3.ImageUri.Uri = "Reset;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions4.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
-        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Mail", True, WindowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", True, WindowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False)})
+        WindowsUIButtonImageOptions5.Image = CType(resources.GetObject("WindowsUIButtonImageOptions5.Image"), System.Drawing.Image)
+        WindowsUIButtonImageOptions6.ImageUri.Uri = "Save;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions7.ImageUri.Uri = "Reset;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions8.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
+        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Mail", True, WindowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", True, WindowsUIButtonImageOptions7, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions8, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False)})
         Me.windowsUIButtonPanelMain.EnableImageTransparency = True
         Me.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
-        Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(24, 427)
+        Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(24, 483)
         Me.windowsUIButtonPanelMain.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.windowsUIButtonPanelMain.MaximumSize = New System.Drawing.Size(0, 60)
         Me.windowsUIButtonPanelMain.MinimumSize = New System.Drawing.Size(60, 60)
         Me.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain"
-        Me.windowsUIButtonPanelMain.Size = New System.Drawing.Size(710, 60)
+        Me.windowsUIButtonPanelMain.Size = New System.Drawing.Size(693, 60)
         Me.windowsUIButtonPanelMain.TabIndex = 1
         Me.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain"
         Me.windowsUIButtonPanelMain.UseButtonBackgroundImages = False
@@ -995,81 +1339,93 @@ Partial Public Class FrmEdit
         '
         Me.BtnToggleComment.Appearance.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
         Me.BtnToggleComment.Appearance.Options.UseFont = True
-        Me.BtnToggleComment.Location = New System.Drawing.Point(24, 47)
+        Me.BtnToggleComment.Location = New System.Drawing.Point(24, 51)
         Me.BtnToggleComment.Name = "BtnToggleComment"
-        Me.BtnToggleComment.Size = New System.Drawing.Size(710, 22)
+        Me.BtnToggleComment.Size = New System.Drawing.Size(693, 22)
         Me.BtnToggleComment.StyleController = Me.dataLayoutControl1
         Me.BtnToggleComment.TabIndex = 2
         Me.BtnToggleComment.Text = "New Comment"
         '
         'TxtComment
         '
-        Me.TxtComment.Location = New System.Drawing.Point(161, 165)
+        Me.TxtComment.Location = New System.Drawing.Point(189, 178)
         Me.TxtComment.Name = "TxtComment"
-        Me.TxtComment.Size = New System.Drawing.Size(561, 55)
+        Me.TxtComment.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.TxtComment.Properties.Appearance.Options.UseFont = True
+        Me.TxtComment.Size = New System.Drawing.Size(516, 68)
         Me.TxtComment.StyleController = Me.dataLayoutControl1
         Me.TxtComment.TabIndex = 4
         '
         'TxtCalculation
         '
-        Me.TxtCalculation.Location = New System.Drawing.Point(161, 224)
+        Me.TxtCalculation.Location = New System.Drawing.Point(189, 250)
         Me.TxtCalculation.Name = "TxtCalculation"
+        Me.TxtCalculation.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.TxtCalculation.Properties.Appearance.Options.UseFont = True
         Me.TxtCalculation.Properties.Mask.EditMask = "\d+(\R.\d{0,2})?"
         Me.TxtCalculation.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
-        Me.TxtCalculation.Size = New System.Drawing.Size(561, 20)
+        Me.TxtCalculation.Size = New System.Drawing.Size(516, 24)
         Me.TxtCalculation.StyleController = Me.dataLayoutControl1
         Me.TxtCalculation.TabIndex = 5
         '
         'BtnSaveComment
         '
-        Me.BtnSaveComment.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSaveComment.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSaveComment.Appearance.ForeColor = System.Drawing.Color.Green
         Me.BtnSaveComment.Appearance.Options.UseFont = True
         Me.BtnSaveComment.Appearance.Options.UseForeColor = True
-        Me.BtnSaveComment.Location = New System.Drawing.Point(36, 248)
+        Me.BtnSaveComment.Location = New System.Drawing.Point(36, 278)
+        Me.BtnSaveComment.MinimumSize = New System.Drawing.Size(0, 30)
         Me.BtnSaveComment.Name = "BtnSaveComment"
-        Me.BtnSaveComment.Size = New System.Drawing.Size(340, 22)
+        Me.BtnSaveComment.Size = New System.Drawing.Size(332, 30)
         Me.BtnSaveComment.StyleController = Me.dataLayoutControl1
         Me.BtnSaveComment.TabIndex = 6
         Me.BtnSaveComment.Text = "SAVE"
         '
         'BtnCancelComment
         '
-        Me.BtnCancelComment.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelComment.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelComment.Appearance.ForeColor = System.Drawing.Color.Red
         Me.BtnCancelComment.Appearance.Options.UseFont = True
         Me.BtnCancelComment.Appearance.Options.UseForeColor = True
-        Me.BtnCancelComment.Location = New System.Drawing.Point(380, 248)
+        Me.BtnCancelComment.Location = New System.Drawing.Point(372, 278)
+        Me.BtnCancelComment.MinimumSize = New System.Drawing.Size(0, 30)
         Me.BtnCancelComment.Name = "BtnCancelComment"
-        Me.BtnCancelComment.Size = New System.Drawing.Size(342, 22)
+        Me.BtnCancelComment.Size = New System.Drawing.Size(333, 30)
         Me.BtnCancelComment.StyleController = Me.dataLayoutControl1
         Me.BtnCancelComment.TabIndex = 7
         Me.BtnCancelComment.Text = "CANCEL"
         '
         'CbGWGStatus
         '
-        Me.CbGWGStatus.Location = New System.Drawing.Point(505, 95)
+        Me.CbGWGStatus.Location = New System.Drawing.Point(525, 107)
         Me.CbGWGStatus.Name = "CbGWGStatus"
+        Me.CbGWGStatus.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CbGWGStatus.Properties.Appearance.Options.UseFont = True
         Me.CbGWGStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.CbGWGStatus.Properties.Items.AddRange(New Object() {"OK", "CAN", "OnR", "BNA", "Stp"})
         Me.CbGWGStatus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
-        Me.CbGWGStatus.Size = New System.Drawing.Size(229, 20)
+        Me.CbGWGStatus.Size = New System.Drawing.Size(192, 24)
         Me.CbGWGStatus.StyleController = Me.dataLayoutControl1
         Me.CbGWGStatus.TabIndex = 1
         '
         'TxtUser
         '
-        Me.TxtUser.Location = New System.Drawing.Point(161, 346)
+        Me.TxtUser.Location = New System.Drawing.Point(189, 342)
         Me.TxtUser.Name = "TxtUser"
+        Me.TxtUser.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtUser.Properties.Appearance.Options.UseFont = True
         Me.TxtUser.Properties.ReadOnly = True
-        Me.TxtUser.Size = New System.Drawing.Size(561, 20)
+        Me.TxtUser.Size = New System.Drawing.Size(516, 24)
         Me.TxtUser.StyleController = Me.dataLayoutControl1
         Me.TxtUser.TabIndex = 1
         '
         'LuStatus
         '
-        Me.LuStatus.Location = New System.Drawing.Point(161, 117)
+        Me.LuStatus.Location = New System.Drawing.Point(189, 122)
         Me.LuStatus.Name = "LuStatus"
+        Me.LuStatus.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LuStatus.Properties.Appearance.Options.UseFont = True
         Me.LuStatus.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit
         Me.LuStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.LuStatus.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.[Default]), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Status", "Status")})
@@ -1077,150 +1433,180 @@ Partial Public Class FrmEdit
         Me.LuStatus.Properties.NullText = ""
         Me.LuStatus.Properties.PopupSizeable = False
         Me.LuStatus.Properties.ShowHeader = False
-        Me.LuStatus.Size = New System.Drawing.Size(561, 20)
+        Me.LuStatus.Size = New System.Drawing.Size(516, 24)
         Me.LuStatus.StyleController = Me.dataLayoutControl1
         Me.LuStatus.TabIndex = 3
         '
         'TxtPurchaseEUR
         '
-        Me.TxtPurchaseEUR.Location = New System.Drawing.Point(161, 178)
+        Me.TxtPurchaseEUR.Location = New System.Drawing.Point(189, 202)
         Me.TxtPurchaseEUR.Name = "TxtPurchaseEUR"
+        Me.TxtPurchaseEUR.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtPurchaseEUR.Properties.Appearance.Options.UseFont = True
         Me.TxtPurchaseEUR.Properties.ReadOnly = True
-        Me.TxtPurchaseEUR.Size = New System.Drawing.Size(215, 20)
+        Me.TxtPurchaseEUR.Size = New System.Drawing.Size(179, 24)
         Me.TxtPurchaseEUR.StyleController = Me.dataLayoutControl1
         Me.TxtPurchaseEUR.TabIndex = 9
         '
         'TxtSalesEUR
         '
-        Me.TxtSalesEUR.Location = New System.Drawing.Point(505, 178)
+        Me.TxtSalesEUR.Location = New System.Drawing.Point(525, 202)
         Me.TxtSalesEUR.Name = "TxtSalesEUR"
+        Me.TxtSalesEUR.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtSalesEUR.Properties.Appearance.Options.UseFont = True
         Me.TxtSalesEUR.Properties.ReadOnly = True
-        Me.TxtSalesEUR.Size = New System.Drawing.Size(217, 20)
+        Me.TxtSalesEUR.Size = New System.Drawing.Size(180, 24)
         Me.TxtSalesEUR.StyleController = Me.dataLayoutControl1
         Me.TxtSalesEUR.TabIndex = 10
         '
         'TxtMarginEUR
         '
-        Me.TxtMarginEUR.Location = New System.Drawing.Point(161, 202)
+        Me.TxtMarginEUR.Location = New System.Drawing.Point(189, 230)
         Me.TxtMarginEUR.Name = "TxtMarginEUR"
+        Me.TxtMarginEUR.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtMarginEUR.Properties.Appearance.Options.UseFont = True
         Me.TxtMarginEUR.Properties.ReadOnly = True
-        Me.TxtMarginEUR.Size = New System.Drawing.Size(215, 20)
+        Me.TxtMarginEUR.Size = New System.Drawing.Size(179, 24)
         Me.TxtMarginEUR.StyleController = Me.dataLayoutControl1
         Me.TxtMarginEUR.TabIndex = 11
         '
         'TxtNetRateEUR
         '
-        Me.TxtNetRateEUR.Location = New System.Drawing.Point(505, 202)
+        Me.TxtNetRateEUR.Location = New System.Drawing.Point(525, 230)
         Me.TxtNetRateEUR.Name = "TxtNetRateEUR"
+        Me.TxtNetRateEUR.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtNetRateEUR.Properties.Appearance.Options.UseFont = True
         Me.TxtNetRateEUR.Properties.ReadOnly = True
-        Me.TxtNetRateEUR.Size = New System.Drawing.Size(217, 20)
+        Me.TxtNetRateEUR.Size = New System.Drawing.Size(180, 24)
         Me.TxtNetRateEUR.StyleController = Me.dataLayoutControl1
         Me.TxtNetRateEUR.TabIndex = 12
         '
         'TxtDifferenceEUR
         '
-        Me.TxtDifferenceEUR.Location = New System.Drawing.Point(161, 226)
+        Me.TxtDifferenceEUR.Location = New System.Drawing.Point(189, 258)
         Me.TxtDifferenceEUR.Name = "TxtDifferenceEUR"
+        Me.TxtDifferenceEUR.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtDifferenceEUR.Properties.Appearance.Options.UseFont = True
         Me.TxtDifferenceEUR.Properties.ReadOnly = True
-        Me.TxtDifferenceEUR.Size = New System.Drawing.Size(215, 20)
+        Me.TxtDifferenceEUR.Size = New System.Drawing.Size(179, 24)
         Me.TxtDifferenceEUR.StyleController = Me.dataLayoutControl1
         Me.TxtDifferenceEUR.TabIndex = 13
         '
         'TxtJunk
         '
-        Me.TxtJunk.Location = New System.Drawing.Point(161, 251)
+        Me.TxtJunk.Location = New System.Drawing.Point(189, 287)
         Me.TxtJunk.Name = "TxtJunk"
+        Me.TxtJunk.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtJunk.Properties.Appearance.Options.UseFont = True
         Me.TxtJunk.Properties.ReadOnly = True
-        Me.TxtJunk.Size = New System.Drawing.Size(561, 20)
+        Me.TxtJunk.Size = New System.Drawing.Size(516, 24)
         Me.TxtJunk.StyleController = Me.dataLayoutControl1
         Me.TxtJunk.TabIndex = 14
         '
         'TxtCancelled
         '
-        Me.TxtCancelled.Location = New System.Drawing.Point(161, 275)
+        Me.TxtCancelled.Location = New System.Drawing.Point(189, 315)
         Me.TxtCancelled.Name = "TxtCancelled"
+        Me.TxtCancelled.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtCancelled.Properties.Appearance.Options.UseFont = True
         Me.TxtCancelled.Properties.ReadOnly = True
-        Me.TxtCancelled.Size = New System.Drawing.Size(561, 20)
+        Me.TxtCancelled.Size = New System.Drawing.Size(516, 24)
         Me.TxtCancelled.StyleController = Me.dataLayoutControl1
         Me.TxtCancelled.TabIndex = 15
         '
         'TxtExcessive
         '
-        Me.TxtExcessive.Location = New System.Drawing.Point(161, 299)
+        Me.TxtExcessive.Location = New System.Drawing.Point(189, 343)
         Me.TxtExcessive.Name = "TxtExcessive"
+        Me.TxtExcessive.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtExcessive.Properties.Appearance.Options.UseFont = True
         Me.TxtExcessive.Properties.ReadOnly = True
-        Me.TxtExcessive.Size = New System.Drawing.Size(561, 20)
+        Me.TxtExcessive.Size = New System.Drawing.Size(516, 24)
         Me.TxtExcessive.StyleController = Me.dataLayoutControl1
         Me.TxtExcessive.TabIndex = 16
         '
         'TxtNegative
         '
-        Me.TxtNegative.Location = New System.Drawing.Point(161, 323)
+        Me.TxtNegative.Location = New System.Drawing.Point(189, 371)
         Me.TxtNegative.Name = "TxtNegative"
+        Me.TxtNegative.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtNegative.Properties.Appearance.Options.UseFont = True
         Me.TxtNegative.Properties.ReadOnly = True
-        Me.TxtNegative.Size = New System.Drawing.Size(561, 20)
+        Me.TxtNegative.Size = New System.Drawing.Size(516, 24)
         Me.TxtNegative.StyleController = Me.dataLayoutControl1
         Me.TxtNegative.TabIndex = 17
         '
         'TxtError
         '
-        Me.TxtError.Location = New System.Drawing.Point(161, 371)
+        Me.TxtError.Location = New System.Drawing.Point(189, 427)
         Me.TxtError.Name = "TxtError"
+        Me.TxtError.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtError.Properties.Appearance.Options.UseFont = True
         Me.TxtError.Properties.ReadOnly = True
-        Me.TxtError.Size = New System.Drawing.Size(561, 20)
+        Me.TxtError.Size = New System.Drawing.Size(516, 24)
         Me.TxtError.StyleController = Me.dataLayoutControl1
         Me.TxtError.TabIndex = 18
         '
         'TxtMismatching
         '
-        Me.TxtMismatching.Location = New System.Drawing.Point(161, 347)
+        Me.TxtMismatching.Location = New System.Drawing.Point(189, 399)
         Me.TxtMismatching.Name = "TxtMismatching"
+        Me.TxtMismatching.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtMismatching.Properties.Appearance.Options.UseFont = True
         Me.TxtMismatching.Properties.ReadOnly = True
-        Me.TxtMismatching.Size = New System.Drawing.Size(561, 20)
+        Me.TxtMismatching.Size = New System.Drawing.Size(516, 24)
         Me.TxtMismatching.StyleController = Me.dataLayoutControl1
         Me.TxtMismatching.TabIndex = 19
         '
         'DeMPImportDate
         '
         Me.DeMPImportDate.EditValue = Nothing
-        Me.DeMPImportDate.Location = New System.Drawing.Point(395, 331)
+        Me.DeMPImportDate.Location = New System.Drawing.Point(525, 375)
         Me.DeMPImportDate.Name = "DeMPImportDate"
+        Me.DeMPImportDate.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.DeMPImportDate.Properties.Appearance.Options.UseFont = True
         Me.DeMPImportDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DeMPImportDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DeMPImportDate.Size = New System.Drawing.Size(315, 20)
+        Me.DeMPImportDate.Size = New System.Drawing.Size(168, 24)
         Me.DeMPImportDate.StyleController = Me.dataLayoutControl1
         Me.DeMPImportDate.TabIndex = 21
         '
         'CbBookingStatus
         '
-        Me.CbBookingStatus.Location = New System.Drawing.Point(505, 119)
+        Me.CbBookingStatus.Location = New System.Drawing.Point(525, 135)
         Me.CbBookingStatus.Name = "CbBookingStatus"
+        Me.CbBookingStatus.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.CbBookingStatus.Properties.Appearance.Options.UseFont = True
         Me.CbBookingStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.CbBookingStatus.Properties.Items.AddRange(New Object() {"New", "Ame", "Can", "BNA"})
-        Me.CbBookingStatus.Size = New System.Drawing.Size(229, 20)
+        Me.CbBookingStatus.Size = New System.Drawing.Size(192, 24)
         Me.CbBookingStatus.StyleController = Me.dataLayoutControl1
         Me.CbBookingStatus.TabIndex = 20
         '
         'TxtActionBy
         '
-        Me.TxtActionBy.Location = New System.Drawing.Point(161, 370)
+        Me.TxtActionBy.Location = New System.Drawing.Point(189, 370)
         Me.TxtActionBy.Name = "TxtActionBy"
+        Me.TxtActionBy.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.TxtActionBy.Properties.Appearance.Options.UseFont = True
         Me.TxtActionBy.Properties.ReadOnly = True
-        Me.TxtActionBy.Size = New System.Drawing.Size(561, 20)
+        Me.TxtActionBy.Size = New System.Drawing.Size(516, 24)
         Me.TxtActionBy.StyleController = Me.dataLayoutControl1
         Me.TxtActionBy.TabIndex = 22
         '
         'LuSection
         '
-        Me.LuSection.Location = New System.Drawing.Point(161, 141)
+        Me.LuSection.Location = New System.Drawing.Point(189, 150)
         Me.LuSection.Name = "LuSection"
+        Me.LuSection.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LuSection.Properties.Appearance.Options.UseFont = True
         Me.LuSection.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit
         Me.LuSection.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.LuSection.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.[Default]), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Section", "Section")})
         Me.LuSection.Properties.NullText = ""
         Me.LuSection.Properties.PopupSizeable = False
         Me.LuSection.Properties.ShowHeader = False
-        Me.LuSection.Size = New System.Drawing.Size(561, 20)
+        Me.LuSection.Size = New System.Drawing.Size(516, 24)
         Me.LuSection.StyleController = Me.dataLayoutControl1
         Me.LuSection.TabIndex = 3
         '
@@ -1230,85 +1616,129 @@ Partial Public Class FrmEdit
         Me.layoutControlGroup1.GroupBordersVisible = False
         Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.TabbedControlGroup2})
         Me.layoutControlGroup1.Name = "Root"
-        Me.layoutControlGroup1.Size = New System.Drawing.Size(758, 524)
+        Me.layoutControlGroup1.Size = New System.Drawing.Size(741, 567)
         Me.layoutControlGroup1.TextVisible = False
         '
         'TabbedControlGroup2
         '
+        Me.TabbedControlGroup2.AppearanceGroup.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.TabbedControlGroup2.AppearanceGroup.Options.UseFont = True
+        Me.TabbedControlGroup2.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.TabbedControlGroup2.AppearanceItemCaption.Options.UseFont = True
+        Me.TabbedControlGroup2.AppearanceTabPage.Header.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.TabbedControlGroup2.AppearanceTabPage.Header.Options.UseFont = True
+        Me.TabbedControlGroup2.AppearanceTabPage.HeaderActive.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.TabbedControlGroup2.AppearanceTabPage.HeaderActive.Options.UseFont = True
+        Me.TabbedControlGroup2.AppearanceTabPage.HeaderDisabled.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.TabbedControlGroup2.AppearanceTabPage.HeaderDisabled.Options.UseFont = True
         Me.TabbedControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.TabbedControlGroup2.Name = "TabbedControlGroup2"
         Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup7
-        Me.TabbedControlGroup2.Size = New System.Drawing.Size(738, 504)
-        Me.TabbedControlGroup2.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup5, Me.LayoutControlGroup7})
+        Me.TabbedControlGroup2.Size = New System.Drawing.Size(721, 547)
+        Me.TabbedControlGroup2.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup5, Me.LayoutControlGroup7, Me.LayoutControlGroup9})
         '
         'LayoutControlGroup7
         '
+        Me.LayoutControlGroup7.AppearanceGroup.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlGroup7.AppearanceGroup.Options.UseFont = True
+        Me.LayoutControlGroup7.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlGroup7.AppearanceItemCaption.Options.UseFont = True
         Me.LayoutControlGroup7.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.grpAddNewComment, Me.LayoutControlItem33, Me.EmptySpaceItem1, Me.EmptySpaceItem2})
         Me.LayoutControlGroup7.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup7.Name = "LayoutControlGroup7"
-        Me.LayoutControlGroup7.Size = New System.Drawing.Size(714, 457)
+        Me.LayoutControlGroup7.Size = New System.Drawing.Size(697, 496)
         Me.LayoutControlGroup7.Text = "DISPUTES"
         '
         'LayoutControlItem1
         '
         Me.LayoutControlItem1.Control = Me.GridControl1
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 250)
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 283)
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(714, 207)
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(697, 213)
         Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem1.TextVisible = False
         '
         'grpAddNewComment
         '
+        Me.grpAddNewComment.AppearanceGroup.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.AppearanceGroup.Options.UseFont = True
+        Me.grpAddNewComment.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.AppearanceItemCaption.Options.UseFont = True
+        Me.grpAddNewComment.AppearanceTabPage.Header.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.AppearanceTabPage.Header.Options.UseFont = True
+        Me.grpAddNewComment.AppearanceTabPage.HeaderActive.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.AppearanceTabPage.HeaderActive.Options.UseFont = True
         Me.grpAddNewComment.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem34, Me.LayoutControlItem35, Me.LayoutControlItem36, Me.LayoutControlItem37, Me.LayoutControlItem38, Me.LayoutControlItem53})
-        Me.grpAddNewComment.Location = New System.Drawing.Point(0, 37)
+        Me.grpAddNewComment.Location = New System.Drawing.Point(0, 38)
         Me.grpAddNewComment.Name = "grpAddNewComment"
-        Me.grpAddNewComment.Size = New System.Drawing.Size(714, 202)
+        Me.grpAddNewComment.OptionsPrint.AppearanceGroupCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.OptionsPrint.AppearanceGroupCaption.Options.UseFont = True
+        Me.grpAddNewComment.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.OptionsPrint.AppearanceItem.Options.UseFont = True
+        Me.grpAddNewComment.OptionsPrint.AppearanceItemControl.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.OptionsPrint.AppearanceItemControl.Options.UseFont = True
+        Me.grpAddNewComment.OptionsPrint.AppearanceItemText.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.OptionsPrint.AppearanceItemText.Options.UseFont = True
+        Me.grpAddNewComment.Size = New System.Drawing.Size(697, 235)
         Me.grpAddNewComment.Text = "Add New Comment"
         Me.grpAddNewComment.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
         '
         'LayoutControlItem34
         '
+        Me.LayoutControlItem34.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem34.AppearanceItemCaption.Options.UseFont = True
         Me.LayoutControlItem34.Control = Me.LuStatus
         Me.LayoutControlItem34.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem34.Name = "LayoutControlItem34"
-        Me.LayoutControlItem34.Size = New System.Drawing.Size(690, 24)
+        Me.LayoutControlItem34.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem34.OptionsPrint.AppearanceItem.Options.UseFont = True
+        Me.LayoutControlItem34.OptionsPrint.AppearanceItemControl.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem34.OptionsPrint.AppearanceItemControl.Options.UseFont = True
+        Me.LayoutControlItem34.OptionsPrint.AppearanceItemText.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem34.OptionsPrint.AppearanceItemText.Options.UseFont = True
+        Me.LayoutControlItem34.Size = New System.Drawing.Size(673, 28)
         Me.LayoutControlItem34.Text = "Status"
-        Me.LayoutControlItem34.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem34.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem35
         '
+        Me.LayoutControlItem35.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem35.AppearanceItemCaption.Options.UseFont = True
         Me.LayoutControlItem35.Control = Me.TxtComment
-        Me.LayoutControlItem35.Location = New System.Drawing.Point(0, 48)
+        Me.LayoutControlItem35.Location = New System.Drawing.Point(0, 56)
         Me.LayoutControlItem35.Name = "LayoutControlItem35"
-        Me.LayoutControlItem35.Size = New System.Drawing.Size(690, 59)
+        Me.LayoutControlItem35.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem35.OptionsPrint.AppearanceItem.Options.UseFont = True
+        Me.LayoutControlItem35.Size = New System.Drawing.Size(673, 72)
         Me.LayoutControlItem35.Text = "Comment:"
-        Me.LayoutControlItem35.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem35.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem36
         '
         Me.LayoutControlItem36.Control = Me.TxtCalculation
-        Me.LayoutControlItem36.Location = New System.Drawing.Point(0, 107)
+        Me.LayoutControlItem36.Location = New System.Drawing.Point(0, 128)
         Me.LayoutControlItem36.Name = "LayoutControlItem36"
-        Me.LayoutControlItem36.Size = New System.Drawing.Size(690, 24)
+        Me.LayoutControlItem36.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem36.OptionsPrint.AppearanceItem.Options.UseFont = True
+        Me.LayoutControlItem36.Size = New System.Drawing.Size(673, 28)
         Me.LayoutControlItem36.Text = "Calculation:"
-        Me.LayoutControlItem36.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem36.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem37
         '
         Me.LayoutControlItem37.Control = Me.BtnSaveComment
-        Me.LayoutControlItem37.Location = New System.Drawing.Point(0, 131)
+        Me.LayoutControlItem37.Location = New System.Drawing.Point(0, 156)
         Me.LayoutControlItem37.Name = "LayoutControlItem37"
-        Me.LayoutControlItem37.Size = New System.Drawing.Size(344, 26)
+        Me.LayoutControlItem37.Size = New System.Drawing.Size(336, 34)
         Me.LayoutControlItem37.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem37.TextVisible = False
         '
         'LayoutControlItem38
         '
         Me.LayoutControlItem38.Control = Me.BtnCancelComment
-        Me.LayoutControlItem38.Location = New System.Drawing.Point(344, 131)
+        Me.LayoutControlItem38.Location = New System.Drawing.Point(336, 156)
         Me.LayoutControlItem38.Name = "LayoutControlItem38"
-        Me.LayoutControlItem38.Size = New System.Drawing.Size(346, 26)
+        Me.LayoutControlItem38.Size = New System.Drawing.Size(337, 34)
         Me.LayoutControlItem38.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem38.TextVisible = False
         '
@@ -1317,18 +1747,20 @@ Partial Public Class FrmEdit
         Me.LayoutControlItem53.Control = Me.LuSection
         Me.LayoutControlItem53.ControlAlignment = System.Drawing.ContentAlignment.TopLeft
         Me.LayoutControlItem53.CustomizationFormText = "Status"
-        Me.LayoutControlItem53.Location = New System.Drawing.Point(0, 24)
+        Me.LayoutControlItem53.Location = New System.Drawing.Point(0, 28)
         Me.LayoutControlItem53.Name = "LayoutControlItem53"
-        Me.LayoutControlItem53.Size = New System.Drawing.Size(690, 24)
+        Me.LayoutControlItem53.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem53.OptionsPrint.AppearanceItem.Options.UseFont = True
+        Me.LayoutControlItem53.Size = New System.Drawing.Size(673, 28)
         Me.LayoutControlItem53.Text = "Section"
-        Me.LayoutControlItem53.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem53.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem33
         '
         Me.LayoutControlItem33.Control = Me.BtnToggleComment
         Me.LayoutControlItem33.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem33.Name = "LayoutControlItem33"
-        Me.LayoutControlItem33.Size = New System.Drawing.Size(714, 26)
+        Me.LayoutControlItem33.Size = New System.Drawing.Size(697, 26)
         Me.LayoutControlItem33.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem33.TextVisible = False
         '
@@ -1337,15 +1769,15 @@ Partial Public Class FrmEdit
         Me.EmptySpaceItem1.AllowHotTrack = False
         Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 26)
         Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(714, 11)
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(697, 12)
         Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
         '
         'EmptySpaceItem2
         '
         Me.EmptySpaceItem2.AllowHotTrack = False
-        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 239)
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 273)
         Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(714, 11)
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(697, 10)
         Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'LayoutControlGroup5
@@ -1353,345 +1785,77 @@ Partial Public Class FrmEdit
         Me.LayoutControlGroup5.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem3, Me.LayoutControlItem4, Me.LayoutControlItem5, Me.LayoutControlItem2, Me.LayoutControlItem16, Me.TabbedControlGroup1, Me.LayoutControlItem8, Me.LayoutControlItem50})
         Me.LayoutControlGroup5.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup5.Name = "LayoutControlGroup5"
-        Me.LayoutControlGroup5.Size = New System.Drawing.Size(714, 457)
+        Me.LayoutControlGroup5.Size = New System.Drawing.Size(697, 496)
         Me.LayoutControlGroup5.Text = "INFORMATION"
         '
         'LayoutControlItem3
         '
         Me.LayoutControlItem3.Control = Me.TxtHotelName
-        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 24)
+        Me.LayoutControlItem3.Location = New System.Drawing.Point(0, 28)
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
-        Me.LayoutControlItem3.Size = New System.Drawing.Size(714, 24)
+        Me.LayoutControlItem3.Size = New System.Drawing.Size(697, 28)
         Me.LayoutControlItem3.Text = "Hotel Name"
-        Me.LayoutControlItem3.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem3.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem4
         '
         Me.LayoutControlItem4.Control = Me.TxtCountry
-        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 48)
+        Me.LayoutControlItem4.Location = New System.Drawing.Point(0, 56)
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
-        Me.LayoutControlItem4.Size = New System.Drawing.Size(356, 24)
+        Me.LayoutControlItem4.Size = New System.Drawing.Size(348, 28)
         Me.LayoutControlItem4.Text = "Hotel Country"
-        Me.LayoutControlItem4.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem4.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem5
         '
         Me.LayoutControlItem5.Control = Me.CbGWGStatus
-        Me.LayoutControlItem5.Location = New System.Drawing.Point(356, 48)
+        Me.LayoutControlItem5.Location = New System.Drawing.Point(348, 56)
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
-        Me.LayoutControlItem5.Size = New System.Drawing.Size(358, 24)
+        Me.LayoutControlItem5.Size = New System.Drawing.Size(349, 28)
         Me.LayoutControlItem5.Text = "GWG Status"
-        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem2
         '
         Me.LayoutControlItem2.Control = Me.TxtHotelCode
         Me.LayoutControlItem2.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
-        Me.LayoutControlItem2.Size = New System.Drawing.Size(714, 24)
+        Me.LayoutControlItem2.Size = New System.Drawing.Size(697, 28)
         Me.LayoutControlItem2.Text = "Hotel Code"
-        Me.LayoutControlItem2.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem2.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem16
         '
+        Me.LayoutControlItem16.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.LayoutControlItem16.AppearanceItemCaption.Options.UseFont = True
         Me.LayoutControlItem16.Control = Me.txtHotelCheck
-        Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 72)
+        Me.LayoutControlItem16.Location = New System.Drawing.Point(0, 84)
         Me.LayoutControlItem16.Name = "LayoutControlItem16"
-        Me.LayoutControlItem16.Size = New System.Drawing.Size(356, 24)
+        Me.LayoutControlItem16.Size = New System.Drawing.Size(348, 28)
         Me.LayoutControlItem16.Text = "Hotel Check"
-        Me.LayoutControlItem16.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem16.TextSize = New System.Drawing.Size(150, 17)
         '
         'TabbedControlGroup1
         '
-        Me.TabbedControlGroup1.Location = New System.Drawing.Point(0, 96)
+        Me.TabbedControlGroup1.Location = New System.Drawing.Point(0, 112)
         Me.TabbedControlGroup1.Name = "TabbedControlGroup1"
-        Me.TabbedControlGroup1.SelectedTabPage = Me.LayoutControlGroup3
-        Me.TabbedControlGroup1.Size = New System.Drawing.Size(714, 284)
+        Me.TabbedControlGroup1.SelectedTabPage = Me.LayoutControlGroup8
+        Me.TabbedControlGroup1.Size = New System.Drawing.Size(697, 320)
         Me.TabbedControlGroup1.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup3, Me.LayoutControlGroup2, Me.LayoutControlGroup8})
         Me.TabbedControlGroup1.Text = "Other Details"
         '
-        'LayoutControlGroup3
-        '
-        Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem6, Me.LayoutControlItem7, Me.lblSalesCurrency, Me.LayoutControlItem9, Me.LayoutControlItem10, Me.LayoutControlItem11, Me.LayoutControlItem12, Me.LayoutControlItem13, Me.LayoutControlItem15, Me.LayoutControlItem14, Me.LayoutControlItem32, Me.LayoutControlItem52})
-        Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
-        Me.LayoutControlGroup3.Size = New System.Drawing.Size(690, 237)
-        Me.LayoutControlGroup3.Text = "Calculation"
-        '
-        'LayoutControlItem6
-        '
-        Me.LayoutControlItem6.Control = Me.TxtPurchaseCurrency
-        Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem6.Name = "LayoutControlItem6"
-        Me.LayoutControlItem6.Size = New System.Drawing.Size(344, 24)
-        Me.LayoutControlItem6.Text = "Purchase Currency"
-        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem7
-        '
-        Me.LayoutControlItem7.Control = Me.TxtPurchasePrice
-        Me.LayoutControlItem7.Location = New System.Drawing.Point(344, 0)
-        Me.LayoutControlItem7.Name = "LayoutControlItem7"
-        Me.LayoutControlItem7.Size = New System.Drawing.Size(346, 24)
-        Me.LayoutControlItem7.Text = "Purchase Price"
-        Me.LayoutControlItem7.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'lblSalesCurrency
-        '
-        Me.lblSalesCurrency.Control = Me.TxtSalesCurrency
-        Me.lblSalesCurrency.Location = New System.Drawing.Point(0, 24)
-        Me.lblSalesCurrency.Name = "lblSalesCurrency"
-        Me.lblSalesCurrency.Size = New System.Drawing.Size(344, 24)
-        Me.lblSalesCurrency.Text = "Sales Currency"
-        Me.lblSalesCurrency.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem9
-        '
-        Me.LayoutControlItem9.Control = Me.TxtSalesPrice
-        Me.LayoutControlItem9.Location = New System.Drawing.Point(344, 24)
-        Me.LayoutControlItem9.Name = "LayoutControlItem9"
-        Me.LayoutControlItem9.Size = New System.Drawing.Size(346, 24)
-        Me.LayoutControlItem9.Text = "Sales Price"
-        Me.LayoutControlItem9.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem10
-        '
-        Me.LayoutControlItem10.Control = Me.TxtHandlingFee
-        Me.LayoutControlItem10.Location = New System.Drawing.Point(0, 48)
-        Me.LayoutControlItem10.Name = "LayoutControlItem10"
-        Me.LayoutControlItem10.Size = New System.Drawing.Size(690, 24)
-        Me.LayoutControlItem10.Text = "GWG Handling Fee"
-        Me.LayoutControlItem10.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem11
-        '
-        Me.LayoutControlItem11.Control = Me.TxtMargin
-        Me.LayoutControlItem11.Location = New System.Drawing.Point(0, 72)
-        Me.LayoutControlItem11.Name = "LayoutControlItem11"
-        Me.LayoutControlItem11.Size = New System.Drawing.Size(690, 24)
-        Me.LayoutControlItem11.Text = "Margin"
-        Me.LayoutControlItem11.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem12
-        '
-        Me.LayoutControlItem12.Control = Me.TxtDifference
-        Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 96)
-        Me.LayoutControlItem12.Name = "LayoutControlItem12"
-        Me.LayoutControlItem12.Size = New System.Drawing.Size(690, 24)
-        Me.LayoutControlItem12.Text = "Difference"
-        Me.LayoutControlItem12.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem13
-        '
-        Me.LayoutControlItem13.Control = Me.TxtCurrencyHotelTc
-        Me.LayoutControlItem13.Location = New System.Drawing.Point(0, 120)
-        Me.LayoutControlItem13.Name = "LayoutControlItem13"
-        Me.LayoutControlItem13.Size = New System.Drawing.Size(344, 24)
-        Me.LayoutControlItem13.Text = "Currency Hotel TC"
-        Me.LayoutControlItem13.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem15
-        '
-        Me.LayoutControlItem15.Control = Me.TxtNetRateHandlingTc
-        Me.LayoutControlItem15.Location = New System.Drawing.Point(0, 144)
-        Me.LayoutControlItem15.Name = "LayoutControlItem15"
-        Me.LayoutControlItem15.Size = New System.Drawing.Size(690, 24)
-        Me.LayoutControlItem15.Text = "Net Rate Handling TC"
-        Me.LayoutControlItem15.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem14
-        '
-        Me.LayoutControlItem14.Control = Me.TxtNetRateHotelTc
-        Me.LayoutControlItem14.Location = New System.Drawing.Point(344, 120)
-        Me.LayoutControlItem14.Name = "LayoutControlItem14"
-        Me.LayoutControlItem14.Size = New System.Drawing.Size(346, 24)
-        Me.LayoutControlItem14.Text = "Net Rate Hotel TC"
-        Me.LayoutControlItem14.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem32
-        '
-        Me.LayoutControlItem32.Control = Me.TxtUser
-        Me.LayoutControlItem32.Location = New System.Drawing.Point(0, 168)
-        Me.LayoutControlItem32.Name = "LayoutControlItem32"
-        Me.LayoutControlItem32.Size = New System.Drawing.Size(690, 24)
-        Me.LayoutControlItem32.Text = "User:"
-        Me.LayoutControlItem32.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem52
-        '
-        Me.LayoutControlItem52.Control = Me.TxtActionBy
-        Me.LayoutControlItem52.Location = New System.Drawing.Point(0, 192)
-        Me.LayoutControlItem52.Name = "LayoutControlItem52"
-        Me.LayoutControlItem52.Size = New System.Drawing.Size(690, 45)
-        Me.LayoutControlItem52.Text = "Last Action by"
-        Me.LayoutControlItem52.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlGroup2
-        '
-        Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem17, Me.LayoutControlItem18, Me.LayoutControlItem19, Me.LayoutControlItem20, Me.LayoutControlItem21, Me.LayoutControlGroup4, Me.LayoutControlItem22})
-        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
-        Me.LayoutControlGroup2.Size = New System.Drawing.Size(690, 237)
-        Me.LayoutControlGroup2.Text = "Other Info"
-        '
-        'LayoutControlItem17
-        '
-        Me.LayoutControlItem17.Control = Me.TxtCompanyGroup
-        Me.LayoutControlItem17.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem17.Name = "LayoutControlItem17"
-        Me.LayoutControlItem17.Size = New System.Drawing.Size(690, 24)
-        Me.LayoutControlItem17.Text = "Company Group"
-        Me.LayoutControlItem17.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem18
-        '
-        Me.LayoutControlItem18.Control = Me.DeBookingDate
-        Me.LayoutControlItem18.Location = New System.Drawing.Point(0, 24)
-        Me.LayoutControlItem18.Name = "LayoutControlItem18"
-        Me.LayoutControlItem18.Size = New System.Drawing.Size(229, 24)
-        Me.LayoutControlItem18.Text = "Booking Date"
-        Me.LayoutControlItem18.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem19
-        '
-        Me.LayoutControlItem19.Control = Me.DeTravelDate
-        Me.LayoutControlItem19.Location = New System.Drawing.Point(229, 24)
-        Me.LayoutControlItem19.Name = "LayoutControlItem19"
-        Me.LayoutControlItem19.Size = New System.Drawing.Size(230, 24)
-        Me.LayoutControlItem19.Text = "Travel Date"
-        Me.LayoutControlItem19.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem20
-        '
-        Me.LayoutControlItem20.Control = Me.TxtRoomType
-        Me.LayoutControlItem20.Location = New System.Drawing.Point(0, 48)
-        Me.LayoutControlItem20.Name = "LayoutControlItem20"
-        Me.LayoutControlItem20.Size = New System.Drawing.Size(229, 24)
-        Me.LayoutControlItem20.Text = "Room Type"
-        Me.LayoutControlItem20.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem21
-        '
-        Me.LayoutControlItem21.Control = Me.TxtBaord
-        Me.LayoutControlItem21.Location = New System.Drawing.Point(229, 48)
-        Me.LayoutControlItem21.Name = "LayoutControlItem21"
-        Me.LayoutControlItem21.Size = New System.Drawing.Size(230, 24)
-        Me.LayoutControlItem21.Text = "Board"
-        Me.LayoutControlItem21.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlGroup4
-        '
-        Me.LayoutControlGroup4.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem23, Me.LayoutControlItem24, Me.LayoutControlItem26, Me.LayoutControlItem25, Me.LayoutControlItem27, Me.LayoutControlItem28, Me.LayoutControlItem30, Me.LayoutControlItem31, Me.LayoutControlItem51, Me.LayoutControlItem29})
-        Me.LayoutControlGroup4.Location = New System.Drawing.Point(0, 72)
-        Me.LayoutControlGroup4.Name = "LayoutControlGroup4"
-        Me.LayoutControlGroup4.Size = New System.Drawing.Size(690, 165)
-        Me.LayoutControlGroup4.Text = "Transfer Info"
-        '
-        'LayoutControlItem23
-        '
-        Me.LayoutControlItem23.Control = Me.TxtTransferTo
-        Me.LayoutControlItem23.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem23.Name = "LayoutControlItem23"
-        Me.LayoutControlItem23.Size = New System.Drawing.Size(332, 24)
-        Me.LayoutControlItem23.Text = "Transfer To"
-        Me.LayoutControlItem23.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem24
-        '
-        Me.LayoutControlItem24.Control = Me.TxtTransferFrom
-        Me.LayoutControlItem24.Location = New System.Drawing.Point(332, 0)
-        Me.LayoutControlItem24.Name = "LayoutControlItem24"
-        Me.LayoutControlItem24.Size = New System.Drawing.Size(334, 24)
-        Me.LayoutControlItem24.Text = "Transfer From"
-        Me.LayoutControlItem24.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem26
-        '
-        Me.LayoutControlItem26.Control = Me.TxtAdult
-        Me.LayoutControlItem26.Location = New System.Drawing.Point(222, 24)
-        Me.LayoutControlItem26.Name = "LayoutControlItem26"
-        Me.LayoutControlItem26.Size = New System.Drawing.Size(221, 24)
-        Me.LayoutControlItem26.Text = "Adult"
-        Me.LayoutControlItem26.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem25
-        '
-        Me.LayoutControlItem25.Control = Me.TxtPax
-        Me.LayoutControlItem25.Location = New System.Drawing.Point(0, 24)
-        Me.LayoutControlItem25.Name = "LayoutControlItem25"
-        Me.LayoutControlItem25.Size = New System.Drawing.Size(222, 24)
-        Me.LayoutControlItem25.Text = "Pax"
-        Me.LayoutControlItem25.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem27
-        '
-        Me.LayoutControlItem27.Control = Me.TxtChild
-        Me.LayoutControlItem27.Location = New System.Drawing.Point(443, 24)
-        Me.LayoutControlItem27.Name = "LayoutControlItem27"
-        Me.LayoutControlItem27.Size = New System.Drawing.Size(223, 24)
-        Me.LayoutControlItem27.Text = "Child"
-        Me.LayoutControlItem27.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem28
-        '
-        Me.LayoutControlItem28.Control = Me.DeImportDate
-        Me.LayoutControlItem28.Location = New System.Drawing.Point(0, 48)
-        Me.LayoutControlItem28.Name = "LayoutControlItem28"
-        Me.LayoutControlItem28.Size = New System.Drawing.Size(222, 24)
-        Me.LayoutControlItem28.Text = "Import Date"
-        Me.LayoutControlItem28.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem30
-        '
-        Me.LayoutControlItem30.Control = Me.TxtBookingStateDesc
-        Me.LayoutControlItem30.Location = New System.Drawing.Point(0, 72)
-        Me.LayoutControlItem30.Name = "LayoutControlItem30"
-        Me.LayoutControlItem30.Size = New System.Drawing.Size(332, 24)
-        Me.LayoutControlItem30.Text = "Booking State Description"
-        Me.LayoutControlItem30.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem31
-        '
-        Me.LayoutControlItem31.Control = Me.TxtPriceBreakdown
-        Me.LayoutControlItem31.Location = New System.Drawing.Point(0, 96)
-        Me.LayoutControlItem31.Name = "LayoutControlItem31"
-        Me.LayoutControlItem31.Size = New System.Drawing.Size(666, 24)
-        Me.LayoutControlItem31.Text = "Price Breakdown"
-        Me.LayoutControlItem31.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem51
-        '
-        Me.LayoutControlItem51.Control = Me.DeMPImportDate
-        Me.LayoutControlItem51.Location = New System.Drawing.Point(222, 48)
-        Me.LayoutControlItem51.Name = "LayoutControlItem51"
-        Me.LayoutControlItem51.Size = New System.Drawing.Size(444, 24)
-        Me.LayoutControlItem51.Text = "MP Imprt Date"
-        Me.LayoutControlItem51.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem29
-        '
-        Me.LayoutControlItem29.Control = Me.TxtIncomingAgency
-        Me.LayoutControlItem29.Location = New System.Drawing.Point(332, 72)
-        Me.LayoutControlItem29.Name = "LayoutControlItem29"
-        Me.LayoutControlItem29.Size = New System.Drawing.Size(334, 24)
-        Me.LayoutControlItem29.Text = "Incoming Agency"
-        Me.LayoutControlItem29.TextSize = New System.Drawing.Size(122, 13)
-        '
-        'LayoutControlItem22
-        '
-        Me.LayoutControlItem22.Control = Me.TxtDuration
-        Me.LayoutControlItem22.Location = New System.Drawing.Point(459, 24)
-        Me.LayoutControlItem22.Name = "LayoutControlItem22"
-        Me.LayoutControlItem22.Size = New System.Drawing.Size(231, 48)
-        Me.LayoutControlItem22.Text = "Duration"
-        Me.LayoutControlItem22.TextSize = New System.Drawing.Size(122, 13)
-        '
         'LayoutControlGroup8
         '
+        Me.LayoutControlGroup8.AppearanceGroup.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.LayoutControlGroup8.AppearanceGroup.Options.UseFont = True
+        Me.LayoutControlGroup8.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.LayoutControlGroup8.AppearanceItemCaption.Options.UseFont = True
         Me.LayoutControlGroup8.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem39, Me.LayoutControlItem41, Me.LayoutControlItem44, Me.LayoutControlItem45, Me.LayoutControlItem46, Me.LayoutControlItem47, Me.LayoutControlItem40, Me.LayoutControlItem42, Me.LayoutControlItem43, Me.SimpleSeparator1, Me.LayoutControlItem48, Me.LayoutControlItem49})
         Me.LayoutControlGroup8.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlGroup8.Name = "LayoutControlGroup8"
-        Me.LayoutControlGroup8.Size = New System.Drawing.Size(690, 237)
+        Me.LayoutControlGroup8.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.LayoutControlGroup8.OptionsPrint.AppearanceItem.Options.UseFont = True
+        Me.LayoutControlGroup8.Size = New System.Drawing.Size(673, 269)
         Me.LayoutControlGroup8.Text = "Log"
         '
         'LayoutControlItem39
@@ -1699,124 +1863,425 @@ Partial Public Class FrmEdit
         Me.LayoutControlItem39.Control = Me.TxtPurchaseEUR
         Me.LayoutControlItem39.Location = New System.Drawing.Point(0, 0)
         Me.LayoutControlItem39.Name = "LayoutControlItem39"
-        Me.LayoutControlItem39.Size = New System.Drawing.Size(344, 24)
+        Me.LayoutControlItem39.Size = New System.Drawing.Size(336, 28)
         Me.LayoutControlItem39.Text = "Purchase Price:"
-        Me.LayoutControlItem39.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem39.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem41
         '
         Me.LayoutControlItem41.Control = Me.TxtMarginEUR
-        Me.LayoutControlItem41.Location = New System.Drawing.Point(0, 24)
+        Me.LayoutControlItem41.Location = New System.Drawing.Point(0, 28)
         Me.LayoutControlItem41.Name = "LayoutControlItem41"
-        Me.LayoutControlItem41.Size = New System.Drawing.Size(344, 24)
+        Me.LayoutControlItem41.Size = New System.Drawing.Size(336, 28)
         Me.LayoutControlItem41.Text = "Margin:"
-        Me.LayoutControlItem41.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem41.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem44
         '
         Me.LayoutControlItem44.Control = Me.TxtJunk
-        Me.LayoutControlItem44.Location = New System.Drawing.Point(0, 73)
+        Me.LayoutControlItem44.Location = New System.Drawing.Point(0, 85)
         Me.LayoutControlItem44.Name = "LayoutControlItem44"
-        Me.LayoutControlItem44.Size = New System.Drawing.Size(690, 24)
+        Me.LayoutControlItem44.Size = New System.Drawing.Size(673, 28)
         Me.LayoutControlItem44.Text = "Junk:"
-        Me.LayoutControlItem44.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem44.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem45
         '
         Me.LayoutControlItem45.Control = Me.TxtCancelled
-        Me.LayoutControlItem45.Location = New System.Drawing.Point(0, 97)
+        Me.LayoutControlItem45.Location = New System.Drawing.Point(0, 113)
         Me.LayoutControlItem45.Name = "LayoutControlItem45"
-        Me.LayoutControlItem45.Size = New System.Drawing.Size(690, 24)
+        Me.LayoutControlItem45.Size = New System.Drawing.Size(673, 28)
         Me.LayoutControlItem45.Text = "Cancelled:"
-        Me.LayoutControlItem45.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem45.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem46
         '
         Me.LayoutControlItem46.Control = Me.TxtExcessive
-        Me.LayoutControlItem46.Location = New System.Drawing.Point(0, 121)
+        Me.LayoutControlItem46.Location = New System.Drawing.Point(0, 141)
         Me.LayoutControlItem46.Name = "LayoutControlItem46"
-        Me.LayoutControlItem46.Size = New System.Drawing.Size(690, 24)
+        Me.LayoutControlItem46.Size = New System.Drawing.Size(673, 28)
         Me.LayoutControlItem46.Text = "Excessive:"
-        Me.LayoutControlItem46.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem46.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem47
         '
         Me.LayoutControlItem47.Control = Me.TxtNegative
-        Me.LayoutControlItem47.Location = New System.Drawing.Point(0, 145)
+        Me.LayoutControlItem47.Location = New System.Drawing.Point(0, 169)
         Me.LayoutControlItem47.Name = "LayoutControlItem47"
-        Me.LayoutControlItem47.Size = New System.Drawing.Size(690, 24)
+        Me.LayoutControlItem47.Size = New System.Drawing.Size(673, 28)
         Me.LayoutControlItem47.Text = "Negative:"
-        Me.LayoutControlItem47.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem47.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem40
         '
         Me.LayoutControlItem40.Control = Me.TxtSalesEUR
-        Me.LayoutControlItem40.Location = New System.Drawing.Point(344, 0)
+        Me.LayoutControlItem40.Location = New System.Drawing.Point(336, 0)
         Me.LayoutControlItem40.Name = "LayoutControlItem40"
-        Me.LayoutControlItem40.Size = New System.Drawing.Size(346, 24)
+        Me.LayoutControlItem40.Size = New System.Drawing.Size(337, 28)
         Me.LayoutControlItem40.Text = "Sales Price:"
-        Me.LayoutControlItem40.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem40.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem42
         '
         Me.LayoutControlItem42.Control = Me.TxtNetRateEUR
-        Me.LayoutControlItem42.Location = New System.Drawing.Point(344, 24)
+        Me.LayoutControlItem42.Location = New System.Drawing.Point(336, 28)
         Me.LayoutControlItem42.Name = "LayoutControlItem42"
-        Me.LayoutControlItem42.Size = New System.Drawing.Size(346, 48)
+        Me.LayoutControlItem42.Size = New System.Drawing.Size(337, 56)
         Me.LayoutControlItem42.Text = "Net Rate:"
-        Me.LayoutControlItem42.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem42.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem43
         '
         Me.LayoutControlItem43.Control = Me.TxtDifferenceEUR
-        Me.LayoutControlItem43.Location = New System.Drawing.Point(0, 48)
+        Me.LayoutControlItem43.Location = New System.Drawing.Point(0, 56)
         Me.LayoutControlItem43.Name = "LayoutControlItem43"
-        Me.LayoutControlItem43.Size = New System.Drawing.Size(344, 24)
+        Me.LayoutControlItem43.Size = New System.Drawing.Size(336, 28)
         Me.LayoutControlItem43.Text = "Difference:"
-        Me.LayoutControlItem43.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem43.TextSize = New System.Drawing.Size(150, 17)
         '
         'SimpleSeparator1
         '
         Me.SimpleSeparator1.AllowHotTrack = False
-        Me.SimpleSeparator1.Location = New System.Drawing.Point(0, 72)
+        Me.SimpleSeparator1.Location = New System.Drawing.Point(0, 84)
         Me.SimpleSeparator1.Name = "SimpleSeparator1"
-        Me.SimpleSeparator1.Size = New System.Drawing.Size(690, 1)
+        Me.SimpleSeparator1.Size = New System.Drawing.Size(673, 1)
         '
         'LayoutControlItem48
         '
         Me.LayoutControlItem48.Control = Me.TxtError
-        Me.LayoutControlItem48.Location = New System.Drawing.Point(0, 193)
+        Me.LayoutControlItem48.Location = New System.Drawing.Point(0, 225)
         Me.LayoutControlItem48.Name = "LayoutControlItem48"
-        Me.LayoutControlItem48.Size = New System.Drawing.Size(690, 44)
+        Me.LayoutControlItem48.Size = New System.Drawing.Size(673, 44)
         Me.LayoutControlItem48.Text = "Error:"
-        Me.LayoutControlItem48.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem48.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem49
         '
         Me.LayoutControlItem49.Control = Me.TxtMismatching
-        Me.LayoutControlItem49.Location = New System.Drawing.Point(0, 169)
+        Me.LayoutControlItem49.Location = New System.Drawing.Point(0, 197)
         Me.LayoutControlItem49.Name = "LayoutControlItem49"
-        Me.LayoutControlItem49.Size = New System.Drawing.Size(690, 24)
+        Me.LayoutControlItem49.Size = New System.Drawing.Size(673, 28)
         Me.LayoutControlItem49.Text = "Mismatching:"
-        Me.LayoutControlItem49.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem49.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlGroup3
+        '
+        Me.LayoutControlGroup3.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem6, Me.LayoutControlItem7, Me.lblSalesCurrency, Me.LayoutControlItem9, Me.LayoutControlItem10, Me.LayoutControlItem12, Me.LayoutControlItem14, Me.LayoutControlItem32, Me.LayoutControlItem52, Me.LayoutControlItem11, Me.LayoutControlItem13, Me.LayoutControlItem15})
+        Me.LayoutControlGroup3.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup3.Name = "LayoutControlGroup3"
+        Me.LayoutControlGroup3.Size = New System.Drawing.Size(673, 269)
+        Me.LayoutControlGroup3.Text = "Calculation"
+        '
+        'LayoutControlItem6
+        '
+        Me.LayoutControlItem6.Control = Me.TxtPurchaseCurrency
+        Me.LayoutControlItem6.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem6.Name = "LayoutControlItem6"
+        Me.LayoutControlItem6.Size = New System.Drawing.Size(336, 28)
+        Me.LayoutControlItem6.Text = "Purchase Currency"
+        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem7
+        '
+        Me.LayoutControlItem7.Control = Me.TxtPurchasePrice
+        Me.LayoutControlItem7.Location = New System.Drawing.Point(336, 0)
+        Me.LayoutControlItem7.Name = "LayoutControlItem7"
+        Me.LayoutControlItem7.Size = New System.Drawing.Size(337, 28)
+        Me.LayoutControlItem7.Text = "Purchase Price"
+        Me.LayoutControlItem7.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'lblSalesCurrency
+        '
+        Me.lblSalesCurrency.Control = Me.TxtSalesCurrency
+        Me.lblSalesCurrency.Location = New System.Drawing.Point(0, 28)
+        Me.lblSalesCurrency.Name = "lblSalesCurrency"
+        Me.lblSalesCurrency.Size = New System.Drawing.Size(336, 28)
+        Me.lblSalesCurrency.Text = "Sales Currency"
+        Me.lblSalesCurrency.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem9
+        '
+        Me.LayoutControlItem9.Control = Me.TxtSalesPrice
+        Me.LayoutControlItem9.Location = New System.Drawing.Point(336, 28)
+        Me.LayoutControlItem9.Name = "LayoutControlItem9"
+        Me.LayoutControlItem9.Size = New System.Drawing.Size(337, 28)
+        Me.LayoutControlItem9.Text = "Sales Price"
+        Me.LayoutControlItem9.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem10
+        '
+        Me.LayoutControlItem10.Control = Me.TxtHandlingFee
+        Me.LayoutControlItem10.Location = New System.Drawing.Point(0, 56)
+        Me.LayoutControlItem10.Name = "LayoutControlItem10"
+        Me.LayoutControlItem10.Size = New System.Drawing.Size(336, 28)
+        Me.LayoutControlItem10.Text = "GWG Handling Fee"
+        Me.LayoutControlItem10.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem12
+        '
+        Me.LayoutControlItem12.Control = Me.TxtDifference
+        Me.LayoutControlItem12.Location = New System.Drawing.Point(0, 84)
+        Me.LayoutControlItem12.Name = "LayoutControlItem12"
+        Me.LayoutControlItem12.Size = New System.Drawing.Size(336, 28)
+        Me.LayoutControlItem12.Text = "Difference"
+        Me.LayoutControlItem12.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem14
+        '
+        Me.LayoutControlItem14.Control = Me.TxtNetRateHotelTc
+        Me.LayoutControlItem14.Location = New System.Drawing.Point(0, 112)
+        Me.LayoutControlItem14.Name = "LayoutControlItem14"
+        Me.LayoutControlItem14.Size = New System.Drawing.Size(336, 28)
+        Me.LayoutControlItem14.Text = "Net Rate Hotel TC"
+        Me.LayoutControlItem14.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem32
+        '
+        Me.LayoutControlItem32.Control = Me.TxtUser
+        Me.LayoutControlItem32.Location = New System.Drawing.Point(0, 140)
+        Me.LayoutControlItem32.Name = "LayoutControlItem32"
+        Me.LayoutControlItem32.Size = New System.Drawing.Size(673, 28)
+        Me.LayoutControlItem32.Text = "User:"
+        Me.LayoutControlItem32.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem52
+        '
+        Me.LayoutControlItem52.Control = Me.TxtActionBy
+        Me.LayoutControlItem52.Location = New System.Drawing.Point(0, 168)
+        Me.LayoutControlItem52.Name = "LayoutControlItem52"
+        Me.LayoutControlItem52.Size = New System.Drawing.Size(673, 101)
+        Me.LayoutControlItem52.Text = "Last Action by"
+        Me.LayoutControlItem52.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem11
+        '
+        Me.LayoutControlItem11.Control = Me.TxtMargin
+        Me.LayoutControlItem11.Location = New System.Drawing.Point(336, 56)
+        Me.LayoutControlItem11.Name = "LayoutControlItem11"
+        Me.LayoutControlItem11.Size = New System.Drawing.Size(337, 28)
+        Me.LayoutControlItem11.Text = "Margin"
+        Me.LayoutControlItem11.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem13
+        '
+        Me.LayoutControlItem13.Control = Me.TxtCurrencyHotelTc
+        Me.LayoutControlItem13.Location = New System.Drawing.Point(336, 84)
+        Me.LayoutControlItem13.Name = "LayoutControlItem13"
+        Me.LayoutControlItem13.Size = New System.Drawing.Size(337, 28)
+        Me.LayoutControlItem13.Text = "Currency Hotel TC"
+        Me.LayoutControlItem13.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem15
+        '
+        Me.LayoutControlItem15.Control = Me.TxtNetRateHandlingTc
+        Me.LayoutControlItem15.Location = New System.Drawing.Point(336, 112)
+        Me.LayoutControlItem15.Name = "LayoutControlItem15"
+        Me.LayoutControlItem15.Size = New System.Drawing.Size(337, 28)
+        Me.LayoutControlItem15.Text = "Net Rate Handling TC"
+        Me.LayoutControlItem15.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlGroup2
+        '
+        Me.LayoutControlGroup2.AppearanceGroup.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.LayoutControlGroup2.AppearanceGroup.Options.UseFont = True
+        Me.LayoutControlGroup2.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.LayoutControlGroup2.AppearanceItemCaption.Options.UseFont = True
+        Me.LayoutControlGroup2.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem17, Me.LayoutControlItem19, Me.LayoutControlItem20, Me.LayoutControlItem21, Me.LayoutControlGroup4, Me.LayoutControlItem18, Me.LayoutControlItem22})
+        Me.LayoutControlGroup2.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup2.Name = "LayoutControlGroup2"
+        Me.LayoutControlGroup2.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.LayoutControlGroup2.OptionsPrint.AppearanceItem.Options.UseFont = True
+        Me.LayoutControlGroup2.Size = New System.Drawing.Size(673, 269)
+        Me.LayoutControlGroup2.Text = "Other Info"
+        '
+        'LayoutControlItem17
+        '
+        Me.LayoutControlItem17.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.LayoutControlItem17.AppearanceItemCaption.Options.UseFont = True
+        Me.LayoutControlItem17.Control = Me.TxtCompanyGroup
+        Me.LayoutControlItem17.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem17.Name = "LayoutControlItem17"
+        Me.LayoutControlItem17.Size = New System.Drawing.Size(382, 28)
+        Me.LayoutControlItem17.Text = "Company Group"
+        Me.LayoutControlItem17.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem19
+        '
+        Me.LayoutControlItem19.Control = Me.DeTravelDate
+        Me.LayoutControlItem19.Location = New System.Drawing.Point(285, 28)
+        Me.LayoutControlItem19.Name = "LayoutControlItem19"
+        Me.LayoutControlItem19.Size = New System.Drawing.Size(388, 28)
+        Me.LayoutControlItem19.Text = "Travel Date"
+        Me.LayoutControlItem19.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem20
+        '
+        Me.LayoutControlItem20.Control = Me.TxtRoomType
+        Me.LayoutControlItem20.Location = New System.Drawing.Point(0, 56)
+        Me.LayoutControlItem20.Name = "LayoutControlItem20"
+        Me.LayoutControlItem20.Size = New System.Drawing.Size(285, 28)
+        Me.LayoutControlItem20.Text = "Room Type"
+        Me.LayoutControlItem20.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem21
+        '
+        Me.LayoutControlItem21.Control = Me.TxtBaord
+        Me.LayoutControlItem21.Location = New System.Drawing.Point(285, 56)
+        Me.LayoutControlItem21.Name = "LayoutControlItem21"
+        Me.LayoutControlItem21.Size = New System.Drawing.Size(388, 28)
+        Me.LayoutControlItem21.Text = "Board"
+        Me.LayoutControlItem21.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlGroup4
+        '
+        Me.LayoutControlGroup4.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem23, Me.LayoutControlItem24, Me.LayoutControlItem26, Me.LayoutControlItem25, Me.LayoutControlItem27, Me.LayoutControlItem28, Me.LayoutControlItem30, Me.LayoutControlItem31, Me.LayoutControlItem51, Me.LayoutControlItem29})
+        Me.LayoutControlGroup4.Location = New System.Drawing.Point(0, 84)
+        Me.LayoutControlGroup4.Name = "LayoutControlGroup4"
+        Me.LayoutControlGroup4.Size = New System.Drawing.Size(673, 185)
+        Me.LayoutControlGroup4.Text = "Transfer Info"
+        '
+        'LayoutControlItem23
+        '
+        Me.LayoutControlItem23.Control = Me.TxtTransferTo
+        Me.LayoutControlItem23.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem23.Name = "LayoutControlItem23"
+        Me.LayoutControlItem23.Size = New System.Drawing.Size(324, 28)
+        Me.LayoutControlItem23.Text = "Transfer To"
+        Me.LayoutControlItem23.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem24
+        '
+        Me.LayoutControlItem24.Control = Me.TxtTransferFrom
+        Me.LayoutControlItem24.Location = New System.Drawing.Point(324, 0)
+        Me.LayoutControlItem24.Name = "LayoutControlItem24"
+        Me.LayoutControlItem24.Size = New System.Drawing.Size(325, 28)
+        Me.LayoutControlItem24.Text = "Transfer From"
+        Me.LayoutControlItem24.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem26
+        '
+        Me.LayoutControlItem26.Control = Me.TxtAdult
+        Me.LayoutControlItem26.Location = New System.Drawing.Point(231, 28)
+        Me.LayoutControlItem26.Name = "LayoutControlItem26"
+        Me.LayoutControlItem26.Size = New System.Drawing.Size(207, 28)
+        Me.LayoutControlItem26.Text = "Adult"
+        Me.LayoutControlItem26.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem25
+        '
+        Me.LayoutControlItem25.Control = Me.TxtPax
+        Me.LayoutControlItem25.Location = New System.Drawing.Point(0, 28)
+        Me.LayoutControlItem25.Name = "LayoutControlItem25"
+        Me.LayoutControlItem25.Size = New System.Drawing.Size(231, 28)
+        Me.LayoutControlItem25.Text = "Pax"
+        Me.LayoutControlItem25.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem27
+        '
+        Me.LayoutControlItem27.Control = Me.TxtChild
+        Me.LayoutControlItem27.Location = New System.Drawing.Point(438, 28)
+        Me.LayoutControlItem27.Name = "LayoutControlItem27"
+        Me.LayoutControlItem27.Size = New System.Drawing.Size(211, 28)
+        Me.LayoutControlItem27.Text = "Child"
+        Me.LayoutControlItem27.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem28
+        '
+        Me.LayoutControlItem28.Control = Me.DeImportDate
+        Me.LayoutControlItem28.Location = New System.Drawing.Point(0, 56)
+        Me.LayoutControlItem28.Name = "LayoutControlItem28"
+        Me.LayoutControlItem28.Size = New System.Drawing.Size(324, 28)
+        Me.LayoutControlItem28.Text = "Import Date"
+        Me.LayoutControlItem28.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem30
+        '
+        Me.LayoutControlItem30.Control = Me.TxtBookingStateDesc
+        Me.LayoutControlItem30.Location = New System.Drawing.Point(0, 84)
+        Me.LayoutControlItem30.Name = "LayoutControlItem30"
+        Me.LayoutControlItem30.Size = New System.Drawing.Size(324, 28)
+        Me.LayoutControlItem30.Text = "Booking State Description"
+        Me.LayoutControlItem30.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem31
+        '
+        Me.LayoutControlItem31.Control = Me.TxtPriceBreakdown
+        Me.LayoutControlItem31.Location = New System.Drawing.Point(0, 112)
+        Me.LayoutControlItem31.Name = "LayoutControlItem31"
+        Me.LayoutControlItem31.Size = New System.Drawing.Size(649, 28)
+        Me.LayoutControlItem31.Text = "Price Breakdown"
+        Me.LayoutControlItem31.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem51
+        '
+        Me.LayoutControlItem51.Control = Me.DeMPImportDate
+        Me.LayoutControlItem51.Location = New System.Drawing.Point(324, 56)
+        Me.LayoutControlItem51.Name = "LayoutControlItem51"
+        Me.LayoutControlItem51.Size = New System.Drawing.Size(325, 28)
+        Me.LayoutControlItem51.Text = "MP Imprt Date"
+        Me.LayoutControlItem51.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem29
+        '
+        Me.LayoutControlItem29.Control = Me.TxtIncomingAgency
+        Me.LayoutControlItem29.Location = New System.Drawing.Point(324, 84)
+        Me.LayoutControlItem29.Name = "LayoutControlItem29"
+        Me.LayoutControlItem29.Size = New System.Drawing.Size(325, 28)
+        Me.LayoutControlItem29.Text = "Incoming Agency"
+        Me.LayoutControlItem29.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem18
+        '
+        Me.LayoutControlItem18.Control = Me.DeBookingDate
+        Me.LayoutControlItem18.Location = New System.Drawing.Point(0, 28)
+        Me.LayoutControlItem18.Name = "LayoutControlItem18"
+        Me.LayoutControlItem18.Size = New System.Drawing.Size(285, 28)
+        Me.LayoutControlItem18.Text = "Booking Date"
+        Me.LayoutControlItem18.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem22
+        '
+        Me.LayoutControlItem22.Control = Me.TxtDuration
+        Me.LayoutControlItem22.Location = New System.Drawing.Point(382, 0)
+        Me.LayoutControlItem22.Name = "LayoutControlItem22"
+        Me.LayoutControlItem22.Size = New System.Drawing.Size(291, 28)
+        Me.LayoutControlItem22.Text = "Duration"
+        Me.LayoutControlItem22.TextSize = New System.Drawing.Size(150, 17)
         '
         'LayoutControlItem8
         '
         Me.LayoutControlItem8.Control = Me.windowsUIButtonPanelMain
-        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 380)
+        Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 432)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
-        Me.LayoutControlItem8.Size = New System.Drawing.Size(714, 77)
+        Me.LayoutControlItem8.Size = New System.Drawing.Size(697, 64)
         Me.LayoutControlItem8.TextSize = New System.Drawing.Size(0, 0)
         Me.LayoutControlItem8.TextVisible = False
         '
         'LayoutControlItem50
         '
         Me.LayoutControlItem50.Control = Me.CbBookingStatus
-        Me.LayoutControlItem50.Location = New System.Drawing.Point(356, 72)
+        Me.LayoutControlItem50.Location = New System.Drawing.Point(348, 84)
         Me.LayoutControlItem50.Name = "LayoutControlItem50"
-        Me.LayoutControlItem50.Size = New System.Drawing.Size(358, 24)
+        Me.LayoutControlItem50.Size = New System.Drawing.Size(349, 28)
         Me.LayoutControlItem50.Text = "Booking Status"
-        Me.LayoutControlItem50.TextSize = New System.Drawing.Size(122, 13)
+        Me.LayoutControlItem50.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlGroup9
+        '
+        Me.LayoutControlGroup9.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem54})
+        Me.LayoutControlGroup9.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup9.Name = "LayoutControlGroup9"
+        Me.LayoutControlGroup9.Size = New System.Drawing.Size(697, 496)
+        Me.LayoutControlGroup9.Text = "HISTORY"
+        '
+        'LayoutControlItem54
+        '
+        Me.LayoutControlItem54.Control = Me.SplitContainer1
+        Me.LayoutControlItem54.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem54.Name = "LayoutControlItem54"
+        Me.LayoutControlItem54.Size = New System.Drawing.Size(697, 496)
+        Me.LayoutControlItem54.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem54.TextVisible = False
         '
         'labelControl
         '
@@ -1842,69 +2307,15 @@ Partial Public Class FrmEdit
         Me.LayoutControlGroup6.Name = "LayoutControlGroup6"
         Me.LayoutControlGroup6.Size = New System.Drawing.Size(740, 477)
         '
-        'LayoutViewColumn1
+        'btnAttachments
         '
-        Me.LayoutViewColumn1.Caption = "Section"
-        Me.LayoutViewColumn1.FieldName = "Section"
-        Me.LayoutViewColumn1.LayoutViewField = Me.layoutViewField_LayoutViewColumn1
-        Me.LayoutViewColumn1.Name = "LayoutViewColumn1"
-        '
-        'LayoutViewCard1
-        '
-        Me.LayoutViewCard1.CustomizationFormText = "TemplateCard"
-        Me.LayoutViewCard1.HeaderButtonsLocation = DevExpress.Utils.GroupElementLocation.AfterText
-        Me.LayoutViewCard1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.layoutViewField_BandedGridColumn3, Me.layoutViewField_BandedGridColumn4, Me.layoutViewField_BandedGridColumn5, Me.layoutViewField_BandedGridColumn6, Me.layoutViewField_LayoutViewColumn1, Me.layoutViewField_BandedGridColumn2})
-        Me.LayoutViewCard1.Name = "LayoutViewCard1"
-        Me.LayoutViewCard1.OptionsItemText.TextToControlDistance = 5
-        Me.LayoutViewCard1.Text = "TemplateCard"
-        '
-        'layoutViewField_BandedGridColumn3
-        '
-        Me.layoutViewField_BandedGridColumn3.EditorPreferredWidth = 513
-        Me.layoutViewField_BandedGridColumn3.Location = New System.Drawing.Point(0, 48)
-        Me.layoutViewField_BandedGridColumn3.Name = "layoutViewField_BandedGridColumn3"
-        Me.layoutViewField_BandedGridColumn3.Size = New System.Drawing.Size(580, 45)
-        Me.layoutViewField_BandedGridColumn3.TextSize = New System.Drawing.Size(56, 13)
-        '
-        'layoutViewField_BandedGridColumn4
-        '
-        Me.layoutViewField_BandedGridColumn4.EditorPreferredWidth = 513
-        Me.layoutViewField_BandedGridColumn4.Location = New System.Drawing.Point(0, 93)
-        Me.layoutViewField_BandedGridColumn4.Name = "layoutViewField_BandedGridColumn4"
-        Me.layoutViewField_BandedGridColumn4.Size = New System.Drawing.Size(580, 24)
-        Me.layoutViewField_BandedGridColumn4.TextSize = New System.Drawing.Size(56, 13)
-        '
-        'layoutViewField_BandedGridColumn5
-        '
-        Me.layoutViewField_BandedGridColumn5.EditorPreferredWidth = 513
-        Me.layoutViewField_BandedGridColumn5.Location = New System.Drawing.Point(0, 117)
-        Me.layoutViewField_BandedGridColumn5.Name = "layoutViewField_BandedGridColumn5"
-        Me.layoutViewField_BandedGridColumn5.Size = New System.Drawing.Size(580, 24)
-        Me.layoutViewField_BandedGridColumn5.TextSize = New System.Drawing.Size(56, 13)
-        '
-        'layoutViewField_BandedGridColumn6
-        '
-        Me.layoutViewField_BandedGridColumn6.EditorPreferredWidth = 270
-        Me.layoutViewField_BandedGridColumn6.Location = New System.Drawing.Point(0, 0)
-        Me.layoutViewField_BandedGridColumn6.Name = "layoutViewField_BandedGridColumn6"
-        Me.layoutViewField_BandedGridColumn6.Size = New System.Drawing.Size(336, 24)
-        Me.layoutViewField_BandedGridColumn6.TextSize = New System.Drawing.Size(56, 13)
-        '
-        'layoutViewField_LayoutViewColumn1
-        '
-        Me.layoutViewField_LayoutViewColumn1.EditorPreferredWidth = 513
-        Me.layoutViewField_LayoutViewColumn1.Location = New System.Drawing.Point(0, 24)
-        Me.layoutViewField_LayoutViewColumn1.Name = "layoutViewField_LayoutViewColumn1"
-        Me.layoutViewField_LayoutViewColumn1.Size = New System.Drawing.Size(580, 24)
-        Me.layoutViewField_LayoutViewColumn1.TextSize = New System.Drawing.Size(56, 13)
-        '
-        'layoutViewField_BandedGridColumn2
-        '
-        Me.layoutViewField_BandedGridColumn2.EditorPreferredWidth = 178
-        Me.layoutViewField_BandedGridColumn2.Location = New System.Drawing.Point(336, 0)
-        Me.layoutViewField_BandedGridColumn2.Name = "layoutViewField_BandedGridColumn2"
-        Me.layoutViewField_BandedGridColumn2.Size = New System.Drawing.Size(244, 24)
-        Me.layoutViewField_BandedGridColumn2.TextSize = New System.Drawing.Size(56, 13)
+        Me.btnAttachments.Appearance.BackColor = System.Drawing.Color.White
+        Me.btnAttachments.Appearance.Options.UseBackColor = True
+        Me.btnAttachments.ImageOptions.Image = CType(resources.GetObject("btnAttachments.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnAttachments.Location = New System.Drawing.Point(699, 12)
+        Me.btnAttachments.Name = "btnAttachments"
+        Me.btnAttachments.Size = New System.Drawing.Size(44, 33)
+        Me.btnAttachments.TabIndex = 2
         '
         'FrmEdit
         '
@@ -1913,7 +2324,8 @@ Partial Public Class FrmEdit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
-        Me.ClientSize = New System.Drawing.Size(758, 554)
+        Me.ClientSize = New System.Drawing.Size(758, 595)
+        Me.Controls.Add(Me.btnAttachments)
         Me.Controls.Add(Me.dataLayoutControl1)
         Me.Controls.Add(Me.labelControl)
         Me.IconOptions.Icon = CType(resources.GetObject("FrmEdit.IconOptions.Icon"), System.Drawing.Icon)
@@ -1923,9 +2335,28 @@ Partial Public Class FrmEdit
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.dataLayoutControl1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.ResumeLayout(False)
+        CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer2.Panel1.ResumeLayout(False)
+        Me.SplitContainer2.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer2.ResumeLayout(False)
+        CType(Me.ListBoxControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ListBoxControl2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.layoutViewField_BandedGridColumn2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.layoutViewField_LayoutViewColumn1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemMemoEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.layoutViewField_BandedGridColumn3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.layoutViewField_BandedGridColumn4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.layoutViewField_BandedGridColumn5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.layoutViewField_BandedGridColumn6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutViewCard1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RepositoryItemComboBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TileView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtHotelCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2002,22 +2433,34 @@ Partial Public Class FrmEdit
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TabbedControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem39, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem41, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem44, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem45, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem46, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem47, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem40, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem42, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem43, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SimpleSeparator1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem48, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem49, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblSalesCurrency, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem32, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem52, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem17, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem19, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem20, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem21, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2032,30 +2475,13 @@ Partial Public Class FrmEdit
         CType(Me.LayoutControlItem31, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem51, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem29, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlGroup8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem39, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem41, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem44, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem45, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem46, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem47, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem40, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem42, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem43, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SimpleSeparator1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem48, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem49, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem50, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem54, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutViewCard1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.layoutViewField_BandedGridColumn3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.layoutViewField_BandedGridColumn4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.layoutViewField_BandedGridColumn5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.layoutViewField_BandedGridColumn6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.layoutViewField_LayoutViewColumn1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.layoutViewField_BandedGridColumn2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2201,12 +2627,28 @@ Partial Public Class FrmEdit
     Friend WithEvents LayoutControlItem52 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents LuSection As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents LayoutControlItem53 As DevExpress.XtraLayout.LayoutControlItem
-    Friend WithEvents layoutViewField_BandedGridColumn2 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents LayoutViewColumn1 As DevExpress.XtraGrid.Columns.LayoutViewColumn
+    Friend WithEvents btnAttachments As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents LayoutControlGroup9 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents SplitContainer1 As SplitContainer
+    Friend WithEvents GridControl2 As DevExpress.XtraGrid.GridControl
+    Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents SplitContainer2 As SplitContainer
+    Friend WithEvents LayoutControlItem54 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents GridColumn6 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn7 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn8 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn9 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents LabelControl2 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents layoutViewField_BandedGridColumn2 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents layoutViewField_LayoutViewColumn1 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents layoutViewField_BandedGridColumn3 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents layoutViewField_BandedGridColumn4 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents layoutViewField_BandedGridColumn5 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents layoutViewField_BandedGridColumn6 As DevExpress.XtraGrid.Views.Layout.LayoutViewField
     Friend WithEvents LayoutViewCard1 As DevExpress.XtraGrid.Views.Layout.LayoutViewCard
+    Friend WithEvents ListBoxControl1 As DevExpress.XtraEditors.ListBoxControl
+    Friend WithEvents ListBoxControl2 As DevExpress.XtraEditors.ListBoxControl
 End Class

@@ -42,12 +42,12 @@
 
         ProgressBarControl1.Properties.Maximum = totalRows
 
-        For Each item As Tuple(Of String, Double) In rowList
+        For Each item As Tuple(Of String, Double, DateTime) In rowList
             If ToCancel Then
                 Exit For
             End If
 
-            If Update(item) Then
+            If UpdateBooking(item) Then
                 success += 1
             Else
                 failed += 1
@@ -73,24 +73,27 @@
         UpdateBulk()
     End Sub
 
-    Private Function CreateBooking(inputText As String) As Tuple(Of String, Double)
+    Private Function CreateBooking(inputText As String) As Tuple(Of String, Double, DateTime)
         Dim lineArray() As String = Split(inputText, vbTab)
         Dim reference As String = lineArray(0)
         Dim rate As Double
+        Dim lastUpdate As DateTime
         If reference.Length = 9 Then
             rate = CDbl(lineArray(2))
+            lastUpdate = CDate(lineArray(1))
         Else
             rate = CDbl(lineArray(1))
+            lastUpdate = CDate(lineArray(4))
         End If
-        Return New Tuple(Of String, Double)(reference, rate)
+        Return New Tuple(Of String, Double, DateTime)(reference, rate, lastUpdate)
     End Function
 
-    Public Function Update(booking As Tuple(Of String, Double)) As Boolean
+    Public Function UpdateBooking(booking As Tuple(Of String, Double, DateTime)) As Boolean
         Dim result As Boolean
         Dim query As String
         Dim loginId As Integer = GV.CurrentUser.LoginId
 
-        query = String.Format($"EXEC dbo.UpdateBooking '{booking.Item1}', {booking.Item2};")
+        query = String.Format($"EXEC dbo.UpdateBooking '{booking.Item1}', {booking.Item2}, ${booking.Item3:yyyy-MM-dd};")
         result = ExClass.QuerySet(query) = "True"
 
         Return result

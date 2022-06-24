@@ -82,7 +82,7 @@ Partial Class FrmUpdateRates
         Me.ProgressBarControl1.Size = New System.Drawing.Size(402, 18)
         Me.ProgressBarControl1.TabIndex = 17
         '
-        'FrmProgress
+        'FrmUpdateRates
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -92,7 +92,7 @@ Partial Class FrmUpdateRates
         Me.Controls.Add(Me.labelFailure)
         Me.Controls.Add(Me.labelStatus)
         Me.Controls.Add(Me.labelSuccess)
-        Me.Name = "FrmProgress"
+        Me.Name = "FrmUpdateRates"
         Me.Padding = New System.Windows.Forms.Padding(1)
         Me.Text = "FrmProgress"
         CType(Me.ProgressBarControl1.Properties, System.ComponentModel.ISupportInitialize).EndInit()

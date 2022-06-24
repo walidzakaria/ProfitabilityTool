@@ -74,6 +74,7 @@ Partial Public Class FrmMain
         GridView1.BestFitColumns()
         Wait(False)
         SetCheckedRibbonButton(BtnImport)
+        FrmImport.ShowDialog()
     End Sub
 
     Private Function ParseText() As DataTable
@@ -872,8 +873,7 @@ Partial Public Class FrmMain
         End If
     End Sub
 
-    Private Sub BtnUpdate_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnUpdate.ItemClick
-        FrmUpdateRates.ShowDialog()
-        SetCheckedRibbonButton()
+    Private Sub BtnUpload_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnUpload.ItemClick
+        FrmImport.ShowDialog()
     End Sub
 End Class

@@ -24,31 +24,31 @@
     ''' the contents of this method with the code editor.
     ''' </summary>
     Private Sub InitializeComponent()
-        Dim SkinPaddingEdges1 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
+        Dim SkinPaddingEdges3 As DevExpress.Skins.SkinPaddingEdges = New DevExpress.Skins.SkinPaddingEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMain))
-        Dim Series1 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim PieSeriesLabel1 As DevExpress.XtraCharts.PieSeriesLabel = New DevExpress.XtraCharts.PieSeriesLabel()
-        Dim PieSeriesView1 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
-        Dim SeriesTitle1 As DevExpress.XtraCharts.SeriesTitle = New DevExpress.XtraCharts.SeriesTitle()
-        Dim Series2 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim PieSeriesLabel2 As DevExpress.XtraCharts.PieSeriesLabel = New DevExpress.XtraCharts.PieSeriesLabel()
-        Dim PieSeriesView2 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
-        Dim SeriesTitle2 As DevExpress.XtraCharts.SeriesTitle = New DevExpress.XtraCharts.SeriesTitle()
-        Dim XyDiagram1 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
-        Dim Series3 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim Series4 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim LineSeriesView1 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
-        Dim Series5 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim LineSeriesView2 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
-        Dim Series6 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim LineSeriesView3 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
-        Dim Series7 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim LineSeriesView4 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
-        Dim ChartTitle1 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
-        Dim Series8 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
-        Dim PieSeriesLabel3 As DevExpress.XtraCharts.PieSeriesLabel = New DevExpress.XtraCharts.PieSeriesLabel()
-        Dim PieSeriesView3 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
-        Dim SeriesTitle3 As DevExpress.XtraCharts.SeriesTitle = New DevExpress.XtraCharts.SeriesTitle()
+        Dim Series17 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim PieSeriesLabel7 As DevExpress.XtraCharts.PieSeriesLabel = New DevExpress.XtraCharts.PieSeriesLabel()
+        Dim PieSeriesView7 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
+        Dim SeriesTitle7 As DevExpress.XtraCharts.SeriesTitle = New DevExpress.XtraCharts.SeriesTitle()
+        Dim Series18 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim PieSeriesLabel8 As DevExpress.XtraCharts.PieSeriesLabel = New DevExpress.XtraCharts.PieSeriesLabel()
+        Dim PieSeriesView8 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
+        Dim SeriesTitle8 As DevExpress.XtraCharts.SeriesTitle = New DevExpress.XtraCharts.SeriesTitle()
+        Dim XyDiagram3 As DevExpress.XtraCharts.XYDiagram = New DevExpress.XtraCharts.XYDiagram()
+        Dim Series19 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim Series20 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim LineSeriesView9 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim Series21 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim LineSeriesView10 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim Series22 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim LineSeriesView11 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim Series23 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim LineSeriesView12 As DevExpress.XtraCharts.LineSeriesView = New DevExpress.XtraCharts.LineSeriesView()
+        Dim ChartTitle3 As DevExpress.XtraCharts.ChartTitle = New DevExpress.XtraCharts.ChartTitle()
+        Dim Series24 As DevExpress.XtraCharts.Series = New DevExpress.XtraCharts.Series()
+        Dim PieSeriesLabel9 As DevExpress.XtraCharts.PieSeriesLabel = New DevExpress.XtraCharts.PieSeriesLabel()
+        Dim PieSeriesView9 As DevExpress.XtraCharts.PieSeriesView = New DevExpress.XtraCharts.PieSeriesView()
+        Dim SeriesTitle9 As DevExpress.XtraCharts.SeriesTitle = New DevExpress.XtraCharts.SeriesTitle()
         Me.ChartDataSet = New ProfitabilityTool.ChartDataSet()
         Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.SkinRibbonGalleryBarItem1 = New DevExpress.XtraBars.SkinRibbonGalleryBarItem()
@@ -98,7 +98,6 @@
         Me.BcCannotFix = New DevExpress.XtraBars.BarCheckItem()
         Me.BtnResetGrid = New DevExpress.XtraBars.BarButtonItem()
         Me.BtnReport = New DevExpress.XtraBars.BarButtonItem()
-        Me.BtnUpdate = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -166,6 +165,7 @@
         Me.ChartControl1 = New DevExpress.XtraCharts.ChartControl()
         Me.ChartControl2 = New DevExpress.XtraCharts.ChartControl()
         Me.NavigationPage2 = New DevExpress.XtraBars.Navigation.NavigationPage()
+        Me.BtnUpload = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.ChartDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -186,28 +186,28 @@
         Me.NavigationPage1.SuspendLayout()
         Me.XtraScrollableControl1.SuspendLayout()
         CType(Me.ChartControl4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(PieSeriesLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(PieSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesLabel7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesView7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartControl3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(PieSeriesLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(PieSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesView8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(LineSeriesView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(LineSeriesView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(LineSeriesView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(LineSeriesView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(XyDiagram3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(LineSeriesView9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series21, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(LineSeriesView10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series22, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(LineSeriesView11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series23, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(LineSeriesView12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Series8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(PieSeriesLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(PieSeriesView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Series24, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesLabel9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(PieSeriesView9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavigationPage2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -222,10 +222,10 @@
         Me.RibbonControl1.AllowMdiChildButtons = False
         Me.RibbonControl1.AllowMinimizeRibbon = False
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
-        Me.RibbonControl1.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.RibbonControl1.SearchEditItem, Me.SkinRibbonGalleryBarItem1, Me.BtnImport, Me.BtnSave, Me.BtnLoad, Me.BtnSwitchUser, Me.BtnManageUsers, Me.BtnChangePassword, Me.BtnExit, Me.BeDateFrom, Me.BeDateTo, Me.BeCountry, Me.BtnDestination, Me.BtnManageMargin, Me.BtnJunk, Me.BtnCanceled, Me.BtnMatching, Me.BcNegative, Me.BcExcessive, Me.BcMismatch, Me.BtnShowDefict, Me.BcPendingDmc, Me.BcFixedDmc, Me.BcPendingTo, Me.BcFixedTo, Me.BtnShow, Me.BtnAddDispute, Me.BtnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.BtnManageCurrency, Me.BtnErrors, Me.BtnAbout, Me.BeImportFrom, Me.BeImportTill, Me.BtnSection, Me.BcCannotFix, Me.BtnResetGrid, Me.BtnReport, Me.BtnUpdate})
+        Me.RibbonControl1.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.RibbonControl1.SearchEditItem, Me.SkinRibbonGalleryBarItem1, Me.BtnImport, Me.BtnSave, Me.BtnLoad, Me.BtnSwitchUser, Me.BtnManageUsers, Me.BtnChangePassword, Me.BtnExit, Me.BeDateFrom, Me.BeDateTo, Me.BeCountry, Me.BtnDestination, Me.BtnManageMargin, Me.BtnJunk, Me.BtnCanceled, Me.BtnMatching, Me.BcNegative, Me.BcExcessive, Me.BcMismatch, Me.BtnShowDefict, Me.BcPendingDmc, Me.BcFixedDmc, Me.BcPendingTo, Me.BcFixedTo, Me.BtnShow, Me.BtnAddDispute, Me.BtnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.BtnManageCurrency, Me.BtnErrors, Me.BtnAbout, Me.BeImportFrom, Me.BeImportTill, Me.BtnSection, Me.BcCannotFix, Me.BtnResetGrid, Me.BtnReport, Me.BtnUpload})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl1.MaxItemId = 55
+        Me.RibbonControl1.MaxItemId = 56
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2, Me.RepositoryItemLookUpEdit2, Me.RepositoryItemDateEdit3, Me.RepositoryItemDateEdit4})
@@ -235,7 +235,7 @@
         Me.RibbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.ShowOnMultiplePages
         Me.RibbonControl1.ShowToolbarCustomizeItem = False
-        Me.RibbonControl1.Size = New System.Drawing.Size(1384, 132)
+        Me.RibbonControl1.Size = New System.Drawing.Size(1186, 132)
         Me.RibbonControl1.StatusBar = Me.RibbonStatusBar1
         Me.RibbonControl1.Toolbar.ShowCustomizeItem = False
         '
@@ -252,9 +252,9 @@
         Me.SkinRibbonGalleryBarItem1.Gallery.ItemCheckMode = DevExpress.XtraBars.Ribbon.Gallery.ItemCheckMode.SingleRadio
         Me.SkinRibbonGalleryBarItem1.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.Squeeze
         Me.SkinRibbonGalleryBarItem1.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Top
-        SkinPaddingEdges1.Left = 8
-        SkinPaddingEdges1.Right = 8
-        Me.SkinRibbonGalleryBarItem1.Gallery.ItemImagePadding = SkinPaddingEdges1
+        SkinPaddingEdges3.Left = 8
+        SkinPaddingEdges3.Right = 8
+        Me.SkinRibbonGalleryBarItem1.Gallery.ItemImagePadding = SkinPaddingEdges3
         Me.SkinRibbonGalleryBarItem1.Gallery.ScaleImages = DevExpress.Utils.DefaultBoolean.[False]
         Me.SkinRibbonGalleryBarItem1.Id = 1
         Me.SkinRibbonGalleryBarItem1.ImageOptions.SvgImage = CType(resources.GetObject("SkinRibbonGalleryBarItem1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
@@ -268,6 +268,10 @@
         Me.BtnImport.GroupIndex = 1
         Me.BtnImport.Id = 2
         Me.BtnImport.ImageOptions.Image = CType(resources.GetObject("BtnImport.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnImport.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnImport.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnImport.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnImport.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnImport.Name = "BtnImport"
         Me.BtnImport.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -278,6 +282,10 @@
         Me.BtnSave.GroupIndex = 1
         Me.BtnSave.Id = 3
         Me.BtnSave.ImageOptions.Image = CType(resources.GetObject("BtnSave.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnSave.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSave.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnSave.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnSave.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnSave.Name = "BtnSave"
         Me.BtnSave.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -289,6 +297,10 @@
         Me.BtnLoad.GroupIndex = 3
         Me.BtnLoad.Id = 4
         Me.BtnLoad.ImageOptions.Image = CType(resources.GetObject("BtnLoad.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnLoad.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLoad.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnLoad.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnLoad.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnLoad.Name = "BtnLoad"
         Me.BtnLoad.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -298,6 +310,10 @@
         Me.BtnSwitchUser.Id = 5
         Me.BtnSwitchUser.ImageOptions.Image = CType(resources.GetObject("BtnSwitchUser.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnSwitchUser.ImageOptions.LargeImage = CType(resources.GetObject("BtnSwitchUser.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnSwitchUser.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSwitchUser.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnSwitchUser.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnSwitchUser.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnSwitchUser.Name = "BtnSwitchUser"
         Me.BtnSwitchUser.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -307,6 +323,10 @@
         Me.BtnManageUsers.Id = 6
         Me.BtnManageUsers.ImageOptions.Image = CType(resources.GetObject("BtnManageUsers.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnManageUsers.ImageOptions.LargeImage = CType(resources.GetObject("BtnManageUsers.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnManageUsers.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnManageUsers.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnManageUsers.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnManageUsers.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnManageUsers.Name = "BtnManageUsers"
         Me.BtnManageUsers.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -316,6 +336,10 @@
         Me.BtnChangePassword.Id = 8
         Me.BtnChangePassword.ImageOptions.Image = CType(resources.GetObject("BtnChangePassword.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnChangePassword.ImageOptions.LargeImage = CType(resources.GetObject("BtnChangePassword.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnChangePassword.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnChangePassword.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnChangePassword.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnChangePassword.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnChangePassword.Name = "BtnChangePassword"
         Me.BtnChangePassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -325,6 +349,10 @@
         Me.BtnExit.Id = 9
         Me.BtnExit.ImageOptions.Image = CType(resources.GetObject("BtnExit.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnExit.ImageOptions.LargeImage = CType(resources.GetObject("BtnExit.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnExit.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnExit.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnExit.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnExit.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnExit.Name = "BtnExit"
         Me.BtnExit.RibbonStyle = CType((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large Or DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText), DevExpress.XtraBars.Ribbon.RibbonItemStyles)
         '
@@ -332,12 +360,18 @@
         '
         Me.BeDateFrom.Caption = "Travel From"
         Me.BeDateFrom.Edit = Me.RepositoryItemDateEdit1
-        Me.BeDateFrom.EditWidth = 85
+        Me.BeDateFrom.EditWidth = 90
         Me.BeDateFrom.Id = 11
+        Me.BeDateFrom.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BeDateFrom.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BeDateFrom.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BeDateFrom.ItemAppearance.Normal.Options.UseFont = True
         Me.BeDateFrom.Name = "BeDateFrom"
         '
         'RepositoryItemDateEdit1
         '
+        Me.RepositoryItemDateEdit1.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.RepositoryItemDateEdit1.Appearance.Options.UseFont = True
         Me.RepositoryItemDateEdit1.AutoHeight = False
         Me.RepositoryItemDateEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -348,13 +382,19 @@
         '
         Me.BeDateTo.Caption = "Travel Till    "
         Me.BeDateTo.Edit = Me.RepositoryItemDateEdit2
-        Me.BeDateTo.EditWidth = 85
+        Me.BeDateTo.EditWidth = 90
         Me.BeDateTo.Id = 12
+        Me.BeDateTo.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BeDateTo.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BeDateTo.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BeDateTo.ItemAppearance.Normal.Options.UseFont = True
         Me.BeDateTo.Name = "BeDateTo"
         '
         'RepositoryItemDateEdit2
         '
         Me.RepositoryItemDateEdit2.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
+        Me.RepositoryItemDateEdit2.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.RepositoryItemDateEdit2.Appearance.Options.UseFont = True
         Me.RepositoryItemDateEdit2.AutoHeight = False
         Me.RepositoryItemDateEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemDateEdit2.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -365,12 +405,18 @@
         '
         Me.BeCountry.Caption = "Country      "
         Me.BeCountry.Edit = Me.RepositoryItemLookUpEdit1
-        Me.BeCountry.EditWidth = 85
+        Me.BeCountry.EditWidth = 90
         Me.BeCountry.Id = 13
+        Me.BeCountry.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BeCountry.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BeCountry.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BeCountry.ItemAppearance.Normal.Options.UseFont = True
         Me.BeCountry.Name = "BeCountry"
         '
         'RepositoryItemLookUpEdit1
         '
+        Me.RepositoryItemLookUpEdit1.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.RepositoryItemLookUpEdit1.Appearance.Options.UseFont = True
         Me.RepositoryItemLookUpEdit1.AutoHeight = False
         Me.RepositoryItemLookUpEdit1.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemLookUpEdit1.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("DestinationCode", "Code"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Destination", "Country")})
@@ -383,6 +429,10 @@
         Me.BtnDestination.Id = 14
         Me.BtnDestination.ImageOptions.Image = CType(resources.GetObject("BtnDestination.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnDestination.ImageOptions.LargeImage = CType(resources.GetObject("BtnDestination.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnDestination.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDestination.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnDestination.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnDestination.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnDestination.Name = "BtnDestination"
         Me.BtnDestination.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -391,6 +441,10 @@
         Me.BtnManageMargin.Caption = "" & Global.Microsoft.VisualBasic.ChrW(10) & "Margin"
         Me.BtnManageMargin.Id = 15
         Me.BtnManageMargin.ImageOptions.Image = CType(resources.GetObject("BtnManageMargin.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnManageMargin.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnManageMargin.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnManageMargin.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnManageMargin.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnManageMargin.Name = "BtnManageMargin"
         Me.BtnManageMargin.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -402,6 +456,10 @@
         Me.BtnJunk.GroupIndex = 4
         Me.BtnJunk.Id = 16
         Me.BtnJunk.ImageOptions.Image = CType(resources.GetObject("BtnJunk.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnJunk.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnJunk.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnJunk.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnJunk.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnJunk.Name = "BtnJunk"
         Me.BtnJunk.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -414,6 +472,10 @@
         Me.BtnCanceled.Id = 17
         Me.BtnCanceled.ImageOptions.Image = CType(resources.GetObject("BtnCanceled.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnCanceled.ImageOptions.LargeImage = CType(resources.GetObject("BtnCanceled.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnCanceled.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCanceled.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnCanceled.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnCanceled.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnCanceled.Name = "BtnCanceled"
         Me.BtnCanceled.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -426,6 +488,10 @@
         Me.BtnMatching.Id = 18
         Me.BtnMatching.ImageOptions.Image = CType(resources.GetObject("BtnMatching.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnMatching.ImageOptions.LargeImage = CType(resources.GetObject("BtnMatching.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnMatching.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnMatching.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnMatching.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnMatching.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnMatching.Name = "BtnMatching"
         Me.BtnMatching.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -436,6 +502,10 @@
         Me.BcNegative.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.BcNegative.Checked = True
         Me.BcNegative.Id = 19
+        Me.BcNegative.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BcNegative.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BcNegative.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BcNegative.ItemAppearance.Normal.Options.UseFont = True
         Me.BcNegative.Name = "BcNegative"
         Me.BcNegative.SmallWithTextWidth = 78
         '
@@ -446,6 +516,10 @@
         Me.BcExcessive.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.BcExcessive.Checked = True
         Me.BcExcessive.Id = 20
+        Me.BcExcessive.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BcExcessive.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BcExcessive.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BcExcessive.ItemAppearance.Normal.Options.UseFont = True
         Me.BcExcessive.Name = "BcExcessive"
         Me.BcExcessive.SmallWithTextWidth = 78
         '
@@ -456,6 +530,10 @@
         Me.BcMismatch.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.BcMismatch.Checked = True
         Me.BcMismatch.Id = 21
+        Me.BcMismatch.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BcMismatch.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BcMismatch.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BcMismatch.ItemAppearance.Normal.Options.UseFont = True
         Me.BcMismatch.Name = "BcMismatch"
         Me.BcMismatch.SmallWithTextWidth = 78
         '
@@ -467,6 +545,10 @@
         Me.BtnShowDefict.GroupIndex = 7
         Me.BtnShowDefict.Id = 22
         Me.BtnShowDefict.ImageOptions.Image = CType(resources.GetObject("BtnShowDefict.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnShowDefict.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnShowDefict.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnShowDefict.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnShowDefict.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnShowDefict.Name = "BtnShowDefict"
         Me.BtnShowDefict.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -477,6 +559,10 @@
         Me.BcPendingDmc.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.BcPendingDmc.Checked = True
         Me.BcPendingDmc.Id = 23
+        Me.BcPendingDmc.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BcPendingDmc.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BcPendingDmc.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BcPendingDmc.ItemAppearance.Normal.Options.UseFont = True
         Me.BcPendingDmc.Name = "BcPendingDmc"
         '
         'BcFixedDmc
@@ -486,6 +572,10 @@
         Me.BcFixedDmc.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.BcFixedDmc.Checked = True
         Me.BcFixedDmc.Id = 24
+        Me.BcFixedDmc.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BcFixedDmc.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BcFixedDmc.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BcFixedDmc.ItemAppearance.Normal.Options.UseFont = True
         Me.BcFixedDmc.Name = "BcFixedDmc"
         '
         'BcPendingTo
@@ -495,6 +585,10 @@
         Me.BcPendingTo.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.BcPendingTo.Checked = True
         Me.BcPendingTo.Id = 25
+        Me.BcPendingTo.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BcPendingTo.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BcPendingTo.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BcPendingTo.ItemAppearance.Normal.Options.UseFont = True
         Me.BcPendingTo.Name = "BcPendingTo"
         '
         'BcFixedTo
@@ -504,6 +598,10 @@
         Me.BcFixedTo.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.BcFixedTo.Checked = True
         Me.BcFixedTo.Id = 26
+        Me.BcFixedTo.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BcFixedTo.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BcFixedTo.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BcFixedTo.ItemAppearance.Normal.Options.UseFont = True
         Me.BcFixedTo.Name = "BcFixedTo"
         '
         'BtnShow
@@ -514,6 +612,10 @@
         Me.BtnShow.GroupIndex = 8
         Me.BtnShow.Id = 27
         Me.BtnShow.ImageOptions.Image = CType(resources.GetObject("BtnShow.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnShow.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnShow.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnShow.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnShow.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnShow.Name = "BtnShow"
         Me.BtnShow.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -523,6 +625,10 @@
         Me.BtnAddDispute.Id = 30
         Me.BtnAddDispute.ImageOptions.Image = CType(resources.GetObject("BtnAddDispute.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnAddDispute.ImageOptions.LargeImage = CType(resources.GetObject("BtnAddDispute.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnAddDispute.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAddDispute.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnAddDispute.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnAddDispute.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnAddDispute.Name = "BtnAddDispute"
         Me.BtnAddDispute.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -532,6 +638,10 @@
         Me.BtnTO.Id = 31
         Me.BtnTO.ImageOptions.Image = CType(resources.GetObject("BtnTO.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnTO.ImageOptions.LargeImage = CType(resources.GetObject("BtnTO.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnTO.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnTO.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnTO.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnTO.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnTO.Name = "BtnTO"
         Me.BtnTO.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -539,13 +649,15 @@
         '
         Me.BarStaticItem1.Caption = "Logged as:"
         Me.BarStaticItem1.Id = 32
+        Me.BarStaticItem1.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BarStaticItem1.ItemAppearance.Normal.Options.UseFont = True
         Me.BarStaticItem1.LeftIndent = 50
         Me.BarStaticItem1.Name = "BarStaticItem1"
         '
         'bhUsername
         '
         Me.bhUsername.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
-        Me.bhUsername.Appearance.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.bhUsername.Appearance.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bhUsername.Appearance.Options.UseFont = True
         Me.bhUsername.Caption = "Username"
         Me.bhUsername.Id = 33
@@ -557,12 +669,14 @@
         Me.biLoginTime.AllowHtmlText = DevExpress.Utils.DefaultBoolean.[True]
         Me.biLoginTime.Caption = "Login time: HH:mm"
         Me.biLoginTime.Id = 34
+        Me.biLoginTime.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.biLoginTime.ItemAppearance.Normal.Options.UseFont = True
         Me.biLoginTime.Name = "biLoginTime"
         Me.biLoginTime.RightIndent = 50
         '
         'bhLogginTime
         '
-        Me.bhLogginTime.Appearance.Font = New System.Drawing.Font("Tahoma", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.bhLogginTime.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.bhLogginTime.Appearance.Options.UseFont = True
         Me.bhLogginTime.Caption = "00:00"
         Me.bhLogginTime.Id = 35
@@ -586,6 +700,10 @@
         Me.BtnManageCurrency.Caption = "Currency"
         Me.BtnManageCurrency.Id = 41
         Me.BtnManageCurrency.ImageOptions.Image = CType(resources.GetObject("BtnManageCurrency.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnManageCurrency.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnManageCurrency.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnManageCurrency.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnManageCurrency.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnManageCurrency.Name = "BtnManageCurrency"
         Me.BtnManageCurrency.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -597,6 +715,10 @@
         Me.BtnErrors.GroupIndex = 2
         Me.BtnErrors.Id = 42
         Me.BtnErrors.ImageOptions.Image = CType(resources.GetObject("BtnErrors.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnErrors.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnErrors.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnErrors.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnErrors.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnErrors.Name = "BtnErrors"
         Me.BtnErrors.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -605,6 +727,10 @@
         Me.BtnAbout.Caption = "About"
         Me.BtnAbout.Id = 43
         Me.BtnAbout.ImageOptions.Image = CType(resources.GetObject("BtnAbout.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnAbout.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAbout.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnAbout.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnAbout.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnAbout.Name = "BtnAbout"
         Me.BtnAbout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
@@ -612,13 +738,19 @@
         '
         Me.BeImportFrom.Caption = "Import From"
         Me.BeImportFrom.Edit = Me.RepositoryItemDateEdit3
-        Me.BeImportFrom.EditWidth = 85
+        Me.BeImportFrom.EditWidth = 90
         Me.BeImportFrom.Id = 44
+        Me.BeImportFrom.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BeImportFrom.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BeImportFrom.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BeImportFrom.ItemAppearance.Normal.Options.UseFont = True
         Me.BeImportFrom.Name = "BeImportFrom"
         '
         'RepositoryItemDateEdit3
         '
         Me.RepositoryItemDateEdit3.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
+        Me.RepositoryItemDateEdit3.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.RepositoryItemDateEdit3.Appearance.Options.UseFont = True
         Me.RepositoryItemDateEdit3.AutoHeight = False
         Me.RepositoryItemDateEdit3.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemDateEdit3.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -629,13 +761,19 @@
         '
         Me.BeImportTill.Caption = "Import Till    "
         Me.BeImportTill.Edit = Me.RepositoryItemDateEdit4
-        Me.BeImportTill.EditWidth = 85
+        Me.BeImportTill.EditWidth = 90
         Me.BeImportTill.Id = 45
+        Me.BeImportTill.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BeImportTill.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BeImportTill.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BeImportTill.ItemAppearance.Normal.Options.UseFont = True
         Me.BeImportTill.Name = "BeImportTill"
         '
         'RepositoryItemDateEdit4
         '
         Me.RepositoryItemDateEdit4.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
+        Me.RepositoryItemDateEdit4.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.RepositoryItemDateEdit4.Appearance.Options.UseFont = True
         Me.RepositoryItemDateEdit4.AutoHeight = False
         Me.RepositoryItemDateEdit4.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemDateEdit4.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -647,6 +785,10 @@
         Me.BtnSection.Caption = "Section"
         Me.BtnSection.Id = 46
         Me.BtnSection.ImageOptions.Image = CType(resources.GetObject("BtnSection.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnSection.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSection.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnSection.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnSection.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnSection.Name = "BtnSection"
         Me.BtnSection.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -657,6 +799,10 @@
         Me.BcCannotFix.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText
         Me.BcCannotFix.Checked = True
         Me.BcCannotFix.Id = 51
+        Me.BcCannotFix.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BcCannotFix.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BcCannotFix.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BcCannotFix.ItemAppearance.Normal.Options.UseFont = True
         Me.BcCannotFix.Name = "BcCannotFix"
         '
         'BtnResetGrid
@@ -664,6 +810,10 @@
         Me.BtnResetGrid.Caption = "Reset Grid"
         Me.BtnResetGrid.Id = 52
         Me.BtnResetGrid.ImageOptions.SvgImage = CType(resources.GetObject("BtnResetGrid.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.BtnResetGrid.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnResetGrid.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnResetGrid.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnResetGrid.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnResetGrid.Name = "BtnResetGrid"
         Me.BtnResetGrid.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText
         '
@@ -676,16 +826,12 @@
         Me.BtnReport.GroupIndex = 8
         Me.BtnReport.Id = 53
         Me.BtnReport.ImageOptions.Image = CType(resources.GetObject("BtnReport.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnReport.ItemAppearance.Hovered.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnReport.ItemAppearance.Hovered.Options.UseFont = True
+        Me.BtnReport.ItemAppearance.Normal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnReport.ItemAppearance.Normal.Options.UseFont = True
         Me.BtnReport.Name = "BtnReport"
         Me.BtnReport.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
-        '
-        'BtnUpdate
-        '
-        Me.BtnUpdate.Caption = "Update"
-        Me.BtnUpdate.Id = 54
-        Me.BtnUpdate.ImageOptions.Image = CType(resources.GetObject("BtnUpdate.ImageOptions.Image"), System.Drawing.Image)
-        Me.BtnUpdate.ImageOptions.LargeImage = CType(resources.GetObject("BtnUpdate.ImageOptions.LargeImage"), System.Drawing.Image)
-        Me.BtnUpdate.Name = "BtnUpdate"
         '
         'RibbonPage1
         '
@@ -699,8 +845,8 @@
         Me.RibbonPageGroup1.ImageOptions.Image = CType(resources.GetObject("RibbonPageGroup1.ImageOptions.Image"), System.Drawing.Image)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnImport)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnSave)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnUpload)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnErrors)
-        Me.RibbonPageGroup1.ItemLinks.Add(Me.BtnUpdate)
         Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
         Me.RibbonPageGroup1.Text = "Data"
         '
@@ -775,6 +921,8 @@
         '
         'RepositoryItemLookUpEdit2
         '
+        Me.RepositoryItemLookUpEdit2.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.RepositoryItemLookUpEdit2.Appearance.Options.UseFont = True
         Me.RepositoryItemLookUpEdit2.AutoHeight = False
         Me.RepositoryItemLookUpEdit2.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RepositoryItemLookUpEdit2.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("DestinationCode", "Code"), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("Destination", "Country")})
@@ -785,25 +933,66 @@
         Me.RibbonStatusBar1.ItemLinks.Add(Me.BarStaticItem1)
         Me.RibbonStatusBar1.ItemLinks.Add(Me.bhUsername)
         Me.RibbonStatusBar1.ItemLinks.Add(Me.biLoginTime)
-        Me.RibbonStatusBar1.Location = New System.Drawing.Point(0, 744)
+        Me.RibbonStatusBar1.Location = New System.Drawing.Point(0, 578)
         Me.RibbonStatusBar1.Name = "RibbonStatusBar1"
         Me.RibbonStatusBar1.Ribbon = Me.RibbonControl1
-        Me.RibbonStatusBar1.Size = New System.Drawing.Size(1384, 24)
+        Me.RibbonStatusBar1.Size = New System.Drawing.Size(1186, 24)
         '
         'GridControl1
         '
         Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GridControl1.EmbeddedNavigator.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridControl1.EmbeddedNavigator.Appearance.Options.UseFont = True
+        Me.GridControl1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GridControl1.Location = New System.Drawing.Point(0, 0)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.MenuManager = Me.RibbonControl1
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1})
-        Me.GridControl1.Size = New System.Drawing.Size(1384, 612)
+        Me.GridControl1.Size = New System.Drawing.Size(1186, 446)
         Me.GridControl1.TabIndex = 1
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'GridView1
         '
+        Me.GridView1.Appearance.CustomizationFormHint.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.CustomizationFormHint.Options.UseFont = True
+        Me.GridView1.Appearance.DetailTip.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.DetailTip.Options.UseFont = True
+        Me.GridView1.Appearance.EvenRow.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.EvenRow.Options.UseFont = True
+        Me.GridView1.Appearance.FilterPanel.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.FilterPanel.Options.UseFont = True
+        Me.GridView1.Appearance.FocusedCell.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.FocusedCell.Options.UseFont = True
+        Me.GridView1.Appearance.FocusedRow.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.FocusedRow.Options.UseFont = True
+        Me.GridView1.Appearance.FooterPanel.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.FooterPanel.Options.UseFont = True
+        Me.GridView1.Appearance.GroupFooter.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.GroupFooter.Options.UseFont = True
+        Me.GridView1.Appearance.GroupPanel.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.GroupPanel.Options.UseFont = True
+        Me.GridView1.Appearance.GroupRow.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.GroupRow.Options.UseFont = True
+        Me.GridView1.Appearance.HeaderPanel.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.HeaderPanel.Options.UseFont = True
+        Me.GridView1.Appearance.HideSelectionRow.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.HideSelectionRow.Options.UseFont = True
+        Me.GridView1.Appearance.HotTrackedRow.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.HotTrackedRow.Options.UseFont = True
+        Me.GridView1.Appearance.OddRow.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.OddRow.Options.UseFont = True
+        Me.GridView1.Appearance.Preview.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.Preview.Options.UseFont = True
+        Me.GridView1.Appearance.Row.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.Row.Options.UseFont = True
+        Me.GridView1.Appearance.SelectedRow.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.SelectedRow.Options.UseFont = True
+        Me.GridView1.Appearance.TopNewRow.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.TopNewRow.Options.UseFont = True
+        Me.GridView1.Appearance.ViewCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.GridView1.Appearance.ViewCaption.Options.UseFont = True
         Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn6, Me.GridColumn41, Me.GridColumn7, Me.GridColumn8, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11, Me.GridColumn12, Me.GridColumn13, Me.GridColumn14, Me.GridColumn15, Me.GridColumn16, Me.GridColumn17, Me.GridColumn18, Me.GridColumn19, Me.GridColumn20, Me.GridColumn21, Me.GridColumn22, Me.GridColumn23, Me.GridColumn24, Me.GridColumn25, Me.GridColumn26, Me.GridColumn27, Me.GridColumn28, Me.GridColumn29, Me.GridColumn42, Me.GridColumn30, Me.GridColumn31, Me.GridColumn32, Me.GridColumn33, Me.GridColumn34, Me.GridColumn35, Me.GridColumn36, Me.GridColumn37, Me.GridColumn43, Me.GridColumn38, Me.GridColumn39, Me.GridColumn40})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "Reference", Nothing, "(Number of Bookings: {0})")})
@@ -833,6 +1022,8 @@
         '
         'RepositoryItemTextEdit1
         '
+        Me.RepositoryItemTextEdit1.Appearance.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.RepositoryItemTextEdit1.Appearance.Options.UseFont = True
         Me.RepositoryItemTextEdit1.AutoHeight = False
         Me.RepositoryItemTextEdit1.Name = "RepositoryItemTextEdit1"
         Me.RepositoryItemTextEdit1.ReadOnly = True
@@ -1312,7 +1503,7 @@
         Me.NavigationFrame1.Name = "NavigationFrame1"
         Me.NavigationFrame1.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.NavigationPage1, Me.NavigationPage2})
         Me.NavigationFrame1.SelectedPage = Me.NavigationPage1
-        Me.NavigationFrame1.Size = New System.Drawing.Size(1384, 612)
+        Me.NavigationFrame1.Size = New System.Drawing.Size(1186, 446)
         Me.NavigationFrame1.TabIndex = 4
         Me.NavigationFrame1.Text = "NavigationFrame1"
         '
@@ -1320,7 +1511,7 @@
         '
         Me.NavigationPage1.Controls.Add(Me.XtraScrollableControl1)
         Me.NavigationPage1.Name = "NavigationPage1"
-        Me.NavigationPage1.Size = New System.Drawing.Size(1384, 612)
+        Me.NavigationPage1.Size = New System.Drawing.Size(1186, 446)
         '
         'XtraScrollableControl1
         '
@@ -1332,7 +1523,7 @@
         Me.XtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.XtraScrollableControl1.Location = New System.Drawing.Point(0, 0)
         Me.XtraScrollableControl1.Name = "XtraScrollableControl1"
-        Me.XtraScrollableControl1.Size = New System.Drawing.Size(1384, 612)
+        Me.XtraScrollableControl1.Size = New System.Drawing.Size(1186, 446)
         Me.XtraScrollableControl1.TabIndex = 3
         '
         'ChartControl4
@@ -1343,19 +1534,19 @@
         Me.ChartControl4.Legend.Visibility = DevExpress.Utils.DefaultBoolean.[True]
         Me.ChartControl4.Location = New System.Drawing.Point(921, 8)
         Me.ChartControl4.Name = "ChartControl4"
-        Series1.ArgumentDataMember = "Section"
-        Series1.ColorDataMember = "Section"
-        PieSeriesLabel1.LineVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        PieSeriesLabel1.TextPattern = "{A}: ({V})"
-        Series1.Label = PieSeriesLabel1
-        Series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[False]
-        Series1.Name = "Section Status"
-        Series1.ToolTipHintDataMember = "Number"
-        Series1.ValueDataMembersSerializable = "Number"
-        SeriesTitle1.Visibility = DevExpress.Utils.DefaultBoolean.[True]
-        PieSeriesView1.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle1})
-        Series1.View = PieSeriesView1
-        Me.ChartControl4.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series1}
+        Series17.ArgumentDataMember = "Section"
+        Series17.ColorDataMember = "Section"
+        PieSeriesLabel7.LineVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        PieSeriesLabel7.TextPattern = "{A}: ({V})"
+        Series17.Label = PieSeriesLabel7
+        Series17.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[False]
+        Series17.Name = "Section Status"
+        Series17.ToolTipHintDataMember = "Number"
+        Series17.ValueDataMembersSerializable = "Number"
+        SeriesTitle7.Visibility = DevExpress.Utils.DefaultBoolean.[True]
+        PieSeriesView7.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle7})
+        Series17.View = PieSeriesView7
+        Me.ChartControl4.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series17}
         Me.ChartControl4.Size = New System.Drawing.Size(428, 609)
         Me.ChartControl4.TabIndex = 3
         '
@@ -1365,59 +1556,59 @@
         Me.ChartControl3.Legend.Visibility = DevExpress.Utils.DefaultBoolean.[True]
         Me.ChartControl3.Location = New System.Drawing.Point(12, 8)
         Me.ChartControl3.Name = "ChartControl3"
-        Series2.ArgumentDataMember = "Company"
-        Series2.ColorDataMember = "Status"
-        PieSeriesLabel2.LineVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        PieSeriesLabel2.TextPattern = "{A}: ({V})"
-        Series2.Label = PieSeriesLabel2
-        Series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        Series2.Name = "Dispute Status"
-        Series2.ToolTipHintDataMember = "Number"
-        Series2.ValueDataMembersSerializable = "Number"
-        SeriesTitle2.Text = "Companies"
-        PieSeriesView2.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle2})
-        Series2.View = PieSeriesView2
-        Me.ChartControl3.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series2}
+        Series18.ArgumentDataMember = "Company"
+        Series18.ColorDataMember = "Status"
+        PieSeriesLabel8.LineVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        PieSeriesLabel8.TextPattern = "{A}: ({V})"
+        Series18.Label = PieSeriesLabel8
+        Series18.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        Series18.Name = "Dispute Status"
+        Series18.ToolTipHintDataMember = "Number"
+        Series18.ValueDataMembersSerializable = "Number"
+        SeriesTitle8.Text = "Companies"
+        PieSeriesView8.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle8})
+        Series18.View = PieSeriesView8
+        Me.ChartControl3.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series18}
         Me.ChartControl3.Size = New System.Drawing.Size(456, 270)
         Me.ChartControl3.TabIndex = 2
         '
         'ChartControl1
         '
-        XyDiagram1.AxisX.VisibleInPanesSerializable = "-1"
-        XyDiagram1.AxisY.VisibleInPanesSerializable = "-1"
-        Me.ChartControl1.Diagram = XyDiagram1
+        XyDiagram3.AxisX.VisibleInPanesSerializable = "-1"
+        XyDiagram3.AxisY.VisibleInPanesSerializable = "-1"
+        Me.ChartControl1.Diagram = XyDiagram3
         Me.ChartControl1.Legend.Name = "Default Legend"
         Me.ChartControl1.Location = New System.Drawing.Point(12, 289)
         Me.ChartControl1.Name = "ChartControl1"
-        Series3.ArgumentDataMember = "Country"
-        Series3.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        Series3.Name = "Total Bookings"
-        Series3.ValueDataMembersSerializable = "Total"
-        Series4.ArgumentDataMember = "Country"
-        Series4.Name = "Matched Bookings"
-        Series4.ValueDataMembersSerializable = "Matching"
-        LineSeriesView1.Color = System.Drawing.Color.FromArgb(CType(CType(146, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(80, Byte), Integer))
-        Series4.View = LineSeriesView1
-        Series5.ArgumentDataMember = "Country"
-        Series5.Name = "Negative Bookings"
-        Series5.ValueDataMembersSerializable = "Negative"
-        LineSeriesView2.Color = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Series5.View = LineSeriesView2
-        Series6.ArgumentDataMember = "Country"
-        Series6.Name = "Mismatching Bookings"
-        Series6.ValueDataMembersSerializable = "Mismatch"
-        LineSeriesView3.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Series6.View = LineSeriesView3
-        Series7.ArgumentDataMember = "Country"
-        Series7.Name = "Excessive Bookings"
-        Series7.ValueDataMembersSerializable = "Excessive"
-        LineSeriesView4.Color = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(148, Byte), Integer))
-        Series7.View = LineSeriesView4
-        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series3, Series4, Series5, Series6, Series7}
+        Series19.ArgumentDataMember = "Country"
+        Series19.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        Series19.Name = "Total Bookings"
+        Series19.ValueDataMembersSerializable = "Total"
+        Series20.ArgumentDataMember = "Country"
+        Series20.Name = "Matched Bookings"
+        Series20.ValueDataMembersSerializable = "Matching"
+        LineSeriesView9.Color = System.Drawing.Color.FromArgb(CType(CType(146, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(80, Byte), Integer))
+        Series20.View = LineSeriesView9
+        Series21.ArgumentDataMember = "Country"
+        Series21.Name = "Negative Bookings"
+        Series21.ValueDataMembersSerializable = "Negative"
+        LineSeriesView10.Color = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Series21.View = LineSeriesView10
+        Series22.ArgumentDataMember = "Country"
+        Series22.Name = "Mismatching Bookings"
+        Series22.ValueDataMembersSerializable = "Mismatch"
+        LineSeriesView11.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Series22.View = LineSeriesView11
+        Series23.ArgumentDataMember = "Country"
+        Series23.Name = "Excessive Bookings"
+        Series23.ValueDataMembersSerializable = "Excessive"
+        LineSeriesView12.Color = System.Drawing.Color.FromArgb(CType(CType(217, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(148, Byte), Integer))
+        Series23.View = LineSeriesView12
+        Me.ChartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series19, Series20, Series21, Series22, Series23}
         Me.ChartControl1.Size = New System.Drawing.Size(903, 328)
         Me.ChartControl1.TabIndex = 0
-        ChartTitle1.Text = "Destinations Bookings"
-        Me.ChartControl1.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle1})
+        ChartTitle3.Text = "Destinations Bookings"
+        Me.ChartControl1.Titles.AddRange(New DevExpress.XtraCharts.ChartTitle() {ChartTitle3})
         '
         'ChartControl2
         '
@@ -1425,19 +1616,19 @@
         Me.ChartControl2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.[True]
         Me.ChartControl2.Location = New System.Drawing.Point(474, 8)
         Me.ChartControl2.Name = "ChartControl2"
-        Series8.ArgumentDataMember = "Status"
-        Series8.ColorDataMember = "Status"
-        PieSeriesLabel3.LineVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        PieSeriesLabel3.TextPattern = "{A}: ({V})"
-        Series8.Label = PieSeriesLabel3
-        Series8.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
-        Series8.Name = "Dispute Status"
-        Series8.ToolTipHintDataMember = "Number"
-        Series8.ValueDataMembersSerializable = "Number"
-        SeriesTitle3.Visibility = DevExpress.Utils.DefaultBoolean.[True]
-        PieSeriesView3.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle3})
-        Series8.View = PieSeriesView3
-        Me.ChartControl2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series8}
+        Series24.ArgumentDataMember = "Status"
+        Series24.ColorDataMember = "Status"
+        PieSeriesLabel9.LineVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        PieSeriesLabel9.TextPattern = "{A}: ({V})"
+        Series24.Label = PieSeriesLabel9
+        Series24.LabelsVisibility = DevExpress.Utils.DefaultBoolean.[True]
+        Series24.Name = "Dispute Status"
+        Series24.ToolTipHintDataMember = "Number"
+        Series24.ValueDataMembersSerializable = "Number"
+        SeriesTitle9.Visibility = DevExpress.Utils.DefaultBoolean.[True]
+        PieSeriesView9.Titles.AddRange(New DevExpress.XtraCharts.SeriesTitle() {SeriesTitle9})
+        Series24.View = PieSeriesView9
+        Me.ChartControl2.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series24}
         Me.ChartControl2.Size = New System.Drawing.Size(441, 270)
         Me.ChartControl2.TabIndex = 1
         '
@@ -1445,17 +1636,27 @@
         '
         Me.NavigationPage2.Controls.Add(Me.GridControl1)
         Me.NavigationPage2.Name = "NavigationPage2"
-        Me.NavigationPage2.Size = New System.Drawing.Size(1384, 612)
+        Me.NavigationPage2.Size = New System.Drawing.Size(1186, 446)
+        '
+        'BtnUpload
+        '
+        Me.BtnUpload.Caption = "Upload"
+        Me.BtnUpload.Id = 55
+        Me.BtnUpload.ImageOptions.Image = CType(resources.GetObject("BtnUpload.ImageOptions.Image"), System.Drawing.Image)
+        Me.BtnUpload.ImageOptions.LargeImage = CType(resources.GetObject("BtnUpload.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.BtnUpload.Name = "BtnUpload"
         '
         'FrmMain
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[False]
+        Me.Appearance.Options.UseFont = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1384, 768)
+        Me.ClientSize = New System.Drawing.Size(1186, 602)
         Me.Controls.Add(Me.NavigationFrame1)
         Me.Controls.Add(Me.RibbonStatusBar1)
         Me.Controls.Add(Me.RibbonControl1)
+        Me.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.IconOptions.Icon = CType(resources.GetObject("FrmMain.IconOptions.Icon"), System.Drawing.Icon)
         Me.IconOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.profitability_logo
         Me.KeyPreview = True
@@ -1483,28 +1684,28 @@
         Me.NavigationFrame1.ResumeLayout(False)
         Me.NavigationPage1.ResumeLayout(False)
         Me.XtraScrollableControl1.ResumeLayout(False)
-        CType(PieSeriesLabel1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(PieSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(PieSeriesLabel7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(PieSeriesView7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series17, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartControl4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(PieSeriesLabel2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(PieSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(PieSeriesLabel8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(PieSeriesView8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series18, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartControl3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(XyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(LineSeriesView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(LineSeriesView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(LineSeriesView3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(LineSeriesView4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(XyDiagram3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(LineSeriesView9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(LineSeriesView10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series21, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(LineSeriesView11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series22, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(LineSeriesView12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(PieSeriesLabel3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(PieSeriesView3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Series8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(PieSeriesLabel9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(PieSeriesView9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Series24, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavigationPage2.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -1630,5 +1831,5 @@
     Friend WithEvents ChartControl3 As DevExpress.XtraCharts.ChartControl
     Friend WithEvents XtraScrollableControl1 As DevExpress.XtraEditors.XtraScrollableControl
     Friend WithEvents ChartControl4 As DevExpress.XtraCharts.ChartControl
-    Friend WithEvents BtnUpdate As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BtnUpload As DevExpress.XtraBars.BarButtonItem
 End Class

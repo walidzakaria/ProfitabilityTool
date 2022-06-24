@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="WindowsUIButtonImageOptions1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="WindowsUIButtonImageOptions5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAedEVYdFRpdGxlAExldHRlcjtlLW1haWw7ZW1haWw7
@@ -128,6 +128,42 @@
         H5DgLnT4cbfE6PwO+4AEdyFYftlSMjoX2AckmAvLxxOWjM65D838As8eT1IyOpcl2Ack0OBInsycyxLs
         AxJyKJiRz5JL3DL7gIQYOOfgSpzZByTEwC5Y6y8Z7+7YByR8A1tWYstKbFmJLSuxZSW2rMSWdbTNFTbT
         7FSRQTjOAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnAttachments.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
 </value>
   </data>
   <data name="FrmEdit.IconOptions.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

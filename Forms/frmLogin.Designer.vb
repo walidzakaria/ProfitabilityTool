@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class FrmLogin
-    Inherits DevExpress.XtraSplashScreen.SplashScreen
+    Inherits DevExpress.XtraEditors.XtraForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -42,7 +42,7 @@ Partial Class FrmLogin
         Me.BtnCancel.Appearance.Options.UseFont = True
         Me.BtnCancel.Appearance.Options.UseForeColor = True
         Me.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.BtnCancel.Location = New System.Drawing.Point(412, 170)
+        Me.BtnCancel.Location = New System.Drawing.Point(370, 180)
         Me.BtnCancel.Name = "BtnCancel"
         Me.BtnCancel.Size = New System.Drawing.Size(106, 32)
         Me.BtnCancel.TabIndex = 3
@@ -55,7 +55,7 @@ Partial Class FrmLogin
         Me.BtnOK.Appearance.ForeColor = System.Drawing.Color.Green
         Me.BtnOK.Appearance.Options.UseFont = True
         Me.BtnOK.Appearance.Options.UseForeColor = True
-        Me.BtnOK.Location = New System.Drawing.Point(300, 170)
+        Me.BtnOK.Location = New System.Drawing.Point(258, 180)
         Me.BtnOK.Name = "BtnOK"
         Me.BtnOK.Size = New System.Drawing.Size(106, 32)
         Me.BtnOK.TabIndex = 2
@@ -65,7 +65,7 @@ Partial Class FrmLogin
         '
         Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
         Me.LabelControl1.Appearance.Options.UseFont = True
-        Me.LabelControl1.Location = New System.Drawing.Point(45, 80)
+        Me.LabelControl1.Location = New System.Drawing.Point(47, 84)
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New System.Drawing.Size(77, 19)
         Me.LabelControl1.TabIndex = 14
@@ -75,7 +75,7 @@ Partial Class FrmLogin
         '
         Me.LabelControl2.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
         Me.LabelControl2.Appearance.Options.UseFont = True
-        Me.LabelControl2.Location = New System.Drawing.Point(45, 120)
+        Me.LabelControl2.Location = New System.Drawing.Point(47, 127)
         Me.LabelControl2.Name = "LabelControl2"
         Me.LabelControl2.Size = New System.Drawing.Size(73, 19)
         Me.LabelControl2.TabIndex = 15
@@ -87,7 +87,7 @@ Partial Class FrmLogin
         Me.LblLoading.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.LblLoading.Appearance.Options.UseFont = True
         Me.LblLoading.Appearance.Options.UseForeColor = True
-        Me.LblLoading.Location = New System.Drawing.Point(45, 183)
+        Me.LblLoading.Location = New System.Drawing.Point(45, 187)
         Me.LblLoading.Name = "LblLoading"
         Me.LblLoading.Size = New System.Drawing.Size(71, 19)
         Me.LblLoading.TabIndex = 16
@@ -97,37 +97,36 @@ Partial Class FrmLogin
         'TxtUserName
         '
         Me.TxtUserName.EnterMoveNextControl = True
-        Me.TxtUserName.Location = New System.Drawing.Point(170, 78)
+        Me.TxtUserName.Location = New System.Drawing.Point(161, 81)
         Me.TxtUserName.Name = "TxtUserName"
-        Me.TxtUserName.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
+        Me.TxtUserName.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUserName.Properties.Appearance.Options.UseFont = True
         Me.TxtUserName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
         Me.TxtUserName.Properties.Padding = New System.Windows.Forms.Padding(3, 0, 3, 0)
-        Me.TxtUserName.Size = New System.Drawing.Size(323, 24)
+        Me.TxtUserName.Size = New System.Drawing.Size(309, 26)
         Me.TxtUserName.TabIndex = 0
         '
         'TxtPassword
         '
         Me.TxtPassword.EnterMoveNextControl = True
-        Me.TxtPassword.Location = New System.Drawing.Point(170, 118)
+        Me.TxtPassword.Location = New System.Drawing.Point(161, 124)
         Me.TxtPassword.Name = "TxtPassword"
-        Me.TxtPassword.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
+        Me.TxtPassword.Properties.Appearance.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtPassword.Properties.Appearance.Options.UseFont = True
         Me.TxtPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
         Me.TxtPassword.Properties.Padding = New System.Windows.Forms.Padding(3, 0, 3, 0)
         Me.TxtPassword.Properties.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtPassword.Size = New System.Drawing.Size(323, 24)
+        Me.TxtPassword.Size = New System.Drawing.Size(309, 26)
         Me.TxtPassword.TabIndex = 1
         '
         'FrmLogin
         '
-        Me.AllowControlsInImageMode = True
-        Me.AutoFitImage = False
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch
+        Me.BackgroundImageStore = Global.ProfitabilityTool.My.Resources.Resources.Login
         Me.CancelButton = Me.BtnCancel
-        Me.ClientSize = New System.Drawing.Size(536, 217)
+        Me.ClientSize = New System.Drawing.Size(512, 228)
         Me.Controls.Add(Me.TxtPassword)
         Me.Controls.Add(Me.TxtUserName)
         Me.Controls.Add(Me.LblLoading)
@@ -135,11 +134,11 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.LabelControl1)
         Me.Controls.Add(Me.BtnCancel)
         Me.Controls.Add(Me.BtnOK)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.IconOptions.Icon = CType(resources.GetObject("FrmLogin.IconOptions.Icon"), System.Drawing.Icon)
         Me.Name = "FrmLogin"
-        Me.ShowInTaskbar = True
-        Me.ShowMode = DevExpress.XtraSplashScreen.ShowMode.Image
-        Me.SplashImageOptions.Image = Global.ProfitabilityTool.My.Resources.Resources.Login
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         CType(Me.TxtUserName.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()

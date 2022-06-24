@@ -1,6 +1,7 @@
 ﻿Imports DevExpress.XtraLayout
 Imports DevExpress.XtraEditors
 Imports DevExpress.XtraBars.Docking2010
+Imports DevExpress.XtraGrid.Views.Base
 
 Partial Public Class FrmEdit
     Public Shared BookingId As Long
@@ -136,9 +137,26 @@ Partial Public Class FrmEdit
             If .Mismatch Then TxtMismatching.EditValue = "YES" Else TxtMismatching.EditValue = "NO"
             TxtError.EditValue = .ErrorLog
             If .Negative Then TxtNegative.EditValue = "YES" Else TxtNegative.EditValue = "NO"
-
+            If .Attachments = 0 Then
+                btnAttachments.Appearance.BackColor = Color.White
+                btnAttachments.ToolTip = "No attachments"
+            Else
+                btnAttachments.Appearance.BackColor = Color.FromArgb(255, 192, 192)
+                btnAttachments.ToolTip = $"{ .Attachments} attachments"
+            End If
+            IndicateAttachments(.Attachments)
         End With
 
+    End Sub
+
+    Private Sub IndicateAttachments(attacmentNumber As Short)
+        If attacmentNumber = 0 Then
+            btnAttachments.Appearance.BackColor = Color.White
+            btnAttachments.ToolTip = "No attachments"
+        Else
+            btnAttachments.Appearance.BackColor = Color.FromArgb(255, 192, 192)
+            btnAttachments.ToolTip = $"{attacmentNumber} attachments"
+        End If
     End Sub
     Private Sub FrmEdit_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If BookingsList.Count = 0 And BookingId <> 0 Then
@@ -204,6 +222,7 @@ Partial Public Class FrmEdit
             ShowBooking()
             GetComments()
             LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Always
+            LayoutControlGroup9.Visibility = Utils.LayoutVisibility.Always
             GridControl1.Visible = True
             If NoSave Then
                 Me.Text = BookingId.ToString & " (READ-ONLY)"
@@ -226,6 +245,7 @@ Partial Public Class FrmEdit
             End If
         Else
             LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Never
+            LayoutControlGroup9.Visibility = Utils.LayoutVisibility.Never
             GridControl1.Visible = False
             labelControl.Text = "Multiple Bookings"
             GridControl1.DataSource = Nothing
@@ -242,7 +262,9 @@ Partial Public Class FrmEdit
             Next
             BtnSaveComment.Enabled = True
         End If
-
+        If TabbedControlGroup2.SelectedTabPageIndex = 2 Then
+            LoadAuditDetails()
+        End If
         FrmMain.Wait(False)
     End Sub
 
@@ -445,5 +467,49 @@ Partial Public Class FrmEdit
             LuSection.Properties.ValueMember = "ID"
             LuSection.Properties.DisplayMember = "Section"
         End If
+    End Sub
+
+    Private Sub btnAttachments_Click(sender As Object, e As EventArgs) Handles btnAttachments.Click
+        FrmAttachment.BookingId = BookingId
+        FrmAttachment.ShowDialog()
+        currentBooking.Attachments = CShort(FrmAttachment.GridView1.RowCount)
+        IndicateAttachments(currentBooking.Attachments)
+    End Sub
+
+    Private Sub LoadAudit()
+        FrmMain.Wait(True)
+        Dim dt As DataTable = Audit.GetBookingAudit(BookingId)
+        GridControl2.DataSource = dt
+        LoadAuditDetails()
+        FrmMain.Wait(False)
+    End Sub
+
+    Private Sub LoadAuditDetails()
+        If GridView1.RowCount > 0 Then
+            Dim auditId As Long = CLng(GridView1.GetFocusedRowCellValue("AuditTrailID"))
+            If auditId > 0 Then
+                Dim dt As DataTable = Audit.GetAuditDetails(auditId)
+                ParseAudit(dt.Rows(0)(0).ToString, ListBoxControl1)
+                ParseAudit(dt.Rows(0)(1).ToString, ListBoxControl2)
+            End If
+        End If
+    End Sub
+
+    Private Sub GridView1_FocusedRowChanged(sender As Object, e As FocusedRowChangedEventArgs) Handles GridView1.FocusedRowChanged
+        LoadAuditDetails()
+    End Sub
+
+    Private Sub TabbedControlGroup2_SelectedPageChanged(sender As Object, e As LayoutTabPageChangedEventArgs) Handles TabbedControlGroup2.SelectedPageChanged
+        If TabbedControlGroup2.SelectedTabPageIndex = 2 Then
+            LoadAudit()
+        End If
+    End Sub
+
+    Private Sub ParseAudit(inputData As String, lb As DevExpress.XtraEditors.ListBoxControl)
+        lb.Items.Clear()
+        For Each l In Split(inputData, vbLf)
+            Dim newItem As String = $"<b>{l.Split(":"c)(0)}</b>: {l.Substring(l.IndexOf(":") + 1)}</p>"
+            lb.Items.Add(l)
+        Next
     End Sub
 End Class

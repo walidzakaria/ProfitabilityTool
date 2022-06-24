@@ -313,6 +313,7 @@ Public Class Booking
     Public Property ErrorLog() As String
     Public Property SysImportDate() As Date
     Public Property Section() As String
+    Public Property Attachments() As Short
 
 
     Public Function CheckJunk() As Short
@@ -475,7 +476,7 @@ Public Class Booking
 
     Public Function GetByID() As Boolean
         Dim result As Boolean = False
-        Dim query As String = "SELECT BookingID, Reference, HotelCode, HotelName, HotelCountry, GwgStatus, PurchaseCurrency, PurchasePrice,
+        Dim query As String = "SELECT Booking.BookingID, Reference, HotelCode, HotelName, HotelCountry, GwgStatus, PurchaseCurrency, PurchasePrice,
                                 SalesCurrency, SalesPrice, GwgHandlingFee, Margin, Difference, CurrencyHotelTC, NetRateHotelTC, NetRateHandlingTC,
                                 CheckHotel, CompanyGroup, BookingDate, TravelDate, RoomType, Board, Duration, TransferTo, TransferFrom,
                                 Pax, Adult, Child, ImportDate, IncomingAgency, BookingStateDesc, HotelFlag, MissingBookings, MarginCheck,
@@ -483,10 +484,18 @@ Public Class Booking
                                 AdjustedPrice, PriceBreakdown, Booking.LoginID, Junk, PurchasePriceEUR, SalesPriceEUR, MarginEUR, NetRateEUR,
                                 DifferenceEUR, (CASE WHEN GWGStatus = 'Can' THEN 1 ELSE 0 END) AS Cancelled, ExcessiveMargin AS Excessive,
                                 MismatchCalc As Mismatch, NegativeMargin,
-                                BookingStatus, MPImportDate, [Log], Section
+                                BookingStatus, MPImportDate, [Log], Section, COALESCE(Attachments.Attachments, 0) AS Attachments
                                 From Booking
                                 JOIN [Login] ON [Login].LoginID = Booking.ActionBy
-                                WHERE BookingID = " & BookingID.ToString & ";"
+                                LEFT JOIN
+                                (
+                                    SELECT BookingID, COUNT(AttachmentID) AS Attachments
+                                    FROM Attachment
+                                    GROUP BY BookingID
+                                ) Attachments ON Booking.BookingID = Attachments.BookingID
+
+
+                                WHERE Booking.BookingID = " & BookingID.ToString & ";"
 
         Dim dt As New DataTable()
         dt = ExClass.QueryGet(query)
@@ -568,6 +577,7 @@ Public Class Booking
                 MPImportDate = CDate(dt.Rows(0)(52))
             End If
             Section = CStr(dt.Rows(0)(54))
+            Attachments = CShort(dt.Rows(0)(55))
             result = True
         End If
         Return result
@@ -598,7 +608,7 @@ Public Class Comment
         Comment = Comment.Replace("'", "''")
         CommentDate = Now
         LoginID = GV.CurrentUser.LoginId
-        Dim calcText As String = Calculation.ToString
+        Dim calcText As String = Calculation.ToString.Replace(",", ".")
         If Calculation = Nothing Then
             calcText = "NULL"
         End If
@@ -630,18 +640,22 @@ Public Class Comment
         Comment = Comment.Replace("'", "''")
         CommentDate = Now
         LoginID = GV.CurrentUser.LoginId
-        Dim calcText As String = Calculation.ToString
+        Dim calcText As String = Calculation.ToString.Replace(",", ".")
         If Calculation = Nothing Then
             calcText = "NULL"
         End If
 
+        Dim sectionText As String = "NULL"
+        If SectionID <> 0 Then
+            sectionText = SectionID.ToString
+        End If
 
 
-        Dim query As String = "INSERT INTO Comment (Date, BookingID, Comment, Calculation, LoginID, Status) VALUES "
+        Dim query As String = "INSERT INTO Comment (Date, BookingID, Comment, Calculation, LoginID, Status, SectionID) VALUES "
         For x As Integer = 0 To bookingsList.Count - 1
 
-            query &= String.Format("('{0}', {1},'{2}', {3}, {4}, '{5}'), ",
-                               CommentDate.ToString("MM/dd/yyyy HH:mm"), bookingsList(x).ToString, Comment, calcText, LoginID, Status)
+            query &= String.Format("('{0}', {1},'{2}', {3}, {4}, '{5}', {6}), ",
+                               CommentDate.ToString("MM/dd/yyyy HH:mm"), bookingsList(x).ToString, Comment, calcText, LoginID, Status, sectionText)
         Next
         query = query.Substring(0, Len(query) - 2)
         query &= String.Format("; UPDATE Booking SET ActionBy = dbo.ActionBy(BookingID), Comments = dbo.LastComment(BookingID),
@@ -973,5 +987,83 @@ Public Class Section
         End If
 
         Return result
+    End Function
+End Class
+
+Public Class Attachment
+    Public Property AttachmentId() As Integer
+    Public Property BookingId() As Long
+    Public Property Time() As DateTime
+    Public Property AttachmentName() As String
+    Public Property LoginId() As Integer
+
+    Public FileData As Byte()
+
+    Public Sub New(attachmentId As Integer, bookingId As Long _
+                   , attachmentName As String, fileData As Byte(), loginId As Integer)
+        Me.AttachmentId = attachmentId
+        Me.BookingId = bookingId
+        Me.AttachmentName = attachmentName
+        Me.FileData = fileData
+        Me.LoginId = loginId
+    End Sub
+
+    Public Function Save() As Boolean
+
+        Dim query As String = $"INSERT INTO Attachment (BookingID, AttachmentName, FileData, LoginID) VALUES ({BookingId}, @AttachmentName, @FileData, {LoginId});"
+        Dim liParams As List(Of SqlParameter) = New List(Of SqlParameter)()
+        Dim fileNameParam As New SqlParameter("@AttachmentName", AttachmentName)
+        Dim fileDataParam As New SqlParameter("@FileData", SqlDbType.VarBinary)
+        fileDataParam.Value = FileData
+        liParams.Add(fileNameParam)
+        liParams.Add(fileDataParam)
+
+        Dim result As Boolean = True
+        Dim queryResult As String = ExClass.QuerySet(query, liParams)
+        If queryResult <> "True" Then
+            XtraMessageBox.Show(queryResult)
+            Result = False
+        End If
+
+        Return Result
+    End Function
+
+    Public Shared Sub Delete(attachmentId As Integer)
+        Dim query As String = $"DELETE FROM Attachment WHERE AttachmentID = {attachmentId};"
+        ExClass.QuerySet(query)
+    End Sub
+
+    Public Shared Function GetByBooking(bookingId As Long) As DataTable
+        Dim query As String = $"SELECT Att.AttachmentID, Att.[Time], Att.AttachmentName, Lo.Username
+                                FROM Attachment Att
+                                JOIN [Login] Lo ON Att.LoginID = Lo.LoginID
+                                WHERE Att.BookingID = {bookingId};"
+        Return ExClass.QueryGet(query)
+    End Function
+
+    Public Shared Function GetAttachmentFile(attachmentId As Integer) As Byte()
+        Dim query As String = $"SELECT FileData FROM Attachment WHERE AttachmentID = {attachmentId};"
+        Dim dt = ExClass.QueryGet(query)
+        Dim result As Byte() = DirectCast(dt.Rows(0)(0), Byte())
+
+        Return Result
+    End Function
+
+
+End Class
+
+Public Class Audit
+    Public Shared Function GetBookingAudit(bookingId As Long) As DataTable
+        Dim query As String = $"SELECT Aud.AuditTrailID, Aud.[Time], Lo.Username
+                                FROM AuditTrail Aud JOIN [Login] Lo ON Aud.LoginID = Lo.LoginID
+                                WHERE Aud.BookingID = {bookingId};"
+        Dim dt As DataTable = ExClass.QueryGet(query)
+        Return dt
+    End Function
+
+    Public Shared Function GetAuditDetails(auditId As Long) As DataTable
+        Dim query As String = $"SELECT OldValues, NewValues FROM AuditTrail WHERE AuditTrailID = {auditId};"
+        Dim dt As DataTable = ExClass.QueryGet(query)
+        Return dt
     End Function
 End Class
