@@ -81,12 +81,12 @@
                 gwgStatus = .GetRowCellValue(rowIndex, "GwgStatus").ToString
                 bookingStatus = .GetRowCellValue(rowIndex, "BookingStatus").ToString
                 purchaseCurrency = .GetRowCellValue(rowIndex, "PurchaseCurrency").ToString
-                purchasePrice = Val(.GetRowCellValue(rowIndex, "PurchasePrice").ToString.Replace(",", "")).ToString
+                purchasePrice = Math.Round(Val(.GetRowCellValue(rowIndex, "PurchasePrice").ToString.Replace(",", "")), 2, MidpointRounding.AwayFromZero).ToString
                 If purchasePrice.ToLower.Contains("e") Then
                     purchasePrice = "0"
                 End If
                 salesCurrency = .GetRowCellValue(rowIndex, "SalesCurrency").ToString
-                salesPrice = Val(.GetRowCellValue(rowIndex, "SalesPrice").ToString.Replace(",", "")).ToString
+                salesPrice = Math.Round(Val(.GetRowCellValue(rowIndex, "SalesPrice").ToString.Replace(",", "")), 2, MidpointRounding.AwayFromZero).ToString
                 If salesPrice.ToLower.Contains("e") Then
                     salesPrice = "0"
                 End If

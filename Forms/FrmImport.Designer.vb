@@ -102,7 +102,7 @@ Partial Class FrmImport
         Me.labelStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.labelStatus.Appearance.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold)
         Me.labelStatus.Appearance.Options.UseFont = True
-        Me.labelStatus.Location = New System.Drawing.Point(1145, 24)
+        Me.labelStatus.Location = New System.Drawing.Point(1718, 24)
         Me.labelStatus.Margin = New System.Windows.Forms.Padding(3, 3, 3, 1)
         Me.labelStatus.Name = "labelStatus"
         Me.labelStatus.Size = New System.Drawing.Size(49, 13)

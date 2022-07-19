@@ -25,34 +25,34 @@ Partial Public Class FrmEdit
     ''' </summary>
     '''
     Private Sub InitializeComponent()
-        Dim TableColumnDefinition7 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition8 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition9 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition10 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition11 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableColumnDefinition12 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
-        Dim TableRowDefinition5 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition6 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition7 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableRowDefinition8 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
-        Dim TableSpan4 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
-        Dim TableSpan5 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
-        Dim TableSpan6 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
-        Dim TileViewItemElement11 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement12 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement13 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement14 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement15 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement16 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement17 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement18 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement19 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim TileViewItemElement20 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim WindowsUIButtonImageOptions5 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim TableColumnDefinition1 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition2 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition3 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition4 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition5 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableColumnDefinition6 As DevExpress.XtraEditors.TableLayout.TableColumnDefinition = New DevExpress.XtraEditors.TableLayout.TableColumnDefinition()
+        Dim TableRowDefinition1 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition2 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition3 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableRowDefinition4 As DevExpress.XtraEditors.TableLayout.TableRowDefinition = New DevExpress.XtraEditors.TableLayout.TableRowDefinition()
+        Dim TableSpan1 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TableSpan2 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TableSpan3 As DevExpress.XtraEditors.TableLayout.TableSpan = New DevExpress.XtraEditors.TableLayout.TableSpan()
+        Dim TileViewItemElement1 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement2 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement3 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement4 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement5 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement6 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement7 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement8 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement9 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim TileViewItemElement10 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
+        Dim WindowsUIButtonImageOptions9 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEdit))
-        Dim WindowsUIButtonImageOptions6 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions7 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions8 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions10 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions11 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions12 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.TileViewColumn()
@@ -216,6 +216,7 @@ Partial Public Class FrmEdit
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.LayoutControlGroup6 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.btnAttachments = New DevExpress.XtraEditors.SimpleButton()
+        Me.SplashScreenManager1 = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, GetType(Global.ProfitabilityTool.FrmWait), True, True)
         CType(Me.dataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.dataLayoutControl1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -844,154 +845,154 @@ Partial Public Class FrmEdit
         Me.TileView1.OptionsTiles.LayoutMode = DevExpress.XtraGrid.Views.Tile.TileViewLayoutMode.List
         Me.TileView1.OptionsTiles.Orientation = System.Windows.Forms.Orientation.Vertical
         Me.TileView1.OptionsTiles.Padding = New System.Windows.Forms.Padding(5)
-        TableColumnDefinition7.Length.Value = 104.0R
-        TableColumnDefinition8.Length.Value = 104.0R
-        TableColumnDefinition9.Length.Value = 109.0R
-        TableColumnDefinition10.Length.Value = 101.0R
-        TableColumnDefinition11.Length.Value = 105.0R
-        TableColumnDefinition12.Length.Value = 105.0R
-        Me.TileView1.TileColumns.Add(TableColumnDefinition7)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition8)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition9)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition10)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition11)
-        Me.TileView1.TileColumns.Add(TableColumnDefinition12)
-        TableRowDefinition5.Length.Value = 27.0R
-        TableRowDefinition6.Length.Value = 37.0R
-        TableRowDefinition7.Length.Value = 48.0R
-        TableRowDefinition8.Length.Value = 30.0R
-        Me.TileView1.TileRows.Add(TableRowDefinition5)
-        Me.TileView1.TileRows.Add(TableRowDefinition6)
-        Me.TileView1.TileRows.Add(TableRowDefinition7)
-        Me.TileView1.TileRows.Add(TableRowDefinition8)
-        TableSpan4.ColumnIndex = 1
-        TableSpan4.ColumnSpan = 5
-        TableSpan4.RowIndex = 1
-        TableSpan4.RowSpan = 2
-        TableSpan5.ColumnIndex = 1
-        TableSpan5.ColumnSpan = 2
-        TableSpan5.RowIndex = 3
-        TableSpan6.ColumnIndex = 1
-        TableSpan6.ColumnSpan = 3
-        Me.TileView1.TileSpans.Add(TableSpan4)
-        Me.TileView1.TileSpans.Add(TableSpan5)
-        Me.TileView1.TileSpans.Add(TableSpan6)
-        TileViewItemElement11.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        TileViewItemElement11.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement11.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement11.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement11.StretchHorizontal = True
-        TileViewItemElement11.StretchVertical = True
-        TileViewItemElement11.Text = "Date:"
-        TileViewItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement11.TextLocation = New System.Drawing.Point(-10, 0)
-        TileViewItemElement12.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileViewItemElement12.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement12.Column = Me.GridColumn2
-        TileViewItemElement12.ColumnIndex = 1
-        TileViewItemElement12.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement12.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement12.StretchHorizontal = True
-        TileViewItemElement12.StretchVertical = True
-        TileViewItemElement12.Text = "GridColumn2"
-        TileViewItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
-        TileViewItemElement12.TextLocation = New System.Drawing.Point(-35, 0)
-        TileViewItemElement13.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        TileViewItemElement13.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement13.ColumnIndex = 4
-        TileViewItemElement13.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement13.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement13.StretchHorizontal = True
-        TileViewItemElement13.StretchVertical = True
-        TileViewItemElement13.Text = "User:"
-        TileViewItemElement13.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement14.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        TileViewItemElement14.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement14.Column = Me.GridColumn5
-        TileViewItemElement14.ColumnIndex = 5
-        TileViewItemElement14.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement14.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement14.StretchHorizontal = True
-        TileViewItemElement14.StretchVertical = True
-        TileViewItemElement14.Text = "GridColumn5"
-        TileViewItemElement14.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement15.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        TileViewItemElement15.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement15.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement15.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement15.RowIndex = 1
-        TileViewItemElement15.StretchHorizontal = True
-        TileViewItemElement15.StretchVertical = True
-        TileViewItemElement15.Text = "Comment:"
-        TileViewItemElement15.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement15.TextLocation = New System.Drawing.Point(-10, 0)
-        TileViewItemElement16.Appearance.Normal.BorderColor = System.Drawing.Color.Gray
-        TileViewItemElement16.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        TileViewItemElement16.Appearance.Normal.Options.UseBorderColor = True
-        TileViewItemElement16.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement16.Appearance.Normal.Options.UseTextOptions = True
-        TileViewItemElement16.Appearance.Normal.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
-        TileViewItemElement16.Appearance.Normal.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
-        TileViewItemElement16.Column = Me.GridColumn3
-        TileViewItemElement16.ColumnIndex = 1
-        TileViewItemElement16.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement16.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement16.RowIndex = 1
-        TileViewItemElement16.StretchHorizontal = True
-        TileViewItemElement16.StretchVertical = True
-        TileViewItemElement16.Text = "GridColumn3"
-        TileViewItemElement16.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
-        TileViewItemElement16.TextLocation = New System.Drawing.Point(0, 8)
-        TileViewItemElement17.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TileViewItemElement17.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement17.ColumnIndex = 4
-        TileViewItemElement17.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement17.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement17.RowIndex = 3
-        TileViewItemElement17.StretchHorizontal = True
-        TileViewItemElement17.StretchVertical = True
-        TileViewItemElement17.Text = "Calculation:"
-        TileViewItemElement17.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement18.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        TileViewItemElement18.Appearance.Normal.ForeColor = System.Drawing.Color.Red
-        TileViewItemElement18.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement18.Appearance.Normal.Options.UseForeColor = True
-        TileViewItemElement18.Column = Me.GridColumn4
-        TileViewItemElement18.ColumnIndex = 5
-        TileViewItemElement18.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement18.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement18.RowIndex = 3
-        TileViewItemElement18.StretchHorizontal = True
-        TileViewItemElement18.StretchVertical = True
-        TileViewItemElement18.Text = "GridColumn4"
-        TileViewItemElement18.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement19.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        TileViewItemElement19.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement19.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement19.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement19.RowIndex = 3
-        TileViewItemElement19.Text = "Status:"
-        TileViewItemElement19.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
-        TileViewItemElement19.TextLocation = New System.Drawing.Point(-10, 0)
-        TileViewItemElement20.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
-        TileViewItemElement20.Appearance.Normal.Options.UseFont = True
-        TileViewItemElement20.Column = Me.TileViewColumn1
-        TileViewItemElement20.ColumnIndex = 1
-        TileViewItemElement20.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileViewItemElement20.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
-        TileViewItemElement20.RowIndex = 3
-        TileViewItemElement20.Text = "TileViewColumn1"
-        TileViewItemElement20.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
-        Me.TileView1.TileTemplate.Add(TileViewItemElement11)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement12)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement13)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement14)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement15)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement16)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement17)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement18)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement19)
-        Me.TileView1.TileTemplate.Add(TileViewItemElement20)
+        TableColumnDefinition1.Length.Value = 104.0R
+        TableColumnDefinition2.Length.Value = 104.0R
+        TableColumnDefinition3.Length.Value = 109.0R
+        TableColumnDefinition4.Length.Value = 101.0R
+        TableColumnDefinition5.Length.Value = 105.0R
+        TableColumnDefinition6.Length.Value = 105.0R
+        Me.TileView1.TileColumns.Add(TableColumnDefinition1)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition2)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition3)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition4)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition5)
+        Me.TileView1.TileColumns.Add(TableColumnDefinition6)
+        TableRowDefinition1.Length.Value = 27.0R
+        TableRowDefinition2.Length.Value = 37.0R
+        TableRowDefinition3.Length.Value = 48.0R
+        TableRowDefinition4.Length.Value = 30.0R
+        Me.TileView1.TileRows.Add(TableRowDefinition1)
+        Me.TileView1.TileRows.Add(TableRowDefinition2)
+        Me.TileView1.TileRows.Add(TableRowDefinition3)
+        Me.TileView1.TileRows.Add(TableRowDefinition4)
+        TableSpan1.ColumnIndex = 1
+        TableSpan1.ColumnSpan = 5
+        TableSpan1.RowIndex = 1
+        TableSpan1.RowSpan = 2
+        TableSpan2.ColumnIndex = 1
+        TableSpan2.ColumnSpan = 2
+        TableSpan2.RowIndex = 3
+        TableSpan3.ColumnIndex = 1
+        TableSpan3.ColumnSpan = 3
+        Me.TileView1.TileSpans.Add(TableSpan1)
+        Me.TileView1.TileSpans.Add(TableSpan2)
+        Me.TileView1.TileSpans.Add(TableSpan3)
+        TileViewItemElement1.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        TileViewItemElement1.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement1.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement1.StretchHorizontal = True
+        TileViewItemElement1.StretchVertical = True
+        TileViewItemElement1.Text = "Date:"
+        TileViewItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement1.TextLocation = New System.Drawing.Point(-10, 0)
+        TileViewItemElement2.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement2.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement2.Column = Me.GridColumn2
+        TileViewItemElement2.ColumnIndex = 1
+        TileViewItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement2.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement2.StretchHorizontal = True
+        TileViewItemElement2.StretchVertical = True
+        TileViewItemElement2.Text = "GridColumn2"
+        TileViewItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
+        TileViewItemElement2.TextLocation = New System.Drawing.Point(-35, 0)
+        TileViewItemElement3.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        TileViewItemElement3.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement3.ColumnIndex = 4
+        TileViewItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement3.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement3.StretchHorizontal = True
+        TileViewItemElement3.StretchVertical = True
+        TileViewItemElement3.Text = "User:"
+        TileViewItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement4.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement4.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement4.Column = Me.GridColumn5
+        TileViewItemElement4.ColumnIndex = 5
+        TileViewItemElement4.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement4.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement4.StretchHorizontal = True
+        TileViewItemElement4.StretchVertical = True
+        TileViewItemElement4.Text = "GridColumn5"
+        TileViewItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement5.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        TileViewItemElement5.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement5.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement5.RowIndex = 1
+        TileViewItemElement5.StretchHorizontal = True
+        TileViewItemElement5.StretchVertical = True
+        TileViewItemElement5.Text = "Comment:"
+        TileViewItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement5.TextLocation = New System.Drawing.Point(-10, 0)
+        TileViewItemElement6.Appearance.Normal.BorderColor = System.Drawing.Color.Gray
+        TileViewItemElement6.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement6.Appearance.Normal.Options.UseBorderColor = True
+        TileViewItemElement6.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement6.Appearance.Normal.Options.UseTextOptions = True
+        TileViewItemElement6.Appearance.Normal.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+        TileViewItemElement6.Appearance.Normal.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
+        TileViewItemElement6.Column = Me.GridColumn3
+        TileViewItemElement6.ColumnIndex = 1
+        TileViewItemElement6.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement6.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement6.RowIndex = 1
+        TileViewItemElement6.StretchHorizontal = True
+        TileViewItemElement6.StretchVertical = True
+        TileViewItemElement6.Text = "GridColumn3"
+        TileViewItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft
+        TileViewItemElement6.TextLocation = New System.Drawing.Point(0, 8)
+        TileViewItemElement7.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TileViewItemElement7.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement7.ColumnIndex = 4
+        TileViewItemElement7.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement7.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement7.RowIndex = 3
+        TileViewItemElement7.StretchHorizontal = True
+        TileViewItemElement7.StretchVertical = True
+        TileViewItemElement7.Text = "Calculation:"
+        TileViewItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement8.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement8.Appearance.Normal.ForeColor = System.Drawing.Color.Red
+        TileViewItemElement8.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement8.Appearance.Normal.Options.UseForeColor = True
+        TileViewItemElement8.Column = Me.GridColumn4
+        TileViewItemElement8.ColumnIndex = 5
+        TileViewItemElement8.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement8.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement8.RowIndex = 3
+        TileViewItemElement8.StretchHorizontal = True
+        TileViewItemElement8.StretchVertical = True
+        TileViewItemElement8.Text = "GridColumn4"
+        TileViewItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement9.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        TileViewItemElement9.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement9.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement9.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement9.RowIndex = 3
+        TileViewItemElement9.Text = "Status:"
+        TileViewItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleRight
+        TileViewItemElement9.TextLocation = New System.Drawing.Point(-10, 0)
+        TileViewItemElement10.Appearance.Normal.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        TileViewItemElement10.Appearance.Normal.Options.UseFont = True
+        TileViewItemElement10.Column = Me.TileViewColumn1
+        TileViewItemElement10.ColumnIndex = 1
+        TileViewItemElement10.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
+        TileViewItemElement10.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside
+        TileViewItemElement10.RowIndex = 3
+        TileViewItemElement10.Text = "TileViewColumn1"
+        TileViewItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleLeft
+        Me.TileView1.TileTemplate.Add(TileViewItemElement1)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement2)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement3)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement4)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement5)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement6)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement7)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement8)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement9)
+        Me.TileView1.TileTemplate.Add(TileViewItemElement10)
         '
         'GridColumn1
         '
@@ -1318,11 +1319,11 @@ Partial Public Class FrmEdit
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = True
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = True
         Me.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        WindowsUIButtonImageOptions5.Image = CType(resources.GetObject("WindowsUIButtonImageOptions5.Image"), System.Drawing.Image)
-        WindowsUIButtonImageOptions6.ImageUri.Uri = "Save;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions7.ImageUri.Uri = "Reset;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions8.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
-        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Mail", True, WindowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", True, WindowsUIButtonImageOptions7, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions8, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False)})
+        WindowsUIButtonImageOptions9.Image = CType(resources.GetObject("WindowsUIButtonImageOptions9.Image"), System.Drawing.Image)
+        WindowsUIButtonImageOptions10.ImageUri.Uri = "Save;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions11.ImageUri.Uri = "Reset;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions12.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
+        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Mail", True, WindowsUIButtonImageOptions9, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions10, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", True, WindowsUIButtonImageOptions11, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions12, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False)})
         Me.windowsUIButtonPanelMain.EnableImageTransparency = True
         Me.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
         Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(24, 483)
@@ -1633,7 +1634,7 @@ Partial Public Class FrmEdit
         Me.TabbedControlGroup2.AppearanceTabPage.HeaderDisabled.Options.UseFont = True
         Me.TabbedControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.TabbedControlGroup2.Name = "TabbedControlGroup2"
-        Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup7
+        Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup9
         Me.TabbedControlGroup2.Size = New System.Drawing.Size(721, 547)
         Me.TabbedControlGroup2.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup5, Me.LayoutControlGroup7, Me.LayoutControlGroup9})
         '
@@ -2317,6 +2318,10 @@ Partial Public Class FrmEdit
         Me.btnAttachments.Size = New System.Drawing.Size(44, 33)
         Me.btnAttachments.TabIndex = 2
         '
+        'SplashScreenManager1
+        '
+        Me.SplashScreenManager1.ClosingDelay = 500
+        '
         'FrmEdit
         '
         Me.Appearance.BackColor = System.Drawing.Color.White
@@ -2651,4 +2656,5 @@ Partial Public Class FrmEdit
     Friend WithEvents LayoutViewCard1 As DevExpress.XtraGrid.Views.Layout.LayoutViewCard
     Friend WithEvents ListBoxControl1 As DevExpress.XtraEditors.ListBoxControl
     Friend WithEvents ListBoxControl2 As DevExpress.XtraEditors.ListBoxControl
+    Friend WithEvents SplashScreenManager1 As DevExpress.XtraSplashScreen.SplashScreenManager
 End Class

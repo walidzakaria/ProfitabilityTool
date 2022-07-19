@@ -74,7 +74,7 @@ Partial Public Class FrmMain
         GridView1.BestFitColumns()
         Wait(False)
         SetCheckedRibbonButton(BtnImport)
-        FrmImport.ShowDialog()
+        'FrmImport.ShowDialog()
     End Sub
 
     Private Function ParseText() As DataTable
@@ -345,6 +345,7 @@ Partial Public Class FrmMain
                 If Not IsReadOnlyBookings(True, bookingId.ToString) Then
                     LockBookings(bookingId.ToString, True)
                     FrmEdit.BookingId = bookingId
+                    Wait(False)
                     FrmEdit.ShowDialog()
                     LockBookings(bookingId.ToString, False)
                 End If
@@ -361,6 +362,7 @@ Partial Public Class FrmMain
             If Not IsReadOnlyBookings(False, bookings) Then
                 LockBookings(bookings, True)
                 FrmEdit.BookingsList = bookingsList
+                Wait(False)
                 FrmEdit.ShowDialog()
                 LockBookings(bookings, False)
             End If

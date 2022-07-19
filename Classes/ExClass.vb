@@ -7,7 +7,6 @@ Public Class ExClass
     ''' </summary>
 
     Public Shared myConn As New SqlConnection(My.Settings.DatabaseConnection)
-    'Public Shared myConn As New SqlConnection("workstation id=rs24profitabilitytool.mssql.somee.com;packet size=4096;user id=waliiid_SQLLogin_1;pwd=nhyb4lqews;data source=rs24profitabilitytool.mssql.somee.com;persist security info=False;initial catalog=rs24profitabilitytool")
     'Public Shared myConn As New SqlConnection($"Data Source={My.Computer.Name}\MASTER;Initial Catalog=YT_DB;Integrated Security=SSPI;")
 
     Public Shared Function QuerySet(query As String, Optional liParams As List(Of SqlParameter) = Nothing) As String

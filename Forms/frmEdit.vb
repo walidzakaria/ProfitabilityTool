@@ -213,59 +213,7 @@ Partial Public Class FrmEdit
     End Sub
 
     Private Sub FrmEdit_Load(sender As Object, e As EventArgs) Handles Me.Load
-        FrmMain.Wait(True)
 
-        PopulateStatusMain()
-
-        If BookingsList.Count = 0 Then
-            currentBooking = GetDataSource(BookingId)
-            ShowBooking()
-            GetComments()
-            LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Always
-            LayoutControlGroup9.Visibility = Utils.LayoutVisibility.Always
-            GridControl1.Visible = True
-            If NoSave Then
-                Me.Text = BookingId.ToString & " (READ-ONLY)"
-                For Each i As WindowsUIButton In windowsUIButtonPanelMain.Buttons
-                    If i.Caption = "Save" Then
-                        i.Enabled = False
-                        Exit For
-                    End If
-                Next
-                BtnSaveComment.Enabled = False
-            Else
-                Me.Text = BookingId.ToString
-                For Each i As WindowsUIButton In windowsUIButtonPanelMain.Buttons
-                    If i.Caption = "Save" Then
-                        i.Enabled = True
-                        Exit For
-                    End If
-                Next
-                BtnSaveComment.Enabled = True
-            End If
-        Else
-            LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Never
-            LayoutControlGroup9.Visibility = Utils.LayoutVisibility.Never
-            GridControl1.Visible = False
-            labelControl.Text = "Multiple Bookings"
-            GridControl1.DataSource = Nothing
-            If NoSave Then
-                Me.Text = "Multi-Bookings (READ-ONLY)"
-            Else
-                Me.Text = "Multi-Bookings"
-            End If
-            For Each i As WindowsUIButton In windowsUIButtonPanelMain.Buttons
-                If i.Caption = "Save" Then
-                    i.Enabled = True
-                    Exit For
-                End If
-            Next
-            BtnSaveComment.Enabled = True
-        End If
-        If TabbedControlGroup2.SelectedTabPageIndex = 2 Then
-            LoadAuditDetails()
-        End If
-        FrmMain.Wait(False)
     End Sub
 
     Private Sub GetComments()
@@ -294,24 +242,24 @@ Partial Public Class FrmEdit
 
     Private Sub SaveCurrent()
         If Not NoSave And (GV.CurrentUser.Authority = "Admin" Or GV.CurrentUser.Authority = "RS") Then
-            FrmMain.Wait(True)
+            Wait(True)
             UpdateBooking()
             If currentBooking.Save() Then
                 currentBooking = GetDataSource(BookingId)
                 ShowBooking()
                 UpdateChangedRow()
             End If
-            FrmMain.Wait(False)
+            Wait(False)
         End If
     End Sub
     Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
         If e.Button.Properties.Caption = "Save" Then
             SaveCurrent()
         ElseIf e.Button.Properties.Caption = "Reset Changes" Then
-            FrmMain.Wait(True)
+            Wait(True)
             currentBooking = GetDataSource(BookingId)
             ShowBooking()
-            FrmMain.Wait(False)
+            Wait(False)
         ElseIf e.Button.Properties.Caption = "Close" Then
             Me.Close()
         ElseIf e.Button.Properties.Caption = "Mail" Then
@@ -360,7 +308,7 @@ Partial Public Class FrmEdit
             XtraMessageBox.Show("please enter comment!")
             TxtComment.Focus()
         Else
-            FrmMain.Wait(True)
+            Wait(True)
             Dim section As Integer
             If Not LuSection.EditValue Is Nothing Then
                 section = CInt(LuSection.EditValue)
@@ -398,14 +346,14 @@ Partial Public Class FrmEdit
                         Me.Close()
                     End If
                 Else
-                    FrmMain.Wait(False)
+                    Wait(False)
                     XtraMessageBox.Show("Cannot save comment. All bookings are locked!")
                     Exit Sub
                 End If
 
             End If
 
-            FrmMain.Wait(False)
+            Wait(False)
         End If
     End Sub
 
@@ -477,11 +425,11 @@ Partial Public Class FrmEdit
     End Sub
 
     Private Sub LoadAudit()
-        FrmMain.Wait(True)
+        Wait(True)
         Dim dt As DataTable = Audit.GetBookingAudit(BookingId)
         GridControl2.DataSource = dt
         LoadAuditDetails()
-        FrmMain.Wait(False)
+        Wait(False)
     End Sub
 
     Private Sub LoadAuditDetails()
@@ -511,5 +459,81 @@ Partial Public Class FrmEdit
             Dim newItem As String = $"<b>{l.Split(":"c)(0)}</b>: {l.Substring(l.IndexOf(":") + 1)}</p>"
             lb.Items.Add(l)
         Next
+    End Sub
+
+    Public Sub Wait(ByVal wait As Boolean)
+        If wait = True Then
+            Try
+                Me.SplashScreenManager1.ShowWaitForm()
+            Catch ex As Exception
+
+            End Try
+        Else
+            Try
+                Me.SplashScreenManager1.CloseWaitForm()
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
+
+    Private Sub FrmEdit_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Wait(True)
+
+        PopulateStatusMain()
+
+        If BookingsList.Count = 0 Then
+            currentBooking = GetDataSource(BookingId)
+            ShowBooking()
+            GetComments()
+            LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Always
+            LayoutControlGroup9.Visibility = Utils.LayoutVisibility.Always
+            GridControl1.Visible = True
+            If NoSave Then
+                Me.Text = BookingId.ToString & " (READ-ONLY)"
+                For Each i As WindowsUIButton In windowsUIButtonPanelMain.Buttons
+                    If i.Caption = "Save" Then
+                        i.Enabled = False
+                        Exit For
+                    End If
+                Next
+                BtnSaveComment.Enabled = False
+            Else
+                Me.Text = BookingId.ToString
+                For Each i As WindowsUIButton In windowsUIButtonPanelMain.Buttons
+                    If i.Caption = "Save" Then
+                        i.Enabled = True
+                        Exit For
+                    End If
+                Next
+                BtnSaveComment.Enabled = True
+            End If
+        Else
+            LayoutControlGroup5.Visibility = Utils.LayoutVisibility.Never
+            LayoutControlGroup9.Visibility = Utils.LayoutVisibility.Never
+            GridControl1.Visible = False
+            labelControl.Text = "Multiple Bookings"
+            GridControl1.DataSource = Nothing
+            If NoSave Then
+                Me.Text = "Multi-Bookings (READ-ONLY)"
+            Else
+                Me.Text = "Multi-Bookings"
+            End If
+            For Each i As WindowsUIButton In windowsUIButtonPanelMain.Buttons
+                If i.Caption = "Save" Then
+                    i.Enabled = True
+                    Exit For
+                End If
+            Next
+            BtnSaveComment.Enabled = True
+        End If
+        GridControl2.DataSource = Nothing
+        ListBoxControl1.Items.Clear()
+        ListBoxControl2.Items.Clear()
+
+        If TabbedControlGroup2.SelectedTabPageIndex = 2 Then
+            LoadAudit()
+        End If
+        Wait(False)
     End Sub
 End Class
