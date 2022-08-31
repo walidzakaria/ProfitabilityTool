@@ -6,8 +6,8 @@ Public Class ExClass
     ''' Generic methods and functions
     ''' </summary>
 
-    Public Shared myConn As New SqlConnection(My.Settings.DatabaseConnection)
-    'Public Shared myConn As New SqlConnection($"Data Source={My.Computer.Name}\MASTER;Initial Catalog=YT_DB;Integrated Security=SSPI;")
+    'Public Shared myConn As New SqlConnection(My.Settings.DatabaseConnection)
+    Public Shared myConn As New SqlConnection($"Data Source={My.Computer.Name}\MASTER;Initial Catalog=YT_DB;Integrated Security=SSPI;")
 
     Public Shared Function QuerySet(query As String, Optional liParams As List(Of SqlParameter) = Nothing) As String
         Dim result As String

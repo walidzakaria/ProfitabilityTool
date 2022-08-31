@@ -6,7 +6,7 @@ Imports DevExpress.XtraGrid.Views.Base
 Partial Public Class FrmEdit
     Public Shared BookingId As Long
     Dim currentBooking As New Booking()
-    Public Shared BookingsList As New List(Of Integer)
+    Public Shared BookingsList As New List(Of Long)
     Public Shared NoSave As Boolean
 
     Public Sub New()
@@ -234,7 +234,7 @@ Partial Public Class FrmEdit
         dt.Columns.Add("Calculation")
         dt.Columns.Add("Status", GetType(Integer))
 
-        dt = CType(ExClass.QueryGet(query), DataTable)
+        dt = ExClass.QueryGet(query)
 
         GridControl1.DataSource = dt
 
@@ -389,9 +389,9 @@ Partial Public Class FrmEdit
                     SELECT BookingID FROM Booking WHERE BookingID IN ({0}) AND (Locked IS NULL OR Locked = {1});",
                                                     unlockedBookings, GV.CurrentUser.LoginId.ToString)
         Dim dt As DataTable = ExClass.QueryGet(bookingsQuery)
-        BookingsList = New List(Of Integer)
+        BookingsList = New List(Of Long)
         For Each r As DataRow In dt.Rows
-            BookingsList.Add(CInt(r(0)))
+            BookingsList.Add(CLng(r(0)))
         Next
     End Sub
 

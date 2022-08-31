@@ -1,6 +1,4 @@
-﻿Imports System.Data.OleDb
-
-Public Class FrmImport
+﻿Public Class FrmImport
     Dim bookingsDatatable As DataTable
     Private Sub WindowsUIButtonPanelMain_ButtonClick(sender As Object, e As DevExpress.XtraBars.Docking2010.ButtonEventArgs) Handles windowsUIButtonPanelMain.ButtonClick
         Select Case e.Button.Properties.Caption
@@ -18,39 +16,117 @@ Public Class FrmImport
             For Each file In files
                 LabelControl1.Text = $"Processing {files.IndexOf(file) + 1} of {files.Count} files"
                 Application.DoEvents()
-                Dim dt As DataTable = ParseExcel(file)
+                Dim dt As DataTable = ExcelToDataTable.GetDatatable(file)
+                ' Dim dt As DataTable = ParseExcel(file)
                 SaveBulk(dt, file)
             Next
             LabelControl1.Text = "Done"
         End If
     End Sub
 
-    Private Function ParseExcel(fileName As String) As DataTable
-        Dim conStr As String = $"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={fileName};Extended Properties='Excel 8.0;HDR=Yes;IMEX=1'"
-        Dim conExcel As New OleDbConnection(conStr)
-        Dim cmdExcel As New OleDbCommand()
-        Dim oda As New OleDbDataAdapter()
-        cmdExcel.Connection = conExcel
-        'Get the name of First Sheet
-        conExcel.Open()
-        Dim dtExcelSchema = conExcel.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, Nothing)
-        Dim SheetName As String = ""
-        If dtExcelSchema.Rows.Count > 0 Then
-            SheetName = dtExcelSchema.Rows(dtExcelSchema.Rows.Count - 1)("TABLE_NAME").ToString()
-        End If
-        conExcel.Close()
-        'Read Data from First Sheet
-        conExcel.Open()
-        cmdExcel.CommandText = "SELECT * From [" & SheetName & "]"
-        oda.SelectCommand = cmdExcel
-        Dim dt As New DataTable()
-        oda.Fill(dt)
-        dt.TableName = SheetName.ToString().Replace("$", "")
-        conExcel.Close()
+    'Private Function ParseExcel(fileName As String) As DataTable
 
-        Return dt
+    '    Dim xlApp As Microsoft.Office.Interop.Excel.Application = New Microsoft.Office.Interop.Excel.Application
+    '    Dim xlWb As Microsoft.Office.Interop.Excel.Workbook = xlApp.Workbooks.Open(fileName, [ReadOnly]:=True)
+    '    Dim xlSh As Microsoft.Office.Interop.Excel.Worksheet = DirectCast(xlWb.Sheets(1), Microsoft.Office.Interop.Excel.Worksheet)
+    '    Dim xlRange As Microsoft.Office.Interop.Excel.Range
+    '    xlRange = xlSh.UsedRange
 
-    End Function
+    '    Dim xlRows As Object(,)
+    '    xlRows = CType(xlRange.Value, Object(,))
+    '    Dim dt As New DataTable()
+
+
+    '    dt.Columns.Add("Reference")
+    '    dt.Columns.Add("Hotelcode")
+    '    dt.Columns.Add("Hotelname")
+    '    dt.Columns.Add("HotelCountry")
+    '    dt.Columns.Add("GWGStatus")
+    '    dt.Columns.Add("BookingStatus")
+    '    dt.Columns.Add("PurchaseCurrency")
+    '    dt.Columns.Add("PurchasePrice")
+    '    dt.Columns.Add("SalesCurrency")
+    '    dt.Columns.Add("SalesPrice")
+    '    dt.Columns.Add("Handling Fee")
+    '    dt.Columns.Add("Margin")
+    '    dt.Columns.Add("difference")
+    '    dt.Columns.Add("CurrencyHotelTC")
+    '    dt.Columns.Add("NetRateHotelTC")
+    '    dt.Columns.Add("NetRateHandlingTC")
+    '    dt.Columns.Add("CheckHotel")
+    '    dt.Columns.Add("Company_Group")
+    '    dt.Columns.Add("Bookingdate")
+    '    dt.Columns.Add("Traveldate")
+    '    dt.Columns.Add("Roomtype")
+    '    dt.Columns.Add("Board")
+    '    dt.Columns.Add("Duration")
+    '    dt.Columns.Add("TransferTo")
+    '    dt.Columns.Add("TransferFrom")
+    '    dt.Columns.Add("Pax")
+    '    dt.Columns.Add("Adult")
+    '    dt.Columns.Add("Child")
+    '    dt.Columns.Add("ImportDate")
+    '    dt.Columns.Add("MPImportDate")
+    '    dt.Columns.Add("IncomingAgency")
+    '    dt.Columns.Add("BookingStateDesc")
+    '    dt.Columns.Add("Hotel Flag")
+    '    dt.Columns.Add("Missing Bookings")
+    '    dt.Columns.Add("Margin Check")
+    '    dt.Columns.Add("Difference TO Price")
+    '    dt.Columns.Add("Action By")
+    '    dt.Columns.Add("Status")
+    '    dt.Columns.Add("Comments")
+    '    dt.Columns.Add("Difference Reason")
+    '    dt.Columns.Add("Price Breakdown")
+    '    Dim liCells As New List(Of Object)()
+
+    '    For excelRow As Integer = xlRows.GetLowerBound(0) + 1 To xlRows.GetUpperBound(0)
+
+    '        For excelColumn As Integer = xlRows.GetLowerBound(1) To xlRows.GetUpperBound(1)
+
+    '            'Populate DataTable here
+    '            Dim excelValue = xlRows(excelRow, excelColumn)
+    '            liCells.Add(excelValue)
+
+    '            Console.WriteLine(String.Concat("At row ", excelRow, " column ", excelColumn, " the value is ", excelValue))
+    '        Next excelColumn
+    '        dt.Rows.Add(liCells)
+    '        liCells.Clear()
+    '    Next excelRow
+
+    '    xlRange = Nothing
+    '    xlSh = Nothing
+    '    xlWb.Close()
+    '    xlWb = Nothing
+    '    xlApp.Quit()
+    '    xlApp = Nothing
+
+
+    '    'Dim conStr As String = $"Provider=Microsoft.ACE.OLEDB.12.0;Data Source={fileName};Extended Properties='Excel 8.0;HDR=Yes;IMEX=1'"
+    '    'Dim conExcel As New OleDbConnection(conStr)
+    '    'Dim cmdExcel As New OleDbCommand()
+    '    'Dim oda As New OleDbDataAdapter()
+    '    'cmdExcel.Connection = conExcel
+    '    ''Get the name of First Sheet
+    '    'conExcel.Open()
+    '    'Dim dtExcelSchema = conExcel.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, Nothing)
+    '    'Dim SheetName As String = ""
+    '    'If dtExcelSchema.Rows.Count > 0 Then
+    '    '    SheetName = dtExcelSchema.Rows(dtExcelSchema.Rows.Count - 1)("TABLE_NAME").ToString()
+    '    'End If
+    '    'conExcel.Close()
+    '    ''Read Data from First Sheet
+    '    'conExcel.Open()
+    '    'cmdExcel.CommandText = "SELECT * From [" & SheetName & "]"
+    '    'oda.SelectCommand = cmdExcel
+    '    'Dim dt As New DataTable()
+    '    'oda.Fill(dt)
+    '    'dt.TableName = SheetName.ToString().Replace("$", "")
+    '    'conExcel.Close()
+
+    '    Return dt
+
+    'End Function
 
     Private Sub FrmImport_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         bookingsDatatable = New DataTable()
@@ -213,4 +289,11 @@ Public Class FrmImport
         Return result
     End Function
 
+    Private Function MakeTableFromRange(rng As Microsoft.Office.Interop.Excel.Range) As DataTable
+        Dim table = New DataTable()
+        For Each column In rng
+            table.Columns.Add(column)
+        Next
+
+    End Function
 End Class

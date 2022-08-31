@@ -351,7 +351,7 @@ Partial Public Class FrmMain
                 End If
             End If
         ElseIf GridView1.SelectedRowsCount > 1 Then
-            Dim bookingsList As New List(Of Integer)
+            Dim bookingsList As New List(Of Long)
 
             For Each i As Integer In GridView1.GetSelectedRows
                 bookingsList.Add(CInt(GridView1.GetRowCellValue(i, "BookingID")))
@@ -877,5 +877,9 @@ Partial Public Class FrmMain
 
     Private Sub BtnUpload_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BtnUpload.ItemClick
         FrmImport.ShowDialog()
+    End Sub
+
+    Private Sub btnBulkComment_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btnBulkComment.ItemClick
+        FrmImportComment.ShowDialog()
     End Sub
 End Class

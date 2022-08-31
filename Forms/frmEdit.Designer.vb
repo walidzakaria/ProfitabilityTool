@@ -48,11 +48,11 @@ Partial Public Class FrmEdit
         Dim TileViewItemElement8 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
         Dim TileViewItemElement9 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
         Dim TileViewItemElement10 As DevExpress.XtraGrid.Views.Tile.TileViewItemElement = New DevExpress.XtraGrid.Views.Tile.TileViewItemElement()
-        Dim WindowsUIButtonImageOptions9 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions1 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions2 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions3 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
+        Dim WindowsUIButtonImageOptions4 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEdit))
-        Dim WindowsUIButtonImageOptions10 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions11 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
-        Dim WindowsUIButtonImageOptions12 As DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions = New DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions()
         Me.GridColumn2 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.GridColumn5 = New DevExpress.XtraGrid.Columns.TileViewColumn()
         Me.GridColumn3 = New DevExpress.XtraGrid.Columns.TileViewColumn()
@@ -146,18 +146,8 @@ Partial Public Class FrmEdit
         Me.LuSection = New DevExpress.XtraEditors.LookUpEdit()
         Me.layoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.TabbedControlGroup2 = New DevExpress.XtraLayout.TabbedControlGroup()
-        Me.LayoutControlGroup7 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.grpAddNewComment = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlItem34 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem35 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem36 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem37 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem38 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem53 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlItem33 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
-        Me.EmptySpaceItem2 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.LayoutControlGroup9 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem54 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlGroup5 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem4 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -211,8 +201,18 @@ Partial Public Class FrmEdit
         Me.LayoutControlItem22 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem8 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem50 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LayoutControlGroup9 = New DevExpress.XtraLayout.LayoutControlGroup()
-        Me.LayoutControlItem54 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlGroup7 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.grpAddNewComment = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem34 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem35 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem36 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem37 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem38 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem53 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.LayoutControlItem33 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.EmptySpaceItem1 = New DevExpress.XtraLayout.EmptySpaceItem()
+        Me.EmptySpaceItem2 = New DevExpress.XtraLayout.EmptySpaceItem()
         Me.labelControl = New DevExpress.XtraEditors.LabelControl()
         Me.LayoutControlGroup6 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.btnAttachments = New DevExpress.XtraEditors.SimpleButton()
@@ -298,18 +298,8 @@ Partial Public Class FrmEdit
         CType(Me.LuSection.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TabbedControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.grpAddNewComment, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem35, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem37, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem38, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem53, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem33, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem54, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -363,8 +353,18 @@ Partial Public Class FrmEdit
         CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem50, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlGroup9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LayoutControlItem54, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grpAddNewComment, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem37, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem38, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem53, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem33, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -1319,11 +1319,10 @@ Partial Public Class FrmEdit
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = True
         Me.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = True
         Me.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer))
-        WindowsUIButtonImageOptions9.Image = CType(resources.GetObject("WindowsUIButtonImageOptions9.Image"), System.Drawing.Image)
-        WindowsUIButtonImageOptions10.ImageUri.Uri = "Save;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions11.ImageUri.Uri = "Reset;Size32x32;GrayScaled"
-        WindowsUIButtonImageOptions12.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
-        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Mail", True, WindowsUIButtonImageOptions9, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions10, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", True, WindowsUIButtonImageOptions11, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions12, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False)})
+        WindowsUIButtonImageOptions2.ImageUri.Uri = "Save;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions3.ImageUri.Uri = "Reset;Size32x32;GrayScaled"
+        WindowsUIButtonImageOptions4.ImageUri.Uri = "Edit/Delete;Size32x32;GrayScaled"
+        Me.windowsUIButtonPanelMain.Buttons.AddRange(New DevExpress.XtraEditors.ButtonPanel.IBaseButton() {New DevExpress.XtraBars.Docking2010.WindowsUIButton("Mail", True, WindowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", True, WindowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", True, WindowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False), New DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", True, WindowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, True, Nothing, True, False, True, Nothing, -1, False)})
         Me.windowsUIButtonPanelMain.EnableImageTransparency = True
         Me.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White
         Me.windowsUIButtonPanelMain.Location = New System.Drawing.Point(24, 483)
@@ -1634,152 +1633,26 @@ Partial Public Class FrmEdit
         Me.TabbedControlGroup2.AppearanceTabPage.HeaderDisabled.Options.UseFont = True
         Me.TabbedControlGroup2.Location = New System.Drawing.Point(0, 0)
         Me.TabbedControlGroup2.Name = "TabbedControlGroup2"
-        Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup9
+        Me.TabbedControlGroup2.SelectedTabPage = Me.LayoutControlGroup7
         Me.TabbedControlGroup2.Size = New System.Drawing.Size(721, 547)
         Me.TabbedControlGroup2.TabPages.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlGroup5, Me.LayoutControlGroup7, Me.LayoutControlGroup9})
         '
-        'LayoutControlGroup7
+        'LayoutControlGroup9
         '
-        Me.LayoutControlGroup7.AppearanceGroup.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.LayoutControlGroup7.AppearanceGroup.Options.UseFont = True
-        Me.LayoutControlGroup7.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.LayoutControlGroup7.AppearanceItemCaption.Options.UseFont = True
-        Me.LayoutControlGroup7.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.grpAddNewComment, Me.LayoutControlItem33, Me.EmptySpaceItem1, Me.EmptySpaceItem2})
-        Me.LayoutControlGroup7.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlGroup7.Name = "LayoutControlGroup7"
-        Me.LayoutControlGroup7.Size = New System.Drawing.Size(697, 496)
-        Me.LayoutControlGroup7.Text = "DISPUTES"
+        Me.LayoutControlGroup9.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem54})
+        Me.LayoutControlGroup9.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup9.Name = "LayoutControlGroup9"
+        Me.LayoutControlGroup9.Size = New System.Drawing.Size(697, 496)
+        Me.LayoutControlGroup9.Text = "HISTORY"
         '
-        'LayoutControlItem1
+        'LayoutControlItem54
         '
-        Me.LayoutControlItem1.Control = Me.GridControl1
-        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 283)
-        Me.LayoutControlItem1.Name = "LayoutControlItem1"
-        Me.LayoutControlItem1.Size = New System.Drawing.Size(697, 213)
-        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem1.TextVisible = False
-        '
-        'grpAddNewComment
-        '
-        Me.grpAddNewComment.AppearanceGroup.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.grpAddNewComment.AppearanceGroup.Options.UseFont = True
-        Me.grpAddNewComment.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.grpAddNewComment.AppearanceItemCaption.Options.UseFont = True
-        Me.grpAddNewComment.AppearanceTabPage.Header.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.grpAddNewComment.AppearanceTabPage.Header.Options.UseFont = True
-        Me.grpAddNewComment.AppearanceTabPage.HeaderActive.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.grpAddNewComment.AppearanceTabPage.HeaderActive.Options.UseFont = True
-        Me.grpAddNewComment.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem34, Me.LayoutControlItem35, Me.LayoutControlItem36, Me.LayoutControlItem37, Me.LayoutControlItem38, Me.LayoutControlItem53})
-        Me.grpAddNewComment.Location = New System.Drawing.Point(0, 38)
-        Me.grpAddNewComment.Name = "grpAddNewComment"
-        Me.grpAddNewComment.OptionsPrint.AppearanceGroupCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.grpAddNewComment.OptionsPrint.AppearanceGroupCaption.Options.UseFont = True
-        Me.grpAddNewComment.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.grpAddNewComment.OptionsPrint.AppearanceItem.Options.UseFont = True
-        Me.grpAddNewComment.OptionsPrint.AppearanceItemControl.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.grpAddNewComment.OptionsPrint.AppearanceItemControl.Options.UseFont = True
-        Me.grpAddNewComment.OptionsPrint.AppearanceItemText.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.grpAddNewComment.OptionsPrint.AppearanceItemText.Options.UseFont = True
-        Me.grpAddNewComment.Size = New System.Drawing.Size(697, 235)
-        Me.grpAddNewComment.Text = "Add New Comment"
-        Me.grpAddNewComment.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
-        '
-        'LayoutControlItem34
-        '
-        Me.LayoutControlItem34.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.LayoutControlItem34.AppearanceItemCaption.Options.UseFont = True
-        Me.LayoutControlItem34.Control = Me.LuStatus
-        Me.LayoutControlItem34.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem34.Name = "LayoutControlItem34"
-        Me.LayoutControlItem34.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.LayoutControlItem34.OptionsPrint.AppearanceItem.Options.UseFont = True
-        Me.LayoutControlItem34.OptionsPrint.AppearanceItemControl.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.LayoutControlItem34.OptionsPrint.AppearanceItemControl.Options.UseFont = True
-        Me.LayoutControlItem34.OptionsPrint.AppearanceItemText.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.LayoutControlItem34.OptionsPrint.AppearanceItemText.Options.UseFont = True
-        Me.LayoutControlItem34.Size = New System.Drawing.Size(673, 28)
-        Me.LayoutControlItem34.Text = "Status"
-        Me.LayoutControlItem34.TextSize = New System.Drawing.Size(150, 17)
-        '
-        'LayoutControlItem35
-        '
-        Me.LayoutControlItem35.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.LayoutControlItem35.AppearanceItemCaption.Options.UseFont = True
-        Me.LayoutControlItem35.Control = Me.TxtComment
-        Me.LayoutControlItem35.Location = New System.Drawing.Point(0, 56)
-        Me.LayoutControlItem35.Name = "LayoutControlItem35"
-        Me.LayoutControlItem35.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.LayoutControlItem35.OptionsPrint.AppearanceItem.Options.UseFont = True
-        Me.LayoutControlItem35.Size = New System.Drawing.Size(673, 72)
-        Me.LayoutControlItem35.Text = "Comment:"
-        Me.LayoutControlItem35.TextSize = New System.Drawing.Size(150, 17)
-        '
-        'LayoutControlItem36
-        '
-        Me.LayoutControlItem36.Control = Me.TxtCalculation
-        Me.LayoutControlItem36.Location = New System.Drawing.Point(0, 128)
-        Me.LayoutControlItem36.Name = "LayoutControlItem36"
-        Me.LayoutControlItem36.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.LayoutControlItem36.OptionsPrint.AppearanceItem.Options.UseFont = True
-        Me.LayoutControlItem36.Size = New System.Drawing.Size(673, 28)
-        Me.LayoutControlItem36.Text = "Calculation:"
-        Me.LayoutControlItem36.TextSize = New System.Drawing.Size(150, 17)
-        '
-        'LayoutControlItem37
-        '
-        Me.LayoutControlItem37.Control = Me.BtnSaveComment
-        Me.LayoutControlItem37.Location = New System.Drawing.Point(0, 156)
-        Me.LayoutControlItem37.Name = "LayoutControlItem37"
-        Me.LayoutControlItem37.Size = New System.Drawing.Size(336, 34)
-        Me.LayoutControlItem37.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem37.TextVisible = False
-        '
-        'LayoutControlItem38
-        '
-        Me.LayoutControlItem38.Control = Me.BtnCancelComment
-        Me.LayoutControlItem38.Location = New System.Drawing.Point(336, 156)
-        Me.LayoutControlItem38.Name = "LayoutControlItem38"
-        Me.LayoutControlItem38.Size = New System.Drawing.Size(337, 34)
-        Me.LayoutControlItem38.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem38.TextVisible = False
-        '
-        'LayoutControlItem53
-        '
-        Me.LayoutControlItem53.Control = Me.LuSection
-        Me.LayoutControlItem53.ControlAlignment = System.Drawing.ContentAlignment.TopLeft
-        Me.LayoutControlItem53.CustomizationFormText = "Status"
-        Me.LayoutControlItem53.Location = New System.Drawing.Point(0, 28)
-        Me.LayoutControlItem53.Name = "LayoutControlItem53"
-        Me.LayoutControlItem53.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.LayoutControlItem53.OptionsPrint.AppearanceItem.Options.UseFont = True
-        Me.LayoutControlItem53.Size = New System.Drawing.Size(673, 28)
-        Me.LayoutControlItem53.Text = "Section"
-        Me.LayoutControlItem53.TextSize = New System.Drawing.Size(150, 17)
-        '
-        'LayoutControlItem33
-        '
-        Me.LayoutControlItem33.Control = Me.BtnToggleComment
-        Me.LayoutControlItem33.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem33.Name = "LayoutControlItem33"
-        Me.LayoutControlItem33.Size = New System.Drawing.Size(697, 26)
-        Me.LayoutControlItem33.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem33.TextVisible = False
-        '
-        'EmptySpaceItem1
-        '
-        Me.EmptySpaceItem1.AllowHotTrack = False
-        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 26)
-        Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
-        Me.EmptySpaceItem1.Size = New System.Drawing.Size(697, 12)
-        Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
-        '
-        'EmptySpaceItem2
-        '
-        Me.EmptySpaceItem2.AllowHotTrack = False
-        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 273)
-        Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
-        Me.EmptySpaceItem2.Size = New System.Drawing.Size(697, 10)
-        Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem54.Control = Me.SplitContainer1
+        Me.LayoutControlItem54.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem54.Name = "LayoutControlItem54"
+        Me.LayoutControlItem54.Size = New System.Drawing.Size(697, 496)
+        Me.LayoutControlItem54.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem54.TextVisible = False
         '
         'LayoutControlGroup5
         '
@@ -2267,22 +2140,148 @@ Partial Public Class FrmEdit
         Me.LayoutControlItem50.Text = "Booking Status"
         Me.LayoutControlItem50.TextSize = New System.Drawing.Size(150, 17)
         '
-        'LayoutControlGroup9
+        'LayoutControlGroup7
         '
-        Me.LayoutControlGroup9.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem54})
-        Me.LayoutControlGroup9.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlGroup9.Name = "LayoutControlGroup9"
-        Me.LayoutControlGroup9.Size = New System.Drawing.Size(697, 496)
-        Me.LayoutControlGroup9.Text = "HISTORY"
+        Me.LayoutControlGroup7.AppearanceGroup.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlGroup7.AppearanceGroup.Options.UseFont = True
+        Me.LayoutControlGroup7.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlGroup7.AppearanceItemCaption.Options.UseFont = True
+        Me.LayoutControlGroup7.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1, Me.grpAddNewComment, Me.LayoutControlItem33, Me.EmptySpaceItem1, Me.EmptySpaceItem2})
+        Me.LayoutControlGroup7.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup7.Name = "LayoutControlGroup7"
+        Me.LayoutControlGroup7.Size = New System.Drawing.Size(697, 496)
+        Me.LayoutControlGroup7.Text = "DISPUTES"
         '
-        'LayoutControlItem54
+        'LayoutControlItem1
         '
-        Me.LayoutControlItem54.Control = Me.SplitContainer1
-        Me.LayoutControlItem54.Location = New System.Drawing.Point(0, 0)
-        Me.LayoutControlItem54.Name = "LayoutControlItem54"
-        Me.LayoutControlItem54.Size = New System.Drawing.Size(697, 496)
-        Me.LayoutControlItem54.TextSize = New System.Drawing.Size(0, 0)
-        Me.LayoutControlItem54.TextVisible = False
+        Me.LayoutControlItem1.Control = Me.GridControl1
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 283)
+        Me.LayoutControlItem1.Name = "LayoutControlItem1"
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(697, 213)
+        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem1.TextVisible = False
+        '
+        'grpAddNewComment
+        '
+        Me.grpAddNewComment.AppearanceGroup.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.AppearanceGroup.Options.UseFont = True
+        Me.grpAddNewComment.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.AppearanceItemCaption.Options.UseFont = True
+        Me.grpAddNewComment.AppearanceTabPage.Header.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.AppearanceTabPage.Header.Options.UseFont = True
+        Me.grpAddNewComment.AppearanceTabPage.HeaderActive.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.AppearanceTabPage.HeaderActive.Options.UseFont = True
+        Me.grpAddNewComment.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem34, Me.LayoutControlItem35, Me.LayoutControlItem36, Me.LayoutControlItem37, Me.LayoutControlItem38, Me.LayoutControlItem53})
+        Me.grpAddNewComment.Location = New System.Drawing.Point(0, 38)
+        Me.grpAddNewComment.Name = "grpAddNewComment"
+        Me.grpAddNewComment.OptionsPrint.AppearanceGroupCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.OptionsPrint.AppearanceGroupCaption.Options.UseFont = True
+        Me.grpAddNewComment.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.OptionsPrint.AppearanceItem.Options.UseFont = True
+        Me.grpAddNewComment.OptionsPrint.AppearanceItemControl.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.OptionsPrint.AppearanceItemControl.Options.UseFont = True
+        Me.grpAddNewComment.OptionsPrint.AppearanceItemText.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.grpAddNewComment.OptionsPrint.AppearanceItemText.Options.UseFont = True
+        Me.grpAddNewComment.Size = New System.Drawing.Size(697, 235)
+        Me.grpAddNewComment.Text = "Add New Comment"
+        Me.grpAddNewComment.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never
+        '
+        'LayoutControlItem34
+        '
+        Me.LayoutControlItem34.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem34.AppearanceItemCaption.Options.UseFont = True
+        Me.LayoutControlItem34.Control = Me.LuStatus
+        Me.LayoutControlItem34.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem34.Name = "LayoutControlItem34"
+        Me.LayoutControlItem34.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem34.OptionsPrint.AppearanceItem.Options.UseFont = True
+        Me.LayoutControlItem34.OptionsPrint.AppearanceItemControl.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem34.OptionsPrint.AppearanceItemControl.Options.UseFont = True
+        Me.LayoutControlItem34.OptionsPrint.AppearanceItemText.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem34.OptionsPrint.AppearanceItemText.Options.UseFont = True
+        Me.LayoutControlItem34.Size = New System.Drawing.Size(673, 28)
+        Me.LayoutControlItem34.Text = "Status"
+        Me.LayoutControlItem34.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem35
+        '
+        Me.LayoutControlItem35.AppearanceItemCaption.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem35.AppearanceItemCaption.Options.UseFont = True
+        Me.LayoutControlItem35.Control = Me.TxtComment
+        Me.LayoutControlItem35.Location = New System.Drawing.Point(0, 56)
+        Me.LayoutControlItem35.Name = "LayoutControlItem35"
+        Me.LayoutControlItem35.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem35.OptionsPrint.AppearanceItem.Options.UseFont = True
+        Me.LayoutControlItem35.Size = New System.Drawing.Size(673, 72)
+        Me.LayoutControlItem35.Text = "Comment:"
+        Me.LayoutControlItem35.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem36
+        '
+        Me.LayoutControlItem36.Control = Me.TxtCalculation
+        Me.LayoutControlItem36.Location = New System.Drawing.Point(0, 128)
+        Me.LayoutControlItem36.Name = "LayoutControlItem36"
+        Me.LayoutControlItem36.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem36.OptionsPrint.AppearanceItem.Options.UseFont = True
+        Me.LayoutControlItem36.Size = New System.Drawing.Size(673, 28)
+        Me.LayoutControlItem36.Text = "Calculation:"
+        Me.LayoutControlItem36.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem37
+        '
+        Me.LayoutControlItem37.Control = Me.BtnSaveComment
+        Me.LayoutControlItem37.Location = New System.Drawing.Point(0, 156)
+        Me.LayoutControlItem37.Name = "LayoutControlItem37"
+        Me.LayoutControlItem37.Size = New System.Drawing.Size(336, 34)
+        Me.LayoutControlItem37.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem37.TextVisible = False
+        '
+        'LayoutControlItem38
+        '
+        Me.LayoutControlItem38.Control = Me.BtnCancelComment
+        Me.LayoutControlItem38.Location = New System.Drawing.Point(336, 156)
+        Me.LayoutControlItem38.Name = "LayoutControlItem38"
+        Me.LayoutControlItem38.Size = New System.Drawing.Size(337, 34)
+        Me.LayoutControlItem38.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem38.TextVisible = False
+        '
+        'LayoutControlItem53
+        '
+        Me.LayoutControlItem53.Control = Me.LuSection
+        Me.LayoutControlItem53.ControlAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.LayoutControlItem53.CustomizationFormText = "Status"
+        Me.LayoutControlItem53.Location = New System.Drawing.Point(0, 28)
+        Me.LayoutControlItem53.Name = "LayoutControlItem53"
+        Me.LayoutControlItem53.OptionsPrint.AppearanceItem.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.LayoutControlItem53.OptionsPrint.AppearanceItem.Options.UseFont = True
+        Me.LayoutControlItem53.Size = New System.Drawing.Size(673, 28)
+        Me.LayoutControlItem53.Text = "Section"
+        Me.LayoutControlItem53.TextSize = New System.Drawing.Size(150, 17)
+        '
+        'LayoutControlItem33
+        '
+        Me.LayoutControlItem33.Control = Me.BtnToggleComment
+        Me.LayoutControlItem33.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem33.Name = "LayoutControlItem33"
+        Me.LayoutControlItem33.Size = New System.Drawing.Size(697, 26)
+        Me.LayoutControlItem33.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem33.TextVisible = False
+        '
+        'EmptySpaceItem1
+        '
+        Me.EmptySpaceItem1.AllowHotTrack = False
+        Me.EmptySpaceItem1.Location = New System.Drawing.Point(0, 26)
+        Me.EmptySpaceItem1.Name = "EmptySpaceItem1"
+        Me.EmptySpaceItem1.Size = New System.Drawing.Size(697, 12)
+        Me.EmptySpaceItem1.TextSize = New System.Drawing.Size(0, 0)
+        '
+        'EmptySpaceItem2
+        '
+        Me.EmptySpaceItem2.AllowHotTrack = False
+        Me.EmptySpaceItem2.Location = New System.Drawing.Point(0, 273)
+        Me.EmptySpaceItem2.Name = "EmptySpaceItem2"
+        Me.EmptySpaceItem2.Size = New System.Drawing.Size(697, 10)
+        Me.EmptySpaceItem2.TextSize = New System.Drawing.Size(0, 0)
         '
         'labelControl
         '
@@ -2419,18 +2418,8 @@ Partial Public Class FrmEdit
         CType(Me.LuSection.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TabbedControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.grpAddNewComment, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem35, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem37, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem38, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem53, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem33, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem54, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2484,8 +2473,18 @@ Partial Public Class FrmEdit
         CType(Me.LayoutControlItem22, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem50, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlGroup9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LayoutControlItem54, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlGroup7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grpAddNewComment, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem36, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem37, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem38, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem53, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmptySpaceItem2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

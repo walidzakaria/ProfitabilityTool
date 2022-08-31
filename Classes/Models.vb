@@ -320,10 +320,20 @@ Public Class Booking
         Dim result As Short = 0
         Dim status As String = GwgStatus.ToLower
 
-        If status = "onr" Or MarginCheck.ToLower = "request" _
-            Or MarginCheck.ToLower = "option" Or NetRateHotelTC <= 0 Or HotelName.ToLower Like "*rundreise*" _
-            Or HotelName.ToLower Like "*circuit*" _ ' Or HotelName.ToLower Like "*roulette*" _
-            Or (status = "can" AndAlso PurchasePrice = 0 AndAlso SalesPrice = 0 AndAlso NetRateHotelTC = 0) Then
+        If status = "onr" OrElse MarginCheck.ToLower = "request" _
+            OrElse MarginCheck.ToLower = "option" OrElse NetRateHotelTC <= 0 OrElse HotelName.ToLower Like "*rundreise*" _
+            OrElse HotelName.ToLower Like "*circuit*" Or HotelName.ToLower Like "*roulette*" _
+            OrElse HotelName.ToLower Like "*2 tage*" _
+            OrElse HotelName.ToLower Like "*croisiere sur le nil*" _
+            OrElse HotelName.ToLower = "makadi" _
+            OrElse HotelName.ToLower Like "*m-s emilio*" _
+            OrElse HotelName.ToLower Like "*m-s royal*" _
+            OrElse HotelName.ToLower Like "*neverland by pick*" _
+            OrElse HotelName.ToLower Like "*nile cruise*" _
+            OrElse HotelName.ToLower Like "*nilkreuzfahrt*" _
+            OrElse HotelName.ToLower Like "*schlagerfestival*" _
+            OrElse HotelName.ToLower Like "*schlagerreise*" _
+            OrElse (status = "can" AndAlso PurchasePrice = 0 AndAlso SalesPrice = 0 AndAlso NetRateHotelTC = 0) Then
             result = 1
         End If
 
@@ -582,6 +592,18 @@ Public Class Booking
         End If
         Return result
     End Function
+
+    Public Shared Function GetBookingId(reference As String) As List(Of Long)
+        Dim result = New List(Of Long)()
+        Dim query As String = $"SELECT BookingID FROM Booking WHERE Reference = N'{reference}';"
+        Dim dt = ExClass.QueryGet(query)
+
+        For x As Integer = 0 To dt.Rows.Count - 1
+            result.Add(CLng(dt.Rows(x)(0)))
+        Next
+
+        Return result
+    End Function
 End Class
 
 Public Class Comment
@@ -635,7 +657,7 @@ Public Class Comment
         Return result
     End Function
 
-    Public Function SaveMulti(ByVal bookingsList As List(Of Integer)) As Boolean
+    Public Function SaveMulti(ByVal bookingsList As List(Of Long), Optional ByRef errors As String = "", Optional showError As Boolean = True) As Boolean
         Dim result As Boolean = True
         Comment = Comment.Replace("'", "''")
         CommentDate = Now
@@ -665,7 +687,8 @@ Public Class Comment
 
 
         Dim queryResult As String = ExClass.QuerySet(query)
-        If queryResult <> "True" Then
+        errors = queryResult
+        If queryResult <> "True" AndAlso showError Then
             XtraMessageBox.Show(queryResult)
             result = False
         End If
@@ -673,6 +696,59 @@ Public Class Comment
 
         Return result
     End Function
+
+
+    Public Shared Function Validate(reference As String, status As String, ByRef section As String, comment As String, calculation As String,
+                                    ByRef bookingIds As List(Of Long), ByRef validations As List(Of String)) As Boolean
+        validations = New List(Of String)()
+        Dim result As Boolean = True
+        bookingIds = Booking.GetBookingId(reference)
+        If bookingIds.Count = 0 Then
+            validations.Add("Wrong reference number")
+            result = False
+        End If
+        Dim arrStatus() As String
+        If GV.CurrentUser.Authority.Contains("DMC") Then
+            arrStatus = {"CANNOT FIX", "FIXED DMC", "PENDING DMC", "PENDING T / O"}
+        ElseIf GV.CurrentUser.Authority.Contains("TO") Then
+            arrStatus = {"FIXED T / O", "PENDING DMC", "PENDING T / O"}
+        Else
+            arrStatus = {"CANNOT FIX", "FIXED DMC", "FIXED T / O", "PENDING DMC", "PENDING T / O"}
+        End If
+        If Not arrStatus.Contains(status) Then
+            validations.Add("Invalid status")
+            result = False
+        End If
+
+        If Not String.IsNullOrEmpty(section) Then
+            Dim query As String = $"SELECT TOP 1 SectionID FROM Section WHERE Section = N'{section}' AND [Status] = N'{status}' AND UserType = '{GV.CurrentUser.Authority.Replace("SU ", "")}';"
+            Dim sectionDT = ExClass.QueryGet(query)
+
+            If sectionDT.Rows.Count = 0 Then
+                validations.Add("Invalid section")
+                result = False
+            Else
+                section = sectionDT.Rows(0)(0).ToString
+            End If
+        End If
+
+        If String.IsNullOrEmpty(comment) Then
+            validations.Add("Blank comment")
+            result = False
+        End If
+
+        If Not String.IsNullOrEmpty(calculation) Then
+            Dim temp As Double
+            If Not Double.TryParse(calculation.Replace(",", "."), temp) Then
+                validations.Add("Calculation should be numeric")
+                result = False
+            End If
+
+        End If
+
+        Return result
+    End Function
+
 End Class
 
 Public Class Destination

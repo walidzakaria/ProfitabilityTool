@@ -166,6 +166,7 @@
         Me.ChartControl1 = New DevExpress.XtraCharts.ChartControl()
         Me.ChartControl2 = New DevExpress.XtraCharts.ChartControl()
         Me.NavigationPage2 = New DevExpress.XtraBars.Navigation.NavigationPage()
+        Me.btnBulkComment = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.ChartDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RepositoryItemDateEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -223,9 +224,9 @@
         Me.RibbonControl1.AllowMinimizeRibbon = False
         Me.RibbonControl1.ExpandCollapseItem.Id = 0
         Me.RibbonControl1.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.RibbonControl1.SearchEditItem, Me.SkinRibbonGalleryBarItem1, Me.BtnImport, Me.BtnSave, Me.BtnLoad, Me.BtnSwitchUser, Me.BtnManageUsers, Me.BtnChangePassword, Me.BtnExit, Me.BeDateFrom, Me.BeDateTo, Me.BeCountry, Me.BtnDestination, Me.BtnManageMargin, Me.BtnJunk, Me.BtnCanceled, Me.BtnMatching, Me.BcNegative, Me.BcExcessive, Me.BcMismatch, Me.BtnShowDefict, Me.BcPendingDmc, Me.BcFixedDmc, Me.BcPendingTo, Me.BcFixedTo, Me.BtnShow, Me.BtnAddDispute, Me.BtnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.BtnManageCurrency, Me.BtnErrors, Me.BtnAbout, Me.BeImportFrom, Me.BeImportTill, Me.BtnSection, Me.BcCannotFix, Me.BtnResetGrid, Me.BtnReport, Me.BtnUpload})
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.RibbonControl1.SearchEditItem, Me.SkinRibbonGalleryBarItem1, Me.BtnImport, Me.BtnSave, Me.BtnLoad, Me.BtnSwitchUser, Me.BtnManageUsers, Me.BtnChangePassword, Me.BtnExit, Me.BeDateFrom, Me.BeDateTo, Me.BeCountry, Me.BtnDestination, Me.BtnManageMargin, Me.BtnJunk, Me.BtnCanceled, Me.BtnMatching, Me.BcNegative, Me.BcExcessive, Me.BcMismatch, Me.BtnShowDefict, Me.BcPendingDmc, Me.BcFixedDmc, Me.BcPendingTo, Me.BcFixedTo, Me.BtnShow, Me.BtnAddDispute, Me.BtnTO, Me.BarStaticItem1, Me.bhUsername, Me.biLoginTime, Me.bhLogginTime, Me.BarHeaderItem1, Me.BarButtonGroup1, Me.BtnManageCurrency, Me.BtnErrors, Me.BtnAbout, Me.BeImportFrom, Me.BeImportTill, Me.BtnSection, Me.BcCannotFix, Me.BtnResetGrid, Me.BtnReport, Me.BtnUpload, Me.btnBulkComment})
         Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl1.MaxItemId = 56
+        Me.RibbonControl1.MaxItemId = 57
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
         Me.RibbonControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemLookUpEdit1, Me.RepositoryItemDateEdit1, Me.RepositoryItemDateEdit2, Me.RepositoryItemLookUpEdit2, Me.RepositoryItemDateEdit3, Me.RepositoryItemDateEdit4})
@@ -235,7 +236,7 @@
         Me.RibbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.ShowOnMultiplePages
         Me.RibbonControl1.ShowToolbarCustomizeItem = False
-        Me.RibbonControl1.Size = New System.Drawing.Size(1382, 132)
+        Me.RibbonControl1.Size = New System.Drawing.Size(1454, 132)
         Me.RibbonControl1.StatusBar = Me.RibbonStatusBar1
         Me.RibbonControl1.Toolbar.ShowCustomizeItem = False
         '
@@ -840,6 +841,7 @@
         Me.BtnUpload.ImageOptions.Image = CType(resources.GetObject("BtnUpload.ImageOptions.Image"), System.Drawing.Image)
         Me.BtnUpload.ImageOptions.LargeImage = CType(resources.GetObject("BtnUpload.ImageOptions.LargeImage"), System.Drawing.Image)
         Me.BtnUpload.Name = "BtnUpload"
+        Me.BtnUpload.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
         '
         'RibbonPage1
         '
@@ -898,6 +900,7 @@
         Me.RibbonPageGroup7.ItemLinks.Add(Me.BtnAddDispute)
         Me.RibbonPageGroup7.ItemLinks.Add(Me.BtnShow)
         Me.RibbonPageGroup7.ItemLinks.Add(Me.BtnReport)
+        Me.RibbonPageGroup7.ItemLinks.Add(Me.btnBulkComment)
         Me.RibbonPageGroup7.Name = "RibbonPageGroup7"
         Me.RibbonPageGroup7.Text = "Disputes"
         '
@@ -944,7 +947,7 @@
         Me.RibbonStatusBar1.Location = New System.Drawing.Point(0, 698)
         Me.RibbonStatusBar1.Name = "RibbonStatusBar1"
         Me.RibbonStatusBar1.Ribbon = Me.RibbonControl1
-        Me.RibbonStatusBar1.Size = New System.Drawing.Size(1382, 24)
+        Me.RibbonStatusBar1.Size = New System.Drawing.Size(1454, 24)
         '
         'GridControl1
         '
@@ -957,7 +960,7 @@
         Me.GridControl1.MenuManager = Me.RibbonControl1
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTextEdit1})
-        Me.GridControl1.Size = New System.Drawing.Size(1382, 566)
+        Me.GridControl1.Size = New System.Drawing.Size(1454, 566)
         Me.GridControl1.TabIndex = 1
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -1511,7 +1514,7 @@
         Me.NavigationFrame1.Name = "NavigationFrame1"
         Me.NavigationFrame1.Pages.AddRange(New DevExpress.XtraBars.Navigation.NavigationPageBase() {Me.NavigationPage1, Me.NavigationPage2})
         Me.NavigationFrame1.SelectedPage = Me.NavigationPage1
-        Me.NavigationFrame1.Size = New System.Drawing.Size(1382, 566)
+        Me.NavigationFrame1.Size = New System.Drawing.Size(1454, 566)
         Me.NavigationFrame1.TabIndex = 4
         Me.NavigationFrame1.Text = "NavigationFrame1"
         '
@@ -1519,7 +1522,7 @@
         '
         Me.NavigationPage1.Controls.Add(Me.XtraScrollableControl1)
         Me.NavigationPage1.Name = "NavigationPage1"
-        Me.NavigationPage1.Size = New System.Drawing.Size(1382, 566)
+        Me.NavigationPage1.Size = New System.Drawing.Size(1454, 566)
         '
         'XtraScrollableControl1
         '
@@ -1531,7 +1534,7 @@
         Me.XtraScrollableControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.XtraScrollableControl1.Location = New System.Drawing.Point(0, 0)
         Me.XtraScrollableControl1.Name = "XtraScrollableControl1"
-        Me.XtraScrollableControl1.Size = New System.Drawing.Size(1382, 566)
+        Me.XtraScrollableControl1.Size = New System.Drawing.Size(1454, 566)
         Me.XtraScrollableControl1.TabIndex = 3
         '
         'ChartControl4
@@ -1644,7 +1647,16 @@
         '
         Me.NavigationPage2.Controls.Add(Me.GridControl1)
         Me.NavigationPage2.Name = "NavigationPage2"
-        Me.NavigationPage2.Size = New System.Drawing.Size(1382, 566)
+        Me.NavigationPage2.Size = New System.Drawing.Size(1454, 566)
+        '
+        'btnBulkComment
+        '
+        Me.btnBulkComment.Caption = "Bulk" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Comment"
+        Me.btnBulkComment.Id = 56
+        Me.btnBulkComment.ImageOptions.Image = CType(resources.GetObject("btnBulkComment.ImageOptions.Image"), System.Drawing.Image)
+        Me.btnBulkComment.ImageOptions.LargeImage = CType(resources.GetObject("btnBulkComment.ImageOptions.LargeImage"), System.Drawing.Image)
+        Me.btnBulkComment.Name = "btnBulkComment"
+        Me.btnBulkComment.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
         'FrmMain
         '
@@ -1652,7 +1664,7 @@
         Me.Appearance.Options.UseFont = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1382, 722)
+        Me.ClientSize = New System.Drawing.Size(1454, 722)
         Me.Controls.Add(Me.NavigationFrame1)
         Me.Controls.Add(Me.RibbonStatusBar1)
         Me.Controls.Add(Me.RibbonControl1)
@@ -1832,4 +1844,5 @@
     Friend WithEvents XtraScrollableControl1 As DevExpress.XtraEditors.XtraScrollableControl
     Friend WithEvents ChartControl4 As DevExpress.XtraCharts.ChartControl
     Friend WithEvents BtnUpload As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btnBulkComment As DevExpress.XtraBars.BarButtonItem
 End Class
